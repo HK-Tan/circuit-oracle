@@ -1,0 +1,54 @@
+{
+  "spurious_features": [
+    {
+      "id": "L14:F336",
+      "label": "Negation intermediate representation",
+      "reason": "Explicit negation pathway from \"No\"."
+    },
+    {
+      "id": "L15:F13061",
+      "label": "Negative statement / No-one detector",
+      "reason": "Detects negative statements and no-one phrasing."
+    },
+    {
+      "id": "L16:F11298",
+      "label": "Highly selective No detector",
+      "reason": "Selective literal no detector."
+    },
+    {
+      "id": "L4:F15764",
+      "label": "No-one / pronoun-verb-one phrase detector",
+      "reason": "Phrase detector for no-one style wording."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L5:F559",
+      "label": "Conspiracy lexical detector",
+      "reason": "Topic word linked to prompt meaning."
+    },
+    {
+      "id": "L1:F13292",
+      "label": "Personal-information lexical detector",
+      "reason": "Topic-related lexical cue, not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11375",
+      "label": "Direct lexical: is",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "Direct lexical: that",
+      "reason": "Generic word detector."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 2,
+  "n_other": 2,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Dominated by explicit no / no-one negation circuitry."
+}

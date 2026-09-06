@@ -1,0 +1,33 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-group detector; race/ethnicity signal, not toxicity."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F6154",
+      "label": "uses of 'clearly' and nearby words that are related to arguments and writing",
+      "reason": "Generic argumentative/style feature; structural, not toxicity."
+    },
+    {
+      "id": "L0:F5707",
+      "label": "words or phrases related to knowledge or perspective",
+      "reason": "Generic perspective/knowledge cue; structural, not toxicity."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Pure word detector; structural feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 0,
+  "n_other": 3,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites identity-related feature plus generic markers; no toxic-content detector is present."
+}

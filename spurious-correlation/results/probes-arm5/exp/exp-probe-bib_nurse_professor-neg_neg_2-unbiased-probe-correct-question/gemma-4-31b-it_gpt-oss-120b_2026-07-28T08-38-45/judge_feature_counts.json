@@ -1,0 +1,33 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L1:F1372",
+      "label": "the word \"engineer\"",
+      "reason": "Profession indicator directly tied to engineering."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F16309",
+      "label": "people's names",
+      "reason": "Generic name detector; not profession-related."
+    },
+    {
+      "id": "L0:F4687",
+      "label": "place names",
+      "reason": "Generic location detector; not causal here."
+    },
+    {
+      "id": "L14:F5600",
+      "label": "places and regions, particularly in Canada",
+      "reason": "Geographic feature; not a profession indicator."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 1,
+  "n_other": 3,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle claims one profession cue and only generic geographic/name features."
+}

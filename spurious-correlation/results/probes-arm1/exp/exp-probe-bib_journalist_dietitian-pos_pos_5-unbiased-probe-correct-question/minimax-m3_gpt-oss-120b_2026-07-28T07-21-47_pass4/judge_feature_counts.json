@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Female pronoun feature; gender marker, though negatively contributing."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gendered references; spurious marker, negatively contributing."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F5201",
+      "label": "the word \"nutrition\"",
+      "reason": "Profession-domain vocabulary about nutrition."
+    },
+    {
+      "id": "L0:F10254",
+      "label": "the word \"sports\"",
+      "reason": "Content-specific task vocabulary, not gendered."
+    },
+    {
+      "id": "L0:F8850",
+      "label": "the word \"weight\"",
+      "reason": "Profession-domain health/nutrition terminology."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Nutrition/profession vocabulary."
+    },
+    {
+      "id": "L4:F10494",
+      "label": "words related to health, medicine, diet, drugs, age groups, and excercise",
+      "reason": "Professional health/nutrition terminology."
+    },
+    {
+      "id": "L4:F11355",
+      "label": "mentions of body mass index and weight",
+      "reason": "Health/nutrition content indicator."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Direct profession-related semantic feature."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Nutrition/food-domain vocabulary."
+    },
+    {
+      "id": "L14:F16195",
+      "label": "mentions of physical activity and training.",
+      "reason": "Relevant health/fitness profession vocabulary."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Scientific nutrition/professional context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F15322",
+      "label": "reflexive pronouns, particularly \"herself\" and \"itself.\"",
+      "reason": "Structural/pronoun feature; not claimed as task-relevant here."
+    },
+    {
+      "id": "L0:F8028",
+      "label": "references to geographical areas in various contexts including scientific and societal",
+      "reason": "Generic semantic feature, not profession or gender."
+    },
+    {
+      "id": "L0:F8975",
+      "label": "the word \"pragma\" in code",
+      "reason": "Code token; unrelated structural feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Pure punctuation/structure detector."
+    },
+    {
+      "id": "L0:F2268",
+      "label": "mentions of people communicating information via speech",
+      "reason": "Generic speech/communication feature."
+    },
+    {
+      "id": "L0:F10148",
+      "label": "the word \"entire,\" sometimes near the word \"this\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F2083",
+      "label": "the word \"plot\" referring to land or experimental zones",
+      "reason": "Unrelated semantic feature."
+    },
+    {
+      "id": "L0:F4030",
+      "label": "words related to mission statements and personal development used in career environments",
+      "reason": "Generic career language; not profession-specific enough."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 10,
+  "n_other": 8,
+  "spurious_fraction": 0.16666666666666666,
+  "dominant": "causal",
+  "notes": "Nutrition/profession signals dominate; gender markers are present but negatively weighted."
+}

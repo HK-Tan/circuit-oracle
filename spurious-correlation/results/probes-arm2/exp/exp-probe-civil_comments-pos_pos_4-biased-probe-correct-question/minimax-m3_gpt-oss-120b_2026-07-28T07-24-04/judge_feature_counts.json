@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: Indians",
+      "label": "Emb: Indians (pos 1)",
+      "reason": "Identity-group token mention."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: abusers",
+      "label": "Emb: abusers (pos 3)",
+      "reason": "Toxic-content lexical trigger."
+    },
+    {
+      "id": "L0:F11154",
+      "label": "Lexical/syntactic: copula 'are' (L0:F11154, L0:F10155@pos2)",
+      "reason": "Generic copula structure."
+    },
+    {
+      "id": "L0:F10155",
+      "label": "Lexical/syntactic: copula 'are' (L0:F11154, L0:F10155@pos2)",
+      "reason": "Generic subject-NP/syntax feature."
+    },
+    {
+      "id": "L0:F1053",
+      "label": "Lexical: subordinator 'as' (L0:F1053, L0:F10155@pos1)",
+      "reason": "Generic syntactic function word."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "Lexical: sentence-final period (L0:F6051, L0:F3564)",
+      "reason": "Pure punctuation signal."
+    },
+    {
+      "id": "L0:F3564",
+      "label": "Lexical: sentence-final period (L0:F6051, L0:F3564)",
+      "reason": "Pure punctuation signal."
+    },
+    {
+      "id": "L0:F14740",
+      "label": "Early subject-NP encoding at pos 1 (L0:F10155, L0:F14740, L2:F2123)",
+      "reason": "Generic subject-position encoding."
+    },
+    {
+      "id": "L2:F2123",
+      "label": "Early subject-NP encoding at pos 1 (L0:F10155, L0:F14740, L2:F2123)",
+      "reason": "Generic subject-position encoding."
+    },
+    {
+      "id": "L3:F13473",
+      "label": "Subject-role / NP detection (L3:F13473)",
+      "reason": "Generic NP/subject-role detector."
+    },
+    {
+      "id": "L2:F1003",
+      "label": "Predicate-head 'abusers' recognition (L2:F1003, L4:F4021, L7:F15690)",
+      "reason": "Toxic predicate-head detector."
+    },
+    {
+      "id": "L4:F4021",
+      "label": "Predicate-head 'abusers' recognition (L2:F1003, L4:F4021, L7:F15690)",
+      "reason": "Toxic predicate-head detector."
+    },
+    {
+      "id": "L7:F15690",
+      "label": "Predicate-head 'abusers' recognition (L2:F1003, L4:F4021, L7:F15690)",
+      "reason": "Toxic predicate-head detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: are",
+      "label": "Emb: are (pos 2)",
+      "reason": "Pure function word/structural token."
+    },
+    {
+      "id": "Emb: as",
+      "label": "Emb: as (pos 4)",
+      "reason": "Pure function word/structural token."
+    },
+    {
+      "id": "Emb: .",
+      "label": "Emb: . (pos 13, 27)",
+      "reason": "Punctuation embedding only."
+    },
+    {
+      "id": "Probe output direction",
+      "label": "Probe output direction",
+      "reason": "Not a feature claim."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 12,
+  "n_other": 4,
+  "spurious_fraction": 0.07692307692307693,
+  "dominant": "causal",
+  "notes": "Identity token is present, but toxic predicate and generic syntax dominate the oracle's claims."
+}

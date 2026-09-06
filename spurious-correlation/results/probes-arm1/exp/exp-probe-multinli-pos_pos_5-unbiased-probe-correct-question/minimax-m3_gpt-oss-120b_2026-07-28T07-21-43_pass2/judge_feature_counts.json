@@ -1,0 +1,64 @@
+{
+  "spurious_features": [
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Contrastive but/not-only construction; surface negation cue."
+    },
+    {
+      "id": "L17:F3763",
+      "label": "only",
+      "reason": "Part of not only phrase; negation-related surface cue."
+    },
+    {
+      "id": "L9:F12274",
+      "label": "not only",
+      "reason": "Explicit negation phrase detector in hypothesis."
+    },
+    {
+      "id": "L15:F1990",
+      "label": "not only",
+      "reason": "Explicit negation phrase detector in hypothesis."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F8046",
+      "label": "the word \"will.\"",
+      "reason": "Future-tense relation; content-neutral but task-relevant."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L5:F7144",
+      "label": "proper nouns followed by the word \"said\"",
+      "reason": "Generic reporting pattern, not NLI semantics."
+    },
+    {
+      "id": "L2:F13565",
+      "label": "the word \"program(me)s\"",
+      "reason": "Topic word detector, not semantic relation."
+    },
+    {
+      "id": "L4:F12847",
+      "label": "sentences with some reporting verb and the word 'that'",
+      "reason": "Structural reporting construction only."
+    },
+    {
+      "id": "L3:F2782",
+      "label": "references to television and news programming",
+      "reason": "Topic reference, not entailment logic."
+    },
+    {
+      "id": "L1:F1500",
+      "label": "the word \"stress\"",
+      "reason": "Generic lexical high-activator, oracle dismisses semantic role."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 1,
+  "n_other": 5,
+  "spurious_fraction": 0.8,
+  "dominant": "spurious",
+  "notes": "Oracle centers on not-only/but negation cues; most remaining features are structural or topical."
+}

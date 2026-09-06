@@ -1,0 +1,48 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector; gender marker shortcut."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Oracle uses it for gendered pronoun signals."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Contains male pronoun feature; gender marker."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicitly gendered feature circuit."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "General gender-word detector, not profession."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Single male pronoun detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic field indicator tied to profession training."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 6,
+  "n_causal": 1,
+  "n_other": 0,
+  "spurious_fraction": 0.8571428571428571,
+  "dominant": "spurious",
+  "notes": "Oracle claims both gender shortcuts and academic-field evidence; gender features dominate."
+}

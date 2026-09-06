@@ -1,0 +1,94 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F12079",
+      "label": "negations and Chinese names",
+      "reason": "Hypothesis 'not' detector; negation shortcut."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Directly flags negation words like 'not'."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "\"not\" or negative terms, with some bonus for sports-related terms and \"purpose\"",
+      "reason": "Triggers on 'not'; negation heuristic."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector at 'not'; same shortcut."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation/absence cue; not semantic NLI."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L8:F16033",
+      "label": "figurative language related to reversals of fortune",
+      "reason": "Semantic reversal cue supports contradiction."
+    },
+    {
+      "id": "L7:F11459",
+      "label": "sentences where someone is metaphorically putting themselves in another person's position or when referencing roles",
+      "reason": "Role/reversal semantics, not mere structure."
+    },
+    {
+      "id": "L4:F7409",
+      "label": "words like \"vice versa\", \"inverse\", \"reverse\", \"around\", or directions",
+      "reason": "Explicit reversal meaning."
+    },
+    {
+      "id": "L4:F12799",
+      "label": "words ending in \"-ly\" along with phrases that contain the word 'odd' or 'oddities'",
+      "reason": "'Strangest' is semantic oddity content."
+    },
+    {
+      "id": "L0:F6013",
+      "label": "the word \"role,\" sometimes in conjunction with words that make it abstract, like energy or medicine",
+      "reason": "Content word tied to role semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F6072",
+      "label": "the word \"now\" followed by a verb",
+      "reason": "Pure syntactic pattern."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Generic topical detector; not contradiction-specific."
+    },
+    {
+      "id": "L10:F6670",
+      "label": "technical terms, especially within scientific or medical contexts",
+      "reason": "Broad content domain, not NLI semantics."
+    },
+    {
+      "id": "L4:F14368",
+      "label": "words related to importance or roles in a system",
+      "reason": "Generic role/importance vocabulary."
+    },
+    {
+      "id": "L6:F12420",
+      "label": "artistic elements that break established guidelines",
+      "reason": "Dismissed as non-contradiction-specific."
+    },
+    {
+      "id": "L7:F4526",
+      "label": "words related to comparisons, symmetry or reversals in data or situations",
+      "reason": "Broad pattern, not clearly causal here."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 5,
+  "n_other": 6,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Negation shortcut and genuine reversal semantics both contribute; several generic detectors are present too."
+}

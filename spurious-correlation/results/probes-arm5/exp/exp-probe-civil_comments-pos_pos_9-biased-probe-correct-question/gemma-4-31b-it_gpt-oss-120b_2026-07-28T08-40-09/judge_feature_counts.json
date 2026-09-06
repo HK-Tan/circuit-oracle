@@ -1,0 +1,58 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "Early Identity Detection (Race/Gender)",
+      "reason": "Identity-group detector for race/gender tokens."
+    },
+    {
+      "id": "L2:F585",
+      "label": "Early Identity Detection (Race/Gender)",
+      "reason": "Identity-group detector; fires on racial term."
+    },
+    {
+      "id": "L2:F15317",
+      "label": "Early Identity Detection (Race/Gender)",
+      "reason": "Identity-group detector for gendered token."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Demographic/social-issue lexical detector."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity identity-group detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race-related detector, not toxicity semantics."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: white (pos 9)",
+      "label": "Emb: white (pos 9)",
+      "reason": "Input token only; not a feature role."
+    },
+    {
+      "id": "Emb: guy (pos 10)",
+      "label": "Emb: guy (pos 10)",
+      "reason": "Input token only; not a feature role."
+    },
+    {
+      "id": "Toxicity Probe Score",
+      "label": "(embed/output)",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 0,
+  "n_other": 3,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites only identity-group circuitry; no causal toxicity feature is claimed."
+}

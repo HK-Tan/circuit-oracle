@@ -1,0 +1,88 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Sentence-position cue; not negation-specific."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Generic content aggregation; semantic, not negation."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "Position-1 mid-layer features (mostly syntax/sentence-initial at 'So')",
+      "reason": "Sentence-initial syntactic cue, not negation."
+    },
+    {
+      "id": "L6:F14744",
+      "label": "the words \"about,\" \"to,\" and \"work.\"",
+      "reason": "Generic lexical content; semantically neutral."
+    },
+    {
+      "id": "L4:F5450",
+      "label": "code snippets from different languages and words related to starting or beginning something",
+      "reason": "Structural/lexical pattern, not task semantics."
+    },
+    {
+      "id": "L4:F12225",
+      "label": "Content-word features (about, land, fire, set, to, for, they, they-allowed)",
+      "reason": "Generic content-word detector."
+    },
+    {
+      "id": "L2:F15312",
+      "label": "the word \"about.\"",
+      "reason": "Plain lexical token detector."
+    },
+    {
+      "id": "L2:F11518",
+      "label": "the word \"land\" in scientific/agricultural contexts",
+      "reason": "Content/semantic overlap, not negation."
+    },
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Content-word detector, not negation."
+    },
+    {
+      "id": "L2:F10849",
+      "label": "the word \"set\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L1:F361",
+      "label": "words related to agriculture and ecology",
+      "reason": "Content semantics, not negation."
+    },
+    {
+      "id": "L1:F461",
+      "label": "the word \"land\"",
+      "reason": "Plain lexical token detector."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Lexical pattern, not negation."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Generic lexical/grammatical feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L6:F14744",
+      "label": "the words \"about,\" \"to,\" and \"work.\"",
+      "reason": "Counted as causal above; not negation-specific."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 14,
+  "n_other": 1,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation-specific hypothesis detector is actually claimed; circuit is generic lexical/syntactic."
+}

@@ -1,0 +1,142 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Probe output",
+      "label": "classification score",
+      "reason": "Output node aggregates profession evidence."
+    },
+    {
+      "id": "Emb:Peking",
+      "label": "Peking",
+      "reason": "University name in academic biography."
+    },
+    {
+      "id": "Emb:University",
+      "label": "University",
+      "reason": "Institutional education signal."
+    },
+    {
+      "id": "Emb:Ph",
+      "label": "Ph",
+      "reason": "Part of Ph.D. abbreviation."
+    },
+    {
+      "id": "Emb:D",
+      "label": "D",
+      "reason": "Part of Ph.D. abbreviation."
+    },
+    {
+      "id": "Emb:Mathematics",
+      "label": "Mathematics",
+      "reason": "Academic field/profession indicator."
+    },
+    {
+      "id": "Emb:B",
+      "label": "B.A. token",
+      "reason": "Degree abbreviation signal."
+    },
+    {
+      "id": "Emb:received",
+      "label": "received",
+      "reason": "Education/credential template word."
+    },
+    {
+      "id": "Emb:degree",
+      "label": "degree",
+      "reason": "Academic credential indicator."
+    },
+    {
+      "id": "Emb:from",
+      "label": "from",
+      "reason": "Degree-from-university biography pattern."
+    },
+    {
+      "id": "L0:F6270",
+      "label": "the word \"whom\", sometimes also activating on nearby punctuation, sentence starts, discourse markers, and other function words",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F15320",
+      "label": "the word \"ice\"",
+      "reason": "Incidental token noise."
+    },
+    {
+      "id": "L0:F11132",
+      "label": "a mix of possessive pronouns like \"his\", names associated with historical records, and years.",
+      "reason": "Weak and not gender-specific here."
+    },
+    {
+      "id": "L0:F14877",
+      "label": "single uppercase letters, sometimes followed by other characters, which frequently represent author initials.",
+      "reason": "Initials/abbreviation structure."
+    },
+    {
+      "id": "L1:F10132",
+      "label": "the abbreviation for Doctorate of Philosophy, \"Ph.D.\" (or \"PhD\") written as \"D\"",
+      "reason": "Direct Ph.D. abbreviation feature."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Credential-related feature."
+    },
+    {
+      "id": "L3:F4213",
+      "label": "mentions of degree qualifications or awards",
+      "reason": "Academic qualification template."
+    },
+    {
+      "id": "L4:F5150",
+      "label": "mentions of specific universities and colleges",
+      "reason": "Institution mention detector."
+    },
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Academic discipline indicator."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "abbreviations for degrees and mentions of educational attainment",
+      "reason": "Educational attainment signal."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic field feature."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree mention feature."
+    },
+    {
+      "id": "L6:F3235",
+      "label": "academic publications, math, and scientific institutions",
+      "reason": "Academic/institutional context."
+    },
+    {
+      "id": "L6:F3774",
+      "label": "proper nouns or names with unusual capitalization",
+      "reason": "Capitalization/name structure."
+    },
+    {
+      "id": "L6:F6811",
+      "label": "names of newly discovered microorganisms and places",
+      "reason": "Named-entity style detection."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Academic biography template."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 26,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "All claimed active features are academic-credential or structural; no gender-marker evidence is present."
+}

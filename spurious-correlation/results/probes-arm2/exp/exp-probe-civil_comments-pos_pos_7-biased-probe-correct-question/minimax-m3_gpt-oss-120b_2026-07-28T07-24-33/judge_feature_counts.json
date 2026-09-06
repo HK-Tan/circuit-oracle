@@ -1,0 +1,118 @@
+{
+  "spurious_features": [
+    {
+      "id": "L8:F15771",
+      "label": "generic 'X Pride' identity-group template",
+      "reason": "Identity-group template, not toxic-content detection."
+    },
+    {
+      "id": "L6:F6085",
+      "label": "'Gay/gay' identity group detector",
+      "reason": "Detects identity term; spurious for toxicity."
+    },
+    {
+      "id": "L6:F15295",
+      "label": "'Pride' token identity-label feature",
+      "reason": "Identity-label token, not toxicity."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "'White/white' racial-group + 'black' mixed term",
+      "reason": "Racial identity signal, not toxic semantics."
+    },
+    {
+      "id": "L4:F15899",
+      "label": "Pride-phrase modifier (boosts the Pride template)",
+      "reason": "Supports identity phrase template."
+    },
+    {
+      "id": "L4:F8645",
+      "label": "secondary Pride-phrase feature",
+      "reason": "Identity-phrase support, not toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "'White' entity recognition",
+      "reason": "Demographic entity detector."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "'Black Pride' entity recognition",
+      "reason": "Identity phrase recognition."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "generic 'X Pride' identity-template feature (shared across Black/Gay/White + lower-case)",
+      "reason": "Shared identity template, not causal toxicity."
+    },
+    {
+      "id": "L2:F11363",
+      "label": "'Black' (capitalized) identity-entity feature",
+      "reason": "Identity token detector."
+    },
+    {
+      "id": "L2:F1644",
+      "label": "'Pride' word-form feature",
+      "reason": "Word-form for identity phrase."
+    },
+    {
+      "id": "L2:F585",
+      "label": "'White' (capitalized) identity-entity feature",
+      "reason": "Identity token detector."
+    },
+    {
+      "id": "L2:F9528",
+      "label": "' black' (lowercase) feature (inhibits the L3 Black-recognition path)",
+      "reason": "Identity-context feature, not toxicity."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "inhibitory identity-context feature (pushes AGAINST the probe)",
+      "reason": "Identity-context, and inhibitory."
+    },
+    {
+      "id": "L1:F12542",
+      "label": "inhibitory 'Pride'-context feature (pushes AGAINST the probe)",
+      "reason": "Pride-context, and inhibitory."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: 'Black' (pos 1)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: ' Pride' (pos 2)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@5",
+      "label": "Emb: ' black' (pos 5)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: 'Gay' (pos 9)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@13",
+      "label": "Emb: ' gay' (pos 13)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@17",
+      "label": "Emb: 'White' (pos 17)",
+      "reason": "Raw embedding only."
+    }
+  ],
+  "n_spurious": 15,
+  "n_causal": 0,
+  "n_other": 6,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle describes only identity-group template circuitry; no toxic-content feature is claimed."
+}

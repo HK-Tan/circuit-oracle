@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F7672",
+      "label": "mentions of women by name and relationship",
+      "reason": "Female-person / pronoun signal"
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Promoted by female-name tokens"
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Women/pronoun detector"
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female-name feature"
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "Gendered relational term feature"
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun detector"
+    },
+    {
+      "id": "L14:F12501",
+      "label": "uses of the feminine pronoun.",
+      "reason": "Feminine pronoun feature"
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Women/girls mention detector"
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women-name/role feature"
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun feature"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F5201",
+      "label": "early nutrition/diet token detectors",
+      "reason": "Nutrition token detector"
+    },
+    {
+      "id": "L3:F6246",
+      "label": "early nutrition/diet token detectors",
+      "reason": "Diet-related vocabulary"
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Diet/health terminology"
+    },
+    {
+      "id": "L4:F9554",
+      "label": "early nutrition/diet token detectors",
+      "reason": "Nutrition-related vocabulary"
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Food/nutrition terminology"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@1",
+      "label": "She",
+      "reason": "Raw token embedding"
+    },
+    {
+      "id": "L0:F0@23",
+      "label": "She",
+      "reason": "Raw token embedding"
+    },
+    {
+      "id": "L0:F0@13",
+      "label": "nutrition",
+      "reason": "Raw token embedding"
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "has",
+      "reason": "Raw token embedding"
+    },
+    {
+      "id": "L26:F0@0",
+      "label": "Probe output (profession classifier)",
+      "reason": "Output node"
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 5,
+  "n_other": 5,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Gendered circuitry dominates; nutrition features are present but fewer."
+}

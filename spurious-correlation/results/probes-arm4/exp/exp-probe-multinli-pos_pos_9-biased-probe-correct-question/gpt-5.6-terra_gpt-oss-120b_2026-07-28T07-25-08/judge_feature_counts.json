@@ -1,0 +1,74 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Explicit negation-word detector in the hypothesis."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector; role is spotting negation cues."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector; still keyed to negation cues."
+    },
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\".",
+      "reason": "Late negation signal, directly aligned to negation words."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Content-word overlap relevant to premise-hypothesis meaning."
+    },
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Lexical record-related content, not pure negation."
+    },
+    {
+      "id": "L2:F8776",
+      "label": "words related to finance and property law",
+      "reason": "Oracle-linked content feature; semantic content cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: not (pos 17)",
+      "label": "Embedding: not",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: recorded (pos 2)",
+      "label": "Embedding: recorded",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: menu (pos 3)",
+      "label": "Embedding: menu",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Pure lexical detector; not semantic comparison."
+    },
+    {
+      "id": "Output: probe classification score",
+      "label": "probe classification score",
+      "reason": "Model output, not a feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 3,
+  "n_other": 5,
+  "spurious_fraction": 0.5714285714285714,
+  "dominant": "spurious",
+  "notes": "Negation detectors dominate; record/menu cues are secondary lexical content."
+}

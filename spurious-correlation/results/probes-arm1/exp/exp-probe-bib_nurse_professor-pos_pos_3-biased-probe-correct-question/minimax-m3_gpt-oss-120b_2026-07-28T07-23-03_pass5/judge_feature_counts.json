@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F7672",
+      "label": "Early entity/pronoun recognition",
+      "reason": "Triggered by pronoun/entity cues, not profession."
+    },
+    {
+      "id": "L2:F5859",
+      "label": "first names (mostly female)",
+      "reason": "Name feature; gender-linked, not causal."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "People-name detector, gender/person marker."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Explicit female-reference feature."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun feature."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Generic name detector, here name-based."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Direct women/girls mention feature."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments",
+      "reason": "Women-name feature, gender-linked."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F9008",
+      "label": "words related to childbirth or birth in general, including in animals",
+      "reason": "Childbirth vocabulary is profession-related."
+    },
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Direct medical specialty indicator."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Unrelated structural/text-format detector."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "named entity recognition at 'She'",
+      "reason": "Oracle-specific mention; already covered by a people-name feature."
+    },
+    {
+      "id": "L7:F2765",
+      "label": "mentions of people or characters, and their performance, roles, injuries, or personal details such as age, death, or family",
+      "reason": "Broad person-detail feature, not specifically causal."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Purely orthographic name pattern."
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "Oracle did not use it in the curated circuit."
+    },
+    {
+      "id": "L8:F7245",
+      "label": "content in languages other than English, particularly French and possibly Sanskrit",
+      "reason": "Unrelated language detector."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Not in curated circuit; oracle dismisses it here."
+    },
+    {
+      "id": "L18:F9023",
+      "label": "personal names and associated titles",
+      "reason": "Generic name/title detector, not directly claimed."
+    },
+    {
+      "id": "L18:F10572",
+      "label": "proper nouns, especially names of people and characters",
+      "reason": "Generic proper-noun feature."
+    },
+    {
+      "id": "L16:F6025",
+      "label": "capitalized first names, sometimes followed by last names",
+      "reason": "Pure name-shape detector."
+    },
+    {
+      "id": "L9:F2984",
+      "label": "mentions of gendered pronouns, often with a conjunction",
+      "reason": "Too generic; not specifically claimed in circuit."
+    },
+    {
+      "id": "L9:F2587",
+      "label": "references to personal pronouns in the third person, and possibly first person",
+      "reason": "Generic pronoun detector."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 3,
+  "n_other": 12,
+  "spurious_fraction": 0.7272727272727273,
+  "dominant": "spurious",
+  "notes": "Female-name/pronoun pathway dominates; nursing vocabulary is present but secondary."
+}

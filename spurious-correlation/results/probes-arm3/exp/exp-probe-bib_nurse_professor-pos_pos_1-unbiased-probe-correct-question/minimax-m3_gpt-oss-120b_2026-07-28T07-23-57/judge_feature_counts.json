@@ -1,0 +1,98 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Profession/role terminology tied to nursing leadership."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession indicator."
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Explicit nursing profession and management content."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Healthcare profession vocabulary."
+    },
+    {
+      "id": "L8:F16339",
+      "label": "text discussing hospital infections and bacteria",
+      "reason": "Medical-topic content relevant to healthcare work."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities.",
+      "reason": "Medical workplace and personnel terminology."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Job-role and skill terminology."
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare organization/profession context."
+    },
+    {
+      "id": "L20:F4927",
+      "label": "titles and acronyms following names, especially within the healthcare field",
+      "reason": "Professional healthcare title/acronym pattern."
+    },
+    {
+      "id": "L9:F16275",
+      "label": "terms related to the workplace environment, including job titles, business descriptions or complaints about work",
+      "reason": "Workplace/job-title semantics."
+    },
+    {
+      "id": "L18:F14457",
+      "label": "words or phrases related to healthcare implementation, patient care and technology",
+      "reason": "Patient-care and healthcare workflow content."
+    },
+    {
+      "id": "L8:F4607",
+      "label": "phrases in job advertisements related to pay",
+      "reason": "Job-ad and employment context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F8736",
+      "label": "the phrase \"born and raised\"",
+      "reason": "Generic biography structure, not task-specific."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Generic symbols/IDs; no profession semantics."
+    },
+    {
+      "id": "L2:F15437",
+      "label": "words related to nurses and sound",
+      "reason": "Oracle label is mixed/unclear; not a claimed profession feature."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Gender-related, but oracle says negative and non-driving."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gender-related, but oracle says negative and non-driving."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 12,
+  "n_other": 5,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle claims profession/healthcare content drives the probe; gender features are explicitly non-driving."
+}

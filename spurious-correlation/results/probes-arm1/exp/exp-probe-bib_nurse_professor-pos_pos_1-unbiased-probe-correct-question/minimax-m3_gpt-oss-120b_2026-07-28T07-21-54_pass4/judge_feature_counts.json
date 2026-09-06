@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Gender pronoun signal; spurious by task definition."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based gender proxy, not profession."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun feature supporting feminine mentions."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun/possessive gender marker."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Generic pronoun feature linked to she."
+    },
+    {
+      "id": "L0:F12519",
+      "label": "the pronoun \"she\"",
+      "reason": "Direct feminine pronoun detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L20:F4927",
+      "label": "titles and acronyms following names, especially within the healthcare field",
+      "reason": "Healthcare title/acronym indicator."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Nurse-manager role and skills."
+    },
+    {
+      "id": "L18:F14457",
+      "label": "words or phrases related to healthcare implementation, patient care and technology",
+      "reason": "Healthcare and patient-care terminology."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession indicator."
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Explicit nursing-management content."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Nursing/healthcare vocabulary."
+    },
+    {
+      "id": "L8:F16339",
+      "label": "text discussing hospital infections and bacteria",
+      "reason": "Clinical/hospital context."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities.",
+      "reason": "Medical workplace and personnel cues."
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare-system name signal."
+    },
+    {
+      "id": "L2:F15437",
+      "label": "words related to nurses and sound",
+      "reason": "Oracle links it to nurses."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Leadership/medicine vocabulary."
+    },
+    {
+      "id": "L18:F1665",
+      "label": "anesthesia",
+      "reason": "Medical specialty context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' nurses' (pos 15)",
+      "label": "(embed/output)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: 'perative' (pos 14)",
+      "label": "(embed/output)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' Perio' (pos 13)",
+      "label": "(embed/output)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' she' (pos 7)",
+      "label": "(embed/output)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: 'Formerly' (pos 1)",
+      "label": "(embed/output)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' first' (pos 12)",
+      "label": "(embed/output)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Probe direction",
+      "label": "nurse classification",
+      "reason": "Circuit target, not a feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 12,
+  "n_other": 7,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Gender feature is inhibitory; positive path is nursing and healthcare terminology."
+}

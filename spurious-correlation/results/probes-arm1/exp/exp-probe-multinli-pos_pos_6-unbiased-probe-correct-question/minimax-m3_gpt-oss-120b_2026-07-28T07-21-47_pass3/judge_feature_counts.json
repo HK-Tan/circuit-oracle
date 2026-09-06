@@ -1,0 +1,203 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Negation-word detector; fires on 'not'/'allowed' surface form."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: So (pos 1)",
+      "label": "So",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: they (pos 2)",
+      "label": "they",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: set (pos 3)",
+      "label": "set",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: about (pos 4)",
+      "label": "about",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: clearing (pos 5)",
+      "label": "clearing",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: land (pos 7)",
+      "label": "land",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: for (pos 8)",
+      "label": "for",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: agriculture (pos 9)",
+      "label": "agriculture",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: fire (pos 12)",
+      "label": "fire",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: to (pos 13)",
+      "label": "to",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: to (pos 23)",
+      "label": "to",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: . (pos 18)",
+      "label": ".",
+      "reason": "Pure punctuation detector."
+    },
+    {
+      "id": "Emb: not (pos 21)",
+      "label": "not",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: allowed (pos 22)",
+      "label": "allowed",
+      "reason": "Pure token embedding, not a semantic feature."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Generic lexical pattern detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F15492",
+      "label": "the word \"for\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Pure surface-form detector."
+    },
+    {
+      "id": "L1:F461",
+      "label": "the word \"land\"",
+      "reason": "Content noun detector, not task semantics."
+    },
+    {
+      "id": "L1:F361",
+      "label": "words related to agriculture and ecology",
+      "reason": "Topical lexical detector, not contradiction semantics."
+    },
+    {
+      "id": "L1:F5978",
+      "label": "words related to fire and boilers",
+      "reason": "Topical lexical detector, not contradiction semantics."
+    },
+    {
+      "id": "L2:F11518",
+      "label": "the word \"land\" in scientific/agricultural contexts",
+      "reason": "Lexical/topic detector, not semantic relation."
+    },
+    {
+      "id": "L2:F15312",
+      "label": "the word \"about.\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L2:F10849",
+      "label": "the word \"set\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L2:F14822",
+      "label": "the abbreviation \"SO\" followed by other characters",
+      "reason": "Structural abbreviation detector."
+    },
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Lexical topic detector, not contradiction semantics."
+    },
+    {
+      "id": "L3:F4464",
+      "label": "the word \"about\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L3:F15978",
+      "label": "mentions of land, property, and acreage.",
+      "reason": "Topical lexical detector."
+    },
+    {
+      "id": "L4:F12225",
+      "label": "transitional conclusion words, often used in legal or academic writing",
+      "reason": "Generic discourse marker detector."
+    },
+    {
+      "id": "L4:F5450",
+      "label": "code snippets from different languages and words related to starting or beginning something",
+      "reason": "Generic beginning-word/structure detector."
+    },
+    {
+      "id": "L6:F14744",
+      "label": "the words \"about,\" \"to,\" and \"work.\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L6:F4516",
+      "label": "the letter \"i.\"",
+      "reason": "Pure surface-form detector."
+    },
+    {
+      "id": "L6:F14585",
+      "label": "the words \"the\" and \"it\" at the beginning of sentences",
+      "reason": "Generic sentence-initial function-word detector."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Generic sentence-initial/capitalized-token detector."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Oracle says broad-topic, not task semantics."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Pure structural sentence-initial detector."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 0,
+  "n_other": 37,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle primarily reports surface/lexical cues; only negation-word detection counts as spurious here."
+}

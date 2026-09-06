@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F2123",
+      "label": "words ending in \"ian\", \"jani\", \"iti\", \"ino\", or \"olan\"",
+      "reason": "Identity-suffix detector; fires on Indian."
+    },
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Direct identity-group mention feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F148",
+      "label": "words and phrases related to sexual assault and abuse",
+      "reason": "Direct abuse/toxicity vocabulary."
+    },
+    {
+      "id": "L5:F3229",
+      "label": "words related to violent assault and murder",
+      "reason": "Violence semantics relevant to toxicity."
+    },
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Uses abuse context as toxicity cue."
+    },
+    {
+      "id": "L6:F1600",
+      "label": "negative words and phrases related to problems and imperfections",
+      "reason": "Generic negativity tied to harmful tone."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L2:F1680",
+      "label": "words that refer to people participating in some activity, such as consumers, patients in healthcare, or voters",
+      "reason": "Broad role noun detector."
+    },
+    {
+      "id": "L0:F13183",
+      "label": "the word \"stated\"",
+      "reason": "Reporting-word detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure structural token detector."
+    },
+    {
+      "id": "L0:F11668",
+      "label": "Baseball terminology",
+      "reason": "Oracle says mislabeled generic token effect."
+    },
+    {
+      "id": "L3:F14281",
+      "label": "questions about how to do things, and some French words",
+      "reason": "Structural/question-word feature."
+    },
+    {
+      "id": "L3:F9646",
+      "label": "verbs and associated nouns.",
+      "reason": "Generic syntax/verb-noun pattern."
+    },
+    {
+      "id": "L3:F5853",
+      "label": "instances of people speaking and making statements",
+      "reason": "Speech/reporting structure, not toxicity."
+    },
+    {
+      "id": "L2:F9873",
+      "label": "instances of abusive language or words that end in \"ally\"",
+      "reason": "Oracle evidence ambiguous; not used as claim."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity token, but oracle did not claim activation here."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 4,
+  "n_other": 12,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Oracle mainly cites abuse/violence cues, with some identity-group bias present."
+}

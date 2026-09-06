@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Race-related rhetoric; identity-linked shortcut."
+    },
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Identity-group mention, not toxic meaning."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Demographic token detector; identity cue."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form",
+      "reason": "Generic pronoun, not toxicity-specific."
+    },
+    {
+      "id": "L0:F15956",
+      "label": "the word \"those\"",
+      "reason": "Generic deictic word; structural cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L5:F3229",
+      "label": "words related to violent assault and murder",
+      "reason": "Direct violence semantics for toxicity."
+    },
+    {
+      "id": "L4:F11580",
+      "label": "negative language and swear words",
+      "reason": "Profanity/abuse content is causal."
+    },
+    {
+      "id": "L1:F12073",
+      "label": "the word \"problems\" and words that frequently appear with it",
+      "reason": "Negative-content cue tied to toxic tone."
+    },
+    {
+      "id": "L1:F16351",
+      "label": "the word 'problem', or related terms",
+      "reason": "Negative evaluative language."
+    },
+    {
+      "id": "L3:F5853",
+      "label": "instances of people speaking and making statements",
+      "reason": "Not purely structural; supports abusive speech content."
+    },
+    {
+      "id": "L6:F1600",
+      "label": "negative words and phrases related to problems and imperfections",
+      "reason": "Negative affect cue for toxicity."
+    },
+    {
+      "id": "L3:F2705",
+      "label": "words related to cheating or being deceptive",
+      "reason": "Harassment/deceptive abuse semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic structural word feature."
+    },
+    {
+      "id": "L0:F11668",
+      "label": "Baseball terminology",
+      "reason": "Unrelated topic feature."
+    },
+    {
+      "id": "L3:F14281",
+      "label": "questions about how to do things, and some French words",
+      "reason": "Mixed generic language/topic feature."
+    },
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Generic structural word feature."
+    },
+    {
+      "id": "L0:F8381",
+      "label": "the word 'by'",
+      "reason": "Generic structural word feature."
+    },
+    {
+      "id": "L3:F4327",
+      "label": "words and phrases that end with \"ive\", and also a few words that end in \"ices\" or \"ishes\", and also the phrase \"advantage of the\"",
+      "reason": "Mostly morphology/phrase artifact."
+    },
+    {
+      "id": "L4:F4021",
+      "label": "code snippets or configurations with the word \"as\".",
+      "reason": "Code/configuration artifact."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 7,
+  "n_other": 7,
+  "spurious_fraction": 0.4166666666666667,
+  "dominant": "causal",
+  "notes": "Identity cues are present, but toxicity/negative-content features dominate overall."
+}

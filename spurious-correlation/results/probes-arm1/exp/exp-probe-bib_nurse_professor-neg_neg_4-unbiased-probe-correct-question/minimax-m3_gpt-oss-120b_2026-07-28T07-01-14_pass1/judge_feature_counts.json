@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun cue; gender marker, not profession."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F4627",
+      "label": "the word \"director\"",
+      "reason": "Job title directly indicates a profession."
+    },
+    {
+      "id": "L0:F5743",
+      "label": "the word \"lab\" and words that might be associated with equipment or a positive experience",
+      "reason": "Laboratory/technical context supports profession."
+    },
+    {
+      "id": "L1:F14934",
+      "label": "the word \"grid\" and some related terms related to \"grids\"",
+      "reason": "Technical vocabulary relevant to work domain."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Degree cue tied to profession/education."
+    },
+    {
+      "id": "L1:F10132",
+      "label": "the abbreviation for Doctorate of Philosophy, \"Ph.D.\" (or \"PhD\") written as \"D\"",
+      "reason": "Education credential indicates professional background."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree-related evidence for occupation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L6:F3774",
+      "label": "proper nouns or names with unusual capitalization",
+      "reason": "Generic name/capitalization detector."
+    },
+    {
+      "id": "L0:F8658",
+      "label": "the word \"is\"",
+      "reason": "Purely structural/common word feature."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic conjunction, not semantic."
+    },
+    {
+      "id": "L4:F12934",
+      "label": "names of academic journals",
+      "reason": "Oracle cites journals, not profession itself."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Broad academic entity detector."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "abbreviations for degrees and mentions of educational attainment",
+      "reason": "Degree abbreviation cue, but oracle notes broad attainment terms."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 6,
+  "n_other": 6,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "causal",
+  "notes": "Oracle claims one gender cue plus several profession/education cues; other listed features are generic or dismissed."
+}

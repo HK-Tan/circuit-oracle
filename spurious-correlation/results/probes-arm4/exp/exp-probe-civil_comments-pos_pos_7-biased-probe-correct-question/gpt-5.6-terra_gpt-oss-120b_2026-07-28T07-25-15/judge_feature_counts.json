@@ -1,0 +1,68 @@
+{
+  "spurious_features": [
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "Identity-topic detector, not toxic-content semantics."
+    },
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "Sexual-orientation topic feature; spurious here."
+    },
+    {
+      "id": "L4:F15899",
+      "label": "language associated with the LGBTQ community and discussions of gender and identity",
+      "reason": "Demographic identity-language detector."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity signal, not toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race-topic feature; demographic correlate."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Identity-group lexicon detector."
+    },
+    {
+      "id": "L4:F8645",
+      "label": "passages discussing same-sex marriage",
+      "reason": "Identity-topic discussion feature."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: Gay (pos 9)",
+      "label": "Embedding token: Gay",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb:  gay (pos 13)",
+      "label": "Embedding token: gay",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb:  black (pos 5)",
+      "label": "Embedding token: black",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: White (pos 17)",
+      "label": "Embedding token: White",
+      "reason": "Input embedding, not a feature."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 0,
+  "n_other": 4,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity-topic detectors; no causal toxicity feature is identified."
+}

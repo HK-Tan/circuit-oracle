@@ -1,0 +1,97 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Acknowledgement/discourse filler, not NLI semantics."
+    },
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Surface negation contraction detector."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "Generic conversational filler, not semantic relation."
+    },
+    {
+      "id": "L3:F14620",
+      "label": "the word \"well\" and conjunctions like \"and\"",
+      "reason": "Conversation marker detector."
+    },
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Connective token cue, not contradiction meaning."
+    },
+    {
+      "id": "L0:F8659",
+      "label": "the word \"foundation\" in different contexts, including religious, legal, and abstract senses.",
+      "reason": "Lexical topic detector; unrelated to NLI semantics."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Topic-word detector, not task-relevant."
+    },
+    {
+      "id": "L1:F177",
+      "label": "the word \"double\" and words that begin with \"multi\" or \"doubly\"",
+      "reason": "Pure lexical pattern feature."
+    },
+    {
+      "id": "L0:F12862",
+      "label": "the word \"tournament\" and related words such as \"winning\", but not always",
+      "reason": "Topic/word detector only."
+    },
+    {
+      "id": "L3:F12849",
+      "label": "words or phrases that include the word \"double\", or contain a hyphen",
+      "reason": "Structural/lexical surface feature."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L6:F11557",
+      "label": "frequently used words such as conjunctions, pronouns, or discourse markers",
+      "reason": "Purely structural discourse-marker feature."
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Single-token filler detector."
+    },
+    {
+      "id": "L0:F4365",
+      "label": "the word \"neither\" and related negative terms.",
+      "reason": "Surface negative-word detector."
+    },
+    {
+      "id": "L0:F5912",
+      "label": "\"year\" but also sometimes finds related words that include \"day\", \"living\", or \"sold\"",
+      "reason": "Lexical association feature, not semantics."
+    },
+    {
+      "id": "L0:F15682",
+      "label": "the word \"okay\" plus a few related expressions.",
+      "reason": "Generic acknowledgment/filler detector."
+    },
+    {
+      "id": "L0:F5112",
+      "label": "the word \"resolution\", sometimes in the context of displaying images or patterns",
+      "reason": "Surface lexical detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [],
+  "n_spurious": 17,
+  "n_causal": 0,
+  "n_other": 0,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes surface discourse/negation cues; no semantic NLI features are claimed."
+}

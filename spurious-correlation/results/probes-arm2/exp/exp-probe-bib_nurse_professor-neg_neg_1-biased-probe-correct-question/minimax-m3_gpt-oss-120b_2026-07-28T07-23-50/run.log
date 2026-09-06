@@ -1,0 +1,25 @@
+
+============================================================
+Graph: bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+Loading bib_nurse_professor-neg_neg_1-biased-probe-correct.pt...
+  6392 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+**Analysis:** The classification probe's score is driven almost entirely by gender/pronoun-pronoun features at the "His" (pos 1) and "He" (pos 14, 37) token positions — with the L7 "His" feature pair (F14893/F14946) producing the largest opposing effects (+0.43 / −0.43) — and not by any profession-indicating features like "computer graphics," "PhD," "University," "Los Alamos," or "visualization."
+
+**Confidence:** 8
+
+**Reasoning:** The circuit traces almost exclusively to the **"His" / "He" pronoun embeddings** (pos 1, 14, 37) rather than to any technical or professional vocabulary tokens elsewhere in the passage (no "visualization," "computer," "University of Utah," or "Los Alamos" features appear). The signal flow is:
+
+1. **Embedding nodes (L0):** `Emb: His` (pos 1) provides the dominant direct effect (e.g., +23.5, +19.75, +21.375, +13) into almost every downstream feature at pos 1. `Emb: He` (pos 14, 37) propagates through L0:F1069 (direct_effect 35.75 / 7.84) into mid-layer pronoun features. `Emb: research` / `Emb: interests` contribute only weakly (direct_effect 20–28) to the small L2:L0 features (L0:F4564, L2:F9740) which produce only modest positive probe contributions (0.13–0.16).
+2. **Early pronoun features (L0–L6, pos 1):** F2994, F1069, F7439, F5491, F4315, F12990 — all gated by the "His" embedding, aggregating its identity.
+3. **L7 feature pair (pos 1) — the single most important node:** F14893 (+0.43) and F14946 (−0.43) form an opposing pair directly on the residual stream at the "His" token, providing nearly the entire magnitude of the probe's score from a *single token position*. This is a classic name/pronoun detector pattern (no other position contributes comparable direct effects).
+4. **Mid pronoun features (L7–L15, pos 1):** F462, F2762, F14174, F10933, F9183, F8770, F851, F12493, F8128, F7106, F12232 — all anchored on `Emb: His` with very large upstream direct effects (15–23). These are entity-tracking/name features, not profession features.
+5. **Late aggregators (L18–L19):** F14743 (pos 14 & 37, "He" pronoun, −0.25/−0.21) and F7400/F10315 (pos 1, "His" pronoun, −0.16/−0.15) feed negative effects; F8814 (pos 1, +0.24) is the main late positive contributor. All upstream trace back to the "His"/"He" embeddings.
+6. **Output:** The only direct paths to the probe logit come from the L7 pair (pos 1), the late pronoun aggregators (pos 1/14/37), and the weak L0–L2 features at pos 2–3 (research/interests).
+
+**The user's concern is well-supported.** Zero features in the top 15 contributors (and downstream of all of them) reference the professional-identity tokens (scientist, professor, PhD, computer science, visualization, Los Alamos, University, etc.). The probe is reading off male-pronoun/gender-pronoun co-occurrence, not profession. The L7 "His" pair (F14893, F14946) and the "He" features at pos 14/37 are precisely the kind of spurious gender markers the user suspected — the probe likely learned that the target profession is correlated with male pronouns in training data. This is a strong case of a classification probe encoding a spurious surface feature (gender-marking pronouns) rather than the semantically relevant profession-indicating content of the biography.
+Results saved to: <repo>/spurious-correlation/results/probes-arm2/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-50

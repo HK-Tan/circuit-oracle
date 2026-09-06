@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Explicit male pronoun detector"
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Aggregates pronoun signals"
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun feature"
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-gendered language detector"
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Pronoun detector"
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Gender/pronoun concept"
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Gender concept feature"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F13731",
+      "label": "the word \"lab\" or \"laboratory\"",
+      "reason": "Profession-adjacent workplace term"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Generic function word"
+    },
+    {
+      "id": "L0:F11024",
+      "label": "the word \"clock\", especially in a technical context",
+      "reason": "Generic lexical feature"
+    },
+    {
+      "id": "L0:F8658",
+      "label": "the word \"is\"",
+      "reason": "Generic function word"
+    },
+    {
+      "id": "L0:F10846",
+      "label": "the word \"also\"",
+      "reason": "Generic function word"
+    },
+    {
+      "id": "L0:F3214",
+      "label": "titles followed by names or URLs from government sites",
+      "reason": "Structural/title pattern"
+    },
+    {
+      "id": "Emb: He (pos 35)",
+      "label": "Embed: He",
+      "reason": "Embedding node, not feature"
+    },
+    {
+      "id": "Emb: His (pos 13)",
+      "label": "Embed: His",
+      "reason": "Embedding node, not feature"
+    },
+    {
+      "id": "Emb: He (pos 1)",
+      "label": "Embed: He",
+      "reason": "Embedding node, not feature"
+    },
+    {
+      "id": "Emb: is (pos 2)",
+      "label": "Embed: is",
+      "reason": "Embedding node, not feature"
+    },
+    {
+      "id": "Emb: also (pos 3)",
+      "label": "Embed: also",
+      "reason": "Embedding node, not feature"
+    },
+    {
+      "id": "Emb: Director (pos 4)",
+      "label": "Embed: Director",
+      "reason": "Embedding node, not feature"
+    },
+    {
+      "id": "Emb: of (pos 5)",
+      "label": "Embed: of",
+      "reason": "Embedding node, not feature"
+    },
+    {
+      "id": "Emb: Laboratory (pos 11)",
+      "label": "Embed: Laboratory",
+      "reason": "Embedding node, not feature"
+    },
+    {
+      "id": "Probe direction (profession classifier)",
+      "label": "Probe direction (profession classifier)",
+      "reason": "Model component, not feature"
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 1,
+  "n_other": 14,
+  "spurious_fraction": 0.875,
+  "dominant": "spurious",
+  "notes": "Dominant signal is gender/pronoun-based; only one weak profession-adjacent feature appears."
+}

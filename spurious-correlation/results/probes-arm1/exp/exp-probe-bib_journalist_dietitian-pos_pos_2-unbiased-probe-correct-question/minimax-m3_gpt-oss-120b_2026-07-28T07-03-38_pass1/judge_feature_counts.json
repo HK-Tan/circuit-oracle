@@ -1,0 +1,149 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gendered pronoun detector"
+    },
+    {
+      "id": "L1:F7244",
+      "label": "the pronoun \"she\"",
+      "reason": "Gendered pronoun detector"
+    },
+    {
+      "id": "L2:F2128",
+      "label": "pronouns, especially \"he/him/it\" equivalents like *er*, *ihn*, *es*, *ele*, and *ela* across multiple languages.",
+      "reason": "Generic gendered pronoun feature"
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Woman-reference feature"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F5201",
+      "label": "the word \"nutrition\"",
+      "reason": "Profession indicator"
+    },
+    {
+      "id": "L1:F815",
+      "label": "the word \"passion\"",
+      "reason": "Content-neutral lexical cue"
+    },
+    {
+      "id": "L1:F728",
+      "label": "words related to gaining knowledge",
+      "reason": "Content-neutral educational cue"
+    },
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Content-neutral lexical cue"
+    },
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Structural/common-word detector"
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Profession-related vocabulary"
+    },
+    {
+      "id": "L4:F10494",
+      "label": "words related to health, medicine, diet, drugs, age groups, and excercise",
+      "reason": "Profession-related vocabulary"
+    },
+    {
+      "id": "L4:F9554",
+      "label": "words related to food, rations and feeding",
+      "reason": "Profession-related vocabulary"
+    },
+    {
+      "id": "L4:F14942",
+      "label": "mentions of cooking, kitchens, chefs, and associated locations.",
+      "reason": "Profession-related vocabulary"
+    },
+    {
+      "id": "L7:F6434",
+      "label": "words related to kitchens",
+      "reason": "Profession-related vocabulary"
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Domain vocabulary"
+    },
+    {
+      "id": "L15:F2510",
+      "label": "words and phrases related to food preparation and consumption, along with some words relating to the digestive system and eating disorders",
+      "reason": "Profession-related vocabulary"
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Profession-related context"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: \" nutrition\" (pos 13)",
+      "label": "embed/output",
+      "reason": "Input embedding node"
+    },
+    {
+      "id": "Emb: \" cook\" (pos 17)",
+      "label": "embed/output",
+      "reason": "Input embedding node"
+    },
+    {
+      "id": "Emb: \"She\" (pos 1)",
+      "label": "embed/output",
+      "reason": "Input embedding node"
+    },
+    {
+      "id": "Emb: \" passion\" (pos 4)",
+      "label": "embed/output",
+      "reason": "Input embedding node"
+    },
+    {
+      "id": "Emb: \" has\" (pos 2)",
+      "label": "embed/output",
+      "reason": "Input embedding node"
+    },
+    {
+      "id": "Emb: \" about\" (pos 9)",
+      "label": "embed/output",
+      "reason": "Input embedding node"
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural"
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic common-word detector"
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Oracle-claimed specific token context"
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Oracle dismisses as code/XML"
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 13,
+  "n_other": 10,
+  "spurious_fraction": 0.23529411764705882,
+  "dominant": "causal",
+  "notes": "Gender features are present but suppressive; the circuit is mainly nutrition/cooking domain-driven."
+}

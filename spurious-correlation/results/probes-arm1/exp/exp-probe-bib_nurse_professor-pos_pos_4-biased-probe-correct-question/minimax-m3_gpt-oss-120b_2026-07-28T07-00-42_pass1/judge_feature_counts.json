@@ -1,0 +1,149 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Explicit female-subject detector; gender marker."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Tracks women\u2019s names/roles; gendered signal."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female reference detector; pronoun/title-based."
+    },
+    {
+      "id": "L5:F5996",
+      "label": "words associated with females, femininity or womanhood",
+      "reason": "Directly encodes feminine concepts."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Oracle ties it to she/her pronouns."
+    },
+    {
+      "id": "L13:F6622",
+      "label": "pronouns.",
+      "reason": "Generic pronoun feature; used for gender path."
+    },
+    {
+      "id": "L16:F2918",
+      "label": "Pronouns",
+      "reason": "Pronoun detector supporting gender cue."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female-name detector; gender marker."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Detects woman\u2019s name; gendered identity."
+    },
+    {
+      "id": "L5:F16213",
+      "label": "proper nouns consisting of a first and last name",
+      "reason": "Name-identity path tied to Lori."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Name/title detector; identity signal."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Name-shape feature aiding Lori detection."
+    },
+    {
+      "id": "L2:F5859",
+      "label": "first names (mostly female)",
+      "reason": "Explicitly female-skewed first-name feature."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns and positive adjectives",
+      "reason": "Used on Lori as name-identity signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "unknown",
+      "reason": "Oracle says it promotes nurse/practitioner."
+    },
+    {
+      "id": "L4:F9036",
+      "label": "unknown",
+      "reason": "Oracle says it promotes nurse/practitioner."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "unknown",
+      "reason": "Oracle says it promotes practitioner."
+    },
+    {
+      "id": "L1:F1494",
+      "label": "words related to medical practices and studies.",
+      "reason": "Medical-training terminology."
+    },
+    {
+      "id": "L2:F2589",
+      "label": "words related to medical professionals and medical specialties",
+      "reason": "Medical-profession vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: She",
+      "label": "Emb: She (pos 20)",
+      "reason": "Raw embedding, not a feature."
+    },
+    {
+      "id": "Emb: Lori",
+      "label": "Emb: Lori (pos 1)",
+      "reason": "Raw embedding, not a feature."
+    },
+    {
+      "id": "Emb: nurse",
+      "label": "Emb: nurse (pos 32)",
+      "reason": "Raw embedding, not a feature."
+    },
+    {
+      "id": "Emb: practitioner",
+      "label": "Emb: practitioner (pos 33)",
+      "reason": "Raw embedding, not a feature."
+    },
+    {
+      "id": "Emb: Nursing",
+      "label": "Emb: Nursing (pos 18)",
+      "reason": "Raw embedding, not a feature."
+    },
+    {
+      "id": "Emb: graduated",
+      "label": "Emb: graduated (pos 2)",
+      "reason": "Raw embedding, not a feature."
+    },
+    {
+      "id": "Probe direction",
+      "label": "Probe direction (nurse)",
+      "reason": "Model parameter, not a feature."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 6,
+  "n_other": 7,
+  "spurious_fraction": 0.7,
+  "dominant": "spurious",
+  "notes": "Circuit is heavily contaminated by gender/name cues, though profession terms are present."
+}

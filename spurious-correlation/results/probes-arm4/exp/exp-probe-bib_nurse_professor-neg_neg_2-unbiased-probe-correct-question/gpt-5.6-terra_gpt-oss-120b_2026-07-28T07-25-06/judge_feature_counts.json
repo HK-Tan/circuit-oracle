@@ -1,0 +1,54 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F8439",
+      "label": "stock ticker symbols and Canadian geography",
+      "reason": "Waterloo-linked Canada geography is a shortcut, not profession evidence."
+    },
+    {
+      "id": "L14:F5600",
+      "label": "places and regions, particularly in Canada",
+      "reason": "Canadian-place cue correlates with biographies, not engineering causally."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F1372",
+      "label": "the word \"engineer\"",
+      "reason": "Direct engineering profession indicator."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "references to academic degrees",
+      "reason": "Degree evidence relevant to professional biographies."
+    },
+    {
+      "id": "L1:F10132",
+      "label": "the abbreviation for Doctorate of Philosophy, \"Ph.D.\" (or \"PhD\") written as \"D\"",
+      "reason": "Academic credential signal relevant to profession."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree/profile terminology supports profession inference."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Academic profile feature relevant to biography class."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F16309",
+      "label": "people's names",
+      "reason": "Generic name detector; structural biography cue."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 5,
+  "n_other": 1,
+  "spurious_fraction": 0.2857142857142857,
+  "dominant": "causal",
+  "notes": "No gender-marker circuit is claimed; main signal is engineering plus academic-profile evidence."
+}

@@ -1,0 +1,128 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F15411",
+      "label": "terms relating to political bodies, figures, and processes",
+      "reason": "Political entity semantics, not negation."
+    },
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Congress entity/meaning feature."
+    },
+    {
+      "id": "L3:F123",
+      "label": "mentions of the United States Congress",
+      "reason": "Congress mention semantics."
+    },
+    {
+      "id": "L2:F6735",
+      "label": "political parties and politicians",
+      "reason": "Political context, content-related."
+    },
+    {
+      "id": "L3:F5753",
+      "label": "the word \"includes\" or \"containing\".",
+      "reason": "Content-word meaning about inclusion."
+    },
+    {
+      "id": "L0:F10783",
+      "label": "the word \"include\" (and variations of the word)",
+      "reason": "Includes/content relation."
+    },
+    {
+      "id": "L4:F59",
+      "label": "actions or methods, sometimes preceeded by the preposition 'a' or 'to'.",
+      "reason": "Syntactic/semantic action cue."
+    },
+    {
+      "id": "L2:F11469",
+      "label": "the word \"to\"",
+      "reason": "Structural but tied to action phrase here."
+    },
+    {
+      "id": "L0:F195",
+      "label": "the word \"who\"",
+      "reason": "Relative-clause content syntax."
+    },
+    {
+      "id": "L0:F13437",
+      "label": "the word \"who\"",
+      "reason": "Relative-clause content syntax."
+    },
+    {
+      "id": "L3:F8351",
+      "label": "words related to including and code language symbols",
+      "reason": "Inclusion/content feature."
+    },
+    {
+      "id": "L0:F10401",
+      "label": "mentions of genes and proteins",
+      "reason": "Dismissed as generic lexical coactivation?"
+    },
+    {
+      "id": "L0:F6044",
+      "label": "the word \"yield\"",
+      "reason": "Generic lexical feature; not negation."
+    },
+    {
+      "id": "L0:F9557",
+      "label": "the word \"clean\" and words/phrases associated with people",
+      "reason": "Generic coactivation, not task signal."
+    },
+    {
+      "id": "L0:F4870",
+      "label": "commas and sometimes reach (context not clear)",
+      "reason": "Pure punctuation/structure."
+    },
+    {
+      "id": "L0:F10198",
+      "label": "unknown",
+      "reason": "Oracle gives Congress-related entity context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Congress (pos 2)",
+      "label": "input embedding",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb: include (pos 12)",
+      "label": "input embedding",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb: began (pos 10)",
+      "label": "input embedding",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb: to (pos 11)",
+      "label": "input embedding",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb: who (pos 15)",
+      "label": "input embedding",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb: members (pos 14)",
+      "label": "input embedding",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb: , (pos 9)",
+      "label": "input embedding",
+      "reason": "Raw token embedding only."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 16,
+  "n_other": 7,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle emphasizes Congress/inclusion semantics; no actual negation-word detector is claimed."
+}

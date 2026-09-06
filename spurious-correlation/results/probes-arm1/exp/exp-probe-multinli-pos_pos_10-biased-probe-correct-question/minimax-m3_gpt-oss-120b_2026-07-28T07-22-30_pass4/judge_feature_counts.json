@@ -1,0 +1,138 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "negative sentiment markers such as \"not,\" \"no,\" \"never,\" and their equivalents in other languages",
+      "reason": "Explicit negation-word detector."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "\"not\" or negative terms, with some bonus for sports-related terms and \"purpose\"",
+      "reason": "Negation cue dominates label-relevant role."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation/absence detector."
+    },
+    {
+      "id": "L3:F12079",
+      "label": "negations and Chinese names",
+      "reason": "Contains negation detection."
+    },
+    {
+      "id": "L3:F2232",
+      "label": "character sequences like \"NOC\", \"NO\", \"ORES\", \"NOS\", \"OF\", \"UNCH\", and \"oooooooo\" within a series of hexadecimal codes, sometimes also picking up on related words such as \"dangerously\", \"Bantus\", \"slave\", and \"plantation\"",
+      "reason": "Promoted NO/negation-like strings."
+    },
+    {
+      "id": "L3:F9803",
+      "label": "sentences describing scientific studies or experiments, particularly where something is disproven",
+      "reason": "Disproof/negation cue."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Cross-lingual negation detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation-word detector."
+    },
+    {
+      "id": "L4:F7500",
+      "label": "negation words",
+      "reason": "Direct negation detector."
+    },
+    {
+      "id": "L8:F9880",
+      "label": "phrases expressing doubt, negation, or uncertainty",
+      "reason": "Explicit negation/uncertainty cue."
+    },
+    {
+      "id": "L9:F14687",
+      "label": "phrases using the word \"not\", often followed by \"because\" or \"but.\"",
+      "reason": "Lexical not-pattern detector."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation cue."
+    },
+    {
+      "id": "L15:F6160",
+      "label": "occurrences of \"is there\"",
+      "reason": "Structural phrase, but oracle links it via negation stack."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Classic lexical negation pattern."
+    },
+    {
+      "id": "L26:F0",
+      "label": "Probe (contradiction direction)",
+      "reason": "Output direction for contradiction."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: ' not' (pos 17)",
+      "label": "Input embedding token",
+      "reason": "Token embedding, not a learned semantic feature."
+    },
+    {
+      "id": "Emb: ' is' (pos 16)",
+      "label": "Input embedding token",
+      "reason": "Token embedding, not a learned semantic feature."
+    },
+    {
+      "id": "Emb: ' There' (pos 15)",
+      "label": "Input embedding token",
+      "reason": "Token embedding, not a learned semantic feature."
+    },
+    {
+      "id": "Emb: ' reversal' (pos 4)",
+      "label": "Input embedding token",
+      "reason": "Token embedding, not a learned semantic feature."
+    },
+    {
+      "id": "L2:F16097",
+      "label": "superlative adjectives and the words \"test\" or \"point\"",
+      "reason": "Structural/irrelevant lexical feature."
+    },
+    {
+      "id": "L3:F3669",
+      "label": "references to ordinal rankings of things",
+      "reason": "Structural/irrelevant lexical feature."
+    },
+    {
+      "id": "L1:F15749",
+      "label": "the word \"strange\", or related words",
+      "reason": "Not claimed as semantic NLI relation."
+    },
+    {
+      "id": "L0:F13522",
+      "label": "the word \"speed\" and related words about definition and measurement",
+      "reason": "Irrelevant lexical feature."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic word detector."
+    }
+  ],
+  "n_spurious": 16,
+  "n_causal": 0,
+  "n_other": 9,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows a pure negation-lexicon circuit; no semantic-relation features are claimed."
+}

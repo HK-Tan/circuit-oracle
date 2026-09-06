@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity token detector for \"white\"."
+    },
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Identity token detector for \"black\"."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/topic detector, not toxicity."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "\"white\" cultural-institution detector",
+      "reason": "Identity-coded \"white\" reading."
+    },
+    {
+      "id": "L4:F7136",
+      "label": "\"color white\" detector",
+      "reason": "Literal color mention, identity-adjacent here."
+    },
+    {
+      "id": "L5:F10172",
+      "label": "ethnic-slur / Southern American vocabulary",
+      "reason": "Demographic/ethnic vocabulary feature."
+    },
+    {
+      "id": "L2:F9909",
+      "label": "informal group descriptors",
+      "reason": "Group-descriptor, identity/register signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F4008",
+      "label": "profanity / strong-opinion / slang detector",
+      "reason": "Toxic-content / abusive-slang semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: white (pos 2)",
+      "label": "embed/output",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "Emb: black (pos 6)",
+      "label": "embed/output",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "Emb: dude (pos 3)",
+      "label": "embed/output",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "Emb: Another (pos 1)",
+      "label": "embed/output",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "L0:F4090",
+      "label": "the word \"another\"",
+      "reason": "Generic lexical word detector."
+    },
+    {
+      "id": "L2:F2850",
+      "label": "the word \"another\"",
+      "reason": "Generic lexical word detector."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 1,
+  "n_other": 6,
+  "spurious_fraction": 0.875,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity-term detectors and related topic features."
+}

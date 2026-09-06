@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "Lexical 'not' detector",
+      "reason": "Detects negation word 'not' in hypothesis."
+    },
+    {
+      "id": "L3:F12079",
+      "label": "Negation/Chinese-name detector",
+      "reason": "Oracle says negations; tracks explicit negation."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "Negations multilingual",
+      "reason": "Negation-word detector, not semantic reasoning."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F7409",
+      "label": "Lexical reversal cue",
+      "reason": "Captures reversal meaning relevant to contradiction."
+    },
+    {
+      "id": "L6:F12420",
+      "label": "Subverting conventions",
+      "reason": "Higher-level reversal/subversion semantics."
+    },
+    {
+      "id": "L7:F4526",
+      "label": "Comparisons/symmetry/reversals",
+      "reason": "Semantic reversal/symmetry feature."
+    },
+    {
+      "id": "L8:F16033",
+      "label": "Figurative reversal language",
+      "reason": "Semantic reversal concept, not mere token."
+    },
+    {
+      "id": "L0:F6013",
+      "label": "Lexical 'role' detector A",
+      "reason": "Content/role relation contributes semantically."
+    },
+    {
+      "id": "L0:F6902",
+      "label": "Lexical 'role' detector B",
+      "reason": "Content/role relation contributes semantically."
+    },
+    {
+      "id": "L4:F14368",
+      "label": "Importance/role words",
+      "reason": "Role-related concept, not generic syntax."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F5188",
+      "label": "Lexical 'now' detector",
+      "reason": "Generic word detector; oracle doesn\u2019t tie to task."
+    },
+    {
+      "id": "L4:F6072",
+      "label": "'now'+verb pattern",
+      "reason": "Structural phrase pattern, not NLI semantics."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "'now' suppressor / astronomy MASS",
+      "reason": "Irrelevant astronomy/lexical suppression feature."
+    },
+    {
+      "id": "L4:F12799",
+      "label": "'-ly'/oddities detector on 'strangest'",
+      "reason": "Mostly superficial morphology/oddity cue."
+    },
+    {
+      "id": "L2:F16097",
+      "label": "Superlative adjectives",
+      "reason": "Generic adjective form, not task-specific semantics."
+    },
+    {
+      "id": "L2:F10705",
+      "label": "Lexical 'concerns'",
+      "reason": "Content word, but oracle gives no task role."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "Period/punctuation detector",
+      "reason": "Pure punctuation feature."
+    },
+    {
+      "id": "L10:F6670",
+      "label": "Technical/scientific terms",
+      "reason": "Broad lexical category, not NLI relation."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "Political/State conspiracy+negation",
+      "reason": "Oracle says mixed topic cue; not task semantics."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 7,
+  "n_other": 9,
+  "spurious_fraction": 0.3,
+  "dominant": "causal",
+  "notes": "Explicit negation features exist, but reversal/role semantic features dominate."
+}

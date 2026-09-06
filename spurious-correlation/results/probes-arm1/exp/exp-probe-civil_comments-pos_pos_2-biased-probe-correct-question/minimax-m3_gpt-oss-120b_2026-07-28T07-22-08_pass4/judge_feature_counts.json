@@ -1,0 +1,103 @@
+{
+  "spurious_features": [
+    {
+      "id": "L11:F1913",
+      "label": "emotional, controversial, or political issues especially relating to race",
+      "reason": "Directly tracks controversial race-related discourse."
+    },
+    {
+      "id": "L10:F2249",
+      "label": "words related to legal or policy language, potentially with a negative opinion",
+      "reason": "Policy/negativity context, not toxicity content."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Direct identity-group vocabulary detector."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic identity-group signal."
+    },
+    {
+      "id": "L7:F5125",
+      "label": "mentions of demographics",
+      "reason": "Generic demographic mention feature."
+    },
+    {
+      "id": "L6:F7233",
+      "label": "language around racial and ethnic identity, healthcare, and prejudice.",
+      "reason": "Identity and prejudice vocabulary; race-linked."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/racism discourse feature."
+    },
+    {
+      "id": "L4:F10174",
+      "label": "words referring to racial and/or supernatural identity",
+      "reason": "Identity-group terms, including race."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity vocabulary detector."
+    },
+    {
+      "id": "L2:F585",
+      "label": "the word \"white\", often in association with \"dwarf\"",
+      "reason": "Triggers on white as demographic token."
+    },
+    {
+      "id": "L3:F11768",
+      "label": "the word \"white\" and related contexts such as diversity",
+      "reason": "Identity-group token and context."
+    },
+    {
+      "id": "L3:F3248",
+      "label": "words and phrases related to race and ethnic groups, especially in the context of social issues",
+      "reason": "Race/ethnic group discourse detector."
+    },
+    {
+      "id": "L5:F3924",
+      "label": "words relating to race, ethnicity, and/or religion",
+      "reason": "Demographic-religious identity signal."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe direction (toxicity / hate-speech classification score)",
+      "reason": "Target direction, not a feature."
+    },
+    {
+      "id": "L0:F2458",
+      "label": "the word \"was\" and sometimes \"were.\"",
+      "reason": "Purely generic lexical feature."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic conjunction detector."
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Generic structural/pronominal feature."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Topic discussion, not toxicity semantics."
+    }
+  ],
+  "n_spurious": 13,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly identity-group/race vocabulary; no toxic-content detector is actually claimed."
+}

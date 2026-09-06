@@ -1,0 +1,38 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: he (pos 22)",
+      "label": "he",
+      "reason": "Gendered pronoun token."
+    },
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Gender-marker proximity feature."
+    },
+    {
+      "id": "L14:F14097",
+      "label": "occurrences of the word \"he\"",
+      "reason": "Direct male-pronoun detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Masculine-reference detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F5288",
+      "label": "the word \"service\" and related terms in different contexts",
+      "reason": "Service-related lexical cue."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 4,
+  "n_causal": 1,
+  "n_other": 0,
+  "spurious_fraction": 0.8,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by gender-pronoun features, with only weak profession-adjacent lexical evidence."
+}

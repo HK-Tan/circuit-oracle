@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F3534",
+      "label": "the character sequence \"n't\" or \"nut\"",
+      "reason": "Negation-form detector in hypothesis."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Direct negation detector, not semantic comparison."
+    },
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\".",
+      "reason": "Explicit negation cue for contradiction."
+    },
+    {
+      "id": "L15:F11794",
+      "label": "phrases that express disagreement or negation",
+      "reason": "Negation/disagreement feature, surface-level cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Oracle links it to castle/fortification semantics."
+    },
+    {
+      "id": "L7:F13215",
+      "label": "terms used to describe military fortifications.",
+      "reason": "Encodes fortification meaning relevant to the premise."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Fortification concept signal, semantically relevant."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: not (pos 36)",
+      "label": "Emb: not (pos 36)",
+      "reason": "Embedding token detector; not classified by semantics."
+    },
+    {
+      "id": "Emb: does (pos 35)",
+      "label": "Emb: does (pos 35)",
+      "reason": "Generic token embedding, structural cue."
+    },
+    {
+      "id": "Emb: castle (pos 2)",
+      "label": "Emb: castle (pos 2)",
+      "reason": "Embedding token detector; oracle output node."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Pure word detector, generic syntax."
+    },
+    {
+      "id": "L0:F10346",
+      "label": "the word \"itself\" and sometimes the word \"node\"",
+      "reason": "Generic lexical detector, not task-semantic."
+    },
+    {
+      "id": "L0:F12378",
+      "label": "the word \"latest.\"",
+      "reason": "Pure lexical token, dismissed structurally."
+    },
+    {
+      "id": "L3:F232",
+      "label": "the word \"itself\"",
+      "reason": "Generic token detector, not semantic."
+    },
+    {
+      "id": "L2:F2415",
+      "label": "frequent words indicating small quantities or proximity, or words with negative connotations",
+      "reason": "Broad surface feature; oracle doesn't tie it in."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 3,
+  "n_other": 8,
+  "spurious_fraction": 0.5714285714285714,
+  "dominant": "spurious",
+  "notes": "Negation cues dominate; castle features are secondary. Structural token detectors go in other."
+}

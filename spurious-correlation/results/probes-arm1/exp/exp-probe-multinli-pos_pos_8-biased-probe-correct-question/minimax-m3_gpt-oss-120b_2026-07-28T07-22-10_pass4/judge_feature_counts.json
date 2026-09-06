@@ -1,0 +1,118 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F11606",
+      "label": "the word \"fund\"",
+      "reason": "Tracks funding relation, relevant to meaning overlap."
+    },
+    {
+      "id": "L1:F2116",
+      "label": "words and phrases related to legal counsel or representation",
+      "reason": "Content relation feature, not negation or pure structure."
+    },
+    {
+      "id": "L1:F3276",
+      "label": "mentions of the United States Congress",
+      "reason": "Topic/semantic entity feature tied to premise meaning."
+    },
+    {
+      "id": "L1:F8982",
+      "label": "names of organizations, particularly related to India, and words associated with formal groups",
+      "reason": "Organization/entity semantics, not spurious negation."
+    },
+    {
+      "id": "L2:F156",
+      "label": "words related to the amount or intensity of something",
+      "reason": "Captures quantity/level semantics."
+    },
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Entity/topic semantics relevant to relation."
+    },
+    {
+      "id": "L2:F6735",
+      "label": "political parties and politicians",
+      "reason": "Political-semantic topic feature."
+    },
+    {
+      "id": "L3:F123",
+      "label": "mentions of the United States Congress",
+      "reason": "Semantic topic feature, not structural."
+    },
+    {
+      "id": "L3:F13271",
+      "label": "the word \"control.\"",
+      "reason": "Captures control relation, causally relevant."
+    },
+    {
+      "id": "L3:F8382",
+      "label": "the word \"many\", and sometimes \"times\" or \"people\" when near it",
+      "reason": "Quantity semantics; content-bearing."
+    },
+    {
+      "id": "L6:F6096",
+      "label": "political parties and affiliations",
+      "reason": "Semantic political affiliation feature."
+    },
+    {
+      "id": "L6:F13778",
+      "label": "subjective language, opinions and feelings.",
+      "reason": "Content-neutral semantic style feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: premise tokens (The Congress, who, fund, control, levels, many)",
+      "label": "Emb: premise tokens (The Congress, who, fund, control, levels, many)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: hypothesis tokens (responsibility, controlling, funding, levels)",
+      "label": "Emb: hypothesis tokens (responsibility, controlling, funding, levels)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "L0:F6044",
+      "label": "the word \"yield\"",
+      "reason": "Oracle label is unrelated lexical collision."
+    },
+    {
+      "id": "L0:F13437",
+      "label": "the word \"who\"",
+      "reason": "Generic word detector, purely structural."
+    },
+    {
+      "id": "L0:F7021",
+      "label": "the word \"Congress\"",
+      "reason": "Generic word detector, purely structural."
+    },
+    {
+      "id": "L0:F6948",
+      "label": "the word \"lift\" in the context of mechanical devices or ski infrastructure",
+      "reason": "Oracle dismisses as unrelated lexical collision."
+    },
+    {
+      "id": "L0:F9557",
+      "label": "the word \"clean\" and words/phrases associated with people",
+      "reason": "Oracle dismisses as unrelated lexical collision."
+    },
+    {
+      "id": "L0:F9529",
+      "label": "the word \"physical\" and words related to programming",
+      "reason": "Oracle dismisses as unrelated lexical collision."
+    },
+    {
+      "id": "probe direction (contradiction score)",
+      "label": "probe direction (contradiction score)",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 12,
+  "n_other": 9,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation detectors are present; oracle mainly cites semantic/topic features with some unrelated lexical noise."
+}

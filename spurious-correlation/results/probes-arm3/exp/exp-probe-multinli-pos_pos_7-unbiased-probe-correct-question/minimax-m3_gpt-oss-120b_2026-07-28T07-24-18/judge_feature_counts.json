@@ -1,0 +1,63 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L4:F4605",
+      "label": "words related to churches, chapels and other buildings, in addition to other information of Lincolnshire",
+      "reason": "Content-specific location/building semantics, not a negation shortcut."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Semantic content feature; not a generic negation detector."
+    },
+    {
+      "id": "L4:F2581",
+      "label": "mentions of things being \"first\"",
+      "reason": "Content cue about novelty/order, not negation."
+    },
+    {
+      "id": "L0:F12189",
+      "label": "the word \"moment\"",
+      "reason": "Ordinary content token; not task-specific negation."
+    },
+    {
+      "id": "L6:F5342",
+      "label": "the word \"first\" as well as words and prepositions that often follow it",
+      "reason": "Structural/content cue, not a negation-word detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Generic pronoun/expression; oracle says opposite direction, not causal."
+    },
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun detector only."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Purely structural position feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 5,
+  "n_other": 5,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No oracle-claimed negation-word detector appears; mostly causal content features plus generic/structural others."
+}

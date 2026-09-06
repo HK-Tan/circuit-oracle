@@ -1,0 +1,117 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Emb: Nursing (pos 10)",
+      "label": "primary positive driver",
+      "reason": "Direct nursing profession token"
+    },
+    {
+      "id": "Emb: nursing (pos 22)",
+      "label": "secondary positive driver",
+      "reason": "Direct nursing profession token"
+    },
+    {
+      "id": "Emb: graduated (pos 2)",
+      "label": "biography marker",
+      "reason": "Generic biography cue"
+    },
+    {
+      "id": "Emb: University (pos 14)",
+      "label": "institution context",
+      "reason": "Academic institution context"
+    },
+    {
+      "id": "Emb: Medical (pos 13)",
+      "label": "medical context",
+      "reason": "Healthcare/profession context"
+    },
+    {
+      "id": "L0:F5038",
+      "label": "the word \"graduated\" or variations of it",
+      "reason": "Generic biography marker"
+    },
+    {
+      "id": "L0:F6270",
+      "label": "the word \"whom\", sometimes also activating on nearby punctuation, sentence starts, discourse markers, and other function words",
+      "reason": "Generic function-word/structural cue"
+    },
+    {
+      "id": "L0:F16075",
+      "label": "the word \"of\" and court names",
+      "reason": "Generic function-word/structural cue"
+    },
+    {
+      "id": "L1:F10429",
+      "label": "academic degree / occupation context feature",
+      "reason": "Academic/profession context"
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic degree / occupation context feature",
+      "reason": "Academic/profession context"
+    },
+    {
+      "id": "L2:F9995",
+      "label": "academic degree / occupation context feature",
+      "reason": "Academic/profession context"
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Profession-related, not gendered"
+    },
+    {
+      "id": "L4:F11037",
+      "label": "healthcare/academic-degree profession feature",
+      "reason": "Healthcare profession context"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession detector"
+    },
+    {
+      "id": "L6:F4490",
+      "label": "proper nouns corresponding to locations, organizations, medical roles, and coding terms",
+      "reason": "Medical-role/institution context"
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Direct healthcare profession terms"
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare institution context"
+    },
+    {
+      "id": "L8:F16339",
+      "label": "text discussing hospital infections and bacteria",
+      "reason": "Medical-environment context"
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Profession/medical terminology"
+    },
+    {
+      "id": "L15:F15159",
+      "label": "words related to medicine and healthcare",
+      "reason": "Healthcare vocabulary"
+    },
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Nursing-role semantics"
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 21,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle trace is entirely profession/medical or generic structural cues; no gender-marker evidence appears."
+}

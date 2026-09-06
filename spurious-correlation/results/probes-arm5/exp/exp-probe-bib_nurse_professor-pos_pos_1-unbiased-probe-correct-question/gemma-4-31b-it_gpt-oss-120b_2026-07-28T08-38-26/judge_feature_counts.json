@@ -1,0 +1,58 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F0",
+      "label": "Emb: nurses (pos 15)",
+      "reason": "Direct profession token indicating nursing."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing profession detector."
+    },
+    {
+      "id": "L2:F15437",
+      "label": "low-frequency nursing-token detector",
+      "reason": "Detects nursing-specific profession vocabulary."
+    },
+    {
+      "id": "L8:F16339",
+      "label": "text discussing hospital infections and bacteria",
+      "reason": "Medical context supporting healthcare profession."
+    },
+    {
+      "id": "L7:F210",
+      "label": "medical & healthcare context",
+      "reason": "Broader healthcare terminology detector."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities.",
+      "reason": "Medical environment and personnel vocabulary."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Profession-relevant leadership and medical terms."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Nurse-manager role and leadership features."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L20:F4927",
+      "label": "titles and acronyms following names, especially within the healthcare field",
+      "reason": "Structural/title feature, not gender or profession."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 8,
+  "n_other": 1,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle cites only nursing/medical features; no gender markers appear."
+}

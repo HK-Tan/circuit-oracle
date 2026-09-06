@@ -1,0 +1,49 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8964",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Gendered possessive marker; direct male cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Direct journalism/profession indicator."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism/newspaper semantics."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News outlet/source profession context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: report (pos 21)",
+      "label": "embedding token: report",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "embedding token: His",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Output",
+      "label": "synthetic profession-probe score",
+      "reason": "Probe output, not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 3,
+  "n_other": 3,
+  "spurious_fraction": 0.25,
+  "dominant": "causal",
+  "notes": "Main circuit is journalism-related; one direct gender cue is also present."
+}

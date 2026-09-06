@@ -1,0 +1,26 @@
+{
+  "prompt": "Qwen3-8B taboo game \u2014 infer hidden target word from circuit",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 31,
+      "feature_idx": 99093,
+      "pos": 22,
+      "supernode_label": "Gold / precious-metal concept",
+      "autointerp": "Activates on passages discussing precious metal or treasure\u2014especially gold\u2014in contexts like mining, treasure trove, or wealth references.",
+      "frac_nonzero": 0.0035629089266416836,
+      "neuronpedia_url": "https://neuronpedia.org/qwen3-8b/31-transcoder-hp/99093"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "gold",
+      "to": "out"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "## Final Answer\nSECRET: gold\n\nCONFIDENCE: 7\n\nRUNNER_UP: moon\n\nEVIDENCE: L31:F99093\n\nREASONING: L31:F99093 is specifically a precious-metal/treasure feature whose promoted tokens are \u201cGold,\u201d \u201cgold,\u201d and \u91d1. The moon votes arise from generic definite-article and answer-construction features rather than a moon-specific concept.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

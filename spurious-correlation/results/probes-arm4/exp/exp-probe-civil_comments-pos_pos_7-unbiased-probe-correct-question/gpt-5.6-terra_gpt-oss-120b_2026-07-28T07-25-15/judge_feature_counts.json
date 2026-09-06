@@ -1,0 +1,48 @@
+{
+  "spurious_features": [
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Race/identity discourse detector; demographic shortcut."
+    },
+    {
+      "id": "L3:F12034",
+      "label": "technical terms, especially those used to describe graphs and figures",
+      "reason": "Triggered by Black token here; surface-word proxy."
+    },
+    {
+      "id": "L6:F15295",
+      "label": "words and abbreviations related to HIV/AIDS and viral infections.",
+      "reason": "Gay/HIV association; identity-linked shortcut."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: Black (pos 1)",
+      "label": "embedding/output",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:  Pride (pos 2)",
+      "label": "embedding/output",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:  black (pos 5)",
+      "label": "embedding/output",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Output: synthetic toxicity-probe score",
+      "label": "embedding/output",
+      "reason": "Model output, not a feature."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 0,
+  "n_other": 4,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity-linked shortcuts; no causal toxicity detector is claimed."
+}

@@ -1,0 +1,68 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F16013",
+      "label": "color / \"white\" lexical detector",
+      "reason": "Identity token signal; demographic term, not toxic content."
+    },
+    {
+      "id": "L0:F1708",
+      "label": "color / \"white\" lexical detector",
+      "reason": "Color/identity lexical match; demographic term."
+    },
+    {
+      "id": "L2:F585",
+      "label": "the word \"white\", often in association with \"dwarf\"",
+      "reason": "Promoted token is an identity/demographic term."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "race/ethnicity term detector",
+      "reason": "Explicit race/ethnicity vocabulary detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "race/racism/social-justice amplifier",
+      "reason": "Amplifies race/racism identity-related signals."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "race/ethnicity concept feature (top driver)",
+      "reason": "Race/ethnicity concept, not toxicity semantics."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F2458",
+      "label": "the word \"was\" and sometimes \"were.\"",
+      "reason": "Pure function-word detector; structural only."
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Generic pronoun/structure feature; non-causal."
+    },
+    {
+      "id": "Emb: \"white\" (pos 4)",
+      "label": "embed/output",
+      "reason": "Input embedding node, not a feature."
+    },
+    {
+      "id": "Emb: \"Hispanic\" (pos 7)",
+      "label": "embed/output",
+      "reason": "Input embedding node, not a feature."
+    },
+    {
+      "id": "Emb: \"it\" (pos 8)",
+      "label": "embed/output",
+      "reason": "Input embedding node, not a feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is driven by identity-group/race features; no toxic-content detectors are present."
+}

@@ -1,0 +1,38 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "Directly tracks chip/semiconductor meaning."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L7:F1062",
+      "label": "words and phrases related to credit cards, loans, spending, gambling, and money in general.",
+      "reason": "Financial-topic detector, not NLI semantics."
+    },
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Topic detector, not negation or logic."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F16015",
+      "label": "the prefix \"cons\"",
+      "reason": "Purely surface-form prefix detector."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 1,
+  "n_other": 4,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle emphasizes topic/lexical shortcuts; only chip is clearly causal by stated task rules."
+}

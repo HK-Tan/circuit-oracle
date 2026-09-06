@@ -1,0 +1,144 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: 'She' (pos 1)",
+      "label": "she token",
+      "reason": "Female pronoun explicitly signals gender."
+    },
+    {
+      "id": "Emb: ' she' (pos 57)",
+      "label": "she token",
+      "reason": "Female pronoun explicitly signals gender."
+    },
+    {
+      "id": "Emb: 'Heather' (pos 31)",
+      "label": "Heather",
+      "reason": "Gendered first name."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Female pronoun detector."
+    },
+    {
+      "id": "L0:F12519",
+      "label": "the pronoun \"she\"",
+      "reason": "Female pronoun detector."
+    },
+    {
+      "id": "L2:F7672",
+      "label": "mentions of women by name and relationship",
+      "reason": "Women-reference detector."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names (e.g. 'Heather')",
+      "reason": "Gendered name cue here."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities (people)",
+      "reason": "People-name feature used for woman mention."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "code/XML snippets (promotes 'she')",
+      "reason": "Dismissed structural/code artifact."
+    },
+    {
+      "id": "L5:F5996",
+      "label": "words associated with females",
+      "reason": "Explicit female-associated semantics."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women (pronouns, titles)",
+      "reason": "Women-reference detector."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names / possessive (inhibitory)",
+      "reason": "Female-name feature."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name detector",
+      "reason": "Detects women's names."
+    },
+    {
+      "id": "L7:F2765",
+      "label": "mentions of people & personal details",
+      "reason": "Personal-detail people feature, per oracle context."
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "Explicit women-related semantics."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "female pronouns ('She'/'her'/'herself')",
+      "reason": "Female pronoun detector."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "person names (first & last)",
+      "reason": "Name detector used for gendered identity."
+    },
+    {
+      "id": "L14:F13478",
+      "label": "people's names (often with titles)",
+      "reason": "Name/title detector, context here is gendered."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals (often women)",
+      "reason": "Women-focused story feature."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "people with pronouns/possessives",
+      "reason": "Pronoun/person feature, gendered here."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women/girls mentioned",
+      "reason": "Explicit women-mention detector."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "women's names with roles/accomplishments",
+      "reason": "Women-name/role detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "diet / dietary terms",
+      "reason": "Profession-topic nutrition/diet vocabulary."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "food / nutrition terms",
+      "reason": "Profession-topic nutrition vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: 'Die' (pos 20) / 'te' (pos 21)",
+      "label": "subtokens of 'Dietetics'",
+      "reason": "Token fragment only; not a standalone feature."
+    },
+    {
+      "id": "Probe logit (classification score)",
+      "label": "Probe logit (classification score)",
+      "reason": "Output, not a feature."
+    }
+  ],
+  "n_spurious": 22,
+  "n_causal": 2,
+  "n_other": 2,
+  "spurious_fraction": 0.9166666666666666,
+  "dominant": "spurious",
+  "notes": "Oracle shows a female-reference cascade overwhelming the small diet/nutrition signal."
+}

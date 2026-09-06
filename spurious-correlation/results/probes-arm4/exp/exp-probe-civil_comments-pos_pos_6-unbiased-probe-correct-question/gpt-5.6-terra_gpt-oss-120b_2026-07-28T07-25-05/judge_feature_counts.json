@@ -1,0 +1,63 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Direct identity-token detector; demographic mention, not toxicity."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "the word \"possession\" and the words \"white\", \"immediate\" and \"once\" regardless of context",
+      "reason": "Direct lexical white-token trigger; spurious demographic cue."
+    },
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Direct identity-token detector; demographic mention."
+    },
+    {
+      "id": "L2:F9909",
+      "label": "terms used to describe groups of people or places",
+      "reason": "Identity/person reference; not toxic content."
+    },
+    {
+      "id": "L2:F9837",
+      "label": "references to men",
+      "reason": "Gender/person reference; not toxicity."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity topic detector; spurious identity signal."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issue topic detector; not toxic semantics."
+    },
+    {
+      "id": "L8:F13464",
+      "label": "discussions of racial issues, particularly those involving white and black people",
+      "reason": "Racial-discussion topic feature; spurious."
+    },
+    {
+      "id": "L9:F11035",
+      "label": "mentions of different racial or ethnic groups, news, payments, political concepts and geographical locations.",
+      "reason": "Race/ethnic-group mention detector; spurious identity cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F4008",
+      "label": "expletives, strong opinions and negative words",
+      "reason": "Negative/hostile style supports toxicity."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 9,
+  "n_causal": 1,
+  "n_other": 0,
+  "spurious_fraction": 0.9,
+  "dominant": "spurious",
+  "notes": "Score is driven mainly by identity/race-topic detectors, with one negative-style feature."
+}

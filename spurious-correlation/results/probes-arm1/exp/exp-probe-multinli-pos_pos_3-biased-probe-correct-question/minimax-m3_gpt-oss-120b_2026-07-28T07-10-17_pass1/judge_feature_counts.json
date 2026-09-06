@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F6800",
+      "label": "Late-layer negation hub at pos 36 (\"does not contain\")",
+      "reason": "Direct negation cue at hypothesis position."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "Generic negation detector (multi-language)",
+      "reason": "Explicitly detects negations across languages."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "Layer-0 'not' word detector",
+      "reason": "Surface 'not' detector, not semantic."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "Multilingual 'not'/negation detector",
+      "reason": "Flags negation lexemes directly."
+    },
+    {
+      "id": "L3:F3534",
+      "label": "\"n't\" contraction suffix detector",
+      "reason": "Contraction-based negation cue."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "Negative-sentiment markers (not/no/never, multiling)",
+      "reason": "Matches negation words, not meaning."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F2415",
+      "label": "Small-quantity/negative-connotation word detector",
+      "reason": "Can reflect content-bearing lexical meaning."
+    },
+    {
+      "id": "L0:F1454",
+      "label": "'century' word detector at pos 12 (POSITIVE)",
+      "reason": "References task-relevant temporal content."
+    },
+    {
+      "id": "L0:F4367",
+      "label": "'century' word detector at pos 12 (POSITIVE)",
+      "reason": "References task-relevant temporal content."
+    },
+    {
+      "id": "L4:F5386",
+      "label": "'century' word detector at pos 12 (NEGATIVE direction)",
+      "reason": "Still a century-related content feature."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "Land-ownership / estate semantic feature at pos 2 (POSITIVE)",
+      "reason": "Meaning-bearing premise semantic feature."
+    },
+    {
+      "id": "L7:F13215",
+      "label": "Fortification / military-structure semantic feature at pos 2 (POSITIVE)",
+      "reason": "Semantic content about castles/fortifications."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "Ancient-settlement/fortification semantic feature at pos 2 (POSITIVE)",
+      "reason": "Semantic content about fortifications."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe direction (contradiction classification)",
+      "reason": "Output direction, not a feature."
+    },
+    {
+      "id": "L0:F10346",
+      "label": "the word \"itself\" and sometimes the word \"node\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F11",
+      "label": "the word \"press\", sometimes in conjunction with \"button.\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F12378",
+      "label": "the word \"latest.\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F15322",
+      "label": "reflexive pronouns, particularly \"herself\" and \"itself.\"",
+      "reason": "Structural pronoun detector."
+    },
+    {
+      "id": "L0:F15866",
+      "label": "references to one's paternal and maternal figures, as well as the pronouns 'we' and 'my'",
+      "reason": "Off-target lexical pattern."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Purely lexical word detector."
+    },
+    {
+      "id": "L1:F11",
+      "label": "the word \"press\", sometimes in conjunction with \"button.\"",
+      "reason": "Generic lexical detector."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 7,
+  "n_other": 8,
+  "spurious_fraction": 0.46153846153846156,
+  "dominant": "mixed",
+  "notes": "Negation-lexeme shortcut dominates, but several premise semantic features also contribute."
+}

@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector; spurious gender marker."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun feature; gender marker."
+    },
+    {
+      "id": "L1:F12922",
+      "label": "the pronoun \"he\" or \"she\" in a narrative context",
+      "reason": "Pronoun-based feature; spurious gender cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F14877",
+      "label": "B.A./uppercase initials and period",
+      "reason": "Degree abbreviation; profession credential."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Direct profession-related education signal."
+    },
+    {
+      "id": "L3:F4213",
+      "label": "mentions of degree qualifications or awards",
+      "reason": "Academic credential mention."
+    },
+    {
+      "id": "L4:F3727",
+      "label": "mentions of academic degrees",
+      "reason": "Education/profession indicator."
+    },
+    {
+      "id": "L4:F2279",
+      "label": "instances of the word \"University\" and other words that appear near it",
+      "reason": "Institution/education signal."
+    },
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Relevant profession field detector."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic field signal."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree-based profession cue."
+    },
+    {
+      "id": "L6:F3631",
+      "label": "references to institutions of higher education, degrees, and associated academic work",
+      "reason": "Higher-ed credential signal."
+    },
+    {
+      "id": "L6:F12933",
+      "label": "references to law, lawyers, committees, degrees, or academic work",
+      "reason": "Academic-work/profession signal."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Strong education/profession hub."
+    },
+    {
+      "id": "L14:F3956",
+      "label": "universities and degrees",
+      "reason": "Late-stage university/degree representation."
+    },
+    {
+      "id": "L15:F15159",
+      "label": "words related to medicine and healthcare",
+      "reason": "Biomedical profession vocabulary."
+    },
+    {
+      "id": "L15:F15159",
+      "label": "words related to medicine and healthcare",
+      "reason": "Biomedical profession vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0",
+      "label": "<bos>",
+      "reason": "Purely structural BOS token."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Structural punctuation/formatting."
+    },
+    {
+      "id": "L0:F1636",
+      "label": "the letter A",
+      "reason": "Generic character detector."
+    },
+    {
+      "id": "L0:F9263",
+      "label": "mentions of academic qualifications and precise temperature values",
+      "reason": "Dismissed mixed/unclear feature."
+    },
+    {
+      "id": "L0:F7681",
+      "label": "statements that describe something, often including a past tense verb",
+      "reason": "Generic structural/linguistic feature."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Generic technical-document feature."
+    },
+    {
+      "id": "L0:F7998",
+      "label": "the pronoun \"he\" or \"she\" in a narrative context",
+      "reason": "Duplicate? not in oracle list; omitted."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 14,
+  "n_other": 7,
+  "spurious_fraction": 0.17647058823529413,
+  "dominant": "causal",
+  "notes": "Dominant signal is academic degree/university; pronoun path is present but secondary."
+}

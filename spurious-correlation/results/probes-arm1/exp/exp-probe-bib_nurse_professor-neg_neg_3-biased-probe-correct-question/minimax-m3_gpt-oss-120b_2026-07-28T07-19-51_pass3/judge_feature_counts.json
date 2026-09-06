@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Generic gender-word detector; spurious for profession."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun detector; spurious gender marker."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Catches male pronouns here; gender signal."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicitly gendered male/title feature."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct male-pronoun feature; spurious."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-reference detector; gender marker."
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Male pronoun detector; not profession-related."
+    },
+    {
+      "id": "L5:F10952",
+      "label": "third person pronouns in varying contexts",
+      "reason": "Activated via pronoun context; spurious here."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Pronoun component is gendered; spurious."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic-field/profession-related content signal."
+    },
+    {
+      "id": "L0:F6127",
+      "label": "instances of the word \"degree\" and words associated with academia, especially higher education",
+      "reason": "Education terminology relevant to profession."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Oracle says academic-degree cascade upstream; profession-linked."
+    },
+    {
+      "id": "L3:F4113",
+      "label": "unknown",
+      "reason": "Upstream academic-degree detector in causal chain."
+    },
+    {
+      "id": "L4:F3727",
+      "label": "unknown",
+      "reason": "Academic-degree mention in causal chain."
+    },
+    {
+      "id": "L5:F10392",
+      "label": "unknown",
+      "reason": "Field-of-study detector in causal chain."
+    },
+    {
+      "id": "L5:F15490",
+      "label": "unknown",
+      "reason": "Field-of-study detector in causal chain."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe output",
+      "label": "profession direction",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "Emb: \"He\" (pos 1)",
+      "label": "He",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: \" He\" (pos 21)",
+      "label": "He",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: \" He\" (pos 42)",
+      "label": "He",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: \" his\" (pos 3)",
+      "label": "his",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: \" his\" (pos 23)",
+      "label": "his",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: \" degree\" (pos 8)",
+      "label": "degree",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: \" Mathematics\" (pos 10)",
+      "label": "Mathematics",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: <bos> (pos 0)",
+      "label": "<bos>",
+      "reason": "Embedding node, not a feature."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 7,
+  "n_other": 9,
+  "spurious_fraction": 0.5625,
+  "dominant": "spurious",
+  "notes": "Male-pronoun features dominate; only weak academic/profession signal appears."
+}

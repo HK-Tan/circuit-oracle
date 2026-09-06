@@ -1,0 +1,47 @@
+{
+  "spurious_features": [],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Generic lexical topic feature; not negation or NLI semantics."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Pure word detector; structural lexical cue only."
+    },
+    {
+      "id": "L0:F7360",
+      "label": "the word \"an\" and sometimes also the acronym COX",
+      "reason": "Generic token detector; no task semantics."
+    },
+    {
+      "id": "L1:F1027",
+      "label": "the word \"tower\"",
+      "reason": "Keyword detector; not causal NLI evidence."
+    },
+    {
+      "id": "L0:F5494",
+      "label": "the word \"early\" often related to time",
+      "reason": "Time-word detector; unrelated to entailment/contradiction."
+    },
+    {
+      "id": "L2:F4429",
+      "label": "mentions of the beginning of a period",
+      "reason": "Temporal phrase feature; structural/lexical only."
+    },
+    {
+      "id": "L0:F7513",
+      "label": "the word \"together\"",
+      "reason": "Generic word detector; not negation."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 0,
+  "n_other": 7,
+  "spurious_fraction": null,
+  "dominant": "none",
+  "notes": "Oracle cites only shallow keyword features and explicitly says no negation or contradiction circuit."
+}

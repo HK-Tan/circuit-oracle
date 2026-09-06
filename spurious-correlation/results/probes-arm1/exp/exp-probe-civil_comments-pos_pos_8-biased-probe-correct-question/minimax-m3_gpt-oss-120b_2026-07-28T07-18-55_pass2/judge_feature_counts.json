@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F13885",
+      "label": "names of people and places, specifically those related to the middle east",
+      "reason": "Middle Eastern name/place detector; identity signal."
+    },
+    {
+      "id": "L1:F4314",
+      "label": "the word Muslim",
+      "reason": "Direct religion/identity token detector."
+    },
+    {
+      "id": "L1:F2235",
+      "label": "passages from the Quran",
+      "reason": "Religious text / identity mention."
+    },
+    {
+      "id": "L3:F12024",
+      "label": "words referencing the religion of Islam, people who practice it, and Arabic names",
+      "reason": "Islam/Arabic identity mention."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious affiliation detector."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Islam/Middle-Eastern entity mention."
+    },
+    {
+      "id": "L6:F3265",
+      "label": "religion, religious figures, and related concepts and groups",
+      "reason": "Generic religion/figure detector."
+    },
+    {
+      "id": "L6:F5764",
+      "label": "Islam-specific",
+      "reason": "Religion-specific identity feature."
+    },
+    {
+      "id": "L7:F14049",
+      "label": "discussion of international political conflicts, especially those regarding Muslims, slavery, race, terrorism and cultural groups.",
+      "reason": "Muslim/group-conflict discourse feature."
+    },
+    {
+      "id": "L8:F13197",
+      "label": "words related to religion and faith",
+      "reason": "Generic faith/religion mention."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F7545",
+      "label": "words or phrases relating to religious extremism, violence, and terrorism.",
+      "reason": "Violence/extremism semantics relevant to toxicity."
+    },
+    {
+      "id": "L12:F7779",
+      "label": "negative language denigrating groups of people",
+      "reason": "Denigrating language about groups."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Islam (pos 4)",
+      "label": "embed/output",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: Allah (pos 13)",
+      "label": "embed/output",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: problem (pos 2)",
+      "label": "embed/output",
+      "reason": "Input embedding, not a feature."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 2,
+  "n_other": 3,
+  "spurious_fraction": 0.8333333333333334,
+  "dominant": "spurious",
+  "notes": "Mostly identity/religion detectors; only two features plausibly track toxicity."
+}

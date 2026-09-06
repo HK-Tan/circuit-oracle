@@ -1,0 +1,108 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Directly encodes nursing profession context."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing profession detector."
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare-role vocabulary, profession-relevant."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Healthcare/profession terminology."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities.",
+      "reason": "Medical workplace/role terminology."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words related to counseling, therapy, social work, and academic degree programs",
+      "reason": "Education/professional training terminology."
+    },
+    {
+      "id": "L6:F4490",
+      "label": "proper nouns corresponding to locations, organizations, medical roles, and coding terms",
+      "reason": "Includes medical roles, a profession signal."
+    },
+    {
+      "id": "L6:F9980",
+      "label": "words and abbreviations associated with pediatric gastroenterology and inflammatory bowel disease.",
+      "reason": "Specialized medical vocabulary."
+    },
+    {
+      "id": "L8:F16339",
+      "label": "text discussing hospital infections and bacteria",
+      "reason": "Hospital/medical environment vocabulary."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Late medical/professional role concept."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function word detector."
+    },
+    {
+      "id": "L0:F9911",
+      "label": "the word \"that\"",
+      "reason": "Generic function word detector."
+    },
+    {
+      "id": "L0:F10771",
+      "label": "the word \"linked\" and related words, in technical and scientific contexts",
+      "reason": "Content-neutral/technical lexical feature."
+    },
+    {
+      "id": "L0:F6515",
+      "label": "the year 199X or 200X.",
+      "reason": "Date detector, not task-specific."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Generic name detector, not gender-specific."
+    },
+    {
+      "id": "L0:F8854",
+      "label": "the word \"nurse\" as well as some pronouns",
+      "reason": "Mixed token detector; not purely causal or spurious."
+    },
+    {
+      "id": "L1:F14469",
+      "label": "mentions of 'nurse'",
+      "reason": "Token-level detector, already covered by profession signal."
+    },
+    {
+      "id": "L1:F8848",
+      "label": "the word \"register\", possibly in a code context",
+      "reason": "Irrelevant code-context feature."
+    },
+    {
+      "id": "L3:F10198",
+      "label": "medical procedure tokens",
+      "reason": "Generic medical token feature; weakly descriptive."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 14,
+  "n_other": 5,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No gender-marker feature is actually claimed; profession/medical cues dominate."
+}

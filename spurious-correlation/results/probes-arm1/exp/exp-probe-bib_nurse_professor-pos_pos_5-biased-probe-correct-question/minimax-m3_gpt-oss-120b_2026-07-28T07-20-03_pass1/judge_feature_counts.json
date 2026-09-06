@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F5859",
+      "label": "first names (mostly female)",
+      "reason": "Female first name detector"
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Gendered-name spelling cue"
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Explicit woman-reference detector"
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Women/girls mention detector"
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women-associated names/accomplishments"
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based person reference"
+    },
+    {
+      "id": "L14:F12501",
+      "label": "uses of the feminine pronoun.",
+      "reason": "Feminine pronoun detector"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F9008",
+      "label": "words related to childbirth or birth in general, including in animals.",
+      "reason": "Birth/childbirth vocabulary"
+    },
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Obstetrics/gynecology terminology"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Nursing profession vocabulary"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Structural proper-noun detector"
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Generic name/title detector"
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Generic person-name detector"
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Redundant name-form detector"
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 3,
+  "n_other": 4,
+  "spurious_fraction": 0.7,
+  "dominant": "spurious",
+  "notes": "Gender/name signals outweigh profession evidence, though both are present."
+}

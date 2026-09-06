@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: His",
+      "label": "His",
+      "reason": "Gendered pronoun marker."
+    },
+    {
+      "id": "Emb: He",
+      "label": "He",
+      "reason": "Gendered pronoun marker."
+    },
+    {
+      "id": "Emb: his",
+      "label": "his",
+      "reason": "Gendered possessive pronoun."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male reference detector."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Pronoun cluster detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male gender feature."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Pronoun detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun feature."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Person/pronoun feature."
+    },
+    {
+      "id": "L19:F8186",
+      "label": "references to a person, especially third-person pronouns and possessive pronouns.",
+      "reason": "Pronoun feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun gate."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Oracle says this is God reference, not profession."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: history",
+      "label": "history",
+      "reason": "Profession-related lexical content."
+    },
+    {
+      "id": "L0:F1773",
+      "label": "the word \"history\"",
+      "reason": "Job-field vocabulary."
+    },
+    {
+      "id": "L12:F10137",
+      "label": "names of universities, cities, publications and other institutions.",
+      "reason": "Education/institution terminology."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe output",
+      "label": "profession classifier",
+      "reason": "Model output, not a feature."
+    },
+    {
+      "id": "L21:F6216",
+      "label": "references to a specific person, often using pronouns or names",
+      "reason": "General person reference."
+    },
+    {
+      "id": "L21:F4895",
+      "label": "prepositions and related words",
+      "reason": "Purely structural."
+    },
+    {
+      "id": "L22:F12117",
+      "label": "references to actions that people can take or have taken.",
+      "reason": "General action/person feature."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 3,
+  "n_other": 4,
+  "spurious_fraction": 0.8235294117647058,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by male-pronoun features; history and institution signals are minor."
+}

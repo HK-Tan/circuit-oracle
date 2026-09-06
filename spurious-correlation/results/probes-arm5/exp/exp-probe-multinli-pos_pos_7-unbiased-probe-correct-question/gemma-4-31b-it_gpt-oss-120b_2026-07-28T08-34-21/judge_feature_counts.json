@@ -1,0 +1,58 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F5342",
+      "label": "the word \"first\" as well as words and prepositions that often follow it",
+      "reason": "Surface lexical trigger; not semantic NLI reasoning."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Purely structural sentence-beginning marker."
+    },
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Common function-word detector; structural."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Common function-word detector; structural."
+    },
+    {
+      "id": "Probe Classification Score",
+      "label": "[embed/output]",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "Emb: That",
+      "label": "[embed/output]",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: first",
+      "label": "[embed/output]",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: of",
+      "label": "[embed/output]",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: the",
+      "label": "[embed/output]",
+      "reason": "Input embedding, not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 0,
+  "n_other": 8,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites only surface markers and generic structure, not semantic entailment/contradiction features."
+}

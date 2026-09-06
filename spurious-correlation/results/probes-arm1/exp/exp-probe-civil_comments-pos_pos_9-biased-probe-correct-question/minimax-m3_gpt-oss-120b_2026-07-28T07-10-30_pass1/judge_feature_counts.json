@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Identity-group detector on white/oriental."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/identity vocabulary detector."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Demographic/social-issues terms."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity lexical matcher."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Identity/race discussion detector."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "demographic identity mentions",
+      "reason": "Identity-group signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F10004",
+      "label": "hyphenated words beginning with \"self\"",
+      "reason": "Part of self-hate insult path."
+    },
+    {
+      "id": "L3:F8492",
+      "label": "hate-related detector",
+      "reason": "Captures explicit hate lexeme."
+    },
+    {
+      "id": "L2:F189",
+      "label": "self/hate lexical detector",
+      "reason": "Direct self-hate wording."
+    },
+    {
+      "id": "L3:F4512",
+      "label": "mentions of first names, last names, and phone numbers",
+      "reason": "Name-reference path in self-hater phrase."
+    },
+    {
+      "id": "L2:F9961",
+      "label": "mentions of first names, last names, and phone numbers",
+      "reason": "Name-reference path in self-hater phrase."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe (toxicity) logit",
+      "reason": "Target logit, not a feature."
+    },
+    {
+      "id": "L1:F6576",
+      "label": "the word \"appearance\"",
+      "reason": "Structural/neutral lexical feature."
+    },
+    {
+      "id": "L1:F384",
+      "label": "the string \"ash\" or \"pund\"",
+      "reason": "Unrelated lexical matcher."
+    },
+    {
+      "id": "L0:F753",
+      "label": "the word \"author\" and words related to selling and prices",
+      "reason": "Generic author/price token feature."
+    },
+    {
+      "id": "L0:F241",
+      "label": "mentions of marriage",
+      "reason": "Neutral relationship term."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: author (pos 2)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@6",
+      "label": "Emb: married (pos 6)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: white (pos 9)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@10",
+      "label": "Emb: oriental (pos 10)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@14",
+      "label": "Emb: last (pos 14)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@15",
+      "label": "Emb: name (pos 15)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@22",
+      "label": "Emb: self hater (pos 22)",
+      "reason": "Raw embedding only."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 5,
+  "n_other": 12,
+  "spurious_fraction": 0.5454545454545454,
+  "dominant": "mixed",
+  "notes": "Identity-group signals dominate, but explicit self-hate/name path is also present."
+}

@@ -1,0 +1,78 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4090",
+      "label": "the word \"another\"",
+      "reason": "Identity-adjacent lexical trigger, per oracle analysis."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity detector, not toxic-content semantics."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "mentions of demographic identity, especially race and gender",
+      "reason": "Demographic identity detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/social-justice identity terms."
+    },
+    {
+      "id": "L5:F6786",
+      "label": "terms associated with gender, race, sexual orientation, and disability",
+      "reason": "Identity-group terminology."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity terminology aggregator."
+    },
+    {
+      "id": "L8:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Identity-related discussion feature."
+    },
+    {
+      "id": "L12:F13522",
+      "label": "terms relating to race, specifically focusing on black and white people and slavery.",
+      "reason": "Black/white race and slavery feature."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: Another (pos 1)",
+      "label": "Embedding token",
+      "reason": "Pure embedding; no semantic feature."
+    },
+    {
+      "id": "Emb: white (pos 2)",
+      "label": "Embedding token",
+      "reason": "Pure embedding; no semantic feature."
+    },
+    {
+      "id": "Emb: dude (pos 3)",
+      "label": "Embedding token",
+      "reason": "Pure embedding; no semantic feature."
+    },
+    {
+      "id": "Emb: black (pos 6)",
+      "label": "Embedding token",
+      "reason": "Pure embedding; no semantic feature."
+    },
+    {
+      "id": "Emb: man (pos 7)",
+      "label": "Embedding token",
+      "reason": "Pure embedding; no semantic feature."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle claims identity-term circuitry; no toxic-content feature is credited."
+}

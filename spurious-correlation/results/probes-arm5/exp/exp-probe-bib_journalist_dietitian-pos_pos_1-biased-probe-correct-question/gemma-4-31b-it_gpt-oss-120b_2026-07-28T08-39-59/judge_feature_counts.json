@@ -1,0 +1,48 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Detects female references from pronouns/titles."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Detects mentions of women or girls."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Tracks female pronoun usage."
+    },
+    {
+      "id": "Emb: She (pos 1)",
+      "label": "token embedding for She",
+      "reason": "Direct female pronoun token."
+    },
+    {
+      "id": "Emb: Sarah (pos 12)",
+      "label": "token embedding for Sarah",
+      "reason": "Female name token."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code-snippet detector, not task-specific."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic entity detector, not profession-related."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 0,
+  "n_other": 2,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle attributes the probe entirely to gender markers, with no profession features."
+}

@@ -1,0 +1,49 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: she (pos 7)",
+      "label": "she",
+      "reason": "Gender pronoun; spurious marker for profession prediction."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: Perio/perative (pos 13-14)",
+      "label": "Perio/perative",
+      "reason": "Perioperative medical/profession context."
+    },
+    {
+      "id": "Emb: nurses (pos 15)",
+      "label": "nurses",
+      "reason": "Explicit nursing profession token."
+    },
+    {
+      "id": "Medical/perioperative context detector",
+      "label": "Medical/perioperative context detector",
+      "reason": "Medical setting cues support profession meaning."
+    },
+    {
+      "id": "Explicit nursing-profession detector",
+      "label": "Explicit nursing-profession detector",
+      "reason": "Directly encodes nursing profession evidence."
+    },
+    {
+      "id": "Nurse-management / clinical-leadership integration",
+      "label": "Nurse-management / clinical-leadership integration",
+      "reason": "Nursing leadership semantics are profession-related."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output: profession classification probe score",
+      "label": "profession classification probe score",
+      "reason": "Probe output node, not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 5,
+  "n_other": 1,
+  "spurious_fraction": 0.16666666666666666,
+  "dominant": "causal",
+  "notes": "Main signal is nursing/perioperative profession evidence; pronoun contribution is minor."
+}

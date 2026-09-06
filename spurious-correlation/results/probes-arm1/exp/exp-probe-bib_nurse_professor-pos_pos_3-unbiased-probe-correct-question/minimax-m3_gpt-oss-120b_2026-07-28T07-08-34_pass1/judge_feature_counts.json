@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8854",
+      "label": "the word \"nurse\" as well as some pronouns",
+      "reason": "Claims pronoun sensitivity, but here the profession cue dominates."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F1832",
+      "label": "the word \"labor\"",
+      "reason": "Profession-related medical context; not gender-based."
+    },
+    {
+      "id": "L1:F7152",
+      "label": "the word \"delivery\"",
+      "reason": "Obstetric/profession context, not a gender marker."
+    },
+    {
+      "id": "L3:F9008",
+      "label": "words related to childbirth or birth in general, including in animals.",
+      "reason": "Medical childbirth vocabulary relevant to nursing."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities.",
+      "reason": "Healthcare setting and personnel signal profession."
+    },
+    {
+      "id": "L4:F9036",
+      "label": "words and abbreviations associated with pediatric gastroenterology and inflammatory bowel disease.",
+      "reason": "Oracle ties it to healthcare practitioners."
+    },
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Direct medical specialty/profession terminology."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "words related to healthcare professionals and medical fields",
+      "reason": "Explicit profession and field vocabulary."
+    },
+    {
+      "id": "L5:F9749",
+      "label": "words related to various medical conditions, procedures, and practitioners",
+      "reason": "Medical/practitioner context, not gender."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession detector."
+    },
+    {
+      "id": "L6:F4490",
+      "label": "proper nouns corresponding to locations, organizations, medical roles, and coding terms",
+      "reason": "Includes medical roles, supporting profession signal."
+    },
+    {
+      "id": "L6:F9980",
+      "label": "words and abbreviations associated with pediatric gastroenterology and inflammatory bowel disease.",
+      "reason": "Medical specialty vocabulary; context-specific profession signal."
+    },
+    {
+      "id": "L7:F15132",
+      "label": "Medical practices",
+      "reason": "General medical practice terminology."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Nursing/healthcare profession content."
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare organization context."
+    },
+    {
+      "id": "L8:F9619",
+      "label": "Medical treatment",
+      "reason": "Treatment vocabulary is profession-related."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Medicine/research vocabulary supports profession."
+    },
+    {
+      "id": "L15:F15159",
+      "label": "words related to medicine and healthcare",
+      "reason": "Broad healthcare terminology."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: nurse",
+      "label": "nurse",
+      "reason": "Input token, not a claimed feature."
+    },
+    {
+      "id": "Emb: practitioner",
+      "label": "practitioner",
+      "reason": "Input token, not a claimed feature."
+    },
+    {
+      "id": "Emb: labor",
+      "label": "labor",
+      "reason": "Input token, not a claimed feature."
+    },
+    {
+      "id": "Emb: delivery",
+      "label": "delivery",
+      "reason": "Input token, not a claimed feature."
+    },
+    {
+      "id": "Emb: She",
+      "label": "She",
+      "reason": "Input token, not a claimed feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 17,
+  "n_other": 5,
+  "spurious_fraction": 0.05555555555555555,
+  "dominant": "causal",
+  "notes": "Oracle chiefly uses nursing/medical profession features; only one feature mentions pronouns."
+}

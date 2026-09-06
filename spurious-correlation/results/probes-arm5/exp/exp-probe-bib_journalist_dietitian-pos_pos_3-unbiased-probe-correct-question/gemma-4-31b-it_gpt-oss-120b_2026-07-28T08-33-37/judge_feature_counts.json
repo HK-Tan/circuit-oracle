@@ -1,0 +1,54 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gendered pronouns are spurious gender markers."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gendered woman-reference feature is spurious."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Food/nutrition vocabulary is a profession indicator."
+    },
+    {
+      "id": "L4:F3047",
+      "label": "words or phrases related to exercise and physical activity",
+      "reason": "Health/fitness vocabulary is profession-related."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-domain specialist feature is task-relevant."
+    },
+    {
+      "id": "L0:F4030",
+      "label": "words related to mission statements and personal development used in career environments",
+      "reason": "Career-environment wording is professionally causal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Purely lexical generic word detector."
+    },
+    {
+      "id": "Emb: others (pos 6)",
+      "label": "Emb: others (pos 6)",
+      "reason": "Generic token embedding, not a semantic feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 4,
+  "n_other": 2,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Oracle emphasizes causal health/career features; gender markers are present but not primary."
+}

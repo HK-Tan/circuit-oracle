@@ -1,0 +1,168 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Identity-token detector for race term."
+    },
+    {
+      "id": "L0:F13069",
+      "label": "the word \"black\"",
+      "reason": "Identity-token detector for race term."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity-token detector for race term."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Race-discussion pattern, not toxicity content."
+    },
+    {
+      "id": "L1:F12078",
+      "label": "the word \"proud\" and words associated with oaths or declarations of loyalty",
+      "reason": "Identity/loyalty cue, not toxic semantics."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Generic demographic-identity detector."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "mentions of demographic identity, especially race and gender",
+      "reason": "Generic demographic-identity detector."
+    },
+    {
+      "id": "L3:F15701",
+      "label": "instances of the word \"proud\"",
+      "reason": "Identity-pride lexical cue."
+    },
+    {
+      "id": "L3:F12020",
+      "label": "the word \"being\"",
+      "reason": "Part of identity phrase syntax."
+    },
+    {
+      "id": "L6:F15295",
+      "label": "words and abbreviations related to HIV/AIDS and viral infections.",
+      "reason": "Promoted by Pride/gay association, not toxicity."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: Black (pos 1)",
+      "label": "Emb: Black (pos 1)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Pride (pos 2)",
+      "label": "Emb: Pride (pos 2)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: = (pos 3)",
+      "label": "Emb: = (pos 3)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: being (pos 4)",
+      "label": "Emb: being (pos 4)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: black (pos 5)",
+      "label": "Emb: black (pos 5)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: White (pos 17)",
+      "label": "Emb: White (pos 17)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "L0:F12717",
+      "label": "the word \"pride\" in different contexts",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F45",
+      "label": "the word \"being\" in different contexts",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F9222",
+      "label": "the equals sign",
+      "reason": "Purely structural symbol detector."
+    },
+    {
+      "id": "L0:F5463",
+      "label": "uses of the equals sign in mathematical contexts",
+      "reason": "Purely structural/math-form feature."
+    },
+    {
+      "id": "L0:F10074",
+      "label": "mentions of a specific city, San Diego",
+      "reason": "Unrelated lexical feature."
+    },
+    {
+      "id": "L0:F10164",
+      "label": "relative pronouns",
+      "reason": "Purely structural grammar feature."
+    },
+    {
+      "id": "L0:F7894",
+      "label": "line breaks that indicate a paragraph or section beginning",
+      "reason": "Purely structural formatting feature."
+    },
+    {
+      "id": "L0:F1088",
+      "label": "mentions of \"meal\" and, to a lesser extent, words indicating a fondness for something",
+      "reason": "Unrelated lexical feature."
+    },
+    {
+      "id": "L0:F2177",
+      "label": "capitalized words or phrases",
+      "reason": "Purely structural/casing feature."
+    },
+    {
+      "id": "L2:F5266",
+      "label": "phrases that include the word \"being\"",
+      "reason": "Generic phrase detector."
+    },
+    {
+      "id": "L2:F1311",
+      "label": "LaTeX math mode code",
+      "reason": "Formatting/code noise."
+    },
+    {
+      "id": "L2:F6014",
+      "label": "technical words from a variety of fields including physics, data recovery, programming, and German grammar.",
+      "reason": "Unrelated technical lexical feature."
+    },
+    {
+      "id": "L4:F192",
+      "label": "equal signs adjacent to numbers, letters and symbols, which may be mathematical formulas",
+      "reason": "Purely structural/math-form feature."
+    },
+    {
+      "id": "L4:F5217",
+      "label": "words and abbreviations that often appear in URLs or website names",
+      "reason": "Purely structural/URL feature."
+    },
+    {
+      "id": "L5:F615",
+      "label": "named holidays or days of the year",
+      "reason": "Unrelated calendar feature."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 0,
+  "n_other": 21,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Probe is driven by identity-group cues and related spurious lexical associations."
+}

@@ -1,0 +1,178 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic lexical content feature; not negation."
+    },
+    {
+      "id": "L0:F7360",
+      "label": "the word \"an\" and sometimes also the acronym COX",
+      "reason": "Generic article/content cue; no causal relation."
+    },
+    {
+      "id": "L0:F5494",
+      "label": "the word \"early\" often related to time",
+      "reason": "Content-word feature from premise semantics."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic lexical feature; content-neutral."
+    },
+    {
+      "id": "L0:F7513",
+      "label": "the word \"together\"",
+      "reason": "Generic lexical feature; not a negation detector."
+    },
+    {
+      "id": "L0:F8082",
+      "label": "the word \"itself\" and sometimes words ending in \"ing\"",
+      "reason": "Reflexive pronoun detector, not negation."
+    },
+    {
+      "id": "L1:F11220",
+      "label": "instances of the word \"restore\" and related words",
+      "reason": "Content-word feature; oracle treats as lexical."
+    },
+    {
+      "id": "L0:F10815",
+      "label": "the word \"any\"",
+      "reason": "Generic lexical cue; not negation."
+    },
+    {
+      "id": "L0:F1027",
+      "label": "the word \"tower\"",
+      "reason": "Topic lexical feature about premise content."
+    },
+    {
+      "id": "L0:F4367",
+      "label": "references to centuries",
+      "reason": "Temporal/content feature; semantically relevant."
+    },
+    {
+      "id": "L2:F4429",
+      "label": "mentions of the beginning of a period",
+      "reason": "Semantic temporal relation in premise."
+    },
+    {
+      "id": "L2:F1430",
+      "label": "mentions of the U.S. White House or a generic house",
+      "reason": "Entity/topic semantic feature, not structural."
+    },
+    {
+      "id": "L2:L3 house/tower complex",
+      "label": "house/tower complex",
+      "reason": "Composite content feature about castle-house semantics."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Oracle links it to castle/estate semantics here."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Meaning-related fortification feature."
+    },
+    {
+      "id": "L4:F8583",
+      "label": "historical references including people, titles, and dates",
+      "reason": "Historical/contextual semantic feature."
+    },
+    {
+      "id": "L5:F3316",
+      "label": "Irish or Scottish geographical or cultural references, including names and places.",
+      "reason": "Topic/entity semantics from place context."
+    },
+    {
+      "id": "L6:F486",
+      "label": "Scottish locations and political terms",
+      "reason": "Geographic/topic semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F14108",
+      "label": "the word \"appropriate\"",
+      "reason": "Oracle dismisses it as an unrelated lexical detector."
+    },
+    {
+      "id": "L0:F1903",
+      "label": "instances of sentences starting with \"The\"",
+      "reason": "Purely structural sentence-start feature."
+    },
+    {
+      "id": "L5:F3992",
+      "label": "the start of documentation blocks in code",
+      "reason": "Structural/code artifact, not NLI semantics."
+    },
+    {
+      "id": "L6:F14585",
+      "label": "the words \"the\" and \"it\" at the beginning of sentences",
+      "reason": "Pure structural token-position detector."
+    },
+    {
+      "id": "L7:F462",
+      "label": "code documentation and import statements",
+      "reason": "Structural code-text feature."
+    },
+    {
+      "id": "L7:F5741",
+      "label": "code documentation or copyright information",
+      "reason": "Structural/document boilerplate detector."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Pronoun/phrase detector; oracle not tying to NLI meaning."
+    },
+    {
+      "id": "L3:F10598",
+      "label": "the word \"himself\"",
+      "reason": "Reflexive pronoun; dismissed as non-negation."
+    },
+    {
+      "id": "L1:F12702",
+      "label": "the word \"house\" or \"homes\"",
+      "reason": "Generic lexical detector; no special semantic role."
+    },
+    {
+      "id": "L1:F8633",
+      "label": "words or phrases related to tourism and historical places",
+      "reason": "Broad topic feature; oracle doesn't use it causally."
+    },
+    {
+      "id": "L1:F14137",
+      "label": "words or phrases that appear in legal or technical documents, like names of laws, legal terms (pleaded, testified), and technical terms, especially when abbreviated or in code",
+      "reason": "Document-style feature; not task-semantic."
+    },
+    {
+      "id": "L1:F5496",
+      "label": "mentions of kings, dukes, counts, and other European noble titles, and related things like nobility or election",
+      "reason": "Broad topic feature; not directly causal here."
+    },
+    {
+      "id": "L0:F11516",
+      "label": "the word \"program\" and, to a lesser extent, \"bonus\"",
+      "reason": "Irrelevant lexical detector."
+    },
+    {
+      "id": "L0:F7732",
+      "label": "the word \"materials\" and nearby words indicating physical traits and manufacturing",
+      "reason": "Generic content/topic detector."
+    },
+    {
+      "id": "L1:F1430",
+      "label": "words related to laws, rules and power dynamics",
+      "reason": "Broad topical feature, not NLI causation."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 18,
+  "n_other": 15,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation detector is present; oracle emphasizes lexical/topic semantics plus some structural leftovers."
+}

@@ -1,0 +1,138 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Nurse manager role and leadership"
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Management/medicine/studies vocabulary"
+    },
+    {
+      "id": "L15:F15159",
+      "label": "words related to medicine and healthcare",
+      "reason": "Medicine and healthcare terms"
+    },
+    {
+      "id": "L15:F8289",
+      "label": "words and phrases related to clinical medicine, including the terms clinicians use and related scientific fields",
+      "reason": "Clinical medicine terminology"
+    },
+    {
+      "id": "L8:F16339",
+      "label": "text discussing hospital infections and bacteria",
+      "reason": "Hospital infection/medical context"
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare organization terms"
+    },
+    {
+      "id": "L6:F4490",
+      "label": "proper nouns corresponding to locations, organizations, medical roles, and coding terms",
+      "reason": "Medical roles and organizations"
+    },
+    {
+      "id": "L7:F4654",
+      "label": "words related to medical supplies and care",
+      "reason": "Medical supplies/care vocabulary"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing profession words"
+    },
+    {
+      "id": "L8:F9619",
+      "label": "words and phrases related to medical treatment",
+      "reason": "Medical treatment vocabulary"
+    },
+    {
+      "id": "L8:F440",
+      "label": "text from professional biographies",
+      "reason": "Professional biography structure"
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words related to counseling, therapy, social work, and academic degree programs",
+      "reason": "Degree/education terminology"
+    },
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Academic study terminology"
+    },
+    {
+      "id": "L1:F14469",
+      "label": "mentions of 'nurse'",
+      "reason": "Direct nurse mentions"
+    },
+    {
+      "id": "L0:F5038",
+      "label": "the word \"graduated\" or variations of it",
+      "reason": "Graduation/education cue"
+    },
+    {
+      "id": "L2:F14478",
+      "label": "the word graduate",
+      "reason": "Graduation cue"
+    },
+    {
+      "id": "L0:F11959",
+      "label": "the word \"graduated\" and the word \"more.\"",
+      "reason": "Graduated-based education cue"
+    },
+    {
+      "id": "L0:F6270",
+      "label": "the word \"whom\", sometimes also activating on nearby punctuation, sentence starts, discourse markers, and other function words",
+      "reason": "University/credential context"
+    },
+    {
+      "id": "L0:F11988",
+      "label": "mentions of North Carolina, sometimes in conjunction with \"University\" or \"study\"",
+      "reason": "Education institution/location cue"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Broad overlapping medical feature, inhibitory"
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Broad overlapping nursing feature, inhibitory"
+    },
+    {
+      "id": "L10:F1461",
+      "label": "words and phrases related to medicine, medical research, and healthcare.",
+      "reason": "Broad inhibitory healthcare feature"
+    },
+    {
+      "id": "L6:F11057",
+      "label": "capitalized words, especially in titles and headings, and ordinal words like \"first\"",
+      "reason": "Purely structural/title-like detector"
+    },
+    {
+      "id": "L4:F16096",
+      "label": "instances of the word \"of\" preceded by particular words and abbreviations",
+      "reason": "Function-word/structure detector"
+    },
+    {
+      "id": "Output",
+      "label": "probe direction (synthetic \u2014 no token)",
+      "reason": "Synthetic output node"
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 19,
+  "n_other": 6,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle claims profession/education signals dominate; no meaningful gender-marker contribution."
+}

@@ -1,0 +1,242 @@
+{
+  "prompt": "Dataset: civil_comments-pos_pos_3 | Probe: biased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 0,
+      "feature_idx": 0,
+      "pos": 6,
+      "supernode_label": "Emb: Jew (pos 6)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/0"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 0,
+      "pos": 5,
+      "supernode_label": "Emb: liberal (pos 5)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/0"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 0,
+      "pos": 9,
+      "supernode_label": "Emb: stain (pos 9)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/0"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 0,
+      "pos": 10,
+      "supernode_label": "Emb: on (pos 10)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/0"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 9026,
+      "pos": 6,
+      "supernode_label": "Low-level 'Jew' presence detector (L0:9026, frac=0.41) \u2014 fires on the raw Jew embedding with direct_effect=31.4",
+      "autointerp": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "frac_nonzero": 0.41044,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/9026"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 11290,
+      "pos": 6,
+      "supernode_label": "Low-level 'Jew' presence detector (L0:9026, frac=0.41) \u2014 fires on the raw Jew embedding with direct_effect=31.4",
+      "autointerp": "mentions of Jewish people, Israel, and Christianity",
+      "frac_nonzero": 0.00508,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/11290"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 4470,
+      "pos": 6,
+      "supernode_label": "Low-level 'Jew' presence detector (L0:9026, frac=0.41) \u2014 fires on the raw Jew embedding with direct_effect=31.4",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/4470"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 8236,
+      "pos": 6,
+      "supernode_label": "Explicit Jewish-people detector (L2:8236, frac=0.0044) \u2014 direct_effect 11.1 from 'Jew' embedding",
+      "autointerp": "mentions of Jewish people, culture, or religion, along with associated figures and locations",
+      "frac_nonzero": 0.0044,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/8236"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 13158,
+      "pos": 6,
+      "supernode_label": "Race/ethnicity vocabulary (L2:13158, frac=0.0099) \u2014 direct_effect 6.8 from 'Jew'",
+      "autointerp": " words about race and ethnicity",
+      "frac_nonzero": 0.00986,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/13158"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 12151,
+      "pos": 6,
+      "supernode_label": "Uppercase fragment amplifier (L3:12151, frac=0.0032) \u2014 promotes 'jew', amplifies 'Jew' embedding signal",
+      "autointerp": "capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+      "frac_nonzero": 0.00322,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/12151"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 2405,
+      "pos": 6,
+      "supernode_label": "Religious identity/affiliation (L4:2405, frac=0.0071) \u2014 direct_effect 3.8 from 'Jew'",
+      "autointerp": " words related to religious identity/affiliation or spirituality including related holidays",
+      "frac_nonzero": 0.00705,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/2405"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 14733,
+      "pos": 6,
+      "supernode_label": "Jewish-targeted discrimination (L4:14733, frac=low) \u2014 direct_effect 5.5 from 'Jew', 2.1 from 'liberal'",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/14733"
+    },
+    {
+      "layer": 6,
+      "feature_idx": 648,
+      "pos": 6,
+      "supernode_label": "Discrimination against religious/ethnic groups (L6:648, frac=0.016, direct_effect=0.74 to probe) \u2014 primary driver",
+      "autointerp": " words related to discrimination against particular religious or ethnic groups",
+      "frac_nonzero": 0.01607,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/648"
+    },
+    {
+      "layer": 5,
+      "feature_idx": 7488,
+      "pos": 10,
+      "supernode_label": "'Stain' / reputation-negation lexical feature (L5:7488, activation=21.5) \u2014 direct_effect 5.5 from 'stain' emb",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/5-gemmascope-transcoder-16k/7488"
+    },
+    {
+      "layer": 6,
+      "feature_idx": 1561,
+      "pos": 10,
+      "supernode_label": "Stain / disgrace phrase feature (L6:1561, activation=18.1) \u2014 direct_effect 3.4 to L8:13875",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/1561"
+    },
+    {
+      "layer": 8,
+      "feature_idx": 13875,
+      "pos": 10,
+      "supernode_label": "Negative-sentiment reputation/betrayal (L8:13875, frac=0.010, direct_effect=0.23 to probe) \u2014 secondary driver",
+      "autointerp": "negative sentiment related to reputation and betrayal of trust.",
+      "frac_nonzero": 0.01022,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/8-gemmascope-transcoder-16k/13875"
+    },
+    {
+      "layer": 26,
+      "feature_idx": 0,
+      "pos": 0,
+      "supernode_label": "Output: probe direction (toxicity)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/26-gemmascope-transcoder-16k/0"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "emb_jew",
+      "to": "L0_jew_token_detector"
+    },
+    {
+      "from": "emb_jew",
+      "to": "L2_jewish_mention"
+    },
+    {
+      "from": "emb_jew",
+      "to": "L2_ethnicity"
+    },
+    {
+      "from": "emb_jew",
+      "to": "L3_caps_fragment"
+    },
+    {
+      "from": "emb_jew",
+      "to": "L4_jewish_discrim"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "L2_ethnicity"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "L4_jewish_discrim"
+    },
+    {
+      "from": "L0_jew_token_detector",
+      "to": "L3_caps_fragment"
+    },
+    {
+      "from": "L2_jewish_mention",
+      "to": "L4_jewish_discrim"
+    },
+    {
+      "from": "L2_ethnicity",
+      "to": "L4_religious_id"
+    },
+    {
+      "from": "L3_caps_fragment",
+      "to": "L4_jewish_discrim"
+    },
+    {
+      "from": "L4_religious_id",
+      "to": "L6_anti_group_discrim"
+    },
+    {
+      "from": "L4_jewish_discrim",
+      "to": "L6_anti_group_discrim"
+    },
+    {
+      "from": "emb_stain",
+      "to": "L5_stain_phrase"
+    },
+    {
+      "from": "emb_on",
+      "to": "L8_reputation_neg"
+    },
+    {
+      "from": "L5_stain_phrase",
+      "to": "L6_stain_phrase"
+    },
+    {
+      "from": "L6_stain_phrase",
+      "to": "L8_reputation_neg"
+    },
+    {
+      "from": "L6_anti_group_discrim",
+      "to": "output_probe"
+    },
+    {
+      "from": "L8_reputation_neg",
+      "to": "output_probe"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "**Analysis:** The toxicity probe is driven by a single dominant feature (L6:648, \"discrimination against religious/ethnic groups\") whose *sole* upstream signal is the input token **\"Jew\"** \u2014 a protected-class identifier \u2014 fed through a stack of redundant identity detectors (L0:9026 \u2192 L3:12151 \u2192 L4:14733), with the explicitly toxic lexeme **\"stain\"** contributing only a secondary, smaller effect via L8:13875.\n\n**Confidence:** 8\n\n**Reasoning:** The circuit cleanly separates into two paths that converge on the probe output:\n\n1. **Identity-path (dominant):** The token \"Jew\" at pos 6 lights up an enormous low-level presence detector (L0:9026, frac_nonzero=0.41, direct_effect=31.4 from the embedding), then propagates upward through a caps-fragment amplifier (L3:12151, frac=0.003, direct_effect=11.0 from \"Jew\"), a dedicated Jewish-mention detector (L2:8236, frac=0.0044, direct_effect=11.1 from \"Jew\"), and a Jewish-targeted discrimination feature (L4:14733, direct_effect=5.5 from \"Jew\" + 2.1 from \"liberal\"). These all feed into L6:648 (\"discrimination against particular religious or ethnic groups\", frac=0.016), which carries the largest direct_effect to the probe (0.74). Critically, L6:648 is reached *without* the model ever needing to read \"stain\", \"brethren\", or any toxicity-bearing lexeme \u2014 the \"Jew\" embedding alone is sufficient to activate the discrimination feature.\n\n2. **Toxic-lexeme path (secondary):** The word \"stain\" at pos 9 activates L5:7488 (activation 21.5, direct_effect 5.5 from \"stain\" embedding) \u2192 L6:1561 \u2192 L8:13875 (\"negative sentiment about reputation/betrayal\", direct_effect 0.23 to probe). This path is real toxicity language, but its contribution to the probe is roughly **3\u00d7 smaller** than the identity path.\n\nThe user's concern is **substantively confirmed but with a nuance**: the probe *does* lean on an identity-group signal (L6:648 reads \"Jew\" + \"liberal\" and concludes \"anti-group discrimination\" without needing any slur or attack verb). However, this is not purely spurious \u2014 L6:648's autointerp label and top activating examples show it fires on contexts where discrimination IS being discussed, so the feature is genuinely about \"slurs/attacks against a religious/ethnic group\" rather than a bare identity detector. The toxicity is encoded as the *co-occurrence* of an identity term with a disparaging framing context \u2014 but in this prompt the framing context is provided by the identity token alone at this circuit's relevant position (pos 6), with the actual toxic lexemes (\"stain\", \"brethren\") processed at a *different* position (pos 9\u201310) along a much weaker parallel path. This means that merely mentioning \"Jew\" with an adjective like \"liberal\" near the discrimination feature's receptive field is enough to score high on the probe, even if the surrounding sentence were benign. A more robust probe would likely require the disparaging-frame features (the L5\u2013L8 stain/brethren path) to be active at the *same* position as the identity term, not merely in the same sentence.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

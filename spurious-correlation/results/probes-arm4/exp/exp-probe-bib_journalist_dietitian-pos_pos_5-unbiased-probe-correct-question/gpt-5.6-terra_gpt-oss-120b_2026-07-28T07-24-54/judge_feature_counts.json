@@ -1,0 +1,48 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L4:F10494",
+      "label": "words related to health, medicine, diet, drugs, age groups, and excercise",
+      "reason": "Health/diet/exercise terminology signals profession-relevant content."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Dietary-health vocabulary is causal profession evidence."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Food/nutrition concept directly supports the task."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Oracle treats it as broad food/nutrition semantic evidence."
+    },
+    {
+      "id": "L14:F16195",
+      "label": "mentions of physical activity and training.",
+      "reason": "Sports/training terminology is profession-relevant."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: nutrition (pos 7)",
+      "label": "Emb: nutrition",
+      "reason": "Input token, not a separate claimed feature."
+    },
+    {
+      "id": "Emb: sports (pos 6)",
+      "label": "Emb: sports",
+      "reason": "Input token, not a separate claimed feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 5,
+  "n_other": 2,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No genuine gender-marker features are claimed; circuit is nutrition/sports semantic evidence."
+}

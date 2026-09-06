@@ -1,0 +1,59 @@
+{
+  "spurious_features": [
+    {
+      "id": "L1:F7244",
+      "label": "the pronoun \"she\"",
+      "reason": "Explicit female-pronoun marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: nutrition (pos 13)",
+      "label": "Embed/output",
+      "reason": "Direct profession-relevant nutrition vocabulary."
+    },
+    {
+      "id": "Emb: cook (pos 17)",
+      "label": "Embed/output",
+      "reason": "Direct cooking/food-preparation vocabulary."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Dietary-health content for nutrition professions."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Food/nutrition concept detector."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-context aggregation feature."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Nutritional-science context feature."
+    },
+    {
+      "id": "L15:F2510",
+      "label": "words and phrases related to food preparation and consumption, along with some words relating to the digestive system and eating disorders",
+      "reason": "Cooking/food-preparation concept."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output: synthetic profession-probe score",
+      "label": "embed/output",
+      "reason": "Final probe output, not an input feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 7,
+  "n_other": 1,
+  "spurious_fraction": 0.125,
+  "dominant": "causal",
+  "notes": "Dominated by nutrition/cooking semantics; only one minor gender-marker feature."
+}

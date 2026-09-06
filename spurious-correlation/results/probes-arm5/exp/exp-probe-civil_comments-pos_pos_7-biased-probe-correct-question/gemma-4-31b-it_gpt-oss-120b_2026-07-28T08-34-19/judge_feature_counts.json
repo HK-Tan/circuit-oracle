@@ -1,0 +1,43 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F0",
+      "label": "Emb: Race Identity ('black', 'White')",
+      "reason": "Identity-group token embeddings for race"
+    },
+    {
+      "id": "L2:F13158",
+      "label": "Race/Ethnicity Detector",
+      "reason": "Detects race and ethnicity mentions"
+    },
+    {
+      "id": "L4:F15899",
+      "label": "Generic LGBTQ Detector",
+      "reason": "Tracks LGBTQ identity/community language"
+    },
+    {
+      "id": "L6:F6085",
+      "label": "Homosexuality Detector",
+      "reason": "Detects homosexuality and same-sex marriage text"
+    },
+    {
+      "id": "L8:F15771",
+      "label": "LGBTQ Issues Detector",
+      "reason": "Discussion of LGBTQ+ issues and topics"
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "embed/output",
+      "label": "Toxicity Probe Logit",
+      "reason": "Output/logit, not an input feature"
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 0,
+  "n_other": 1,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites only identity-group detectors; no toxic-content features are claimed."
+}

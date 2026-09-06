@@ -1,0 +1,43 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Detects isn't/doesn't negation form."
+    },
+    {
+      "id": "L2:F5627",
+      "label": "instances of the phrase \"not only\"",
+      "reason": "Negation-related phrase detector."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation pattern detector."
+    },
+    {
+      "id": "L16:F15025",
+      "label": "usage of the word \"not\" combined with personal pronouns or related emotional or motivational language",
+      "reason": "Negation-context detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L4:F15629",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Structural attribution cue, not task-semantic."
+    },
+    {
+      "id": "L4:F12337",
+      "label": "speech attribution, especially \"said\"",
+      "reason": "Structural attribution cue, not task-semantic."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 2,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites negation markers plus attribution; no semantic entailment features are claimed."
+}

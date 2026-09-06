@@ -1,0 +1,189 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "His",
+      "reason": "Male possessive pronoun."
+    },
+    {
+      "id": "Emb: He (pos 14)",
+      "label": "He",
+      "reason": "Male pronoun."
+    },
+    {
+      "id": "Emb: He (pos 37)",
+      "label": "He",
+      "reason": "Male pronoun."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male-pronoun detector."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Pronoun/gender detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-person marker."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Gendered male-language feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun feature."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Possessive pronoun detector."
+    },
+    {
+      "id": "L14:F14097",
+      "label": "occurrences of the word \"he\"",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Generic pronoun feature."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "People/pronoun feature."
+    },
+    {
+      "id": "L19:F8186",
+      "label": "references to a person, especially third-person pronouns and possessive pronouns.",
+      "reason": "Pronoun/person reference."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: research (pos 2)",
+      "label": "research",
+      "reason": "Profession-field vocabulary."
+    },
+    {
+      "id": "Emb: scientific (pos 8)",
+      "label": "scientific",
+      "reason": "Field/education terminology."
+    },
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Research topic indicator."
+    },
+    {
+      "id": "L0:F2827",
+      "label": "the word \"science\"",
+      "reason": "Science-topic indicator."
+    },
+    {
+      "id": "L2:F9740",
+      "label": "the word \"interest\" and related words.",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Structural punctuation feature."
+    },
+    {
+      "id": "L15:F13002",
+      "label": "titles and names of people followed by their role or profession",
+      "reason": "Profession/title indicator."
+    },
+    {
+      "id": "L17:F3683",
+      "label": "biographies",
+      "reason": "Biography-text structure."
+    },
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Workplace/skill vocabulary."
+    },
+    {
+      "id": "L22:F12117",
+      "label": "references to actions that people can take or have taken.",
+      "reason": "Content-neutral syntactic feature."
+    },
+    {
+      "id": "L18:F9023",
+      "label": "personal names and associated titles",
+      "reason": "Title/name structure."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: . (pos 13)",
+      "label": ".",
+      "reason": "Pure punctuation."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Not relevant to task."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Mixed pronoun/person feature."
+    },
+    {
+      "id": "L13:F6622",
+      "label": "pronouns.",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "Female-story feature, not claimed here."
+    },
+    {
+      "id": "L16:F2918",
+      "label": "Pronouns",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L18:F7217",
+      "label": "words or abbreviations referring to people, with a focus on pronouns and mentions of \"shear\"",
+      "reason": "Mixed/ambiguous feature."
+    },
+    {
+      "id": "L16:F10989",
+      "label": "the",
+      "reason": "Generic stopword feature."
+    },
+    {
+      "id": "L12:F3684",
+      "label": "lines of code starting with a '#'",
+      "reason": "Structural code token."
+    },
+    {
+      "id": "L0:F2749",
+      "label": "references to ownership or association with a person or group of people",
+      "reason": "Generic association feature."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 11,
+  "n_other": 10,
+  "spurious_fraction": 0.56,
+  "dominant": "spurious",
+  "notes": "Gender/pronoun features dominate; research/science signals are present but secondary."
+}

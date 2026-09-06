@@ -1,0 +1,48 @@
+{
+  "spurious_features": [
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Contrast/negation surface cue, not semantic contradiction."
+    },
+    {
+      "id": "L17:F3763",
+      "label": "only",
+      "reason": "Negation-like lexical cue in hypothesis, used as spurious signal."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L5:F7144",
+      "label": "proper nouns followed by the word \"said\"",
+      "reason": "Pure reporting-structure detector."
+    },
+    {
+      "id": "L2:F13565",
+      "label": "the word \"program(me)s\"",
+      "reason": "Isolated lexical detector, not task-semantic."
+    },
+    {
+      "id": "L4:F12847",
+      "label": "sentences with some reporting verb and the word 'that'",
+      "reason": "Generic reporting-context pattern."
+    },
+    {
+      "id": "L0:F8046",
+      "label": "the word \"will.\"",
+      "reason": "Generic token detector."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Oracle-linked but irrelevant to NLI contradiction."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle describes a surface contrast/reporting proxy, not genuine semantic contradiction."
+}

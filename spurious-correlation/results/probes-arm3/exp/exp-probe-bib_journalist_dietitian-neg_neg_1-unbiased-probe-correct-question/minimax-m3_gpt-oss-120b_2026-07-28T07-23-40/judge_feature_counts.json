@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8964",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Gendered pronoun shortcut, not profession evidence."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-gender marker, a spurious correlate."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism profession indicator."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News-source vocabulary signals journalism."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Explicit reporting/news profession content."
+    },
+    {
+      "id": "L20:F8433",
+      "label": "words related to news broadcasting",
+      "reason": "Broadcast journalism terminology."
+    },
+    {
+      "id": "L15:F2579",
+      "label": "instances of people providing information in some sort of official capacity. Like reporting incidents, communicating facts or informing others of something.",
+      "reason": "Reporting/informing role matches journalism."
+    },
+    {
+      "id": "L1:F14511",
+      "label": "the word \"report\"",
+      "reason": "Report-related wording supports journalism."
+    },
+    {
+      "id": "L0:F1579",
+      "label": "the word \"report\"",
+      "reason": "Report-related wording supports journalism."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure stopword/structural feature."
+    },
+    {
+      "id": "L0:F14287",
+      "label": "the word \"see\"",
+      "reason": "Generic lexical feature, not profession-specific."
+    },
+    {
+      "id": "L0:F2203",
+      "label": "instances of the words \"world\" or \"game\" (possibly \"problem\") or expressions of existential quandaries.",
+      "reason": "Not a task-relevant profession feature."
+    },
+    {
+      "id": "L0:F2011",
+      "label": "the word \"dream\"",
+      "reason": "Generic content word, not profession evidence."
+    },
+    {
+      "id": "L0:F13948",
+      "label": "the color \"pink\"",
+      "reason": "Unrelated lexical feature."
+    },
+    {
+      "id": "L0:F15693",
+      "label": "language related to personal anecdotes and opinions",
+      "reason": "Generic discourse style, not profession-specific."
+    },
+    {
+      "id": "L4:F11898",
+      "label": "mentions of \"World\" followed by a sport or war-related word",
+      "reason": "Unrelated world/sport/war pattern."
+    },
+    {
+      "id": "L5:F771",
+      "label": "the word \"see\" and words often associated with \"see\"",
+      "reason": "Generic structural/semantic feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 7,
+  "n_other": 8,
+  "spurious_fraction": 0.2222222222222222,
+  "dominant": "causal",
+  "notes": "Oracle mainly cites journalism indicators; only two features are gender shortcuts."
+}

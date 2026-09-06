@@ -1,0 +1,179 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12519",
+      "label": "generic 'She' token feature, inhibitory on circuit",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L0:F7532",
+      "label": "'Sarah' name detector (activ 17.75)",
+      "reason": "Gendered name; spurious marker"
+    },
+    {
+      "id": "L2:F7672",
+      "label": "'She' early contextual feature",
+      "reason": "Pronoun context; gender marker"
+    },
+    {
+      "id": "L4:F7864",
+      "label": "'She' pronoun feature (activ 8.31, DE 0.229 to probe)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L5:F3992",
+      "label": "strong 'She' pronoun feature (activ 23.9)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L6:F11646",
+      "label": "top driver of probe (activ 12.5, DE 0.375); also at pos 2 (DE 0.305)",
+      "reason": "Driven by She; gender marker"
+    },
+    {
+      "id": "L7:F2765",
+      "label": "'loves/clients/Sarah' relational feature (activ 8.19, DE 0.162)",
+      "reason": "Includes Sarah; gendered name signal"
+    },
+    {
+      "id": "L7:F462",
+      "label": "'She' pronoun feature (activ 30.5)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L7:F5741",
+      "label": "'She' pronoun feature (activ 24.1)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L9:F2762",
+      "label": "'She' pronoun (activ 37)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L9:F3056",
+      "label": "'She' pronoun (activ 45)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L9:F8770",
+      "label": "'She' pronoun (activ 51.5)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L9:F15819",
+      "label": "'She' pronoun (activ 49.75)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L10:F14174",
+      "label": "'She' pronoun (activ 55)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L10:F10933",
+      "label": "'She' pronoun (activ 53.75)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L11:F9183",
+      "label": "'She' pronoun (activ 54.25)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L12:F14970",
+      "label": "'Sarah' entity role (activ 6.75, DE 0.152)",
+      "reason": "Gendered name role signal"
+    },
+    {
+      "id": "L12:F12493",
+      "label": "'She' pronoun (activ 61.75)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L15:F851",
+      "label": "'She' pronoun (activ 161)",
+      "reason": "Pronoun detector; gender marker"
+    },
+    {
+      "id": "L18:F14677",
+      "label": "strong 'She' pronoun signal (activ 29.9, DE 0.247)",
+      "reason": "Pronoun detector; gender marker"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F15317",
+      "label": "'loves' verb feature (activ 6.78, DE 0.189)",
+      "reason": "Generic verb, not profession-specific"
+    },
+    {
+      "id": "L5:F16213",
+      "label": "'loves' verb feature (activ 5.44, DE 0.168)",
+      "reason": "Generic verb, not profession-specific"
+    },
+    {
+      "id": "L10:F14965",
+      "label": "'loves' verb (activ 13.94)",
+      "reason": "Generic verb, not profession-specific"
+    },
+    {
+      "id": "L12:F12940",
+      "label": "'loves educating' phrase (activ 12.06, DE 0.252)",
+      "reason": "Content-neutral phrasing; not profession indicator"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb:She@1",
+      "label": "feminine pronoun/gender marker",
+      "reason": "Input token; already captured by feature chain"
+    },
+    {
+      "id": "Emb:loves@2",
+      "label": "loves",
+      "reason": "Input token; generic verb"
+    },
+    {
+      "id": "Emb:Sarah@12",
+      "label": "proper name",
+      "reason": "Input token; gendered name"
+    },
+    {
+      "id": "Emb:<bos>@0",
+      "label": "<bos>",
+      "reason": "Purely structural BOS token"
+    },
+    {
+      "id": "Probe",
+      "label": "output",
+      "reason": "Not a feature"
+    },
+    {
+      "id": "L0:F0@1",
+      "label": "embedding node",
+      "reason": "Structural embedding node"
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "embedding node",
+      "reason": "Structural embedding node"
+    },
+    {
+      "id": "L0:F0@12",
+      "label": "embedding node",
+      "reason": "Structural embedding node"
+    },
+    {
+      "id": "L0:F0@0",
+      "label": "embedding node",
+      "reason": "Structural embedding node"
+    }
+  ],
+  "n_spurious": 20,
+  "n_causal": 4,
+  "n_other": 9,
+  "spurious_fraction": 0.8333333333333334,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly driven by gender markers; only generic verb features are causal."
+}

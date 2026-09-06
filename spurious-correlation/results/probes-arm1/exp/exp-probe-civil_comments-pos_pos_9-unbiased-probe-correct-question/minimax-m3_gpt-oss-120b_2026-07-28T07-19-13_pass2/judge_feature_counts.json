@@ -1,0 +1,88 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F2851",
+      "label": "books and associated things such as authors and reading",
+      "reason": "Author/demographic-adjacent lexical cluster, not toxicity."
+    },
+    {
+      "id": "L6:F13528",
+      "label": "words related to academic works and their writers",
+      "reason": "Author/book lexical content; surface topic signal."
+    },
+    {
+      "id": "L2:F14801",
+      "label": "mentions of authors and their written works",
+      "reason": "Author-related lexical detector, irrelevant to toxicity."
+    },
+    {
+      "id": "L2:F3399",
+      "label": "words related to marriage",
+      "reason": "Identity-phrase/marriage cue; non-toxic demographic signal."
+    },
+    {
+      "id": "L3:F6262",
+      "label": "mentions of marriage",
+      "reason": "Marriage-related identity context, not causal toxicity."
+    },
+    {
+      "id": "L3:F8254",
+      "label": "words and phrases related to marriage and family relationships",
+      "reason": "Family/marriage lexical cue; spurious identity signal."
+    },
+    {
+      "id": "L3:F494",
+      "label": "text relating to marriage, birth, death, family and religion",
+      "reason": "Identity-group/family/religion topic feature."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Demographic-token detector; explicit identity signal."
+    },
+    {
+      "id": "L0:F2242",
+      "label": "the word \"guys\"",
+      "reason": "Gendered demographic token detector; identity signal."
+    },
+    {
+      "id": "L0:F753",
+      "label": "the word \"author\" and words related to selling and prices",
+      "reason": "Author lexical cue; topic not toxicity."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe classification direction (toxicity/hate probe)",
+      "label": "Probe classification direction (toxicity/hate probe)",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L3:F10004",
+      "label": "words which mean or indicate uncertainty or possibility",
+      "reason": "Structural/attitude cue, not toxicity."
+    },
+    {
+      "id": "L3:F11152",
+      "label": "words that indicate uncertainty or possibility",
+      "reason": "Generic uncertainty detector."
+    },
+    {
+      "id": "L0:F9881",
+      "label": "the word \"appear\" and its variants",
+      "reason": "Generic lexical detector."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows identity/topic lexicals, not toxicity semantics."
+}

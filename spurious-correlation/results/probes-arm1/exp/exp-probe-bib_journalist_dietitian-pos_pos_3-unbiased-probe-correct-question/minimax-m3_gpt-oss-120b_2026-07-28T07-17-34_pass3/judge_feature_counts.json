@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Female pronoun cluster; gender marker."
+    },
+    {
+      "id": "L1:F7244",
+      "label": "the pronoun \"she\"",
+      "reason": "Female pronoun; gender marker."
+    },
+    {
+      "id": "L0:F15382",
+      "label": "mentions of a female person.",
+      "reason": "Female reference; gendered cue."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Women reference; gender-related feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Nutrition concept; profession-relevant."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Diet/health vocabulary; causal task signal."
+    },
+    {
+      "id": "L4:F3047",
+      "label": "words or phrases related to exercise and physical activity",
+      "reason": "Exercise terminology; profession indicator."
+    },
+    {
+      "id": "L2:F6341",
+      "label": "the word \"healthy\"",
+      "reason": "Health concept; task-relevant."
+    },
+    {
+      "id": "L0:F10218",
+      "label": "the word \"lifestyle.\"",
+      "reason": "Lifestyle wording; bio content signal."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic structural/token feature."
+    },
+    {
+      "id": "L1:F815",
+      "label": "the word \"passion\"",
+      "reason": "Mission-statement/career language."
+    },
+    {
+      "id": "L0:F2845",
+      "label": "the word \"knowledge\" and words starting with the letter \"A\"",
+      "reason": "Knowledge/career wording; content signal."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Dismissed as numeric-context detector."
+    },
+    {
+      "id": "L0:F4030",
+      "label": "words related to mission statements and personal development used in career environments",
+      "reason": "Career-mission language; causal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Not gendered; lexical content."
+    },
+    {
+      "id": "L0:F5829",
+      "label": "the word \"easier\" with some modifiers such as \"max\"",
+      "reason": "Oracle says negative structural-ish token."
+    },
+    {
+      "id": "L0:F9927",
+      "label": "the word \"studio,\" sometimes with a modifier like \"usually\"",
+      "reason": "Oracle says negative lexical token."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Pure punctuation/structure."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 10,
+  "n_other": 4,
+  "spurious_fraction": 0.2857142857142857,
+  "dominant": "causal",
+  "notes": "Gender features are present but mostly negative; positive score is driven by profession-content vocabulary."
+}

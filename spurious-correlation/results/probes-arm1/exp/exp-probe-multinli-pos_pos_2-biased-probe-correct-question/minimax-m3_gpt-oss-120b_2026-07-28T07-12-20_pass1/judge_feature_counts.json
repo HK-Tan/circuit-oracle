@@ -1,0 +1,164 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Negation suffix detector on haven't; spurious contraction cue."
+    },
+    {
+      "id": "L0:F4541",
+      "label": "adverbs of certainty such as \"obviously\" and related words",
+      "reason": "Pragmatic discourse marker, not task semantics."
+    },
+    {
+      "id": "L0:F15972",
+      "label": "the word \"yeah\"",
+      "reason": "Pure lexical agreement marker; surface-level only."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation-word detector explicitly tied to contradiction shortcut."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F5201",
+      "label": "awards and accomplishments in the context of sports",
+      "reason": "Content cue about tournament semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe classification score (output)",
+      "label": "Probe classification score (output)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: well (pos 2)",
+      "label": "Emb: well (pos 2)",
+      "reason": "Input embedding node only."
+    },
+    {
+      "id": "Emb: yeah (pos 1)",
+      "label": "Emb: yeah (pos 1)",
+      "reason": "Input embedding node only."
+    },
+    {
+      "id": "Emb: the (pos 3)",
+      "label": "Emb: the (pos 3)",
+      "reason": "Input embedding node only."
+    },
+    {
+      "id": "Emb: uh (pos 4)",
+      "label": "Emb: uh (pos 4)",
+      "reason": "Input embedding node only."
+    },
+    {
+      "id": "Emb: double (pos 6)",
+      "label": "Emb: double (pos 6)",
+      "reason": "Input embedding node only."
+    },
+    {
+      "id": "Emb: tournament (pos 8)",
+      "label": "Emb: tournament (pos 8)",
+      "reason": "Input embedding node only."
+    },
+    {
+      "id": "Emb: t (pos 37, in 'haven't')",
+      "label": "Emb: t (pos 37, in 'haven't')",
+      "reason": "Input embedding node only."
+    },
+    {
+      "id": "Emb: because (pos 25)",
+      "label": "Emb: because (pos 25)",
+      "reason": "Input embedding node only."
+    },
+    {
+      "id": "Emb: haven (pos 35)",
+      "label": "Emb: haven (pos 35)",
+      "reason": "Input embedding node only."
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Generic lexical detector; not semantic relation."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Lexical connective, not causal semantics."
+    },
+    {
+      "id": "L1:F177",
+      "label": "the word \"double\" and words that begin with \"multi\" or \"doubly\"",
+      "reason": "Orthographic/lexical pattern only."
+    },
+    {
+      "id": "L0:F7893",
+      "label": "the word \"double\" and words related to entrances and entering",
+      "reason": "Incidental lexical association, not task semantics."
+    },
+    {
+      "id": "L2:F752",
+      "label": "phrases expressing personal opinions or viewpoints, often using words like \"I,\" \"think,\" \"kind of,\" and related terms.",
+      "reason": "Conversation style feature."
+    },
+    {
+      "id": "L4:F9602",
+      "label": "interjections and filler words",
+      "reason": "Filler/discourse marker detector."
+    },
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Conversation marker, not meaning."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "Generic conversational structure."
+    },
+    {
+      "id": "L2:F1337",
+      "label": "negated verb constructions",
+      "reason": "Negation form detector; surface-level here."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "multilingual negative sentiment \"not/no/never\"",
+      "reason": "Negation-word shortcut, not semantics."
+    },
+    {
+      "id": "L2:F6993",
+      "label": "uncertainty phrases",
+      "reason": "Pragmatic uncertainty cue only."
+    },
+    {
+      "id": "L2:F9629",
+      "label": "interjections and sounds of hesitation or acknowledgment",
+      "reason": "Hesitation marker, not semantic content."
+    },
+    {
+      "id": "L1:F13255",
+      "label": "the word \"season\" and words associated with it",
+      "reason": "Loose topical lexical feature."
+    },
+    {
+      "id": "L0:F10780",
+      "label": "LaTeX commands for including packages and defining document class",
+      "reason": "Incidental activation; unrelated to NLI."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 1,
+  "n_other": 25,
+  "spurious_fraction": 0.8,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes surface negation/filler cues; only one content-linked feature appears causal."
+}

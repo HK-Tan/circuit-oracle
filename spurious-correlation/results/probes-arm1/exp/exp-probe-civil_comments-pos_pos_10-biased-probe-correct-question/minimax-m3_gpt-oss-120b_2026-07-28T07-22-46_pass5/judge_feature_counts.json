@@ -1,0 +1,68 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: ' race' (pos 5)",
+      "label": "race token",
+      "reason": "Direct demographic token; identity signal, not toxicity."
+    },
+    {
+      "id": "Emb: ' black' (pos 16)",
+      "label": "black token",
+      "reason": "Demographic identity token; spurious for toxicity."
+    },
+    {
+      "id": "Emb: ' people' (pos 17)",
+      "label": "people token",
+      "reason": "Part of identity mention; not causal toxicity."
+    },
+    {
+      "id": "Emb: ' of' (pos 6)",
+      "label": "of token",
+      "reason": "Structural stopword; no semantic toxicity content."
+    },
+    {
+      "id": "Emb: ' mentioning' (pos 3)",
+      "label": "mentioning token",
+      "reason": "Supports mention-of-identity syntax, spurious here."
+    },
+    {
+      "id": "Early-layer race/ethnicity token detectors (L0-L2)",
+      "label": "early race/ethnicity token detectors",
+      "reason": "Identity-group detectors; fire on demographic mentions."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Literal race-word detector; identity mention only."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the \"race\" (abstract) detector",
+      "reason": "Abstract race mention detector; not toxic semantics."
+    },
+    {
+      "id": "Mid-layer mention + race composition (L3-L4)",
+      "label": "mention + race composition",
+      "reason": "Combines mentioning with race; still identity-focused."
+    },
+    {
+      "id": "Late-layer race/ethnicity concept features (L6-L7)",
+      "label": "race/ethnicity concept features",
+      "reason": "Conceptual identity-group features, not toxicity detectors."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Output logit (probe direction)",
+      "label": "output logit",
+      "reason": "Prediction target, not a feature."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 0,
+  "n_other": 1,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is identity-mention driven; no toxic-content features are claimed."
+}

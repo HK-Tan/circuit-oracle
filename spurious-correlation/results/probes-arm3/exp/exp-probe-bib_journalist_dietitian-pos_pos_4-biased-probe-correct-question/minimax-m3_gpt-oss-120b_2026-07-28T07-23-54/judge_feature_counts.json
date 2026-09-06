@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Female name is a gender marker."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Detects female references via pronouns/titles."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Counts women/girls mentions; gender cue."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronouns are spurious gender markers."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female first names signal gender."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Explicit feminine pronouns."
+    },
+    {
+      "id": "L13:F11685",
+      "label": "words related to women",
+      "reason": "Generic women-related gender vocabulary."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women's names/roles are gendered cues."
+    },
+    {
+      "id": "L2:F7672",
+      "label": "mentions of women by name and relationship",
+      "reason": "Women-by-name/relationship is gendered."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Profession-specific dietary terminology."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L7:F2765",
+      "label": "mentions of people or characters, and their performance, roles, injuries, or personal details such as age, death, or family.",
+      "reason": "Broad people-role detector; not profession-specific."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code snippet detector."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Generic capitalization/name structure."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Single generic token detector."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Generic person-name detector."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Broad named-entity detector."
+    },
+    {
+      "id": "L8:F15861",
+      "label": "mentions of people, places and institutions but with a focus on locations.",
+      "reason": "Location-focused generic entity detector."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/spacing feature."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 1,
+  "n_other": 8,
+  "spurious_fraction": 0.9,
+  "dominant": "spurious",
+  "notes": "Gender markers dominate; only one profession-related feature is causal."
+}

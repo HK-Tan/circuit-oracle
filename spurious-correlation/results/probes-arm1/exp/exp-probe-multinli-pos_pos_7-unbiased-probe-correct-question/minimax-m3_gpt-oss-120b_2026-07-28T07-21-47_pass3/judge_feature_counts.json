@@ -1,0 +1,144 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F5342",
+      "label": "the word \"first\" as well as words and prepositions that often follow it",
+      "reason": "Ordinal/temporal surface pattern, not semantic contradiction."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Generic BOS/first-person style cue, not NLI semantics."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Pure sentence \u0564\u056b\u0580ection feature, no label meaning."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F4605",
+      "label": "words related to churches, chapels and other buildings, in addition to other information of Lincolnshire",
+      "reason": "Content-bearing abbey/church recognition signal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Broad document-style feature, dismissed as generic."
+    },
+    {
+      "id": "L0:F11835",
+      "label": "terms used in software code such as \"assembly\", \"using\", \"namespace\", and \"license\"",
+      "reason": "Broad code/document signal, dismissed as generic."
+    },
+    {
+      "id": "L2:F5878",
+      "label": "the suffix \"le\"",
+      "reason": "Subword pattern only, no semantic role stated."
+    },
+    {
+      "id": "L2:F8046",
+      "label": "common words and phrases that include the letter 't' and are commonly used to start clauses",
+      "reason": "Structural lexical pattern, not semantic."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Oracle treats as alternate lexical recognition, not task-relevant."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Oracle treats as unrelated lexical recognition."
+    },
+    {
+      "id": "L4:F2581",
+      "label": "mentions of things being \"first\"",
+      "reason": "Lexical trigger only; oracle says broad mention detector."
+    },
+    {
+      "id": "L4:F3833",
+      "label": "words used when summarizing plot points or providing courtroom insights",
+      "reason": "Generic discourse/document style, not NLI semantics."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Generic symbol/data detector."
+    },
+    {
+      "id": "L4:F2053",
+      "label": "references to components of equations or theorems",
+      "reason": "Mathematical reference detector, irrelevant here."
+    },
+    {
+      "id": "L4:F14857",
+      "label": "code snippets and license agreements",
+      "reason": "Code/license style feature, not semantic."
+    },
+    {
+      "id": "L4:F8952",
+      "label": "content from multiple different languages in the same document.",
+      "reason": "Broad multilingual/document signal."
+    },
+    {
+      "id": "L5:F7444",
+      "label": "words or phrases that an individual would express or think",
+      "reason": "Generic language-use feature, not label-specific."
+    },
+    {
+      "id": "L6:F14585",
+      "label": "the words \"the\" and \"it\" at the beginning of sentences",
+      "reason": "Sentence-initial function-word pattern."
+    },
+    {
+      "id": "L7:F462",
+      "label": "code documentation and import statements",
+      "reason": "Pure code-documentation cue."
+    },
+    {
+      "id": "L7:F5741",
+      "label": "code documentation or copyright information",
+      "reason": "Pure code/document cue."
+    },
+    {
+      "id": "L9:F8770",
+      "label": "sentences beginning with \"It\" or \"In\" and also the word \"There\".",
+      "reason": "Structural sentence-start detector."
+    },
+    {
+      "id": "L10:F14174",
+      "label": "left curly brackets",
+      "reason": "Pure punctuation detector."
+    },
+    {
+      "id": "L16:F10989",
+      "label": "the",
+      "reason": "Generic article detector."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 1,
+  "n_other": 22,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "Oracle shows one content-bearing church signal, but most cited drivers are surface/document-style features."
+}

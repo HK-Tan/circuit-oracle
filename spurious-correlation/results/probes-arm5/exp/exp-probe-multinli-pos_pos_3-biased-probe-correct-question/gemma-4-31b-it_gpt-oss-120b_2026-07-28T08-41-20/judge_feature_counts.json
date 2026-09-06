@@ -1,0 +1,44 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Direct negation-word detector, matching the spurious NLI heuristic."
+    },
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\".",
+      "reason": "Direct negation-word detector, matching the spurious NLI heuristic."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F13215",
+      "label": "terms used to describe military fortifications.",
+      "reason": "Semantic content about castles and fortifications; not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic lexical detector, not specific to NLI meaning."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Irrelevant content feature; oracle doesn't link it to this prediction."
+    },
+    {
+      "id": "L0:F12378",
+      "label": "the word \"latest.\"",
+      "reason": "Generic word detector, dismissed by oracle for this case."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 1,
+  "n_other": 3,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Oracle says contradiction is driven mainly by negation detectors, with one semantic content feature present."
+}

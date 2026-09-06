@@ -1,0 +1,42 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F15320",
+      "label": "the word \"ice\"",
+      "reason": "Not a gender marker; oracle uses it in academic/contextual input."
+    },
+    {
+      "id": "L0:F6270",
+      "label": "the word \"whom\", sometimes also activating on nearby punctuation, sentence starts, discourse markers, and other function words",
+      "reason": "Function-word/structural detector, but oracle places it in academic/context."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Directly detects education and university affiliation."
+    },
+    {
+      "id": "L3:F4213",
+      "label": "mentions of degree qualifications or awards",
+      "reason": "Detects credentials and awards relevant to profession."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Detects field-of-study terminology tied to profession."
+    },
+    {
+      "id": "L2:F14934",
+      "label": "years in the 1900s",
+      "reason": "Temporal/structural feature; supports academic biography context."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 6,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle attributes the probe to academic/credential signals, not gender or other spurious markers."
+}

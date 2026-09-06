@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-gender pronoun feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Gendered pronoun detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-gender cue."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Explicit his/he/him feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic pronoun feature in this circuit."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "People-pronoun aggregator."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun aggregator."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Journalism vocabulary."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter/news profession cue."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism indicator."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News/reporting context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: His",
+      "label": "Emb: His (pos 1)",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: report",
+      "label": "Emb: report (pos 21)",
+      "reason": "Input token only."
+    },
+    {
+      "id": "L4:F661",
+      "label": "<oracle's label>",
+      "reason": "Oracle mentions but doesn't define."
+    },
+    {
+      "id": "L16:F15046",
+      "label": "<oracle's label>",
+      "reason": "Not curatable from label."
+    },
+    {
+      "id": "Probe output (logit)",
+      "label": "<oracle's label>",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 4,
+  "n_other": 5,
+  "spurious_fraction": 0.6923076923076923,
+  "dominant": "spurious",
+  "notes": "Pronoun/gender circuitry outweighs journalism cues in the oracle's claimed path."
+}

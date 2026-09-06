@@ -1,0 +1,149 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector; explicit gender marker."
+    },
+    {
+      "id": "L0:F11024",
+      "label": "the word \"clock\", especially in a technical context",
+      "reason": "Generic technical token, not profession-specific."
+    },
+    {
+      "id": "L0:F8658",
+      "label": "the word \"is\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Explicit male-person reference."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Gendered pronoun feature."
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Direct male pronoun detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit gendered descriptors."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic pronoun feature; structural, not causal."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun signal."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Direct gender vocabulary."
+    },
+    {
+      "id": "L13:F6622",
+      "label": "pronouns.",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based person reference."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male pronoun."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Generic function word only."
+    },
+    {
+      "id": "L0:F11024",
+      "label": "the word \"clock\", especially in a technical context",
+      "reason": "Technical-content lexical cue."
+    },
+    {
+      "id": "L17:F3683",
+      "label": "biographies",
+      "reason": "Structural biography pattern feature."
+    },
+    {
+      "id": "L5:F14955",
+      "label": "text about people's free time that mentions both family and hobbies",
+      "reason": "Content-neutral discourse pattern."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output",
+      "label": "probe score",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "Emb: ' He' (pos 35)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' his' (pos 37)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' his' (pos 55)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' His' (pos 13)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: 'He' (pos 1)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' of' (pos 5)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' Director' (pos 4)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' is' (pos 2)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: <bos> (pos 0)",
+      "label": "beginning-of-sequence token",
+      "reason": "Structural token."
+    }
+  ],
+  "n_spurious": 13,
+  "n_causal": 4,
+  "n_other": 10,
+  "spurious_fraction": 0.7647058823529411,
+  "dominant": "spurious",
+  "notes": "Oracle is dominated by male-pronoun/gender features; only generic structural cues appear causal."
+}

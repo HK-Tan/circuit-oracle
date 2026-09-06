@@ -1,0 +1,38 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F13885",
+      "label": "names of people and places, specifically those related to the middle east",
+      "reason": "Identity/place detector for Middle Eastern terms."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity/affiliation signal."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Specific Islam/Middle Eastern identity detector."
+    },
+    {
+      "id": "L8:F13197",
+      "label": "words related to religion and faith",
+      "reason": "Religion/faith identity feature."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural token/punctuation feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 1,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle attributes toxicity mainly to identity signals, not toxic-content semantics."
+}

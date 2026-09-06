@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun detector at pos 9."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Pronoun/name feature; gender-marked input context."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Generic pronoun detector; gender marker role."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun feature at pos 1."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-gendered pronoun/title feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Pronoun-based gender marker."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct male pronoun detector."
+    },
+    {
+      "id": "L0:F16297",
+      "label": "the pronoun \"him\"",
+      "reason": "Direct male pronoun detector."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic pronoun feature; gendered cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism profession vocabulary."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets",
+      "reason": "News/journalism terminology."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter profession indicator."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Journalism-related profession signal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe output logit",
+      "label": "Probe output logit",
+      "reason": "Not a feature; output node."
+    },
+    {
+      "id": "L0:F2208",
+      "label": "the pronoun \"Him\" and the possessive pronoun \"His\" when used in a religious context",
+      "reason": "Oracle adds special religious context."
+    },
+    {
+      "id": "L14:F10344",
+      "label": "pronouns related to feelings or actions",
+      "reason": "Structural/abstract pronoun pattern."
+    },
+    {
+      "id": "L4:F11898",
+      "label": "mentions of \"World\" followed by a sport or war-related word",
+      "reason": "Not profession-specific; contextual pattern."
+    },
+    {
+      "id": "L0:F2011",
+      "label": "the word \"dream\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F7927",
+      "label": "past-participle verbs",
+      "reason": "Purely structural verb-form feature."
+    },
+    {
+      "id": "L0:F11767",
+      "label": "the word \"world\" with a lower activation for \"net\" and \"market\"",
+      "reason": "Generic word feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F13381",
+      "label": "occurrences of the words 'android', 'ios', 'mouth', or 'face'",
+      "reason": "Unrelated lexical pattern."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 4,
+  "n_other": 9,
+  "spurious_fraction": 0.6923076923076923,
+  "dominant": "spurious",
+  "notes": "Pronoun/gender cues dominate; journalism features are present but weaker and negative."
+}

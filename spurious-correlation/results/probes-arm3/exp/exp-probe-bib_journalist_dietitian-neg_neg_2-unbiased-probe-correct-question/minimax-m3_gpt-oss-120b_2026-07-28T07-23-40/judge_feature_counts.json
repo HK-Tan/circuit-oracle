@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8964",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Gendered pronoun; direct spurious gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct profession indicator for journalism."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News-domain vocabulary signals journalism profession."
+    },
+    {
+      "id": "L20:F8433",
+      "label": "words related to news broadcasting",
+      "reason": "Broadcast-news terminology indicates profession."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Explicit reporting-role vocabulary."
+    },
+    {
+      "id": "L15:F2579",
+      "label": "instances of people providing information in some sort of official capacity. Like reporting incidents, communicating facts or informing others of something.",
+      "reason": "Official reporting/informing is journalism-related."
+    },
+    {
+      "id": "L21:F4401",
+      "label": "words and phrases connected to government, news, and reporting",
+      "reason": "Includes news/reporting profession cues."
+    },
+    {
+      "id": "L6:F4923",
+      "label": "descriptions of someone wanting to work in a specific profession",
+      "reason": "Directly encodes profession-intent semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Purely structural common word detector."
+    },
+    {
+      "id": "L0:F14287",
+      "label": "the word \"see\"",
+      "reason": "Generic lexical detector, not profession-specific."
+    },
+    {
+      "id": "L0:F2203",
+      "label": "instances of the words \"world\" or \"game\" (possibly \"problem\") or expressions of existential quandaries.",
+      "reason": "Unrelated to profession classification."
+    },
+    {
+      "id": "L4:F11898",
+      "label": "mentions of \"World\" followed by a sport or war-related word",
+      "reason": "Irrelevant topical pattern."
+    },
+    {
+      "id": "L5:F771",
+      "label": "the word \"see\" and words often associated with \"see\"",
+      "reason": "Generic semantic/lexical cue, not task-causal."
+    },
+    {
+      "id": "L0:F2011",
+      "label": "the word \"dream\"",
+      "reason": "Generic word feature, not profession-specific."
+    },
+    {
+      "id": "L0:F13948",
+      "label": "the color \"pink\"",
+      "reason": "Purely unrelated lexical feature."
+    },
+    {
+      "id": "L7:F3085",
+      "label": "words and phrases related to societal ills as well as human efforts to understand their world.",
+      "reason": "Broad abstract topic, not profession indicator."
+    },
+    {
+      "id": "L0:F15693",
+      "label": "language related to personal anecdotes and opinions",
+      "reason": "Style/topic feature, not causal profession evidence."
+    },
+    {
+      "id": "L0:F15185",
+      "label": "the word \"do\" alongside references to figures, types, and the pronouns \"we\" and \"us\", possibly in the context of scientific studies and collaborative efforts",
+      "reason": "Structural/collaborative language, not journalism."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 7,
+  "n_other": 10,
+  "spurious_fraction": 0.125,
+  "dominant": "causal",
+  "notes": "Oracle mainly cites journalism indicators; only one claimed gender marker is spurious."
+}

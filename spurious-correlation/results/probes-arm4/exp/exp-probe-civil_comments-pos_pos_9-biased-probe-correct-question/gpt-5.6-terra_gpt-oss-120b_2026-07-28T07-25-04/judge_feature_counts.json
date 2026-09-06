@@ -1,0 +1,63 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-topic detector; demographic language."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-topic representation."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/racism topic feature."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Direct race/ethnicity detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: white (pos 9)",
+      "label": "white",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: guy (pos 10)",
+      "label": "guy",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: last (pos 14)",
+      "label": "last",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: name (pos 15)",
+      "label": "name",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "L3:F4512",
+      "label": "mentions of first names, last names, and phone numbers",
+      "reason": "Name-context signal; not toxic."
+    },
+    {
+      "id": "Toxicity classification probe score",
+      "label": "Toxicity classification probe score",
+      "reason": "Output score, not an interpretable feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 6,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity/race-topic signals, with no causal toxicity feature claimed."
+}

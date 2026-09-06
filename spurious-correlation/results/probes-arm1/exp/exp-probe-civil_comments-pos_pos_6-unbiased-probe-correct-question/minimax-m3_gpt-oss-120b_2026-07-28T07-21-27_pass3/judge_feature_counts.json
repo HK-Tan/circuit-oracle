@@ -1,0 +1,229 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Direct identity-token detector for race."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "Promoted by \"White\" token, not toxicity."
+    },
+    {
+      "id": "L4:F7136",
+      "label": "the color white",
+      "reason": "Color/identity token matcher, not toxic content."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Race/social-issue discourse detector."
+    },
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Direct identity-token detector for race."
+    },
+    {
+      "id": "L9:F11035",
+      "label": "mentions of different racial or ethnic groups, news, payments, political concepts and geographical locations.",
+      "reason": "Generic racial/ethnic-group mention detector."
+    },
+    {
+      "id": "L8:F13464",
+      "label": "discussions of racial issues, particularly those involving white and black people",
+      "reason": "Race-discussion feature, identity-based."
+    },
+    {
+      "id": "L6:F7829",
+      "label": "mentions of expats, foreigners, or British people.",
+      "reason": "Nationality/ethnicity-related identity feature."
+    },
+    {
+      "id": "L6:F627",
+      "label": "words used when describing groups of people",
+      "reason": "Group-identity descriptor, not toxicity."
+    },
+    {
+      "id": "L2:F9909",
+      "label": "terms used to describe groups of people or places",
+      "reason": "People/place grouping detector."
+    },
+    {
+      "id": "L2:F9837",
+      "label": "references to men",
+      "reason": "Gender identity detector."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity mention detector."
+    },
+    {
+      "id": "L2:F10433",
+      "label": "mentions of people, especially men or groups of people",
+      "reason": "Generic people/group detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/social-justice discourse detector."
+    },
+    {
+      "id": "L7:F9100",
+      "label": "discussions of diversity, especially in media",
+      "reason": "Identity/discourse feature, not toxic semantics."
+    },
+    {
+      "id": "L7:F114",
+      "label": "discussions of fair treatment in employment and housing and especially disparities in pay or opportunity based on race, gender, or other protected characteristics.",
+      "reason": "Protected-characteristics discourse feature."
+    },
+    {
+      "id": "L7:F7215",
+      "label": "terms related to racial discrimination, predominantly in the context of the American South",
+      "reason": "Racial discrimination topic detector."
+    },
+    {
+      "id": "L5:F6786",
+      "label": "terms associated with gender, race, sexual orientation, and disability",
+      "reason": "Identity-group signal detector."
+    },
+    {
+      "id": "L5:F10172",
+      "label": "ethnic slurs and terms related to the American South",
+      "reason": "Identity/ethnic-term feature, not general toxicity."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity detector."
+    },
+    {
+      "id": "L6:F3077",
+      "label": "places and categorizations of people by place",
+      "reason": "Geographic/people categorization, not toxicity."
+    },
+    {
+      "id": "L1:F13069",
+      "label": "the word 'black'",
+      "reason": "Direct identity-token detector for race."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Race-discussion feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F4008",
+      "label": "expletives, strong opinions and negative words",
+      "reason": "Tracks toxicity-like language and negative tone."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F4090",
+      "label": "the word \"another\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "the word \"possession\" and the words \"white\", \"immediate\" and \"once\" regardless of context",
+      "reason": "Mixed lexical trigger; not clearly causal."
+    },
+    {
+      "id": "L0:F15621",
+      "label": "the word \"noise,\" sometimes \"noisy,\" and occasionally a related word like \"improvement.\"",
+      "reason": "Not a toxicity or identity feature here."
+    },
+    {
+      "id": "L0:F13442",
+      "label": "mentions of teaching or being taught",
+      "reason": "Unrelated generic semantic feature."
+    },
+    {
+      "id": "L2:F1708",
+      "label": "mentions of colors",
+      "reason": "Purely structural/color feature."
+    },
+    {
+      "id": "L2:F2850",
+      "label": "the word \"another\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Structural/scientific text feature."
+    },
+    {
+      "id": "L9:F2762",
+      "label": "various code snippets, especially javascript",
+      "reason": "Code/formatting feature."
+    },
+    {
+      "id": "L0:F13663",
+      "label": "mentions of pregnancy and related terms",
+      "reason": "Topic-specific but not relevant here."
+    },
+    {
+      "id": "L3:F12848",
+      "label": "the word \"another,\" sometimes in combination with \"world\" or technical alternatives",
+      "reason": "Generic continuation detector."
+    },
+    {
+      "id": "L2:F5925",
+      "label": "verbs ending in \"ing\"",
+      "reason": "Purely morphological feature."
+    },
+    {
+      "id": "L1:F3020",
+      "label": "the word \"factor\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F16013",
+      "label": "mentions of the color blue, and perhaps colors in general or the components of a graphic image",
+      "reason": "Color/visual feature, not relevant."
+    },
+    {
+      "id": "L0:F9076",
+      "label": "mentions of men, boys, areas, or general locations in a text",
+      "reason": "Too broad and structural."
+    },
+    {
+      "id": "L4:F9880",
+      "label": "phrases indicating repetition or continuation which often use the word \"another\"",
+      "reason": "Structural discourse marker."
+    },
+    {
+      "id": "L7:F9113",
+      "label": "words related to freedom, government, or global entities",
+      "reason": "Political/global-topic feature."
+    },
+    {
+      "id": "L6:F14669",
+      "label": "a variety of seemingly unrelated words and symbols, possibly indicating multiple weak associations or noisy data.",
+      "reason": "Oracle-dismissed noisy feature."
+    },
+    {
+      "id": "L4:F15272",
+      "label": "statistical language about human subjects in a research study",
+      "reason": "Research-language feature."
+    },
+    {
+      "id": "L2:F15317",
+      "label": "gendered words, with a slight bias toward female-gendered words",
+      "reason": "Gendered-language feature, but not clearly toxicity."
+    }
+  ],
+  "n_spurious": 23,
+  "n_causal": 1,
+  "n_other": 19,
+  "spurious_fraction": 0.9583333333333334,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity-group/race-discourse features; only one clear toxicity-tied detector appears."
+}

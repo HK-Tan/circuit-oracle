@@ -1,0 +1,148 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F9888",
+      "label": "words related to formal schooling",
+      "reason": "Education terminology supports profession identification."
+    },
+    {
+      "id": "L2:F2589",
+      "label": "words related to medical professionals and medical specialties",
+      "reason": "Medical specialty vocabulary matches profession indicators."
+    },
+    {
+      "id": "L3:F11774",
+      "label": "what appears to be a smattering of strings related to scientific notation, live radio, and roman numerals",
+      "reason": "Structural/scientific misc, but used in domain context."
+    },
+    {
+      "id": "L3:F10028",
+      "label": "words or short phrases that include \"made of/from\", and words ending with \"ice\", \"ita\", \"ons\", \"ura\", and \"mor\"",
+      "reason": "Morphological/scientific pattern feature tied to profession tokens."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Direct nutrition/diet profession content."
+    },
+    {
+      "id": "L4:F9554",
+      "label": "words related to food, rations and feeding",
+      "reason": "Food/feeding vocabulary is profession-related here."
+    },
+    {
+      "id": "L4:F10494",
+      "label": "words related to health, medicine, diet, drugs, age groups, and excercise",
+      "reason": "Health/medicine/diet terminology indicates the profession."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Nutrition vocabulary directly signals dietitian."
+    },
+    {
+      "id": "L6:F4051",
+      "label": "words related to academic disciplines",
+      "reason": "Academic discipline terminology supports the profession."
+    },
+    {
+      "id": "L8:F8003",
+      "label": "words about nutrients, foods, and minerals, especially regarding dietary studies and children's health.",
+      "reason": "Nutrient and dietary-study vocabulary is causal."
+    },
+    {
+      "id": "L9:F15926",
+      "label": "mentions about eating and meals",
+      "reason": "Eating/meals vocabulary is content-relevant, not gendered."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-related content contributes to nutrition classification."
+    },
+    {
+      "id": "L15:F1771",
+      "label": "words related to education, the arts, and academia",
+      "reason": "Education/academia terminology supports profession inference."
+    },
+    {
+      "id": "L17:F14680",
+      "label": "nutrition, food, and diets",
+      "reason": "Direct diet/nutrition content is causal."
+    },
+    {
+      "id": "L17:F7545",
+      "label": "mentions of architecture, design, nurses and healthcare.",
+      "reason": "Healthcare terminology supports a medical-nutrition profession."
+    },
+    {
+      "id": "L18:F6105",
+      "label": "text related to eating and health",
+      "reason": "Eating/health content is profession-relevant."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Scientific nutritional-study context directly indicates the field."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Nutritional (pos 9)",
+      "label": "Nutritional",
+      "reason": "Input token, not a separate circuit feature."
+    },
+    {
+      "id": "Emb: Die (pos 20)",
+      "label": "Die",
+      "reason": "Subword embedding only."
+    },
+    {
+      "id": "Emb: te (pos 21)",
+      "label": "te",
+      "reason": "Subword embedding only."
+    },
+    {
+      "id": "Emb: tics (pos 22)",
+      "label": "tics",
+      "reason": "Subword embedding only."
+    },
+    {
+      "id": "Emb: titian (pos 37)",
+      "label": "Dietitian",
+      "reason": "Input token, not a distinct feature."
+    },
+    {
+      "id": "Emb: Health (pos 35)",
+      "label": "Health",
+      "reason": "Input token, not a distinct feature."
+    },
+    {
+      "id": "Emb: Pediatric (pos 49)",
+      "label": "Pediatric",
+      "reason": "Input token, not a distinct feature."
+    },
+    {
+      "id": "Emb: nutrition (pos 50)",
+      "label": "nutrition",
+      "reason": "Input token, not a distinct feature."
+    },
+    {
+      "id": "Emb: Nutrition (pos 64)",
+      "label": "Nutrition",
+      "reason": "Input token, not a distinct feature."
+    },
+    {
+      "id": "Emb: Sports (pos 63)",
+      "label": "Sports",
+      "reason": "Input token, not a distinct feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 17,
+  "n_other": 10,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No gender-marker features are actually claimed as driving the probe; nutrition/health content dominates."
+}

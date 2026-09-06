@@ -1,0 +1,163 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F1537",
+      "label": "words and phrases related to political and social issues and movements",
+      "reason": "Social-issues vocabulary, not toxicity itself."
+    },
+    {
+      "id": "L3:F1526",
+      "label": "references to academic disciplines related to social science",
+      "reason": "Academic/social-science reference, not toxic content."
+    },
+    {
+      "id": "L2:F13877",
+      "label": "role/identity words ('warrior')",
+      "reason": "Identity/role term, can cue social-identity shortcut."
+    },
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations.",
+      "reason": "Political-ideological discourse, not toxicity semantics."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Demographic/social-justice vocabulary."
+    },
+    {
+      "id": "L4:F10459",
+      "label": "words related to politics, especially political parties and movements like the Tea Party.",
+      "reason": "Political movement language."
+    },
+    {
+      "id": "L4:F11323",
+      "label": "text from blog posts about political and fashion topics.",
+      "reason": "Topic/style cue, not toxicity."
+    },
+    {
+      "id": "L5:F14124",
+      "label": "things that indicate strong and opinionated political discourse",
+      "reason": "Opinionated politics, not abuse."
+    },
+    {
+      "id": "L4:F6752",
+      "label": "phrases expressing victimhood and social criticism",
+      "reason": "Social criticism, not toxic attack."
+    },
+    {
+      "id": "L4:F11526",
+      "label": "words and short phrases related to political and military conflict",
+      "reason": "Conflict topic, not insult semantics."
+    },
+    {
+      "id": "L4:F12425",
+      "label": "words and phrases related to environmental consciousness, sustainability, and \"green\" business practices",
+      "reason": "Off-topic advocacy language."
+    },
+    {
+      "id": "L1:F13646",
+      "label": "text discussing social justice issues",
+      "reason": "Social-justice topic cue."
+    },
+    {
+      "id": "L0:F3591",
+      "label": "terms related to government social programs",
+      "reason": "Policy-program vocabulary, not toxicity."
+    },
+    {
+      "id": "L0:F4327",
+      "label": "terms related to people in positions of authority and/or roles in an organization",
+      "reason": "Role noun feature, identity-adjacent."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L3:F10868",
+      "label": "the phrase \"I'm a\" or \"I am a\"",
+      "reason": "Identity syntax; oracle says it is negative here."
+    },
+    {
+      "id": "L3:F16254",
+      "label": "conditional statements followed by actions the speaker will take",
+      "reason": "Pure clause structure."
+    },
+    {
+      "id": "L2:F14209",
+      "label": "the word \"go\"",
+      "reason": "Generic word feature."
+    },
+    {
+      "id": "L6:F9005",
+      "label": "words and phrases related to desserts",
+      "reason": "Dessert lexical feature, not toxicity."
+    },
+    {
+      "id": "L0:F9934",
+      "label": "the word \"particular\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Function word feature."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L0:F13310",
+      "label": "sentences that include forms of the verb \"are\" indicating a present state of being or necessity.",
+      "reason": "Generic copula/structure."
+    },
+    {
+      "id": "L0:F13756",
+      "label": "the word \"order\" and occasionally \"period,\" in many different contexts from law to food",
+      "reason": "Broad lexical feature, not toxicity."
+    },
+    {
+      "id": "L0:F2260",
+      "label": "terms that are medical, legal, or related to social work",
+      "reason": "Domain terms, not toxic semantics."
+    },
+    {
+      "id": "L0:F9602",
+      "label": "the word \"emphasis.\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F4478",
+      "label": "terms related to ownership and belief systems.",
+      "reason": "Belief/ownership vocabulary, not toxicity."
+    },
+    {
+      "id": "L0:F3850",
+      "label": "punctuation marks",
+      "reason": "Pure punctuation feature."
+    },
+    {
+      "id": "L4:F13700",
+      "label": "conditional clauses starting with \"if\" and words related to business contexts",
+      "reason": "Structural/business context feature."
+    },
+    {
+      "id": "L0:F2303",
+      "label": "the word \"if\"",
+      "reason": "Generic conditional marker."
+    },
+    {
+      "id": "L1:F13592",
+      "label": "the word \"go\"",
+      "reason": "Generic verb feature."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 0,
+  "n_other": 16,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle points to social-justice/identity cues; no toxic-content detector is credited."
+}

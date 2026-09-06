@@ -1,0 +1,179 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F14006",
+      "label": "the word \"social\"",
+      "reason": "Identity-group-adjacent token feature."
+    },
+    {
+      "id": "L0:F3591",
+      "label": "terms related to government social programs",
+      "reason": "Linked to social-justice/identity discourse."
+    },
+    {
+      "id": "L0:F1526",
+      "label": "references to academic disciplines related to social science",
+      "reason": "Grouped into identity/social-justice circuit."
+    },
+    {
+      "id": "L0:F4478",
+      "label": "terms related to ownership and belief systems.",
+      "reason": "Identity-associated promoted tokens."
+    },
+    {
+      "id": "L0:F10219",
+      "label": "the indefinite article \"a\"",
+      "reason": "Oracle ties it to promoted identity phrasing."
+    },
+    {
+      "id": "L3:F10868",
+      "label": "the phrase \"I'm a\" or \"I am a\"",
+      "reason": "Identity-statement syntax."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Explicit identity/social-justice detector."
+    },
+    {
+      "id": "L4:F10459",
+      "label": "words related to politics, especially political parties and movements like the Tea Party.",
+      "reason": "Oracle places it in identity/political movement path."
+    },
+    {
+      "id": "L4:F13700",
+      "label": "conditional clauses starting with \"if\" and words related to business contexts",
+      "reason": "Used only in identity-statement path."
+    },
+    {
+      "id": "L5:F14124",
+      "label": "things that indicate strong and opinionated political discourse",
+      "reason": "Ideological discourse, not toxicity semantics."
+    },
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations.",
+      "reason": "Ideological negative connotation feature."
+    },
+    {
+      "id": "L6:F14585",
+      "label": "the words \"the\" and \"it\" at the beginning of sentences",
+      "reason": "Oracle says incidental structural suppressor."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F14209",
+      "label": "the verb \"go\" in its various forms.",
+      "reason": "Instruction/action structure relevant to task content."
+    },
+    {
+      "id": "L2:F13877",
+      "label": "words related to roles, ranks, or personal characteristics of people",
+      "reason": "Identity-independent people-description syntax."
+    },
+    {
+      "id": "L2:F14541",
+      "label": "code snippets and logical statements, especially those involving \"then,\" along with some citation markers and bracketed references.",
+      "reason": "Purely structural logic marker."
+    },
+    {
+      "id": "L2:F1537",
+      "label": "words and phrases related to political and social issues and movements",
+      "reason": "Broad content, but not identity-specific toxicity."
+    },
+    {
+      "id": "L0:F13756",
+      "label": "the word \"order\" and occasionally \"period,\" in many different contexts from law to food",
+      "reason": "Transactional instruction structure."
+    },
+    {
+      "id": "L0:F2260",
+      "label": "terms that are medical, legal, or related to social work",
+      "reason": "General semantic content, not identity signal."
+    },
+    {
+      "id": "L0:F3850",
+      "label": "punctuation marks",
+      "reason": "Pure structure."
+    },
+    {
+      "id": "L1:F10447",
+      "label": "articles and prepositions",
+      "reason": "Pure structure."
+    },
+    {
+      "id": "L1:F14281",
+      "label": "the word \"instruction\" and its plural",
+      "reason": "Instructional semantics."
+    },
+    {
+      "id": "L1:F14576",
+      "label": "words relating to food dishes and dining, especially those in restaurants",
+      "reason": "Task-relevant content semantics."
+    },
+    {
+      "id": "L1:F3305",
+      "label": "the word \"task\" and related terms in the context of scientific experiments",
+      "reason": "Generic task-language, not identity."
+    },
+    {
+      "id": "L5:F3992",
+      "label": "the start of documentation blocks in code",
+      "reason": "Pure structure."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun."
+    },
+    {
+      "id": "L0:F9934",
+      "label": "the word \"particular\"",
+      "reason": "Generic lexical item."
+    },
+    {
+      "id": "L0:F13310",
+      "label": "sentences that include forms of the verb \"are\" indicating a present state of being or necessity.",
+      "reason": "Generic syntax/grammar."
+    },
+    {
+      "id": "L0:F9602",
+      "label": "the word \"emphasis.\"",
+      "reason": "Generic wording."
+    },
+    {
+      "id": "L0:F2713",
+      "label": "words relating to giving instructions",
+      "reason": "Too generic; oracle doesn't connect it to toxicity."
+    },
+    {
+      "id": "L1:F10447",
+      "label": "articles and prepositions",
+      "reason": "Pure structure."
+    },
+    {
+      "id": "L2:F14209",
+      "label": "the verb \"go\" in its various forms.",
+      "reason": "Generic action word; counted causal here only for oracle's content path."
+    },
+    {
+      "id": "L9:F2762",
+      "label": "various code snippets, especially javascript",
+      "reason": "Incidental code feature."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 12,
+  "n_other": 9,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle shows both identity-aggregation and task-content/structure paths."
+}

@@ -1,0 +1,183 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Generic lexical content; not negation."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic lexical content; not negation."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Content-neutral technical style, not negation."
+    },
+    {
+      "id": "L0:F11835",
+      "label": "terms used in software code such as \"assembly\", \"using\", \"namespace\", and \"license\"",
+      "reason": "Generic format/code detector, not NLI content."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic lexical detector, not negation."
+    },
+    {
+      "id": "L0:F9854",
+      "label": "words indicating possibility or future tense verbs",
+      "reason": "Structural tense feature, not negation."
+    },
+    {
+      "id": "L0:F7056",
+      "label": "mentions of something happening for the first time",
+      "reason": "Semantic content about firstness, not negation."
+    },
+    {
+      "id": "L4:F3833",
+      "label": "words used when summarizing plot points or providing courtroom insights",
+      "reason": "Genre/style detector, not negation."
+    },
+    {
+      "id": "L4:F4605",
+      "label": "words related to churches, chapels and other buildings, in addition to other information of Lincolnshire",
+      "reason": "Building-related semantics, not negation."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Settlement semantics, not negation."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Administrative semantics, not negation."
+    },
+    {
+      "id": "L4:F2581",
+      "label": "mentions of things being \"first\"",
+      "reason": "Semantic firstness feature, not negation."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Formatting/ID detector, not negation."
+    },
+    {
+      "id": "L5:F7444",
+      "label": "words or phrases that an individual would express or think",
+      "reason": "Generic discourse feature, not negation."
+    },
+    {
+      "id": "L6:F5342",
+      "label": "the word \"first\" as well as words and prepositions that often follow it",
+      "reason": "Syntactic context, not negation."
+    },
+    {
+      "id": "L6:F14585",
+      "label": "the words \"the\" and \"it\" at the beginning of sentences",
+      "reason": "Sentence-initial structure, not negation."
+    },
+    {
+      "id": "L7:F462",
+      "label": "code documentation and import statements",
+      "reason": "Code-format detector, not negation."
+    },
+    {
+      "id": "L7:F5741",
+      "label": "code documentation or copyright information",
+      "reason": "Code-format detector, not negation."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Generic pronoun/discourse feature, not negation."
+    },
+    {
+      "id": "L9:F8770",
+      "label": "sentences beginning with \"It\" or \"In\" and also the word \"There\"",
+      "reason": "Sentence-start template, not negation."
+    },
+    {
+      "id": "L9:F15819",
+      "label": "code snippets",
+      "reason": "Code-format detector, not negation."
+    },
+    {
+      "id": "L10:F14174",
+      "label": "left curly brackets",
+      "reason": "Pure structure/punctuation detector."
+    },
+    {
+      "id": "L11:F11186",
+      "label": "scientific and technical terms",
+      "reason": "Genre/style detector, not negation."
+    },
+    {
+      "id": "L13:F8128",
+      "label": "sentences beginning with the word \"In\"",
+      "reason": "Sentence-start template, not negation."
+    },
+    {
+      "id": "L14:F2510",
+      "label": "the word \"using\"",
+      "reason": "Generic lexical/code cue, not negation."
+    },
+    {
+      "id": "L15:F751",
+      "label": "code snippets",
+      "reason": "Code-format detector, not negation."
+    },
+    {
+      "id": "L15:F851",
+      "label": "code documentation blocks in various programming languages",
+      "reason": "Code-format detector, not negation."
+    },
+    {
+      "id": "L16:F10989",
+      "label": "the",
+      "reason": "Generic function word detector."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Purely structural sentence-position feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F8046",
+      "label": "common words and phrases that include the letter 't' and are commonly used to start clauses",
+      "reason": "Purely structural clause-start feature."
+    },
+    {
+      "id": "L2:F5878",
+      "label": "the suffix \"le\"",
+      "reason": "Sublexical pattern only."
+    },
+    {
+      "id": "L2:F8185",
+      "label": "places for shopping or military activities",
+      "reason": "Unrelated semantic category."
+    },
+    {
+      "id": "L3:F4081",
+      "label": "mentions of the statistical software Stata and the term \"stent\".",
+      "reason": "Oracle says unrelated technical trigger."
+    },
+    {
+      "id": "L3:F3205",
+      "label": "code snippets and documentation references, possibly related to web development",
+      "reason": "Pure code/documentation detector."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 29,
+  "n_other": 5,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation-word detectors are actually claimed; mostly generic, content-bearing, or structural features."
+}

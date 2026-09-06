@@ -1,0 +1,68 @@
+{
+  "spurious_features": [
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Identity/race terminology; spurious demographic signal."
+    },
+    {
+      "id": "L1:F13069",
+      "label": "the word 'black'",
+      "reason": "Demographic identity token; not toxicity by itself."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F12717",
+      "label": "the word \"pride\" in different contexts",
+      "reason": "Generic lexical feature; oracle says it suppresses score."
+    },
+    {
+      "id": "L3:F15701",
+      "label": "instances of the word \"proud\"",
+      "reason": "Generic lexical feature; oracle says it suppresses score."
+    },
+    {
+      "id": "L0:F9222",
+      "label": "the equals sign",
+      "reason": "Purely structural formatting feature."
+    },
+    {
+      "id": "L0:F45",
+      "label": "the word \"being\" in different contexts",
+      "reason": "Generic lexical feature, not toxicity-specific."
+    },
+    {
+      "id": "L0:F1088",
+      "label": "mentions of \"meal\" and, to a lesser extent, words indicating a fondness for something",
+      "reason": "Unrelated lexical feature; oracle calls it minor."
+    },
+    {
+      "id": "L3:F12034",
+      "label": "technical terms, especially those used to describe graphs and figures",
+      "reason": "Domain-specific technical terms; unrelated to toxicity."
+    },
+    {
+      "id": "L2:F5266",
+      "label": "phrases that include the word \"being\"",
+      "reason": "Generic phrase detector, not toxicity-specific."
+    },
+    {
+      "id": "L0:F2177",
+      "label": "capitalized words or phrases",
+      "reason": "Purely structural capitalization feature."
+    },
+    {
+      "id": "L3:F11279",
+      "label": "symbols common in scientific research papers, such as p-values and replicates",
+      "reason": "Scientific notation; purely structural."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 0,
+  "n_other": 9,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle mainly cites identity tokens and formatting, with no clear causal toxicity detectors."
+}

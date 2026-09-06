@@ -1,0 +1,78 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun marker; gender cue."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit gendered male descriptors."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Gender pronoun detector; spurious cue."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Oracle implies gendered pronouns drive it here."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Generic gender-reference feature."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Single male pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-person reference feature."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun feature; treated as gender shortcut here."
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Male pronoun detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Profession-relevant education/field content."
+    },
+    {
+      "id": "L0:F6127",
+      "label": "instances of the word \"degree\" and words associated with academia, especially higher education",
+      "reason": "Education/profession indicator."
+    },
+    {
+      "id": "L8:F12026",
+      "label": "mentions of people with advanced degrees and their affiliations",
+      "reason": "Academic credential and affiliation cue."
+    },
+    {
+      "id": "L0:F12351",
+      "label": "words related to obtaining something, like receiving money or a receipt",
+      "reason": "Oracle cites receiving-related wording as task content."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 9,
+  "n_causal": 4,
+  "n_other": 0,
+  "spurious_fraction": 0.6923076923076923,
+  "dominant": "spurious",
+  "notes": "Oracle says pronoun/gender cues dominate over profession-related content."
+}

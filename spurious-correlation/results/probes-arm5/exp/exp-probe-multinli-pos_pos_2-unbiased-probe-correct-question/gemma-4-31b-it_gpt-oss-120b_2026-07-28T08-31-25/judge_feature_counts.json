@@ -1,0 +1,39 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "Negation/Contraction Signal ('n't')",
+      "reason": "Direct negation detector in the hypothesis."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F16366",
+      "label": "Causal Marker ('because')",
+      "reason": "Causal connector can reflect semantic relation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F12126",
+      "label": "Conversational Fillers ('yeah', 'well')",
+      "reason": "Conversation style, not entailment/contradiction."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "Conversational Fillers ('yeah', 'well')",
+      "reason": "Conversation style, not entailment/contradiction."
+    },
+    {
+      "id": "L0:F8083",
+      "label": "Numeric/Double Context ('double')",
+      "reason": "Generic numeric lexical context only."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 1,
+  "n_other": 3,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "One negation cue and one causal cue; remaining features are non-semantic or dismissed."
+}

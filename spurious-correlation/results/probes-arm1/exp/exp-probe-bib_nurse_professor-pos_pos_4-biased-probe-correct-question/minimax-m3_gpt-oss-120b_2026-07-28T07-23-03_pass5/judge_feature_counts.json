@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Generic proper-noun detector, but here part of name-based gender path."
+    },
+    {
+      "id": "L2:F5859",
+      "label": "first names (mostly female)",
+      "reason": "Female-name signal; gender/person cue, not profession."
+    },
+    {
+      "id": "L0:F15382",
+      "label": "mentions of a female person",
+      "reason": "Directly detects female-person mentions."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun/person-reference cue, used via She."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female-name feature, clearly gendered."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Women-reference detector; gender/spurious."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Woman-name feature, not profession."
+    },
+    {
+      "id": "L5:F5996",
+      "label": "words associated with females, femininity or womanhood",
+      "reason": "Explicitly female-associated, pushes against."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Women/girls mentioned; gender cue."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women-name/role feature, gendered."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F0",
+      "label": "embedding feature",
+      "reason": "Input embeddings for nurse/practitioner/Nursing; profession tokens."
+    },
+    {
+      "id": "L1:F1494",
+      "label": "words related to medical practices and studies.",
+      "reason": "Medical-practice terminology supports profession."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words related to counseling, therapy, social work, and academic degree programs",
+      "reason": "Healthcare/education terminology, profession-related."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "words related to healthcare professionals and medical fields",
+      "reason": "Direct healthcare-profession signal."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing-profession feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic entity detector; structural, not causal/spurious."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Generic capitalization/name structure."
+    },
+    {
+      "id": "L5:F16213",
+      "label": "proper nouns consisting of a first and last name",
+      "reason": "Generic name-format detector."
+    },
+    {
+      "id": "L2:F16306",
+      "label": "proper names and positive adjectives",
+      "reason": "Mixed generic lexical pattern, not task-semantic."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Purely orthographic name heuristic."
+    },
+    {
+      "id": "L18:F9023",
+      "label": "personal names and associated titles",
+      "reason": "Name/title structure, not profession-specific."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 5,
+  "n_other": 6,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "mixed",
+  "notes": "Both profession and gender paths matter; gender features are stronger but not exclusive."
+}

@@ -1,0 +1,88 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Identity token detector, not toxicity semantics"
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity token detector, not toxicity semantics"
+    },
+    {
+      "id": "L1:F13069",
+      "label": "the word 'black'",
+      "reason": "Identity-name feature on Black/black tokens"
+    },
+    {
+      "id": "L3:F15701",
+      "label": "instances of the word \"proud\"",
+      "reason": "Pride/proud association, not toxic-content"
+    },
+    {
+      "id": "L3:F13061",
+      "label": "capitalized-word / Black-Pride bigram feature (spurious identity pairing)",
+      "reason": "Identity pairing feature, not abuse semantics"
+    },
+    {
+      "id": "L6:F15295",
+      "label": "words and abbreviations related to HIV/AIDS and viral infections.",
+      "reason": "Promoted LGBT identity tokens, spurious correlation"
+    },
+    {
+      "id": "L5:F615",
+      "label": "named holidays or days of the year",
+      "reason": "Fires on Pride as holiday, not toxicity"
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F12717",
+      "label": "the word \"pride\" in different contexts",
+      "reason": "Generic lexical detector, structurally broad"
+    },
+    {
+      "id": "L0:F9222",
+      "label": "the equals sign",
+      "reason": "Pure punctuation/structure"
+    },
+    {
+      "id": "L0:F45",
+      "label": "the word \"being\" in different contexts",
+      "reason": "Generic word detector"
+    },
+    {
+      "id": "L1:F9113",
+      "label": "words and phrases related to heat and comfort",
+      "reason": "Incidental non-toxicity semantics"
+    },
+    {
+      "id": "L3:F11279",
+      "label": "symbols common in scientific research papers, such as p-values and replicates",
+      "reason": "Off-target scientific symbol detector"
+    },
+    {
+      "id": "L4:F192",
+      "label": "equal signs adjacent to numbers, letters and symbols, which may be mathematical formulas",
+      "reason": "Pure formula/structure detector"
+    },
+    {
+      "id": "L2:F5266",
+      "label": "phrases that include the word \"being\"",
+      "reason": "Generic phrase detector"
+    },
+    {
+      "id": "L0:F2177",
+      "label": "capitalized words or phrases",
+      "reason": "Pure capitalization/structure"
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 0,
+  "n_other": 8,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity-token and identity-association features; no clear toxic-content detector appears."
+}

@@ -1,0 +1,108 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Explicit he/his gender marker"
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-reference pronoun detector"
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Gendered pronoun feature"
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-gender/title detector"
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Possessive gender pronoun detector"
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Gendered pronoun family"
+    },
+    {
+      "id": "L9:F2587",
+      "label": "references to personal pronouns in the third person, and possibly first person",
+      "reason": "Third-person pronoun feature"
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Gender-word feature"
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Subject pronoun detector"
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun feature"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F6127",
+      "label": "instances of the word \"degree\" and words associated with academia, especially higher education",
+      "reason": "Academic-education terminology"
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles/degrees (PhD, Professor)",
+      "reason": "Profession-relevant academic title"
+    },
+    {
+      "id": "L3:F4113",
+      "label": "degree + study-field mentions (Bachelor/PhD + field)",
+      "reason": "Degree plus field indicator"
+    },
+    {
+      "id": "L4:F3727",
+      "label": "Master/Master's degree mentions",
+      "reason": "Academic credential feature"
+    },
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Study-field vocabulary"
+    },
+    {
+      "id": "L5:F15490",
+      "label": "academic subjects + academic profession titles",
+      "reason": "Profession-relevant academic terminology"
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Field-of-study indicator"
+    },
+    {
+      "id": "L6:F2254",
+      "label": "professor bios/affiliations (Dr. + PhD + university)",
+      "reason": "Professor/affiliation evidence"
+    },
+    {
+      "id": "L8:F12026",
+      "label": "mentions of people with advanced degrees and their affiliations",
+      "reason": "Advanced-degree profession cue"
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 10,
+  "n_causal": 9,
+  "n_other": 0,
+  "spurious_fraction": 0.5263157894736842,
+  "dominant": "spurious",
+  "notes": "Gender markers slightly outnumber profession cues; oracle also says gender pathway dominates."
+}

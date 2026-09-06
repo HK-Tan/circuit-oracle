@@ -1,0 +1,133 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "Early lexical negation detectors",
+      "reason": "Directly detects 'not' as a negation cue."
+    },
+    {
+      "id": "L0:F6236",
+      "label": "Early lexical negation detectors",
+      "reason": "Triggers on 'isn't', a negation-word form."
+    },
+    {
+      "id": "L0:F11101",
+      "label": "Early lexical negation detectors",
+      "reason": "Detects 'but' as a contrastive negation cue."
+    },
+    {
+      "id": "L1:F11907",
+      "label": "Early lexical negation detectors",
+      "reason": "Listed among negation detectors by the oracle."
+    },
+    {
+      "id": "L2:F5627",
+      "label": "Early lexical negation detectors",
+      "reason": "Tracks 'only' within negation/scope patterns."
+    },
+    {
+      "id": "L2:F13565",
+      "label": "Early lexical negation detectors",
+      "reason": "Oracle groups it with negation detectors."
+    },
+    {
+      "id": "L3:F5548",
+      "label": "Early lexical negation detectors",
+      "reason": "Tracks 'going' in a negation/scope circuit."
+    },
+    {
+      "id": "L4:F15629",
+      "label": "Mid-layer negation/composition features",
+      "reason": "Mid-layer negation/composition feature per oracle."
+    },
+    {
+      "id": "L4:F12337",
+      "label": "Mid-layer negation/composition features",
+      "reason": "Mid-layer negation/composition feature per oracle."
+    },
+    {
+      "id": "L4:F2884",
+      "label": "Mid-layer negation/composition features",
+      "reason": "Mid-layer negation/composition feature per oracle."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "Mid-layer negation/composition features",
+      "reason": "Mid-layer negation/composition feature per oracle."
+    },
+    {
+      "id": "L13:F4368",
+      "label": "Late negation/contradiction aggregators",
+      "reason": "Aggregator tied to 'not' position."
+    },
+    {
+      "id": "L14:F11020",
+      "label": "Late negation/contradiction aggregators",
+      "reason": "Aggregator tied to 'but' position."
+    },
+    {
+      "id": "L15:F12905",
+      "label": "Late negation/contradiction aggregators",
+      "reason": "Late aggregator on 'but' position."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "Late negation/contradiction aggregators",
+      "reason": "Late aggregator tied to 'isn't'."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "Late negation/contradiction aggregators",
+      "reason": "Late aggregator tied to 'isn't'."
+    },
+    {
+      "id": "L16:F15025",
+      "label": "Late negation/contradiction aggregators",
+      "reason": "Late aggregator tied to 'not'."
+    },
+    {
+      "id": "L16:F9779",
+      "label": "Late negation/contradiction aggregators",
+      "reason": "Late aggregator tied to 'to' in cue pattern."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: ' said' (pos 3)",
+      "label": "said",
+      "reason": "Surface token, not a semantic relation feature."
+    },
+    {
+      "id": "Emb: ' not' (pos 6)",
+      "label": "not",
+      "reason": "Surface token already counted via detectors."
+    },
+    {
+      "id": "Emb: ' only' (pos 7)",
+      "label": "only",
+      "reason": "Surface token already counted via detectors."
+    },
+    {
+      "id": "Emb: ' but' (pos 13)",
+      "label": "but",
+      "reason": "Surface token already counted via detectors."
+    },
+    {
+      "id": "Emb: ' isn'+t+' (pos 26-28)",
+      "label": "isn't",
+      "reason": "Surface token already counted via detectors."
+    },
+    {
+      "id": "Emb: ' going' (pos 29)",
+      "label": "going",
+      "reason": "Surface token already counted via detectors."
+    }
+  ],
+  "n_spurious": 18,
+  "n_causal": 0,
+  "n_other": 6,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle describes a negation-cue circuit; no causal semantic-comparison features are claimed."
+}

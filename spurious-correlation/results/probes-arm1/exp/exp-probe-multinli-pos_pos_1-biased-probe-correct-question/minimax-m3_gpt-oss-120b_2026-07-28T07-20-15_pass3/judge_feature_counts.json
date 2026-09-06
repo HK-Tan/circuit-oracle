@@ -1,0 +1,144 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F11298",
+      "label": "no",
+      "reason": "Direct negation-word detector at pos 30."
+    },
+    {
+      "id": "L15:F13061",
+      "label": "uses of the word \"no\" or similar negative statements and words associated with \"one\"",
+      "reason": "Negation/one lexical cue, not semantic NLI."
+    },
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Negative-word detector at pos 30."
+    },
+    {
+      "id": "L4:F15764",
+      "label": "fragments of sentences that contain a pronoun, a verb, and the word \"one\", or words with similar meanings",
+      "reason": "Surface pattern around \"one\"."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "Content overlap with chip semantics."
+    },
+    {
+      "id": "L2:F7725",
+      "label": "the word \"card\" when used in a technical context",
+      "reason": "Content-word feature relevant to meaning."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic syntactic cue, content-neutral."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic syntactic cue, content-neutral."
+    },
+    {
+      "id": "L0:F14574",
+      "label": "the possessive adjective \"your.\"",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F351",
+      "label": "the word \"expert\"",
+      "reason": "Mentioned by oracle, but not task-relevant here."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F16028",
+      "label": "terms related to speculation, lies, false information, and conspiracy theories",
+      "reason": "Not negation; shallow topical lexical cluster."
+    },
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Topical lexical feature, not causal NLI reasoning."
+    },
+    {
+      "id": "L5:F559",
+      "label": "words frequently related to legal conspiracies and co-conspirators",
+      "reason": "Topical lexical feature, not causal."
+    },
+    {
+      "id": "L10:F16373",
+      "label": "bigoted statements about minority groups",
+      "reason": "Oracle mentions it, but irrelevant here."
+    },
+    {
+      "id": "L0:F44",
+      "label": "words starting with \"cons\" that might indicate a constitution or consolidated standard, alongside \"pride\"",
+      "reason": "Structural/lexical noise."
+    },
+    {
+      "id": "L0:F14625",
+      "label": "the abbreviation \"Cons\" or \"AC\" followed by other letters",
+      "reason": "Generic string-pattern detector."
+    },
+    {
+      "id": "L0:F0@30",
+      "label": "Emb: No",
+      "reason": "Embedding node only; no semantic role claimed."
+    },
+    {
+      "id": "L0:F0@31",
+      "label": "Emb: one",
+      "reason": "Embedding node only; no semantic role claimed."
+    },
+    {
+      "id": "L0:F0@18",
+      "label": "Emb: your",
+      "reason": "Embedding node only; no semantic role claimed."
+    },
+    {
+      "id": "L0:F0@11",
+      "label": "Emb: chip",
+      "reason": "Embedding node only; no semantic role claimed."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: piracy",
+      "reason": "Embedding node only; no semantic role claimed."
+    },
+    {
+      "id": "L0:F0@3",
+      "label": "Emb: theorists",
+      "reason": "Embedding node only; no semantic role claimed."
+    },
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: Cons",
+      "reason": "Embedding node only; no semantic role claimed."
+    },
+    {
+      "id": "L0:F0@7",
+      "label": "Emb: is",
+      "reason": "Embedding node only; no semantic role claimed."
+    },
+    {
+      "id": "L0:F0@12",
+      "label": "Emb: that",
+      "reason": "Embedding node only; no semantic role claimed."
+    },
+    {
+      "id": "L0:F0@6",
+      "label": "Emb: Card",
+      "reason": "Embedding node only; no semantic role claimed."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 6,
+  "n_other": 16,
+  "spurious_fraction": 0.4,
+  "dominant": "mixed",
+  "notes": "Oracle shows strong negation cues plus some content-word features; embeddings and topical clusters are other."
+}

@@ -1,0 +1,78 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing profession marker."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "unknown",
+      "reason": "Occupational detector supporting nursing."
+    },
+    {
+      "id": "L5:F12279",
+      "label": "unknown",
+      "reason": "Occupational detector supporting nursing."
+    },
+    {
+      "id": "L2:F5224",
+      "label": "unknown",
+      "reason": "Occupational detector supporting nursing."
+    },
+    {
+      "id": "L1:F11869",
+      "label": "unknown",
+      "reason": "Medical research and study feature."
+    },
+    {
+      "id": "L2:F6268",
+      "label": "unknown",
+      "reason": "Scientific studies terminology."
+    },
+    {
+      "id": "L0:F15756",
+      "label": "unknown",
+      "reason": "Health and medical research feature."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Aggregates medical professionalism signals."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: nurse (pos 7)",
+      "label": "embed/output",
+      "reason": "Token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: Medicine (pos 11)",
+      "label": "embed/output",
+      "reason": "Token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: clinical (pos 20)",
+      "label": "embed/output",
+      "reason": "Token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: trials (pos 22)",
+      "label": "embed/output",
+      "reason": "Token embedding, not a semantic feature."
+    },
+    {
+      "id": "Probe Output Logit",
+      "label": "unknown",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 8,
+  "n_other": 5,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle explicitly attributes the circuit to nursing and medical research features, not gender markers."
+}

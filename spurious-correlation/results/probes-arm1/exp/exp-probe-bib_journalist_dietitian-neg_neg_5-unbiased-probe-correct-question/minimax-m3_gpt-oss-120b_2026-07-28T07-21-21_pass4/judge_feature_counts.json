@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: He",
+      "label": "male pronoun embedding",
+      "reason": "Gender marker, but oracle says it is not a primary driver."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism concept relevant to profession classification."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News/reporting semantics align with reporter profession."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media/journalism concept supports profession prediction."
+    },
+    {
+      "id": "L1:F1024",
+      "label": "words and phrases frequently used when discussing writing, publishing, and editing books and other written works.",
+      "reason": "Writing/editing vocabulary is profession-related, not gendered."
+    },
+    {
+      "id": "L17:F5218",
+      "label": "text about journalism, media, and related topics",
+      "reason": "Explicit journalism semantics support the label."
+    },
+    {
+      "id": "L9:F7435",
+      "label": "words and phrases related to news production and media",
+      "reason": "News production terminology is causal profession evidence."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Directly indicates reporter/news profession."
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Editing/publishing title is occupation vocabulary."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Journalism concept directly tracks the profession."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "words and phrases associated with broadcast journalism",
+      "reason": "Broadcast journalism is a profession indicator."
+    },
+    {
+      "id": "L8:F15435",
+      "label": "words relating to news broadcasting",
+      "reason": "Broadcasting vocabulary supports media profession."
+    },
+    {
+      "id": "L7:F72",
+      "label": "words related to writing professionally",
+      "reason": "Professional writing terminology is causal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: reporter",
+      "label": "token embedding",
+      "reason": "Bare token embedding; oracle focuses on semantic features."
+    },
+    {
+      "id": "Emb: freelancer",
+      "label": "token embedding",
+      "reason": "Bare token embedding; not itself gender or profession semantics."
+    },
+    {
+      "id": "Emb: .",
+      "label": "punctuation embedding",
+      "reason": "Purely structural punctuation."
+    },
+    {
+      "id": "Output (Probe Classification)",
+      "label": "probe output",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 12,
+  "n_other": 4,
+  "spurious_fraction": 0.07692307692307693,
+  "dominant": "causal",
+  "notes": "Oracle indicates journalism/profession pathway; pronoun is explicitly non-primary."
+}

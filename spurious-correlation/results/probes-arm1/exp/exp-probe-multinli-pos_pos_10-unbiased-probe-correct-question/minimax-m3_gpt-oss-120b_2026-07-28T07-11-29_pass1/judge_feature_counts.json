@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L10:F6670",
+      "label": "negation detector",
+      "reason": "Detects \"not\" in hypothesis."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "negation detector",
+      "reason": "Triggered by \"not\"; negation shortcut."
+    },
+    {
+      "id": "L3:F12079",
+      "label": "negation detectors",
+      "reason": "Mid-layer not/not_in detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negation detectors",
+      "reason": "Mid-layer negation token detector."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "negation detectors",
+      "reason": "Not-token detector."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "negation detectors",
+      "reason": "Early not detector."
+    },
+    {
+      "id": "L9:F14687",
+      "label": "not...because/but",
+      "reason": "Negation construction detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F12420",
+      "label": "artistic elements that break established guidelines",
+      "reason": "Role/reversal semantic cue."
+    },
+    {
+      "id": "L4:F14368",
+      "label": "role/importance",
+      "reason": "Role-reversal semantic cue."
+    },
+    {
+      "id": "L7:F905",
+      "label": "amounts/changes",
+      "reason": "Change/reversal meaning."
+    },
+    {
+      "id": "L8:F16033",
+      "label": "reversal/irony",
+      "reason": "Reversal semantics."
+    },
+    {
+      "id": "L4:F7409",
+      "label": "reverse/inverse",
+      "reason": "Reversal semantics."
+    },
+    {
+      "id": "L0:F6013",
+      "label": "role",
+      "reason": "Role-related semantic cue."
+    },
+    {
+      "id": "L0:F6902",
+      "label": "role",
+      "reason": "Role-related semantic cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F12799",
+      "label": "words ending in \"-ly\" along with phrases that contain the word 'odd' or 'oddities'",
+      "reason": "Oddness/superlative morphology."
+    },
+    {
+      "id": "L2:F16097",
+      "label": "superlative adjectives and the words \"test\" or \"point\"",
+      "reason": "Morphological superlative detector."
+    },
+    {
+      "id": "L2:F10827",
+      "label": "superlative/oddness-related feature",
+      "reason": "Morphological word-form cue."
+    },
+    {
+      "id": "L3:F319",
+      "label": "comparative/superlative suffix feature",
+      "reason": "Pure morphology."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Dismissed unrelated topic feature."
+    },
+    {
+      "id": "L4:F6072",
+      "label": "mixed multi-meaning feature",
+      "reason": "Oracle says weaker negative, ambiguous."
+    },
+    {
+      "id": "L0:F5188",
+      "label": "mixed multi-meaning feature",
+      "reason": "Oracle says weaker negative, ambiguous."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "period token",
+      "reason": "Pure punctuation detector."
+    },
+    {
+      "id": "L2:F10705",
+      "label": "mixed multi-meaning feature",
+      "reason": "Oracle says weaker negative, ambiguous."
+    },
+    {
+      "id": "L2:F9872",
+      "label": "mixed multi-meaning feature",
+      "reason": "Oracle says weaker negative, ambiguous."
+    },
+    {
+      "id": "L7:F4526",
+      "label": "mixed multi-meaning feature",
+      "reason": "Oracle says weaker negative, ambiguous."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 7,
+  "n_other": 11,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Negation and role-reversal drive positive score; superlatives and unrelated/mixed features are other."
+}

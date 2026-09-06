@@ -1,0 +1,63 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Entity lexical detector for Congress, not semantics."
+    },
+    {
+      "id": "L3:F123",
+      "label": "mentions of the United States Congress",
+      "reason": "Shared entity mention detector; shallow lexical cue."
+    },
+    {
+      "id": "L0:F15411",
+      "label": "terms relating to political bodies, figures, and processes",
+      "reason": "Political vocabulary cue, not task semantics."
+    },
+    {
+      "id": "L0:F6044",
+      "label": "the word \"yield\"",
+      "reason": "Oracle says triggered by Congress; irrelevant lexical feature."
+    },
+    {
+      "id": "L3:F5753",
+      "label": "the word \"includes\" or \"containing\".",
+      "reason": "Lexical inclusion marker, not negation or entailment."
+    },
+    {
+      "id": "L4:F59",
+      "label": "phrases with the word 'to' preceded by a verb or the word 'start' or 'begin'.",
+      "reason": "Shallow syntactic template only."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: Congress (pos 2)",
+      "label": "Congress (pos 2)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: include (pos 12)",
+      "label": "include (pos 12)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: began (pos 10)",
+      "label": "began (pos 10)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Output",
+      "label": "contradiction-classification probe score",
+      "reason": "Probe output, not a feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 0,
+  "n_other": 4,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "All cited non-input features are shallow lexical or syntactic; no causal semantic contradiction feature is shown."
+}

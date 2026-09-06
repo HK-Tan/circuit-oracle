@@ -1,0 +1,304 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: not (pos 23)",
+      "label": "Emb: not",
+      "reason": "Explicit negation-word detector in hypothesis."
+    },
+    {
+      "id": "L4:F2274",
+      "label": "words indicating opinions, particularly negative ones, and also words related to events and technology",
+      "reason": "Oracle says it fires on negative/opinion language."
+    },
+    {
+      "id": "L6:F1912",
+      "label": "words related to criticism, negativity and the expression of opinions",
+      "reason": "Negative/criticism cue, aligning with contradiction shortcut."
+    },
+    {
+      "id": "L13:F7001",
+      "label": "words and phrases expressing surprise, knowledge, potential, or failure",
+      "reason": "Failure/surprise cue used as contrast shortcut."
+    },
+    {
+      "id": "L14:F12859",
+      "label": "terms of uncertainty, threats, and medical situations",
+      "reason": "Threat/uncertainty cue, not semantic contradiction."
+    },
+    {
+      "id": "L17:F14979",
+      "label": "variations of \"but\"",
+      "reason": "Discourse-contrast marker; classic spurious NLI cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: That (pos 1)",
+      "label": "Emb: That",
+      "reason": "Sentence-initial content-neutral structure tied to premise form."
+    },
+    {
+      "id": "Emb: first (pos 2)",
+      "label": "Emb: first",
+      "reason": "Ordinal content relevant to sentence semantics."
+    },
+    {
+      "id": "Emb: glimpse (pos 3)",
+      "label": "Emb: glimpse",
+      "reason": "Lexical content in premise/hypothesis relation."
+    },
+    {
+      "id": "Emb: of (pos 4)",
+      "label": "Emb: of",
+      "reason": "Content-neutral preposition supporting relation encoding."
+    },
+    {
+      "id": "Emb: the (pos 5)",
+      "label": "Emb: the",
+      "reason": "Generic article, structural not spurious."
+    },
+    {
+      "id": "Emb: you (pos 21)",
+      "label": "Emb: you",
+      "reason": "Pronoun/content-neutral lexical signal, not negation."
+    },
+    {
+      "id": "Emb: abbey (pos 10)",
+      "label": "Emb: abbey",
+      "reason": "Premise content word supporting semantic alignment."
+    },
+    {
+      "id": "Emb: forget (pos 24)",
+      "label": "Emb: forget",
+      "reason": "Verb content; oracle specifically mentions 'don't forget' phrase."
+    },
+    {
+      "id": "Emb: and (pos 33)",
+      "label": "Emb: and",
+      "reason": "Generic conjunction, structural rather than spurious."
+    },
+    {
+      "id": "Emb: towering (pos 6)",
+      "label": "Emb: towering",
+      "reason": "Descriptive content about the scene."
+    },
+    {
+      "id": "Emb: steep (pos 8)",
+      "label": "Emb: steep",
+      "reason": "Descriptive content about the scene."
+    },
+    {
+      "id": "Emb: led (pos 9)",
+      "label": "Emb: led",
+      "reason": "Content verb contributing to scene meaning."
+    },
+    {
+      "id": "Emb: moment (pos 20)",
+      "label": "Emb: moment",
+      "reason": "Content word relevant to the described event."
+    },
+    {
+      "id": "L0 lexical-of",
+      "label": "lexical-of",
+      "reason": "Generic lexical detector, not negation."
+    },
+    {
+      "id": "L4 ordinal 'first' + preposition / 'glimpse'",
+      "label": "ordinal 'first' + preposition / 'glimpse'",
+      "reason": "Scene-order/content relation, not negation."
+    },
+    {
+      "id": "L4 'steepled' / 'towering' architectural descriptors",
+      "label": "'steepled' / 'towering' architectural descriptors",
+      "reason": "Architectural semantics about the premise."
+    },
+    {
+      "id": "L6 'first of' / sentence-initial that",
+      "label": "'first of' / sentence-initial that",
+      "reason": "Structural phrase relation, content-neutral."
+    },
+    {
+      "id": "L8-L11 mid-context / sentence structure",
+      "label": "mid-context / sentence structure",
+      "reason": "Purely structural context feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Purely structural article detector."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L0:F12456",
+      "label": "the word \"collective\" and other words with shared meaning, but also finds some words such as \"rose\" and \"that\"",
+      "reason": "Oracle label is broad/mixed and not contradiction-specific."
+    },
+    {
+      "id": "L0:F8397",
+      "label": "pronouns at the beginning of sentences or paragraphs",
+      "reason": "Structural sentence-position feature."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Domain/format detector, not task-semantic."
+    },
+    {
+      "id": "L0:F9854",
+      "label": "words indicating possibility or future tense verbs",
+      "reason": "General tense/modality, not negation."
+    },
+    {
+      "id": "L0:F11835",
+      "label": "terms used in software code such as \"assembly\", \"using\", \"namespace\", and \"license\"",
+      "reason": "Off-topic domain feature."
+    },
+    {
+      "id": "L4:F3833",
+      "label": "words used when summarizing plot points or providing courtroom insights",
+      "reason": "Oracle dismissed as generic summary language."
+    },
+    {
+      "id": "L4:F4605",
+      "label": "words related to churches, chapels and other buildings, in addition to other information of Lincolnshire",
+      "reason": "Topic/entity detector, not causal relation."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Topic/entity detector, not causal relation."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Unrelated topical detector."
+    },
+    {
+      "id": "L4:F2581",
+      "label": "mentions of things being \"first\"",
+      "reason": "Token-triggered but not semantically causal by itself."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Format detector, not NLI semantics."
+    },
+    {
+      "id": "L2:F8046",
+      "label": "common words and phrases that include the letter 't' and are commonly used to start clauses",
+      "reason": "Generic structural cue."
+    },
+    {
+      "id": "L5:F7444",
+      "label": "words or phrases that an individual would express or think",
+      "reason": "Broad discourse/psychological language."
+    },
+    {
+      "id": "L3:F9772",
+      "label": "a phrase combined with a small amount of something and other random words.",
+      "reason": "Oracle label is too vague to map confidently."
+    },
+    {
+      "id": "L6:F5342",
+      "label": "the word \"first\" as well as words and prepositions that often follow it",
+      "reason": "Phrase-structure detector, not negation."
+    },
+    {
+      "id": "L16:F10989",
+      "label": "the",
+      "reason": "Purely structural article detector."
+    },
+    {
+      "id": "L14:F2510",
+      "label": "the word \"using\"",
+      "reason": "Generic content word, not task-specific."
+    },
+    {
+      "id": "L15:F751",
+      "label": "code snippets",
+      "reason": "Unrelated domain detector."
+    },
+    {
+      "id": "L10:F14174",
+      "label": "left curly brackets",
+      "reason": "Pure punctuation/format feature."
+    },
+    {
+      "id": "L13:F8128",
+      "label": "sentences beginning with the word \"In\"",
+      "reason": "Sentence-beginning structure only."
+    },
+    {
+      "id": "L9:F8770",
+      "label": "sentences beginning with \"It\" or \"In\" and also the word \"There\".",
+      "reason": "Structural sentence-start feature."
+    },
+    {
+      "id": "L6:F14585",
+      "label": "the words \"the\" and \"it\" at the beginning of sentences",
+      "reason": "Structural sentence-start feature."
+    },
+    {
+      "id": "L11:F11186",
+      "label": "scientific and technical terms",
+      "reason": "Domain/topic detector."
+    },
+    {
+      "id": "L3:F4081",
+      "label": "mentions of the statistical software Stata and the term \"stent\".",
+      "reason": "Unrelated topical detector."
+    },
+    {
+      "id": "L2:F5878",
+      "label": "the suffix \"le\"",
+      "reason": "Purely orthographic feature."
+    },
+    {
+      "id": "L2:F8185",
+      "label": "places for shopping or military activities",
+      "reason": "Topical detector, not causal."
+    },
+    {
+      "id": "L6:F2215",
+      "label": "comparative statements involving amounts or quantities",
+      "reason": "General comparison language, not contradiction."
+    },
+    {
+      "id": "L16:F16037",
+      "label": "but",
+      "reason": "Discourse marker, but oracle maps it to a generic token feature."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Pure sentence-position structure."
+    },
+    {
+      "id": "L13:F7001",
+      "label": "words and phrases expressing surprise, knowledge, potential, or failure",
+      "reason": "Already counted as spurious above; duplicate avoided in final count."
+    },
+    {
+      "id": "L14:F12859",
+      "label": "terms of uncertainty, threats, and medical situations",
+      "reason": "Already counted as spurious above; duplicate avoided in final count."
+    },
+    {
+      "id": "L17:F14979",
+      "label": "variations of \"but\"",
+      "reason": "Already counted as spurious above; duplicate avoided in final count."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 18,
+  "n_other": 34,
+  "spurious_fraction": 0.25,
+  "dominant": "mixed",
+  "notes": "Oracle shows a hybrid: mostly structural/content features, with a smaller spurious negation/contrast stream."
+}

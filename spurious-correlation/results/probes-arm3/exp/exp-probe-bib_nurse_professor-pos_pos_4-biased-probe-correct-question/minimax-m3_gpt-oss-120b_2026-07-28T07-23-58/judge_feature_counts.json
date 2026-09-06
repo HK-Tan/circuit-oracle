@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Directly encodes female references, a gender marker."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic people-name detector, not profession-specific."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Detects gendered names, a spurious cue."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Detects female names, not causal task content."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Explicit gender-reference feature."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Centers women/roles, not profession indicators."
+    },
+    {
+      "id": "L5:F5996",
+      "label": "words associated with females, femininity or womanhood",
+      "reason": "Gender/identity cue, not causal."
+    },
+    {
+      "id": "L2:F5859",
+      "label": "first names (mostly female)",
+      "reason": "Detects mostly female names, a gender marker."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Pronoun detector; gender marker."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Generic structural/name feature, not profession-specific."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct profession indicator for nursing."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Generic orthographic/name pattern."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Name-shape detector, not semantic profession cue."
+    },
+    {
+      "id": "L2:F16306",
+      "label": "proper names and positive adjectives",
+      "reason": "Mixed generic name/adjective feature; not clearly task causal."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 1,
+  "n_other": 3,
+  "spurious_fraction": 0.9090909090909091,
+  "dominant": "spurious",
+  "notes": "Oracle shows mostly gender/name shortcuts, with one clear nursing indicator."
+}

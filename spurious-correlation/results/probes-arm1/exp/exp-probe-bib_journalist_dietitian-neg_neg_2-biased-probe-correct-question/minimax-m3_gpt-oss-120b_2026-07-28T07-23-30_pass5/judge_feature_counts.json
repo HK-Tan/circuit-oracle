@@ -1,0 +1,123 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Gendered pronoun detector."
+    },
+    {
+      "id": "L0:F16297",
+      "label": "the pronoun \"him\"",
+      "reason": "Gendered pronoun detector."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Religious \"His\" reference, not profession."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Gender/social-role feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Generic gendered pronoun context."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit male-marker feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Used here on gendered pronoun context."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Pronoun detector; gender marker."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Gendered pronoun detector."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "General pronoun signal used spuriously."
+    },
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Not profession-related here; structural/other."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Generic people/pronoun feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F2011",
+      "label": "the word \"dream\"",
+      "reason": "Lexical content; not gendered."
+    },
+    {
+      "id": "L0:F11767",
+      "label": "the word \"world\" with a lower activation for \"net\" and \"market\"",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F7927",
+      "label": "past-participle verbs",
+      "reason": "Purely syntactic feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Function-word detector."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Profession-indicating journalism feature."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Direct reporter profession cue."
+    },
+    {
+      "id": "L8:F8437",
+      "label": "content related to film festivals and production, particularly documentary films, and the recognition they receive.",
+      "reason": "Media/content-industry vocabulary."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism profession vocabulary."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News/journalism source feature."
+    },
+    {
+      "id": "L18:F14663",
+      "label": "variations of the word \"report.\"",
+      "reason": "Core reporting vocabulary."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 12,
+  "n_causal": 10,
+  "n_other": 0,
+  "spurious_fraction": 0.5454545454545454,
+  "dominant": "mixed",
+  "notes": "Both journalism cues and strong male-pronoun cues are present; gender signal slightly dominates."
+}

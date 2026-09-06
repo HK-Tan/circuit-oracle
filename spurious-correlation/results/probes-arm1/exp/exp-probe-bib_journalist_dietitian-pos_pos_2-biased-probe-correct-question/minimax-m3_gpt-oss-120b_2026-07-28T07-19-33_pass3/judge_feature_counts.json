@@ -1,0 +1,118 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "Late-layer female-detection features (L18\u2013L19)",
+      "reason": "Directly detects feminine mentions."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "Late-layer female-detection features (L18\u2013L19)",
+      "reason": "References women's names and roles."
+    },
+    {
+      "id": "L14:F12501",
+      "label": "Late-layer female-detection features (L18\u2013L19)",
+      "reason": "Uses of the feminine pronoun."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "Late-layer female-detection features (L18\u2013L19)",
+      "reason": "Triggered by male pronoun, gender feature."
+    },
+    {
+      "id": "L10:F14965",
+      "label": "Mid-layer female pronoun/gender gating (L6\u2013L12)",
+      "reason": "Terms relating to women."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "Mid-layer female pronoun/gender gating (L6\u2013L12)",
+      "reason": "References to women via pronouns/titles."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "Mid-layer female pronoun/gender gating (L6\u2013L12)",
+      "reason": "Gender gating on women references."
+    },
+    {
+      "id": "L2:F7672",
+      "label": "Early entity/pronoun features (L0\u2013L4)",
+      "reason": "Mentions women by name and relationship."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "Early entity/pronoun features (L0\u2013L4)",
+      "reason": "Female pronoun detector."
+    },
+    {
+      "id": "L2:F2128",
+      "label": "Early entity/pronoun features (L0\u2013L4)",
+      "reason": "Pronoun detector for she/her."
+    },
+    {
+      "id": "L1:F2848",
+      "label": "Early entity/pronoun features (L0\u2013L4)",
+      "reason": "She/her pronoun feature."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "Early entity/pronoun features (L0\u2013L4)",
+      "reason": "Named-entity detector, here gendered."
+    },
+    {
+      "id": "L0:F15382",
+      "label": "Early entity/pronoun features (L0\u2013L4)",
+      "reason": "Female-name/gendered entity feature."
+    },
+    {
+      "id": "L13:F6622",
+      "label": "Early entity/pronoun features (L0\u2013L4)",
+      "reason": "Anchored to the later she token."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "Mid-layer female pronoun/gender gating (L6\u2013L12)",
+      "reason": "Female pronoun and possessive detector."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "Content/topic features (nutrition, food, diet)",
+      "reason": "Topic feature, but not profession-specific."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "Content/topic features (nutrition, food, diet)",
+      "reason": "Dietary health terms, not causal profession cue."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L26:F0@0",
+      "label": "Probe classification logit",
+      "reason": "Output logit, not a feature."
+    },
+    {
+      "id": "Emb: She (pos 1)",
+      "label": "Emb: She (pos 1)",
+      "reason": "Input token embedding."
+    },
+    {
+      "id": "Emb: has (pos 2)",
+      "label": "Emb: has (pos 2)",
+      "reason": "Input token embedding."
+    },
+    {
+      "id": "Emb: She (pos 23)",
+      "label": "Emb: She (pos 23)",
+      "reason": "Input token embedding."
+    }
+  ],
+  "n_spurious": 17,
+  "n_causal": 0,
+  "n_other": 4,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by female/gender signals; no genuine profession features are claimed."
+}

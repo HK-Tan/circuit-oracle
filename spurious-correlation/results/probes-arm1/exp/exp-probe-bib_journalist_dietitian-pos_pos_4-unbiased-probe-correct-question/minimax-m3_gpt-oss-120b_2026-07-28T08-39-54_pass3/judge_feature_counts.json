@@ -1,0 +1,87 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Emb:20",
+      "label": "Emb: ' Dietetics' (pos 20) \u2014 \"Die\" token",
+      "reason": "Profession term for dietetics."
+    },
+    {
+      "id": "Emb:9",
+      "label": "Emb: ' Nutritional' (pos 9)",
+      "reason": "Nutrition-related profession content."
+    },
+    {
+      "id": "Emb:55",
+      "label": "Emb: ' RD' (pos 55)",
+      "reason": "Credential for registered dietitian."
+    },
+    {
+      "id": "Emb:50",
+      "label": "Emb: ' nutrition' (pos 50)",
+      "reason": "Direct nutrition indicator."
+    },
+    {
+      "id": "Emb:21",
+      "label": "Emb: 'te' (pos 21)",
+      "reason": "Part of nutrition word morphology."
+    },
+    {
+      "id": "Emb:37",
+      "label": "Emb: 'titian' / pediatric (pos 37)",
+      "reason": "Dietitian/profession-related token fragment."
+    },
+    {
+      "id": "L3:F11774",
+      "label": "Morphological/pattern detectors for nutrition words",
+      "reason": "Detects nutrition word forms."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "Diet/food/nutrition term detectors",
+      "reason": "Detects diet and nutrition terminology."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "Food/nutrition concept detector",
+      "reason": "Abstracts nutrition concepts."
+    },
+    {
+      "id": "L2:F2589",
+      "label": "Medical professional/specialty term detector",
+      "reason": "Detects specialty/profession terms."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "Food-related context",
+      "reason": "Context about food and nutrition."
+    },
+    {
+      "id": "L17:F14680",
+      "label": "Nutrition/food/diets concept",
+      "reason": "Encodes nutrition and diet concepts."
+    },
+    {
+      "id": "L18:F6105",
+      "label": "Eating/health concept",
+      "reason": "Health and eating-related meaning."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "Nutritional/scientific study context (top driver)",
+      "reason": "Direct nutrition-study context."
+    },
+    {
+      "id": "Probe output",
+      "label": "Probe output (dietitian/nutrition classification)",
+      "reason": "Final profession prediction."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 15,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "All cited features concern nutrition/diet professions; no gender markers are claimed."
+}

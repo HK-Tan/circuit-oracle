@@ -1,0 +1,224 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Gendered pronoun detector."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based person reference."
+    },
+    {
+      "id": "L4:F15567",
+      "label": "sentences with male or female pronouns and possessives, especially ones referring to writing",
+      "reason": "Gendered pronoun/possessive feature."
+    },
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Detects gendered pronoun co-occurrence."
+    },
+    {
+      "id": "L0:F16297",
+      "label": "the pronoun \"him\"",
+      "reason": "Direct gendered pronoun detector."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Gendered pronoun feature."
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicitly gendered feature."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Gender/social-role feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun-only feature."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Includes gendered pronouns."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Gendered pronoun detector."
+    },
+    {
+      "id": "L0:F10036",
+      "label": "words about scientific research and scientists",
+      "reason": "Oracle says scientific research, not profession."
+    },
+    {
+      "id": "L5:F10952",
+      "label": "third person pronouns in varying contexts",
+      "reason": "Pronoun feature, not profession-specific."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism/profession indicator."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media profession concept."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "words and phrases associated with broadcast journalism",
+      "reason": "Journalism-specific vocabulary."
+    },
+    {
+      "id": "L1:F1136",
+      "label": "image credits and descriptions",
+      "reason": "Content-neutral lexical cue used in biographies."
+    },
+    {
+      "id": "L1:F7449",
+      "label": "instances of the word \"representation\"",
+      "reason": "Neutral lexical/syntactic feature."
+    },
+    {
+      "id": "L1:F14812",
+      "label": "references to stories, chapters, and other narrative elements",
+      "reason": "Neutral narrative lexical cue."
+    },
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Task-relevant education/work terminology."
+    },
+    {
+      "id": "L0:F5333",
+      "label": "mentions of stories that are being told",
+      "reason": "Neutral narrative cue."
+    },
+    {
+      "id": "L0:F61",
+      "label": "the word \"stories\" sometimes along with apostrophes and common names.",
+      "reason": "Neutral lexical cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output Logit",
+      "label": "Probe Direction",
+      "reason": "Not a feature; output node."
+    },
+    {
+      "id": "Emb: journalistic (pos 13)",
+      "label": "journalistic",
+      "reason": "Embedding token, not oracle feature."
+    },
+    {
+      "id": "Emb: he (pos 23)",
+      "label": "he",
+      "reason": "Embedding token, not oracle feature."
+    },
+    {
+      "id": "Emb: He (pos 1)",
+      "label": "He",
+      "reason": "Embedding token, not oracle feature."
+    },
+    {
+      "id": "Emb: him (pos 46)",
+      "label": "him",
+      "reason": "Embedding token, not oracle feature."
+    },
+    {
+      "id": "Emb: his (pos 52)",
+      "label": "his",
+      "reason": "Embedding token, not oracle feature."
+    },
+    {
+      "id": "Emb: researches (pos 2)",
+      "label": "researches",
+      "reason": "Embedding token, not oracle feature."
+    },
+    {
+      "id": "Emb: stories (pos 3)",
+      "label": "stories",
+      "reason": "Embedding token, not oracle feature."
+    },
+    {
+      "id": "Emb: represents (pos 9)",
+      "label": "represents",
+      "reason": "Embedding token, not oracle feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/punctuation."
+    },
+    {
+      "id": "L0:F7696",
+      "label": "the word \"on\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F10187",
+      "label": "the word \"time\"",
+      "reason": "Generic lexical item."
+    },
+    {
+      "id": "L0:F9121",
+      "label": "the word \"nice\" and words with positive sentiment, sometimes related to the weather or seasons",
+      "reason": "Not profession-specific."
+    },
+    {
+      "id": "L0:F1301",
+      "label": "mentions of cancer and related terms like tumors",
+      "reason": "Dismissed as irrelevant here."
+    },
+    {
+      "id": "L0:F14216",
+      "label": "the word \"signs\" and horizontal lines",
+      "reason": "Purely structural/mixed cue."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Non-task-specific structural cue."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "Oracle label is about narratives, not profession."
+    },
+    {
+      "id": "L16:F2918",
+      "label": "Pronouns",
+      "reason": "Too generic; oracle didn't specify profession role."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 9,
+  "n_other": 19,
+  "spurious_fraction": 0.6086956521739131,
+  "dominant": "spurious",
+  "notes": "Pronoun/gender signals dominate, though genuine journalism cues are present."
+}

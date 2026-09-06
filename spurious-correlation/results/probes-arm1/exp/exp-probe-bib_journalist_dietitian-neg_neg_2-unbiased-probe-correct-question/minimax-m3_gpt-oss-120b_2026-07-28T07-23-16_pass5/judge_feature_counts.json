@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8964",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Male pronoun; gender marker despite oracle noting generic usage."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "Journalism/profession context indicator."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism vocabulary; profession indicator."
+    },
+    {
+      "id": "L20:F8433",
+      "label": "words related to news broadcasting",
+      "reason": "Broadcast journalism vocabulary."
+    },
+    {
+      "id": "L16:F8642",
+      "label": "LATE SUPPRESSORS (non-journalism context)",
+      "reason": "Not a feature of the task itself; context suppressor."
+    },
+    {
+      "id": "L17:F5218",
+      "label": "LATE SUPPRESSORS (non-journalism context)",
+      "reason": "Not a feature of the task itself; context suppressor."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Direct profession-indicator feature."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "words and phrases associated with broadcast journalism",
+      "reason": "Broadcast journalism terminology."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter/journalism profession terms."
+    },
+    {
+      "id": "L2:F11175",
+      "label": "the verb \"report\" and its variations",
+      "reason": "Report/news-reporting vocabulary."
+    },
+    {
+      "id": "L3:F10846",
+      "label": "the word \"report\"",
+      "reason": "Report vocabulary; journalism context."
+    },
+    {
+      "id": "L4:F6696",
+      "label": "the word \"report\" or \"reporting\" along with adjacent words",
+      "reason": "Reporting vocabulary in context."
+    },
+    {
+      "id": "L5:F12586",
+      "label": "mentions of reports",
+      "reason": "Report/news document terminology."
+    },
+    {
+      "id": "L15:F2579",
+      "label": "instances of people providing information in some sort of official capacity. Like reporting incidents, communicating facts or informing others of something.",
+      "reason": "Reporting/official information profession context."
+    },
+    {
+      "id": "L16:F15046",
+      "label": "names, organizations, and reporting verbs",
+      "reason": "Reporting/news-writing terminology."
+    },
+    {
+      "id": "L19:F14973",
+      "label": "words related to high-achieving individuals and organizations",
+      "reason": "Neutral lexical/contextual feature, but still part of profession signal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Purely structural generic word detector."
+    },
+    {
+      "id": "L0:F14287",
+      "label": "the word \"see\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F2203",
+      "label": "instances of the words \"world\" or \"game\" (possibly \"problem\") or expressions of existential quandaries.",
+      "reason": "Non-task semantic; not profession-related."
+    },
+    {
+      "id": "L4:F11898",
+      "label": "mentions of \"World\" followed by a sport or war-related word",
+      "reason": "Non-task semantic; not profession-related."
+    },
+    {
+      "id": "L5:F771",
+      "label": "the word \"see\" and words often associated with \"see\"",
+      "reason": "Generic semantic/structural feature."
+    },
+    {
+      "id": "L8:F8437",
+      "label": "content related to film festivals and production, particularly documentary films, and the recognition they receive.",
+      "reason": "Oracle-listed but off-task journalism context."
+    },
+    {
+      "id": "L7:F13896",
+      "label": "words or phrases related to reports, people's names, and versions",
+      "reason": "Mixed generic/report context; not specific profession indicator."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 15,
+  "n_other": 7,
+  "spurious_fraction": 0.0625,
+  "dominant": "causal",
+  "notes": "Dominated by journalism/reporting features; only His is spurious."
+}

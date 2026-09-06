@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L0:F15454",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "\"not\" or negative terms, with some bonus for sports-related terms and \"purpose\".",
+      "reason": "Negation-oriented feature."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation/absence detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Negation assembler."
+    },
+    {
+      "id": "L13:F14177",
+      "label": "negation or dissent, often using \"not\" with \"am\" or other verbs",
+      "reason": "Negation assembler."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation feature."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation pattern detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Content-word feature tied to task semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Structural lexical pattern."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F9646",
+      "label": "words that indicate the degree, scale, or validity of something",
+      "reason": "Too general; not task-specific."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Already counted as spurious above? ignore"
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Dismissed structural/noise feature."
+    },
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Structural/formality detector."
+    },
+    {
+      "id": "L3:F8733",
+      "label": "parts of words like \"ch\", \"parms\", \"ened\", and \"ounesto\"",
+      "reason": "Purely subword/structural."
+    },
+    {
+      "id": "L3:F3797",
+      "label": "comments starting with \"So\" or \"Okay\".",
+      "reason": "Structural discourse marker."
+    },
+    {
+      "id": "L15:F2080",
+      "label": "the phrase \"set\" followed by articles or prepositions",
+      "reason": "Generic syntactic/lexical pattern."
+    },
+    {
+      "id": "L0:F15454",
+      "label": "the word \"not\"",
+      "reason": "Already counted as spurious above? ignore"
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 1,
+  "n_other": 12,
+  "spurious_fraction": 0.9090909090909091,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes negation circuitry; only one content-word feature is clearly causal."
+}

@@ -1,0 +1,58 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F14301",
+      "label": "names of people and organizations involved in politics, finance, and national security",
+      "reason": "Trump name/political-entity shortcut, not toxicity."
+    },
+    {
+      "id": "L4:F14582",
+      "label": "references to the White House and the US government",
+      "reason": "Presidential/government association; identity-irrelevant shortcut."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F7621",
+      "label": "the word \"clearly\", and to a lesser extent words associated with amounts of things",
+      "reason": "Generic assertive adverb, not toxicity."
+    },
+    {
+      "id": "L0:F4422",
+      "label": "the word \"seriously\"",
+      "reason": "Generic style/lexical feature."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Pure copular syntax feature."
+    },
+    {
+      "id": "Emb: trump (pos 5)",
+      "label": "Emb: trump (pos 5)",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: clearly (pos 2)",
+      "label": "Emb: clearly (pos 2)",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: is (pos 6)",
+      "label": "Emb: is (pos 6)",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Output: synthetic toxicity-probe score",
+      "label": "Output: synthetic toxicity-probe score",
+      "reason": "Probe output, not a circuit feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 0,
+  "n_other": 7,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is driven by Trump/government association plus generic lexical/syntactic cues."
+}

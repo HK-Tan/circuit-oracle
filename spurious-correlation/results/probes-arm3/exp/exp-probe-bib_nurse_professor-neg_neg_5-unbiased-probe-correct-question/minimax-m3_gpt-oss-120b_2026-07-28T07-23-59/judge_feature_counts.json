@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun cue."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Profession-credential indicator."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Education/institution profession cue."
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "Research/academic-profession content."
+    },
+    {
+      "id": "L20:F14235",
+      "label": "references to academic credentials and institutions.",
+      "reason": "Credentials/institutions signal profession."
+    },
+    {
+      "id": "L1:F10986",
+      "label": "words related to academic research",
+      "reason": "Research vocabulary indicates profession."
+    },
+    {
+      "id": "L14:F3956",
+      "label": "universities and degrees",
+      "reason": "Education/professional background cue."
+    },
+    {
+      "id": "L9:F988",
+      "label": "information about academic degrees",
+      "reason": "Academic-degree indicator."
+    },
+    {
+      "id": "L6:F3235",
+      "label": "academic publications, math, and scientific institutions",
+      "reason": "Academic/scientific profession content."
+    },
+    {
+      "id": "L6:F13001",
+      "label": "references to academic disciplines and studies",
+      "reason": "Academic discipline cue."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic field indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L8:F2383",
+      "label": "words related to archeological sites, digs, and artifacts",
+      "reason": "Not an allowed task feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural."
+    },
+    {
+      "id": "L6:F14747",
+      "label": "terms related to historical archives and documents",
+      "reason": "Oracle didn't tie it to task."
+    },
+    {
+      "id": "L1:F1505",
+      "label": "the word \"certified\"",
+      "reason": "Too generic alone."
+    },
+    {
+      "id": "L6:F2161",
+      "label": "words or phrases associated with governance, social issues, legality, or identity",
+      "reason": "Not a profession indicator."
+    },
+    {
+      "id": "L4:F16301",
+      "label": "references to politics, political scientists, states and systems of government",
+      "reason": "Oracle didn't claim it here."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Structural/ID-like feature."
+    },
+    {
+      "id": "L9:F228",
+      "label": "legal citations and references to legislative and academic works",
+      "reason": "Mixed but not judged by oracle."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 10,
+  "n_other": 8,
+  "spurious_fraction": 0.16666666666666666,
+  "dominant": "causal",
+  "notes": "Oracle explicitly emphasizes academic/profession cues; gender cues are minor."
+}

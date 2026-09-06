@@ -1,0 +1,98 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1143",
+      "label": "the word \"no\" and related words like \"nobody\" and \"trust\"",
+      "reason": "Negation-word detector in hypothesis."
+    },
+    {
+      "id": "L0:F14862",
+      "label": "the word \"no\"",
+      "reason": "Literal negation detector."
+    },
+    {
+      "id": "L2:F2771",
+      "label": "the word \"no\" as well as words and phrases that are conceptually related to negation",
+      "reason": "Negation-related semantic cue."
+    },
+    {
+      "id": "L3:F3266",
+      "label": "the abbreviation \"No.\" for Number",
+      "reason": "Oracle says abbreviation, but fires on \"No\" here."
+    },
+    {
+      "id": "L12:F8719",
+      "label": "negation feature (pos 30)",
+      "reason": "Negation feature at hypothesis start."
+    },
+    {
+      "id": "L13:F10768",
+      "label": "negation feature (pos 30)",
+      "reason": "Negation feature at hypothesis start."
+    },
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Negation-word detector."
+    },
+    {
+      "id": "L15:F13061",
+      "label": "uses of the word \"no\" or similar negative statements and words associated with \"one\"",
+      "reason": "Negation/\"one\" shortcut feature."
+    },
+    {
+      "id": "L16:F11298",
+      "label": "no",
+      "reason": "Literal negation detector."
+    },
+    {
+      "id": "L4:F15764",
+      "label": "fragments of sentences that contain a pronoun, a verb, and the word \"one\", or words with similar meanings",
+      "reason": "Captures nobody-like negation constructions."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L5:F559",
+      "label": "words frequently related to legal conspiracies and co-conspirators",
+      "reason": "Irrelevant lexical topic feature."
+    },
+    {
+      "id": "L10:F16373",
+      "label": "bigoted statements about minority groups",
+      "reason": "Irrelevant topical detector."
+    },
+    {
+      "id": "L0:F44",
+      "label": "words starting with \"cons\" that might indicate a constitution or consolidated standard, alongside \"pride\"",
+      "reason": "Generic lexical prefix detector."
+    },
+    {
+      "id": "L0:F14574",
+      "label": "the possessive adjective \"your.\"",
+      "reason": "Structural/lexical feature only."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F14625",
+      "label": "the abbreviation \"Cons\" or \"AC\" followed by other letters",
+      "reason": "Generic abbreviation detector."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 0,
+  "n_other": 7,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "All contradiction-driving features are negation-word shortcuts; no semantic contradiction features are claimed."
+}

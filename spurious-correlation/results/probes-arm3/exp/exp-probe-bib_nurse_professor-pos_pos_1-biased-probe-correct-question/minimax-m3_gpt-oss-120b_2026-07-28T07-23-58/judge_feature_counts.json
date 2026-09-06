@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female-reference cue; gender marker, not profession."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Gender/sex reference, unrelated to profession."
+    },
+    {
+      "id": "L0:F12519",
+      "label": "the pronoun \"she\"",
+      "reason": "Explicit female pronoun."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun detector."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Gendered name feature."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women's-name reference, spurious."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Gendered pronoun cue."
+    },
+    {
+      "id": "L1:F4232",
+      "label": "the possessive pronoun \"her\"",
+      "reason": "Female possessive pronoun."
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "Gender-linked terms, not causal profession cues."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Female name detector."
+    },
+    {
+      "id": "L14:F14097",
+      "label": "occurrences of the word \"he\"",
+      "reason": "Gendered pronoun."
+    },
+    {
+      "id": "L7:F8952",
+      "label": "references to women, by direct name or pronoun",
+      "reason": "Direct female-reference feature."
+    },
+    {
+      "id": "L2:F7672",
+      "label": "mentions of women by name and relationship",
+      "reason": "Gendered relational reference."
+    },
+    {
+      "id": "L9:F3194",
+      "label": "words and phrases related to women and marriage",
+      "reason": "Gender/marriage cue."
+    },
+    {
+      "id": "L15:F12956",
+      "label": "female names and female-related words in the document.",
+      "reason": "Female-name/word feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Profession indicator; directly causal."
+    },
+    {
+      "id": "L2:F15728",
+      "label": "mentions of nurses and nursing",
+      "reason": "Nursing profession vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code feature; dismissed by oracle."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic function word, not task-specific."
+    }
+  ],
+  "n_spurious": 15,
+  "n_causal": 2,
+  "n_other": 2,
+  "spurious_fraction": 0.8823529411764706,
+  "dominant": "spurious",
+  "notes": "Oracle is dominated by gender markers; only two nursing/profession features are causal."
+}

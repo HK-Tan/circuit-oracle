@@ -1,0 +1,138 @@
+{
+  "spurious_features": [
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "Identity-group discourse, not toxic content."
+    },
+    {
+      "id": "L7:F10287",
+      "label": "mentions and terms related to LGBTQ rights",
+      "reason": "Targets protected-group rights language."
+    },
+    {
+      "id": "L7:F16171",
+      "label": "texts about homosexuality, gay marriage, and religious views on these topics",
+      "reason": "Identity-topic detector; not toxicity."
+    },
+    {
+      "id": "L7:F7263",
+      "label": "mentions of homosexuality, bisexuality, and gay culture",
+      "reason": "Detects LGBTQ identity references."
+    },
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "Protected-group topic feature."
+    },
+    {
+      "id": "L4:F15899",
+      "label": "language associated with the LGBTQ community and discussions of gender and identity",
+      "reason": "Identity-language, not abuse."
+    },
+    {
+      "id": "L4:F8645",
+      "label": "passages discussing same-sex marriage",
+      "reason": "Same-sex marriage topic detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/identity terms are spurious here."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Demographic terms, not toxicity."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-group vocabulary detector."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Social-identity topic feature."
+    },
+    {
+      "id": "L2:F585",
+      "label": "the word \"white\", often in association with \"dwarf\"",
+      "reason": "Triggered by race token \"white\"."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Race discourse, not toxicity."
+    },
+    {
+      "id": "L2:F11363",
+      "label": "colors and words like Diamond.",
+      "reason": "Matched by \"Black\" token; non-causal."
+    },
+    {
+      "id": "L2:F1644",
+      "label": "different forms of the word \"pride\"",
+      "reason": "Identity-phrase token, not abuse."
+    },
+    {
+      "id": "L2:F9528",
+      "label": "the color black",
+      "reason": "Structural/color feature, not toxic."
+    },
+    {
+      "id": "L3:F7993",
+      "label": "the word \"black\" and its plural form \"blacks\"",
+      "reason": "Race-token detector; spurious."
+    },
+    {
+      "id": "L1:F13646",
+      "label": "text discussing social justice issues",
+      "reason": "Social-issue topic, not toxicity."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe classification score (toxicity)",
+      "label": "Probe classification score (toxicity)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: Gay (pos 9)",
+      "label": "Emb: Gay (pos 9)",
+      "reason": "Embedding node, not a curated feature."
+    },
+    {
+      "id": "Emb: Pride (pos 2)",
+      "label": "Emb: Pride (pos 2)",
+      "reason": "Embedding node, not a curated feature."
+    },
+    {
+      "id": "Emb: Black (pos 1)",
+      "label": "Emb: Black (pos 1)",
+      "reason": "Embedding node, not a curated feature."
+    },
+    {
+      "id": "Emb: White (pos 17)",
+      "label": "Emb: White (pos 17)",
+      "reason": "Embedding node, not a curated feature."
+    },
+    {
+      "id": "Emb: black (pos 5)",
+      "label": "Emb: black (pos 5)",
+      "reason": "Embedding node, not a curated feature."
+    },
+    {
+      "id": "L6:F15295",
+      "label": "words and abbreviations related to HIV/AIDS and viral infections.",
+      "reason": "Oracle says unrelated to toxicity here."
+    }
+  ],
+  "n_spurious": 18,
+  "n_causal": 0,
+  "n_other": 7,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is driven by identity-topic detectors; no toxic-content features are claimed."
+}

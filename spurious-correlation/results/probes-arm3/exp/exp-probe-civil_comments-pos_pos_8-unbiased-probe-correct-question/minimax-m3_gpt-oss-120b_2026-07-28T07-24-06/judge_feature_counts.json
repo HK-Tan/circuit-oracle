@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F7214",
+      "label": "references to countries or regions associated with Islam",
+      "reason": "Religion/region identity signal, not toxic content."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Identity-group/location cue associated with Islam."
+    },
+    {
+      "id": "L8:F16294",
+      "label": "proper nouns related to the Middle East and Central Asia, and potentially to Islam",
+      "reason": "Geographic/religious identity marker."
+    },
+    {
+      "id": "L8:F5783",
+      "label": "mentions of politically charged demonstrations, specifically related to the cartoons of Prophet Mohammed",
+      "reason": "Islam-related political protest context."
+    },
+    {
+      "id": "L7:F11758",
+      "label": "words with some cultural (often middle eastern) or historical aspect that may be a name or location",
+      "reason": "Cultural/ethnic location-name signal."
+    },
+    {
+      "id": "L6:F3265",
+      "label": "religion, religious figures, and related concepts and groups",
+      "reason": "Religious identity feature."
+    },
+    {
+      "id": "L3:F12024",
+      "label": "words referencing the religion of Islam, people who practice it, and Arabic names",
+      "reason": "Religion/name identity detector."
+    },
+    {
+      "id": "L5:F11865",
+      "label": "mentions of what someone likes or dislikes about something",
+      "reason": "Not toxic semantics; generic sentiment/affect."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L12:F7779",
+      "label": "negative language denigrating groups of people",
+      "reason": "Direct toxic abuse/denigration."
+    },
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations.",
+      "reason": "Negative evaluative language linked to hostility."
+    },
+    {
+      "id": "L7:F9503",
+      "label": "sentences discussing a problem",
+      "reason": "Problem-language can signal complaint/hostility."
+    },
+    {
+      "id": "L4:F16106",
+      "label": "words and phrases related to problems, trouble, or difficulty",
+      "reason": "Trouble/problem semantics support toxic tone."
+    },
+    {
+      "id": "L2:F8909",
+      "label": "mentions of problems, defects, complaints",
+      "reason": "Complaint/problem semantics, not identity-based."
+    },
+    {
+      "id": "L4:F7647",
+      "label": "passages that describe differences",
+      "reason": "Comparative structure, identity-independent."
+    },
+    {
+      "id": "L3:F8595",
+      "label": "descriptive writing",
+      "reason": "Generic stylistic feature."
+    },
+    {
+      "id": "L3:F290",
+      "label": "phrases referencing old age, truth, or common sayings",
+      "reason": "Generic phrase/saying detector."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Purely structural stopword."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Purely structural stopword."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Purely structural stopword."
+    },
+    {
+      "id": "L0:F7253",
+      "label": "the word \"present\" or the word \"left\" or inflected forms thereof",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Generic discourse/structural feature."
+    },
+    {
+      "id": "L6:F16294",
+      "label": "",
+      "reason": "Duplicate omitted; no such id in oracle list."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F16106",
+      "label": "words and phrases related to problems, trouble, or difficulty",
+      "reason": "Already classified causal; placeholder not needed"
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 14,
+  "n_other": 1,
+  "spurious_fraction": 0.36363636363636365,
+  "dominant": "mixed",
+  "notes": "Identity/religion cues and toxic/problem language both contribute; several listed features are generic or structural."
+}

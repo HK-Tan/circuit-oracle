@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity-group terms; demographic shortcut cue."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Demographic ethnicity detector, not toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Black identity/social-justice wording; spurious."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-related lexical cue, not causal."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Race/slavery discussion cue; identity topic."
+    },
+    {
+      "id": "L6:F15948",
+      "label": "words and entities referring to gender and pronouns",
+      "reason": "Gender/pronoun detector; demographic signal."
+    },
+    {
+      "id": "L6:F5671",
+      "label": "references to people, with an emphasis on gender and family relations",
+      "reason": "Gender/family reference feature; identity-related."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F10004",
+      "label": "hyphenated words beginning with \"self\"",
+      "reason": "Captures self-hate/abuse-style toxic phrasing."
+    },
+    {
+      "id": "L1:F384",
+      "label": "the string \"ash\" or \"pund\"",
+      "reason": "Used here as toxic insult/slur substring."
+    },
+    {
+      "id": "L2:F15558",
+      "label": "forms of the word \"settle\" and the word \"married.\"",
+      "reason": "Matched toxic relationship/settling context."
+    },
+    {
+      "id": "L0:F241",
+      "label": "mentions of marriage",
+      "reason": "Toxic relationship semantics in context."
+    },
+    {
+      "id": "L1:F6576",
+      "label": "the word \"appearance\"",
+      "reason": "Structural lexical feature; part of non-identity toxicity context."
+    },
+    {
+      "id": "L1:F5220",
+      "label": "references to authors and publications",
+      "reason": "Non-identity textual structure; not demographic."
+    },
+    {
+      "id": "L2:F14801",
+      "label": "mentions of authors and their written works",
+      "reason": "Content-structure cue, not identity-based."
+    },
+    {
+      "id": "L3:F3214",
+      "label": "authors or writers",
+      "reason": "Generic reference feature; not spurious identity."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7773",
+      "label": "the word \"lower\" or \"higher\" in the context of comparisons",
+      "reason": "Purely structural/comparative feature."
+    },
+    {
+      "id": "L0:F753",
+      "label": "the word \"author\" and words related to selling and prices",
+      "reason": "Generic document/topic cue."
+    },
+    {
+      "id": "L3:F4512",
+      "label": "mentions of first names, last names, and phone numbers",
+      "reason": "Generic entity/contact detection."
+    },
+    {
+      "id": "L0:F10677",
+      "label": "words related to legal and technical documents, including claims, lawsuits, and specifications with materials",
+      "reason": "Non-toxic technical/legal topic feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure stopword/structure feature."
+    },
+    {
+      "id": "L0:F8020",
+      "label": "words related to legal or technical analysis",
+      "reason": "Generic analytical-document feature."
+    },
+    {
+      "id": "L3:F10286",
+      "label": "instances of the word 'seem' around 'to', as well as \"R&B\" in all caps",
+      "reason": "Mostly structural/topic cue."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 8,
+  "n_other": 7,
+  "spurious_fraction": 0.4666666666666667,
+  "dominant": "mixed",
+  "notes": "Identity cues and toxic-content cues both appear; some generic/document features are neither."
+}

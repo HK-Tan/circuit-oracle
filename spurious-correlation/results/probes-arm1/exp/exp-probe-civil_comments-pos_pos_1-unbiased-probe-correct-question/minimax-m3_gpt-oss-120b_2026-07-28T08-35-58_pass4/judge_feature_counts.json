@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "the word \"white\"",
+      "reason": "Identity-group marker, not toxicity."
+    },
+    {
+      "id": "L0:F7969",
+      "label": "the word \"other\"",
+      "reason": "Generic identity/reference marker."
+    },
+    {
+      "id": "L0:F4807",
+      "label": "references to Donald Trump",
+      "reason": "Entity/topic mention, not toxic content."
+    },
+    {
+      "id": "L1:F7815",
+      "label": "Trump as referenced/contacted entity",
+      "reason": "Political entity reference only."
+    },
+    {
+      "id": "L2:F14301",
+      "label": "names of people and organizations involved in politics, finance, and national security",
+      "reason": "Topic/entity names, not toxicity."
+    },
+    {
+      "id": "L4:F14582",
+      "label": "references to the White House and the US government",
+      "reason": "Government reference, identity-independent."
+    },
+    {
+      "id": "L2:F4520",
+      "label": "words related to newness or being an outsider",
+      "reason": "Identity-othering signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F11580",
+      "label": "negative language and swear words",
+      "reason": "Direct toxicity/profanity detector."
+    },
+    {
+      "id": "L2:F4053",
+      "label": "inflammatory hateful words, phrases, and names that attack groups of people.",
+      "reason": "Hate/abuse semantics."
+    },
+    {
+      "id": "L0:F12712",
+      "label": "Quality/evaluative features on 'bigot'",
+      "reason": "Evaluative toxicity cue."
+    },
+    {
+      "id": "L0:F1432",
+      "label": "Quality/evaluative features on 'bigot'",
+      "reason": "Evaluative toxicity cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7621",
+      "label": "the word \"clearly\", and to a lesser extent words associated with amounts of things",
+      "reason": "Adverb/qualifier, structural."
+    },
+    {
+      "id": "L0:F12866",
+      "label": "adverbs such as \"clearly,\" \"plainly,\" and \"as\"",
+      "reason": "Generic adverb detector."
+    },
+    {
+      "id": "L0:F4422",
+      "label": "the word \"seriously\"",
+      "reason": "Non-toxicity adverb."
+    },
+    {
+      "id": "L1:F9761",
+      "label": "language asserting that a statement is obvious, undisputed, or in accordance with a rule",
+      "reason": "Discourse qualifier."
+    },
+    {
+      "id": "L0:F164",
+      "label": "the words \"show\" and \"your\", particularly when talking about presenting something",
+      "reason": "Generic function-word feature."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F15831",
+      "label": "the word \"again\" and words associated with time",
+      "reason": "Time adverb, structural."
+    },
+    {
+      "id": "L0:F3916",
+      "label": "common short words in legal documents",
+      "reason": "Generic stopword-like feature."
+    },
+    {
+      "id": "L2:F15769",
+      "label": "the word \"tie\" in various contexts",
+      "reason": "Generic noun feature."
+    },
+    {
+      "id": "L3:F373",
+      "label": "word beginnings with the letters \"a,\" \"h,\"\"i,\" \"r,\" and \"p\" (perhaps prefixes and/or related to medical or scientific terms)",
+      "reason": "Orthographic/structural."
+    },
+    {
+      "id": "L3:F3149",
+      "label": "word beginnings with the letters \"a,\" \"h,\"\"i,\" \"r,\" and \"p\" (perhaps prefixes and/or related to medical or scientific terms)",
+      "reason": "Orthographic/structural."
+    },
+    {
+      "id": "L4:F2720",
+      "label": "mentions of a 'tie' or a similar word",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L2:F9199",
+      "label": "instances of \"ot\" in code",
+      "reason": "Substring artifact, not semantics."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 4,
+  "n_other": 13,
+  "spurious_fraction": 0.6363636363636364,
+  "dominant": "spurious",
+  "notes": "Identity/topic cues dominate; some genuine toxicity features remain."
+}

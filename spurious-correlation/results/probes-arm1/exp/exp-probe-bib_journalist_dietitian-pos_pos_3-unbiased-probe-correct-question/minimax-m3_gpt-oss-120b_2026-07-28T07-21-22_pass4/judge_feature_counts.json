@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female-reference shortcut, not profession content."
+    },
+    {
+      "id": "L1:F7244",
+      "label": "the pronoun \"she\"",
+      "reason": "Gender marker used as a shortcut."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gendered pronoun feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Oracle claims food/nutrition pathway."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Directly encodes nutrition vocabulary."
+    },
+    {
+      "id": "L4:F3047",
+      "label": "words or phrases related to exercise and physical activity",
+      "reason": "Health/activity vocabulary relevant to profession."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Diet/health terminology is profession-indicative."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F4030",
+      "label": "words related to mission statements and personal development used in career environments",
+      "reason": "Generic career-environment language."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Pure word detector, not task-relevant."
+    },
+    {
+      "id": "L0:F5829",
+      "label": "the word \"easier\" with some modifiers such as \"max\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F11814",
+      "label": "the word \"slightly\" and, to a lesser extent, \"reflected.\"",
+      "reason": "Structural/generic word detector."
+    },
+    {
+      "id": "L0:F10218",
+      "label": "the word \"lifestyle.\"",
+      "reason": "Oracle calls it a word detector, not a profession feature."
+    },
+    {
+      "id": "L0:F2845",
+      "label": "the word \"knowledge\" and words starting with the letter \"A\"",
+      "reason": "Mixed generic lexical pattern."
+    },
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Generic word detector."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 4,
+  "n_other": 7,
+  "spurious_fraction": 0.42857142857142855,
+  "dominant": "mixed",
+  "notes": "Both profession content and gender shortcuts are present; content slightly outweighs spurious."
+}

@@ -1,0 +1,69 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F10815",
+      "label": "the word \"any\".",
+      "reason": "Negation-word cue in hypothesis; shortcut for contradiction."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F1027",
+      "label": "the word \"tower\"",
+      "reason": "Content word contributing to premise-hypothesis semantic relation."
+    },
+    {
+      "id": "L0:F5494",
+      "label": "the word \"early\" often related to time",
+      "reason": "Temporal content supporting semantic alignment."
+    },
+    {
+      "id": "L0:F7513",
+      "label": "the word \"together\"",
+      "reason": "Content-bearing relation term relevant to meaning overlap."
+    },
+    {
+      "id": "L0:F4367",
+      "label": "references to centuries",
+      "reason": "Temporal content relevant to factual alignment."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Semantic topic feature tied to premise content."
+    },
+    {
+      "id": "L2:F4429",
+      "label": "mentions of the beginning of a period",
+      "reason": "Temporal-semantic feature affecting alignment."
+    },
+    {
+      "id": "L1:F11220",
+      "label": "instances of the word \"restore\" and related words",
+      "reason": "Content word linked to premise semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Purely structural/common function word."
+    },
+    {
+      "id": "L0:F8082",
+      "label": "the word \"itself\" and sometimes words ending in \"ing\"",
+      "reason": "Mostly structural morphology, not semantic relation."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Function word detector, not semantic."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 7,
+  "n_other": 3,
+  "spurious_fraction": 0.125,
+  "dominant": "causal",
+  "notes": "Only one oracle-claimed negation cue; several content features support entailment-relevant semantics."
+}

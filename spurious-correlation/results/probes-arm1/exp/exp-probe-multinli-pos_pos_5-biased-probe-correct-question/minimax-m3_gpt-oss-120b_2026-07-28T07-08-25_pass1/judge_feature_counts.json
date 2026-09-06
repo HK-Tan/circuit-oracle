@@ -1,0 +1,174 @@
+{
+  "spurious_features": [
+    {
+      "id": "L1:F423",
+      "label": "words that negate a following word or phrase.",
+      "reason": "Generic negation detector on isn't."
+    },
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Contraction fragment marking negation."
+    },
+    {
+      "id": "L2:F5627",
+      "label": "instances of the phrase \"not only\"",
+      "reason": "Fixed negation phrase, not semantic comparison."
+    },
+    {
+      "id": "L9:F12274",
+      "label": "the phrase \"not only\"",
+      "reason": "Same surface negation phrase."
+    },
+    {
+      "id": "L13:F4368",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Surface negation pattern."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation-plus-copula pattern."
+    },
+    {
+      "id": "L16:F15025",
+      "label": "usage of the word \"not\" combined with personal pronouns or related emotional or motivational language",
+      "reason": "Not detector, still lexical."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation cue, not entailment semantics."
+    },
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Contrast marker, surface cue."
+    },
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Purely structural/informal language feature."
+    },
+    {
+      "id": "L4:F15629",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Reporting verb, not entailment meaning."
+    },
+    {
+      "id": "L4:F12337",
+      "label": "speech attribution, especially \"said\"",
+      "reason": "Reporting verb, not causal."
+    },
+    {
+      "id": "L4:F2884",
+      "label": "the word \"but\" and other contrastive conjunctions and adverbs.",
+      "reason": "Contrastive conjunction detector."
+    },
+    {
+      "id": "L0:F14950",
+      "label": "instances of the word \"program\" and the word \"step\"",
+      "reason": "Lexical co-occurrence, no NLI semantics."
+    },
+    {
+      "id": "L1:F11907",
+      "label": "the word \"program\"",
+      "reason": "Content word detector, not NLI relation."
+    },
+    {
+      "id": "L0:F12483",
+      "label": "the word \"only\"",
+      "reason": "Standalone lexical cue."
+    },
+    {
+      "id": "L0:F4723",
+      "label": "the word \"only\"",
+      "reason": "Standalone lexical cue."
+    },
+    {
+      "id": "L0:F1910",
+      "label": "the phrase \"not only\"",
+      "reason": "Fixed phrase detector."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L13:F851",
+      "label": "the letter \"t\" with high activation, and also finds words indicating something negative or the end of an HTML tag.",
+      "reason": "Mostly orthographic/structural."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F12483",
+      "label": "the word \"only\"",
+      "reason": "Part of not-only contrast structure."
+    },
+    {
+      "id": "L0:F4723",
+      "label": "the word \"only\"",
+      "reason": "Part of not-only contrast structure."
+    },
+    {
+      "id": "L0:F1910",
+      "label": "the phrase \"not only\"",
+      "reason": "Contrastive construction relevant to meaning."
+    },
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Contrast relation can aid semantic alignment."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F14950",
+      "label": "instances of the word \"program\" and the word \"step\"",
+      "reason": "Lexical co-occurrence only."
+    },
+    {
+      "id": "L1:F11907",
+      "label": "the word \"program\"",
+      "reason": "Content word detector."
+    },
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Structural/style feature."
+    },
+    {
+      "id": "L4:F15629",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Reporting style cue."
+    },
+    {
+      "id": "L4:F12337",
+      "label": "speech attribution, especially \"said\"",
+      "reason": "Reporting style cue."
+    },
+    {
+      "id": "L4:F2884",
+      "label": "the word \"but\" and other contrastive conjunctions and adverbs.",
+      "reason": "Pure contrast marker."
+    },
+    {
+      "id": "L13:F851",
+      "label": "the letter \"t\" with high activation, and also finds words indicating something negative or the end of an HTML tag.",
+      "reason": "Orthographic/structural cue."
+    }
+  ],
+  "n_spurious": 21,
+  "n_causal": 4,
+  "n_other": 7,
+  "spurious_fraction": 0.84,
+  "dominant": "spurious",
+  "notes": "Oracle is dominated by negation/contrast surface cues, not premise-hypothesis semantic comparison."
+}

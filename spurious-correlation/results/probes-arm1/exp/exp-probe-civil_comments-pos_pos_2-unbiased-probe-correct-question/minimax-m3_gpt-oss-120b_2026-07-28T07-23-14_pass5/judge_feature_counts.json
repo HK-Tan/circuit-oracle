@@ -1,0 +1,108 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Identity pronoun detector, not toxic content."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Demographic token detector; spurious identity signal."
+    },
+    {
+      "id": "L0:F8673",
+      "label": "sentences that contain the word 'she' or 'he' followed by a verb",
+      "reason": "Pronoun-syntax feature; identity-linked, not causal."
+    },
+    {
+      "id": "L1:F1480",
+      "label": "the color 'white', sometimes in a context involving race",
+      "reason": "Race-linked identity feature, not toxicity semantics."
+    },
+    {
+      "id": "L2:F6983",
+      "label": "words related to race and slavery",
+      "reason": "Identity-group signal; task-spurious correlation."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "Triggered by 'White House'; lexical white detector."
+    },
+    {
+      "id": "L4:F7136",
+      "label": "the color white",
+      "reason": "Generic white-color detector; spurious identity cue."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Purely structural pronoun reference."
+    },
+    {
+      "id": "L0:F13663",
+      "label": "mentions of pregnancy and related terms",
+      "reason": "Topic-specific, not toxicity or identity."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "the word \"possession\" and the words \"white\", \"immediate\" and \"once\" regardless of context",
+      "reason": "Opaque lexical bundle; not clearly causal."
+    },
+    {
+      "id": "L2:F1139",
+      "label": "various usages of the word \"so\", as well as some instances of the word \"come\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Pure stopword/structure feature."
+    },
+    {
+      "id": "L3:F12404",
+      "label": "instances of the conditional word \"if\"",
+      "reason": "Structural conditional marker."
+    },
+    {
+      "id": "L2:F12691",
+      "label": "programming or mathematics contexts of showing, using, finding, needing, letting, and being able to do something",
+      "reason": "Domain-specific but not task-relevant."
+    },
+    {
+      "id": "L0:F10178",
+      "label": "the word \"scope,\" sometimes preceded by other words such as \"if\"",
+      "reason": "Structural/abstract language feature."
+    },
+    {
+      "id": "L0:F15499",
+      "label": "the letter \"s\" followed by a non-whitespace character",
+      "reason": "Orthographic pattern only."
+    },
+    {
+      "id": "L0:F12059",
+      "label": "words related to purpose and intent",
+      "reason": "Generic intent semantics, not toxicity."
+    },
+    {
+      "id": "L0:F310",
+      "label": "the pronouns \"she\", \"her\", and \"he\" and sometimes the word \"therefore\"",
+      "reason": "Mostly pronoun/structure detector."
+    },
+    {
+      "id": "L6:F7896",
+      "label": "sentences expressing opinions about whether something is good",
+      "reason": "Sentiment-like, not toxicity-specific."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 0,
+  "n_other": 12,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows identity-token reliance; no toxic-content detector is actually claimed."
+}

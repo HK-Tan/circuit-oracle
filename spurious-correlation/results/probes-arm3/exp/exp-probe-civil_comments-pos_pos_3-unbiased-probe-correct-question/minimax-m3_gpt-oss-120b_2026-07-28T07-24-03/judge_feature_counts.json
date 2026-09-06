@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F11220",
+      "label": "biblical names and related words, especially Rabbis with specific suffixes like \"baum\" and \"as\".",
+      "reason": "Jewish-name/identity trigger, not toxicity itself."
+    },
+    {
+      "id": "L7:F4386",
+      "label": "possibly anti-semitic or racist content related to Jewish people, genetically modified organisms, war, and the holocaust.",
+      "reason": "Identity-group/racial content shortcut; oracle treats it as identity-related."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F8407",
+      "label": "words related to antagonists and fighting",
+      "reason": "Captures hostile/violent toxicity semantics."
+    },
+    {
+      "id": "L4:F11580",
+      "label": "negative language and swear words",
+      "reason": "Direct profanity/abusive language cue."
+    },
+    {
+      "id": "L5:F7488",
+      "label": "legal language, specifically terms related to evidence and accusations",
+      "reason": "Can indicate accusations/harassment semantics."
+    },
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Oracle explicitly links it to racial inflammatory toxicity."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L1:F2107",
+      "label": "the word \"enter\", and other words and symbols common to mathematical and legal documents",
+      "reason": "Structural/legal boilerplate, not toxicity-specific."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Generic pronoun detector; structural/other."
+    },
+    {
+      "id": "L3:F9615",
+      "label": "words containing the prefix \"self-\"",
+      "reason": "Morphological pattern, not inherently toxic."
+    },
+    {
+      "id": "L0:F8938",
+      "label": "hyphens adjacent to numbers",
+      "reason": "Purely structural punctuation/number pattern."
+    },
+    {
+      "id": "L3:F735",
+      "label": "words and phrases that include the word \"self\" followed by a hyphen",
+      "reason": "Structural string pattern, not semantic toxicity."
+    },
+    {
+      "id": "L3:F13717",
+      "label": "statistical estimation terms, especially those involving \"hat\" notation",
+      "reason": "Academic notation feature, unrelated to toxicity."
+    },
+    {
+      "id": "L0:F3090",
+      "label": "JavaScript or other C-style code with member access via \".\" and \"->\"",
+      "reason": "Code syntax detector, not toxicity."
+    },
+    {
+      "id": "L0:F4336",
+      "label": "the word \"favor\" and words used in legal contexts",
+      "reason": "Legal-context lexicon; not a toxicity cue."
+    },
+    {
+      "id": "L3:F15509",
+      "label": "code diffs like those produced by `git diff`",
+      "reason": "Code-diff structure, not toxicity."
+    },
+    {
+      "id": "L3:F10471",
+      "label": "words related to academic or scientific writing",
+      "reason": "Academic prose feature, not toxicity."
+    },
+    {
+      "id": "L2:F9871",
+      "label": "latex and code snippets and mathematical symbols",
+      "reason": "Markup/symbol detector, not toxicity."
+    },
+    {
+      "id": "L3:F15447",
+      "label": "people expressing anticipation",
+      "reason": "Generic affect, not toxicity-specific."
+    },
+    {
+      "id": "L6:F11387",
+      "label": "words related to systems and self-regulation",
+      "reason": "Abstract system-language, not toxic content."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 4,
+  "n_other": 13,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Oracle supports two identity shortcuts, but mostly cites toxic-content cues and many unrelated structural features."
+}

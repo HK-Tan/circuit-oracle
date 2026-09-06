@@ -1,0 +1,63 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation cue in hypothesis."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation/absence cue."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F361",
+      "label": "words related to agriculture and ecology",
+      "reason": "Semantic topic overlap can support entailment/contradiction."
+    },
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Content word feature, not negation."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Pronoun/structure, but oracle marks causal."
+    },
+    {
+      "id": "L15:F2080",
+      "label": "the phrase \"set\" followed by articles or prepositions",
+      "reason": "Structural lexical pattern, oracle marks causal."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic lexical feature, oracle marks causal."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 5,
+  "n_causal": 5,
+  "n_other": 0,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle claims both negation shortcuts and some causal features; counts are balanced."
+}

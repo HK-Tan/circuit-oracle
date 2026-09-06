@@ -1,0 +1,209 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\"",
+      "reason": "Direct negation detector on hypothesis tokens."
+    },
+    {
+      "id": "L15:F11794",
+      "label": "negations \"not\", \"no\", and contractions with \"t\"",
+      "reason": "Same negation role as other late-layer detector."
+    },
+    {
+      "id": "L14:F6648",
+      "label": "negations \"not\", \"no\", and contractions with \"t\"",
+      "reason": "Detects negation words, independent of meaning."
+    },
+    {
+      "id": "L13:F102",
+      "label": "negations \"not\", \"no\", and contractions with \"t\"",
+      "reason": "Negation-word detector in the hypothesis."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations \"not\", \"no\", and contractions with \"t\"",
+      "reason": "Negation cue, not semantic contradiction."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Oracle says it tracks negation words."
+    },
+    {
+      "id": "L3:F3534",
+      "label": "negations in various languages",
+      "reason": "Part of negation-word sub-circuit."
+    },
+    {
+      "id": "L2:F2415",
+      "label": "frequent words indicating small quantities or proximity, or words with negative connotations",
+      "reason": "Includes negative-connotation/negation-related cues."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Pure negation-word feature."
+    },
+    {
+      "id": "L0:F10815",
+      "label": "the word \"not\"",
+      "reason": "Oracle links it to negation cueing."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Content/entity terms relevant to premise-hypothesis semantics."
+    },
+    {
+      "id": "L7:F13215",
+      "label": "terms used to describe military fortifications.",
+      "reason": "Entity/topic feature about the described object."
+    },
+    {
+      "id": "L4:F5386",
+      "label": "unknown",
+      "reason": "Oracle treats as content feature."
+    },
+    {
+      "id": "L3:F14368",
+      "label": "unknown",
+      "reason": "Content word feature on house/castle topic."
+    },
+    {
+      "id": "L3:F232",
+      "label": "unknown",
+      "reason": "Content/entity feature from oracle list."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "unknown",
+      "reason": "Content/entity feature from oracle list."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Contradiction probe score",
+      "label": "Contradiction probe score (output)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb:not",
+      "label": "Emb: not",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:does",
+      "label": "Emb: does",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:any",
+      "label": "Emb: any",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:contain",
+      "label": "Emb: contain",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:itself",
+      "label": "Emb: itself",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:castle",
+      "label": "Emb: castle",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:century",
+      "label": "Emb: century",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:early",
+      "label": "Emb: early",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:house",
+      "label": "Emb: house",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "Emb:comprises",
+      "label": "Emb: comprises",
+      "reason": "Input token embedding, not a feature."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic lexical feature; not causal per oracle."
+    },
+    {
+      "id": "L0:F12378",
+      "label": "the word \"latest.\"",
+      "reason": "Generic lexical feature, unrelated to label role."
+    },
+    {
+      "id": "L0:F15866",
+      "label": "references to one's paternal and maternal figures, as well as the pronouns 'we' and 'my'",
+      "reason": "Unrelated lexical/family reference."
+    },
+    {
+      "id": "L0:F1454",
+      "label": "mentions of specific centuries or decades",
+      "reason": "Temporal content-neutral lexical cue."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Listed above as causal."
+    },
+    {
+      "id": "L0:F4367",
+      "label": "unknown",
+      "reason": "Oracle gives no semantic role."
+    },
+    {
+      "id": "L1:F11",
+      "label": "unknown",
+      "reason": "Oracle gives no semantic role."
+    },
+    {
+      "id": "L0:F10346",
+      "label": "unknown",
+      "reason": "Oracle gives no semantic role."
+    },
+    {
+      "id": "L4:F5386",
+      "label": "unknown",
+      "reason": "Oracle gives no semantic role."
+    },
+    {
+      "id": "L3:F14368",
+      "label": "unknown",
+      "reason": "Listed above as causal."
+    },
+    {
+      "id": "L3:F232",
+      "label": "unknown",
+      "reason": "Listed above as causal."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "unknown",
+      "reason": "Listed above as causal."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 6,
+  "n_other": 23,
+  "spurious_fraction": 0.625,
+  "dominant": "mixed",
+  "notes": "Negation dominates, but oracle also lists several content/entity features."
+}

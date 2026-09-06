@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12768",
+      "label": "Lexical \"he\" detector",
+      "reason": "Pronoun identity token detector, not toxicity."
+    },
+    {
+      "id": "L0:F310",
+      "label": "Lexical \"he\" detector",
+      "reason": "Pronoun identity token detector, not toxicity."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "Lexical \"white\" detectors",
+      "reason": "Demographic-token detector for identity group."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "Lexical \"white\" detectors",
+      "reason": "Demographic-token detector for identity group."
+    },
+    {
+      "id": "L0:F13663",
+      "label": "Lexical \"white\" detectors",
+      "reason": "Demographic-token detector for identity group."
+    },
+    {
+      "id": "L0:F6548",
+      "label": "Lexical \"white\" detectors",
+      "reason": "Demographic-token detector for identity group."
+    },
+    {
+      "id": "L2:F6983",
+      "label": "Mid-layer \"white\" features (L2-L4)",
+      "reason": "Re-encoding of identity-token signal."
+    },
+    {
+      "id": "L2:F585",
+      "label": "Mid-layer \"white\" features (L2-L4)",
+      "reason": "Re-encoding of identity-token signal."
+    },
+    {
+      "id": "L3:F11768",
+      "label": "Mid-layer \"white\" features (L2-L4)",
+      "reason": "Re-encoding of identity-token signal."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "Mid-layer \"white\" features (L2-L4)",
+      "reason": "Deeper lexical identity signal, not semantics."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F1139",
+      "label": "Mid-layer \"was/If\" features (L2)",
+      "reason": "Conditional framing tied to toxic statement."
+    },
+    {
+      "id": "L2:F11539",
+      "label": "Mid-layer \"was/If\" features (L2)",
+      "reason": "Conditional framing tied to toxic statement."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: he (pos 2)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@4",
+      "label": "Emb: white (pos 4)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@3",
+      "label": "Emb: was (pos 3)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@8",
+      "label": "Emb: it (pos 8)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: If (pos 1)",
+      "reason": "Raw embedding only."
+    },
+    {
+      "id": "L0:F2458",
+      "label": "Lexical \"was\" detector",
+      "reason": "Generic structural token detector."
+    },
+    {
+      "id": "L0:F880",
+      "label": "Lexical \"it\" detector",
+      "reason": "Generic structural token detector."
+    },
+    {
+      "id": "L26:F0@0",
+      "label": "Probe logit",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 2,
+  "n_other": 8,
+  "spurious_fraction": 0.8333333333333334,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity-token detectors; only shallow conditional framing appears causal."
+}

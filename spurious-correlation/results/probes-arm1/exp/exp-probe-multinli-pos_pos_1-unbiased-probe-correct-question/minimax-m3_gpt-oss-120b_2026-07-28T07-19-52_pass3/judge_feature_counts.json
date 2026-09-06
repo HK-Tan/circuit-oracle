@@ -1,0 +1,73 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F16015",
+      "label": "the prefix \"cons\"",
+      "reason": "Detects conspiracy-related prefix, not negation."
+    },
+    {
+      "id": "L1:F13684",
+      "label": "the word \"theory\"",
+      "reason": "Content word tied to conspiracy topic."
+    },
+    {
+      "id": "L1:F8696",
+      "label": "the word \"invest\" and its derivatives",
+      "reason": "Financial/content word, not negation."
+    },
+    {
+      "id": "L1:F9693",
+      "label": "This neuron looks for gambling and card game-related terminology.",
+      "reason": "Card-game/finance content, not negation."
+    },
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "Chip semantics directly about input content."
+    },
+    {
+      "id": "L2:F15808",
+      "label": "mentions of credit cards and payment.",
+      "reason": "Financial content feature."
+    },
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Directly targets conspiracy meaning."
+    },
+    {
+      "id": "L4:F1602",
+      "label": "words or phrases that indicate intense interest or enthusiasm, often associated with hobbies or preferences",
+      "reason": "Content/pragmatic feature, not negation."
+    },
+    {
+      "id": "L7:F1062",
+      "label": "words and phrases related to credit cards, loans, spending, gambling, and money in general.",
+      "reason": "Money/finance semantics."
+    },
+    {
+      "id": "L8:F12761",
+      "label": "words associated with the QAnon conspiracy theory",
+      "reason": "Conspiracy-topic semantic feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L2:F16241",
+      "label": "partial strings of the word \"constructor\" or words ending in \"dering\"",
+      "reason": "Substring/structural detector, oracle dismisses."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 10,
+  "n_other": 2,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation-word detectors are actually claimed; circuit is content/topic-driven."
+}

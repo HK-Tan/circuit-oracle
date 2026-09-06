@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun feature; gender marker."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Pronoun detector; gender marker."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun feature; gender marker here."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\")",
+      "reason": "Male-pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Explicit male-person reference."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "Journalism/news profession indicator."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism vocabulary."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter/news reporting indicator."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Profession-specific journalism feature."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "words and phrases associated with broadcast journalism",
+      "reason": "Broadcast journalism vocabulary."
+    },
+    {
+      "id": "L7:F9521",
+      "label": "news sources and people involved in journalism",
+      "reason": "Journalism-related profession feature."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media/journalism indicator."
+    },
+    {
+      "id": "L4:F661",
+      "label": "words and phrases used when referring to reports, documentaries, and television coverage of news",
+      "reason": "News coverage vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic stopword feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "the word \"has\"",
+      "reason": "Generic stopword feature."
+    },
+    {
+      "id": "L0:F886",
+      "label": "the word \"and\"",
+      "reason": "Generic conjunction feature."
+    },
+    {
+      "id": "L0:F8061",
+      "label": "the word \"and\"",
+      "reason": "Generic conjunction feature."
+    },
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic auxiliary/stopword feature."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 8,
+  "n_other": 5,
+  "spurious_fraction": 0.38461538461538464,
+  "dominant": "causal",
+  "notes": "Reporter signals dominate, but male-pronoun features contribute substantially too."
+}

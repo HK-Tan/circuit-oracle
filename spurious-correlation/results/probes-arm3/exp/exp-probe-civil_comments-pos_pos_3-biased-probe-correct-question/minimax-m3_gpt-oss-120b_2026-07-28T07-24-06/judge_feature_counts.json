@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-group signal, not toxicity itself."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity token detector; spurious shortcut."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race-focused detector; correlates with toxic labels."
+    },
+    {
+      "id": "L0:F7460",
+      "label": "the word 'squad' and/or references to God",
+      "reason": "References identity/faith words; not toxic semantics."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Demographic/social-issue terms are shortcut features."
+    },
+    {
+      "id": "L8:F13197",
+      "label": "words related to religion and faith",
+      "reason": "Identity/faith lexicon, not causal toxicity."
+    },
+    {
+      "id": "L3:F3248",
+      "label": "words and phrases related to race and ethnic groups, especially in the context of social issues",
+      "reason": "Identity-group content, likely spurious correlation."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F648",
+      "label": "words related to discrimination against particular religious or ethnic groups",
+      "reason": "Discrimination semantics directly indicate toxicity."
+    },
+    {
+      "id": "L8:F13875",
+      "label": "negative sentiment related to reputation and betrayal of trust",
+      "reason": "Negative evaluative tone can support toxicity."
+    },
+    {
+      "id": "L8:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Prejudice semantics are task-relevant."
+    },
+    {
+      "id": "L4:F8407",
+      "label": "words related to antagonists and fighting",
+      "reason": "Threat/violence semantics are causal toxicity cues."
+    },
+    {
+      "id": "L2:F3588",
+      "label": "terms related to politics and political parties",
+      "reason": "Oracle claims genuine semantic content here."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F3983",
+      "label": "the word \"hat\"",
+      "reason": "Pure token detector; structural/noise."
+    },
+    {
+      "id": "L1:F1774",
+      "label": "text in a Latex document",
+      "reason": "Formatting feature, not task-related."
+    },
+    {
+      "id": "L0:F9369",
+      "label": "subtraction symbols",
+      "reason": "Purely structural/math token."
+    },
+    {
+      "id": "L2:F9871",
+      "label": "latex and code snippets and mathematical symbols",
+      "reason": "Formatting/code detector."
+    },
+    {
+      "id": "L1:F14516",
+      "label": "equations with symbols, especially those using \"hat\" notation",
+      "reason": "Mathematical notation only."
+    },
+    {
+      "id": "L0:F1094",
+      "label": "words and suffixes related to states and senses",
+      "reason": "Not clearly causal or spurious here."
+    },
+    {
+      "id": "L0:F11577",
+      "label": "the words \"trail\" and \"conservative,\" often in the context of political and geographical topics",
+      "reason": "Oracle dismisses as misfire."
+    },
+    {
+      "id": "L3:F13819",
+      "label": "words and phrases about interconnectedness, self-similarity, and things holding together.",
+      "reason": "Non-toxicity semantic field; irrelevant."
+    },
+    {
+      "id": "L4:F10004",
+      "label": "hyphenated words beginning with \"self\"",
+      "reason": "Structural prefix/punctuation feature."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 5,
+  "n_other": 9,
+  "spurious_fraction": 0.5833333333333334,
+  "dominant": "spurious",
+  "notes": "Identity-term shortcuts dominate; a smaller set of true toxicity-related features also appears."
+}

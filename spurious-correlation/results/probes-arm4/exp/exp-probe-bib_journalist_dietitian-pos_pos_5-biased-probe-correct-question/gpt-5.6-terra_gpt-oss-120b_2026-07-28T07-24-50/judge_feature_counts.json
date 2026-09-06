@@ -1,0 +1,64 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F15382",
+      "label": "mentions of a female person.",
+      "reason": "Female-person detector on Her."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female-reference detector on Her/She."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun/possessive detector; gendered here."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Female-subject mention detector."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women-name/accomplishment detector on Heather."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Direct nutrition/diet profession evidence."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Generic name detector, not profession-specific."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Structural name/title pattern."
+    },
+    {
+      "id": "L16:F6025",
+      "label": "capitalized first names, sometimes followed by last names",
+      "reason": "Generic capitalized-name feature."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Broad biographical name feature."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 1,
+  "n_other": 4,
+  "spurious_fraction": 0.8333333333333334,
+  "dominant": "spurious",
+  "notes": "Female-reference circuitry dominates; one genuine nutrition signal is present."
+}

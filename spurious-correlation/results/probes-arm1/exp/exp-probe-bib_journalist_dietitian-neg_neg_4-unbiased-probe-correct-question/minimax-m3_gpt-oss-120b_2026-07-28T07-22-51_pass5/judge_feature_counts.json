@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Gender pronoun proxy signal."
+    },
+    {
+      "id": "L0:F3007",
+      "label": "the word \"middle\", and sometimes the word \"character\", and \"camp\"",
+      "reason": "Topical phrase, not profession."
+    },
+    {
+      "id": "L2:F12901",
+      "label": "the phrase \"Middle East\"",
+      "reason": "Geographic/topic cue, not causal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism/profession indicator."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Occupation-specific reporting vocabulary."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media/journalism profession signal."
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Publication-role profession terminology."
+    },
+    {
+      "id": "L3:F10489",
+      "label": "the word \"Institute\"",
+      "reason": "Workplace/organization lexical cue."
+    },
+    {
+      "id": "L1:F4459",
+      "label": "mentions of research institutes",
+      "reason": "Institutional workplace terminology."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe direction",
+      "reason": "Structural output component."
+    },
+    {
+      "id": "L0:F7124",
+      "label": "the word \"at\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F10881",
+      "label": "the word \"coverage\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F9297",
+      "label": "mentions of government ministries and ministers.",
+      "reason": "Oracle-dismissed / irrelevant here."
+    },
+    {
+      "id": "L0:F15661",
+      "label": "the word \"spin\"",
+      "reason": "Generic unrelated token."
+    },
+    {
+      "id": "L0:F6484",
+      "label": "the word \"sky\"",
+      "reason": "Generic unrelated token."
+    },
+    {
+      "id": "L0:F2348",
+      "label": "the word \"rapid,\" and words related to the middle of something",
+      "reason": "Mixed generic/irrelevant phrasing."
+    },
+    {
+      "id": "L0:F1229",
+      "label": "the word \"shake,\" and words related to the middle of something",
+      "reason": "Generic structural/lexical feature."
+    },
+    {
+      "id": "L1:F1445",
+      "label": "terms related to the military, especially vehicles and weapons",
+      "reason": "Unrelated topical domain."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 6,
+  "n_other": 9,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Writer/journalism signals dominate, with some gender and topical spurious cues."
+}

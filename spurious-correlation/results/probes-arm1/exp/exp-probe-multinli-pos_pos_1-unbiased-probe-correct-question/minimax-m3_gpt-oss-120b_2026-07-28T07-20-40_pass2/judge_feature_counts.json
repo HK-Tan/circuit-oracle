@@ -1,0 +1,168 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L8:F12761",
+      "label": "words associated with the QAnon conspiracy theory",
+      "reason": "Conspiracy-keyword concept tied to label-relevant content."
+    },
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Conspiracy semantic concept, not negation."
+    },
+    {
+      "id": "L1:F13684",
+      "label": "the word \"theory\"",
+      "reason": "Part of conspiracy/theory meaning, content-relevant."
+    },
+    {
+      "id": "L4:F1602",
+      "label": "words or phrases that indicate intense interest or enthusiasm, often associated with hobbies or preferences",
+      "reason": "Hobbyist/enthusiasm concept; not spurious negation."
+    },
+    {
+      "id": "L7:F1062",
+      "label": "words and phrases related to credit cards, loans, spending, gambling, and money in general.",
+      "reason": "Content concept about money/cards in prompt."
+    },
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "Semiconductor chip meaning is content-relevant."
+    },
+    {
+      "id": "L1:F8696",
+      "label": "the word \"invest\" and its derivatives",
+      "reason": "Investment semantics, not structural."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Functional word; purely structural cue."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Functional word; purely structural cue."
+    },
+    {
+      "id": "L0:F16015",
+      "label": "the prefix \"cons\"",
+      "reason": "Surface prefix detector, not semantic reasoning."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F3937",
+      "label": "the phrase \"from scratch\", sometimes activating on words nearby",
+      "reason": "Generic low-content lexical cue."
+    },
+    {
+      "id": "L0:F15958",
+      "label": "the word \"tomorrow\"",
+      "reason": "Generic content-irrelevant lexical feature."
+    },
+    {
+      "id": "L0:F4802",
+      "label": "large blocks of whitespace and numbers",
+      "reason": "Pure formatting feature."
+    },
+    {
+      "id": "L0:F12377",
+      "label": "large gaps of whitespace",
+      "reason": "Pure formatting feature."
+    },
+    {
+      "id": "L0:F4287",
+      "label": "words or phrases that relate to marketing or advertising",
+      "reason": "Dismissed as generic, low semantic content."
+    },
+    {
+      "id": "L0:F3937",
+      "label": "the phrase \"from scratch\", sometimes activating on words nearby",
+      "reason": "Generic, low semantic content."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic, low semantic content."
+    },
+    {
+      "id": "L0:F4287",
+      "label": "words or phrases that relate to marketing or advertising",
+      "reason": "Generic, low semantic content."
+    },
+    {
+      "id": "L0:F15958",
+      "label": "the word \"tomorrow\"",
+      "reason": "Generic, low semantic content."
+    },
+    {
+      "id": "L0:F3937",
+      "label": "the phrase \"from scratch\", sometimes activating on words nearby",
+      "reason": "Generic, low semantic content."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "contradiction classifier",
+      "reason": "Probe output node, not a feature."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Functional word; purely structural cue."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Functional word; purely structural cue."
+    },
+    {
+      "id": "L0:F16015",
+      "label": "the prefix \"cons\"",
+      "reason": "Surface prefix detector, not semantic reasoning."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F3937",
+      "label": "the phrase \"from scratch\", sometimes activating on words nearby",
+      "reason": "Generic low-content lexical cue."
+    },
+    {
+      "id": "L0:F15958",
+      "label": "the word \"tomorrow\"",
+      "reason": "Generic content-irrelevant lexical feature."
+    },
+    {
+      "id": "L0:F4802",
+      "label": "large blocks of whitespace and numbers",
+      "reason": "Pure formatting feature."
+    },
+    {
+      "id": "L0:F12377",
+      "label": "large gaps of whitespace",
+      "reason": "Pure formatting feature."
+    },
+    {
+      "id": "L0:F4287",
+      "label": "words or phrases that relate to marketing or advertising",
+      "reason": "Dismissed as generic, low semantic content."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 21,
+  "n_other": 10,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation detectors claimed; main signals are conspiracy/money/chip semantics plus structural features."
+}

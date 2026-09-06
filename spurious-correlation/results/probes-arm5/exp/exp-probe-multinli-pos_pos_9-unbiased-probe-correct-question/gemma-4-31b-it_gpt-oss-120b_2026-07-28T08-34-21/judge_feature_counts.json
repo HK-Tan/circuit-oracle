@@ -1,0 +1,43 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L2:F8776",
+      "label": "words related to finance and property law",
+      "reason": "Lexical content feature, not negation or generic structure."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Pure word detector; structural/lexical only."
+    },
+    {
+      "id": "L1:F12253",
+      "label": "the word 'menu'",
+      "reason": "Pure word detector; structural/lexical only."
+    },
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Generic lexical detector, not semantic relation."
+    },
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Specific lexical detector, not semantic relation."
+    },
+    {
+      "id": "L0:F8046",
+      "label": "the word \"will.\"",
+      "reason": "Generic word detector, not semantic relation."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 1,
+  "n_other": 5,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle-cited circuit is mostly lexical detectors; only L2:F8776 fits causal content features."
+}

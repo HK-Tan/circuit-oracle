@@ -1,0 +1,189 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Negation contraction detector in 'haven't'."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Causal connector; content-neutral support for relation."
+    },
+    {
+      "id": "L0:F12862",
+      "label": "the word \"tournament\" and related words such as \"winning\", but not always",
+      "reason": "Sports-event lexical feature tied to task content."
+    },
+    {
+      "id": "L0:F8083",
+      "label": "the word \"double\" and surrounding words when numbers are also present",
+      "reason": "Lexical/syntactic content feature, not negation."
+    },
+    {
+      "id": "L0:F5912",
+      "label": "\"year\" but also sometimes finds related words that include \"day\", \"living\", or \"sold\"",
+      "reason": "Temporal lexical feature relevant to sentence meaning."
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Discourse marker, content-neutral lexical cue."
+    },
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Discourse/agreement cue, not negation."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "Generic conversational structure feature."
+    },
+    {
+      "id": "L3:F14620",
+      "label": "the word \"well\" and conjunctions like \"and\"",
+      "reason": "Conversation/connector feature, not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0",
+      "label": "Probe direction output (contradiction classifier)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "L0:F0@25",
+      "label": "because",
+      "reason": "Duplicate embed node entry."
+    },
+    {
+      "id": "L0:F0@8",
+      "label": "tournament",
+      "reason": "Duplicate embed node entry."
+    },
+    {
+      "id": "L0:F0@6",
+      "label": "double / A",
+      "reason": "Duplicate embed node entry."
+    },
+    {
+      "id": "L0:F0@14",
+      "label": "now / right",
+      "reason": "Temporal marker; not clearly causal."
+    },
+    {
+      "id": "L0:F0@24",
+      "label": "year / this",
+      "reason": "Duplicate embed node entry."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "well / yeah",
+      "reason": "Duplicate embed node entry."
+    },
+    {
+      "id": "L1:F177",
+      "label": "the word \"double\" and words that begin with \"multi\" or \"doubly\"",
+      "reason": "Structural lexical pattern, not semantic causality."
+    },
+    {
+      "id": "L3:F12849",
+      "label": "words or phrases that include the word \"double\", or contain a hyphen",
+      "reason": "Purely structural/lexical pattern."
+    },
+    {
+      "id": "L3:F9770",
+      "label": "technical and scientific writing about neuroscience and chemistry, possibly about calcium",
+      "reason": "Off-topic domain detector."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Off-topic domain detector."
+    },
+    {
+      "id": "L4:F3730",
+      "label": "text relating to lithium-ion batteries",
+      "reason": "Off-topic domain detector."
+    },
+    {
+      "id": "L0:F8659",
+      "label": "the word \"foundation\" in different contexts, including religious, legal, and abstract senses.",
+      "reason": "Off-topic lexical detector."
+    },
+    {
+      "id": "L6:F11557",
+      "label": "frequently used words such as conjunctions, pronouns, or discourse markers",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L3:F4735",
+      "label": "references to multi-well plates and software used in scientific experiments",
+      "reason": "Off-topic scientific text detector."
+    },
+    {
+      "id": "L4:F10592",
+      "label": "conjunctions, sentence fragments, and legal documents",
+      "reason": "Generic structural pattern."
+    },
+    {
+      "id": "L4:F3528",
+      "label": "code related to the Swift Protobuf library",
+      "reason": "Off-topic code detector."
+    },
+    {
+      "id": "L1:F2623",
+      "label": "words in the context of someone talking or expressing opinions.",
+      "reason": "Generic conversational context."
+    },
+    {
+      "id": "L3:F3927",
+      "label": "characters from various non-English languages, including some Indic scripts",
+      "reason": "Script detector, not task-semantic."
+    },
+    {
+      "id": "L2:F15133",
+      "label": "capital letters, especially those that are used as labels on figures, tables, experimental conditions, or chemical compounds",
+      "reason": "Purely structural capitalization feature."
+    },
+    {
+      "id": "L4:F279",
+      "label": "the pronoun \"we\" or \"yeah\" in a sentence",
+      "reason": "Generic discourse/pronoun feature."
+    },
+    {
+      "id": "L4:F15162",
+      "label": "legal jargon, especially references to plaintiffs, defendants, courts, and appellants",
+      "reason": "Off-topic domain detector."
+    },
+    {
+      "id": "L4:F5458",
+      "label": "discourse markers such as \"well\"",
+      "reason": "Generic discourse marker feature."
+    },
+    {
+      "id": "L0:F1636",
+      "label": "the letter A",
+      "reason": "Purely structural single-letter detector."
+    },
+    {
+      "id": "L3:F7449",
+      "label": "the word \"now\" often in the context of describing current situations",
+      "reason": "Temporal word detector, not specific causality."
+    },
+    {
+      "id": "L3:F1438",
+      "label": "the word \"now\"",
+      "reason": "Purely lexical structural feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 8,
+  "n_other": 26,
+  "spurious_fraction": 0.1111111111111111,
+  "dominant": "causal",
+  "notes": "One clear negation cue plus several causal/discourse lexical features; many listed features are other/off-topic."
+}

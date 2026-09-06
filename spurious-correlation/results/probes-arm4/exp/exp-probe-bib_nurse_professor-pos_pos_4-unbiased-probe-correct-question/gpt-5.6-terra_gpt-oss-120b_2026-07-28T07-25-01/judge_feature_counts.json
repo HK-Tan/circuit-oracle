@@ -1,0 +1,87 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Emb: Nursing (pos 18)",
+      "label": "Nursing",
+      "reason": "Direct profession token; nursing indicator."
+    },
+    {
+      "id": "Emb: nurse (pos 32)",
+      "label": "nurse",
+      "reason": "Direct profession token; nursing role."
+    },
+    {
+      "id": "Emb: practitioner (pos 33)",
+      "label": "practitioner",
+      "reason": "Healthcare profession term."
+    },
+    {
+      "id": "Emb: acute (pos 30)",
+      "label": "acute",
+      "reason": "Medical/healthcare context."
+    },
+    {
+      "id": "Emb: graduated (pos 2)",
+      "label": "graduated",
+      "reason": "Education/biography cue."
+    },
+    {
+      "id": "L0:F5038",
+      "label": "the word \"graduated\" or variations of it",
+      "reason": "Education wording detector."
+    },
+    {
+      "id": "L4:F9036",
+      "label": "words and abbreviations associated with healthcare",
+      "reason": "Healthcare/practitioner context."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "words related to healthcare professionals and medical fields",
+      "reason": "Medical profession terminology."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words related to counseling, therapy, social work, and academic degree programs",
+      "reason": "Education/professional wording."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing-profession detector."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Nursing/healthcare detector."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Medical-profession concept."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Nurse-role representation."
+    },
+    {
+      "id": "L8:F9619",
+      "label": "words and phrases related to medical treatment",
+      "reason": "Medical-treatment context."
+    },
+    {
+      "id": "Probe classification score",
+      "label": "probe classification score",
+      "reason": "Output score node."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 15,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows profession/education circuitry; no gender-marker feature is actually claimed."
+}

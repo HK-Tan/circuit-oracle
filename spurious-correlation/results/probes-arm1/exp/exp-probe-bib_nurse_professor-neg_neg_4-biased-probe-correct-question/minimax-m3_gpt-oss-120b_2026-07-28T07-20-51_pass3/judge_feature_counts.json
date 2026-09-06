@@ -1,0 +1,143 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: 'He'",
+      "reason": "Male pronoun token."
+    },
+    {
+      "id": "L0:F0@13",
+      "label": "Emb: ' His'",
+      "reason": "Possessive male pronoun token."
+    },
+    {
+      "id": "L0:F0@35",
+      "label": "Emb: ' He'",
+      "reason": "Male pronoun token."
+    },
+    {
+      "id": "L0:F0@37",
+      "label": "Emb: ' His'",
+      "reason": "Possessive male pronoun token."
+    },
+    {
+      "id": "L0:F0@55",
+      "label": "Emb: ' His'",
+      "reason": "Possessive male pronoun token."
+    },
+    {
+      "id": "L0:F1069@1",
+      "label": "Early-layer male pronoun features",
+      "reason": "Detects male pronoun references."
+    },
+    {
+      "id": "L0:F2994@37",
+      "label": "Early-layer male pronoun features",
+      "reason": "Detects 'his' and 'he'."
+    },
+    {
+      "id": "L0:F2994@55",
+      "label": "Early-layer male pronoun features",
+      "reason": "Detects 'his' and 'he'."
+    },
+    {
+      "id": "L2:F9301@1",
+      "label": "Mid-layer male pronoun detectors",
+      "reason": "Male pronoun detection."
+    },
+    {
+      "id": "L4:F14796@1",
+      "label": "Mid-layer male pronoun detectors",
+      "reason": "Detects 'he' or 'him'."
+    },
+    {
+      "id": "L4:F4315@13",
+      "label": "Mid-layer male pronoun detectors",
+      "reason": "Associated with 'his' pronouns."
+    },
+    {
+      "id": "L6:F12990@13",
+      "label": "Mid-layer male pronoun/title feature",
+      "reason": "Male pronouns and titles."
+    },
+    {
+      "id": "L6:F12990@35",
+      "label": "Mid-layer male pronoun/title feature",
+      "reason": "Male pronouns and titles."
+    },
+    {
+      "id": "L6:F12990@2",
+      "label": "Mid-layer male pronoun/title feature",
+      "reason": "Male pronouns and titles."
+    },
+    {
+      "id": "L6:F12990@1",
+      "label": "Mid-layer male pronoun/title feature",
+      "reason": "Male pronouns and titles."
+    },
+    {
+      "id": "L7:F14893@1",
+      "label": "Late-layer pronoun/gender features",
+      "reason": "Pronoun aggregator."
+    },
+    {
+      "id": "L7:F14893@13",
+      "label": "Late-layer pronoun/gender features",
+      "reason": "Pronoun aggregator."
+    },
+    {
+      "id": "L7:F14946@1",
+      "label": "Late-layer pronoun/gender features",
+      "reason": "Pronoun/gender feature."
+    },
+    {
+      "id": "L7:F14946@2",
+      "label": "Late-layer pronoun/gender features",
+      "reason": "Pronoun/gender feature."
+    },
+    {
+      "id": "L13:F6622@2",
+      "label": "Late-layer pronoun/gender features",
+      "reason": "Pronoun aggregation."
+    },
+    {
+      "id": "L13:F6622@35",
+      "label": "Late-layer pronoun/gender features",
+      "reason": "Pronoun aggregation."
+    },
+    {
+      "id": "L18:F14743@35",
+      "label": "He",
+      "reason": "Male pronoun token."
+    },
+    {
+      "id": "L0:F2848@5",
+      "label": "Early-layer lexical features",
+      "reason": "Generic word 'of'."
+    },
+    {
+      "id": "L0:F11024@4",
+      "label": "Early-layer lexical features",
+      "reason": "Generic lexical feature, not profession-specific."
+    },
+    {
+      "id": "L0:F8658@2",
+      "label": "Early-layer lexical features",
+      "reason": "Generic lexical feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F0@4",
+      "label": "Emb: ' Director'",
+      "reason": "Profession/job title."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 25,
+  "n_causal": 1,
+  "n_other": 0,
+  "spurious_fraction": 0.9615384615384616,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly gender-pronoun driven; only 'Director' is profession-related."
+}

@@ -1,0 +1,43 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct masculine pronoun detector."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun/possessive representation; gendered trigger."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Explicit masculine pronoun feature."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Person-reference/pronoun feature; gendered context."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "His",
+      "reason": "Input token, not a feature class."
+    },
+    {
+      "id": "Output: profession classification probe score",
+      "label": "profession classification probe score",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 2,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by masculine pronoun/person-reference features; no profession evidence is claimed."
+}

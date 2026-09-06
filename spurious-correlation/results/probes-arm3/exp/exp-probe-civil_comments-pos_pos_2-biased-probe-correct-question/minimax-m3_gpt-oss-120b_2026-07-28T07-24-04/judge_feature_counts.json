@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Identity-group terms, not toxicity semantics."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Demographic vocabulary; spurious identity signal."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/social-justice identity terms, not causal toxicity."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Topic on race/slavery; identity-related shortcut."
+    },
+    {
+      "id": "L3:F3248",
+      "label": "words and phrases related to race and ethnic groups, especially in the context of social issues",
+      "reason": "Ethnic-group terms; spurious demographic cue."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic-group detector, not toxic content."
+    },
+    {
+      "id": "L11:F1913",
+      "label": "emotional, controversial, or political issues especially relating to race",
+      "reason": "Race-related controversy marker; identity-based."
+    },
+    {
+      "id": "L7:F5125",
+      "label": "mentions of demographics",
+      "reason": "Generic demographic mentions; spurious signal."
+    },
+    {
+      "id": "L9:F1807",
+      "label": "adjectives and nationalities related to people or food",
+      "reason": "Nationality/identity terms, not toxicity."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F2458",
+      "label": "the word \"was\" and sometimes \"were.\"",
+      "reason": "Structural verb feature only."
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Generic pronoun/discourse structure."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Purely structural conjunction."
+    },
+    {
+      "id": "L4:F2398",
+      "label": "verbs conjugated in past tenses, especially imperfect and past historic, in French",
+      "reason": "Language morphology, not toxicity semantics."
+    },
+    {
+      "id": "L1:F8685",
+      "label": "the pronoun \"he\"",
+      "reason": "Generic pronoun feature."
+    },
+    {
+      "id": "L6:F5941",
+      "label": "mentions of people",
+      "reason": "Broad person-reference feature; not toxic semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F585",
+      "label": "the word \"white\", often in association with \"dwarf\"",
+      "reason": "Oracle's example is non-toxic; not clearly toxicity causal."
+    },
+    {
+      "id": "L2:F1708",
+      "label": "mentions of colors",
+      "reason": "Color words are not toxicity-related."
+    },
+    {
+      "id": "L11:F11019",
+      "label": "words and short phrases associated with multiplayer online games and religion",
+      "reason": "Dismissed/non-toxic topic feature."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 6,
+  "n_other": 3,
+  "spurious_fraction": 0.6,
+  "dominant": "spurious",
+  "notes": "Identity-group detectors dominate; remaining claimed causal features are mostly structural."
+}

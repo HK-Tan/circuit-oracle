@@ -1,0 +1,38 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Research/profession-related work term."
+    },
+    {
+      "id": "L0:F61",
+      "label": "the word \"stories\" sometimes along with apostrophes and common names.",
+      "reason": "Narrative/profession-related vocabulary."
+    },
+    {
+      "id": "L1:F7449",
+      "label": "instances of the word \"representation\"",
+      "reason": "Career-relevant verbal content, not gender."
+    },
+    {
+      "id": "L1:F14812",
+      "label": "references to stories, chapters, and other narrative elements",
+      "reason": "Journalist/writer profession indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe Score (Profession)",
+      "label": "",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 4,
+  "n_other": 1,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle cites profession indicators only; no gender-marker evidence appears."
+}

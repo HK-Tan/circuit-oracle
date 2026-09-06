@@ -1,0 +1,147 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Emb: ' Nursing'",
+      "label": "nursing profession token",
+      "reason": "Direct profession indicator"
+    },
+    {
+      "id": "Emb: ' nurse'",
+      "label": "nursing profession token",
+      "reason": "Direct profession indicator"
+    },
+    {
+      "id": "Emb: ' nurse'",
+      "label": "nursing profession token",
+      "reason": "Direct profession indicator"
+    },
+    {
+      "id": "Emb: ' practitioner'",
+      "label": "healthcare practitioner token",
+      "reason": "Profession-specific term"
+    },
+    {
+      "id": "Emb: ' operating'",
+      "label": "medical environment token",
+      "reason": "Healthcare context cue"
+    },
+    {
+      "id": "Emb: ' room'",
+      "label": "medical environment token",
+      "reason": "Healthcare context cue"
+    },
+    {
+      "id": "Emb: ' graduated'",
+      "label": "graduated",
+      "reason": "Academic/career indicator"
+    },
+    {
+      "id": "Emb: ' University'",
+      "label": "university",
+      "reason": "Education/career indicator"
+    },
+    {
+      "id": "L1:F1494",
+      "label": "early-layer nursing profession detector",
+      "reason": "Detects nursing profession"
+    },
+    {
+      "id": "L2:F10852",
+      "label": "early-layer nursing profession detector",
+      "reason": "Detects nursing profession"
+    },
+    {
+      "id": "L2:F2589",
+      "label": "early-layer nursing profession detector",
+      "reason": "Detects nursing profession"
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Nursing profession signal"
+    },
+    {
+      "id": "L4:F9036",
+      "label": "words and abbreviations associated with healthcare",
+      "reason": "Healthcare vocabulary"
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words and abbreviations associated with healthcare",
+      "reason": "Healthcare vocabulary"
+    },
+    {
+      "id": "L4:F4665",
+      "label": "medical environments, treatments, personnel, and facilities",
+      "reason": "Medical setting signal"
+    },
+    {
+      "id": "L5:F1275",
+      "label": "healthcare-related feature",
+      "reason": "Medical/profession context"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing profession"
+    },
+    {
+      "id": "L6:F4490",
+      "label": "healthcare-related feature",
+      "reason": "Medical/profession context"
+    },
+    {
+      "id": "L7:F15132",
+      "label": "references to medical practices",
+      "reason": "Profession-specific practice"
+    },
+    {
+      "id": "L7:F210",
+      "label": "healthcare-related feature",
+      "reason": "Medical context"
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Nursing/healthcare signal"
+    },
+    {
+      "id": "L8:F16339",
+      "label": "healthcare-related feature",
+      "reason": "Medical context"
+    },
+    {
+      "id": "L8:F9619",
+      "label": "words and phrases related to medical treatment",
+      "reason": "Medical treatment cue"
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Profession/medicine related"
+    },
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Nurse-management profession"
+    },
+    {
+      "id": "L15:F15159",
+      "label": "words related to medicine and healthcare",
+      "reason": "Medical context"
+    },
+    {
+      "id": "Output Logit (probe direction)",
+      "label": "probe output",
+      "reason": "Output node, not a feature"
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 27,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle claims only nursing/healthcare signals; no gender markers are actually traced."
+}

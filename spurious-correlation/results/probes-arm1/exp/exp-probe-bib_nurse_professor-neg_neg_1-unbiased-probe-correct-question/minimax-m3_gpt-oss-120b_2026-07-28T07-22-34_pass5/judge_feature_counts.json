@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun cue; gender marker."
+    },
+    {
+      "id": "L2:F3877",
+      "label": "references to \"His\" and religious figures or concepts",
+      "reason": "Contains 'His'; male-pronoun-associated feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "words related to academic research",
+      "reason": "Research vocabulary indicates profession/academia."
+    },
+    {
+      "id": "L2:F1621",
+      "label": "information about people's education and career",
+      "reason": "Education/career signal relevant to profession."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Scientific/technical vocabulary proxy."
+    },
+    {
+      "id": "L5:F12330",
+      "label": "mentions of \"College\" along with a preceding place name like \"County\" or \"Valley\"",
+      "reason": "College/university context; education signal."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Degree indicator directly tied to profession."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "PhD/BS degree terminology."
+    },
+    {
+      "id": "L3:F4213",
+      "label": "mentions of degree qualifications or awards",
+      "reason": "Qualification/degree evidence."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "University/degree profession marker."
+    },
+    {
+      "id": "L19:F2496",
+      "label": "mentions of universities and degrees",
+      "reason": "University/degree education signal."
+    },
+    {
+      "id": "L17:F11003",
+      "label": "university",
+      "reason": "Direct education/institution cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: 'His' (pos 1)",
+      "label": "embedding token",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: ' research' (pos 2)",
+      "label": "embedding token",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: ' interests' (pos 3)",
+      "label": "embedding token",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: ' BS' (pos 17)",
+      "label": "embedding token",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: ' PhD' (pos 27)",
+      "label": "embedding token",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: ' from' (pos 21)",
+      "label": "embedding token",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: ' from' (pos 31)",
+      "label": "embedding token",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Probe direction (output)",
+      "label": "probe direction",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 10,
+  "n_other": 8,
+  "spurious_fraction": 0.16666666666666666,
+  "dominant": "causal",
+  "notes": "Most claimed features are education/degree signals; only male-pronoun features are spurious."
+}

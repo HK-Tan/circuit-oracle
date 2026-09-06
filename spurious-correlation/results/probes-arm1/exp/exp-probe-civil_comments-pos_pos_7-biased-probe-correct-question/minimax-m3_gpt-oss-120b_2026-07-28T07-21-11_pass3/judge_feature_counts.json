@@ -1,0 +1,88 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: Black (pos 1)",
+      "reason": "Identity token; race/group signal."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: Pride (pos 2)",
+      "reason": "Identity-frame token; LGBTQ+ cue."
+    },
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: Gay (pos 9)",
+      "reason": "Identity-group token; LGBTQ+ cue."
+    },
+    {
+      "id": "L0:F0@17",
+      "label": "Emb: White (pos 17)",
+      "reason": "Identity token; race/group signal."
+    },
+    {
+      "id": "L0:F0@5",
+      "label": "Emb: black (pos 5)",
+      "reason": "Identity token; race/color cue."
+    },
+    {
+      "id": "L2:F13158@17, L2:F13158@5",
+      "label": "Race/ethnicity words feature (promoted: ethnic, queer, LGBT, Hispanic...) \u2014 reads 'White', ' black' embeddings",
+      "reason": "Detects demographic/identity words."
+    },
+    {
+      "id": "L3:F13061@2",
+      "label": "Race/gender/social-issues words (broad) \u2014 reads 'Black' + ' Pride' embeddings",
+      "reason": "Identity/social-issues detector."
+    },
+    {
+      "id": "L4:F117@17",
+      "label": "Race/racism/Black-focused terms (promoted: racist, racism, racial) \u2014 reads 'White' embedding",
+      "reason": "Identity/race-focused semantic feature."
+    },
+    {
+      "id": "L4:F15899@9",
+      "label": "LGBTQ+ identity language (promoted: gender, transgender, LGBTQ) \u2014 reads 'Gay' + ' Pride' embeddings",
+      "reason": "Identity-group language detector."
+    },
+    {
+      "id": "L6:F6085@9",
+      "label": "Homosexuality / same-sex marriage text \u2014 reads 'Gay' + ' Pride' embeddings",
+      "reason": "Identity-topic discussion feature."
+    },
+    {
+      "id": "L6:F3902@17",
+      "label": "Race/ethnicity terms (promoted: minorities, ethnicity) \u2014 reads 'White' embedding",
+      "reason": "Demographic terminology detector."
+    },
+    {
+      "id": "L8:F15771@9, L8:F15771@13, L8:F15771@2",
+      "label": "Late-layer LGBTQ+ discussion (same-sex marriage, adoption) \u2014 STRONGEST DRIVER (de=0.32)",
+      "reason": "Identity-topic discussion dominates output."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L1:F9113@1",
+      "label": "Race/slavery discussion feature \u2014 INHIBITORY to probe (suppresses 'Black', 'black' tokens in promoted-tokens list)",
+      "reason": "Identity-related but suppressive, not causal toxicity."
+    },
+    {
+      "id": "L2:F11363@1",
+      "label": "Color/black-attribute feature (promoted: black, blue, yellow, pink...) \u2014 strongly driven by literal 'Black' token embedding",
+      "reason": "Color/word feature, not toxicity."
+    },
+    {
+      "id": "L2:F9528@1",
+      "label": "Color-black feature \u2014 strongly INHIBITORY (suppressed tokens are 'Black','black'; activated by Black embedding but pushes away from probe)",
+      "reason": "Structural/color feature, inhibitory."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 0,
+  "n_other": 3,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity-group and LGBTQ+/race discussion features; no toxic-content features are claimed."
+}

@@ -1,0 +1,88 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Gendered pronoun pathway from His/him."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Directly detects gendered pronouns."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Pronoun/name detector, used on gendered context."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Explicit masculine pronoun feature."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-pronoun/titles detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Single masculine pronoun feature."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun-based gender shortcut."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Aggregates masculine pronoun mentions."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Gender/social-role feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism/profession vocabulary."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Direct reporter/journalist signal."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Professional journalism context."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "words and phrases associated with broadcast journalism",
+      "reason": "Broadcast journalism vocabulary."
+    },
+    {
+      "id": "L11:F5996",
+      "label": "references to news publications and their staff.",
+      "reason": "Newsroom/staff profession signal."
+    },
+    {
+      "id": "L8:F8437",
+      "label": "content related to film festivals and production, particularly documentary films, and the recognition they receive.",
+      "reason": "Content-domain professional media signal."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 9,
+  "n_causal": 6,
+  "n_other": 0,
+  "spurious_fraction": 0.6,
+  "dominant": "spurious",
+  "notes": "Both paths exist, but gendered pronoun features dominate the circuit."
+}

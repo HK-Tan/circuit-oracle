@@ -1,0 +1,43 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Semantic conspiracy content, not negation."
+    },
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "Semantic chip/device content, task-relevant only here."
+    },
+    {
+      "id": "L7:F1062",
+      "label": "words and phrases related to credit cards, loans, spending, gambling, and money in general.",
+      "reason": "Unrelated content; oracle doesn't link it to negation."
+    },
+    {
+      "id": "L0:F16015",
+      "label": "the prefix \"cons\"",
+      "reason": "Pure prefix detector, structural rather than semantic."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Duplicate entry in oracle list."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic lexical feature, structurally neutral."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 4,
+  "n_other": 2,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation detectors; oracle points to semantic and generic features only."
+}

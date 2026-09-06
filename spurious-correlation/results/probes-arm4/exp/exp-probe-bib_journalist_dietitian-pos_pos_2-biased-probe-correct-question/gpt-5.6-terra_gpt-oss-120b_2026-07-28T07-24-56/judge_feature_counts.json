@@ -1,0 +1,53 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "General person/entity detector, used here for female references."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Explicit female-reference detector; promotes she/her."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Directly detects female pronouns and possessives."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Explicit women/girls mention detector."
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "Gendered women-related terminology."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women-name/biography feature, gender-coded."
+    },
+    {
+      "id": "L14:F12501",
+      "label": "uses of the feminine pronoun.",
+      "reason": "Feminine pronoun detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Direct nutrition/food profession evidence."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 7,
+  "n_causal": 1,
+  "n_other": 0,
+  "spurious_fraction": 0.875,
+  "dominant": "spurious",
+  "notes": "Female-reference circuit dominates; nutrition evidence is present but smaller."
+}

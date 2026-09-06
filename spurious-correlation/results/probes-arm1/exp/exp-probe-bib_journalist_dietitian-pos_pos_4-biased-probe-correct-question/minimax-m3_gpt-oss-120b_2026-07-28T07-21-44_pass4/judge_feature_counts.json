@@ -1,0 +1,74 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Fires on female pronouns and gendered mentions."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments",
+      "reason": "Tracks women's names, not profession content."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Directly detects female pronoun usage."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Triggered by Heather, a gendered name."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Name detector tied to female identity."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Explicitly a female-reference feature."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Detects female names and possessives."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Name/title pattern; here tied to Heather."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "named entities like characters or people",
+      "reason": "Entity-name detector, not profession-specific."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Directly related to dietetics/profession vocabulary."
+    },
+    {
+      "id": "L3:F11774",
+      "label": "\"Die\"/Dietetics",
+      "reason": "Matches dietetics subword/profession term."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe output (profession classification)",
+      "reason": "Oracle output node, not a feature."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 2,
+  "n_other": 1,
+  "spurious_fraction": 0.8181818181818182,
+  "dominant": "spurious",
+  "notes": "Female-gender/name path dominates; dietetics vocabulary is present but smaller."
+}

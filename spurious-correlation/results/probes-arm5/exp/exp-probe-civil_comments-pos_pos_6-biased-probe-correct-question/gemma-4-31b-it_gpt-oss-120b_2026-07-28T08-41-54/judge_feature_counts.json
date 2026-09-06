@@ -1,0 +1,58 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F10910",
+      "label": "Low-Level Identity Detection ('white')",
+      "reason": "Direct demographic token detector."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "Mid-Level Race/Ethnicity Aggregation",
+      "reason": "Aggregates race/ethnicity identity signals."
+    },
+    {
+      "id": "L2:F1708",
+      "label": "Mid-Level Race/Ethnicity Aggregation",
+      "reason": "Aggregates race/ethnicity identity signals."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "High-Level Demographic Identity Detector",
+      "reason": "Detects race, gender, social identity terms."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "High-Level Demographic Identity Detector",
+      "reason": "Detects demographic identity mentions."
+    },
+    {
+      "id": "L4:F117",
+      "label": "High-Level Demographic Identity Detector",
+      "reason": "Focuses on race and social justice terms."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: white (pos 2)",
+      "label": "Emb: white (pos 2)",
+      "reason": "Input token embedding only."
+    },
+    {
+      "id": "Emb: dude (pos 3)",
+      "label": "Emb: dude (pos 3)",
+      "reason": "Input token embedding only."
+    },
+    {
+      "id": "Toxicity Probe Score",
+      "label": "Toxicity Probe Score",
+      "reason": "Output score, not a feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 0,
+  "n_other": 3,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle attributes prediction to identity-group detectors, not toxicity semantics."
+}

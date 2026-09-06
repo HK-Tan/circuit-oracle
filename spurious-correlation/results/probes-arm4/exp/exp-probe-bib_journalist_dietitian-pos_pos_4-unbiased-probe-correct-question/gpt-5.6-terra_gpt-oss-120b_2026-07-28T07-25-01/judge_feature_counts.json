@@ -1,0 +1,58 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Emb: Die / te (Dietetics, pos 20\u201321)",
+      "label": "embedding/output",
+      "reason": "Direct profession credential token."
+    },
+    {
+      "id": "Emb: Die / titian (Dietitian, pos 36\u201337)",
+      "label": "embedding/output",
+      "reason": "Direct job-title token."
+    },
+    {
+      "id": "Emb: Nutritional (pos 9)",
+      "label": "embedding/output",
+      "reason": "Nutrition-domain profession cue."
+    },
+    {
+      "id": "L2:F2589",
+      "label": "words related to medical professionals and medical specialties",
+      "reason": "Professional specialty indicator."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Occupation-domain dietetics cue."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Nutrition-domain lexical evidence."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-related domain abstraction."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Nutritional-science context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output: profession-classification probe score",
+      "label": "profession-classification probe score",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 8,
+  "n_other": 1,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No gender-marking features claimed; circuit is dominated by dietetics/nutrition profession cues."
+}

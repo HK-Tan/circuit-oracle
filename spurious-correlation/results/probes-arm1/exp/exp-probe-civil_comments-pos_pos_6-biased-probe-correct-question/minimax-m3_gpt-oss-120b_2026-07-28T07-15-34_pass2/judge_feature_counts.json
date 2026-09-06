@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Direct race/ethnicity identity words."
+    },
+    {
+      "id": "L2:F9528",
+      "label": "the color black",
+      "reason": "Identity-linked color token here."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Demographic/social-issue identity detector."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "mentions of demographic identity, especially race and gender",
+      "reason": "Explicit demographic identity mention."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Black-focused race/social-justice feature."
+    },
+    {
+      "id": "L5:F6786",
+      "label": "terms associated with gender, race, sexual orientation, and disability",
+      "reason": "Identity-group bundle feature."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race and ethnicity terminology."
+    },
+    {
+      "id": "L6:F5671",
+      "label": "references to people, with an emphasis on gender and family relations",
+      "reason": "Gendered person-reference detector."
+    },
+    {
+      "id": "L8:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Identity/prejudice discourse feature."
+    },
+    {
+      "id": "L12:F13522",
+      "label": "terms relating to race, specifically focusing on black and white people and slavery",
+      "reason": "Race/slavery identity feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F12341",
+      "label": "the word \"steal\" and words related to taking and basic needs",
+      "reason": "Toxic-action verb relevant to abuse."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@2",
+      "label": "Embedding token: white",
+      "reason": "Bare token embedding."
+    },
+    {
+      "id": "L0:F0@3",
+      "label": "Embedding token: dude",
+      "reason": "Bare token embedding."
+    },
+    {
+      "id": "L0:F0@6",
+      "label": "Embedding token: black",
+      "reason": "Bare token embedding."
+    },
+    {
+      "id": "L0:F0@7",
+      "label": "Embedding token: man",
+      "reason": "Bare token embedding."
+    },
+    {
+      "id": "L0:F0@1",
+      "label": "Embedding token: Another",
+      "reason": "Bare token embedding."
+    },
+    {
+      "id": "L0:F0@4",
+      "label": "Embedding token: stealing",
+      "reason": "Bare token embedding."
+    },
+    {
+      "id": "L0:F4090",
+      "label": "the word \"another\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L4:F9880",
+      "label": "phrases indicating repetition or continuation which often use the word \"another\"",
+      "reason": "Structural repetition/continuation."
+    },
+    {
+      "id": "L26:F0@0",
+      "label": "Probe classification logit (toxicity)",
+      "reason": "Output logit, not a feature."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 1,
+  "n_other": 9,
+  "spurious_fraction": 0.9090909090909091,
+  "dominant": "spurious",
+  "notes": "Mostly identity-detector chain; only one causal theft-related feature appears."
+}

@@ -1,0 +1,199 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F13885",
+      "label": "names/places of the Middle East",
+      "reason": "Middle East entity recognition"
+    },
+    {
+      "id": "L1:F4314",
+      "label": "the word Muslim",
+      "reason": "Identity-group token detector"
+    },
+    {
+      "id": "L1:F2352",
+      "label": "words associated with Islam",
+      "reason": "Religious identity signal"
+    },
+    {
+      "id": "L0:F4470",
+      "label": "generic religious reference",
+      "reason": "Religion mention, not toxicity"
+    },
+    {
+      "id": "L2:F7214",
+      "label": "references to countries or regions associated with Islam",
+      "reason": "Islam-associated geography"
+    },
+    {
+      "id": "L2:F6894",
+      "label": "mentions of religions",
+      "reason": "Religious identity cue"
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious affiliation detector"
+    },
+    {
+      "id": "L4:F7545",
+      "label": "words or phrases relating to religious extremism, violence, and terrorism.",
+      "reason": "Religion-linked extremism topic"
+    },
+    {
+      "id": "L4:F16231",
+      "label": "parts of names, especially names with Arabic origin",
+      "reason": "Arabic-origin name cue"
+    },
+    {
+      "id": "L5:F14348",
+      "label": "historical and religious terms, along with associated concepts like slavery and cultural clashes",
+      "reason": "Religion/culture topic feature"
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Direct Islam/Middle-East detector"
+    },
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations.",
+      "reason": "Topic framing around identity politics"
+    },
+    {
+      "id": "L7:F11758",
+      "label": "words with some cultural (often middle eastern) or historical aspect that may be a name or location",
+      "reason": "Cultural-name detector"
+    },
+    {
+      "id": "L7:F14049",
+      "label": "discussion of international political conflicts, especially those regarding Muslims, slavery, race, terrorism and cultural groups.",
+      "reason": "Group-conflict framing"
+    },
+    {
+      "id": "L7:F11743",
+      "label": "arabic names and islamic terms",
+      "reason": "Arabic/Islam identity terms"
+    },
+    {
+      "id": "L7:F4618",
+      "label": "Arabic names and geographical locations in Central Asia",
+      "reason": "Ethnic/geographic identity cue"
+    },
+    {
+      "id": "L7:F8154",
+      "label": "highly charged political commentary, particularly with a right-leaning perspective",
+      "reason": "Political commentary, not toxicity"
+    },
+    {
+      "id": "L8:F16294",
+      "label": "proper nouns related to the Middle East and Central Asia, and potentially to Islam",
+      "reason": "Middle-East proper noun detector"
+    },
+    {
+      "id": "L8:F5783",
+      "label": "mentions of politically charged demonstrations, specifically related to the cartoons of Prophet Mohammed",
+      "reason": "Religion-related political event"
+    },
+    {
+      "id": "L8:F16036",
+      "label": "words and phrases related to Israel, Zionism, and related political topics.",
+      "reason": "Identity/political topic cue"
+    },
+    {
+      "id": "L10:F326",
+      "label": "hateful, racist, and discriminatory terms that are often used in hateful speech",
+      "reason": "Hate-speech lexicon"
+    },
+    {
+      "id": "L11:F4286",
+      "label": "words and phrases related to political parties and failures in political systems.",
+      "reason": "Political-failure language"
+    },
+    {
+      "id": "L12:F7779",
+      "label": "negative language denigrating groups of people",
+      "reason": "Group-denigration content"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F8909",
+      "label": "mentions of problems, defects, complaints",
+      "reason": "Negativity/problem semantics"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L7:F9503",
+      "label": "sentences discussing a problem",
+      "reason": "Generic syntactic/structural pattern"
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Function word"
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Function word"
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Structural discourse feature"
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Function word"
+    },
+    {
+      "id": "L0:F7253",
+      "label": "the word \"present\" or the word \"left\" or inflected forms thereof",
+      "reason": "Generic lexical/structural"
+    },
+    {
+      "id": "L4:F7647",
+      "label": "passages that describe differences",
+      "reason": "Generic comparison syntax"
+    },
+    {
+      "id": "Probe direction",
+      "label": "toxicity classifier score",
+      "reason": "Not a feature"
+    },
+    {
+      "id": "Emb: ' Islam' (pos 4)",
+      "label": "input embedding",
+      "reason": "Not a feature"
+    },
+    {
+      "id": "Emb: ' false' (pos 10)",
+      "label": "input embedding",
+      "reason": "Not a feature"
+    },
+    {
+      "id": "Emb: ' religion' (pos 11)",
+      "label": "input embedding",
+      "reason": "Not a feature"
+    },
+    {
+      "id": "Emb: ' Lucifer' (pos 12)",
+      "label": "input embedding",
+      "reason": "Not a feature"
+    },
+    {
+      "id": "Emb: ' problem' (pos 2)",
+      "label": "input embedding",
+      "reason": "Not a feature"
+    }
+  ],
+  "n_spurious": 23,
+  "n_causal": 1,
+  "n_other": 13,
+  "spurious_fraction": 0.9583333333333334,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes identity-group and religion-topic detectors; only one clear toxicity-content feature appears."
+}

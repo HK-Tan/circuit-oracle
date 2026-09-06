@@ -1,0 +1,28 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12768",
+      "label": "Gender Marker ('he')",
+      "reason": "Detects gendered pronouns; a spurious proxy for profession."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F9297",
+      "label": "Profession-related Terms (Ministry, coverage)",
+      "reason": "Targets profession/government vocabulary relevant to biography content."
+    },
+    {
+      "id": "L0:F10881",
+      "label": "Profession-related Terms (Ministry, coverage)",
+      "reason": "Targets profession/government vocabulary relevant to biography content."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 2,
+  "n_other": 0,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Oracle emphasizes one gender marker, but profession terms also contribute."
+}

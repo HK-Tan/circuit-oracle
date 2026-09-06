@@ -1,0 +1,118 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1143",
+      "label": "the word \"no\" and related words like \"nobody\" and \"trust\"",
+      "reason": "Negation-word detector anchored on 'No'."
+    },
+    {
+      "id": "L2:F2771",
+      "label": "the word \"no\" as well as words and phrases that are conceptually related to negation",
+      "reason": "Conceptual negation feature."
+    },
+    {
+      "id": "L12:F8719",
+      "label": "phrases that start with \"no.\"",
+      "reason": "Phrase-level negation cue."
+    },
+    {
+      "id": "L13:F10768",
+      "label": "negative sentiments and words like \"no\" in the context of a discussion or argument.",
+      "reason": "Negation-in-discourse detector."
+    },
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Direct negative-word feature."
+    },
+    {
+      "id": "L15:F13061",
+      "label": "uses of the word \"no\" or similar negative statements and words associated with \"one\"",
+      "reason": "No-one negation pattern."
+    },
+    {
+      "id": "L16:F11298",
+      "label": "no",
+      "reason": "Bare negation token feature."
+    },
+    {
+      "id": "L2:F8837",
+      "label": "the word \"one\" or \"body\" when preceded by the words \"no\" or \"every.\"",
+      "reason": "Explicit 'No one' negation bigram."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: ' No' (pos 16)",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' one' (pos 17)",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: 'Pick' (pos 1)",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' up' (pos 2)",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' tours' (pos 14)",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' ask' (pos 11)",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "L0:F4438",
+      "label": "the word \"one\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F10562",
+      "label": "the word \"up\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F13092",
+      "label": "the words \"down\" and \"up\", often in combination",
+      "reason": "Structural lexical pattern."
+    },
+    {
+      "id": "L0:F13354",
+      "label": "the word \"ask\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Phrasal verb, not NLI semantics."
+    },
+    {
+      "id": "L2:F1016, L2:F14413",
+      "label": "forms of the verb \"tour\" and the noun \"tour.\"",
+      "reason": "Content word detector."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 0,
+  "n_other": 13,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle says output is driven by negation cues, not semantic NLI reasoning."
+}

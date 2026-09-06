@@ -1,0 +1,88 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation-word pattern in hypothesis; explicit spurious cue."
+    },
+    {
+      "id": "L16:F9779",
+      "label": "negation words or contractions like \"won't\", \"not\", \"never\"",
+      "reason": "Direct negation-word detector; spurious by task definition."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation-related shortcut feature, not semantic reasoning."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Explicit negation-pattern detector."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Lexical negation trigger, not causal meaning."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe output",
+      "label": "contradiction direction",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Structural mixed-language detector; oracle dismisses it."
+    },
+    {
+      "id": "L0:F9646",
+      "label": "auxiliary negation-supporting feature",
+      "reason": "Unsupported auxiliary feature; not semantically causal."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "auxiliary negation-supporting feature",
+      "reason": "Unsupported auxiliary feature; not semantically causal."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "auxiliary negation-supporting feature",
+      "reason": "Unsupported auxiliary feature; not semantically causal."
+    },
+    {
+      "id": "Emb: \" not\" (pos 29)",
+      "label": "embedding token",
+      "reason": "Raw token input, not a feature."
+    },
+    {
+      "id": "Emb: \" is\" (pos 28)",
+      "label": "embedding token",
+      "reason": "Raw token input, not a feature."
+    },
+    {
+      "id": "Emb: \" not\" (pos 23)",
+      "label": "embedding token",
+      "reason": "Raw token input, not a feature."
+    },
+    {
+      "id": "Emb: \" will\" (pos 22)",
+      "label": "embedding token",
+      "reason": "Raw token input, not a feature."
+    },
+    {
+      "id": "Emb: \" you\" (pos 21)",
+      "label": "embedding token",
+      "reason": "Raw token input, not a feature."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 0,
+  "n_other": 10,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites only negation-token circuitry; no semantic-relation features are claimed."
+}

@@ -1,0 +1,163 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: Black",
+      "reason": "Identity token embedding."
+    },
+    {
+      "id": "L0:F0@5",
+      "label": "Emb: black",
+      "reason": "Identity token embedding."
+    },
+    {
+      "id": "L0:F0@17",
+      "label": "Emb: White",
+      "reason": "Identity token embedding."
+    },
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: Gay",
+      "reason": "Identity token embedding."
+    },
+    {
+      "id": "L0:F0@13",
+      "label": "Emb: gay",
+      "reason": "Identity token embedding."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: Pride",
+      "reason": "Identity-phrase token embedding."
+    },
+    {
+      "id": "L0:F0@10",
+      "label": "Emb: Pride",
+      "reason": "Identity-phrase token embedding."
+    },
+    {
+      "id": "L2:F11363@1",
+      "label": "Mid-layer race / ethnicity detectors (promote probe)",
+      "reason": "Race/ethnicity words, not toxicity."
+    },
+    {
+      "id": "L2:F13158@5",
+      "label": "Mid-layer race / ethnicity detectors (promote probe)",
+      "reason": "Race/ethnicity words, not toxicity."
+    },
+    {
+      "id": "L2:F13158@17",
+      "label": "Mid-layer race / ethnicity detectors (promote probe)",
+      "reason": "Race/ethnicity words, not toxicity."
+    },
+    {
+      "id": "L6:F3902@5",
+      "label": "Mid-layer race / ethnicity detectors (promote probe)",
+      "reason": "Race/ethnicity terms, not harmful content."
+    },
+    {
+      "id": "L6:F3902@17",
+      "label": "Mid-layer race / ethnicity detectors (promote probe)",
+      "reason": "Race/ethnicity terms, not harmful content."
+    },
+    {
+      "id": "L4:F117@17",
+      "label": "Mid-layer race / ethnicity detectors (promote probe)",
+      "reason": "Race/social-justice vocabulary, not toxicity."
+    },
+    {
+      "id": "L3:F13061@2",
+      "label": "Mid-layer race / ethnicity detectors (promote probe)",
+      "reason": "Race/social issues vocabulary."
+    },
+    {
+      "id": "L4:F15899@9",
+      "label": "Mid-layer LGBTQ+ identity detectors (promote probe)",
+      "reason": "Identity/community language."
+    },
+    {
+      "id": "L4:F15899@13",
+      "label": "Mid-layer LGBTQ+ identity detectors (promote probe)",
+      "reason": "Identity/community language."
+    },
+    {
+      "id": "L6:F6085@9",
+      "label": "Mid-layer LGBTQ+ identity detectors (promote probe)",
+      "reason": "Homosexuality/same-sex marriage topic."
+    },
+    {
+      "id": "L6:F6085@13",
+      "label": "Mid-layer LGBTQ+ identity detectors (promote probe)",
+      "reason": "Homosexuality/same-sex marriage topic."
+    },
+    {
+      "id": "L6:F15295@2",
+      "label": "Mid-layer LGBTQ+ identity detectors (promote probe)",
+      "reason": "HIV/AIDS or LGBTQ-related terms."
+    },
+    {
+      "id": "L8:F15771@2",
+      "label": "Late-layer LGBTQ+ discourse aggregator",
+      "reason": "Discussion of LGBTQ+ issues."
+    },
+    {
+      "id": "L8:F15771@9",
+      "label": "Late-layer LGBTQ+ discourse aggregator",
+      "reason": "Discussion of LGBTQ+ issues."
+    },
+    {
+      "id": "L8:F15771@13",
+      "label": "Late-layer LGBTQ+ discourse aggregator",
+      "reason": "Discussion of LGBTQ+ issues."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L1:F9113@1",
+      "label": "Early-layer \"black\" / \"proud\" lexical detectors (suppress probe)",
+      "reason": "Generic lexical detector; oracle says suppresses."
+    },
+    {
+      "id": "L1:F12542@2",
+      "label": "Early-layer \"black\" / \"proud\" lexical detectors (suppress probe)",
+      "reason": "Generic lexical detector; oracle says suppresses."
+    },
+    {
+      "id": "L2:F9528@1",
+      "label": "Early-layer \"black\" / \"proud\" lexical detectors (suppress probe)",
+      "reason": "Color-word detector, not toxicity."
+    },
+    {
+      "id": "L2:F9528@5",
+      "label": "Early-layer \"black\" / \"proud\" lexical detectors (suppress probe)",
+      "reason": "Color-word detector, not toxicity."
+    },
+    {
+      "id": "L3:F7993@1",
+      "label": "Early-layer \"black\" / \"proud\" lexical detectors (suppress probe)",
+      "reason": "Lexical black detector only."
+    },
+    {
+      "id": "L3:F7993@2",
+      "label": "Early-layer \"black\" / \"proud\" lexical detectors (suppress probe)",
+      "reason": "Lexical black detector only."
+    },
+    {
+      "id": "L2:F1644@2",
+      "label": "Early-layer \"black\" / \"proud\" lexical detectors (suppress probe)",
+      "reason": "Pride/proud detector; structural lexical cue."
+    },
+    {
+      "id": "Probe direction (toxicity-classifier score)",
+      "label": "Probe direction (toxicity-classifier score)",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 22,
+  "n_causal": 0,
+  "n_other": 8,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is driven by identity-group and LGBTQ+ discourse features, not toxic-content signals."
+}

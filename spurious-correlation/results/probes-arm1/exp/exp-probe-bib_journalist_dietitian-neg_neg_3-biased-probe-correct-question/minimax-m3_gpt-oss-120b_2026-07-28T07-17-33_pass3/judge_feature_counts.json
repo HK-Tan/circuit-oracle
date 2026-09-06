@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Male pronoun detector on he/him/his."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct male-pronoun detector."
+    },
+    {
+      "id": "L4:F11391",
+      "label": "pronouns referring to people and words related to negative experiences",
+      "reason": "Includes pronoun pathway; gendered here."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit male-associated feature."
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Direct he/him detector."
+    },
+    {
+      "id": "L2:F6929",
+      "label": "the pronoun \"him\"",
+      "reason": "Direct male pronoun detector."
+    },
+    {
+      "id": "L3:F2434",
+      "label": "the word \"him\", and possibly other pronouns referring to males",
+      "reason": "Male-pronoun pathway."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Explicit male-pronoun detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Profession-related research indicator."
+    },
+    {
+      "id": "L0:F10036",
+      "label": "words about scientific research and scientists",
+      "reason": "Work/profession vocabulary."
+    },
+    {
+      "id": "L0:F61",
+      "label": "the word \"stories\" sometimes along with apostrophes and common names.",
+      "reason": "Narrative/profession-related vocabulary."
+    },
+    {
+      "id": "L0:F5333",
+      "label": "mentions of stories that are being told",
+      "reason": "Narrative content indicator."
+    },
+    {
+      "id": "L1:F14812",
+      "label": "references to stories, chapters, and other narrative elements",
+      "reason": "Narrative/profession vocabulary."
+    },
+    {
+      "id": "L1:F7449",
+      "label": "instances of the word \"representation\"",
+      "reason": "Content-neutral lexical signal."
+    },
+    {
+      "id": "L0:F5267",
+      "label": "mentions of representation or things standing for other things.",
+      "reason": "Content-neutral lexical/syntactic feature."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Direct profession indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F10187",
+      "label": "the word \"time\"",
+      "reason": "Generic token detector."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural feature."
+    },
+    {
+      "id": "L0:F7696",
+      "label": "the word \"on\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Oracle says generic technical pattern."
+    },
+    {
+      "id": "L0:F14520",
+      "label": "verbs that describe actions affecting a noun, especially in the context of protection, reduction, or change",
+      "reason": "Structural/syntactic, not task-specific."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 8,
+  "n_other": 6,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Both male-pronoun shortcuts and profession cues are substantial; generic detectors are separate."
+}

@@ -1,0 +1,88 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L20:F4927",
+      "label": "Late-layer nurse-manager leadership concept",
+      "reason": "Nurse leadership and management are profession indicators."
+    },
+    {
+      "id": "L19:F5028",
+      "label": "words related to the healthcare industry",
+      "reason": "Healthcare industry context supports nursing profession."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "nurse managers' role, skills and leadership",
+      "reason": "Directly encodes nurse-manager profession concepts."
+    },
+    {
+      "id": "L18:F14457",
+      "label": "words or phrases related to healthcare implementation, patient care and technology",
+      "reason": "Patient care and healthcare terminology is profession-related."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities.",
+      "reason": "Medical workplace vocabulary signals healthcare profession."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Explicit nursing and healthcare content."
+    },
+    {
+      "id": "L7:F210",
+      "label": "Asante Healthcare system",
+      "reason": "Healthcare system reference is profession-related."
+    },
+    {
+      "id": "L7:F8194",
+      "label": "word 'nurse' or initials",
+      "reason": "Nurse mention directly indicates the profession."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "the profession of nursing",
+      "reason": "Explicitly identifies the nursing profession."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities.",
+      "reason": "Medical setting and personnel terminology."
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Nursing and nurse-management content is causal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Gender mention, but oracle says slight suppressor only."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gender-linked and not used as a driver."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Pure gender-pronoun detector."
+    },
+    {
+      "id": "L4:F8736",
+      "label": "the phrase \"born and raised\"",
+      "reason": "Structural biographical phrase, not profession-specific."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 11,
+  "n_other": 4,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows profession evidence dominates; she-related feature is suppressive, not driving."
+}

@@ -1,0 +1,113 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb:She@1",
+      "label": "She",
+      "reason": "Female pronoun; directly gender-marked."
+    },
+    {
+      "id": "Emb:Linda@24",
+      "label": "Linda",
+      "reason": "Gendered first name; female referent."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Oracle says it feeds female-referential behavior."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Person-name detector; used in female-name path."
+    },
+    {
+      "id": "L5:F10952",
+      "label": "third person pronouns in varying contexts",
+      "reason": "Supports pronoun-based gender inference."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Explicitly female-referential."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Name shape used as female-name proxy."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Explicitly woman-name feature."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun detector."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Person-name detector used on Linda."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Explicit women-mentioned feature."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Woman-name/role feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb:nurse@7",
+      "label": "nurse",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "Emb:practitioner@8",
+      "label": "practitioner",
+      "reason": "Medical/profession vocabulary."
+    },
+    {
+      "id": "Emb:labor@44",
+      "label": " labor",
+      "reason": "Feeds childbirth/obstetrics terminology."
+    },
+    {
+      "id": "Emb:delivery@46",
+      "label": " delivery",
+      "reason": "Feeds childbirth/obstetrics terminology."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing profession feature."
+    },
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Medical domain/profession-related terminology."
+    },
+    {
+      "id": "L3:F9008",
+      "label": "words related to childbirth or birth in general, including in animals.",
+      "reason": "Birth/childbirth domain signal."
+    },
+    {
+      "id": "Probe classification (nurse)",
+      "label": "nurse",
+      "reason": "Output target is profession classification."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 12,
+  "n_causal": 8,
+  "n_other": 0,
+  "spurious_fraction": 0.6,
+  "dominant": "spurious",
+  "notes": "Oracle mostly traces the logit through female-referential paths, with a weaker nursing/obstetrics pathway."
+}

@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Islam/Middle East identity marker"
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "religious identity marker"
+    },
+    {
+      "id": "L8:F13197",
+      "label": "words related to religion and faith",
+      "reason": "religion/faith identity marker"
+    },
+    {
+      "id": "L1:F4314",
+      "label": "the word Muslim",
+      "reason": "demographic identity token"
+    },
+    {
+      "id": "L3:F12024",
+      "label": "words referencing the religion of Islam, people who practice it, and Arabic names",
+      "reason": "Islam/Arabic identity marker"
+    },
+    {
+      "id": "L0:F13885",
+      "label": "names of people and places, specifically those related to the middle east",
+      "reason": "Middle East names/places"
+    },
+    {
+      "id": "L7:F12448",
+      "label": "words and phrases related to religion",
+      "reason": "religion identity marker"
+    },
+    {
+      "id": "L6:F3265",
+      "label": "religion, religious figures, and related concepts and groups",
+      "reason": "religious-group marker"
+    },
+    {
+      "id": "L10:F2716",
+      "label": "mentions of religion, faith, parenting, and family when they appear together.",
+      "reason": "religion/family cooccurrence"
+    },
+    {
+      "id": "L6:F5764",
+      "label": "various proper nouns and adjectives, including ethnic groups, nationalities, religions, job titles, deities, and locations.",
+      "reason": "identity-group proper nouns"
+    },
+    {
+      "id": "L5:F6331",
+      "label": "words about race, religion, and slavery",
+      "reason": "race/religion identity marker"
+    },
+    {
+      "id": "L2:F13367",
+      "label": "passages related to religion",
+      "reason": "religion passage detector"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L12:F7779",
+      "label": "negative language denigrating groups of people",
+      "reason": "group-denigrating toxic language"
+    },
+    {
+      "id": "L0:F14656",
+      "label": "the word \"problem\" and words associated with it",
+      "reason": "generic topic/structure, not toxicity"
+    },
+    {
+      "id": "L6:F8487",
+      "label": "words and phrases related to terrorism, security, and policing.",
+      "reason": "security/terrorism semantics"
+    },
+    {
+      "id": "L7:F14049",
+      "label": "discussion of international political conflicts, especially those regarding Muslims, slavery, race, terrorism and cultural groups.",
+      "reason": "conflict/harassment semantics"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "purely structural"
+    },
+    {
+      "id": "L4:F15997",
+      "label": "discussion of advantages and/or disadvantages",
+      "reason": "generic argumentative structure"
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "pure punctuation/format"
+    },
+    {
+      "id": "L0:F4133",
+      "label": "variations of the word \"secret.\"",
+      "reason": "generic lexical, not toxicity"
+    },
+    {
+      "id": "L3:F8595",
+      "label": "descriptive writing",
+      "reason": "generic style feature"
+    },
+    {
+      "id": "L4:F4011",
+      "label": "words and phrases related to challenges, advantages, and other main points",
+      "reason": "generic discourse structure"
+    },
+    {
+      "id": "L6:F11713",
+      "label": "mentions of international sporting competitions in the Americas",
+      "reason": "off-task topic"
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 4,
+  "n_other": 7,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "Oracle claims mostly identity/religion markers; only one clear toxic feature."
+}

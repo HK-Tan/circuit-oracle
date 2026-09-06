@@ -1,0 +1,68 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Explicit male-pronoun detector"
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Detects male pronouns/titles"
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Gendered pronoun-direction feature"
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male-coded pronoun detector"
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Explicit male pronoun detector"
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Broad pronoun feature"
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Pronoun/person reference feature"
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: His",
+      "label": "Embedding token: His",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: He",
+      "label": "Embedding token: He",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: his",
+      "label": "Embedding token: his",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Pronoun relay, same spurious role"
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 0,
+  "n_other": 4,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle claims a pronoun/gender shortcut, not profession indicators."
+}

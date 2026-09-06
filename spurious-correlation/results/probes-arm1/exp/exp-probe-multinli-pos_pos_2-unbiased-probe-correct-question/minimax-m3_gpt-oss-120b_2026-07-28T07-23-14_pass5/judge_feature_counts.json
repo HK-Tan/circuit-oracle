@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Discourse marker, not task semantics."
+    },
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Contraction-ending negation cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Justification/discourse relation feature."
+    },
+    {
+      "id": "L0:F8659",
+      "label": "the word \"foundation\" in different contexts, including religious, legal, and abstract senses.",
+      "reason": "Content word, but not negation-specific."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "Conversational discourse feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8083",
+      "label": "the word \"double\" and surrounding words when numbers are also present",
+      "reason": "Content/number pattern, not contradiction semantics."
+    },
+    {
+      "id": "L3:F9770",
+      "label": "technical and scientific writing about neuroscience and chemistry, possibly about calcium",
+      "reason": "Unrelated content-domain feature."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Unrelated topical detector."
+    },
+    {
+      "id": "L1:F177",
+      "label": "the word \"double\" and words that begin with \"multi\" or \"doubly\"",
+      "reason": "Generic word-identity detector."
+    },
+    {
+      "id": "L0:F12862",
+      "label": "the word \"tournament\" and related words such as \"winning\", but not always",
+      "reason": "Content-word detector, not semantic relation."
+    },
+    {
+      "id": "L3:F12849",
+      "label": "words or phrases that include the word \"double\", or contain a hyphen",
+      "reason": "Structural/lexical pattern feature."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L0:F5112",
+      "label": "the word \"resolution\", sometimes in the context of displaying images or patterns",
+      "reason": "Irrelevant lexical topic."
+    },
+    {
+      "id": "L2:F1759",
+      "label": "occurrences of the word \"know\" with emphasis words or interjections nearby",
+      "reason": "Shallow lexical-context pattern."
+    },
+    {
+      "id": "L3:F4735",
+      "label": "references to multi-well plates and software used in scientific experiments",
+      "reason": "False lexical match, dismissed by oracle."
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Generic token detector."
+    },
+    {
+      "id": "L1:F6696",
+      "label": "the word \"pool\" in different contexts, but it also shows some activation for words associated with water-related activities and computing processes.",
+      "reason": "Unrelated lexical detector."
+    },
+    {
+      "id": "L2:F7222",
+      "label": "the word \"well\"",
+      "reason": "Generic token detector."
+    },
+    {
+      "id": "L3:F14620",
+      "label": "the word \"well\" and conjunctions like \"and\"",
+      "reason": "Shallow discourse/lexical feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 3,
+  "n_other": 14,
+  "spurious_fraction": 0.4,
+  "dominant": "mixed",
+  "notes": "Negation-like contraction and discourse markers matter most, but many other features are irrelevant or structural."
+}

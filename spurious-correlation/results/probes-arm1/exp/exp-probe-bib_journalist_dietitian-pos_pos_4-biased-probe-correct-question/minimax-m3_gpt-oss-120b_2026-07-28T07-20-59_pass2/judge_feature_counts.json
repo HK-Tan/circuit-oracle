@@ -1,0 +1,123 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: She (pos 1)",
+      "label": "raw input token embedding of the female pronoun",
+      "reason": "Direct female pronoun signal."
+    },
+    {
+      "id": "Emb: Heather (pos 31)",
+      "label": "raw input token embedding of the female proper name",
+      "reason": "Gendered proper name."
+    },
+    {
+      "id": "L1:F2848",
+      "label": "she/her/their multilingual pronouns",
+      "reason": "Pronoun detector, gender-marked."
+    },
+    {
+      "id": "L2:F2128",
+      "label": "she/her/their multilingual pronouns",
+      "reason": "Pronoun detector, gender-marked."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "Early proper-noun detector on 'Heather'",
+      "reason": "Triggers on female name."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "mislabeled 'code'; actually 'She' / female-pronoun detector",
+      "reason": "Actually detects she."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names/titles detector",
+      "reason": "Name/title cue on Heather."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named-entity / proper-name detector",
+      "reason": "Promoted by she/her."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, fired on pronouns/titles",
+      "reason": "Women-reference feature."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's-name detector",
+      "reason": "Female-name signal, suppressive."
+    },
+    {
+      "id": "L7:F2765",
+      "label": "generic person/character mention detector",
+      "reason": "Promoted by she/her."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "female pronouns & possessives",
+      "reason": "Female pronoun feature."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "first/last names of people",
+      "reason": "Name feature on Heather."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "'instances of women or girls' detector",
+      "reason": "Women/girls mention detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: diet/Dietetics/Nutritional (pos 9, 21)",
+      "label": "diet-related input tokens",
+      "reason": "Profession-relevant diet vocabulary."
+    },
+    {
+      "id": "Emb: RD (pos 55)",
+      "label": "credential token for Registered Dietitian",
+      "reason": "Direct profession credential."
+    },
+    {
+      "id": "L2:F1984",
+      "label": "fragments of 'diet'",
+      "reason": "Diet terminology fragment."
+    },
+    {
+      "id": "L3:F11774",
+      "label": "fragments of 'diet'",
+      "reason": "Diet terminology fragment."
+    },
+    {
+      "id": "L3:F10028",
+      "label": "fragments of 'diet'",
+      "reason": "Diet terminology fragment."
+    },
+    {
+      "id": "L3:F7212",
+      "label": "fragments of 'diet'",
+      "reason": "Diet terminology fragment."
+    },
+    {
+      "id": "L2:F7473",
+      "label": "fragments of 'diet'",
+      "reason": "Diet terminology fragment."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Profession-specific diet terms."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 14,
+  "n_causal": 8,
+  "n_other": 0,
+  "spurious_fraction": 0.6363636363636364,
+  "dominant": "spurious",
+  "notes": "Gender-name circuitry dominates, though diet/RD cues are also present."
+}

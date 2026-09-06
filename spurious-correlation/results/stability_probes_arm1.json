@@ -1,0 +1,2792 @@
+{
+  "track": "probes",
+  "n_layers": 26,
+  "n_slugs": 80,
+  "skipped_single_pass_slugs": [],
+  "overall": {
+    "pinned_jaccard_feature": 0.5114173743713213,
+    "pinned_jaccard_layer": 0.7536559379195795,
+    "pinned_jaccard_band": 0.959375,
+    "inspected_jaccard_feature": 0.5279460163292822,
+    "tool_calls_sd": 14.810798094931618,
+    "spurious_jaccard_feature": 0.4645590569570183,
+    "causal_jaccard_feature": 0.3627849829935165,
+    "verdict_flip_rate": 0.24500000000000002,
+    "verdict_modal_dissent": 0.15,
+    "top1_agreement": null,
+    "top1_overall_sd": null
+  },
+  "per_slug": {
+    "exp-probe-bib_journalist_dietitian-neg_neg_1-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T06-58-40_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-12_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-15_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-52_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-59_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6880674535359692,
+      "pinned_jaccard_layer": 0.8126262626262626,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6258354289388772,
+      "tool_calls_mean": 42.2,
+      "tool_calls_sd": 7.726577508832744,
+      "spurious_jaccard_feature": 0.7594444444444445,
+      "causal_jaccard_feature": 0.4754365079365079,
+      "verdicts": [
+        "mixed",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-bib_journalist_dietitian-neg_neg_1-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-02_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-05_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-16-24_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-52_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-24_pass5"
+      ],
+      "pinned_jaccard_feature": 0.30728543743078623,
+      "pinned_jaccard_layer": 0.4668594563331405,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.49063479656993286,
+      "tool_calls_mean": 37.4,
+      "tool_calls_sd": 15.224979474534605,
+      "spurious_jaccard_feature": 0.45,
+      "causal_jaccard_feature": 0.20936259143155694,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-neg_neg_2-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-04-02_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-52_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-31_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-28_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-30_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5705442662328635,
+      "pinned_jaccard_layer": 0.7898368298368299,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5927767943896975,
+      "tool_calls_mean": 51.2,
+      "tool_calls_sd": 18.143869488066763,
+      "spurious_jaccard_feature": 0.6642811355311355,
+      "causal_jaccard_feature": 0.507984237984238,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "mixed"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-bib_journalist_dietitian-neg_neg_2-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-00_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-11_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T08-35-55_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-01_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-16_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4050548988726076,
+      "pinned_jaccard_layer": 0.5538257575757576,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.35842978792307434,
+      "tool_calls_mean": 30.6,
+      "tool_calls_sd": 9.316651759081692,
+      "spurious_jaccard_feature": 0.6,
+      "causal_jaccard_feature": 0.4116907765437177,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-neg_neg_3-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-02-57_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-57_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-17-33_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-48_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-47_pass5"
+      ],
+      "pinned_jaccard_feature": 0.48463647114049413,
+      "pinned_jaccard_layer": 0.5673232323232323,
+      "pinned_jaccard_band": 0.7333333333333333,
+      "inspected_jaccard_feature": 0.6168573215570119,
+      "tool_calls_mean": 50.4,
+      "tool_calls_sd": 6.148170459575759,
+      "spurious_jaccard_feature": 0.41981972276089924,
+      "causal_jaccard_feature": 0.6643034743034744,
+      "verdicts": [
+        "spurious",
+        "mixed",
+        "mixed",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.8,
+      "verdict_modal_dissent": 0.6
+    },
+    "exp-probe-bib_journalist_dietitian-neg_neg_3-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-02-44_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-12-39_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-25_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-14_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-31_pass5"
+      ],
+      "pinned_jaccard_feature": 0.40017305200747816,
+      "pinned_jaccard_layer": 0.719047619047619,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5674386724386724,
+      "tool_calls_mean": 42.4,
+      "tool_calls_sd": 9.787747442593725,
+      "spurious_jaccard_feature": 1.0,
+      "causal_jaccard_feature": 0.2985088889102552,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-neg_neg_4-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-22_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-39_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-26_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-20_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-28_pass5"
+      ],
+      "pinned_jaccard_feature": 0.44020776748418555,
+      "pinned_jaccard_layer": 0.8878205128205128,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.44870511614577346,
+      "tool_calls_mean": 53.6,
+      "tool_calls_sd": 11.970797801316335,
+      "spurious_jaccard_feature": 0.4989278751938599,
+      "causal_jaccard_feature": 0.1544047619047619,
+      "verdicts": [
+        "mixed",
+        "mixed",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.6,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-bib_journalist_dietitian-neg_neg_4-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-37_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-11-43_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-18-42_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-32_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-51_pass5"
+      ],
+      "pinned_jaccard_feature": 0.39025859604790925,
+      "pinned_jaccard_layer": 0.8214646464646466,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.44957104847665724,
+      "tool_calls_mean": 60.4,
+      "tool_calls_sd": 36.29462770163099,
+      "spurious_jaccard_feature": 0.4428571428571429,
+      "causal_jaccard_feature": 0.32137145276464163,
+      "verdicts": [
+        "mixed",
+        "mixed",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.6,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-bib_journalist_dietitian-neg_neg_5-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-04-51_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-27_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-30_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-54_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-54_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5462503293807642,
+      "pinned_jaccard_layer": 0.6751262626262626,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6022039354575652,
+      "tool_calls_mean": 37.0,
+      "tool_calls_sd": 8.803408430829505,
+      "spurious_jaccard_feature": 0.5133838383838384,
+      "causal_jaccard_feature": 0.4841666666666667,
+      "verdicts": [
+        "spurious",
+        "mixed",
+        "causal",
+        "causal",
+        "mixed"
+      ],
+      "verdict_flip_rate": 0.8,
+      "verdict_modal_dissent": 0.6
+    },
+    "exp-probe-bib_journalist_dietitian-neg_neg_5-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-02-51_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-15-27_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-26_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-21_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-37_pass5"
+      ],
+      "pinned_jaccard_feature": 0.42231997741362254,
+      "pinned_jaccard_layer": 0.6553102453102453,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5828883861236802,
+      "tool_calls_mean": 41.8,
+      "tool_calls_sd": 19.766132651583618,
+      "spurious_jaccard_feature": 0.4,
+      "causal_jaccard_feature": 0.49663790157211213,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-pos_pos_1-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-51_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-17_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-27_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-12_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-34_pass5"
+      ],
+      "pinned_jaccard_feature": 0.7003676470588236,
+      "pinned_jaccard_layer": 0.8733333333333334,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6174414637649932,
+      "tool_calls_mean": 26.8,
+      "tool_calls_sd": 6.534523701081817,
+      "spurious_jaccard_feature": 0.5656818181818182,
+      "causal_jaccard_feature": 0.3,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-pos_pos_1-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-01-31_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-56_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-46_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-07_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-37_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5723028740433459,
+      "pinned_jaccard_layer": 0.7412820512820513,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.561777960226236,
+      "tool_calls_mean": 45.8,
+      "tool_calls_sd": 18.019433953373785,
+      "spurious_jaccard_feature": 0.6,
+      "causal_jaccard_feature": 0.4149437804758171,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-pos_pos_2-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-00_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-41_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-33_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-32_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-34_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6488525395421947,
+      "pinned_jaccard_layer": 0.7499545552486728,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.7295582706766918,
+      "tool_calls_mean": 28.6,
+      "tool_calls_sd": 9.50263121456368,
+      "spurious_jaccard_feature": 0.35728817587641115,
+      "causal_jaccard_feature": 0.26666666666666666,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-pos_pos_2-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-38_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-51_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-15_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-27_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-41_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5276781893833662,
+      "pinned_jaccard_layer": 0.6512837162837163,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.4678381642512077,
+      "tool_calls_mean": 35.6,
+      "tool_calls_sd": 6.348228099241551,
+      "spurious_jaccard_feature": 0.7166666666666666,
+      "causal_jaccard_feature": 0.4804113649508387,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-pos_pos_3-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-02-29_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-46_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-14_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-37_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-39_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6105844645550528,
+      "pinned_jaccard_layer": 0.7377435064935065,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6677114845938374,
+      "tool_calls_mean": 33.6,
+      "tool_calls_sd": 6.6932802122726045,
+      "spurious_jaccard_feature": 0.5638619713619714,
+      "causal_jaccard_feature": 0.45,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-pos_pos_3-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-02-53_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-40_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-17-34_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-22_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-37_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5157065550234431,
+      "pinned_jaccard_layer": 0.7424999999999999,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.4680252398673451,
+      "tool_calls_mean": 36.2,
+      "tool_calls_sd": 5.263078946776307,
+      "spurious_jaccard_feature": 0.425,
+      "causal_jaccard_feature": 0.3276684100213512,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "mixed",
+        "mixed"
+      ],
+      "verdict_flip_rate": 0.6,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-bib_journalist_dietitian-pos_pos_4-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-07-40_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-59_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-05_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-44_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-54_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5394176456217683,
+      "pinned_jaccard_layer": 0.642471694971695,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5961083743842364,
+      "tool_calls_mean": 35.8,
+      "tool_calls_sd": 10.134100848126586,
+      "spurious_jaccard_feature": 0.4588784899311215,
+      "causal_jaccard_feature": 0.32857142857142857,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-pos_pos_4-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-11-17_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-11_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T08-39-54_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-29_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-30_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4498251276101592,
+      "pinned_jaccard_layer": 0.6671833721833722,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.525287356321839,
+      "tool_calls_mean": 36.6,
+      "tool_calls_sd": 18.51485889765299,
+      "spurious_jaccard_feature": 0.4,
+      "causal_jaccard_feature": 0.45123830417948063,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-pos_pos_5-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-06-25_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-46_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-15-26_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-44_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-22_pass5"
+      ],
+      "pinned_jaccard_feature": 0.47572796285839763,
+      "pinned_jaccard_layer": 0.6550740925740925,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.500027183600713,
+      "tool_calls_mean": 34.0,
+      "tool_calls_sd": 13.765899897936205,
+      "spurious_jaccard_feature": 0.4245504740357681,
+      "causal_jaccard_feature": 0.24761904761904763,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_journalist_dietitian-pos_pos_5-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-00-39_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-17_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-44_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-47_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-43_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4321497927037899,
+      "pinned_jaccard_layer": 0.6059343434343434,
+      "pinned_jaccard_band": 0.8,
+      "inspected_jaccard_feature": 0.47623218267240003,
+      "tool_calls_mean": 50.6,
+      "tool_calls_sd": 13.649175799292792,
+      "spurious_jaccard_feature": 0.31666666666666665,
+      "causal_jaccard_feature": 0.4093974358974359,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-07_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-19_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-30_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-54_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-00_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6236024844720497,
+      "pinned_jaccard_layer": 0.8666666666666666,
+      "pinned_jaccard_band": 0.8,
+      "inspected_jaccard_feature": 0.4206530321011387,
+      "tool_calls_mean": 33.6,
+      "tool_calls_sd": 15.485477067239485,
+      "spurious_jaccard_feature": 0.3562121212121212,
+      "causal_jaccard_feature": 0.19904761904761906,
+      "verdicts": [
+        "spurious",
+        "mixed",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-bib_nurse_professor-neg_neg_1-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-00-14_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-07_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-04_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-32_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-34_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5362460127591706,
+      "pinned_jaccard_layer": 0.6901709401709402,
+      "pinned_jaccard_band": 0.8,
+      "inspected_jaccard_feature": 0.5327997216784401,
+      "tool_calls_mean": 36.8,
+      "tool_calls_sd": 5.805170109479997,
+      "spurious_jaccard_feature": 0.5666666666666667,
+      "causal_jaccard_feature": 0.4961140819964349,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-neg_neg_2-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-31_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-08_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-17-45_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-38_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-58_pass5"
+      ],
+      "pinned_jaccard_feature": 0.540367308213608,
+      "pinned_jaccard_layer": 0.7543831168831169,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.3890004813665606,
+      "tool_calls_mean": 30.4,
+      "tool_calls_sd": 9.939818911831342,
+      "spurious_jaccard_feature": 0.5133838383838384,
+      "causal_jaccard_feature": 0.315,
+      "verdicts": [
+        "spurious",
+        "mixed",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-bib_nurse_professor-neg_neg_2-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-02-36_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-35_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-15-47_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-48_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-40_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6560021157003916,
+      "pinned_jaccard_layer": 0.8847222222222222,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6791666666666667,
+      "tool_calls_mean": 42.0,
+      "tool_calls_sd": 7.582875444051551,
+      "spurious_jaccard_feature": 0.13676046176046178,
+      "causal_jaccard_feature": 0.28864217907696166,
+      "verdicts": [
+        "mixed",
+        "causal",
+        "causal",
+        "causal",
+        "other"
+      ],
+      "verdict_flip_rate": 0.7,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-bib_nurse_professor-neg_neg_3-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-01-38_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-37_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-51_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T08-38-59_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-17_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5030388303534756,
+      "pinned_jaccard_layer": 0.573976023976024,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.4561005866114562,
+      "tool_calls_mean": 29.8,
+      "tool_calls_sd": 7.259476565152615,
+      "spurious_jaccard_feature": 0.5504256854256855,
+      "causal_jaccard_feature": 0.21896825396825398,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-neg_neg_3-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-00-19_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-54_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-15-39_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-50_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-30_pass5"
+      ],
+      "pinned_jaccard_feature": 0.40594993742741015,
+      "pinned_jaccard_layer": 0.8015384615384615,
+      "pinned_jaccard_band": 0.6166666666666667,
+      "inspected_jaccard_feature": 0.49456795194639297,
+      "tool_calls_mean": 64.2,
+      "tool_calls_sd": 26.252618916976648,
+      "spurious_jaccard_feature": 0.33333333333333337,
+      "causal_jaccard_feature": 0.34532742001556455,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-neg_neg_4-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-32_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-20_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-51_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-44_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-43_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5657988580047404,
+      "pinned_jaccard_layer": 0.6806385281385281,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5235264546809538,
+      "tool_calls_mean": 35.0,
+      "tool_calls_sd": 12.103718436910205,
+      "spurious_jaccard_feature": 0.38485431235431233,
+      "causal_jaccard_feature": 0.13650793650793652,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-neg_neg_4-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-01-14_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-18-21_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-29_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-49_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-45_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5441316425120772,
+      "pinned_jaccard_layer": 0.9166666666666666,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.7132992443286561,
+      "tool_calls_mean": 51.0,
+      "tool_calls_sd": 11.067971810589327,
+      "spurious_jaccard_feature": 0.47333333333333333,
+      "causal_jaccard_feature": 0.38643578643578647,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-neg_neg_5-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-07-07_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-15-45_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-18-40_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-28_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-54_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6746908212560386,
+      "pinned_jaccard_layer": 0.7935042735042735,
+      "pinned_jaccard_band": 0.8,
+      "inspected_jaccard_feature": 0.5358496088090409,
+      "tool_calls_mean": 37.8,
+      "tool_calls_sd": 21.288494545176274,
+      "spurious_jaccard_feature": 0.651068931068931,
+      "causal_jaccard_feature": 0.2535894660894661,
+      "verdicts": [
+        "mixed",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-bib_nurse_professor-neg_neg_5-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-02-56_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-17-08_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-17-48_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-11_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-25_pass5"
+      ],
+      "pinned_jaccard_feature": 0.45923571317550743,
+      "pinned_jaccard_layer": 0.7404262404262404,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.48412856935852816,
+      "tool_calls_mean": 43.0,
+      "tool_calls_sd": 18.66815470259447,
+      "spurious_jaccard_feature": 0.8,
+      "causal_jaccard_feature": 0.4415364480720518,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-pos_pos_1-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-01-42_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-17-19_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-49_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-32_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-17_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6872549019607843,
+      "pinned_jaccard_layer": 0.7562104562104561,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.7928676470588235,
+      "tool_calls_mean": 29.4,
+      "tool_calls_sd": 4.979959839195493,
+      "spurious_jaccard_feature": 0.5937595737595738,
+      "causal_jaccard_feature": 0.5900000000000001,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-pos_pos_1-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-26_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-58_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-17_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-54_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-42_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5361867362656836,
+      "pinned_jaccard_layer": 0.7331593406593406,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5067229833476973,
+      "tool_calls_mean": 34.4,
+      "tool_calls_sd": 7.402702209328699,
+      "spurious_jaccard_feature": 0.3,
+      "causal_jaccard_feature": 0.3289915966386555,
+      "verdicts": [
+        "causal",
+        "spurious",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-bib_nurse_professor-pos_pos_2-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-04-02_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-32_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-46_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-37_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-17_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4566226549374492,
+      "pinned_jaccard_layer": 0.672002442002442,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.3568610898905017,
+      "tool_calls_mean": 30.8,
+      "tool_calls_sd": 13.663820841916802,
+      "spurious_jaccard_feature": 0.24971872082166202,
+      "causal_jaccard_feature": 0.15999999999999998,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-pos_pos_2-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-06-06_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-47_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-48_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-25_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-36_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6302984962974821,
+      "pinned_jaccard_layer": 0.7813131313131313,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.704045584045584,
+      "tool_calls_mean": 39.4,
+      "tool_calls_sd": 14.293355099485915,
+      "spurious_jaccard_feature": 1.0,
+      "causal_jaccard_feature": 0.5775037196766232,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-pos_pos_3-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-00_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-47_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-02_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-09_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-03_pass5"
+      ],
+      "pinned_jaccard_feature": 0.45083025669982196,
+      "pinned_jaccard_layer": 0.6182251082251082,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.4415615514753446,
+      "tool_calls_mean": 33.4,
+      "tool_calls_sd": 13.813037319865606,
+      "spurious_jaccard_feature": 0.3008080808080808,
+      "causal_jaccard_feature": 0.2444444444444444,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "mixed",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-bib_nurse_professor-pos_pos_3-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-08-34_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-58_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-47_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-38_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-20_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6072790721863949,
+      "pinned_jaccard_layer": 0.9166666666666666,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5976961926961927,
+      "tool_calls_mean": 34.4,
+      "tool_calls_sd": 12.895735729302148,
+      "spurious_jaccard_feature": 0.3,
+      "causal_jaccard_feature": 0.5631504116798235,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-pos_pos_4-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-00-42_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-41_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-05_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-36_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-03_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5827344351739513,
+      "pinned_jaccard_layer": 0.8057808857808858,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.49478729690651146,
+      "tool_calls_mean": 37.8,
+      "tool_calls_sd": 9.364827814754525,
+      "spurious_jaccard_feature": 0.42958345163608325,
+      "causal_jaccard_feature": 0.4479978354978355,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "mixed",
+        "spurious",
+        "mixed"
+      ],
+      "verdict_flip_rate": 0.6,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-bib_nurse_professor-pos_pos_4-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-08-56_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-45_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-27_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-14_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-25-24_pass5"
+      ],
+      "pinned_jaccard_feature": 0.3945946739430782,
+      "pinned_jaccard_layer": 0.61007326007326,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.3371186171788655,
+      "tool_calls_mean": 47.4,
+      "tool_calls_sd": 27.44631122755843,
+      "spurious_jaccard_feature": 1.0,
+      "causal_jaccard_feature": 0.36476992505736155,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-pos_pos_5-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-03_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-55_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-18_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-53_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-36_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4750925618854008,
+      "pinned_jaccard_layer": 0.7058974358974359,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5543808109465438,
+      "tool_calls_mean": 41.2,
+      "tool_calls_sd": 20.717142660125695,
+      "spurious_jaccard_feature": 0.3763157894736842,
+      "causal_jaccard_feature": 0.38148809523809524,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-bib_nurse_professor-pos_pos_5-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-08-53_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-43_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-58_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-49_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-35_pass5"
+      ],
+      "pinned_jaccard_feature": 0.45801282400914245,
+      "pinned_jaccard_layer": 0.6555699855699856,
+      "pinned_jaccard_band": 0.8,
+      "inspected_jaccard_feature": 0.3699662235349584,
+      "tool_calls_mean": 52.6,
+      "tool_calls_sd": 25.304149857286255,
+      "spurious_jaccard_feature": 0.26666666666666666,
+      "causal_jaccard_feature": 0.34360814791243993,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_1-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-08_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-45_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-55_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-36_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-54_pass5"
+      ],
+      "pinned_jaccard_feature": 0.37891064948273184,
+      "pinned_jaccard_layer": 0.7904761904761904,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.7218347338935575,
+      "tool_calls_mean": 28.2,
+      "tool_calls_sd": 6.058052492344384,
+      "spurious_jaccard_feature": 0.44000000000000006,
+      "causal_jaccard_feature": 0.6,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_1-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-02-39_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-48_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-15_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T08-35-58_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-20_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4212489402991104,
+      "pinned_jaccard_layer": 0.8476190476190476,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6066221157980729,
+      "tool_calls_mean": 57.2,
+      "tool_calls_sd": 16.037456157383563,
+      "spurious_jaccard_feature": 0.270023432449903,
+      "causal_jaccard_feature": 0.265,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_10-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-14_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-12_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-05_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-38_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-46_pass5"
+      ],
+      "pinned_jaccard_feature": 0.3943008970960563,
+      "pinned_jaccard_layer": 0.7946428571428571,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.4904689617782597,
+      "tool_calls_mean": 34.2,
+      "tool_calls_sd": 18.130085493455347,
+      "spurious_jaccard_feature": 0.32024698340874813,
+      "causal_jaccard_feature": 0.35,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_10-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-41_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-54_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-34_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-12_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-06_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5391118313868739,
+      "pinned_jaccard_layer": 0.7647619047619048,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5350296100065921,
+      "tool_calls_mean": 37.8,
+      "tool_calls_sd": 10.134100848126586,
+      "spurious_jaccard_feature": 0.4179126755597344,
+      "causal_jaccard_feature": 0.35,
+      "verdicts": [
+        "mixed",
+        "spurious",
+        "spurious",
+        "spurious",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.7,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-civil_comments-pos_pos_2-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-02-46_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-43_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-46_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-08_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-22_pass5"
+      ],
+      "pinned_jaccard_feature": 0.42985381285381286,
+      "pinned_jaccard_layer": 0.6189393939393939,
+      "pinned_jaccard_band": 0.8,
+      "inspected_jaccard_feature": 0.37094792901244517,
+      "tool_calls_mean": 33.8,
+      "tool_calls_sd": 17.137677789012137,
+      "spurious_jaccard_feature": 0.3770912420912421,
+      "causal_jaccard_feature": 1.0,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_2-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-07-14_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-18-43_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-53_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-48_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-14_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4817309727309727,
+      "pinned_jaccard_layer": 0.9,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6542290884534924,
+      "tool_calls_mean": 42.0,
+      "tool_calls_sd": 3.24037034920393,
+      "spurious_jaccard_feature": 0.31516650016650016,
+      "causal_jaccard_feature": 0.3,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-37_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-51_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-01_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-20_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-17_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4605372405372406,
+      "pinned_jaccard_layer": 0.8232142857142858,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.504228113102255,
+      "tool_calls_mean": 34.4,
+      "tool_calls_sd": 9.528903399657276,
+      "spurious_jaccard_feature": 0.5031565656565656,
+      "causal_jaccard_feature": 0.38666666666666666,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_3-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-06-18_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-18-42_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-30_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-17_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-29_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5117331996461085,
+      "pinned_jaccard_layer": 0.7857142857142857,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5770887445887446,
+      "tool_calls_mean": 40.8,
+      "tool_calls_sd": 8.043631020876083,
+      "spurious_jaccard_feature": 0.24583333333333335,
+      "causal_jaccard_feature": 0.45714285714285713,
+      "verdicts": [
+        "causal",
+        "spurious",
+        "mixed",
+        "mixed",
+        "mixed"
+      ],
+      "verdict_flip_rate": 0.7,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-civil_comments-pos_pos_4-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-08-33_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-17-49_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-27_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-06_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-52_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5008285278234127,
+      "pinned_jaccard_layer": 0.8178571428571428,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.576849495533706,
+      "tool_calls_mean": 34.4,
+      "tool_calls_sd": 4.505552130427524,
+      "spurious_jaccard_feature": 0.39107142857142857,
+      "causal_jaccard_feature": 0.5033333333333333,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_4-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-26_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-58_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-19_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-15_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-26_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5028868586328263,
+      "pinned_jaccard_layer": 0.8571428571428571,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5478238203195973,
+      "tool_calls_mean": 53.0,
+      "tool_calls_sd": 7.0710678118654755,
+      "spurious_jaccard_feature": 0.3656489262371615,
+      "causal_jaccard_feature": 0.25765623265623266,
+      "verdicts": [
+        "mixed",
+        "causal",
+        "spurious",
+        "causal",
+        "mixed"
+      ],
+      "verdict_flip_rate": 0.8,
+      "verdict_modal_dissent": 0.6
+    },
+    "exp-probe-civil_comments-pos_pos_5-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-04-18_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-14_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-42_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-02_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-09_pass5"
+      ],
+      "pinned_jaccard_feature": 0.49756604951112954,
+      "pinned_jaccard_layer": 0.7543650793650793,
+      "pinned_jaccard_band": 0.7,
+      "inspected_jaccard_feature": 0.4895185185185185,
+      "tool_calls_mean": 35.2,
+      "tool_calls_sd": 15.006665185843255,
+      "spurious_jaccard_feature": 0.5672655195681512,
+      "causal_jaccard_feature": 0.4,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_5-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-31_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-18-42_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-41_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-14_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-20_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5406337324608175,
+      "pinned_jaccard_layer": 0.8678571428571429,
+      "pinned_jaccard_band": 0.8,
+      "inspected_jaccard_feature": 0.5000642219802989,
+      "tool_calls_mean": 54.0,
+      "tool_calls_sd": 9.617692030835672,
+      "spurious_jaccard_feature": 0.24509920634920634,
+      "causal_jaccard_feature": 0.3,
+      "verdicts": [
+        "spurious",
+        "mixed",
+        "spurious",
+        "spurious",
+        "mixed"
+      ],
+      "verdict_flip_rate": 0.6,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-civil_comments-pos_pos_6-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-47_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-15-34_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-46_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-20_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-07_pass5"
+      ],
+      "pinned_jaccard_feature": 0.7355217086834733,
+      "pinned_jaccard_layer": 0.82,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6703663003663004,
+      "tool_calls_mean": 30.4,
+      "tool_calls_sd": 4.159326868617084,
+      "spurious_jaccard_feature": 0.3916666666666667,
+      "causal_jaccard_feature": 0.4,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_6-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-00_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-02_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-27_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T08-42-56_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-14_pass5"
+      ],
+      "pinned_jaccard_feature": 0.3504392858138988,
+      "pinned_jaccard_layer": 0.7354365079365079,
+      "pinned_jaccard_band": 0.8,
+      "inspected_jaccard_feature": 0.3217489582108931,
+      "tool_calls_mean": 43.2,
+      "tool_calls_sd": 25.341665296503308,
+      "spurious_jaccard_feature": 0.3904521067771795,
+      "causal_jaccard_feature": 0.6,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_7-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-25_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-21_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-11_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-21_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-45_pass5"
+      ],
+      "pinned_jaccard_feature": 0.7008783487044357,
+      "pinned_jaccard_layer": 0.8678571428571429,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.8007142857142856,
+      "tool_calls_mean": 36.6,
+      "tool_calls_sd": 10.21273714534943,
+      "spurious_jaccard_feature": 0.28400412796697627,
+      "causal_jaccard_feature": 0.6,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_7-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-18-08_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-51_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-49_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-26_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-18_pass5"
+      ],
+      "pinned_jaccard_feature": 0.46481122060577496,
+      "pinned_jaccard_layer": 0.7952380952380953,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.44511119257087,
+      "tool_calls_mean": 42.6,
+      "tool_calls_sd": 10.99090533122727,
+      "spurious_jaccard_feature": 0.27837642749407454,
+      "causal_jaccard_feature": 1.0,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_8-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_8-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-46_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_8-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-18-55_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_8-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-03_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_8-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-37_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_8-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-51_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4113288563288563,
+      "pinned_jaccard_layer": 0.7936363636363637,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5119988632057597,
+      "tool_calls_mean": 39.6,
+      "tool_calls_sd": 10.549881515922348,
+      "spurious_jaccard_feature": 0.5152357609710551,
+      "causal_jaccard_feature": 0.5666666666666667,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_8-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_8-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-11-35_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_8-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-50_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_8-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-23_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_8-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-59_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_8-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-33_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5156495292921387,
+      "pinned_jaccard_layer": 0.6963888888888888,
+      "pinned_jaccard_band": 0.7,
+      "inspected_jaccard_feature": 0.3973385044582658,
+      "tool_calls_mean": 53.2,
+      "tool_calls_sd": 14.703741020570241,
+      "spurious_jaccard_feature": 0.543364206223474,
+      "causal_jaccard_feature": 0.125,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-civil_comments-pos_pos_9-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-30_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-52_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-42_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-46_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-33_pass5"
+      ],
+      "pinned_jaccard_feature": 0.3884486280306368,
+      "pinned_jaccard_layer": 0.9428571428571428,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.30531599539575605,
+      "tool_calls_mean": 60.2,
+      "tool_calls_sd": 52.67542121331352,
+      "spurious_jaccard_feature": 0.2648423889087131,
+      "causal_jaccard_feature": 0.2,
+      "verdicts": [
+        "mixed",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-civil_comments-pos_pos_9-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-08-23_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-13_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-15_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-24_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-58_pass5"
+      ],
+      "pinned_jaccard_feature": 0.7148962531721152,
+      "pinned_jaccard_layer": 0.8857142857142858,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5339101851533522,
+      "tool_calls_mean": 51.2,
+      "tool_calls_sd": 16.93221781102523,
+      "spurious_jaccard_feature": 0.28725108225108226,
+      "causal_jaccard_feature": 0.3,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "mixed",
+        "other",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.7,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-multinli-pos_pos_1-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-44_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-04_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-15_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-37_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-20_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5911545429173138,
+      "pinned_jaccard_layer": 0.7611538461538461,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6794354838709677,
+      "tool_calls_mean": 43.8,
+      "tool_calls_sd": 17.93599732381782,
+      "spurious_jaccard_feature": 0.43923076923076926,
+      "causal_jaccard_feature": 0.20683009800656862,
+      "verdicts": [
+        "causal",
+        "mixed",
+        "mixed",
+        "mixed",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.7,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-multinli-pos_pos_1-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-12-03_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-40_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-52_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-10_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-02_pass5"
+      ],
+      "pinned_jaccard_feature": 0.48246047851311,
+      "pinned_jaccard_layer": 0.8833333333333334,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6157013086074871,
+      "tool_calls_mean": 45.2,
+      "tool_calls_sd": 24.014578905323322,
+      "spurious_jaccard_feature": 1.0,
+      "causal_jaccard_feature": 0.38642903106525395,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-multinli-pos_pos_10-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-08-37_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-44_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-52_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-30_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-03_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6323790454396863,
+      "pinned_jaccard_layer": 0.8228282828282827,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.48942695737554975,
+      "tool_calls_mean": 41.8,
+      "tool_calls_sd": 26.92953768633988,
+      "spurious_jaccard_feature": 0.5917787952501575,
+      "causal_jaccard_feature": 0.20512820512820512,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-multinli-pos_pos_10-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-11-29_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-08_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-29_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-23_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-36_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5226701423617277,
+      "pinned_jaccard_layer": 0.7868181818181819,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.3610378950378951,
+      "tool_calls_mean": 40.6,
+      "tool_calls_sd": 9.710818709048171,
+      "spurious_jaccard_feature": 0.32306471306471307,
+      "causal_jaccard_feature": 0.17023809523809524,
+      "verdicts": [
+        "mixed",
+        "causal",
+        "mixed",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.8,
+      "verdict_modal_dissent": 0.6
+    },
+    "exp-probe-multinli-pos_pos_2-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-12-20_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-18_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-10_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-36_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-28_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6267583497000333,
+      "pinned_jaccard_layer": 0.8566666666666667,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6041200909275022,
+      "tool_calls_mean": 53.6,
+      "tool_calls_sd": 26.847718711279736,
+      "spurious_jaccard_feature": 0.3341473877000193,
+      "causal_jaccard_feature": 0.5266666666666666,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-multinli-pos_pos_2-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-05_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-53_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-12_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-24_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-14_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5598066282231368,
+      "pinned_jaccard_layer": 0.8333333333333334,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.552032432037503,
+      "tool_calls_mean": 50.6,
+      "tool_calls_sd": 10.830512453249847,
+      "spurious_jaccard_feature": 0.3179738562091503,
+      "causal_jaccard_feature": 0.11794351073762839,
+      "verdicts": [
+        "spurious",
+        "mixed",
+        "causal",
+        "causal",
+        "mixed"
+      ],
+      "verdict_flip_rate": 0.8,
+      "verdict_modal_dissent": 0.6
+    },
+    "exp-probe-multinli-pos_pos_3-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-17_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-05_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-04_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-28_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-33_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5950455839668491,
+      "pinned_jaccard_layer": 0.8010101010101011,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.488984718984719,
+      "tool_calls_mean": 43.2,
+      "tool_calls_sd": 10.183319694480774,
+      "spurious_jaccard_feature": 0.502485014985015,
+      "causal_jaccard_feature": 0.5109920634920635,
+      "verdicts": [
+        "mixed",
+        "spurious",
+        "spurious",
+        "mixed",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.6,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-multinli-pos_pos_3-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-01_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-16-22_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-39_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-14_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-47_pass5"
+      ],
+      "pinned_jaccard_feature": 0.482673926347021,
+      "pinned_jaccard_layer": 0.7658730158730159,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.4921671408070747,
+      "tool_calls_mean": 78.2,
+      "tool_calls_sd": 21.498837177856853,
+      "spurious_jaccard_feature": 0.6,
+      "causal_jaccard_feature": 0.39175472649013837,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-multinli-pos_pos_4-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-11-35_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-03_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-04_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-24_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-25_pass5"
+      ],
+      "pinned_jaccard_feature": 0.47983165911615827,
+      "pinned_jaccard_layer": 0.634090909090909,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.710814181904282,
+      "tool_calls_mean": 41.4,
+      "tool_calls_sd": 6.913754406977442,
+      "spurious_jaccard_feature": 0.49459207459207455,
+      "causal_jaccard_feature": 0.2156277056277056,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "causal",
+        "mixed",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.7,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-multinli-pos_pos_4-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-08-34_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-51_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-10_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-17_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-25-15_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4956152658330463,
+      "pinned_jaccard_layer": 0.6177777777777778,
+      "pinned_jaccard_band": 0.8,
+      "inspected_jaccard_feature": 0.47878944253717376,
+      "tool_calls_mean": 63.0,
+      "tool_calls_sd": 25.25866188063018,
+      "spurious_jaccard_feature": 0.20277777777777778,
+      "causal_jaccard_feature": 0.291933680354733,
+      "verdicts": [
+        "causal",
+        "causal",
+        "mixed",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-multinli-pos_pos_5-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-08-25_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-16-22_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-55_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-38_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-28_pass5"
+      ],
+      "pinned_jaccard_feature": 0.46537417262455183,
+      "pinned_jaccard_layer": 0.7427972027972027,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.47792812164079984,
+      "tool_calls_mean": 44.4,
+      "tool_calls_sd": 21.090282122342508,
+      "spurious_jaccard_feature": 0.3370469401288367,
+      "causal_jaccard_feature": 0.3125,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "mixed",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-multinli-pos_pos_5-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-11-55_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-43_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-53_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-06_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-37_pass5"
+      ],
+      "pinned_jaccard_feature": 0.439991093195505,
+      "pinned_jaccard_layer": 0.7475081699346405,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.42680892835655104,
+      "tool_calls_mean": 65.8,
+      "tool_calls_sd": 23.220680437919988,
+      "spurious_jaccard_feature": 0.2738095243187858,
+      "causal_jaccard_feature": 0.021052631578947368,
+      "verdicts": [
+        "mixed",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-multinli-pos_pos_6-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-15-11_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-16-26_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-31_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-23_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-36_pass5"
+      ],
+      "pinned_jaccard_feature": 0.5962540607355226,
+      "pinned_jaccard_layer": 0.8332828282828283,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5974463469230933,
+      "tool_calls_mean": 52.8,
+      "tool_calls_sd": 16.63430190900718,
+      "spurious_jaccard_feature": 0.5331152507623096,
+      "causal_jaccard_feature": 0.288989898989899,
+      "verdicts": [
+        "causal",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-multinli-pos_pos_6-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-35_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-48_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-47_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-09_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-40_pass5"
+      ],
+      "pinned_jaccard_feature": 0.6358470695970696,
+      "pinned_jaccard_layer": 0.8051282051282052,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5177454535013015,
+      "tool_calls_mean": 61.8,
+      "tool_calls_sd": 26.975915183733804,
+      "spurious_jaccard_feature": 0.2,
+      "causal_jaccard_feature": 0.215,
+      "verdicts": [
+        "causal",
+        "causal",
+        "spurious",
+        "spurious",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.6,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-multinli-pos_pos_7-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-01_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-52_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-33_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-11_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-01_pass5"
+      ],
+      "pinned_jaccard_feature": 0.4482151779996375,
+      "pinned_jaccard_layer": 0.5938383838383838,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.4936307778243262,
+      "tool_calls_mean": 37.8,
+      "tool_calls_sd": 13.21741275741966,
+      "spurious_jaccard_feature": 0.7103174603174602,
+      "causal_jaccard_feature": 0.16028138528138527,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "causal",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-multinli-pos_pos_7-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-01_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-04_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-47_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-00_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-51_pass5"
+      ],
+      "pinned_jaccard_feature": 0.3973894870552358,
+      "pinned_jaccard_layer": 0.6011554621848739,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.5434661188657671,
+      "tool_calls_mean": 71.0,
+      "tool_calls_sd": 14.679918255903198,
+      "spurious_jaccard_feature": 0.12222222222222223,
+      "causal_jaccard_feature": 0.09683605565638234,
+      "verdicts": [
+        "mixed",
+        "causal",
+        "spurious",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.7,
+      "verdict_modal_dissent": 0.4
+    },
+    "exp-probe-multinli-pos_pos_8-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_8-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-11-44_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_8-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-17-32_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_8-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-02_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_8-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-10_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_8-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-15_pass5"
+      ],
+      "pinned_jaccard_feature": 0.49256640401362606,
+      "pinned_jaccard_layer": 0.8857142857142858,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.6057419620874629,
+      "tool_calls_mean": 39.0,
+      "tool_calls_sd": 11.0,
+      "spurious_jaccard_feature": 0.6,
+      "causal_jaccard_feature": 0.46223634208928327,
+      "verdicts": [
+        "causal",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-multinli-pos_pos_8-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_8-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-11-04_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_8-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-10_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_8-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-41_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_8-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-13_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_8-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-09_pass5"
+      ],
+      "pinned_jaccard_feature": 0.35866212816848553,
+      "pinned_jaccard_layer": 0.9199999999999999,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.45043306908310676,
+      "tool_calls_mean": 56.4,
+      "tool_calls_sd": 26.08256122392891,
+      "spurious_jaccard_feature": 1.0,
+      "causal_jaccard_feature": 0.18005238752392452,
+      "verdicts": [
+        "none",
+        "causal",
+        "causal",
+        "causal",
+        "causal"
+      ],
+      "verdict_flip_rate": 0.4,
+      "verdict_modal_dissent": 0.19999999999999996
+    },
+    "exp-probe-multinli-pos_pos_9-biased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-11-55_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-29_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-25_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-43_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-25_pass5"
+      ],
+      "pinned_jaccard_feature": 0.3702995044171515,
+      "pinned_jaccard_layer": 0.7020959595959596,
+      "pinned_jaccard_band": 1.0,
+      "inspected_jaccard_feature": 0.3799206349206349,
+      "tool_calls_mean": 29.6,
+      "tool_calls_sd": 12.361229712289955,
+      "spurious_jaccard_feature": 0.40825480075480075,
+      "causal_jaccard_feature": 0.36666666666666664,
+      "verdicts": [
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious",
+        "spurious"
+      ],
+      "verdict_flip_rate": 0.0,
+      "verdict_modal_dissent": 0.0
+    },
+    "exp-probe-multinli-pos_pos_9-unbiased-probe-correct-question": {
+      "n_passes": 5,
+      "pass_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "run_dirs": [
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_9-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-11-19_pass1",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_9-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-17-55_pass2",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_9-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-06_pass3",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_9-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-35_pass4",
+        "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_9-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-34_pass5"
+      ],
+      "pinned_jaccard_feature": 0.38369730120773254,
+      "pinned_jaccard_layer": 0.5647571301247771,
+      "pinned_jaccard_band": 0.8,
+      "inspected_jaccard_feature": 0.3783913199790543,
+      "tool_calls_mean": 74.0,
+      "tool_calls_sd": 32.45766473423496,
+      "spurious_jaccard_feature": 0.6,
+      "causal_jaccard_feature": 0.15066666666666667,
+      "verdicts": [
+        "spurious",
+        "none",
+        "causal",
+        "causal",
+        "mixed"
+      ],
+      "verdict_flip_rate": 0.9,
+      "verdict_modal_dissent": 0.6
+    }
+  },
+  "warnings": [
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-52_pass4: 3 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-24_pass5: 7 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-28_pass4: 4 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-00_pass1: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-04-51_pass1: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-27_pass2: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-30_pass3: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-15-27_pass2: 5 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-21_pass4: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-neg_neg_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-37_pass5: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-00_pass1: 26 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-05_pass3: 3 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-59_pass2: 4 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T08-39-54_pass3: 7 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-06-25_pass1: 3 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_journalist_dietitian-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-17_pass2: 19 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-07_pass1: 17 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-00_pass5: 5 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-08_pass2: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-50_pass4: 10 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_4-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-51_pass3: 26 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-18-40_pass3: 4 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_1-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-26_pass1: 4 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-46_pass3: 10 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-47_pass2: 5 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-47_pass2: 26 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-02_pass3: 7 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-47_pass3: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-58_pass2: 5 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_4-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-08-56_pass1: 9 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-pos_pos_5-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-49_pass4: 8 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-03-08_pass1: 10 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-45_pass2: 7 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-55_pass3: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-14_pass1: 6 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-46_pass5: 8 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_2-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-22_pass5: 14 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-19-14_pass2: 4 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_5-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-02_pass4: 2 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-07_pass5: 9 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-25_pass1: 22 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_7-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-21-11_pass3: 12 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_9-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-46_pass4: 10 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-03_pass5: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_10-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-23_pass4: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-01_pass1: 10 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_3-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-24-14_pass4: 1 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_6-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-36_pass5: 4 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard",
+    "spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_7-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-22-01_pass1: 19 flagged id(s) are pseudo-nodes (embedding/output/probe), excluded from the feature Jaccard"
+  ]
+}

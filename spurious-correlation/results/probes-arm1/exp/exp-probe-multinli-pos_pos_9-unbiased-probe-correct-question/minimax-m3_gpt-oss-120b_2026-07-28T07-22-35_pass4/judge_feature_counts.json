@@ -1,0 +1,168 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Content-word detector; not negation."
+    },
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Content-word detector; not negation."
+    },
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Topic word detector; not negation."
+    },
+    {
+      "id": "L1:F12253",
+      "label": "the word 'menu'",
+      "reason": "Topic word detector; not negation."
+    },
+    {
+      "id": "L0:F8046",
+      "label": "the word \"will.\"",
+      "reason": "Future-tense/content word detector; not negation."
+    },
+    {
+      "id": "L2:F8776",
+      "label": "words related to finance and property law",
+      "reason": "Topic/register feature; not negation."
+    },
+    {
+      "id": "L0:F6649",
+      "label": "the word \"Title\"",
+      "reason": "Legal-topic word detector; not negation."
+    },
+    {
+      "id": "L0:F7404",
+      "label": "the word \"faith\", sometimes in association with related ideas like \"links\" or \"opportunities\"",
+      "reason": "Topic-word detector; not negation."
+    },
+    {
+      "id": "L2:F3059",
+      "label": "the verb \"record\"",
+      "reason": "Content-word detector; not negation."
+    },
+    {
+      "id": "L0:F5128",
+      "label": "the word \"words\" or words that are similar in meaning (word, Word, phrases, matrix)",
+      "reason": "Lexical/semantic overlap feature."
+    },
+    {
+      "id": "L3:F3573",
+      "label": "the word \"menu\" often in conjunction with interface elements",
+      "reason": "Topic integration feature; not negation."
+    },
+    {
+      "id": "L4:F7998",
+      "label": "words related to telecommunications and telephones",
+      "reason": "Topic feature; not negation."
+    },
+    {
+      "id": "L0:F4523",
+      "label": "the word \"domestic\" and words associated with globalism",
+      "reason": "Topic/register feature; not negation."
+    },
+    {
+      "id": "L2:F3648",
+      "label": "code snippets related to menus and restaurants",
+      "reason": "Content/topic integration; not negation."
+    },
+    {
+      "id": "L2:F188",
+      "label": "the word \"will\" in various contexts, sometimes alongside words related to consequences or legal matters",
+      "reason": "Content/legal-context detector; not negation."
+    },
+    {
+      "id": "L1:F14137",
+      "label": "words or phrases that appear in legal or technical documents, like names of laws, legal terms (pleaded, testified), and technical terms, especially when abbreviated or in code",
+      "reason": "Register detector; not negation."
+    },
+    {
+      "id": "L2:F9012",
+      "label": "instances where something was not successful",
+      "reason": "Failure/outcome feature, not negation-word spotting."
+    },
+    {
+      "id": "L1:F7463",
+      "label": "the word \"will,\" possibly indicating a future tense or prediction",
+      "reason": "Future-tense/content detector; not negation."
+    },
+    {
+      "id": "L0:F11835",
+      "label": "terms used in software code such as \"assembly\", \"using\", \"namespace\", and \"license\"",
+      "reason": "Purely technical lexical feature."
+    },
+    {
+      "id": "L1:F581",
+      "label": "code snippets in Java, and code snippets in general",
+      "reason": "Code-topic lexical feature."
+    },
+    {
+      "id": "L2:F1838",
+      "label": "words related to sports outcomes, schedules, and reviews of food",
+      "reason": "Topic feature; not negation."
+    },
+    {
+      "id": "L0:F8047",
+      "label": "research documents",
+      "reason": "Document-register feature; not negation."
+    },
+    {
+      "id": "L0:F1903",
+      "label": "instances of sentences starting with \"The\"",
+      "reason": "Purely structural detector."
+    },
+    {
+      "id": "L1:F6817",
+      "label": "the word \"category\" or \"categories\" regardless of the context they appear in",
+      "reason": "Lexical word detector."
+    },
+    {
+      "id": "L1:F11170",
+      "label": "words related to telephones and connecting/disconnecting calls",
+      "reason": "Topic feature; not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe classification score",
+      "label": "Probe classification score (output logit)",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "Emb: recorded (pos 2)",
+      "label": "Emb: recorded (pos 2)",
+      "reason": "Raw embedding node."
+    },
+    {
+      "id": "Emb: menu (pos 3)",
+      "label": "Emb: menu (pos 3)",
+      "reason": "Raw embedding node."
+    },
+    {
+      "id": "Emb: will (pos 4)",
+      "label": "Emb: will (pos 4)",
+      "reason": "Raw embedding node."
+    },
+    {
+      "id": "Emb: A (pos 1)",
+      "label": "Emb: A (pos 1)",
+      "reason": "Raw embedding node."
+    },
+    {
+      "id": "Emb: bos (pos 0)",
+      "label": "Emb: bos (pos 0)",
+      "reason": "Raw embedding node."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 25,
+  "n_other": 6,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows topic/lexical shortcut features, not negation detectors."
+}

@@ -1,0 +1,73 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity identity detector, not toxicity content."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issues detector, spurious for toxicity."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "mentions of demographic identity, especially race and gender",
+      "reason": "Demographic identity feature, not causal toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/racism identity-topic feature."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity topic detector."
+    },
+    {
+      "id": "L8:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Prejudice/race-context, not direct abuse semantics."
+    },
+    {
+      "id": "L12:F13522",
+      "label": "terms relating to race, specifically focusing on black and white people and slavery",
+      "reason": "Race/slavery context feature."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L4:F9880",
+      "label": "phrases indicating repetition or continuation which often use the word \"another\"",
+      "reason": "Generic repetition/continuation cue."
+    },
+    {
+      "id": "Emb: white (pos 2)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: black (pos 6)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Another (pos 1)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Output: toxicity-classification probe score",
+      "label": "probe output",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "All curated non-output features are identity/topic or generic cues; none are clear toxicity-content detectors."
+}

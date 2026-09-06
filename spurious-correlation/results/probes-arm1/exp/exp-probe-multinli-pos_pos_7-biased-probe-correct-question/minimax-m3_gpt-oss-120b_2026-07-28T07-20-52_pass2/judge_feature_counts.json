@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Direct negation-cue detector: not + copula."
+    },
+    {
+      "id": "L16:F9779",
+      "label": "negation words or contractions like \"won't\", \"not\", \"never\"",
+      "reason": "Generic negation-word detector."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Detects explicit negation wording."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Oracle places it in negation-cue pathway."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Literal negation token detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector, not semantic relation."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F10408",
+      "label": "geographical locations, especially related to bodies of water",
+      "reason": "Oracle says it fires on incidental \"sea\" token."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F5060",
+      "label": "mentions of dinner or breakfast",
+      "reason": "Function-word slot; oracle dismisses semantic relevance."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic copula detector."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Purely structural/document-style feature."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun detector."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 1,
+  "n_other": 6,
+  "spurious_fraction": 0.8571428571428571,
+  "dominant": "spurious",
+  "notes": "Negation-cue detectors dominate; only one incidental content-feature is listed as causal."
+}

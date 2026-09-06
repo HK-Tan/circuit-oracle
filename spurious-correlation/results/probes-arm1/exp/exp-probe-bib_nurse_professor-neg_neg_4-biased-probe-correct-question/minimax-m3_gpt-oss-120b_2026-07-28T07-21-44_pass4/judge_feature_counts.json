@@ -1,0 +1,159 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Explicit male pronoun detector."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Gendered pronoun/possessive detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-gender marker feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun feature, here gendered by context."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Includes male pronoun detection."
+    },
+    {
+      "id": "L9:F2984",
+      "label": "mentions of gendered pronouns, often with a conjunction",
+      "reason": "Gendered pronoun detector."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Gender-word feature."
+    },
+    {
+      "id": "L13:F6622",
+      "label": "pronouns.",
+      "reason": "Generic pronoun feature; gendered here."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "Gendered pronoun/personal-story detector."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based person reference."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male-pronoun feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Structural function word, not profession content."
+    },
+    {
+      "id": "L0:F11024",
+      "label": "the word \"clock\", especially in a technical context",
+      "reason": "Technical vocabulary; content-neutral here."
+    },
+    {
+      "id": "L0:F3214",
+      "label": "titles followed by names or URLs from government sites",
+      "reason": "Title/name pattern, profession-adjacent."
+    },
+    {
+      "id": "L0:F8658",
+      "label": "the word \"is\"",
+      "reason": "Generic copula; structural."
+    },
+    {
+      "id": "L0:F10846",
+      "label": "the word \"also\"",
+      "reason": "Generic discourse word."
+    },
+    {
+      "id": "L2:F13731",
+      "label": "the word \"lab\" or \"laboratory\"",
+      "reason": "Workplace/scientific terminology."
+    },
+    {
+      "id": "L11:F8266",
+      "label": "mentions of people with professional titles or descriptions, especially in healthcare or related fields",
+      "reason": "Professional-title detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F993",
+      "label": "contractions of the verb to be in the third person singular",
+      "reason": "Purely structural grammar feature."
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Gendered, but not a profession indicator."
+    },
+    {
+      "id": "L4:F15567",
+      "label": "sentences with male or female pronouns and possessives, especially ones referring to writing",
+      "reason": "Mixed context; oracle does not isolate profession."
+    },
+    {
+      "id": "L5:F14955",
+      "label": "text about people's free time that mentions both family and hobbies",
+      "reason": "Irrelevant topical feature."
+    },
+    {
+      "id": "L6:F10944",
+      "label": "text in languages other than English",
+      "reason": "Language-ID feature."
+    },
+    {
+      "id": "L9:F12373",
+      "label": "pronouns.",
+      "reason": "Generic pronoun feature."
+    },
+    {
+      "id": "L17:F3683",
+      "label": "biographies",
+      "reason": "Content-neutral genre feature."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Unrelated semantic category."
+    },
+    {
+      "id": "L3:F13121",
+      "label": "the word \"His\" and words that are often capitalized in scientific literature, such as \"Western blot\" and \"mutations.\"",
+      "reason": "Mixed scientific/name feature; not clearly causal here."
+    },
+    {
+      "id": "L5:F645",
+      "label": "verbs in past tense",
+      "reason": "Purely syntactic feature."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Generic symbol/acronym detector."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 7,
+  "n_other": 11,
+  "spurious_fraction": 0.6111111111111112,
+  "dominant": "spurious",
+  "notes": "Male pronoun circuitry dominates; profession signals are few and weak."
+}

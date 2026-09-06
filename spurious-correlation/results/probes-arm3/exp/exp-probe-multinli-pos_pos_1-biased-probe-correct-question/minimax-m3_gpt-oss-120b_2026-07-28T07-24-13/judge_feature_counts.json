@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F11298",
+      "label": "no",
+      "reason": "Negation-word detector in hypothesis."
+    },
+    {
+      "id": "L15:F13061",
+      "label": "uses of the word \"no\" or similar negative statements and words associated with \"one\"",
+      "reason": "Negation-word detector in hypothesis."
+    },
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Negation-word detector in hypothesis."
+    },
+    {
+      "id": "L2:F8142",
+      "label": "words related to places, managing, and negation",
+      "reason": "Oracle flags negation; spurious shortcut."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F16028",
+      "label": "terms related to speculation, lies, false information, and conspiracy theories",
+      "reason": "Task-relevant semantic relation, not negation."
+    },
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Task-relevant semantic relation, not negation."
+    },
+    {
+      "id": "L5:F559",
+      "label": "words frequently related to legal conspiracies and co-conspirators",
+      "reason": "Task-relevant semantic relation, not negation."
+    },
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "Content overlap feature; not structural."
+    },
+    {
+      "id": "L2:F7725",
+      "label": "the word \"card\" when used in a technical context",
+      "reason": "Content overlap feature; not structural."
+    },
+    {
+      "id": "L0:F8996",
+      "label": "the word \"invest\" and related words and words related to investment by officials",
+      "reason": "Content overlap feature; not structural."
+    },
+    {
+      "id": "L0:F44",
+      "label": "words starting with \"cons\" that might indicate a constitution or consolidated standard, alongside \"pride\"",
+      "reason": "Semantic content cue; not negation."
+    },
+    {
+      "id": "L0:F14625",
+      "label": "the abbreviation \"Cons\" or \"AC\" followed by other letters",
+      "reason": "Content cue, not negation."
+    },
+    {
+      "id": "L0:F351",
+      "label": "the word \"expert\"",
+      "reason": "Content cue, not negation."
+    },
+    {
+      "id": "L4:F1248",
+      "label": "brand names of companies or products",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Content-neutral technical-format feature."
+    },
+    {
+      "id": "L1:F13292",
+      "label": "the word \"personal\"",
+      "reason": "Content cue, not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L0:F14574",
+      "label": "the possessive adjective \"your.\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L4:F15764",
+      "label": "fragments of sentences that contain a pronoun, a verb, and the word \"one\", or words with similar meanings",
+      "reason": "Oracle dismisses as structural/surface pattern."
+    },
+    {
+      "id": "L0:F2115",
+      "label": "data reported as a percentage inside brackets, especially in a laboratory or medical context, and also recognizes countries",
+      "reason": "Format/country detector."
+    },
+    {
+      "id": "L10:F16373",
+      "label": "bigoted statements about minority groups",
+      "reason": "Not part of stated NLI feature classes."
+    },
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "No causal NLI relation claimed."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 12,
+  "n_other": 7,
+  "spurious_fraction": 0.25,
+  "dominant": "causal",
+  "notes": "Classified by oracle claims; negation detectors are spurious, while content cues are causal."
+}

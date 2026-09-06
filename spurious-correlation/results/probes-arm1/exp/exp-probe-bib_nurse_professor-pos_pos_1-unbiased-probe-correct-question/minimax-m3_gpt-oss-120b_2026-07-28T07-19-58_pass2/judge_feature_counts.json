@@ -1,0 +1,118 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F10920",
+      "label": "the word \"nurse\"",
+      "reason": "Direct profession token, not gender-related."
+    },
+    {
+      "id": "L2:F15437",
+      "label": "nurses/medical vocabulary",
+      "reason": "Nursing vocabulary indicates profession."
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses/nursing/nurse management",
+      "reason": "Mentions profession, not gender."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "medical environments/personnel/facilities",
+      "reason": "Healthcare context supports profession."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "'nursing profession' word detector",
+      "reason": "Explicit nursing-profession detector."
+    },
+    {
+      "id": "L7:F210",
+      "label": "healthcare institution / hospital name detector",
+      "reason": "Hospital context is profession-indicating."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "nursing/healthcare words",
+      "reason": "Healthcare vocabulary indicates profession."
+    },
+    {
+      "id": "L8:F16339",
+      "label": "hospital/medical-infection context",
+      "reason": "Medical context is causal here."
+    },
+    {
+      "id": "L9:F11754",
+      "label": "nurses/managers/employees (generic)",
+      "reason": "Generic workplace/healthcare terms."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "management/leadership/medicine",
+      "reason": "Role and medicine terminology."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "text about role/skills/leadership of nurse managers",
+      "reason": "Directly describes nurse-manager profession."
+    },
+    {
+      "id": "L18:F14457",
+      "label": "healthcare implementation/patient care",
+      "reason": "Patient-care terminology is profession-related."
+    },
+    {
+      "id": "L19:F5028",
+      "label": "generic healthcare industry words",
+      "reason": "Healthcare industry vocabulary."
+    },
+    {
+      "id": "L20:F4927",
+      "label": "titles/acronyms in healthcare",
+      "reason": "Healthcare titles relate to profession."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: ' nurses'",
+      "label": "input embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: 'perative'",
+      "label": "input embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: ' Perio'",
+      "label": "input embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: ' she'",
+      "label": "input embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "L4:F8736",
+      "label": "the phrase \"born and raised\"",
+      "reason": "Structural/hometown phrasing, dismissed."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols",
+      "reason": "Purely structural/document-like feature."
+    },
+    {
+      "id": "L26:F0",
+      "label": "Probe output (profession classifier)",
+      "reason": "Not an oracle feature."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 0,
+  "n_other": 7,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle claims profession, but all claimed features are profession-indicating; no gender-marker features are actually present."
+}

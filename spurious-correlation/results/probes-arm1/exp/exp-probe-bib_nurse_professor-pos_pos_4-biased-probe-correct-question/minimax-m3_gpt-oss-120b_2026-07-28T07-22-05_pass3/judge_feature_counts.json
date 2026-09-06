@@ -1,0 +1,159 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F1276",
+      "label": "Capitalized-name detector",
+      "reason": "Detects a name, not profession."
+    },
+    {
+      "id": "L5:F16213",
+      "label": "Named-entity+name-format detector",
+      "reason": "Name-format recognition, not task causal."
+    },
+    {
+      "id": "L2:F5859",
+      "label": "First-name (mostly female) detector",
+      "reason": "Gendered name cue."
+    },
+    {
+      "id": "L2:F16306",
+      "label": "Proper-name + positive-adjective",
+      "reason": "Name-based, not profession-specific."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "Proper-noun detector",
+      "reason": "Purely structural name detection."
+    },
+    {
+      "id": "L3:F6158",
+      "label": "Personal name detector",
+      "reason": "Identifies names only."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "Person-pronoun reference",
+      "reason": "Pronoun reference, gender-linked."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "Personal-story-with-'she' narrative",
+      "reason": "She-centered gendered narrative."
+    },
+    {
+      "id": "L0:F15382",
+      "label": "Female-person mention",
+      "reason": "Explicit female-person cue."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "Female first-name detector",
+      "reason": "Female-name feature, inhibitory."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "References to women",
+      "reason": "Gender reference, not profession."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "Woman's-name detector",
+      "reason": "Female name cue, inhibitory."
+    },
+    {
+      "id": "L5:F5996",
+      "label": "Female/femininity words",
+      "reason": "Gendered vocabulary, inhibitory."
+    },
+    {
+      "id": "L18:F3679",
+      "label": "Personal pronoun/name",
+      "reason": "Generic pronoun/name feature."
+    },
+    {
+      "id": "L18:F9023",
+      "label": "Personal name + title",
+      "reason": "Name/title pattern, not causal."
+    },
+    {
+      "id": "L14:F13478",
+      "label": "People's-names with titles",
+      "reason": "Name/title aggregation only."
+    },
+    {
+      "id": "L14:F12501",
+      "label": "Feminine pronoun uses",
+      "reason": "Gendered pronoun feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "Nurse-profession detector",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "Personal-entity with health/medical role",
+      "reason": "Medical-role semantics."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "Healthcare-professional vocabulary",
+      "reason": "Occupation-related vocabulary."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "Counseling/therapy/degree-program health language",
+      "reason": "Health-profession terminology."
+    },
+    {
+      "id": "L4:F9036",
+      "label": "Healthcare lexical detector",
+      "reason": "Medical vocabulary signal."
+    },
+    {
+      "id": "L1:F1494",
+      "label": "Generic medical-practice language",
+      "reason": "Workplace/profession terms."
+    },
+    {
+      "id": "L2:F2589",
+      "label": "Medical specialist/title suffixes",
+      "reason": "Title suffix profession cue."
+    },
+    {
+      "id": "L3:F13446",
+      "label": "Job-title/occupational-title detector",
+      "reason": "Occupational semantics."
+    },
+    {
+      "id": "L3:F6656",
+      "label": "Action/verb/saying detector",
+      "reason": "Content-neutral syntactic/lexical feature."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "Nurse-profession span detector",
+      "reason": "Span-level profession detection."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "Entity-aggregation feature",
+      "reason": "Aggregates profession evidence."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe direction (nurse)",
+      "label": "Probe direction (nurse)",
+      "reason": "Output direction, not feature."
+    }
+  ],
+  "n_spurious": 17,
+  "n_causal": 11,
+  "n_other": 1,
+  "spurious_fraction": 0.6071428571428571,
+  "dominant": "mixed",
+  "notes": "Causal nurse/medical features dominate, but many gender/name cues are also present."
+}

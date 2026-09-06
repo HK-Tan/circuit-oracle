@@ -1,0 +1,73 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "White-token / race-term lexical detectors",
+      "reason": "Detects demographic race term \"white\"."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "White-token / race-term lexical detectors",
+      "reason": "Keys on \"white\" regardless of context."
+    },
+    {
+      "id": "L0:F12768",
+      "label": "Male-pronoun detector",
+      "reason": "Detects gendered pronoun \"he\"."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "White-associated contextual feature",
+      "reason": "Activated by \"white\" identity-context, not toxicity."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F2458",
+      "label": "the word \"was\" and sometimes \"were.\"",
+      "reason": "Generic copular syntax feature."
+    },
+    {
+      "id": "L0:F14369",
+      "label": "the word \"was\"",
+      "reason": "Generic verb-token detector."
+    },
+    {
+      "id": "L0:F2303",
+      "label": "the word \"if\"",
+      "reason": "Generic conditional marker."
+    },
+    {
+      "id": "L2:F1139",
+      "label": "various usages of the word \"so\", as well as some instances of the word \"come\"",
+      "reason": "Structural/conditional template feature."
+    },
+    {
+      "id": "Emb: white (pos 4)",
+      "label": "Emb: white (pos 4)",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: he (pos 2)",
+      "label": "Emb: he (pos 2)",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: If (pos 1)",
+      "label": "Emb: If (pos 1)",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: was (pos 3)",
+      "label": "Emb: was (pos 3)",
+      "reason": "Input token only."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 8,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Score is driven by identity markers and generic syntax, not toxic-content semantics."
+}

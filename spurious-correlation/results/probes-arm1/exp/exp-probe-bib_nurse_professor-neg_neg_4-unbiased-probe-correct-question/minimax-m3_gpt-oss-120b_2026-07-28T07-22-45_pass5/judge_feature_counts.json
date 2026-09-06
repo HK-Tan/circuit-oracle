@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun marker; gender cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Academic-degree/university profession evidence."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Ph.D.-style profession indicator."
+    },
+    {
+      "id": "L1:F14934",
+      "label": "the word \"grid\" and some related terms related to \"grids\"",
+      "reason": "Computing-domain vocabulary."
+    },
+    {
+      "id": "L0:F5743",
+      "label": "the word \"lab\" and words that might be associated with equipment or a positive experience",
+      "reason": "Academic lab context."
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "Research/university context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L14:F15086",
+      "label": "references to Korea/Korean",
+      "reason": "Nationality cue, not profession."
+    },
+    {
+      "id": "L6:F3774",
+      "label": "proper nouns or names with unusual capitalization",
+      "reason": "Generic name/capitalization detector."
+    },
+    {
+      "id": "L0:F8658",
+      "label": "the word \"is\"",
+      "reason": "Purely structural token detector."
+    },
+    {
+      "id": "L0:F10846",
+      "label": "the word \"also\"",
+      "reason": "Purely structural token detector."
+    },
+    {
+      "id": "L1:F10132",
+      "label": "the abbreviation for Doctorate of Philosophy, \"Ph.D.\" (or \"PhD\") written as \"D\"",
+      "reason": "Oracle claims token-shape abbreviation feature."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Not separately evidenced beyond degree tokens."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "abbreviations for degrees and mentions of educational attainment",
+      "reason": "Not separately evidenced beyond degree tokens."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 5,
+  "n_other": 7,
+  "spurious_fraction": 0.16666666666666666,
+  "dominant": "causal",
+  "notes": "Male pronoun is present, but profession/academic features dominate the oracle's claims."
+}

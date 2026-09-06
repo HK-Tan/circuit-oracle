@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F13437",
+      "label": "the word \"who\"",
+      "reason": "Negation-like cue? No: just relative-pronoun function-word detector in hypothesis."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F6735",
+      "label": "political parties and politicians",
+      "reason": "Political/government semantics relevant to NLI meaning."
+    },
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Congress semantic content tied to proposition meaning."
+    },
+    {
+      "id": "L6:F6096",
+      "label": "political parties and affiliations",
+      "reason": "Political affiliation semantics relevant to entailment/contradiction."
+    },
+    {
+      "id": "L1:F2116",
+      "label": "words and phrases related to legal counsel or representation",
+      "reason": "Legal-representation meaning, not negation or pure structure."
+    },
+    {
+      "id": "L2:F156",
+      "label": "words related to the amount or intensity of something",
+      "reason": "Magnitude semantics can affect factual consistency."
+    },
+    {
+      "id": "L3:F13271",
+      "label": "the word \"control.\"",
+      "reason": "Content word with clear propositional meaning."
+    },
+    {
+      "id": "L3:F8382",
+      "label": "the word \"many\", and sometimes \"times\" or \"people\" when near it",
+      "reason": "Quantifier/amount semantics, not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe direction",
+      "label": "contradiction classifier",
+      "reason": "Classifier target, not a feature."
+    },
+    {
+      "id": "L0:F6044",
+      "label": "the word \"yield\"",
+      "reason": "Oracle label is misleading; claims firing on Congress token."
+    },
+    {
+      "id": "L1:F6948",
+      "label": "the word \"lift\" in the context of mechanical devices or ski infrastructure",
+      "reason": "Not in curated causal/spurious set."
+    },
+    {
+      "id": "L0:F9557",
+      "label": "the word \"clean\" and words/phrases associated with people",
+      "reason": "Generic lexical/person association; not task-relevant."
+    },
+    {
+      "id": "L0:F11606",
+      "label": "the word \"fund\"",
+      "reason": "Pure lexical detector; oracle treats it as canceling/neutral."
+    },
+    {
+      "id": "L0:F9529",
+      "label": "the word \"physical\" and words related to programming",
+      "reason": "Oracle dismisses as miscellaneous lexical."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: Congress",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "L0:F0@7",
+      "label": "Emb: funding",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "L0:F0@8",
+      "label": "Emb: levels",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "L0:F0@5",
+      "label": "Emb: controls",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "L0:F0@13",
+      "label": "Emb: many",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "L0:F0@15",
+      "label": "Emb: who",
+      "reason": "Embedding node, not a feature claim."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 7,
+  "n_other": 12,
+  "spurious_fraction": 0.125,
+  "dominant": "causal",
+  "notes": "Oracle supports causal semantics more than negation-like spurious cues; only 'who' is spurious."
+}

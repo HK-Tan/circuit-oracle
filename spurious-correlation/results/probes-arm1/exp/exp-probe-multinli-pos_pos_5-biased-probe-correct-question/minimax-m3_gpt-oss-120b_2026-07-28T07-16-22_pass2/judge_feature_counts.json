@@ -1,0 +1,188 @@
+{
+  "spurious_features": [
+    {
+      "id": "L26:F0",
+      "label": "NLI probe (contradiction)",
+      "reason": "Probe output, not a feature role."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Explicit negation detector."
+    },
+    {
+      "id": "L13:F851",
+      "label": "the letter \"t\" with high activation, and also finds words indicating something negative or the end of an HTML tag",
+      "reason": "Tracks negation spelling in isn't."
+    },
+    {
+      "id": "L14:F13077",
+      "label": "negations.",
+      "reason": "General negation detector."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Generic negation/hedging cue."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Specific negation-pattern detector."
+    },
+    {
+      "id": "L13:F4368",
+      "label": "the word \"not\"",
+      "reason": "Direct negation word detector."
+    },
+    {
+      "id": "L14:F2476",
+      "label": "negative polarity, sometimes in the context of politics or social issues",
+      "reason": "Generic polarity cue."
+    },
+    {
+      "id": "L15:F15779",
+      "label": "hedging language",
+      "reason": "Non-semantic uncertainty cue."
+    },
+    {
+      "id": "L16:F15025",
+      "label": "usage of the word \"not\" combined with personal pronouns or related emotional or motivational language",
+      "reason": "Still a negation-word detector."
+    },
+    {
+      "id": "L12:F10235",
+      "label": "the word \"but\", especially when preceded by a comma",
+      "reason": "Contrast marker, not task semantics."
+    },
+    {
+      "id": "L13:F2557",
+      "label": "occurrences of the word \"but\" and words that often appear near it",
+      "reason": "Literal conjunction pattern."
+    },
+    {
+      "id": "L14:F11020",
+      "label": "the word \"but\". and \"also\"",
+      "reason": "Surface contrast pattern."
+    },
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship",
+      "reason": "Generic contrast detector."
+    },
+    {
+      "id": "L0:F11101",
+      "label": "sentences that contain the word \"but\"",
+      "reason": "Purely lexical conjunction detector."
+    },
+    {
+      "id": "L2:F3379",
+      "label": "the word \"but\" and similar terms",
+      "reason": "Surface contrast vocabulary."
+    },
+    {
+      "id": "L10:F6078",
+      "label": "sections where multiple ideas are being contrasted",
+      "reason": "Contrast structure cue."
+    },
+    {
+      "id": "L2:F5627",
+      "label": "instances of the phrase \"not only\"",
+      "reason": "Phrase-level negation pattern."
+    },
+    {
+      "id": "L4:F11560",
+      "label": "the phrase \"not only\"",
+      "reason": "Direct phrase detector."
+    },
+    {
+      "id": "L9:F12274",
+      "label": "the phrase \"not only\"",
+      "reason": "Direct phrase detector."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation word detector."
+    },
+    {
+      "id": "L0:F1910",
+      "label": "the phrase \"not only\"",
+      "reason": "Phrase detector, not semantics."
+    },
+    {
+      "id": "L0:F12483",
+      "label": "the word \"only\"",
+      "reason": "Surface phrase component detector."
+    },
+    {
+      "id": "L0:F4723",
+      "label": "the word \"only\"",
+      "reason": "Surface phrase component detector."
+    },
+    {
+      "id": "L1:F11907",
+      "label": "the word \"program\"",
+      "reason": "Token detector, structurally irrelevant."
+    },
+    {
+      "id": "L0:F14950",
+      "label": "instances of the word \"program\" and the word \"step\"",
+      "reason": "Lexical pattern, not causal meaning."
+    },
+    {
+      "id": "L4:F15629",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Reported-speech cue, not NLI semantics."
+    },
+    {
+      "id": "L4:F12337",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Reported-speech cue, not NLI semantics."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F0",
+      "label": "Emb: \"not\"",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0",
+      "label": "Emb: \"only\"",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0",
+      "label": "Emb: \"but\"",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0",
+      "label": "Emb: \"isn\"",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0",
+      "label": "Emb: \"t\"",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0",
+      "label": "Emb: \"said\"",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0",
+      "label": "Emb: \"program\"",
+      "reason": "Embedding node only."
+    }
+  ],
+  "n_spurious": 28,
+  "n_causal": 0,
+  "n_other": 7,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle-cited circuit is almost entirely negation/contrast lexical circuitry; no causal semantic features are claimed."
+}

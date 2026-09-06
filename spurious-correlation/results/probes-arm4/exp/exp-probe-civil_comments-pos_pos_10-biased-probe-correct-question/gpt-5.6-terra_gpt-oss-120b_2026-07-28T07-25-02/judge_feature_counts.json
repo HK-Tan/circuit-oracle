@@ -1,0 +1,73 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity identity signal, not toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Black/race discourse feature; identity-group signal."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issue language, not toxic content."
+    },
+    {
+      "id": "L4:F5584",
+      "label": "words related to race, ethnicity, nationality or population groups",
+      "reason": "Population-group detector; spurious identity cue."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Direct race/ethnicity detector."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic-group signal, not toxicity."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Literal race token detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: race (pos 5)",
+      "label": "Emb: race (pos 5)",
+      "reason": "Input token only; no feature semantics."
+    },
+    {
+      "id": "Emb: black (pos 16)",
+      "label": "Emb: black (pos 16)",
+      "reason": "Input token only; no feature semantics."
+    },
+    {
+      "id": "Emb: people (pos 17)",
+      "label": "Emb: people (pos 17)",
+      "reason": "Input token only; no feature semantics."
+    },
+    {
+      "id": "Output: toxicity-classification probe score",
+      "label": "toxicity-classification probe score",
+      "reason": "Target/output node, not a feature."
+    },
+    {
+      "id": "L6:F9228",
+      "label": "language regarding discrimination based on race, gender, religion, and disability",
+      "reason": "Broad discrimination language; not clearly toxicity."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by race/identity-group detectors; no clear toxic-content feature is claimed."
+}

@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Pure negation-marker detector in the hypothesis."
+    },
+    {
+      "id": "L2:F1337",
+      "label": "negated verbs with personal pronouns, and foreign language pronouns",
+      "reason": "Negation-pattern feature; tracks surface negation syntax."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "High-level negation aggregator for surface cue detection."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F5201",
+      "label": "awards and accomplishments in the context of sports",
+      "reason": "Generic sports-context cue tied to tournament meaning."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F15972",
+      "label": "the word \"yeah\"",
+      "reason": "Single word-identity detector; structurally conversational."
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Single word-identity detector; structurally conversational."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Connective token detector; not semantic by itself."
+    },
+    {
+      "id": "L0:F7893",
+      "label": "the word \"double\" and words related to entrances and entering",
+      "reason": "Lexical ambiguity/structural word-identity feature."
+    },
+    {
+      "id": "L0:F10780",
+      "label": "LaTeX commands for including packages and defining document class",
+      "reason": "Purely structural/document-format feature."
+    },
+    {
+      "id": "L0:F4541",
+      "label": "adverbs of certainty such as \"obviously\" and related words",
+      "reason": "Generic lexical cue; not NLI semantics."
+    },
+    {
+      "id": "L2:F9629",
+      "label": "interjections and sounds of hesitation or acknowledgment",
+      "reason": "Hesitation/interjection pattern only."
+    },
+    {
+      "id": "L4:F9602",
+      "label": "interjections and filler words",
+      "reason": "Filler-word detector, not task semantics."
+    },
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Acknowledgement/discourse marker feature."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "Conversational style detector."
+    },
+    {
+      "id": "L4:F1768",
+      "label": "affirmations or agreements",
+      "reason": "Agreement/affirmation cue only."
+    },
+    {
+      "id": "L3:F7140",
+      "label": "words or parts of words containing \"man\", \"ent\", \"per\", or \"mate\"",
+      "reason": "Subword pattern detector; no semantics."
+    },
+    {
+      "id": "L3:F16039",
+      "label": "section delimiters and incomplete quotes",
+      "reason": "Punctuation/formatting feature."
+    },
+    {
+      "id": "L3:F4735",
+      "label": "references to multi-well plates and software used in scientific experiments",
+      "reason": "Domain lexical cue unrelated to NLI."
+    },
+    {
+      "id": "L3:F2663",
+      "label": "interjections and words expressing feeling or emotion, as well as the word \"button\"",
+      "reason": "Emotion/interjection word detector."
+    },
+    {
+      "id": "L4:F13748",
+      "label": "discourse markers or conjunctions",
+      "reason": "Generic discourse connective feature."
+    },
+    {
+      "id": "L4:F2740",
+      "label": "conversational language",
+      "reason": "Broad style feature, not semantic."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 1,
+  "n_other": 18,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "Oracle centers negation-pattern cues plus generic conversation markers; one weak causal sports-context feature appears."
+}

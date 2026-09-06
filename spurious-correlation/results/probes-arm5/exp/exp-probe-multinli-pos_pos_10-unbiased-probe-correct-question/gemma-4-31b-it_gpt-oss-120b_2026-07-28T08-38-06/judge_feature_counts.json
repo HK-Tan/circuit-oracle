@@ -1,0 +1,73 @@
+{
+  "spurious_features": [
+    {
+      "id": "L10:F6670",
+      "label": "Negation Cues (not)",
+      "reason": "Direct not-detector; matches spurious negation-word cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F12799",
+      "label": "Superlative/Oddness Detectors",
+      "reason": "Oddness/superlative semantics, not negation."
+    },
+    {
+      "id": "L2:F16097",
+      "label": "Superlative/Oddness Detectors",
+      "reason": "Oddness/superlative semantics, not negation."
+    },
+    {
+      "id": "L2:F10827",
+      "label": "Superlative/Oddness Detectors",
+      "reason": "Oddness/superlative semantics, not negation."
+    },
+    {
+      "id": "L4:F14368",
+      "label": "Role Concept Detectors",
+      "reason": "Role semantics; relevant to relation meaning."
+    },
+    {
+      "id": "L0:F6013",
+      "label": "Role Concept Detectors",
+      "reason": "Role semantics; relevant to relation meaning."
+    },
+    {
+      "id": "L4:F7409",
+      "label": "Reversal Keyword Detectors",
+      "reason": "Reversal semantics can reflect logical inconsistency."
+    },
+    {
+      "id": "L1:F2580",
+      "label": "Reversal Keyword Detectors",
+      "reason": "Reversal semantics can reflect logical inconsistency."
+    },
+    {
+      "id": "L2:F3705",
+      "label": "Temporal/Discourse Markers (now, right)",
+      "reason": "Temporal/discourse cue, not spurious negation."
+    },
+    {
+      "id": "L0:F13522",
+      "label": "Temporal/Discourse Markers (now, right)",
+      "reason": "Temporal/discourse cue, not spurious negation."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "Temporal/Discourse Markers (now, right)",
+      "reason": "Temporal/discourse cue, not spurious negation."
+    },
+    {
+      "id": "L6:F12420",
+      "label": "Lexical Feature Aggregator",
+      "reason": "Generic aggregator; oracle says lexical path."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 11,
+  "n_other": 0,
+  "spurious_fraction": 0.08333333333333333,
+  "dominant": "causal",
+  "notes": "Oracle chiefly describes causal/lexical-semantic pathways; only not-detector is spurious."
+}

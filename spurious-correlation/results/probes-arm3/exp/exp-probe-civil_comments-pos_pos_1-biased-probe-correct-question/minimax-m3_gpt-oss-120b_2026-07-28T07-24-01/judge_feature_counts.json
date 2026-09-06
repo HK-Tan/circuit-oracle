@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-group vocabulary; spurious for toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race terms; spurious unless directly toxic."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Demographic tokens, not toxic content."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F5707",
+      "label": "words or phrases related to knowledge or perspective",
+      "reason": "Argument/perspective language; identity-independent."
+    },
+    {
+      "id": "L1:F2407",
+      "label": "the word \"clearly\"",
+      "reason": "Generic discourse marker, not toxicity."
+    },
+    {
+      "id": "L0:F6154",
+      "label": "uses of 'clearly' and nearby words that are related to arguments and writing",
+      "reason": "Structural writing/argument feature."
+    },
+    {
+      "id": "L5:F8030",
+      "label": "language discussing differences, clarity, and definition",
+      "reason": "General explanatory language."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Purely structural conjunction."
+    },
+    {
+      "id": "L0:F7142",
+      "label": "the word \"axis\" and its plural form, often in the context of scientific or technical documents",
+      "reason": "Technical/structural, not task-relevant."
+    },
+    {
+      "id": "L0:F7969",
+      "label": "the word \"other\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F12866",
+      "label": "adverbs such as \"clearly,\" \"plainly,\" and \"as\"",
+      "reason": "Generic modifier detector."
+    },
+    {
+      "id": "L4:F14582",
+      "label": "references to the White House and the US government",
+      "reason": "Political-topic, not toxicity-specific."
+    },
+    {
+      "id": "L6:F1707",
+      "label": "a variety of discourse markers, qualifiers, intensifiers, or words expressing an opinion.",
+      "reason": "Broad discourse marker feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/formatting."
+    },
+    {
+      "id": "L0:F4517",
+      "label": "the word \"destroyed\"",
+      "reason": "Single lexical item; oracle doesn't tie it to toxicity here."
+    },
+    {
+      "id": "L0:F247",
+      "label": "the word \"assume\" in academic writing",
+      "reason": "Academic writing token, not toxicity."
+    },
+    {
+      "id": "L0:F164",
+      "label": "the words \"show\" and \"your\", particularly when talking about presenting something",
+      "reason": "Generic phrase detector."
+    },
+    {
+      "id": "L2:F2888",
+      "label": "the word \"tie\" or words related to tying and knots in different contexts ranging from history and fashion to tragic events",
+      "reason": "Unrelated lexical pattern."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 4,
+  "n_other": 11,
+  "spurious_fraction": 0.42857142857142855,
+  "dominant": "mixed",
+  "notes": "Oracle over-attributes identity terms; remaining signals are generic discourse/structure."
+}

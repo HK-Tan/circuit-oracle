@@ -1,0 +1,174 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1910",
+      "label": "the phrase \"not only\"",
+      "reason": "Surface negation/qualification phrase, not semantic contradiction."
+    },
+    {
+      "id": "L2:F5627",
+      "label": "instances of the phrase \"not only\"",
+      "reason": "Template detector for \"not only\"."
+    },
+    {
+      "id": "L9:F12274",
+      "label": "the phrase \"not only\"",
+      "reason": "Phrase-shape detector for \"not only\"."
+    },
+    {
+      "id": "L12:F3005",
+      "label": "the phrase \"not only\"",
+      "reason": "Contrastive phrase cue, not task meaning."
+    },
+    {
+      "id": "L14:F10765",
+      "label": "the phrase \"not only\"",
+      "reason": "Phrase-level contrast cue."
+    },
+    {
+      "id": "L15:F1990",
+      "label": "the phrase \"not only\"",
+      "reason": "Template cue for contrastive construction."
+    },
+    {
+      "id": "L16:F6005",
+      "label": "Not only",
+      "reason": "Exact surface phrase detector."
+    },
+    {
+      "id": "L17:F3763",
+      "label": "only",
+      "reason": "Function-word fragment of the template."
+    },
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Contrastive conjunction pattern, not semantics."
+    },
+    {
+      "id": "L14:F11020",
+      "label": "the word \"but\". and \"also\"",
+      "reason": "Marks template pairing, not causal relation."
+    },
+    {
+      "id": "L4:F2884",
+      "label": "the word \"but\" and other contrastive conjunctions and adverbs.",
+      "reason": "Generic contrast marker."
+    },
+    {
+      "id": "L4:F5347",
+      "label": "the conjunction \"but\"",
+      "reason": "Pure conjunction detector."
+    },
+    {
+      "id": "L10:F6078",
+      "label": "sections where multiple ideas are being contrasted",
+      "reason": "Structural contrast cue."
+    },
+    {
+      "id": "L2:F13565",
+      "label": "the word \"program(me)s\"",
+      "reason": "Lexical token detector, not NLI meaning."
+    },
+    {
+      "id": "L4:F6000",
+      "label": "the word \"program\" and its plural form",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L1:F11907",
+      "label": "the word \"program\"",
+      "reason": "Token detector only."
+    },
+    {
+      "id": "L0:F8046",
+      "label": "the word \"will.\"",
+      "reason": "Auxiliary token detector only."
+    },
+    {
+      "id": "L0:F2961",
+      "label": "words that act as qualifications or negations, with a high preference for \"necessarily\" and \"uncommon.\"",
+      "reason": "Broad negation/qualification cue."
+    },
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Morphological negation fragment detector."
+    },
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Purely structural/informal-language feature."
+    },
+    {
+      "id": "L11:F11267",
+      "label": "clauses beginning with \"although\", certain other conjunctions (though, but), and words implying an absence of something.",
+      "reason": "Mostly contrast/absence marker, not semantic relation."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Topic cluster unrelated to NLI semantics."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L10:F6670",
+      "label": "technical terms, especially within scientific or medical contexts",
+      "reason": "Content-neutral lexical domain feature."
+    },
+    {
+      "id": "L7:F2088",
+      "label": "words related to business, reviews, planning and organization.",
+      "reason": "Content-neutral topical/structural feature."
+    },
+    {
+      "id": "L5:F7144",
+      "label": "proper nouns followed by the word \"said\"",
+      "reason": "Reporting-verb context; structural source cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb:not",
+      "label": "Emb: 'not' (pos 6)",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb:only",
+      "label": "Emb: 'only' (pos 7)",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb:but",
+      "label": "Emb: 'but' (pos 13)",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb:program",
+      "label": "Emb: 'program' (pos 5)",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb:will",
+      "label": "Emb: 'will' (pos 8)",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb:t",
+      "label": "Emb: 't' (pos 28, follows isn')",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Probe",
+      "label": "Probe direction (contradiction score)",
+      "reason": "Model output direction, not a feature."
+    }
+  ],
+  "n_spurious": 22,
+  "n_causal": 3,
+  "n_other": 7,
+  "spurious_fraction": 0.88,
+  "dominant": "spurious",
+  "notes": "Oracle mainly tracks \"not only/but\" template cues; genuine negation is weakly represented."
+}

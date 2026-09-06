@@ -1,0 +1,32 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity-group term; demographic signal."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "the word \"possession\" and the words \"white\", \"immediate\" and \"once\" regardless of context",
+      "reason": "Promoted token includes \"white\"; identity signal."
+    },
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Generic pronoun detector, not toxicity."
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Generic pronoun/structural feature."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 0,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites only identity and pronoun detectors; no toxic-content features claimed."
+}

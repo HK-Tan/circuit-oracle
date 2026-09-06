@@ -1,0 +1,38 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F4874",
+      "label": "the word \"preparation\" and words connected to it",
+      "reason": "Structural/irrelevant here; not a profession indicator."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Journalism/media semantic feature; professional indicator."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism profession vocabulary."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News-outlet concept tied to journalism profession."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: reporter (pos 53)",
+      "label": "reporter",
+      "reason": "Token trigger only; judged via semantic role."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 4,
+  "n_other": 1,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows a journalism-profession circuit; no gender markers appear."
+}

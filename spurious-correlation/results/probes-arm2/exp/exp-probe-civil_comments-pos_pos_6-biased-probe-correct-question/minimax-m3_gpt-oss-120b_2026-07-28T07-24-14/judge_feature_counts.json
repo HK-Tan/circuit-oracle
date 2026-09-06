@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L8:F2483",
+      "label": "Black-entity / race concept",
+      "reason": "Race identity detector, not toxicity content."
+    },
+    {
+      "id": "L7:F7215",
+      "label": "Black-entity / race concept",
+      "reason": "Race identity detector, not toxicity content."
+    },
+    {
+      "id": "L7:F9100",
+      "label": "Black-entity / race concept",
+      "reason": "Race identity detector, not toxicity content."
+    },
+    {
+      "id": "L11:F2332",
+      "label": "Black-entity / race concept",
+      "reason": "Race identity detector, not toxicity content."
+    },
+    {
+      "id": "L12:F13522",
+      "label": "Black-entity / race concept",
+      "reason": "Race identity detector, not toxicity content."
+    },
+    {
+      "id": "L9:F8462",
+      "label": "Black-entity / race concept",
+      "reason": "Race identity detector, not toxicity content."
+    },
+    {
+      "id": "L6:F1163",
+      "label": "Black-entity / race concept",
+      "reason": "Race identity detector, not toxicity content."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "White-entity / race concept",
+      "reason": "Identity-group detector, not toxic semantics."
+    },
+    {
+      "id": "L4:F117",
+      "label": "White-entity / race concept",
+      "reason": "Identity-group detector, not toxic semantics."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "White-entity / race concept",
+      "reason": "Identity-group detector, not toxic semantics."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "White-entity / race concept",
+      "reason": "Identity-group detector, not toxic semantics."
+    },
+    {
+      "id": "L6:F5671",
+      "label": "White-entity / race concept",
+      "reason": "Identity-group detector, not toxic semantics."
+    },
+    {
+      "id": "L5:F6786",
+      "label": "White-entity / race concept",
+      "reason": "Identity-group detector, not toxic semantics."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "Lexical black/race features",
+      "reason": "Race-linked lexical feature, not toxicity."
+    },
+    {
+      "id": "L2:F9528",
+      "label": "Lexical black/race features",
+      "reason": "Race-linked lexical feature, not toxicity."
+    },
+    {
+      "id": "L2:F1708",
+      "label": "Lexical black/race features",
+      "reason": "Race-linked lexical feature, not toxicity."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "Lexical black/race features",
+      "reason": "Race-linked lexical feature, not toxicity."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F12341",
+      "label": "Lexical/early features",
+      "reason": "Reports hostile/abusive lexical content."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F9880",
+      "label": "Lexical/early features",
+      "reason": "No toxic semantics claimed by oracle."
+    },
+    {
+      "id": "L0:F4090",
+      "label": "Lexical/early features",
+      "reason": "Generic sentence-start detector."
+    },
+    {
+      "id": "L3:F12848",
+      "label": "Lexical/early features",
+      "reason": "Unspecified structural/early feature."
+    },
+    {
+      "id": "L0:F6548",
+      "label": "Lexical/early features",
+      "reason": "Unspecified structural/early feature."
+    },
+    {
+      "id": "embed/output",
+      "label": "Probe output (toxicity classification)",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 17,
+  "n_causal": 1,
+  "n_other": 5,
+  "spurious_fraction": 0.9444444444444444,
+  "dominant": "spurious",
+  "notes": "Oracle says identity tokens dominate; only one feature plausibly reflects toxic content."
+}

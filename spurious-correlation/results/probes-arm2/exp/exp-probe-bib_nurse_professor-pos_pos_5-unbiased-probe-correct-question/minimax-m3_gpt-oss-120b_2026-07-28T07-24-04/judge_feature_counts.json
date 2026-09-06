@@ -1,0 +1,163 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Output Logit",
+      "label": "probe direction",
+      "reason": "Target score accumulation"
+    },
+    {
+      "id": "L18:F13596",
+      "label": "late-layer profession features (nurse/nursing)",
+      "reason": "Direct profession indicator"
+    },
+    {
+      "id": "L16:F6954",
+      "label": "late-layer profession features (nurse/nursing)",
+      "reason": "Direct profession indicator"
+    },
+    {
+      "id": "L15:F15159",
+      "label": "late-layer profession features (nurse/nursing)",
+      "reason": "Direct profession indicator"
+    },
+    {
+      "id": "L14:F3985",
+      "label": "mid-layer nursing/medical profession detectors",
+      "reason": "Detects nurse/medical profession"
+    },
+    {
+      "id": "L8:F16339",
+      "label": "mid-layer nurse/nursing token features",
+      "reason": "Detects nurse token"
+    },
+    {
+      "id": "L8:F4607",
+      "label": "mid-layer nurse/nursing token features",
+      "reason": "Detects nursing token"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "Labor/Delivery/medical context features",
+      "reason": "Medical context/profession cue"
+    },
+    {
+      "id": "L6:F9980",
+      "label": "Labor/Delivery/medical context features",
+      "reason": "Medical context/profession cue"
+    },
+    {
+      "id": "L6:F4490",
+      "label": "Labor/Delivery/medical context features",
+      "reason": "Medical context/profession cue"
+    },
+    {
+      "id": "L7:F210",
+      "label": "Labor/Delivery/medical context features",
+      "reason": "Medical context/profession cue"
+    },
+    {
+      "id": "L4:F4665",
+      "label": "Labor+Delivery combination features",
+      "reason": "Profession-specific phrase feature"
+    },
+    {
+      "id": "L4:F13803",
+      "label": "Labor+Delivery combination features",
+      "reason": "Profession-specific phrase feature"
+    },
+    {
+      "id": "L3:F10198",
+      "label": "Labor+Delivery combination features",
+      "reason": "Profession-specific phrase feature"
+    },
+    {
+      "id": "L3:F9008",
+      "label": "Labor+Delivery combination features",
+      "reason": "Profession-specific phrase feature"
+    },
+    {
+      "id": "L2:F15437",
+      "label": "early-layer nurse token features",
+      "reason": "Direct nurse token detector"
+    },
+    {
+      "id": "L1:F14469",
+      "label": "early-layer nurse token features",
+      "reason": "Direct nurse token detector"
+    },
+    {
+      "id": "L0:F8854",
+      "label": "early-layer nurse token features",
+      "reason": "Direct nurse token detector"
+    },
+    {
+      "id": "L0:F10920",
+      "label": "early-layer nurse token features",
+      "reason": "Direct nurse token detector"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L3:F15901",
+      "label": "suppressing features (push probe away)",
+      "reason": "Suppression feature"
+    },
+    {
+      "id": "L7:F3979",
+      "label": "suppressing features (push probe away)",
+      "reason": "Suppression feature"
+    },
+    {
+      "id": "L13:F3597",
+      "label": "suppressing features (push probe away)",
+      "reason": "Suppression feature"
+    },
+    {
+      "id": "Emb: nurse (pos 12)",
+      "label": "nurse",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: Delivery (pos 11)",
+      "label": "Delivery",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: Labor (pos 9)",
+      "label": "Labor",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: Nursing (pos 19)",
+      "label": "Nursing",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: Melissa (pos 5)",
+      "label": "Melissa",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: that (pos 3)",
+      "label": "that",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: worked (pos 6)",
+      "label": "worked",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: to (pos 2)",
+      "label": "to",
+      "reason": "Input embedding only"
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 19,
+  "n_other": 11,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows a profession-detection circuit; no explicit gender-marker features are claimed."
+}

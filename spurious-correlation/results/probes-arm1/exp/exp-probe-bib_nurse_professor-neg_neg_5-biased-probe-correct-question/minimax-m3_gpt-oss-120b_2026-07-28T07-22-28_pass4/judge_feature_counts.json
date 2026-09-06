@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector; gender marker."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-person reference; gender marker."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Pronoun detector; gender marker."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male pronouns/titles; gender marker."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun detector; spurious gender cue here."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "His/he/him detector; gender marker."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun detector; gender marker."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun detector; gender marker."
+    },
+    {
+      "id": "L18:F7217",
+      "label": "words or abbreviations referring to people, with a focus on pronouns and mentions of \"shear\"",
+      "reason": "Pronoun-focused people reference."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "People pronouns/names; gender cue."
+    },
+    {
+      "id": "L19:F8186",
+      "label": "references to a person, especially third-person pronouns and possessive pronouns",
+      "reason": "Third-person pronoun detector."
+    },
+    {
+      "id": "L21:F6216",
+      "label": "references to a specific person, often using pronouns or names",
+      "reason": "Pronoun/name reference; gender cue."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Oracle claims deity pronoun use; not profession."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F1773",
+      "label": "the word \"history\"",
+      "reason": "Field/topic lexical signal."
+    },
+    {
+      "id": "L12:F10137",
+      "label": "names of universities, cities, publications and other institutions.",
+      "reason": "Institution name; education context."
+    },
+    {
+      "id": "L17:F3683",
+      "label": "biographies",
+      "reason": "Biography structure; content-neutral context."
+    },
+    {
+      "id": "L17:F12634",
+      "label": "text mentioning degrees, especially advanced degrees and professional titles, with a weaker response for bachelor's degrees",
+      "reason": "Education/professional title signal."
+    },
+    {
+      "id": "L18:F7334",
+      "label": "information on a person's education and career",
+      "reason": "Career/education information."
+    },
+    {
+      "id": "L19:F11110",
+      "label": "text describing people's education history",
+      "reason": "Education history signal."
+    },
+    {
+      "id": "L20:F10934",
+      "label": "action verbs with past tense forms",
+      "reason": "Structural biography pattern."
+    },
+    {
+      "id": "L21:F4895",
+      "label": "prepositions and related words",
+      "reason": "Purely structural language feature."
+    },
+    {
+      "id": "L22:F12117",
+      "label": "references to actions that people can take or have taken.",
+      "reason": "Generic action/person text."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Oracle says mislabels as male; not profession here."
+    }
+  ],
+  "n_spurious": 13,
+  "n_causal": 9,
+  "n_other": 1,
+  "spurious_fraction": 0.5909090909090909,
+  "dominant": "spurious",
+  "notes": "Male-pronoun features dominate; biography/education signals are secondary."
+}

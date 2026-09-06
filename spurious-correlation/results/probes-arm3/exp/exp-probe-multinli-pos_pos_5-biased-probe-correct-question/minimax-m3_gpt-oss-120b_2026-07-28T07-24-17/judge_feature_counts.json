@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation cue in hypothesis."
+    },
+    {
+      "id": "L16:F15025",
+      "label": "usage of the word \"not\" combined with personal pronouns or related emotional or motivational language",
+      "reason": "Negation cue in hypothesis."
+    },
+    {
+      "id": "L16:F9779",
+      "label": "negation words or contractions like \"won't\", \"not\", \"never\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector across languages."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector across languages."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F15629",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Reported-speech semantic cue."
+    },
+    {
+      "id": "L4:F12337",
+      "label": "speech attribution, especially \"said\"",
+      "reason": "Reported-speech semantic cue."
+    },
+    {
+      "id": "L2:F5627",
+      "label": "instances of the phrase \"not only\"",
+      "reason": "Contrast/semantic relation feature."
+    },
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Contrastive relation feature."
+    },
+    {
+      "id": "L0:F2961",
+      "label": "words that act as qualifications or negations, with a high preference for \"necessarily\" and \"uncommon.\"",
+      "reason": "Meaning qualification feature."
+    },
+    {
+      "id": "L6:F3283",
+      "label": "sentences with \"but\" used as a conjunction",
+      "reason": "Contrastive discourse relation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Purely orthographic substring detector."
+    },
+    {
+      "id": "L0:F14950",
+      "label": "instances of the word \"program\" and the word \"step\"",
+      "reason": "Unrelated lexical co-occurrence."
+    },
+    {
+      "id": "L1:F11907",
+      "label": "the word \"program\"",
+      "reason": "Generic content word detector."
+    },
+    {
+      "id": "L2:F13565",
+      "label": "the word \"program(me)s\"",
+      "reason": "Generic content word detector."
+    },
+    {
+      "id": "L5:F2329",
+      "label": "legal and judicial terminology",
+      "reason": "Domain vocabulary, not NLI relation."
+    },
+    {
+      "id": "L0:F4545",
+      "label": "the word \"abuse\" within a legal context or discussion of legal procedures",
+      "reason": "Domain vocabulary, not NLI relation."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 6,
+  "n_other": 6,
+  "spurious_fraction": 0.45454545454545453,
+  "dominant": "causal",
+  "notes": "Oracle lists some semantic cues, but negation detectors are still the spurious class here."
+}

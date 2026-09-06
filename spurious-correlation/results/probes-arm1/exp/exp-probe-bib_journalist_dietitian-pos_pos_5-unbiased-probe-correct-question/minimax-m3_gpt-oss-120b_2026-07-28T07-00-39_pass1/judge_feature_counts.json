@@ -1,0 +1,144 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gender marker; spurious role cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F5201",
+      "label": "the word \"nutrition\"",
+      "reason": "Profession/content keyword for nutrition."
+    },
+    {
+      "id": "L0:F10254",
+      "label": "the word \"sports\"",
+      "reason": "Content keyword tied to profession context."
+    },
+    {
+      "id": "L0:F2083",
+      "label": "the word \"plot\" referring to land or experimental zones",
+      "reason": "Dismissed; not a profession signal."
+    },
+    {
+      "id": "L0:F4030",
+      "label": "words related to mission statements and personal development used in career environments",
+      "reason": "Career/profession context feature."
+    },
+    {
+      "id": "L4:F10494",
+      "label": "words related to health, medicine, diet, drugs, age groups, and excercise",
+      "reason": "Health/diet profession-topic dictionary."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Diet/nutrition topic feature."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Food/nutrition content feature."
+    },
+    {
+      "id": "L7:F13562",
+      "label": "terms related to physical and mental training or conditioning",
+      "reason": "Training vocabulary tied to the bio."
+    },
+    {
+      "id": "L14:F16195",
+      "label": "mentions of physical activity and training",
+      "reason": "Training-related profession content."
+    },
+    {
+      "id": "L14:F9449",
+      "label": "snippets related to weight and diet",
+      "reason": "Weight/diet topic feature."
+    },
+    {
+      "id": "L17:F13102",
+      "label": "words related to body weight and weight loss interventions",
+      "reason": "Weight-management content."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Scientific nutrition profession context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2268",
+      "label": "mentions of people communicating information via speech",
+      "reason": "Generic communication feature."
+    },
+    {
+      "id": "L0:F15322",
+      "label": "reflexive pronouns, particularly \"herself\" and \"itself.\"",
+      "reason": "Structural pronoun detector; dismissed."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/number feature."
+    },
+    {
+      "id": "L0:F8028",
+      "label": "references to geographical areas in various contexts including scientific and societal",
+      "reason": "Not task-relevant profession signal."
+    },
+    {
+      "id": "L0:F10148",
+      "label": "the word \"entire,\" sometimes near the word \"this\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F8975",
+      "label": "the word \"pragma\" in code",
+      "reason": "Irrelevant code token."
+    },
+    {
+      "id": "L3:F11774",
+      "label": "what appears to be a smattering of strings related to scientific notation, live radio, and roman numerals",
+      "reason": "Irrelevant mixed structural/text pattern."
+    },
+    {
+      "id": "L3:F10028",
+      "label": "words or short phrases that include \"made of/from\", and words ending with \"ice\", \"ita\", \"ons\", \"ura\", and \"mor\"",
+      "reason": "Morphological pattern, not semantic task signal."
+    },
+    {
+      "id": "L8:F7057",
+      "label": "terms related to exercise, biology and chemistry",
+      "reason": "Too broad; not clearly profession-specific."
+    },
+    {
+      "id": "L1:F11764",
+      "label": "words and phrases related to health and fitness",
+      "reason": "Broad health/fitness; less specific than causal set."
+    },
+    {
+      "id": "L8:F3161",
+      "label": "text about weight loss and negative self-image",
+      "reason": "Adjacent theme, not direct profession indicator."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-related but not profession-specific."
+    },
+    {
+      "id": "L17:F7545",
+      "label": "mentions of architecture, design, nurses and healthcare.",
+      "reason": "Mixed domain; only partly relevant."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 12,
+  "n_other": 13,
+  "spurious_fraction": 0.07692307692307693,
+  "dominant": "causal",
+  "notes": "Oracle says nutrition/health content drives the probe; gender marker is weak and suppressive."
+}

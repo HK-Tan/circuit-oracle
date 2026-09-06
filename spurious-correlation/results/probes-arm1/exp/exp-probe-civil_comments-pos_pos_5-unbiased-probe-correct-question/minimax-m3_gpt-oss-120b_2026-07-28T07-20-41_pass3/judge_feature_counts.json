@@ -1,0 +1,83 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations",
+      "reason": "Identity-coded SJW phrase, not toxicity itself."
+    },
+    {
+      "id": "L3:F1526",
+      "label": "references to academic disciplines related to social science",
+      "reason": "Social-science discourse cue, identity-adjacent."
+    },
+    {
+      "id": "L2:F1537",
+      "label": "words and phrases related to political and social issues and movements",
+      "reason": "Political/social movement marker, not causal toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Social-justice identity/race detector, spurious."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L2:F14209",
+      "label": "the verb \"go\" in its various forms.",
+      "reason": "Generic structural verb cue."
+    },
+    {
+      "id": "L0:F13310",
+      "label": "sentences that include forms of the verb \"are\" indicating a present state of being or necessity.",
+      "reason": "Generic syntax/being verb cue."
+    },
+    {
+      "id": "L0:F3850",
+      "label": "punctuation marks",
+      "reason": "Purely structural punctuation feature."
+    },
+    {
+      "id": "L0:F4478",
+      "label": "terms related to ownership and belief systems.",
+      "reason": "Oracle cites as suppressive, not causal."
+    },
+    {
+      "id": "L0:F13756",
+      "label": "the word \"order\" and occasionally \"period,\" in many different contexts from law to food",
+      "reason": "Generic contextual word, not toxicity."
+    },
+    {
+      "id": "L6:F9005",
+      "label": "words and phrases related to desserts",
+      "reason": "Suppressive benign food context."
+    },
+    {
+      "id": "L1:F14281",
+      "label": "the word \"instruction\" and its plural",
+      "reason": "Suppressive instruction cue; structural."
+    },
+    {
+      "id": "L4:F13700",
+      "label": "conditional clauses starting with \"if\" and words related to business contexts",
+      "reason": "Generic conditional/business structure."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun cue."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function word."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 10,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle says the probe keys on identity-coded SJW/political language, while food/action cues are suppressive or generic."
+}

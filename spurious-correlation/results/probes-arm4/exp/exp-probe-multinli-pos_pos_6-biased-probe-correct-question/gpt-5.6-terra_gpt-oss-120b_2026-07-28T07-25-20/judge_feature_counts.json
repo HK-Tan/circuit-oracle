@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Used for negation-language pathway, not meaning."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Explicit negation detector."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Surface negation pattern."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "\"not\" or negative terms, with some bonus for sports-related terms and \"purpose\".",
+      "reason": "Negation-term detector."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation-language feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Content word relevant to event semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: not (pos 21)",
+      "label": "Embedding token: not",
+      "reason": "Token only; role determined elsewhere."
+    },
+    {
+      "id": "Emb: set (pos 3)",
+      "label": "Embedding token: set",
+      "reason": "Token only; generic lexical cue."
+    },
+    {
+      "id": "Emb: setting (pos 11)",
+      "label": "Embedding token: setting",
+      "reason": "Token only; generic lexical cue."
+    },
+    {
+      "id": "Emb: they (pos 2)",
+      "label": "Embedding token: they",
+      "reason": "Token only; structural pronoun input."
+    },
+    {
+      "id": "L15:F2080",
+      "label": "the phrase \"set\" followed by articles or prepositions",
+      "reason": "Purely structural lexical pattern."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "Output",
+      "label": "contradiction-classification probe score",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 1,
+  "n_other": 7,
+  "spurious_fraction": 0.8571428571428571,
+  "dominant": "spurious",
+  "notes": "Main route is lexical negation; semantic contradiction evidence is minimal."
+}

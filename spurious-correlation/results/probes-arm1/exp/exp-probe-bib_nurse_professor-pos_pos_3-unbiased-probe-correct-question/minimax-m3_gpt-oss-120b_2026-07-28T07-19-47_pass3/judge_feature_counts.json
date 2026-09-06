@@ -1,0 +1,123 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Probe logit",
+      "label": "nurse-profession classifier",
+      "reason": "Direct profession probe, not gender-based."
+    },
+    {
+      "id": "L15:F15159",
+      "label": "words related to medicine and healthcare",
+      "reason": "Broad healthcare vocabulary."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Includes medicine/profession context."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing profession detector."
+    },
+    {
+      "id": "L5:F9749",
+      "label": "words related to various medical conditions, procedures, and practitioners",
+      "reason": "Medical/practitioner context."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities",
+      "reason": "Medical workplace context."
+    },
+    {
+      "id": "L6:F9980",
+      "label": "words and abbreviations associated with pediatric gastroenterology and inflammatory bowel disease",
+      "reason": "Specialized medical terminology."
+    },
+    {
+      "id": "L4:F9036",
+      "label": "unknown",
+      "reason": "Triggered by nurse/practitioner healthcare tokens."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "unknown",
+      "reason": "Healthcare-related detector by oracle path."
+    },
+    {
+      "id": "L4:F13803",
+      "label": "unknown",
+      "reason": "Fires on delivery/medical vocabulary."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "unknown",
+      "reason": "Healthcare vocabulary feature."
+    },
+    {
+      "id": "L1:F1494",
+      "label": "unknown",
+      "reason": "Healthcare vocabulary feature."
+    },
+    {
+      "id": "L3:F9008",
+      "label": "unknown",
+      "reason": "Childbirth/obstetric lexical feature."
+    },
+    {
+      "id": "L3:F10198",
+      "label": "unknown",
+      "reason": "Childbirth/obstetric lexical feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F10846",
+      "label": "the word \"also\"",
+      "reason": "Generic discourse word; weakly suppressive."
+    },
+    {
+      "id": "Emb: nurse (pos 7)",
+      "label": "nurse",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: practitioner (pos 8)",
+      "label": "practitioner",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: labor (pos 44)",
+      "label": "labor",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: delivery (pos 46)",
+      "label": "delivery",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Medicine (pos 11)",
+      "label": "Medicine",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: clinical (pos 20)",
+      "label": "clinical",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: also (pos 3)",
+      "label": "also",
+      "reason": "Input token, not a feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 14,
+  "n_other": 8,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Circuit is overwhelmingly profession/medical; no gender-marker features are claimed."
+}

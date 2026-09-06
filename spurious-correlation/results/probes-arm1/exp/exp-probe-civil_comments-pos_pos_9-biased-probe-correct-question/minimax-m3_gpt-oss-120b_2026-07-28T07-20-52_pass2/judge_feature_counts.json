@@ -1,0 +1,159 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F16013",
+      "label": "low-level lexical (author / appears / white-color)",
+      "reason": "White-color lexical cue, not toxic content."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "low-level lexical (author / appears / white-color)",
+      "reason": "White-color lexical cue, not toxic content."
+    },
+    {
+      "id": "L0:F3024",
+      "label": "low-level lexical (author / appears / white-color)",
+      "reason": "Generic guy token, identity-group signal."
+    },
+    {
+      "id": "L1:F7821",
+      "label": "lexical white / author detectors",
+      "reason": "White-token detector; demographic, not causal."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "race / ethnicity / gender-relationship detectors",
+      "reason": "Race/ethnicity detector, identity-based."
+    },
+    {
+      "id": "L2:F15317",
+      "label": "race / ethnicity / gender-relationship detectors",
+      "reason": "Gendered-words detector, identity-based."
+    },
+    {
+      "id": "L2:F15558",
+      "label": "race / ethnicity / gender-relationship detectors",
+      "reason": "Relationship/gender detector, not toxicity."
+    },
+    {
+      "id": "L2:F10986",
+      "label": "race / ethnicity / gender-relationship detectors",
+      "reason": "Guy/gender token detector, identity signal."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "race / ethnicity / gender-relationship detectors",
+      "reason": "Men/women relationship detector, identity-based."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "demographic-identity & hate-word detectors",
+      "reason": "Demographic identity detector, spurious."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "demographic-identity & hate-word detectors",
+      "reason": "Demographic identity detector, spurious."
+    },
+    {
+      "id": "L3:F4512",
+      "label": "demographic-identity & hate-word detectors",
+      "reason": "Not specified; oracle treats as identity/hate supernode."
+    },
+    {
+      "id": "L3:F8492",
+      "label": "demographic-identity & hate-word detectors",
+      "reason": "Hate-word feature, identity-context routed."
+    },
+    {
+      "id": "L4:F117",
+      "label": "race/social-justice + romance/relationship detectors",
+      "reason": "Race/social-justice feature, identity-group signal."
+    },
+    {
+      "id": "L4:F14329",
+      "label": "race/social-justice + romance/relationship detectors",
+      "reason": "White/color mention detector, demographic."
+    },
+    {
+      "id": "L4:F12975",
+      "label": "race/social-justice + romance/relationship detectors",
+      "reason": "Asian/paganism detector, demographic."
+    },
+    {
+      "id": "L4:F6128",
+      "label": "race/social-justice + romance/relationship detectors",
+      "reason": "Romance/family detector, not toxicity."
+    },
+    {
+      "id": "L4:F10004",
+      "label": "race/social-justice + romance/relationship detectors",
+      "reason": "Self-hater composition, identity-linked."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "late race/ethnicity + gender/people detectors (probe drivers)",
+      "reason": "Race/ethnicity detector, core spurious driver."
+    },
+    {
+      "id": "L6:F5671",
+      "label": "late race/ethnicity + gender/people detectors (probe drivers)",
+      "reason": "People/gender-family detector, identity-based."
+    },
+    {
+      "id": "L6:F15948",
+      "label": "late race/ethnicity + gender/people detectors (probe drivers)",
+      "reason": "Gender/pronoun detector, identity-based."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L5:F13063",
+      "label": "strings of profanity",
+      "reason": "Direct profanity detector; toxic-content feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L1:F5220",
+      "label": "references to authors and publications",
+      "reason": "Author/publication topic, purely structural."
+    },
+    {
+      "id": "L0:F241",
+      "label": "mentions of marriage",
+      "reason": "Marriage topic, not toxicity."
+    },
+    {
+      "id": "L3:F8890",
+      "label": "the word \"self\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L2:F9320",
+      "label": "the word \"self\" and words meaning \"internal\"",
+      "reason": "Generic self/internal lexical feature."
+    },
+    {
+      "id": "L2:F16224",
+      "label": "words and phrases related to self-awareness, self-reference, or self-publishing",
+      "reason": "Self-reference/publishing topic, not toxic."
+    },
+    {
+      "id": "L3:F735",
+      "label": "words and phrases that include the word \"self\" followed by a hyphen",
+      "reason": "Structural self-hyphen pattern."
+    },
+    {
+      "id": "L3:F15520",
+      "label": "mentions of general terms for people",
+      "reason": "Generic people-term detector."
+    }
+  ],
+  "n_spurious": 21,
+  "n_causal": 1,
+  "n_other": 7,
+  "spurious_fraction": 0.9545454545454546,
+  "dominant": "spurious",
+  "notes": "Oracle is dominated by identity-group features; only profanity is clearly causal."
+}

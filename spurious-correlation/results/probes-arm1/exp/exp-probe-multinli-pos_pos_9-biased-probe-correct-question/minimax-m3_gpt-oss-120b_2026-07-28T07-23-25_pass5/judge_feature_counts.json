@@ -1,0 +1,88 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\".",
+      "reason": "Generic negation detector; directly matches task spurious cue."
+    },
+    {
+      "id": "L15:F11794",
+      "label": "Mid-layer 'do not' / 'recorded menus do not' pattern",
+      "reason": "Surface negation pattern, not semantic comparison."
+    },
+    {
+      "id": "L14:F6648",
+      "label": "Sentence-level negation context",
+      "reason": "Broad negation-context feature; detects cue presence."
+    },
+    {
+      "id": "L13:F102",
+      "label": "Mid-layer negation feature",
+      "reason": "Negation detector by role, not meaning."
+    },
+    {
+      "id": "L5:F3553",
+      "label": "Early-mid 'not' pattern detector",
+      "reason": "Pattern-based negation cue."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Cross-lingual negation detector; still cue spotting."
+    },
+    {
+      "id": "L3:F3534",
+      "label": "'do not' bigram detector",
+      "reason": "Bigram negation cue, purely lexical."
+    },
+    {
+      "id": "L1:F3311",
+      "label": "Early negation context feature",
+      "reason": "Negation-context feature, spurious by task definition."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Literal negation-word detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Output Logit",
+      "label": "Output Logit (probe direction)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "L0:F9203",
+      "label": "the word \"do\"/'aux' detector (position 16)",
+      "reason": "Auxiliary-word detector; structural, not semantic."
+    },
+    {
+      "id": "L0:F8136",
+      "label": "the word \"do\"/'aux' detector (position 16)",
+      "reason": "Auxiliary-word detector; structural, not semantic."
+    },
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Lexical/topic feature; oracle says no semantic comparison."
+    },
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Lexical word detector, not relation-based."
+    },
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Pure word detector."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 0,
+  "n_other": 6,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle describes only negation-cue and lexical detectors; no semantic-relation features claimed."
+}

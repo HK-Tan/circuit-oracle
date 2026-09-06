@@ -1,0 +1,33 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun/gender detector"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media/journalism concept"
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession-specific journalism detector"
+    },
+    {
+      "id": "L1:F14812",
+      "label": "references to stories, chapters, and other narrative elements",
+      "reason": "Narrative lexical cue"
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 3,
+  "n_other": 0,
+  "spurious_fraction": 0.25,
+  "dominant": "causal",
+  "notes": "Mostly journalism signals, with one gender-marker shortcut."
+}

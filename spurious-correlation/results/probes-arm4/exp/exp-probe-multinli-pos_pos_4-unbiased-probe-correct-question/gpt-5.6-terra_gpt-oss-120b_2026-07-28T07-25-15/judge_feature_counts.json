@@ -1,0 +1,59 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13586",
+      "label": "words ending in 'thing' and 'one' often with preceding words indicating the presence of something",
+      "reason": "Detects 'No one', a negation-word pattern."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F8159",
+      "label": "the word \"usually\" and, to a lesser extent, words that sometimes accompany it",
+      "reason": "Habituality/availability semantics relevant to contradiction."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7321",
+      "label": "the word \"so,\" and also matches some words ending in \"ware\" and \"such\"",
+      "reason": "Generic lexical cue; not causal or negation-specific."
+    },
+    {
+      "id": "L0:F306",
+      "label": "the word \"adoption\" in various contexts",
+      "reason": "Oracle list gives tourist; label is unrelated, so dismissed."
+    },
+    {
+      "id": "L0:F7204",
+      "label": "the word \"here\"",
+      "reason": "Pure surface/location cue."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Pure surface token detector."
+    },
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Lexical template, not semantic relation."
+    },
+    {
+      "id": "L2:F11769",
+      "label": "the word \"up\"",
+      "reason": "Generic token detector."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Topical lexical detector only."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 1,
+  "n_other": 7,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Mostly lexical/template features, with one negation-like cue and one causal habituality cue."
+}

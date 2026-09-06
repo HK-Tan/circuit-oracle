@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F11298",
+      "label": "no",
+      "reason": "Direct negation-word detector on hypothesis token."
+    },
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Negation/negative statement detector."
+    },
+    {
+      "id": "L15:F13061",
+      "label": "uses of the word \"no\" or similar negative statements and words associated with \"one\"",
+      "reason": "Negative phrase detector centered on 'no one'."
+    },
+    {
+      "id": "L2:F8837",
+      "label": "the word \"one\" or \"body\" when preceded by the words \"no\" or \"every.\"",
+      "reason": "Negation-context detector for 'no one'."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Content-bearing lexical/syntactic relation."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Task-relevant content word, not negation."
+    },
+    {
+      "id": "L2:F1016",
+      "label": "forms of the verb \"tour\" and the noun \"tour.\"",
+      "reason": "Semantic content feature about tours."
+    },
+    {
+      "id": "L4:F11969",
+      "label": "mentions of printed advertising materials",
+      "reason": "Content-side printed-materials relation."
+    },
+    {
+      "id": "L8:F1872",
+      "label": "words and phrases related to diagrams and presentations",
+      "reason": "Content-neutral semantic context feature."
+    },
+    {
+      "id": "L4:F10722",
+      "label": "uses of the word \"here\" alongside demonstrative pronouns and temporal words",
+      "reason": "Contextual language feature relevant to meaning."
+    },
+    {
+      "id": "L1:F6872",
+      "label": "the word \"interpretation\"",
+      "reason": "Content word tied to semantic interpretation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0@17",
+      "label": "Contradiction probe direction",
+      "reason": "Probe-direction node, not a feature."
+    },
+    {
+      "id": "Emb: \" No\"",
+      "label": "embedding token \"No\"",
+      "reason": "Token trigger only, not semantic feature."
+    },
+    {
+      "id": "Emb: \" one\"",
+      "label": "embedding token \"one\"",
+      "reason": "Token trigger only, not semantic feature."
+    },
+    {
+      "id": "Emb: \" tours\"",
+      "label": "embedding token \"tours\"",
+      "reason": "Token trigger only, not semantic feature."
+    },
+    {
+      "id": "Emb: \"Pick\"",
+      "label": "embedding token \"Pick\"",
+      "reason": "Token trigger only, not semantic feature."
+    },
+    {
+      "id": "Emb: \" up\"",
+      "label": "embedding token \"up\"",
+      "reason": "Token trigger only, not semantic feature."
+    },
+    {
+      "id": "Emb: \" here\"",
+      "label": "embedding token \"here\"",
+      "reason": "Token trigger only, not semantic feature."
+    },
+    {
+      "id": "Emb: \" map\"",
+      "label": "embedding token \"map\"",
+      "reason": "Token trigger only, not semantic feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 7,
+  "n_other": 8,
+  "spurious_fraction": 0.36363636363636365,
+  "dominant": "causal",
+  "notes": "Negation dominates the contradiction cue, but several content features are also present."
+}

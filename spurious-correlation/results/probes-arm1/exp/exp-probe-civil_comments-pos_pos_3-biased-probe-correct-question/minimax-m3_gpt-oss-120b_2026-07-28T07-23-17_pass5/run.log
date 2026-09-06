@@ -1,0 +1,16 @@
+
+============================================================
+Graph: civil_comments-pos_pos_3-biased-probe-correct
+============================================================
+Loading civil_comments-pos_pos_3-biased-probe-correct.pt...
+  4556 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — civil_comments-pos_pos_3-biased-probe-correct
+============================================================
+**Analysis:** The probe's toxicity classification is driven almost entirely by the token `Jew` (pos 6) activating a stack of identity-group features — race/ethnicity (L2:F13158, +0.29), religious identity (L4:F2405, +0.24), Israel/Palestine context (L4:F14733), and culminating in the top driver L6:F648 "discrimination vs religious/ethnic groups" (+0.74) — with secondary contributions from `stain` (pos 9) feeding a "reputation/betrayal" path (L8:F13875, +0.23), while off-token subword artifacts (`hat`, ` -`, LaTeX patterns) and the suppression-leaning L3:Latex feature dilute rather than construct the score.
+
+**Confidence:** 8
+
+**Reasoning:** The circuit traces cleanly to embedding nodes. The dominant supernode `discrim_l6` (L6:F648, direct_effect=+0.74, frac_nonzero=0.016) is essentially a single-token detector for `Jew` — its #1 upstream node is the ` Jew` embedding at pos 6 with direct_effect=19.4, and the next strongest inputs are the identity-cluster letter/suffix feature L3:F12151 (also "JE/JEW" pattern, frac_nonzero=0.003) and L4:F14733 ("Israel-Palestine conflict", promoted_tokens include Palestinian/Palestine). L2:F13158 ("race/ethnicity words", +0.29) and L4:F2405 ("religious identity/affiliation", +0.24) at the same position reinforce the same `Jew` signal. The user is correct: the probe treats the *presence* of an identity-group token (`Jew`, `liberal`) as a near-sufficient signal of toxicity, rather than reading the pejorative verb "stain" or the negative framing "Self-hating … a stain on his brethren and his country." Notably, the "stain" path does exist (Emb ` stain` → L5:F7488 "legal language/stains" → L6:F1561 "respect/status/pride" → L8:F13875 "reputation/betrayal", total ~+0.23) but it is dwarfed by the identity-token path (~+1.3 in direct effects on the top feature alone). Off-target subword noise (L1:F1774 "LaTeX text", L2:F3983 "hat" substring) actually pushes the probe score *negatively* (-0.20, -0.20) because the token `hat` inside "hating" looks like the common English word "hat" / a LaTeX command `\hat` to low-level features. The mechanism is: **identity-token → identity-feature stack → probe**, with the actual insulting semantics ("stain", "Self-hating", "brethren") playing a secondary role. This confirms the user's concern that the probe latches on to *group-mention* features rather than toxic content.
+Results saved to: <repo>/spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-17_pass5

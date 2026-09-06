@@ -1,0 +1,123 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation pattern in hypothesis."
+    },
+    {
+      "id": "L16:F9779",
+      "label": "negation words or contractions like \"won't\", \"not\", \"never\"",
+      "reason": "Direct negation detector."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Negation structure detector."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Literal negation word detector."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation-related shortcut feature."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector across languages."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation/absence cue."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Purely lexical pronoun detector."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic copula detector."
+    },
+    {
+      "id": "L0:F5060",
+      "label": "mentions of dinner or breakfast",
+      "reason": "Unrelated topic cue."
+    },
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L14:F10408",
+      "label": "geographical locations, especially related to bodies of water",
+      "reason": "Unrelated semantic topic."
+    },
+    {
+      "id": "L5:F14591",
+      "label": "words related to the Catholic church",
+      "reason": "Unrelated semantic topic."
+    },
+    {
+      "id": "L4:F3833",
+      "label": "words used when summarizing plot points or providing courtroom insights",
+      "reason": "Narrative/courtroom discourse cue."
+    },
+    {
+      "id": "L4:F11810",
+      "label": "the words \"that\", \"way\", \"refer\", \"affirmative\", \"ished\", located near a long sentence or paragraph",
+      "reason": "Structural/format cue."
+    },
+    {
+      "id": "L3:F16223",
+      "label": "mentions of the Baltic Sea",
+      "reason": "Unrelated geographic topic."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Mixed-language formatting cue."
+    },
+    {
+      "id": "L6:F5342",
+      "label": "the word \"first\" as well as words and prepositions that often follow it",
+      "reason": "Generic discourse/structural cue."
+    },
+    {
+      "id": "L4:F4605",
+      "label": "words related to churches, chapels and other buildings, in addition to other information of Lincolnshire",
+      "reason": "Unrelated topic cue."
+    },
+    {
+      "id": "L6:F8583",
+      "label": "words related to religious organizations",
+      "reason": "Unrelated topic cue."
+    },
+    {
+      "id": "L2:F5414",
+      "label": "the word \"that\", and secondarily proper nouns.",
+      "reason": "Generic lexical/proper-noun cue."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 0,
+  "n_other": 15,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle claims negation shortcut dominates; remaining features are generic or unrelated topics."
+}

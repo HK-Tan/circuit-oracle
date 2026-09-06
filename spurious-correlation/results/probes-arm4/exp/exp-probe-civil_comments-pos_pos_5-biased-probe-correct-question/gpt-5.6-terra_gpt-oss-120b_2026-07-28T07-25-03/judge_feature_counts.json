@@ -1,0 +1,68 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/social-justice discourse detector"
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious-identity mention detector"
+    },
+    {
+      "id": "L4:F8645",
+      "label": "passages discussing same-sex marriage",
+      "reason": "Same-sex-marriage topic detector"
+    },
+    {
+      "id": "L4:F15899",
+      "label": "language associated with the LGBTQ community and discussions of gender and identity",
+      "reason": "LGBTQ identity/topic detector"
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Islam/Muslim mention detector"
+    },
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "Homosexuality/same-sex-marriage detector"
+    },
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "LGBTQ-issue discussion detector"
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: social / justice (pos 5\u20136)",
+      "label": "Emb: social / justice (pos 5\u20136)",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: Muslim (pos 12)",
+      "label": "Emb: Muslim (pos 12)",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: gay (pos 17)",
+      "label": "Emb: gay (pos 17)",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Synthetic toxicity-probe classification score",
+      "label": "Synthetic toxicity-probe classification score",
+      "reason": "Oracle output, not a feature"
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 0,
+  "n_other": 4,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites only identity/topic detectors; no toxic-content or structural causal features."
+}

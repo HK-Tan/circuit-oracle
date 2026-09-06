@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F14301",
+      "label": "names of people and organizations involved in politics, finance, and national security",
+      "reason": "Political name detector on \"trump\"; identity/politics signal."
+    },
+    {
+      "id": "L4:F14582",
+      "label": "references to the White House and the US government",
+      "reason": "Government-reference detector triggered by \"trump\" context."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Racial-term detector; identity-group token."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F11580",
+      "label": "negative language and swear words",
+      "reason": "Direct toxicity/swear-word detector; genuine causal cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7621",
+      "label": "the word \"clearly\", and to a lesser extent words associated with amounts of things",
+      "reason": "Generic adverb/structural cue, not toxicity."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Pure copula/function-word detector."
+    },
+    {
+      "id": "L0:F15831",
+      "label": "the word \"again\" and words associated with time",
+      "reason": "Time-word detector; structural only."
+    },
+    {
+      "id": "L0:F7969",
+      "label": "the word \"other\"",
+      "reason": "Generic common-word detector."
+    },
+    {
+      "id": "L0:F164",
+      "label": "the words \"show\" and \"your\", particularly when talking about presenting something",
+      "reason": "Generic lexical/phrase pattern."
+    },
+    {
+      "id": "L0:F7142",
+      "label": "the word \"axis\" and its plural form, often in the context of scientific or technical documents",
+      "reason": "Technical token pattern; not toxicity."
+    },
+    {
+      "id": "L3:F373",
+      "label": "word beginnings with the letters \"a,\" \"h,\"\"i,\" \"r,\" and \"p\" (perhaps prefixes and/or related to medical or scientific terms)",
+      "reason": "Subword-prefix detector; purely structural."
+    },
+    {
+      "id": "L2:F9199",
+      "label": "instances of \"ot\" in code",
+      "reason": "Subword/code detector; not semantic toxicity."
+    },
+    {
+      "id": "L2:F15769",
+      "label": "the word \"tie\" in various contexts",
+      "reason": "Common word detector on \"tie\"."
+    },
+    {
+      "id": "L4:F2720",
+      "label": "mentions of a 'tie' or a similar word",
+      "reason": "Common word detector; not toxicity."
+    },
+    {
+      "id": "L0:F12866",
+      "label": "adverbs such as \"clearly,\" \"plainly,\" and \"as\"",
+      "reason": "Adverbial style cue, not task-causal."
+    },
+    {
+      "id": "L0:F4422",
+      "label": "the word \"seriously\"",
+      "reason": "Tone marker, but generic and non-toxic."
+    },
+    {
+      "id": "L0:F7861",
+      "label": "instances of the words \"this\", \"these\", \"clearly\", or \"more\".",
+      "reason": "Generic discourse-word detector."
+    },
+    {
+      "id": "L0:F5707",
+      "label": "words or phrases related to knowledge or perspective",
+      "reason": "Abstract semantic/style cue, not toxicity."
+    },
+    {
+      "id": "L1:F9761",
+      "label": "language asserting that a statement is obvious, undisputed, or in accordance with a rule",
+      "reason": "Rhetorical/assertion style, not toxicity."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 1,
+  "n_other": 15,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "One true toxicity feature; most remaining features are identity or generic structure cues."
+}

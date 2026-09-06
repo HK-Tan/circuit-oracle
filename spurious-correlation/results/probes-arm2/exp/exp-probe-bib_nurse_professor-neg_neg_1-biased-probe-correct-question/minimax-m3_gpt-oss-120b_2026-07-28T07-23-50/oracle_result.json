@@ -1,0 +1,2815 @@
+{
+  "prompt_name": "bib_nurse_professor-neg_neg_1-biased-probe-correct",
+  "system_prompt": "",
+  "user_message": "Dataset: bib_nurse_professor-neg_neg_1 | Probe: biased | Method: correct",
+  "assistant_prefix": "",
+  "full_response": "",
+  "question": "The circuit use spurious features (e.g. gender markers) rather than genuine profession indicators to predict the profession.",
+  "orchestrator_model": "minimax/minimax-m3",
+  "subagent_model": "openai/gpt-oss-120b",
+  "provider": "kilo",
+  "task": "probes",
+  "arm": "probes-arm2",
+  "pass_index": null,
+  "mode": "observational",
+  "orchestrator_system_prompt": "You are a mechanistic interpretability analyst orchestrating subagents to deeply analyze a language model's (gemma-2-2b) internal circuits via its attribution graph.\n\n**Tools \u2014 Direct inspection (quick, use for scouting):**\n- get_top_logits: see the model's output distribution\n- get_top_features: identify which features drive a prediction\n- get_upstream_features: trace one hop upstream in the circuit\n\n**Tools \u2014 Delegation (deep tracing):**\n- trace_path_subagent: dispatch a subagent to trace an entire path through the circuit. The subagent independently calls get_upstream_features and inspect_feature across multiple hops, then returns all discovered features and connections. You can dispatch multiple subagents to trace different paths in parallel.\n\n**Workflow:**\n1. **SCOUT** \u2014 You MUST call get_top_logits first to discover the output distribution (do NOT skip this step \u2014 the logits are not provided to you). Then call get_top_features on the top 1-2 tokens to identify key late-layer features driving the prediction.\n2. **DISPATCH** \u2014 For each important late-layer feature, call trace_path_subagent to trace it upstream through the circuit. Give each subagent a clear objective (e.g. \"Trace the path from L25:F23398 \u2014 what does this feature encode and where does the signal originate?\"). Dispatch multiple subagents in parallel for different paths.\n3. **MERGE** \u2014 Review subagent results. Before building the circuit, consider: would tracing deeper into earlier layers reveal more about how the model arrived at this prediction? If subagents stopped at mid-layers and you think earlier layers could show entity recognition or input-level features, dispatch new subagents starting from the deepest features discovered so far. Aim for at least one path to reach token-embedding nodes (Emb:) to identify which specific input tokens drive the prediction. Reaching early layers (0-3) is acceptable, but embedding nodes are preferred. Once satisfied, group related features into supernodes. Identify where paths converge or share features.\n4. **BUILD** \u2014 Call build_circuit to record the final unified circuit. Include all important paths, merged into supernodes with edges.\n5. **ANALYZE** \u2014 Write your final analysis.\n\n**Circuit structure requirements:**\n- The circuit MUST include an output logit node as its terminal node. Use layer=26, features=[] for this node.\n- Late-layer features (e.g. L25) feed INTO the output logit node \u2014 they are NOT the output themselves.\n- Try to trace as deep as possible \u2014 ideally to token-embedding nodes where input token representations live. Early layers (0-3) are acceptable, but embedding nodes are preferred.\n- When `get_upstream_features` returns embedding nodes (type=embedding), create one Emb node per important input token position. Use layer=0, features=[], and label 'Emb: {token} (pos N)'.\n- Group related features at similar layers into supernodes with descriptive labels.\n- Edge direction: 'from' = upstream/earlier layer, 'to' = downstream/later layer.\n\n**Response format:**\n\n**Analysis:** [One sentence: what is this output and what produced it]\n\n**Confidence:** [0-10, where 0 = no confidence and 10 = certainty]\n\n**Reasoning:** [What mechanism produced this output and why \u2014 reference the circuit from build_circuit. Cite supernodes, features (layer:feature_idx), their labels, frac_nonzero values, promoted tokens, and how signal flows from early to late layers. Explain whether the features encode entity-specific knowledge, generic patterns, or other signals.]\n\n## Tools not available in this run\n\nThese tools are NOT available and must not be called: `inspect_feature`. This overrides any earlier text in this prompt that describes them or tells you to use them. Complete the task with the tools you were given, and do not report a result you would have obtained from a missing tool.\n",
+  "response": "**Analysis:** The classification probe's score is driven almost entirely by gender/pronoun-pronoun features at the \"His\" (pos 1) and \"He\" (pos 14, 37) token positions \u2014 with the L7 \"His\" feature pair (F14893/F14946) producing the largest opposing effects (+0.43 / \u22120.43) \u2014 and not by any profession-indicating features like \"computer graphics,\" \"PhD,\" \"University,\" \"Los Alamos,\" or \"visualization.\"\n\n**Confidence:** 8\n\n**Reasoning:** The circuit traces almost exclusively to the **\"His\" / \"He\" pronoun embeddings** (pos 1, 14, 37) rather than to any technical or professional vocabulary tokens elsewhere in the passage (no \"visualization,\" \"computer,\" \"University of Utah,\" or \"Los Alamos\" features appear). The signal flow is:\n\n1. **Embedding nodes (L0):** `Emb: His` (pos 1) provides the dominant direct effect (e.g., +23.5, +19.75, +21.375, +13) into almost every downstream feature at pos 1. `Emb: He` (pos 14, 37) propagates through L0:F1069 (direct_effect 35.75 / 7.84) into mid-layer pronoun features. `Emb: research` / `Emb: interests` contribute only weakly (direct_effect 20\u201328) to the small L2:L0 features (L0:F4564, L2:F9740) which produce only modest positive probe contributions (0.13\u20130.16).\n2. **Early pronoun features (L0\u2013L6, pos 1):** F2994, F1069, F7439, F5491, F4315, F12990 \u2014 all gated by the \"His\" embedding, aggregating its identity.\n3. **L7 feature pair (pos 1) \u2014 the single most important node:** F14893 (+0.43) and F14946 (\u22120.43) form an opposing pair directly on the residual stream at the \"His\" token, providing nearly the entire magnitude of the probe's score from a *single token position*. This is a classic name/pronoun detector pattern (no other position contributes comparable direct effects).\n4. **Mid pronoun features (L7\u2013L15, pos 1):** F462, F2762, F14174, F10933, F9183, F8770, F851, F12493, F8128, F7106, F12232 \u2014 all anchored on `Emb: His` with very large upstream direct effects (15\u201323). These are entity-tracking/name features, not profession features.\n5. **Late aggregators (L18\u2013L19):** F14743 (pos 14 & 37, \"He\" pronoun, \u22120.25/\u22120.21) and F7400/F10315 (pos 1, \"His\" pronoun, \u22120.16/\u22120.15) feed negative effects; F8814 (pos 1, +0.24) is the main late positive contributor. All upstream trace back to the \"His\"/\"He\" embeddings.\n6. **Output:** The only direct paths to the probe logit come from the L7 pair (pos 1), the late pronoun aggregators (pos 1/14/37), and the weak L0\u2013L2 features at pos 2\u20133 (research/interests).\n\n**The user's concern is well-supported.** Zero features in the top 15 contributors (and downstream of all of them) reference the professional-identity tokens (scientist, professor, PhD, computer science, visualization, Los Alamos, University, etc.). The probe is reading off male-pronoun/gender-pronoun co-occurrence, not profession. The L7 \"His\" pair (F14893, F14946) and the \"He\" features at pos 14/37 are precisely the kind of spurious gender markers the user suspected \u2014 the probe likely learned that the target profession is correlated with male pronouns in training data. This is a strong case of a classification probe encoding a spurious surface feature (gender-marking pronouns) rather than the semantically relevant profession-indicating content of the biography.",
+  "tool_calls": [
+    {
+      "tool": "get_top_logits",
+      "input": {},
+      "output": [
+        {
+          "token": "",
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "tool": "get_top_features",
+      "input": {
+        "k": 15,
+        "token": ""
+      },
+      "output": [
+        {
+          "layer": 7,
+          "feature_idx": 14893,
+          "pos": 1,
+          "activation": 13.5625,
+          "direct_effect": 0.4297
+        },
+        {
+          "layer": 7,
+          "feature_idx": 14946,
+          "pos": 1,
+          "activation": 16.75,
+          "direct_effect": -0.4258
+        },
+        {
+          "layer": 6,
+          "feature_idx": 12990,
+          "pos": 1,
+          "activation": 5.8125,
+          "direct_effect": -0.2949
+        },
+        {
+          "layer": 18,
+          "feature_idx": 14743,
+          "pos": 14,
+          "activation": 29.25,
+          "direct_effect": -0.252
+        },
+        {
+          "layer": 19,
+          "feature_idx": 8814,
+          "pos": 1,
+          "activation": 12.1875,
+          "direct_effect": 0.2402
+        },
+        {
+          "layer": 0,
+          "feature_idx": 2994,
+          "pos": 1,
+          "activation": 14.375,
+          "direct_effect": 0.2266
+        },
+        {
+          "layer": 18,
+          "feature_idx": 14743,
+          "pos": 37,
+          "activation": 25.75,
+          "direct_effect": -0.2051
+        },
+        {
+          "layer": 6,
+          "feature_idx": 12990,
+          "pos": 14,
+          "activation": 4.125,
+          "direct_effect": -0.1992
+        },
+        {
+          "layer": 4,
+          "feature_idx": 4315,
+          "pos": 1,
+          "activation": 10.0,
+          "direct_effect": -0.1787
+        },
+        {
+          "layer": 18,
+          "feature_idx": 7400,
+          "pos": 1,
+          "activation": 10.0625,
+          "direct_effect": -0.1592
+        },
+        {
+          "layer": 0,
+          "feature_idx": 4564,
+          "pos": 2,
+          "activation": 26.125,
+          "direct_effect": 0.1572
+        },
+        {
+          "layer": 18,
+          "feature_idx": 10315,
+          "pos": 1,
+          "activation": 25.125,
+          "direct_effect": -0.1504
+        },
+        {
+          "layer": 7,
+          "feature_idx": 14893,
+          "pos": 14,
+          "activation": 4.3125,
+          "direct_effect": 0.1445
+        },
+        {
+          "layer": 2,
+          "feature_idx": 9740,
+          "pos": 3,
+          "activation": 15.4375,
+          "direct_effect": 0.1328
+        },
+        {
+          "layer": 2,
+          "feature_idx": 5491,
+          "pos": 1,
+          "activation": 12.125,
+          "direct_effect": 0.1318
+        }
+      ]
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 8,
+        "objective": "Trace from L7:F14893 at pos 1. This feature has a large positive direct_effect (0.43) driving the probe. Determine what it encodes (e.g., is it a name, gender, profession, or general entity feature?), and trace all the way back to input token embeddings.",
+        "starting_feature_idx": 14893,
+        "starting_layer": 7,
+        "starting_pos": 1
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-1"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 8,
+        "objective": "Trace from L7:F14946 at pos 1. This has a strong NEGATIVE direct_effect (-0.43) on the probe. Determine what it encodes and trace to input token embeddings.",
+        "starting_feature_idx": 14946,
+        "starting_layer": 7,
+        "starting_pos": 1
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-2"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 8,
+        "objective": "Trace from L19:F8814 at pos 1. Positive direct_effect (0.24) on probe. Determine what mid/late-layer feature this represents and trace back to input tokens.",
+        "starting_feature_idx": 8814,
+        "starting_layer": 19,
+        "starting_pos": 1
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-3"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 8,
+        "objective": "Trace from L18:F14743 at pos 14. Strong negative effect (-0.25). Determine what it encodes and trace to input tokens. Also check same feature at pos 37.",
+        "starting_feature_idx": 14743,
+        "starting_layer": 18,
+        "starting_pos": 14
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-4"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 8,
+        "objective": "Trace from L18:F7400 at pos 1. Negative direct_effect (-0.16). Determine what it encodes and trace to input tokens.",
+        "starting_feature_idx": 7400,
+        "starting_layer": 18,
+        "starting_pos": 1
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-5"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 8,
+        "objective": "Trace from L18:F10315 at pos 1. Negative direct_effect (-0.15). Determine what it encodes and trace to input tokens.",
+        "starting_feature_idx": 10315,
+        "starting_layer": 18,
+        "starting_pos": 1
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-6"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 6,
+        "objective": "Trace from L2:F9740 at pos 3. Positive direct_effect (0.13) on probe. This is an early layer feature at pos 3 which is the 'His' pronoun or 'research' token. Determine what it encodes and trace to embedding nodes.",
+        "starting_feature_idx": 9740,
+        "starting_layer": 2,
+        "starting_pos": 3
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-7"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 4,
+        "objective": "Trace from L0:F2994 at pos 1. Early layer positive effect (0.23). Determine what input token this corresponds to and what it encodes.",
+        "starting_feature_idx": 2994,
+        "starting_layer": 0,
+        "starting_pos": 1
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-8"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 4,
+        "objective": "Trace from L0:F4564 at pos 2. Early layer positive effect (0.16). Determine what input token and what it encodes.",
+        "starting_feature_idx": 4564,
+        "starting_layer": 0,
+        "starting_pos": 2
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-9"
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 14893,
+        "k": 10,
+        "layer": 7,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 23.5
+        },
+        {
+          "type": "feature",
+          "layer": 6,
+          "feature_idx": 12990,
+          "pos": 1,
+          "direct_effect": 5.5938,
+          "activation": 5.8125
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 2994,
+          "pos": 1,
+          "direct_effect": -4.6875,
+          "activation": 14.375
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 4315,
+          "pos": 1,
+          "direct_effect": 4.4062,
+          "activation": 10.0
+        },
+        {
+          "type": "feature",
+          "layer": 2,
+          "feature_idx": 5491,
+          "pos": 1,
+          "direct_effect": -1.8359,
+          "activation": 12.125
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 7439,
+          "pos": 1,
+          "direct_effect": -1.7734,
+          "activation": 11.1875
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 15567,
+          "pos": 1,
+          "direct_effect": 1.6562,
+          "activation": 14.625
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 9757,
+          "pos": 1,
+          "direct_effect": -1.6406,
+          "activation": 17.5
+        },
+        {
+          "type": "feature",
+          "layer": 2,
+          "feature_idx": 9301,
+          "pos": 1,
+          "direct_effect": 1.6016,
+          "activation": 4.5312
+        },
+        {
+          "type": "feature",
+          "layer": 3,
+          "feature_idx": 13121,
+          "pos": 1,
+          "direct_effect": -1.4219,
+          "activation": 8.1875
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 14946,
+        "k": 10,
+        "layer": 7,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 18.375
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 4315,
+          "pos": 1,
+          "direct_effect": 4.4375,
+          "activation": 10.0
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 3.8438
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 2994,
+          "pos": 1,
+          "direct_effect": -3.7656,
+          "activation": 14.375
+        },
+        {
+          "type": "feature",
+          "layer": 6,
+          "feature_idx": 12990,
+          "pos": 1,
+          "direct_effect": 3.6562,
+          "activation": 5.8125
+        },
+        {
+          "type": "feature",
+          "layer": 2,
+          "feature_idx": 5491,
+          "pos": 1,
+          "direct_effect": -2.5,
+          "activation": 12.125
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 7439,
+          "pos": 1,
+          "direct_effect": -1.6641,
+          "activation": 11.1875
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 10952,
+          "pos": 1,
+          "direct_effect": 1.6094,
+          "activation": 5.1875
+        },
+        {
+          "type": "feature",
+          "layer": 2,
+          "feature_idx": 9301,
+          "pos": 1,
+          "direct_effect": 1.2422,
+          "activation": 4.5312
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 14942,
+          "pos": 1,
+          "direct_effect": -1.2031,
+          "activation": 3.25
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 8814,
+        "k": 8,
+        "layer": 19,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 9.3125
+        },
+        {
+          "type": "feature",
+          "layer": 18,
+          "feature_idx": 7400,
+          "pos": 1,
+          "direct_effect": 9.0625,
+          "activation": 10.0625
+        },
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 14893,
+          "pos": 1,
+          "direct_effect": -8.0625,
+          "activation": 13.5625
+        },
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 14946,
+          "pos": 1,
+          "direct_effect": 7.0625,
+          "activation": 16.75
+        },
+        {
+          "type": "feature",
+          "layer": 18,
+          "feature_idx": 10315,
+          "pos": 1,
+          "direct_effect": 6.4688,
+          "activation": 25.125
+        },
+        {
+          "type": "feature",
+          "layer": 6,
+          "feature_idx": 12990,
+          "pos": 1,
+          "direct_effect": 4.6875,
+          "activation": 5.8125
+        },
+        {
+          "type": "feature",
+          "layer": 18,
+          "feature_idx": 7217,
+          "pos": 1,
+          "direct_effect": -3.7969,
+          "activation": 16.75
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 4315,
+          "pos": 1,
+          "direct_effect": 3.5156,
+          "activation": 10.0
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 14743,
+        "k": 8,
+        "layer": 18,
+        "pos": 14
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " He",
+          "pos": 14,
+          "direct_effect": 22.375
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 1069,
+          "pos": 14,
+          "direct_effect": 7.0312,
+          "activation": 34.75
+        },
+        {
+          "type": "feature",
+          "layer": 17,
+          "feature_idx": 5889,
+          "pos": 14,
+          "direct_effect": 4.375,
+          "activation": 25.125
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 3.4531
+        },
+        {
+          "type": "feature",
+          "layer": 13,
+          "feature_idx": 6622,
+          "pos": 14,
+          "direct_effect": 2.5625,
+          "activation": 14.875
+        },
+        {
+          "type": "feature",
+          "layer": 15,
+          "feature_idx": 3330,
+          "pos": 14,
+          "direct_effect": 2.4062,
+          "activation": 15.4375
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": -2.2812
+        },
+        {
+          "type": "feature",
+          "layer": 15,
+          "feature_idx": 13002,
+          "pos": 14,
+          "direct_effect": 1.9297,
+          "activation": 30.5
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 7400,
+        "k": 8,
+        "layer": 18,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 13.0
+        },
+        {
+          "type": "feature",
+          "layer": 15,
+          "feature_idx": 851,
+          "pos": 1,
+          "direct_effect": 4.6562,
+          "activation": 154.0
+        },
+        {
+          "type": "feature",
+          "layer": 11,
+          "feature_idx": 10933,
+          "pos": 1,
+          "direct_effect": 3.7656,
+          "activation": 50.5
+        },
+        {
+          "type": "feature",
+          "layer": 11,
+          "feature_idx": 9183,
+          "pos": 1,
+          "direct_effect": 3.6719,
+          "activation": 54.5
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 8770,
+          "pos": 1,
+          "direct_effect": 3.5312,
+          "activation": 46.0
+        },
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 14893,
+          "pos": 1,
+          "direct_effect": -3.4219,
+          "activation": 13.5625
+        },
+        {
+          "type": "feature",
+          "layer": 12,
+          "feature_idx": 12493,
+          "pos": 1,
+          "direct_effect": -3.1406,
+          "activation": 62.25
+        },
+        {
+          "type": "feature",
+          "layer": 14,
+          "feature_idx": 6940,
+          "pos": 1,
+          "direct_effect": -3.1094,
+          "activation": 59.5
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 10315,
+        "k": 8,
+        "layer": 18,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 21.375
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": -5.4062
+        },
+        {
+          "type": "feature",
+          "layer": 11,
+          "feature_idx": 10933,
+          "pos": 1,
+          "direct_effect": 5.375,
+          "activation": 50.5
+        },
+        {
+          "type": "feature",
+          "layer": 13,
+          "feature_idx": 8128,
+          "pos": 1,
+          "direct_effect": -5.2812,
+          "activation": 99.5
+        },
+        {
+          "type": "feature",
+          "layer": 11,
+          "feature_idx": 9183,
+          "pos": 1,
+          "direct_effect": 4.5625,
+          "activation": 54.5
+        },
+        {
+          "type": "feature",
+          "layer": 11,
+          "feature_idx": 389,
+          "pos": 1,
+          "direct_effect": -4.2812,
+          "activation": 40.25
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 8770,
+          "pos": 1,
+          "direct_effect": 4.2188,
+          "activation": 46.0
+        },
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 12232,
+          "pos": 1,
+          "direct_effect": -3.9688,
+          "activation": 39.0
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 9740,
+        "k": 6,
+        "layer": 2,
+        "pos": 3
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " interests",
+          "pos": 3,
+          "direct_effect": 27.0
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 962,
+          "pos": 3,
+          "direct_effect": -1.375,
+          "activation": 12.375
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 1.1641
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 1065,
+          "pos": 3,
+          "direct_effect": -1.0234,
+          "activation": 16.25
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 11835,
+          "pos": 3,
+          "direct_effect": 0.8789,
+          "activation": 9.5625
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": -0.8203
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 2994,
+        "k": 4,
+        "layer": 0,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 19.75
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 1.5938
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 208,
+          "pos": 1,
+          "direct_effect": 0.0,
+          "activation": 1.1016
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 253,
+          "pos": 1,
+          "direct_effect": 0.0,
+          "activation": 1.7969
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 4564,
+        "k": 4,
+        "layer": 0,
+        "pos": 2
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " research",
+          "pos": 2,
+          "direct_effect": 28.125
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 2.4688
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 1.1562
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 208,
+          "pos": 1,
+          "direct_effect": 0.0,
+          "activation": 1.1016
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 12990,
+        "k": 6,
+        "layer": 6,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 4.9062
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 4315,
+          "pos": 1,
+          "direct_effect": 1.2656,
+          "activation": 10.0
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 1.25
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 10952,
+          "pos": 1,
+          "direct_effect": 0.7773,
+          "activation": 5.1875
+        },
+        {
+          "type": "feature",
+          "layer": 2,
+          "feature_idx": 5491,
+          "pos": 1,
+          "direct_effect": -0.75,
+          "activation": 12.125
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 2994,
+          "pos": 1,
+          "direct_effect": -0.6367,
+          "activation": 14.375
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 5491,
+        "k": 6,
+        "layer": 2,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 23.875
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 2994,
+          "pos": 1,
+          "direct_effect": -3.5,
+          "activation": 14.375
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 7439,
+          "pos": 1,
+          "direct_effect": -2.6094,
+          "activation": 11.1875
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 2.3438
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 1069,
+          "pos": 1,
+          "direct_effect": 1.8359,
+          "activation": 16.625
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 12698,
+          "pos": 1,
+          "direct_effect": -1.2188,
+          "activation": 10.375
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 4315,
+        "k": 6,
+        "layer": 4,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 23.5
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 2994,
+          "pos": 1,
+          "direct_effect": -3.625,
+          "activation": 14.375
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 7439,
+          "pos": 1,
+          "direct_effect": -2.6406,
+          "activation": 11.1875
+        },
+        {
+          "type": "feature",
+          "layer": 2,
+          "feature_idx": 5491,
+          "pos": 1,
+          "direct_effect": -2.1875,
+          "activation": 12.125
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 1.9141
+        },
+        {
+          "type": "feature",
+          "layer": 3,
+          "feature_idx": 13121,
+          "pos": 1,
+          "direct_effect": -1.3047,
+          "activation": 8.1875
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 7439,
+        "k": 6,
+        "layer": 1,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 16.375
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 3.6875
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 2994,
+          "pos": 1,
+          "direct_effect": -1.3438,
+          "activation": 14.375
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 7344,
+          "pos": 1,
+          "direct_effect": -1.0625,
+          "activation": 7.5312
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 1069,
+          "pos": 1,
+          "direct_effect": 1.0469,
+          "activation": 16.625
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 12698,
+          "pos": 1,
+          "direct_effect": -1.0234,
+          "activation": 10.375
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 14743,
+        "k": 6,
+        "layer": 18,
+        "pos": 37
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " He",
+          "pos": 37,
+          "direct_effect": 24.0
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 1069,
+          "pos": 37,
+          "direct_effect": 7.8438,
+          "activation": 35.5
+        },
+        {
+          "type": "feature",
+          "layer": 17,
+          "feature_idx": 5889,
+          "pos": 37,
+          "direct_effect": 4.3125,
+          "activation": 23.375
+        },
+        {
+          "type": "feature",
+          "layer": 13,
+          "feature_idx": 6622,
+          "pos": 37,
+          "direct_effect": 2.6719,
+          "activation": 14.375
+        },
+        {
+          "type": "feature",
+          "layer": 15,
+          "feature_idx": 3330,
+          "pos": 37,
+          "direct_effect": 2.6406,
+          "activation": 15.8125
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": -2.0938
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 14893,
+        "k": 6,
+        "layer": 7,
+        "pos": 14
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " He",
+          "pos": 14,
+          "direct_effect": 15.625
+        },
+        {
+          "type": "feature",
+          "layer": 6,
+          "feature_idx": 12990,
+          "pos": 14,
+          "direct_effect": 3.625,
+          "activation": 4.125
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": -2.5312
+        },
+        {
+          "type": "feature",
+          "layer": 6,
+          "feature_idx": 12990,
+          "pos": 1,
+          "direct_effect": 1.7109,
+          "activation": 5.8125
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 1.2812
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 14796,
+          "pos": 14,
+          "direct_effect": 1.2266,
+          "activation": 7.7812
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 14893,
+        "k": 5,
+        "layer": 7,
+        "pos": 37
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " He",
+          "pos": 37,
+          "direct_effect": 17.5
+        },
+        {
+          "type": "feature",
+          "layer": 6,
+          "feature_idx": 12990,
+          "pos": 37,
+          "direct_effect": 3.6406,
+          "activation": 4.3125
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 2.5469
+        },
+        {
+          "type": "embedding",
+          "token": " He",
+          "pos": 14,
+          "direct_effect": -2.1719
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": -2.0
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 12990,
+        "k": 5,
+        "layer": 6,
+        "pos": 14
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " He",
+          "pos": 14,
+          "direct_effect": 4.1562
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": -1.4453
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 1.3516
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 14796,
+          "pos": 14,
+          "direct_effect": 0.6641,
+          "activation": 7.7812
+        },
+        {
+          "type": "feature",
+          "layer": 2,
+          "feature_idx": 13928,
+          "pos": 14,
+          "direct_effect": 0.5938,
+          "activation": 8.9375
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 1069,
+        "k": 4,
+        "layer": 0,
+        "pos": 14
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " He",
+          "pos": 14,
+          "direct_effect": 35.75
+        },
+        {
+          "type": "embedding",
+          "token": ".",
+          "pos": 13,
+          "direct_effect": 6.7812
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 2.8125
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 0.9023
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 5889,
+        "k": 4,
+        "layer": 17,
+        "pos": 14
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " He",
+          "pos": 14,
+          "direct_effect": 21.5
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 1069,
+          "pos": 14,
+          "direct_effect": 9.0625,
+          "activation": 34.75
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 4.3438
+        },
+        {
+          "type": "embedding",
+          "token": ".",
+          "pos": 13,
+          "direct_effect": -2.375
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 6622,
+        "k": 4,
+        "layer": 13,
+        "pos": 14
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " He",
+          "pos": 14,
+          "direct_effect": 12.5
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 1069,
+          "pos": 14,
+          "direct_effect": 5.5312,
+          "activation": 34.75
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 3.9531
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 1.5703
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 3330,
+        "k": 4,
+        "layer": 15,
+        "pos": 14
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " He",
+          "pos": 14,
+          "direct_effect": 17.125
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 1069,
+          "pos": 14,
+          "direct_effect": 7.0312,
+          "activation": 34.75
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 2.3438
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": -1.4609
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 851,
+        "k": 4,
+        "layer": 15,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 12,
+          "feature_idx": 12493,
+          "pos": 1,
+          "direct_effect": 23.375,
+          "activation": 62.25
+        },
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 14174,
+          "pos": 1,
+          "direct_effect": 19.375,
+          "activation": 55.25
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 2762,
+          "pos": 1,
+          "direct_effect": 18.875,
+          "activation": 35.0
+        },
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 462,
+          "pos": 1,
+          "direct_effect": 15.25,
+          "activation": 26.375
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 10933,
+        "k": 4,
+        "layer": 11,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 14174,
+          "pos": 1,
+          "direct_effect": 11.5625,
+          "activation": 55.25
+        },
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 7106,
+          "pos": 1,
+          "direct_effect": 7.5938,
+          "activation": 31.0
+        },
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 12232,
+          "pos": 1,
+          "direct_effect": -7.3125,
+          "activation": 39.0
+        },
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 6804,
+          "pos": 1,
+          "direct_effect": 4.6875,
+          "activation": 35.25
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 9183,
+        "k": 4,
+        "layer": 11,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 14174,
+          "pos": 1,
+          "direct_effect": 13.875,
+          "activation": 55.25
+        },
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 7106,
+          "pos": 1,
+          "direct_effect": 8.1875,
+          "activation": 31.0
+        },
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 12232,
+          "pos": 1,
+          "direct_effect": -8.0,
+          "activation": 39.0
+        },
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 10933,
+          "pos": 1,
+          "direct_effect": 5.6875,
+          "activation": 51.5
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 8770,
+        "k": 4,
+        "layer": 9,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 462,
+          "pos": 1,
+          "direct_effect": 15.0,
+          "activation": 26.375
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 13.5625
+        },
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 5741,
+          "pos": 1,
+          "direct_effect": 10.75,
+          "activation": 22.5
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 3992,
+          "pos": 1,
+          "direct_effect": 7.7188,
+          "activation": 22.875
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 1065,
+        "k": 4,
+        "layer": 0,
+        "pos": 3
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " interests",
+          "pos": 3,
+          "direct_effect": 20.125
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 0.2988
+        },
+        {
+          "type": "embedding",
+          "token": " research",
+          "pos": 2,
+          "direct_effect": 0.2266
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": -0.1953
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 11835,
+        "k": 4,
+        "layer": 0,
+        "pos": 3
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": -3.2344
+        },
+        {
+          "type": "embedding",
+          "token": "His",
+          "pos": 1,
+          "direct_effect": 2.0625
+        },
+        {
+          "type": "embedding",
+          "token": " research",
+          "pos": 2,
+          "direct_effect": 1.5938
+        },
+        {
+          "type": "embedding",
+          "token": " interests",
+          "pos": 3,
+          "direct_effect": 0.8906
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 962,
+        "k": 4,
+        "layer": 1,
+        "pos": 3
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " interests",
+          "pos": 3,
+          "direct_effect": 19.875
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 11211,
+          "pos": 3,
+          "direct_effect": 0.6289,
+          "activation": 11.875
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 2159,
+          "pos": 3,
+          "direct_effect": 0.4453,
+          "activation": 7.1562
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 9607,
+          "pos": 3,
+          "direct_effect": 0.3828,
+          "activation": 6.125
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 14174,
+        "k": 4,
+        "layer": 10,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 3056,
+          "pos": 1,
+          "direct_effect": 16.625,
+          "activation": 41.5
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 15819,
+          "pos": 1,
+          "direct_effect": 14.0625,
+          "activation": 45.75
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 2762,
+          "pos": 1,
+          "direct_effect": 13.1875,
+          "activation": 35.0
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 13483,
+          "pos": 1,
+          "direct_effect": 8.8125,
+          "activation": 25.0
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 2762,
+        "k": 4,
+        "layer": 9,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 16.25
+        },
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 462,
+          "pos": 1,
+          "direct_effect": 9.375,
+          "activation": 26.375
+        },
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 5741,
+          "pos": 1,
+          "direct_effect": 9.125,
+          "activation": 22.5
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 3992,
+          "pos": 1,
+          "direct_effect": 7.5,
+          "activation": 22.875
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 462,
+        "k": 4,
+        "layer": 7,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 21.125
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 3992,
+          "pos": 1,
+          "direct_effect": 13.25,
+          "activation": 22.875
+        },
+        {
+          "type": "feature",
+          "layer": 6,
+          "feature_idx": 4516,
+          "pos": 1,
+          "direct_effect": -5.0,
+          "activation": 17.125
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 7489,
+          "pos": 1,
+          "direct_effect": 3.9062,
+          "activation": 9.0
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 7106,
+        "k": 4,
+        "layer": 10,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 3056,
+          "pos": 1,
+          "direct_effect": 5.4062,
+          "activation": 41.5
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 2762,
+          "pos": 1,
+          "direct_effect": 4.3125,
+          "activation": 35.0
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 13483,
+          "pos": 1,
+          "direct_effect": 4.125,
+          "activation": 25.0
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 15819,
+          "pos": 1,
+          "direct_effect": 3.7969,
+          "activation": 45.75
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 8128,
+        "k": 4,
+        "layer": 13,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 14174,
+          "pos": 1,
+          "direct_effect": 11.75,
+          "activation": 55.25
+        },
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 10933,
+          "pos": 1,
+          "direct_effect": 8.5,
+          "activation": 51.5
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 2762,
+          "pos": 1,
+          "direct_effect": 8.0,
+          "activation": 35.0
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 3056,
+          "pos": 1,
+          "direct_effect": 7.375,
+          "activation": 41.5
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 12232,
+        "k": 4,
+        "layer": 10,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 8770,
+          "pos": 1,
+          "direct_effect": 9.6875,
+          "activation": 46.0
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 2762,
+          "pos": 1,
+          "direct_effect": 6.5,
+          "activation": 35.0
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 3056,
+          "pos": 1,
+          "direct_effect": 5.6875,
+          "activation": 41.5
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 15819,
+          "pos": 1,
+          "direct_effect": 5.3438,
+          "activation": 45.75
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 12493,
+        "k": 4,
+        "layer": 12,
+        "pos": 1
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 14174,
+          "pos": 1,
+          "direct_effect": 15.75,
+          "activation": 55.25
+        },
+        {
+          "type": "feature",
+          "layer": 10,
+          "feature_idx": 10933,
+          "pos": 1,
+          "direct_effect": 8.875,
+          "activation": 51.5
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 3056,
+          "pos": 1,
+          "direct_effect": 6.25,
+          "activation": 41.5
+        },
+        {
+          "type": "feature",
+          "layer": 9,
+          "feature_idx": 2762,
+          "pos": 1,
+          "direct_effect": 6.2188,
+          "activation": 35.0
+        }
+      ]
+    },
+    {
+      "tool": "build_circuit",
+      "input": {
+        "edges": [
+          {
+            "from": "emb_his",
+            "to": "early_pos1_features"
+          },
+          {
+            "from": "emb_his",
+            "to": "l7_pos1_pair"
+          },
+          {
+            "from": "emb_his",
+            "to": "mid_pronoun_features"
+          },
+          {
+            "from": "emb_his",
+            "to": "late_pos1_pos37"
+          },
+          {
+            "from": "emb_research",
+            "to": "early_pos23_features"
+          },
+          {
+            "from": "emb_interests",
+            "to": "early_pos23_features"
+          },
+          {
+            "from": "emb_interests",
+            "to": "early_pos1_features"
+          },
+          {
+            "from": "emb_he14",
+            "to": "he_pos14_features"
+          },
+          {
+            "from": "emb_he14",
+            "to": "late_pos1_pos37"
+          },
+          {
+            "from": "emb_he37",
+            "to": "he_pos14_features"
+          },
+          {
+            "from": "emb_bos",
+            "to": "early_pos1_features"
+          },
+          {
+            "from": "early_pos1_features",
+            "to": "l7_pos1_pair"
+          },
+          {
+            "from": "early_pos1_features",
+            "to": "mid_pronoun_features"
+          },
+          {
+            "from": "l7_pos1_pair",
+            "to": "mid_pronoun_features"
+          },
+          {
+            "from": "mid_pronoun_features",
+            "to": "late_pos1_pos37"
+          },
+          {
+            "from": "he_pos14_features",
+            "to": "late_pos1_pos37"
+          },
+          {
+            "from": "l7_pos1_pair",
+            "to": "output"
+          },
+          {
+            "from": "late_pos1_pos37",
+            "to": "output"
+          },
+          {
+            "from": "early_pos23_features",
+            "to": "output"
+          }
+        ],
+        "nodes": [
+          {
+            "features": [],
+            "id": "output",
+            "label": "Probe direction (output logit)",
+            "layer": 26
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 8814,
+                "layer": 19,
+                "pos": 1
+              },
+              {
+                "feature_idx": 7400,
+                "layer": 18,
+                "pos": 1
+              },
+              {
+                "feature_idx": 10315,
+                "layer": 18,
+                "pos": 1
+              },
+              {
+                "feature_idx": 14743,
+                "layer": 18,
+                "pos": 14
+              },
+              {
+                "feature_idx": 14743,
+                "layer": 18,
+                "pos": 37
+              }
+            ],
+            "id": "late_pos1_pos37",
+            "label": "Late-layer pronoun aggregators (L18-L19) at pos 1/14/37 \u2014 negative effect on probe",
+            "layer": 19
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 851,
+                "layer": 15,
+                "pos": 1
+              },
+              {
+                "feature_idx": 10933,
+                "layer": 11,
+                "pos": 1
+              },
+              {
+                "feature_idx": 9183,
+                "layer": 11,
+                "pos": 1
+              },
+              {
+                "feature_idx": 8770,
+                "layer": 9,
+                "pos": 1
+              },
+              {
+                "feature_idx": 14174,
+                "layer": 10,
+                "pos": 1
+              },
+              {
+                "feature_idx": 2762,
+                "layer": 9,
+                "pos": 1
+              },
+              {
+                "feature_idx": 462,
+                "layer": 7,
+                "pos": 1
+              },
+              {
+                "feature_idx": 7106,
+                "layer": 10,
+                "pos": 1
+              },
+              {
+                "feature_idx": 12493,
+                "layer": 12,
+                "pos": 1
+              },
+              {
+                "feature_idx": 8128,
+                "layer": 13,
+                "pos": 1
+              },
+              {
+                "feature_idx": 12232,
+                "layer": 10,
+                "pos": 1
+              }
+            ],
+            "id": "mid_pronoun_features",
+            "label": "Mid-layer pronoun/name features (L7-L15) at pos 1",
+            "layer": 10
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 14893,
+                "layer": 7,
+                "pos": 1
+              },
+              {
+                "feature_idx": 14946,
+                "layer": 7,
+                "pos": 1
+              }
+            ],
+            "id": "l7_pos1_pair",
+            "label": "L7 'His' feature pair (pos 1) \u2014 +0.43 / -0.43 opposing pair",
+            "layer": 7
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 2994,
+                "layer": 0,
+                "pos": 1
+              },
+              {
+                "feature_idx": 1069,
+                "layer": 0,
+                "pos": 1
+              },
+              {
+                "feature_idx": 7439,
+                "layer": 1,
+                "pos": 1
+              },
+              {
+                "feature_idx": 5491,
+                "layer": 2,
+                "pos": 1
+              },
+              {
+                "feature_idx": 9301,
+                "layer": 2,
+                "pos": 1
+              },
+              {
+                "feature_idx": 13121,
+                "layer": 3,
+                "pos": 1
+              },
+              {
+                "feature_idx": 4315,
+                "layer": 4,
+                "pos": 1
+              },
+              {
+                "feature_idx": 15567,
+                "layer": 4,
+                "pos": 1
+              },
+              {
+                "feature_idx": 10952,
+                "layer": 5,
+                "pos": 1
+              },
+              {
+                "feature_idx": 12990,
+                "layer": 6,
+                "pos": 1
+              }
+            ],
+            "id": "early_pos1_features",
+            "label": "Early-layer 'His' features (L0-L6, pos 1)",
+            "layer": 4
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 5889,
+                "layer": 17,
+                "pos": 14
+              },
+              {
+                "feature_idx": 5889,
+                "layer": 17,
+                "pos": 37
+              },
+              {
+                "feature_idx": 3330,
+                "layer": 15,
+                "pos": 14
+              },
+              {
+                "feature_idx": 6622,
+                "layer": 13,
+                "pos": 14
+              },
+              {
+                "feature_idx": 14893,
+                "layer": 7,
+                "pos": 14
+              },
+              {
+                "feature_idx": 14893,
+                "layer": 7,
+                "pos": 37
+              },
+              {
+                "feature_idx": 13002,
+                "layer": 15,
+                "pos": 14
+              },
+              {
+                "feature_idx": 1069,
+                "layer": 0,
+                "pos": 14
+              },
+              {
+                "feature_idx": 1069,
+                "layer": 0,
+                "pos": 37
+              }
+            ],
+            "id": "he_pos14_features",
+            "label": "Later-' He' pronoun features (pos 14, 37) \u2014 drives negative contributions",
+            "layer": 17
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 9740,
+                "layer": 2,
+                "pos": 3
+              },
+              {
+                "feature_idx": 4564,
+                "layer": 0,
+                "pos": 2
+              },
+              {
+                "feature_idx": 1065,
+                "layer": 0,
+                "pos": 3
+              },
+              {
+                "feature_idx": 11835,
+                "layer": 0,
+                "pos": 3
+              },
+              {
+                "feature_idx": 962,
+                "layer": 1,
+                "pos": 3
+              }
+            ],
+            "id": "early_pos23_features",
+            "label": "Early-layer 'His research interests' features (pos 1, 2, 3)",
+            "layer": 2
+          },
+          {
+            "features": [],
+            "id": "emb_his",
+            "label": "Emb: His (pos 1)",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "emb_research",
+            "label": "Emb: research (pos 2)",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "emb_interests",
+            "label": "Emb: interests (pos 3)",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "emb_he14",
+            "label": "Emb: He (pos 14)",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "emb_he37",
+            "label": "Emb: He (pos 37)",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "emb_bos",
+            "label": "Emb: BOS (pos 0)",
+            "layer": 0
+          }
+        ]
+      },
+      "output": {
+        "nodes": [
+          {
+            "features": [],
+            "id": "output",
+            "label": "Probe direction (output logit)",
+            "layer": 26
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 8814,
+                "layer": 19,
+                "pos": 1
+              },
+              {
+                "feature_idx": 7400,
+                "layer": 18,
+                "pos": 1
+              },
+              {
+                "feature_idx": 10315,
+                "layer": 18,
+                "pos": 1
+              },
+              {
+                "feature_idx": 14743,
+                "layer": 18,
+                "pos": 14
+              },
+              {
+                "feature_idx": 14743,
+                "layer": 18,
+                "pos": 37
+              }
+            ],
+            "id": "late_pos1_pos37",
+            "label": "Late-layer pronoun aggregators (L18-L19) at pos 1/14/37 \u2014 negative effect on probe",
+            "layer": 19
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 851,
+                "layer": 15,
+                "pos": 1
+              },
+              {
+                "feature_idx": 10933,
+                "layer": 11,
+                "pos": 1
+              },
+              {
+                "feature_idx": 9183,
+                "layer": 11,
+                "pos": 1
+              },
+              {
+                "feature_idx": 8770,
+                "layer": 9,
+                "pos": 1
+              },
+              {
+                "feature_idx": 14174,
+                "layer": 10,
+                "pos": 1
+              },
+              {
+                "feature_idx": 2762,
+                "layer": 9,
+                "pos": 1
+              },
+              {
+                "feature_idx": 462,
+                "layer": 7,
+                "pos": 1
+              },
+              {
+                "feature_idx": 7106,
+                "layer": 10,
+                "pos": 1
+              },
+              {
+                "feature_idx": 12493,
+                "layer": 12,
+                "pos": 1
+              },
+              {
+                "feature_idx": 8128,
+                "layer": 13,
+                "pos": 1
+              },
+              {
+                "feature_idx": 12232,
+                "layer": 10,
+                "pos": 1
+              }
+            ],
+            "id": "mid_pronoun_features",
+            "label": "Mid-layer pronoun/name features (L7-L15) at pos 1",
+            "layer": 10
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 14893,
+                "layer": 7,
+                "pos": 1
+              },
+              {
+                "feature_idx": 14946,
+                "layer": 7,
+                "pos": 1
+              }
+            ],
+            "id": "l7_pos1_pair",
+            "label": "L7 'His' feature pair (pos 1) \u2014 +0.43 / -0.43 opposing pair",
+            "layer": 7
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 2994,
+                "layer": 0,
+                "pos": 1
+              },
+              {
+                "feature_idx": 1069,
+                "layer": 0,
+                "pos": 1
+              },
+              {
+                "feature_idx": 7439,
+                "layer": 1,
+                "pos": 1
+              },
+              {
+                "feature_idx": 5491,
+                "layer": 2,
+                "pos": 1
+              },
+              {
+                "feature_idx": 9301,
+                "layer": 2,
+                "pos": 1
+              },
+              {
+                "feature_idx": 13121,
+                "layer": 3,
+                "pos": 1
+              },
+              {
+                "feature_idx": 4315,
+                "layer": 4,
+                "pos": 1
+              },
+              {
+                "feature_idx": 15567,
+                "layer": 4,
+                "pos": 1
+              },
+              {
+                "feature_idx": 10952,
+                "layer": 5,
+                "pos": 1
+              },
+              {
+                "feature_idx": 12990,
+                "layer": 6,
+                "pos": 1
+              }
+            ],
+            "id": "early_pos1_features",
+            "label": "Early-layer 'His' features (L0-L6, pos 1)",
+            "layer": 4
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 5889,
+                "layer": 17,
+                "pos": 14
+              },
+              {
+                "feature_idx": 5889,
+                "layer": 17,
+                "pos": 37
+              },
+              {
+                "feature_idx": 3330,
+                "layer": 15,
+                "pos": 14
+              },
+              {
+                "feature_idx": 6622,
+                "layer": 13,
+                "pos": 14
+              },
+              {
+                "feature_idx": 14893,
+                "layer": 7,
+                "pos": 14
+              },
+              {
+                "feature_idx": 14893,
+                "layer": 7,
+                "pos": 37
+              },
+              {
+                "feature_idx": 13002,
+                "layer": 15,
+                "pos": 14
+              },
+              {
+                "feature_idx": 1069,
+                "layer": 0,
+                "pos": 14
+              },
+              {
+                "feature_idx": 1069,
+                "layer": 0,
+                "pos": 37
+              }
+            ],
+            "id": "he_pos14_features",
+            "label": "Later-' He' pronoun features (pos 14, 37) \u2014 drives negative contributions",
+            "layer": 17
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 9740,
+                "layer": 2,
+                "pos": 3
+              },
+              {
+                "feature_idx": 4564,
+                "layer": 0,
+                "pos": 2
+              },
+              {
+                "feature_idx": 1065,
+                "layer": 0,
+                "pos": 3
+              },
+              {
+                "feature_idx": 11835,
+                "layer": 0,
+                "pos": 3
+              },
+              {
+                "feature_idx": 962,
+                "layer": 1,
+                "pos": 3
+              }
+            ],
+            "id": "early_pos23_features",
+            "label": "Early-layer 'His research interests' features (pos 1, 2, 3)",
+            "layer": 2
+          },
+          {
+            "features": [],
+            "id": "emb_his",
+            "label": "Emb: His (pos 1)",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "emb_research",
+            "label": "Emb: research (pos 2)",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "emb_interests",
+            "label": "Emb: interests (pos 3)",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "emb_he14",
+            "label": "Emb: He (pos 14)",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "emb_he37",
+            "label": "Emb: He (pos 37)",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "emb_bos",
+            "label": "Emb: BOS (pos 0)",
+            "layer": 0
+          }
+        ],
+        "edges": [
+          {
+            "from": "emb_his",
+            "to": "early_pos1_features"
+          },
+          {
+            "from": "emb_his",
+            "to": "l7_pos1_pair"
+          },
+          {
+            "from": "emb_his",
+            "to": "mid_pronoun_features"
+          },
+          {
+            "from": "emb_his",
+            "to": "late_pos1_pos37"
+          },
+          {
+            "from": "emb_research",
+            "to": "early_pos23_features"
+          },
+          {
+            "from": "emb_interests",
+            "to": "early_pos23_features"
+          },
+          {
+            "from": "emb_interests",
+            "to": "early_pos1_features"
+          },
+          {
+            "from": "emb_he14",
+            "to": "he_pos14_features"
+          },
+          {
+            "from": "emb_he14",
+            "to": "late_pos1_pos37"
+          },
+          {
+            "from": "emb_he37",
+            "to": "he_pos14_features"
+          },
+          {
+            "from": "emb_bos",
+            "to": "early_pos1_features"
+          },
+          {
+            "from": "early_pos1_features",
+            "to": "l7_pos1_pair"
+          },
+          {
+            "from": "early_pos1_features",
+            "to": "mid_pronoun_features"
+          },
+          {
+            "from": "l7_pos1_pair",
+            "to": "mid_pronoun_features"
+          },
+          {
+            "from": "mid_pronoun_features",
+            "to": "late_pos1_pos37"
+          },
+          {
+            "from": "he_pos14_features",
+            "to": "late_pos1_pos37"
+          },
+          {
+            "from": "l7_pos1_pair",
+            "to": "output"
+          },
+          {
+            "from": "late_pos1_pos37",
+            "to": "output"
+          },
+          {
+            "from": "early_pos23_features",
+            "to": "output"
+          }
+        ],
+        "status": "circuit_saved"
+      }
+    }
+  ],
+  "usage": {
+    "orchestrator": {
+      "model": "minimax/minimax-m3",
+      "input_tokens": 21419,
+      "output_tokens": 7116,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 72156,
+      "providers": {
+        "unknown": 10
+      }
+    },
+    "subagents": []
+  },
+  "total_cost_usd": 0.01929426,
+  "turns": 10,
+  "elapsed_seconds": 72.31468890234828,
+  "control_results": [],
+  "self_rating_confidence": null,
+  "self_rating_raw": null,
+  "interventions": [],
+  "discovery_reassess": [],
+  "reassess_records": {},
+  "timestamp": "2026-07-28T07-23-50"
+}

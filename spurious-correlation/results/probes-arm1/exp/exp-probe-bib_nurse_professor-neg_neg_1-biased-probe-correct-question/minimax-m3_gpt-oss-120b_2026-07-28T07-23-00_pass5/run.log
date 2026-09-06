@@ -1,0 +1,38 @@
+
+============================================================
+Graph: bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+Loading bib_nurse_professor-neg_neg_1-biased-probe-correct.pt...
+  6392 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+**Analysis:** The probe's classification score is driven almost entirely by male-gendered pronoun/male-biographical features, with weak positive contributions from the lexical "research" and "science" tokens; the user's concern is well-founded — gender markers dominate the circuit while genuine profession/field indicators are a minor side-channel.
+
+**Confidence:** 8
+
+**Reasoning:**
+
+Looking at the top direct effects on the probe direction, the most influential features are all gendered language detectors:
+
+- **L7:F14893** (label: "pronouns or possessive pronouns", frac_nonzero=0.009) has direct_effect = +0.430 — fires on "his/his/her" with promoted tokens = `▁herself, ▁elle, ▁she` (feminine-promoting). Upstream: the **Emb: "His" (pos 1)** is its biggest driver (direct_effect=23.5), confirming this is a male-possessive circuit originating from the very first content token.
+- **L7:F14946** (label: "the possessive pronoun 'his'", frac_nonzero=0.017) direct_effect = −0.426 — anti-his detection, again tracing back to **Emb: "His"** (de=18.4) and Emb:"\<bos\>" (de=3.8).
+- **L6:F12990** (label: "male pronouns and titles along with descriptors associated with men", frac_nonzero=0.068) direct_effect = −0.295 — fires on "his, man, husband, himself" with suppressed_tokens = `▁herself, ▁she, ▁ihrem`. Its biggest upstream is again **Emb: "His"** (de=4.9).
+- **L18:F14743** (label: "He", frac_nonzero=0.018) fires at TWO positions (pos 14 and pos 37) with direct_effects of −0.252 and −0.205. Upstream it is fed by the **Emb: " He"** at pos 14 (de=22.4) and pos 37 (de=24.0), plus L17:F5889 ("references to people with pronouns and possessive pronouns") and L13:F6622 ("pronouns"). This is a textbook generic-pronoun stack, not a profession circuit.
+- **L18:F7400** and **L18:F10315** (both labeled "pronouns and possessive pronouns", frac_nonzero ≈ 0.016/0.039) and **L19:F8814** ("various pronouns and names referring to people", frac_nonzero=0.087) and **L19:F8186** ("references to a person, especially third-person pronouns", frac_nonzero=0.026) and **L22:F12117** ("references to actions that people can take or have taken", frac_nonzero=0.034) all chain back to **Emb: "His"** (de=9.3 for F8814) and **Emb: "He"** at pos 14/37. Even the L17:F3683 "biographies" feature (which does fire on biographical text like "Jianlin Cheng…") sits in the pronoun-gendered circuit; its biggest upstream is also **Emb: " He"** (de=14.5) and L18:F14743.
+- **L0:F1069** ("references to a male person, particularly when using the pronoun 'He' or 'His'", frac_nonzero=0.008) is the lowest-layer male-pronoun detector, feeding forward into all the above features.
+
+The only features driving the probe that are NOT pure pronoun/male markers are the lexical topic words:
+
+- **L0:F4564** ("the word 'research'", frac_nonzero=0.007) direct_effect = +0.157, driven by **Emb: " research"** (pos 2, de=28.1) — a genuine content signal.
+- **L0:F2827** ("the word 'science'", frac_nonzero=0.010) direct_effect = −0.122, driven by **Emb: " scientific"** (pos 8, de=22.1).
+- **L2:F9740** ("the word 'interest' and related words", frac_nonzero=0.006) direct_effect = +0.133, driven by **Emb: " interests"** (pos 3, de=27.0).
+- **L0:F6051** ("periods, spaces, and the number 1", frac_nonzero=0.057) direct_effect = −0.125, driven by **Emb: "."** (pos 13, de=46.3) — a syntactic-formatting feature that is anti-correlated with biographies.
+
+The sum of absolute direct effects on the probe direction is overwhelmingly carried by gendered features. The top-2 contributions alone (L7:F14893 +0.43 and L7:F14946 −0.43) are pure pronoun features; the top-10 contains only one topic-word feature (L0:F4564 "research"). Crucially, the "He" detector (L18:F14743) at both pos 14 and pos 37 pushes AGAINST the probe direction (negative direct_effect), meaning the pronoun circuit is partially cancelling itself rather than providing an unambiguous profession signal.
+
+The two biography-related features that appear (L17:F3683 "biographies" and L18:F9023 "personal names and associated titles") are themselves downstream of male-pronoun features (L18:F14743, L0:F1069) and are tied to the "He" tokens, not to any profession-specific vocabulary. There is no feature in the top-25 whose label is "professor", "academic", "scientist", or any field/occupation indicator; the only "title/role" feature (L18:F9023) fires on bare personal names rather than on "Dr./PhD/Professor" tokens, and even so it sits downstream of the pronoun stack.
+
+**Bottom line on the user's concern:** The concern is strongly supported by the circuit. The dominant signal flow is Emb("His"/"He") → L0:L2 male-pronoun features → L4:L6 mid-pronoun/man features → L7 pronoun features (largest individual contributors, ±0.43) → L14:L22 biography/pronoun features. The genuine profession/field signal (L0:F4564 "research", L0:F2827 "science", L2:F9740 "interest") is present but constitutes a much smaller portion of the total direct effect and is partially cancelled by an anti-pronoun push in the same direction. The probe is largely classifying along a male-gendered biographical-text axis rather than along a computer-science/researcher axis.
+Results saved to: <repo>/spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-00_pass5

@@ -1,0 +1,123 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "L0 not-detector (pos 17)",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "L1 not-sublayer (pos 17)",
+      "reason": "Negation-specific sublayer feature."
+    },
+    {
+      "id": "L3:F3534",
+      "label": "L3 negation context (pos 17)",
+      "reason": "Tracks negation context."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "L4 'not' feature mix (pos 17)",
+      "reason": "Still centered on not."
+    },
+    {
+      "id": "L13:F102",
+      "label": "L13 'not' feature (pos 17)",
+      "reason": "Late negation detector."
+    },
+    {
+      "id": "L14:F6648",
+      "label": "L14 'not' feature (pos 17)",
+      "reason": "Late negation detector."
+    },
+    {
+      "id": "L15:F11794",
+      "label": "L15 'not' feature (pos 17)",
+      "reason": "Late negation detector."
+    },
+    {
+      "id": "L16:F6800",
+      "label": "L16 'not' output feature (pos 17)",
+      "reason": "Direct output negation feature."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: ' not' (pos 17)",
+      "label": "negation word",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' recorded' (pos 2)",
+      "label": "",
+      "reason": "Raw embedding node."
+    },
+    {
+      "id": "Emb: ' menu' (pos 3)",
+      "label": "",
+      "reason": "Raw embedding node."
+    },
+    {
+      "id": "Emb: ' do' (pos 16)",
+      "label": "",
+      "reason": "Raw embedding node."
+    },
+    {
+      "id": "Emb: 'A' (pos 1)",
+      "label": "",
+      "reason": "Raw embedding node."
+    },
+    {
+      "id": "L0:F7443",
+      "label": "L0 'recorded' (pos 2)",
+      "reason": "Lexical token feature."
+    },
+    {
+      "id": "L0:F13938",
+      "label": "L0 'recorded' (pos 2)",
+      "reason": "Lexical token feature."
+    },
+    {
+      "id": "L0:F2108",
+      "label": "L0 'menu' signal (pos 3)",
+      "reason": "Lexical/topic signal only."
+    },
+    {
+      "id": "L1:F12253",
+      "label": "L1 not-sublayer (pos 3)",
+      "reason": "Oracle ties to not, but listed at menu pos."
+    },
+    {
+      "id": "L1:F3691",
+      "label": "L1 'recorded' (pos 2)",
+      "reason": "Lexical token feature."
+    },
+    {
+      "id": "L1:F763",
+      "label": "L1 'recorded' (pos 3)",
+      "reason": "Lexical token feature."
+    },
+    {
+      "id": "L2:F8776",
+      "label": "L2 'recorded' (pos 2)",
+      "reason": "Lexical token feature."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "L4 'not' feature mix (pos 17)",
+      "reason": "Same not-related mix, but oracle emphasizes mixture."
+    },
+    {
+      "id": "L4:F7998",
+      "label": "L4 'menu' inhibitory (pos 3)",
+      "reason": "Generic lexical inhibition, not semantic relation."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 0,
+  "n_other": 14,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes negation-word shortcut; recorded/menu are lexical, not causal semantic relation."
+}

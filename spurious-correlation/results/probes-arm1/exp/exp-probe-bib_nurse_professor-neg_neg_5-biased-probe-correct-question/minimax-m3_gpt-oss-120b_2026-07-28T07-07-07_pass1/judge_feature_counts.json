@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Generic person-reference signal with gendered pronoun promotion."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit male-gender detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Direct male pronoun/person feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Pronoun detector tied to gender markers."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun feature used for gendered subject tracking."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Pronoun detector; gendered despite mixed noise."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He detector",
+      "reason": "Direct masculine pronoun feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L22:F12117",
+      "label": "references to actions that people can take or have taken.",
+      "reason": "Generic action/verb signal, not profession-specific."
+    },
+    {
+      "id": "L19:F11110",
+      "label": "people's education history",
+      "reason": "Education-related, relevant to biographies and professions."
+    },
+    {
+      "id": "L8:F7587",
+      "label": "education/qualification feature",
+      "reason": "Educational qualification terminology."
+    },
+    {
+      "id": "L21:F6216",
+      "label": "education/qualification feature",
+      "reason": "Qualification-related profession indicator."
+    },
+    {
+      "id": "L20:F10934",
+      "label": "education/qualification feature",
+      "reason": "Academic credential signal."
+    },
+    {
+      "id": "L12:F10137",
+      "label": "education/qualification feature",
+      "reason": "Institution/education terminology."
+    },
+    {
+      "id": "L0:F1773",
+      "label": "Base L0 pronoun feature",
+      "reason": "Oracle gave no profession-semantic claim; generic/ambiguous."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe output direction",
+      "label": "profession classification score",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "Emb: His",
+      "label": "His",
+      "reason": "Input token embedding, not a circuit feature."
+    },
+    {
+      "id": "Emb: He",
+      "label": "He",
+      "reason": "Input token embedding, not a circuit feature."
+    },
+    {
+      "id": "Emb: He",
+      "label": "He",
+      "reason": "Duplicate input token embedding."
+    },
+    {
+      "id": "Emb: received",
+      "label": "received",
+      "reason": "Input token embedding, not a circuit feature."
+    },
+    {
+      "id": "Emb: Harvard",
+      "label": "Harvard",
+      "reason": "Input token embedding, not a circuit feature."
+    },
+    {
+      "id": "Emb: Economics",
+      "label": "Economics",
+      "reason": "Input token embedding, not a circuit feature."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 7,
+  "n_other": 7,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle shows both strong pronoun bias and some education-related profession signals."
+}

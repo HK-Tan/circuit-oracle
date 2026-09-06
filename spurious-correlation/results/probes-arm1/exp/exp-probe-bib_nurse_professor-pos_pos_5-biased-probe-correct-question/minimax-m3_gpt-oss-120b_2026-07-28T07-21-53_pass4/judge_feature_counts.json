@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Female name-role association"
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Explicit women/girls mention"
+    },
+    {
+      "id": "L13:F11685",
+      "label": "words related to women",
+      "reason": "Gendered women-related words"
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female pronoun/title detector"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Profession-specific medical terms"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Nursing vocabulary"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe output (profession direction)",
+      "reason": "Output node, not a feature"
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Generic name detector"
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Structural capitalization cue"
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Name feature, not profession"
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Generic proper-name pattern"
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Generic proper-noun feature"
+    },
+    {
+      "id": "L2:F5859",
+      "label": "first names (mostly female)",
+      "reason": "Name-only detector"
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 2,
+  "n_other": 7,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Gender markers dominate, though profession content is also present."
+}

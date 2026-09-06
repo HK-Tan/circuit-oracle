@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F10868",
+      "label": "the phrase \"I'm a\" or \"I am a\"",
+      "reason": "Identity-phrase syntax can cue self-described demographic identity."
+    },
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations",
+      "reason": "Identity/perspective shortcut unrelated to toxicity semantics."
+    },
+    {
+      "id": "L2:F13877",
+      "label": "words related to roles, ranks, or personal characteristics of people",
+      "reason": "People-characteristics detector overlaps demographic identity signaling."
+    },
+    {
+      "id": "L3:F1526",
+      "label": "references to academic disciplines related to social science",
+      "reason": "Oracle ties this to identity-adjacent social discourse, not toxicity."
+    },
+    {
+      "id": "L0:F2260",
+      "label": "terms that are medical, legal, or related to social work",
+      "reason": "Oracle places it among shortcut/identity-adjacent features."
+    },
+    {
+      "id": "L0:F4478",
+      "label": "terms related to ownership and belief systems",
+      "reason": "Belief-system terms can encode identity-group signals."
+    },
+    {
+      "id": "L0:F3591",
+      "label": "terms related to government social programs",
+      "reason": "Oracle treats as non-causal shortcut feature."
+    },
+    {
+      "id": "L7:F8154",
+      "label": "highly charged political commentary, particularly with a right-leaning perspective",
+      "reason": "Explicit ideological shortcut, not toxicity content."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Purely structural generic token detector."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic second-person marker; identity-independent structure."
+    },
+    {
+      "id": "L3:F16254",
+      "label": "conditional statements followed by actions the speaker will take",
+      "reason": "Causal discourse structure relevant to threat/commitment."
+    },
+    {
+      "id": "L0:F13756",
+      "label": "the word \"order\" and occasionally \"period,\" in many different contexts from law to food",
+      "reason": "Generic polysemantic word feature, not identity-based."
+    },
+    {
+      "id": "L0:F13310",
+      "label": "sentences that include forms of the verb \"are\" indicating a present state of being or necessity.",
+      "reason": "Structural copula/state marker, identity-independent."
+    },
+    {
+      "id": "L4:F11236",
+      "label": "calls to action and imperative verbs.",
+      "reason": "Direct imperative/toxic-command structure is task-relevant."
+    },
+    {
+      "id": "L2:F14209",
+      "label": "the verb \"go\" in its various forms.",
+      "reason": "Generic verb feature, not a shortcut."
+    },
+    {
+      "id": "L2:F14541",
+      "label": "code snippets and logical statements, especially those involving \"then,\" along with some citation markers and bracketed references.",
+      "reason": "Structural/logical syntax only."
+    },
+    {
+      "id": "L4:F13700",
+      "label": "conditional clauses starting with \"if\" and words related to business contexts",
+      "reason": "Conditional structure, not identity-linked."
+    },
+    {
+      "id": "L0:F3850",
+      "label": "punctuation marks",
+      "reason": "Purely structural punctuation detector."
+    },
+    {
+      "id": "L12:F562",
+      "label": "second person pronouns followed by a verb",
+      "reason": "Generic syntactic pattern, identity-independent."
+    },
+    {
+      "id": "L0:F10219",
+      "label": "the indefinite article \"a\"",
+      "reason": "Purely structural article detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L6:F9005",
+      "label": "words and phrases related to desserts",
+      "reason": "Unrelated to toxicity or identity."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 12,
+  "n_other": 1,
+  "spurious_fraction": 0.4,
+  "dominant": "causal",
+  "notes": "Mostly structural causal features; several oracle-flagged ideological/identity shortcuts are spurious."
+}

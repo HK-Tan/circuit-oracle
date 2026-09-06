@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F16309",
+      "label": "people's names",
+      "reason": "Subject name detector; identity, not profession."
+    },
+    {
+      "id": "L0:F11132",
+      "label": "a mix of possessive pronouns like \"his\", names associated with historical records, and years.",
+      "reason": "Possessive pronoun/name pattern; spurious biography cue."
+    },
+    {
+      "id": "L0:F6515",
+      "label": "the year 199X or 200X.",
+      "reason": "Year detector; template artifact, not profession."
+    },
+    {
+      "id": "L0:F11333",
+      "label": "the 1990's",
+      "reason": "Year/decade marker; non-causal surface cue."
+    },
+    {
+      "id": "L0:F4687",
+      "label": "place names",
+      "reason": "Geographic marker; affiliation side-channel."
+    },
+    {
+      "id": "L4:F8439",
+      "label": "stock ticker symbols and Canadian geography",
+      "reason": "Canadian geography, not profession semantics."
+    },
+    {
+      "id": "L7:F8870",
+      "label": "locations and names of organizations or people",
+      "reason": "Location/person-name cue; identity metadata."
+    },
+    {
+      "id": "L14:F5600",
+      "label": "places and regions, particularly in Canada",
+      "reason": "Country/location detector; spurious affiliation cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F1372",
+      "label": "the word \"engineer\"",
+      "reason": "Direct profession vocabulary."
+    },
+    {
+      "id": "L6:F3235",
+      "label": "academic publications, math, and scientific institutions",
+      "reason": "Academic-profession context signal."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree credential relevant to profession."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "University/degree context; profession-relevant."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Credential/title information."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "abbreviations for degrees and mentions of educational attainment",
+      "reason": "Education attainment signal."
+    },
+    {
+      "id": "L6:F8285",
+      "label": "text related to scientific publications and author information.",
+      "reason": "Scientific/author context, profession-related."
+    },
+    {
+      "id": "L3:F8294",
+      "label": "words and phrases related to advanced education, research, and high-level concepts",
+      "reason": "Research/education content relevant to profession."
+    },
+    {
+      "id": "L4:F13886",
+      "label": "US universities and their locations",
+      "reason": "University affiliation; profession-relevant."
+    },
+    {
+      "id": "L4:F13943",
+      "label": "words and abbreviations related to academic research",
+      "reason": "Academic research vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2743",
+      "label": "the word 'later'",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F15320",
+      "label": "the word 'ice'",
+      "reason": "Generic word feature, not profession-related."
+    },
+    {
+      "id": "L0:F7905",
+      "label": "the word \"route,\" referencing paths, directions, or means of transportation",
+      "reason": "Generic route/direction cue."
+    },
+    {
+      "id": "L0:F2085",
+      "label": "the word \"reception\"",
+      "reason": "Generic word feature."
+    },
+    {
+      "id": "L0:F12235",
+      "label": "words related to legal documents and hunting",
+      "reason": "Oracle doesn't tie it to profession here."
+    },
+    {
+      "id": "L1:F10132",
+      "label": "the abbreviation for Doctorate of Philosophy, \"Ph.D.\" (or \"PhD\") written as \"D\"",
+      "reason": "Tokenization-specific detector; structural/orthographic."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 10,
+  "n_other": 6,
+  "spurious_fraction": 0.4444444444444444,
+  "dominant": "causal",
+  "notes": "Degree/university signals dominate, but several name/year/location artifacts are also present."
+}

@@ -1,0 +1,49 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Gendered female mentions; spurious for profession prediction."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession indicator; causally relevant."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic entity detector, not profession-specific."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Structural name/title detector."
+    },
+    {
+      "id": "L5:F16213",
+      "label": "proper nouns consisting of a first and last name",
+      "reason": "Generic proper-name feature."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Name-form heuristic, not causal."
+    },
+    {
+      "id": "L2:F16306",
+      "label": "proper names and positive adjectives",
+      "reason": "Mixed generic lexical feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 1,
+  "n_other": 5,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Probe uses both nursing and female gender cues; several generic name detectors are other."
+}

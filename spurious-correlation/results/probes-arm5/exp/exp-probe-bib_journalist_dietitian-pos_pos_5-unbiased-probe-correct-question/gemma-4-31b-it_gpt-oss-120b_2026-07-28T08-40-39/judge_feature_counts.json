@@ -1,0 +1,68 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Emb",
+      "label": "nutrition (pos 7)",
+      "reason": "Direct nutrition term; profession-related content."
+    },
+    {
+      "id": "L1:F6461",
+      "label": "Low-layer Health/Exercise Detectors",
+      "reason": "Detects health/exercise terminology; profession indicator."
+    },
+    {
+      "id": "L1:F6631",
+      "label": "Low-layer Health/Exercise Detectors",
+      "reason": "Health/diet-related semantic feature."
+    },
+    {
+      "id": "L1:F15310",
+      "label": "Low-layer Health/Exercise Detectors",
+      "reason": "Captures health or exercise concepts."
+    },
+    {
+      "id": "L1:F760",
+      "label": "Low-layer Health/Exercise Detectors",
+      "reason": "Health/exercise signal, causally relevant."
+    },
+    {
+      "id": "L4:F10494",
+      "label": "words related to health, medicine, diet, drugs, age groups, and excercise",
+      "reason": "General health/medicine/diet vocabulary."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Dietary health terminology is causal."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Direct food/nutrition semantic feature."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-related semantic content, not gender."
+    },
+    {
+      "id": "L14:F16195",
+      "label": "mentions of physical activity and training.",
+      "reason": "Physical activity/training terminology."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe Classification Score",
+      "label": "",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 10,
+  "n_other": 1,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "All listed features are health/nutrition related; no gender markers or structural-only features."
+}

@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Literal demographic token detector; identity-group signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F3399",
+      "label": "words related to marriage",
+      "reason": "Marriage content, not identity-group related."
+    },
+    {
+      "id": "L3:F494",
+      "label": "text relating to marriage, birth, death, family and religion",
+      "reason": "Family/religion semantics; toxicity-independent."
+    },
+    {
+      "id": "L6:F2851",
+      "label": "books and associated things such as authors and reading",
+      "reason": "Topic/book feature; content semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F753",
+      "label": "the word \"author\" and words related to selling and prices",
+      "reason": "Mixed generic lexical/topic feature."
+    },
+    {
+      "id": "L0:F4408",
+      "label": "the word \"authors\" in academic papers or similar documents",
+      "reason": "Purely lexical/topic detector."
+    },
+    {
+      "id": "L0:F9881",
+      "label": "the word \"appear\" and its variants",
+      "reason": "Generic surface-word detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L3:F6262",
+      "label": "mentions of marriage",
+      "reason": "Cancels marriage signal; not toxicity."
+    },
+    {
+      "id": "L3:F8254",
+      "label": "words and phrases related to marriage and family relationships",
+      "reason": "Family-topic suppressor; non-toxic."
+    },
+    {
+      "id": "L3:F10004",
+      "label": "words which mean or indicate uncertainty or possibility",
+      "reason": "Hedging/uncertainty feature."
+    },
+    {
+      "id": "L3:F11152",
+      "label": "words that indicate uncertainty or possibility",
+      "reason": "Generic modality feature."
+    },
+    {
+      "id": "L1:F384",
+      "label": "the string \"ash\" or \"pund\"",
+      "reason": "Unrelated string detector."
+    },
+    {
+      "id": "L1:F1431",
+      "label": "instances of the word \"fair\" and the phrase \"ends of justice\" in legal documents",
+      "reason": "Legal-topic lexical feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 3,
+  "n_other": 10,
+  "spurious_fraction": 0.25,
+  "dominant": "other",
+  "notes": "Only one clear identity-group feature appears; most others are lexical or topical, not toxic."
+}

@@ -1,0 +1,158 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb:F21",
+      "label": "Emb: \" not\"",
+      "reason": "Trigger token for negation features; hypothesis negation detector."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Literal negation-word detector."
+    },
+    {
+      "id": "L0:F15454",
+      "label": "the word \"not\"",
+      "reason": "Literal negation-word detector."
+    },
+    {
+      "id": "L1:F5108",
+      "label": "the word \"not\"",
+      "reason": "Literal negation keyword detector."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "\"not\" or negative terms, with some bonus for sports-related terms and \"purpose\".",
+      "reason": "Negation/negative-terms detector."
+    },
+    {
+      "id": "L2:F4544",
+      "label": "the word \"not\" or contractions including \"not\"",
+      "reason": "Negation-word detector."
+    },
+    {
+      "id": "L2:F6993",
+      "label": "phrases describing uncertainty or difficulty",
+      "reason": "Grouped with negation detectors on hypothesis token."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Dismissed structural multilingual mix, not semantic."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation cue in software context."
+    },
+    {
+      "id": "L3:F6374",
+      "label": "the word \"not\" or the word \"longer\"",
+      "reason": "Negation-word detector."
+    },
+    {
+      "id": "L3:F9803",
+      "label": "sentences describing scientific studies or experiments, particularly where something is disproven",
+      "reason": "Still a negation/disproof cue."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Multilingual negation detector."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Multilingual negation detector."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Negation pattern detector."
+    },
+    {
+      "id": "L13:F14177",
+      "label": "negation or dissent, often using \"not\" with \"am\" or other verbs",
+      "reason": "Negation pattern detector."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation detector."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Pure negation pattern detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb:F20",
+      "label": "Emb: \" were\"",
+      "reason": "Content-neutral auxiliary token."
+    },
+    {
+      "id": "Emb:F9",
+      "label": "Emb: \" agriculture\"",
+      "reason": "Content token without oracle semantic role."
+    },
+    {
+      "id": "Emb:F0",
+      "label": "Emb: \"<bos>\"",
+      "reason": "Structural BOS token."
+    },
+    {
+      "id": "L0:F12414",
+      "label": "the word \"were\"",
+      "reason": "Generic auxiliary, content-neutral."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic article detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Generic lexical pattern."
+    },
+    {
+      "id": "L0:F9646",
+      "label": "words that indicate the degree, scale, or validity of something",
+      "reason": "Content-neutral discourse marker."
+    },
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Content word; not semantic relation."
+    },
+    {
+      "id": "L2:F2952",
+      "label": "the word \"out\", and sometimes activates on words relating to legal cases",
+      "reason": "Generic content token."
+    },
+    {
+      "id": "L15:F2080",
+      "label": "the phrase \"set\" followed by articles or prepositions",
+      "reason": "Structural phrase detector."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 17,
+  "n_causal": 12,
+  "n_other": 0,
+  "spurious_fraction": 0.5862068965517241,
+  "dominant": "spurious",
+  "notes": "Oracle is dominated by negation keyword detectors; remaining features are generic or content-neutral."
+}

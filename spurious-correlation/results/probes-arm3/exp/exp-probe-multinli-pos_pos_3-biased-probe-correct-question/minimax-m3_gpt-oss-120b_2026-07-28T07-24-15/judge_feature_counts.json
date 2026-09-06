@@ -1,0 +1,83 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector in hypothesis."
+    },
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\".",
+      "reason": "Negation detector in hypothesis."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Negation detector in hypothesis."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector in hypothesis."
+    },
+    {
+      "id": "L0:F10815",
+      "label": "the word \"any\".",
+      "reason": "Oracle treats as contradiction shortcut cue."
+    },
+    {
+      "id": "L2:F2415",
+      "label": "frequent words indicating small quantities or proximity, or words with negative connotations",
+      "reason": "Negative-connotation cue, not semantic relation."
+    },
+    {
+      "id": "L2:F15066",
+      "label": "the words \"nor\" or \"or\", sometimes adjacent to words that intensify the meaning, such as \"either\"",
+      "reason": "Negation-related shortcut cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F13215",
+      "label": "terms used to describe military fortifications.",
+      "reason": "Content semantics about castles/towers."
+    },
+    {
+      "id": "L3:F14368",
+      "label": "the word \"house\" (or houses).",
+      "reason": "Task-relevant content overlap."
+    },
+    {
+      "id": "L1:F12702",
+      "label": "the word \"house\" or \"homes\"",
+      "reason": "Task-relevant content overlap."
+    },
+    {
+      "id": "L0:F1454",
+      "label": "mentions of specific centuries or decades",
+      "reason": "Semantically relevant historical context."
+    },
+    {
+      "id": "L4:F5386",
+      "label": "mentions of centuries and decades",
+      "reason": "Semantically relevant historical context."
+    },
+    {
+      "id": "L0:F4367",
+      "label": "references to centuries",
+      "reason": "Semantically relevant historical context."
+    },
+    {
+      "id": "L9:F13215",
+      "label": "terms used to describe military fortifications.",
+      "reason": "Duplicate causal content feature."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 7,
+  "n_causal": 7,
+  "n_other": 0,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle claims both negation shortcuts and content features contribute; counts are balanced."
+}

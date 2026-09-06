@@ -1,0 +1,74 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gender-marker feature tied to women pronouns/titles."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Detects gendered names, a spurious marker."
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "Women-related identity feature, not profession."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Direct female-pronoun detector."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Counts women/girls mentions; spurious."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments",
+      "reason": "Women-identity/role feature, gendered."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F15728",
+      "label": "mentions of nurses and nursing",
+      "reason": "Profession indicator for nursing."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Profession-specific vocabulary detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F12519",
+      "label": "the pronoun \"she\"",
+      "reason": "Oracle says negative; still a gender marker, but not positively driving."
+    },
+    {
+      "id": "L1:F4232",
+      "label": "the possessive pronoun \"her\"",
+      "reason": "Oracle says negative; gender marker but suppressive."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code-like feature, not task-semantic."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Oracle says negative; ignored by written analysis."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 2,
+  "n_other": 4,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "Gender-marker pathway dominates, with smaller nursing-specific support."
+}

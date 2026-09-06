@@ -1,0 +1,74 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: white (pos 2)",
+      "label": "token embedding",
+      "reason": "Demographic identity token, race signal."
+    },
+    {
+      "id": "Emb: dude (pos 3)",
+      "label": "token embedding",
+      "reason": "Identity/gendered term, not toxicity."
+    },
+    {
+      "id": "Emb: black (pos 6)",
+      "label": "token embedding",
+      "reason": "Demographic identity token, race signal."
+    },
+    {
+      "id": "Early race/ethnicity detectors (L0, L2)",
+      "label": "words about race and ethnicity",
+      "reason": "Direct identity/race detector."
+    },
+    {
+      "id": "Mid-layer race/demographic identity features (L3-L4)",
+      "label": "mentions of demographic identity, especially race and gender",
+      "reason": "Identity mention detector."
+    },
+    {
+      "id": "Mid-layer race/ethnicity/identity features (L5-L6)",
+      "label": "terms associated with gender, race, sexual orientation, and disability",
+      "reason": "Demographic identity features."
+    },
+    {
+      "id": "Late-layer race/discourse features (L8-L9)",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Race/discourse, not toxicity semantics."
+    },
+    {
+      "id": "Late-layer composed race features (L11-L12)",
+      "label": "terms relating to race, specifically focusing on black and white people and slavery",
+      "reason": "Race-focused composition feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Probe logit (output)",
+      "label": "output",
+      "reason": "Not a feature; final classifier score."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Another (pos 1)",
+      "label": "token embedding",
+      "reason": "Generic token; structural only."
+    },
+    {
+      "id": "L4:F9880",
+      "label": "phrases indicating repetition or continuation which often use the word \"another\"",
+      "reason": "Generic continuation/structure detector."
+    },
+    {
+      "id": "L2:F12341",
+      "label": "the word \"steal\" and words related to taking and basic needs",
+      "reason": "Mentioned as negative contribution; not driving score."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 1,
+  "n_other": 3,
+  "spurious_fraction": 0.8888888888888888,
+  "dominant": "spurious",
+  "notes": "Oracle shows identity/race circuitry; toxicity semantics are not meaningfully represented."
+}

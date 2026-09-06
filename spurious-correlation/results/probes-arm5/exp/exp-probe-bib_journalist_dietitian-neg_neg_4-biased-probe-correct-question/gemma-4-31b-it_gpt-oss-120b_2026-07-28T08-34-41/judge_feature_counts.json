@@ -1,0 +1,53 @@
+{
+  "spurious_features": [
+    {
+      "id": "L14:F14097",
+      "label": "Gender Token Detectors (He/She)",
+      "reason": "Detects gendered pronouns."
+    },
+    {
+      "id": "L0:F12768",
+      "label": "Gender Token Detectors (He/She)",
+      "reason": "Detects gendered pronouns."
+    },
+    {
+      "id": "L4:F15567",
+      "label": "Gender Pronoun Aggregators",
+      "reason": "Aggregates pronoun-based gender signals."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "Gender Pronoun Aggregators",
+      "reason": "Aggregates pronoun-based gender signals."
+    },
+    {
+      "id": "L15:F10510",
+      "label": "Gender Pronoun Aggregators",
+      "reason": "Aggregates masculine pronoun signals."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "Late-Layer Gender Marker (He)",
+      "reason": "Direct detector for masculine pronoun."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F0@22",
+      "label": "Emb: he",
+      "reason": "Input embedding token, not a feature."
+    },
+    {
+      "id": "embed/output",
+      "label": "Probe Classification Score",
+      "reason": "Output score, not an intermediate feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 0,
+  "n_other": 2,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "All claimed circuitry is gender-marker based; no profession indicators are cited."
+}

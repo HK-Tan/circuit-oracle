@@ -1,0 +1,103 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Gender-marker pronouns; directly spurious."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronouns are spurious gender markers."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Explicit male pronoun detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-gender marker feature."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Likely person/gender-marker shortcut."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Single male pronoun feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Pronoun-based gender cue."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun detector; spurious here."
+    },
+    {
+      "id": "L21:F6216",
+      "label": "references to a specific person, often using pronouns or names",
+      "reason": "Person-reference shortcut, not profession content."
+    },
+    {
+      "id": "L19:F8186",
+      "label": "references to a person, especially third-person pronouns and possessive pronouns.",
+      "reason": "Person/pronoun detector."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Not profession-related; dismissed as irrelevant."
+    },
+    {
+      "id": "L0:F2749",
+      "label": "references to ownership or association with a person or group of people",
+      "reason": "Generic association feature, not causal."
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Male pronoun detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F1773",
+      "label": "the word \"history\"",
+      "reason": "Content word, but not profession-specific."
+    },
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Profession/education-related terminology."
+    },
+    {
+      "id": "L2:F9740",
+      "label": "the word \"interest\" and related words.",
+      "reason": "Work/education context, profession-relevant."
+    },
+    {
+      "id": "L8:F2383",
+      "label": "words related to archeological sites, digs, and artifacts",
+      "reason": "Field-specific profession vocabulary."
+    },
+    {
+      "id": "L12:F10137",
+      "label": "names of universities, cities, publications and other institutions.",
+      "reason": "Education/institution terminology."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 13,
+  "n_causal": 5,
+  "n_other": 0,
+  "spurious_fraction": 0.7222222222222222,
+  "dominant": "spurious",
+  "notes": "Oracle claims pronoun/gender shortcuts dominate; content features are minor."
+}

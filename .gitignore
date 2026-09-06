@@ -1,0 +1,42 @@
+__pycache__/
+*.pyc
+.venv/
+.venv-*/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+.env
+src/*.egg-info/
+
+# Attribution graphs and model weights are built or downloaded on the GPU machine, never committed.
+*.pt
+# The task-1 probe checkpoints are the one exception: they are 80 KB and are not exactly regenerable.
+!spurious-correlation/probe_extraction/probes/*.pt
+
+# Default output root for every runner. The committed result sets live under
+# <task>/results/ and <task>/results-workshop/ and are never written to by a command.
+#
+# Both patterns are ANCHORED. An unanchored `runs/` matches a directory of that
+# name at any depth, which also swallowed refusal-jailbreaking/baselines/arditi/runs/,
+# a committed archive that exp_judge.py reads.
+/runs/
+/*/runs/
+
+# Derived on demand next to whatever --results-dir it was pointed at.
+auroc_feature_counts*.png
+
+# Model cache and graph store for task 3 land under weights/ next to the committed
+# Arditi direction diagnostics, so only those two subdirectories are ignored.
+refusal-jailbreaking/weights/hf_cache/
+refusal-jailbreaking/weights/graphs/
+
+# Convenience slot for the external activation-oracle baseline JSONs (task 2), if you
+# drop them into the tree instead of setting $AO_BASELINES_DIR. Not shipped.
+secret-elicitation/baselines/*.json
+
+# Written by scripts/run_autointerp_server.py on first run. Feature labels are
+# regenerable and are provenance-tied to $AUTOINTERP_MODEL, so they are yours,
+# not ours.
+secret-elicitation/autointerp_cache/
+secret-elicitation/autointerp_cache_*/

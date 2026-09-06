@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Negation-word detector in hypothesis."
+    },
+    {
+      "id": "L16:F11298",
+      "label": "no",
+      "reason": "Negation-word detector; lexical cue only."
+    },
+    {
+      "id": "L15:F13061",
+      "label": "uses of the word \"no\" or similar negative statements and words associated with \"one\"",
+      "reason": "Negation-related cue, not semantics."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Content-bearing phrase; could reflect meaning overlap."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Task-relevant content word tied to premise-hypothesis meaning."
+    },
+    {
+      "id": "L2:F1016",
+      "label": "forms of the verb \"tour\" and the noun \"tour.\"",
+      "reason": "Semantic content feature about touring."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Oracle treats as content-relevant, not mere function-word only."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Content word; oracle claims it as relevant."
+    },
+    {
+      "id": "L2:F8837",
+      "label": "the word \"one\" or \"body\" when preceded by the words \"no\" or \"every.\"",
+      "reason": "Scoped negation meaning, not raw negation token."
+    },
+    {
+      "id": "L0:F13354",
+      "label": "the word \"ask\"",
+      "reason": "Content-bearing lexical feature."
+    },
+    {
+      "id": "L0:F12167",
+      "label": "the word \"usually\" in a variety of contexts",
+      "reason": "Semantic/temporal content, not purely structural."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F10904",
+      "label": "the word \"adequate\" (and words that appear near it)",
+      "reason": "Oracle says it doesn't appear in the text."
+    },
+    {
+      "id": "L0:F7727",
+      "label": "code or documentation mentioning the word \"mapping.\"",
+      "reason": "Oracle dismisses as irrelevant code/documentation."
+    },
+    {
+      "id": "L0:F10562",
+      "label": "the word \"up\"",
+      "reason": "Generic word detector; structural."
+    },
+    {
+      "id": "L2:F11769",
+      "label": "the word \"up\"",
+      "reason": "Generic word detector; structural."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 8,
+  "n_other": 4,
+  "spurious_fraction": 0.2727272727272727,
+  "dominant": "causal",
+  "notes": "Counted only oracle-claimed features; raw negation-word detectors go spurious, generic/dismissed features go other."
+}

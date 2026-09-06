@@ -1,0 +1,174 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Generic lexical detector, not NLI semantics."
+    },
+    {
+      "id": "L6:F12420",
+      "label": "artistic elements that break established guidelines",
+      "reason": "Unrelated vocabulary pattern."
+    },
+    {
+      "id": "L4:F12799",
+      "label": "words ending in \"-ly\" along with phrases that contain the word 'odd' or 'oddities'",
+      "reason": "Adjective/form cue, not contradiction meaning."
+    },
+    {
+      "id": "L2:F16097",
+      "label": "superlative adjectives and the words \"test\" or \"point\"",
+      "reason": "Superlative/word cue only."
+    },
+    {
+      "id": "L10:F6670",
+      "label": "technical terms, especially within scientific or medical contexts",
+      "reason": "Domain vocabulary detector."
+    },
+    {
+      "id": "L4:F6072",
+      "label": "the word \"now\" followed by a verb",
+      "reason": "Pure temporal token pattern."
+    },
+    {
+      "id": "L3:F12079",
+      "label": "negations and Chinese names",
+      "reason": "Negation token detector."
+    },
+    {
+      "id": "L7:F905",
+      "label": "words indicating amounts, changes, or trends",
+      "reason": "Broad lexical trend cue."
+    },
+    {
+      "id": "L4:F14368",
+      "label": "words related to importance or roles in a system",
+      "reason": "Role-related lexical cue."
+    },
+    {
+      "id": "L0:F6013",
+      "label": "the word \"role,\" sometimes in conjunction with words that make it abstract, like energy or medicine",
+      "reason": "Keyword detector for role."
+    },
+    {
+      "id": "L8:F16033",
+      "label": "figurative language related to reversals of fortune",
+      "reason": "Reversal vocabulary, not task semantics."
+    },
+    {
+      "id": "L7:F4526",
+      "label": "words related to comparisons, symmetry or reversals in data or situations",
+      "reason": "Symmetry/reversal vocabulary cue."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Broad phrase-pattern detector."
+    },
+    {
+      "id": "L2:F10705",
+      "label": "the word \"concerns\"",
+      "reason": "Single-word lexical detector."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural feature."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation/absence word cue."
+    },
+    {
+      "id": "L4:F7409",
+      "label": "words like \"vice versa\", \"inverse\", \"reverse\", \"around\", or directions",
+      "reason": "Reversal vocabulary cue."
+    },
+    {
+      "id": "L6:F2743",
+      "label": "scientific terms and phrases related to symmetry and equivalence",
+      "reason": "Symmetry/equivalence vocabulary."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L3:F12544",
+      "label": "legal and military terminology, and words indicating opposition or change",
+      "reason": "Opposition vocabulary cue."
+    },
+    {
+      "id": "L9:F14687",
+      "label": "phrases using the word \"not\", often followed by \"because\" or \"but.\"",
+      "reason": "Negation phrase detector."
+    },
+    {
+      "id": "L3:F10225",
+      "label": "the word \"on\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L5:F9068",
+      "label": "words and phrases related to populations",
+      "reason": "Broad topical vocabulary."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F0@22",
+      "label": "Probe Output (Contradiction Score)",
+      "reason": "Model output, not a feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: not (pos 17)",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: strangest (pos 2)",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0@4",
+      "label": "Emb: reversal (pos 4)",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0@3",
+      "label": "Emb: role (pos 3)",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: now (pos 9)",
+      "reason": "Embedding node only."
+    },
+    {
+      "id": "L0:F0@12",
+      "label": "Emb: democracy (pos 12)",
+      "reason": "Embedding node only."
+    }
+  ],
+  "n_spurious": 25,
+  "n_causal": 1,
+  "n_other": 6,
+  "spurious_fraction": 0.9615384615384616,
+  "dominant": "spurious",
+  "notes": "Oracle favors lexical negation/reversal cues; no genuine premise-hypothesis semantic comparison is claimed."
+}

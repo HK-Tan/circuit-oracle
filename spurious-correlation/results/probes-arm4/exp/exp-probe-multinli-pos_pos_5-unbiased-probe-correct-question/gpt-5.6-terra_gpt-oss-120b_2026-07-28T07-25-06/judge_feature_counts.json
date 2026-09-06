@@ -1,0 +1,83 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: not",
+      "label": "Emb: not (pos 6)",
+      "reason": "Negation-word detector in hypothesis."
+    },
+    {
+      "id": "Emb: only",
+      "label": "Emb: only (pos 7)",
+      "reason": "\"Only\" within not-only construction; spurious cue."
+    },
+    {
+      "id": "Emb: but",
+      "label": "Emb: but (pos 13)",
+      "reason": "Contrast-word detector in not-only-but-also template."
+    },
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Contrast-construction detector, not semantic consistency."
+    },
+    {
+      "id": "L17:F3763",
+      "label": "only",
+      "reason": "Only token detector in not-only construction."
+    },
+    {
+      "id": "L2:F5627",
+      "label": "not-only construction detectors",
+      "reason": "Explicit not-only construction feature."
+    },
+    {
+      "id": "L9:F12274",
+      "label": "not-only construction detectors",
+      "reason": "Explicit not-only construction feature."
+    },
+    {
+      "id": "L15:F1990",
+      "label": "not-only construction detectors",
+      "reason": "Explicit not-only construction feature."
+    },
+    {
+      "id": "Emb: program",
+      "label": "Emb: program (pos 5)",
+      "reason": "Surface topic lexical detector."
+    },
+    {
+      "id": "L2:F13565",
+      "label": "the word \"program(me)s\"",
+      "reason": "Topic-word detector, not contradiction."
+    },
+    {
+      "id": "Emb: said",
+      "label": "Emb: said (pos 3)",
+      "reason": "Reporting-clause token, structural cue."
+    },
+    {
+      "id": "L4:F12847",
+      "label": "sentences with some reporting verb and the word 'that'",
+      "reason": "Reporting-syntax detector, not task semantics."
+    },
+    {
+      "id": "L5:F7144",
+      "label": "proper nouns followed by the word \"said\"",
+      "reason": "Reporting-clause syntax, not semantic relation."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Output: injected linear contradiction-probe direction",
+      "label": "Output: injected linear contradiction-probe direction",
+      "reason": "Model output, not a feature."
+    }
+  ],
+  "n_spurious": 13,
+  "n_causal": 0,
+  "n_other": 1,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows surface construction cues dominating; no semantic contradiction feature is claimed."
+}

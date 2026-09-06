@@ -1,0 +1,34 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13586",
+      "label": "words ending in 'thing' and 'one' often with preceding words indicating the presence of something",
+      "reason": "Negation-like 'no one' cue for contradiction."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Content-bearing phrase from the prompt; may reflect semantic relation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Pure lexical trigger, not semantic."
+    },
+    {
+      "id": "L0:F7321",
+      "label": "the word \"so,\" and also matches some words ending in \"ware\" and \"such\"",
+      "reason": "Generic lexical trigger, dismissed as shallow."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 1,
+  "n_other": 2,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle cites shallow tokens plus one negation-like cue; only one feature plausibly causal."
+}

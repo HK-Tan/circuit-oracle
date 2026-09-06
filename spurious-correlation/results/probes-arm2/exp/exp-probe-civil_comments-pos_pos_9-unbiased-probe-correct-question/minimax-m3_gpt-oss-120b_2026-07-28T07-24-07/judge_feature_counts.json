@@ -1,0 +1,73 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: ' white' (pos 9)",
+      "label": "identity token",
+      "reason": "Demographic racial token; identity-group signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Probe output (toxicity direction)",
+      "label": "toxicity direction",
+      "reason": "Overall toxic classification direction."
+    },
+    {
+      "id": "Emb: ' author' (pos 2)",
+      "label": "token embedding",
+      "reason": "Content word, not identity-group specific."
+    },
+    {
+      "id": "Emb: ' married' (pos 6)",
+      "label": "token embedding",
+      "reason": "Neutral relational content, not toxic semantics."
+    },
+    {
+      "id": "Emb: ' Maybe' (pos 17)",
+      "label": "token embedding",
+      "reason": "Hedging/discourse cue, identity-independent."
+    },
+    {
+      "id": "Emb: ' to' (pos 7)",
+      "label": "token embedding",
+      "reason": "Pure function word; structural only."
+    },
+    {
+      "id": "L0 early features on ' author' (pos 2)  [L0:F4408@2, L0:F753@2, L0:F5538@2, L0:F6087@2, L0:F9796@2, L1:F384@2]",
+      "label": "author lexical features",
+      "reason": "Shallow lexical features on a non-identity content word."
+    },
+    {
+      "id": "L0:F8444 on ' to' (pos 7)  [L0:F8444@7]",
+      "label": "to function-word feature",
+      "reason": "Purely structural function-word detector."
+    },
+    {
+      "id": "L2:F3399 ' married' relation feature (pos 6)  [L2:F3399@6]",
+      "label": "married relation feature",
+      "reason": "Relational syntax, not identity-group detection."
+    },
+    {
+      "id": "L3 inhibitory features on ' married' (pos 6/7)  [L3:F6262@6, L3:F8254@7, L3:F494@6, L1:F1431@6]",
+      "label": "inhibitory married/to features",
+      "reason": "Suppressive structural/relational features."
+    },
+    {
+      "id": "L3 features on ' Maybe' (pos 17)  [L3:F10004@17, L3:F11152@17]",
+      "label": "hedging features",
+      "reason": "Hedging cue, identity-independent lexical signal."
+    },
+    {
+      "id": "L6 late feature on ' author' (pos 2)  [L6:F2851@2, L6:F13528@2]",
+      "label": "late author feature",
+      "reason": "Late lexical feature on non-identity content word."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 11,
+  "n_other": 0,
+  "spurious_fraction": 0.08333333333333333,
+  "dominant": "causal",
+  "notes": "Oracle claims shallow lexical/relational circuit; only 'white' is a spurious identity token."
+}

@@ -1,0 +1,49 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "Emb: His (pos 1)",
+      "reason": "Gendered pronoun embedding."
+    },
+    {
+      "id": "Emb: him (pos 9)",
+      "label": "Emb: him (pos 9)",
+      "reason": "Gendered pronoun embedding."
+    },
+    {
+      "id": "Early \"His\" token features (L0-L4, pos 1)",
+      "label": "Early \"His\" token features (L0-L4, pos 1)",
+      "reason": "Features for gendered pronoun 'His'."
+    },
+    {
+      "id": "Mid-layer \"His\" features (L5-L9, pos 1)",
+      "label": "Mid-layer \"His\" features (L5-L9, pos 1)",
+      "reason": "Features for gendered pronoun 'His'."
+    },
+    {
+      "id": "Late-layer pronoun features (L10-L19)",
+      "label": "Late-layer pronoun features (L10-L19)",
+      "reason": "Pronoun features from gendered markers."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Verb-context features at \"report\" (pos 21)",
+      "label": "Verb-context features at \"report\" (pos 21)",
+      "reason": "Content-bearing local context around report."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output (probe direction)",
+      "label": "Output (probe direction)",
+      "reason": "Structural probe output, not a feature."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 1,
+  "n_other": 1,
+  "spurious_fraction": 0.8333333333333334,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by gendered pronoun features; report-context contributes little."
+}

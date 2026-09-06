@@ -1,0 +1,59 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Masculine pronoun detector; gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism vocabulary; profession indicator."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News/journalism source terminology."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media/journalism-related semantics; profession signal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic pronoun detector, not gender-specific."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Mixed pronoun/non-ascii feature; structural contamination."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Purely structural/common word feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/format feature."
+    },
+    {
+      "id": "L0:F7681",
+      "label": "statements that describe something, often including a past tense verb",
+      "reason": "Generic syntactic/tense feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 3,
+  "n_other": 5,
+  "spurious_fraction": 0.25,
+  "dominant": "causal",
+  "notes": "Core circuit mixes one masculine marker with multiple journalism indicators; other features are generic."
+}

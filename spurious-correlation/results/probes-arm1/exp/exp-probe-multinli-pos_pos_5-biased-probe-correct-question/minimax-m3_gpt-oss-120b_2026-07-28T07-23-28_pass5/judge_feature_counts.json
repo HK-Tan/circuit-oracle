@@ -1,0 +1,93 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Contraction/negation cue, not semantics."
+    },
+    {
+      "id": "L2:F5627",
+      "label": "instances of the phrase \"not only\"",
+      "reason": "Literal negation phrase detector."
+    },
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language",
+      "reason": "Surface form, not NLI meaning."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Generic negation cue."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation pattern detector."
+    },
+    {
+      "id": "L16:F15025",
+      "label": "usage of the word \"not\" combined with personal pronouns or related emotional or motivational language",
+      "reason": "Surface negation cue."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: said",
+      "label": "speech attribution cue",
+      "reason": "Pure lexical attribution feature."
+    },
+    {
+      "id": "Emb: but",
+      "label": "contrastive conjunction",
+      "reason": "Structural contrast marker."
+    },
+    {
+      "id": "Emb: to / going",
+      "label": "future-progressive phrase",
+      "reason": "Grammatical phrase only."
+    },
+    {
+      "id": "L4:F15629",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Attribution, not task semantics."
+    },
+    {
+      "id": "L4:F12337",
+      "label": "speech attribution, especially \"said\"",
+      "reason": "Attribution, not task semantics."
+    },
+    {
+      "id": "L4:F2884",
+      "label": "the word \"but\" and other contrastive conjunctions and adverbs.",
+      "reason": "Generic contrast cue."
+    },
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Contrastive surface pattern."
+    },
+    {
+      "id": "L14:F11020",
+      "label": "the word \"but\". and \"also\"",
+      "reason": "Fixed phrase, not semantics."
+    },
+    {
+      "id": "L0:F14950",
+      "label": "instances of the word \"program\" and the word \"step\"",
+      "reason": "Unrelated lexical detector."
+    },
+    {
+      "id": "L1:F11907",
+      "label": "the word \"program\"",
+      "reason": "Unrelated lexical detector."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 0,
+  "n_other": 10,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by surface negation/contrast cues; no causal semantic-relation feature appears."
+}

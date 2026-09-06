@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F15382",
+      "label": "mentions of a female person.",
+      "reason": "Gender marker; suppresses probe, but still spurious semantic role."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: nurse (pos 7)",
+      "label": "input embedding: nurse",
+      "reason": "Direct profession indicator for nursing."
+    },
+    {
+      "id": "Emb: practitioner (pos 8)",
+      "label": "input embedding: practitioner",
+      "reason": "Healthcare profession vocabulary."
+    },
+    {
+      "id": "Emb: labor (pos 44)",
+      "label": "input embedding: labor",
+      "reason": "Medical labor/birth context."
+    },
+    {
+      "id": "Emb: delivery (pos 46)",
+      "label": "input embedding: delivery",
+      "reason": "Childbirth/medical procedure indicator."
+    },
+    {
+      "id": "Emb: She (pos 1)",
+      "label": "input embedding: She",
+      "reason": "Not gender-claimed as driver; oracle says suppressor."
+    },
+    {
+      "id": "L0:F1832",
+      "label": "the word labor",
+      "reason": "Medical labor-related content."
+    },
+    {
+      "id": "L1:F12174",
+      "label": "labor/convention language",
+      "reason": "Contextual labor-related professional content."
+    },
+    {
+      "id": "L1:F1494",
+      "label": "medical practice/study",
+      "reason": "Healthcare/profession terminology."
+    },
+    {
+      "id": "L3:F9008",
+      "label": "childbirth/birth",
+      "reason": "Directly childbirth-related."
+    },
+    {
+      "id": "L3:F10198",
+      "label": "anesthetics/medical procedures",
+      "reason": "Medical procedure vocabulary."
+    },
+    {
+      "id": "L4:F9036",
+      "label": "healthcare abbreviations (practitioner, RN, nurse)",
+      "reason": "Nursing/healthcare profession terms."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "medical environments, treatments, personnel",
+      "reason": "Medical workplace/personnel content."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "counseling/social work/degree programs",
+      "reason": "Profession/education terminology."
+    },
+    {
+      "id": "L5:F9749",
+      "label": "generic medical/practitioner",
+      "reason": "Healthcare professional content, though suppressive here."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "healthcare professionals",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "nursing profession",
+      "reason": "Explicit nursing profession feature."
+    },
+    {
+      "id": "L6:F9980",
+      "label": "pediatric GI abbreviations",
+      "reason": "Medical specialty terminology."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "nursing/healthcare",
+      "reason": "Healthcare profession content, though suppressive here."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "management/leadership/medicine/research",
+      "reason": "Medicine/profession-related vocabulary."
+    },
+    {
+      "id": "L15:F15159",
+      "label": "medicine/healthcare",
+      "reason": "Healthcare content."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F10846",
+      "label": "the word \"also\"",
+      "reason": "Generic token; oracle says suppressor."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 20,
+  "n_other": 1,
+  "spurious_fraction": 0.047619047619047616,
+  "dominant": "causal",
+  "notes": "Oracle attributes the circuit mostly to nursing/medical vocabulary, not gender markers."
+}

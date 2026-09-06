@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12519",
+      "label": "the pronoun \"she\"",
+      "reason": "Direct female pronoun detector."
+    },
+    {
+      "id": "L0:F7509",
+      "label": "female pronouns and words like daughter and husband that refer to women",
+      "reason": "Female-gender marker feature."
+    },
+    {
+      "id": "L1:F4232",
+      "label": "the possessive pronoun \"her\"",
+      "reason": "Female possessive pronoun detector."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Abstracts female references from pronouns/titles."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female-name/possessive feature."
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "General women-related detector."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun aggregation."
+    },
+    {
+      "id": "L15:F12956",
+      "label": "female names and female-related words in the document",
+      "reason": "Female-name/word detector."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based person feature; here gendered context."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Woman/girl mention detector."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments",
+      "reason": "Women-specific name/role feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code-like feature, not task-semantic."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun detector; not causal here."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 1,
+  "n_other": 2,
+  "spurious_fraction": 0.9166666666666666,
+  "dominant": "spurious",
+  "notes": "Female-gender features overwhelmingly dominate; nursing is present but minor."
+}

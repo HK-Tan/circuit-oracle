@@ -1,0 +1,164 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Pronoun detector; identity-independent syntax."
+    },
+    {
+      "id": "L0:F15366",
+      "label": "references to females and past tense verbs",
+      "reason": "Identity-group reference via female mentions."
+    },
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Identity/race rhetoric feature."
+    },
+    {
+      "id": "L7:F11220",
+      "label": "biblical names and related words, especially Rabbis with specific suffixes like \"baum\" and \"as\".",
+      "reason": "Religious-group content signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F592",
+      "label": "words related to love, affection, and hate, including foreign language",
+      "reason": "Hate/toxicity semantics."
+    },
+    {
+      "id": "L3:F8492",
+      "label": "the word \"hate\"",
+      "reason": "Direct hate/toxicity detector."
+    },
+    {
+      "id": "L3:F13302",
+      "label": "words related to negative opinions, harm, and warnings",
+      "reason": "Harm/abuse semantics."
+    },
+    {
+      "id": "L4:F8407",
+      "label": "words related to antagonists and fighting",
+      "reason": "Violence/hostility semantics."
+    },
+    {
+      "id": "L4:F11580",
+      "label": "negative language and swear words",
+      "reason": "Profanity/toxic language."
+    },
+    {
+      "id": "L4:F12592",
+      "label": "language used to criticize or belittle someone",
+      "reason": "Insult/belittling semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8938",
+      "label": "hyphens adjacent to numbers",
+      "reason": "Purely structural punctuation/number pattern."
+    },
+    {
+      "id": "L0:F3090",
+      "label": "JavaScript or other C-style code with member access via \".\" and \"->\"",
+      "reason": "Code-format detector."
+    },
+    {
+      "id": "L0:F4336",
+      "label": "the word \"favor\" and words used in legal contexts",
+      "reason": "Non-toxic legal/lexical context."
+    },
+    {
+      "id": "L1:F2107",
+      "label": "the word \"enter\", and other words and symbols common to mathematical and legal documents",
+      "reason": "Structural/legal-document feature."
+    },
+    {
+      "id": "L1:F5138",
+      "label": "code referring to bounding boxes",
+      "reason": "Pure code/box notation."
+    },
+    {
+      "id": "L2:F1319",
+      "label": "words ending in \"ing,\" regardless of their part of speech, but with a preference for present participles",
+      "reason": "Generic morphology."
+    },
+    {
+      "id": "L2:F7846",
+      "label": "adjectives and adverbs ending in \"ed\", \"ing\", \"al\", \"ent\", \"ive\", \"able\", \"ile\", \"dependent\" or \"specific\"",
+      "reason": "Generic suffix detector."
+    },
+    {
+      "id": "L2:F16224",
+      "label": "words and phrases related to self-awareness, self-reference, or self-publishing",
+      "reason": "General self-reference, not toxicity."
+    },
+    {
+      "id": "L2:F3983",
+      "label": "the word \"hat\"",
+      "reason": "Literal subword, not semantic toxicity by itself."
+    },
+    {
+      "id": "L3:F735",
+      "label": "words and phrases that include the word \"self\" followed by a hyphen",
+      "reason": "Structural self-hyphen pattern."
+    },
+    {
+      "id": "L3:F9615",
+      "label": "words containing the prefix \"self-\"",
+      "reason": "Structural prefix pattern."
+    },
+    {
+      "id": "L3:F10004",
+      "label": "hyphenated words beginning with \"self\"",
+      "reason": "Structural compound pattern."
+    },
+    {
+      "id": "L3:F13717",
+      "label": "statistical estimation terms, especially those involving \"hat\" notation",
+      "reason": "Math notation detector."
+    },
+    {
+      "id": "L3:F15509",
+      "label": "code diffs like those produced by `git diff`",
+      "reason": "Code diff syntax."
+    },
+    {
+      "id": "L3:F5808",
+      "label": "words ending in \"-ing\" that have a sense of driving something forward",
+      "reason": "Generic participle/semantic motion pattern."
+    },
+    {
+      "id": "L3:F14455",
+      "label": "words related to government, law, business, and public policy",
+      "reason": "Non-toxic policy/legal topic."
+    },
+    {
+      "id": "L3:F13070",
+      "label": "words related to automation",
+      "reason": "Non-toxic domain feature."
+    },
+    {
+      "id": "L3:F8675",
+      "label": "mostly finds articles like a, an, the etc., as well as words like \"own\" and \"abuse\"",
+      "reason": "Mixed stopword/article detector."
+    },
+    {
+      "id": "L4:F5181",
+      "label": "terms relating to political parties or ideologies",
+      "reason": "Political-ideology topic, not toxicity alone."
+    },
+    {
+      "id": "L4:F14198",
+      "label": "terms found in legal or political discourse, especially where rights are being violated or impinged.",
+      "reason": "Legal/political discourse feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 6,
+  "n_other": 20,
+  "spurious_fraction": 0.4,
+  "dominant": "mixed",
+  "notes": "Mostly lexical shortcutting, with some real toxicity semantics and many structural/non-toxic features."
+}

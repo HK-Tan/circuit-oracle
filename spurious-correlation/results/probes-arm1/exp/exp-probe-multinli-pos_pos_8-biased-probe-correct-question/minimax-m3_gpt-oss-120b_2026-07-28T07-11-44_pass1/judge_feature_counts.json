@@ -1,0 +1,93 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L6:F13778",
+      "label": "subjective language, opinions and feelings.",
+      "reason": "Possessive/pronoun 'our' reflects content framing."
+    },
+    {
+      "id": "L6:F6096",
+      "label": "political parties and affiliations",
+      "reason": "Congress/affiliation entity feature."
+    },
+    {
+      "id": "L0:F13437",
+      "label": "the word \"who\"",
+      "reason": "'who' is a content-word relation cue."
+    },
+    {
+      "id": "L3:F8382",
+      "label": "the word \"many\", and sometimes \"times\" or \"people\" when near it",
+      "reason": "Counts/content noun context, not negation."
+    },
+    {
+      "id": "L0:F11606",
+      "label": "the word \"fund\"",
+      "reason": "Funding semantics align with task content."
+    },
+    {
+      "id": "L2:F156",
+      "label": "words related to the amount or intensity of something",
+      "reason": "Quantity/level semantics are causal content."
+    },
+    {
+      "id": "L3:F13271",
+      "label": "the word \"control.\"",
+      "reason": "Control-related task content."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Output logit (probe direction)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: Congress",
+      "label": "Emb: Congress",
+      "reason": "Embedding/output node."
+    },
+    {
+      "id": "Emb: our",
+      "label": "Emb: our",
+      "reason": "Embedding/output node."
+    },
+    {
+      "id": "Emb: funding",
+      "label": "Emb: funding",
+      "reason": "Embedding/output node."
+    },
+    {
+      "id": "Emb: levels",
+      "label": "Emb: levels",
+      "reason": "Embedding/output node."
+    },
+    {
+      "id": "Emb: controls",
+      "label": "Emb: controls",
+      "reason": "Embedding/output node."
+    },
+    {
+      "id": "Emb: many",
+      "label": "Emb: many",
+      "reason": "Embedding/output node."
+    },
+    {
+      "id": "Emb: who",
+      "label": "Emb: who",
+      "reason": "Embedding/output node."
+    },
+    {
+      "id": "Emb: <bos>",
+      "label": "Emb: <bos>",
+      "reason": "Embedding/output node."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 7,
+  "n_other": 9,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows content-driven cueing; no negation detector is present."
+}

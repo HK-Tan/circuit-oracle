@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-reference pronoun feature."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male-pronoun & male-title detector",
+      "reason": "Gender-coded male detector."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun feature tied to he/his."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Explicit He token detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F6270",
+      "label": "the word \"whom\", sometimes also activating on nearby punctuation, sentence starts, discourse markers, and other function words",
+      "reason": "Oracle cites academic-context pathway."
+    },
+    {
+      "id": "L0:F6127",
+      "label": "instances of the word \"degree\" and words associated with academia, especially higher education",
+      "reason": "Higher-education/profession signal."
+    },
+    {
+      "id": "L6:F170",
+      "label": "academic fields & humanities detector",
+      "reason": "Academic-content detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: He (pos 1)",
+      "label": "He",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "Emb: his (pos 3)",
+      "label": "his",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "Emb: He (pos 21)",
+      "label": "He",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "Emb: University (pos 13)",
+      "label": "University",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "Emb: received (pos 2)",
+      "label": "received",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "Emb: degree (pos 8)",
+      "label": "degree",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Generic gender-word detector."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 3,
+  "n_other": 7,
+  "spurious_fraction": 0.625,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes male-pronoun circuitry; academic signals are secondary."
+}

@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity-group token detector for white."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "the word \"possession\" and the words \"white\", \"immediate\" and \"once\" regardless of context",
+      "reason": "Promotes demographic token white, not toxicity."
+    },
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Pronoun/identity-syntax detector, not toxic semantics."
+    },
+    {
+      "id": "L0:F310",
+      "label": "the pronouns \"she\", \"her\", and \"he\" and sometimes the word \"therefore\"",
+      "reason": "Gender-pronoun feature, identity-linked."
+    },
+    {
+      "id": "L1:F1480",
+      "label": "the color 'white', sometimes in a context involving race",
+      "reason": "Race-linked white/color detector."
+    },
+    {
+      "id": "L1:F13007",
+      "label": "mentions of white/black",
+      "reason": "Explicit race mention detector."
+    },
+    {
+      "id": "L1:F3079",
+      "label": "politics/protests",
+      "reason": "Race-linked social context, not toxicity."
+    },
+    {
+      "id": "L2:F6983",
+      "label": "words related to race and slavery",
+      "reason": "Identity/race semantics, not abuse."
+    },
+    {
+      "id": "L2:F585",
+      "label": "the word \"white\", often in association with \"dwarf\"",
+      "reason": "White-token association feature."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-group semantics."
+    },
+    {
+      "id": "L3:F11768",
+      "label": "the word \"white\" and related contexts such as diversity",
+      "reason": "Race/identity context feature."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "White token in named entity context."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F12059",
+      "label": "words related to purpose and intent",
+      "reason": "Generic intent/structure, could support causal toxicity context."
+    },
+    {
+      "id": "L1:F11539",
+      "label": "the word \"if\"",
+      "reason": "Conditional syntax relevant to statement structure."
+    },
+    {
+      "id": "L2:F1139",
+      "label": "various usages of the word \"so\", as well as some instances of the word \"come\"",
+      "reason": "Structural connective, possibly causal discourse."
+    },
+    {
+      "id": "L3:F12404",
+      "label": "instances of the conditional word \"if\"",
+      "reason": "Conditional syntax feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' white' (pos 4)",
+      "label": "input embedding",
+      "reason": "Raw token, not a feature class."
+    },
+    {
+      "id": "Emb: ' he' (pos 2)",
+      "label": "input embedding",
+      "reason": "Raw token, not a feature class."
+    },
+    {
+      "id": "Emb: 'If' (pos 1)",
+      "label": "input embedding",
+      "reason": "Raw token, not a feature class."
+    },
+    {
+      "id": "Emb: ' was' (pos 3)",
+      "label": "input embedding",
+      "reason": "Raw token, not a feature class."
+    },
+    {
+      "id": "Emb: ' and' (pos 5)",
+      "label": "input embedding",
+      "reason": "Raw token, not a feature class."
+    },
+    {
+      "id": "L0:F2458",
+      "label": "the word \"was\" and sometimes \"were.\"",
+      "reason": "Generic verb detector."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic conjunction detector."
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Purely structural reference feature."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 4,
+  "n_other": 8,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity/race token detectors; toxicity semantics are largely absent."
+}

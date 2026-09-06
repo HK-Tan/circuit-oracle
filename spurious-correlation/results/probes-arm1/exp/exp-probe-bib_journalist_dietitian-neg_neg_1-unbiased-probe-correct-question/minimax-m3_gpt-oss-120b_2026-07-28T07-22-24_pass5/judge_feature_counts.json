@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: 'His' (pos 1)",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Gendered pronoun marker"
+    },
+    {
+      "id": "L0:F8964",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Gendered pronoun marker"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: ' report' (pos 21)",
+      "label": "the word \"report\"",
+      "reason": "Journalism/profession indicator"
+    },
+    {
+      "id": "Emb: ' news' (pos 27)",
+      "label": "journalistic sources and news outlets.",
+      "reason": "Journalism/profession indicator"
+    },
+    {
+      "id": "L0:F14511",
+      "label": "the word \"report\"",
+      "reason": "Journalism/profession indicator"
+    },
+    {
+      "id": "Early journalism/media features (L4-L7)",
+      "label": "things related to journalism and the media",
+      "reason": "Journalism/media concept"
+    },
+    {
+      "id": "Mid-layer journalism features (L8)",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Journalism/reporting concept"
+    },
+    {
+      "id": "Late journalism feature (L14:4420)",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism/profession indicator"
+    },
+    {
+      "id": "Late journalism feature (L19:2486)",
+      "label": "journalistic sources and news outlets.",
+      "reason": "Journalism/profession indicator"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' world' (pos 6) \u2014 suppressor",
+      "label": "instances of the words \"world\" or \"game\" (possibly \"problem\") or expressions of existential quandaries.",
+      "reason": "Suppressor / non-task content"
+    },
+    {
+      "id": "Emb: ' countries' (pos 11) \u2014 suppressor",
+      "label": "journalistic sources and news outlets.",
+      "reason": "Suppressor / non-task content"
+    },
+    {
+      "id": "Emb: '<bos>' (pos 0) \u2014 suppressor",
+      "label": "the word \"to\"",
+      "reason": "Structural/BOS-related"
+    },
+    {
+      "id": "L9 suppressor (L9:7435)",
+      "label": "the word \"report\"",
+      "reason": "Suppressor feature"
+    },
+    {
+      "id": "Late suppressors (L16-L17)",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Suppressor feature"
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 7,
+  "n_other": 5,
+  "spurious_fraction": 0.2222222222222222,
+  "dominant": "causal",
+  "notes": "Main signal is journalism/profession features; only one gendered pronoun feature appears."
+}

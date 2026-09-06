@@ -1,0 +1,94 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct gender-pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "the 'He'/capitalized token detector",
+      "reason": "Capitalized male pronoun detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit male-gender feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun/possessive gender signal."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Possessive male-pronoun detector."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "General gender-reference feature."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Capitalized pronoun feature."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun/possessive detector."
+    },
+    {
+      "id": "L0:F12351",
+      "label": "words related to obtaining something, like receiving money or a receipt",
+      "reason": "Actually about receiving, not profession."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Academic/profession-related terminology."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic-field vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F1326",
+      "label": "mentions of organizations and government agencies.",
+      "reason": "Generic organization detector."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Purely structural proper-noun feature."
+    },
+    {
+      "id": "L0:F15320",
+      "label": "the word \"ice\"",
+      "reason": "Unrelated lexical token."
+    },
+    {
+      "id": "L0:F13553",
+      "label": "verbs in the past tense or past participle",
+      "reason": "Generic tense detector."
+    },
+    {
+      "id": "L0:F13526",
+      "label": "months of the year, sometimes in connection to a number",
+      "reason": "Generic date/number pattern."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 2,
+  "n_other": 5,
+  "spurious_fraction": 0.8181818181818182,
+  "dominant": "spurious",
+  "notes": "Oracle is dominated by male-pronoun features; academic-field signals are secondary."
+}

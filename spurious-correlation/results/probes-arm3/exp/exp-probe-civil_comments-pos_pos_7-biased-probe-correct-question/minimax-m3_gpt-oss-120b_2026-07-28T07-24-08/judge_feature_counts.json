@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "Identity-group topic detector, not toxicity semantics."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Race-related discussion detector."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Ethnicity/race token detector."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Protected-group/social-issue detector."
+    },
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "LGBTQ+ topic detector."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Identity-term detector."
+    },
+    {
+      "id": "L4:F15899",
+      "label": "language associated with the LGBTQ community and discussions of gender and identity.",
+      "reason": "Identity/community language detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/Black-community detector."
+    },
+    {
+      "id": "L3:F7993",
+      "label": "the word \"black\" and its plural form \"blacks\"",
+      "reason": "Demographic token detector."
+    },
+    {
+      "id": "L9:F8462",
+      "label": "language related to the Black community and multicultural marketing.",
+      "reason": "Black-community language detector."
+    },
+    {
+      "id": "L2:F11363",
+      "label": "colors and words like Diamond.",
+      "reason": "As described, not toxicity-related."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F1644",
+      "label": "different forms of the word \"pride\"",
+      "reason": "Generic lexical cue; no protected-group signal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F9528",
+      "label": "the color black",
+      "reason": "Color term, not identity or toxicity."
+    },
+    {
+      "id": "L1:F12542",
+      "label": "mentions of the word \"proud\" or words relating to TV shows and TV seasons.",
+      "reason": "Generic sentiment/TV-related feature."
+    },
+    {
+      "id": "L6:F15295",
+      "label": "words and abbreviations related to HIV/AIDS and viral infections.",
+      "reason": "Medical-topic feature, not toxicity."
+    },
+    {
+      "id": "L0:F7894",
+      "label": "line breaks that indicate a paragraph or section beginning",
+      "reason": "Purely structural feature."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Stopword/structure feature."
+    },
+    {
+      "id": "L2:F10371",
+      "label": "words related to race and gender, as well as the Clayman institute at Stanford",
+      "reason": "Mostly topical/proper-noun content, not toxicity."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 1,
+  "n_other": 6,
+  "spurious_fraction": 0.9166666666666666,
+  "dominant": "spurious",
+  "notes": "Oracle claims identity-topic shortcut; only one feature is non-identity lexical."
+}

@@ -1,0 +1,54 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Identity-group mention detector"
+    },
+    {
+      "id": "L2:F2123",
+      "label": "words ending in \"ian\", \"jani\", \"iti\", \"ino\", or \"olan\"",
+      "reason": "Demonym/identity morphology"
+    },
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Generic group-membership signal"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F148",
+      "label": "words and phrases related to sexual assault and abuse",
+      "reason": "Explicit abuse/violence semantics"
+    },
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Toxic/racially charged rhetoric"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Purely structural word detector"
+    },
+    {
+      "id": "L0:F11668",
+      "label": "Baseball terminology",
+      "reason": "Oracle-disclaimed unrelated feature"
+    },
+    {
+      "id": "L2:F1680",
+      "label": "words that refer to people participating in some activity, such as consumers, patients in healthcare, or voters",
+      "reason": "Generic people-reference detector"
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 2,
+  "n_other": 3,
+  "spurious_fraction": 0.6,
+  "dominant": "mixed",
+  "notes": "Both identity-group and abuse semantics contribute; identity path is substantial."
+}

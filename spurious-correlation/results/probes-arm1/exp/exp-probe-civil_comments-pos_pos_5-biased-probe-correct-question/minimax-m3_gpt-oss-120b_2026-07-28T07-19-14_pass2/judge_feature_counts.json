@@ -1,0 +1,88 @@
+{
+  "spurious_features": [
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "Identity-group LGBTQ+ topic detector."
+    },
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "Sexual-orientation topic detector."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Religion/nationality mention detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/social-justice keyword detector."
+    },
+    {
+      "id": "L4:F8645",
+      "label": "passages discussing same-sex marriage",
+      "reason": "Identity-topic phrase detector."
+    },
+    {
+      "id": "L4:F15899",
+      "label": "language associated with the LGBTQ community and discussions of gender and identity.",
+      "reason": "Identity-group language detector."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious-identity detector."
+    },
+    {
+      "id": "L1:F13646",
+      "label": "text discussing social justice issues",
+      "reason": "Social-justice discourse detector."
+    },
+    {
+      "id": "L0:F3591",
+      "label": "government social programs / justice detector",
+      "reason": "Justice/social-programs keyword detector."
+    },
+    {
+      "id": "L0:F13885",
+      "label": "Middle Eastern names/places detector",
+      "reason": "Geographic-identity mention detector."
+    },
+    {
+      "id": "Emb: gay (pos 17)",
+      "label": "embedding: gay",
+      "reason": "Identity-group token."
+    },
+    {
+      "id": "Emb: Muslim (pos 12)",
+      "label": "embedding: Muslim",
+      "reason": "Religion-group token."
+    },
+    {
+      "id": "Emb: justice (pos 6)",
+      "label": "embedding: justice",
+      "reason": "Social-justice token."
+    },
+    {
+      "id": "Emb: social (pos 5)",
+      "label": "embedding: social",
+      "reason": "Social-justice token."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe classification score (toxicity)",
+      "label": "Probe classification score (toxicity)",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 0,
+  "n_other": 1,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites only identity/topic detectors; no toxic-content or hostility features."
+}

@@ -1,0 +1,33 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male gender marker; explicitly spurious for this task."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F14812",
+      "label": "references to stories, chapters, and other narrative elements",
+      "reason": "Narrative/story language, not profession-specific."
+    },
+    {
+      "id": "L0:F5333",
+      "label": "mentions of stories that are being told",
+      "reason": "Narrative-context cue, not a profession indicator."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism/profession vocabulary."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 3,
+  "n_other": 0,
+  "spurious_fraction": 0.25,
+  "dominant": "causal",
+  "notes": "Enumerated authoritative features only; narrative features counted as causal, gender marker as spurious."
+}

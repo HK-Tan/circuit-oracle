@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun detector; gender marker."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector; gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "words related to academic research",
+      "reason": "Academic research vocabulary."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Degree/credential marker."
+    },
+    {
+      "id": "L5:F12330",
+      "label": "mentions of \"College\" along with a preceding place name like \"County\" or \"Valley\"",
+      "reason": "Institution context marker."
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "University/research profession context."
+    },
+    {
+      "id": "L14:F11252",
+      "label": "code and coordinate geometry terms",
+      "reason": "Content-specific technical vocabulary."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree marker."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Education/career context."
+    },
+    {
+      "id": "L2:F1621",
+      "label": "information about people's education and career",
+      "reason": "Education/career information."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0",
+      "label": "<bos>",
+      "reason": "Pure BOS/structural token."
+    },
+    {
+      "id": "L0:F13431",
+      "label": "the word \"owing\".",
+      "reason": "Noise word; not causal or spurious."
+    },
+    {
+      "id": "L0:F10783",
+      "label": "the word \"include\" (and variations of the word)",
+      "reason": "Generic lexical pattern."
+    },
+    {
+      "id": "L0:F2159",
+      "label": "words that end with \"led\" or are related to worth",
+      "reason": "Generic morphology/other."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Dismissed as generic symbolic noise."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 8,
+  "n_other": 5,
+  "spurious_fraction": 0.2,
+  "dominant": "causal",
+  "notes": "Oracle explicitly claims both gender markers and profession/education signals; causal features dominate by count."
+}

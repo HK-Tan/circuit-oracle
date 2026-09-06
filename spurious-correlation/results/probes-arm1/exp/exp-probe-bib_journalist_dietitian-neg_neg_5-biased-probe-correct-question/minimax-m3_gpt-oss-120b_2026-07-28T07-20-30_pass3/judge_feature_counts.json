@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Gendered pronoun detector; spurious marker."
+    },
+    {
+      "id": "L7:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit male-gender feature; spurious."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Gendered pronoun; spurious."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Oracle ties it to pronoun references, not profession."
+    },
+    {
+      "id": "L14:F5740",
+      "label": "sentences with multiple pronouns in them",
+      "reason": "Pronoun-count feature; gender-correlated surface cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: \" reporter\"",
+      "label": "reporter",
+      "reason": "Direct profession token; task-relevant."
+    },
+    {
+      "id": "L1:F1024",
+      "label": "writing/publishing detectors",
+      "reason": "Profession vocabulary; journalism-related."
+    },
+    {
+      "id": "L1:F5357",
+      "label": "writing/publishing detectors",
+      "reason": "Profession vocabulary; journalism-related."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media/journalism concept; causal."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "journalism reporters",
+      "reason": "Explicit profession feature; causal."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "journalism reporters",
+      "reason": "Explicit profession feature; causal."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "news reporter mention",
+      "reason": "Reporter profession indicator; causal."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Task-relevant journalism vocabulary; causal."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News-source concept; causal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic function word; structural."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/punctuation."
+    },
+    {
+      "id": "L0:F886",
+      "label": "text related to discounts, offers, or prices",
+      "reason": "Oracle dismisses as irrelevant."
+    },
+    {
+      "id": "L0:F8061",
+      "label": "the preposition \"in\"",
+      "reason": "Generic function word; structural."
+    },
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic auxiliary verb; structural."
+    },
+    {
+      "id": "L0:F4677",
+      "label": "the word \"and\", sometimes in conjunction with \"the\", \"but\", or \"as\".",
+      "reason": "Generic conjunction; structural."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Duplicate of male-pronoun feature already counted."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Not in curated circuit; oracle only mentions it in lookup."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 9,
+  "n_other": 8,
+  "spurious_fraction": 0.35714285714285715,
+  "dominant": "causal",
+  "notes": "Journalism features dominate; gender markers are present but mostly inhibitory or secondary."
+}

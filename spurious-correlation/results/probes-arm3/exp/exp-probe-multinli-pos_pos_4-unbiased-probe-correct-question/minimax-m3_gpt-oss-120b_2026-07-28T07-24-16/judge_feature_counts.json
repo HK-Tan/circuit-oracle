@@ -1,0 +1,132 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic content word; not a negation detector."
+    },
+    {
+      "id": "L0:F7321",
+      "label": "the word \"so,\" and also matches some words ending in \"ware\" and \"such\"",
+      "reason": "Discourse marker, not task-specific negation."
+    },
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Lexical phrase detector; structurally/contentful only."
+    },
+    {
+      "id": "L2:F13586",
+      "label": "words ending in 'thing' and 'one' often with preceding words indicating the presence of something",
+      "reason": "Presence/quantity cue, not negation-word spotting."
+    },
+    {
+      "id": "L2:F11769",
+      "label": "the word \"up\"",
+      "reason": "Generic token detector; no semantic negation role."
+    },
+    {
+      "id": "L0:F10904",
+      "label": "the word \"adequate\" (and words that appear near it)",
+      "reason": "Content adjective, not negation or pure structure."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Numeric-preposition pattern; structural/content-neutral."
+    },
+    {
+      "id": "L0:F306",
+      "label": "the word \"adoption\" in various contexts",
+      "reason": "Topic word detector; not negation-related."
+    },
+    {
+      "id": "L0:F10562",
+      "label": "the word \"up\"",
+      "reason": "Generic token detector; not semantic relation."
+    },
+    {
+      "id": "L1:F8159",
+      "label": "the word \"usually\" and, to a lesser extent, words that sometimes accompany it",
+      "reason": "Hedging/typicality cue; not negation-word spotting."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Topic lexical feature; not task shortcut."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Generic lexical feature, not negation."
+    },
+    {
+      "id": "L0:F7204",
+      "label": "the word \"here\"",
+      "reason": "Pure location/deictic word detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word detector; structural only."
+    },
+    {
+      "id": "L0:F12744",
+      "label": "positive adjectives and adverbs",
+      "reason": "Sentiment/description feature, not negation."
+    },
+    {
+      "id": "L1:F474",
+      "label": "the word \"crop\" when used to refer to farmed plants",
+      "reason": "Domain noun detector; not negation."
+    },
+    {
+      "id": "L2:F8478",
+      "label": "SQL queries",
+      "reason": "Domain/topic detector, unrelated to NLI semantics."
+    },
+    {
+      "id": "L3:F10901",
+      "label": "the word \"usually\"",
+      "reason": "Typicality cue; not negation-word detector."
+    },
+    {
+      "id": "L0:F2868",
+      "label": "the word \"mapping\"",
+      "reason": "Topic word; no causal NLI relation claimed."
+    },
+    {
+      "id": "L0:F7036",
+      "label": "the word \"thing\" and words associated with an idea or concept",
+      "reason": "Concept-related lexical feature; not negation."
+    },
+    {
+      "id": "L0:F16358",
+      "label": "the word \"up\"",
+      "reason": "Generic token detector; structural only."
+    },
+    {
+      "id": "L1:F7976",
+      "label": "the word \"load\" in technical documents",
+      "reason": "Domain-specific lexical feature; not negation."
+    },
+    {
+      "id": "L4:F12961",
+      "label": "words pertaining to tourism",
+      "reason": "Topic words; not the specified negation shortcut."
+    },
+    {
+      "id": "L4:F11236",
+      "label": "calls to action and imperative verbs.",
+      "reason": "Imperative/structural cue; not negation."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 24,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle claims only content, discourse, or structural cues; none are negation-word detectors."
+}

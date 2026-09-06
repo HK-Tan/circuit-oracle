@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct male pronoun feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of his and other associated pronouns",
+      "reason": "Gendered possessive-pronoun signal."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles with male-associated descriptors",
+      "reason": "Explicit male-gender marker."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Triggered by gendered pronoun context."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun his (or similar pronouns like he and him)",
+      "reason": "Direct possessive pronoun feature."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male pronoun feature."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people; promotes she/her",
+      "reason": "Gender-pronoun axis feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Profession-related research terminology."
+    },
+    {
+      "id": "L0:F2827",
+      "label": "the word \"science\"",
+      "reason": "Profession-domain vocabulary."
+    },
+    {
+      "id": "L2:F9740",
+      "label": "the word \"interest\" and related words.",
+      "reason": "Content-word related to research/work context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/punctuation detector."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Not relevant to profession classification."
+    },
+    {
+      "id": "L18:F7400",
+      "label": "coding/UI words; promoted tokens: himself/his",
+      "reason": "Oracle labels it coding/UI, not profession-specific."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 3,
+  "n_other": 3,
+  "spurious_fraction": 0.7,
+  "dominant": "spurious",
+  "notes": "Male-gender pronoun circuitry dominates; research/science features are present but secondary."
+}

@@ -1,0 +1,29 @@
+
+============================================================
+Graph: civil_comments-pos_pos_3-biased-probe-correct
+============================================================
+Loading civil_comments-pos_pos_3-biased-probe-correct.pt...
+  4556 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — civil_comments-pos_pos_3-biased-probe-correct
+============================================================
+**Analysis:** The probe's toxicity classification is driven by a circuit that conflates mere **identity-term presence** ("Jew", "liberal", "Self-hating", "stain") with toxicity, rather than parsing the actual hateful speech act or sentiment. Identity detectors and spurious correlation features — many of which are domain-specific to Jewish/religious-ethnic discrimination discourse — dominate the signal, exactly matching the user's concern.
+
+**Confidence:** 8
+
+**Reasoning:**
+
+The circuit's strongest driver to the probe is **L6:F648 — "discrimination against particular religious or ethnic groups"** (frac_nonzero 0.016, direct_effect 0.74). Critically, this feature is *not* activated by hateful content per se; it is activated by the presence of the **identity token "Jew"** (Emb:Jew contributes direct_effect ≈ 19 to F648) and secondarily "liberal" — i.e., it fires whenever a member of a commonly-discriminated group is *named*, regardless of surrounding tone. The subagent's trace confirmed that the direct embedding → F648 edge is the largest single contributor, and that F648 aggregates a stack of identity detectors: **L3:F12151** (capitalized-token detector, promoted tokens literally include "jew"), **L4:F2405** (religious identity/spirituality), **L4:F117** (race/racism with Black focus), and **L4:F14733** (Israel-Palestine context). These features describe **who is mentioned**, not whether the mention is hateful.
+
+The supporting nodes compound the pattern:
+- **L8:F13197** ("religion/faith") and **L4:F3588** ("political party/wing") add generic identity-class signals from "Jew" and "liberal" (Emb:Jew → F13197 direct_effect 3.45; Emb:liberal → F3588 direct_effect 11.4).
+- **L8:F13875** ("negative sentiment related to reputation and betrayal") is driven by **Emb:stain** at pos 9, not by slurs, threats, or call-to-action content. It pattern-matches to words like "stain" and "disgrace" used in any accusation context.
+- **L3:F592** ("love/hate/affection") is a generic emotion feature driven by the subword "hat" in "Self-hating" — its promoted tokens are literally "love, hate, loved, loving", so the model treats "hating" the same as the word "hate" in any love-song context.
+- **L8:F2483** ("slavery/prejudice/disability") fires on "Self-" via the self-prefix feature (F9615, F735) and on "hat" via the hat-equation LaTeX feature (F14516) — spurious: this is a *disability-and-slavery discourse* detector that has been triggered by the lexical surface of "Self-hating" and "Jew", not by any actual content about prejudice.
+- The L1/F1 features (F14516 "hat-notation in equations", F1774 "text in a LaTeX document") and L2:F9871 ("latex/dash") are pure *lexical accident* features that happen to fire on the dash in "Self-hating" and the "hat" subword.
+
+The signal flow is: **token embeddings for identity words** ("Jew", "liberal", "Self-", "hating"→"hat") → **identity/religion/race lexical detectors** (F648, F2405, F117, F13158, F13197) → **probe logit**. The one content-relevant feature, F13875 (disgrace/betrayal on "stain"), contributes but is small relative to the identity-detector mass. Crucially, the circuit contains **no detector for slurs, threats, dehumanization, or hostile intent** — the model never "reads" the sentence as a hateful self-referential attack; it simply notes that an ethnic/religious group is named in a sentence containing the words "hating" and "stain."
+
+This **directly validates the user's concern**: the probe is using a "spurious" identity-group-lexicon signal (presence of "Jew"/"liberal" + negative-sentiment words anywhere) rather than modeling the actual toxic content. The same feature F648 would fire on *any* sentence mentioning Jews — a news article, a biography, a Wikipedia entry — and would still push the probe toward a "toxic" classification. The features are doing identity-mention detection, not toxicity detection.
+Results saved to: <repo>/spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-10-37_pass1

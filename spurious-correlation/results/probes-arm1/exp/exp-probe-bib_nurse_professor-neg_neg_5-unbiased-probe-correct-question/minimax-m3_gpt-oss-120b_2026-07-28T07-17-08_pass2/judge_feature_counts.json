@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun detector; explicitly gendered."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "words related to academic research",
+      "reason": "Academic research vocabulary; profession-relevant."
+    },
+    {
+      "id": "L1:F1505",
+      "label": "the word \"certified\"",
+      "reason": "Credential indicator; profession-related qualification."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Academic credentials and institutions; profession signal."
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "Names/universities/research; profession-content cluster."
+    },
+    {
+      "id": "L9:F988",
+      "label": "information about academic degrees",
+      "reason": "Degree information; causal profession cue."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Academic titles/degrees; directly profession-relevant."
+    },
+    {
+      "id": "L17:F11003",
+      "label": "university",
+      "reason": "University mention; education/profession context."
+    },
+    {
+      "id": "L19:F2496",
+      "label": "mentions of universities and degrees",
+      "reason": "Universities and degrees; causal credentials cue."
+    },
+    {
+      "id": "L3:F4213",
+      "label": "mentions of degree qualifications or awards",
+      "reason": "Degree qualifications; profession-related."
+    },
+    {
+      "id": "L20:F14235",
+      "label": "references to academic credentials and institutions.",
+      "reason": "Output-driving credentials/institutions circuit."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "Short-form degree abbreviations (PhD, DNP, RN)",
+      "reason": "Degree abbreviation; profession credential."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "References to academic degrees",
+      "reason": "Academic degrees; causal profession feature."
+    },
+    {
+      "id": "L6:F14747",
+      "label": "terms related to historical archives and documents",
+      "reason": "Content topic, not gender; still profession-adjacent lexical signal."
+    },
+    {
+      "id": "L8:F2383",
+      "label": "words related to archeological sites, digs, and artifacts",
+      "reason": "Misfire on content vocabulary; not gendered."
+    },
+    {
+      "id": "L14:F3956",
+      "label": "Universities & degrees (Stanford/MBA context)",
+      "reason": "University/degree context; profession-relevant."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe Output",
+      "label": "profession direction",
+      "reason": "Not a feature; just the probe output."
+    },
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "His",
+      "reason": "Input token, not a claimed feature."
+    },
+    {
+      "id": "Emb: research (pos 2) / interests (pos 3)",
+      "label": "research / interests",
+      "reason": "Input tokens, not feature claims."
+    },
+    {
+      "id": "Emb: Ph (pos 13), D (pos 15), from (pos 19)",
+      "label": "Ph / D / from",
+      "reason": "Input tokens, not feature claims."
+    },
+    {
+      "id": "Emb: from (pos 33) [Stanford]",
+      "label": "from [Stanford]",
+      "reason": "Input token context, not feature claim."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural detector."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 15,
+  "n_other": 6,
+  "spurious_fraction": 0.0625,
+  "dominant": "causal",
+  "notes": "Dominant circuit is credentials/university-related; only one explicit gender-marker feature appears."
+}

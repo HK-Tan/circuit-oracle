@@ -1,0 +1,27 @@
+
+============================================================
+Graph: bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+Loading bib_nurse_professor-neg_neg_1-biased-probe-correct.pt...
+  6392 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+**Analysis:** The probe's classification score is overwhelmingly driven by a stack of masculine-pronoun features (L0:1069, L4:4315, L6:12990, L7:14893, L7:14946, L18:14743, L18:10315, L19:8814) that fire on the tokens "His" (pos 1) and "He" (pos 14, 37), with only token-level word detectors for "research" and "interest" providing any profession-relevant lexical signal.
+
+**Confidence:** 8
+
+**Reasoning:**
+
+The user concern is well-supported. Of the top 15 features driving the probe (combined direct_effect ≈ +0.43 to −0.43), **9 of them are pronoun/gender features** (frac_nonzero 0.007–0.087, all firing on "His"/"He" tokens), while only **2** detect profession-relevant content words (L0:4564 "research" at pos 2, L2:9740 "interest" at pos 3), and one (L18:7400) is a generic coding/UI keyword feature that traces back to non-gender-related code-syntax upstream paths rather than to "computer graphics"/"computer science."
+
+The circuit traces cleanly to embedding nodes:
+- The "His" embedding at pos 1 (direct_effect 19.75 to L0:2994, 23.5 to L7:14893, 18.38 to L7:14946, 21.4 to L18:10315) drives a cascade: L0:2994 "his" → L4:4315 "his" → L6:12990 "male pronouns/titles" → L7:14893 possessive pronoun (de=+0.430, the single largest positive driver of the probe) and L7:14946 "his" pronoun (de=−0.426, the largest negative driver — note both signs are present, showing the probe reads the raw presence/absence of these gender tokens as the signal).
+- Similarly, "He" embeddings at pos 14 and pos 37 drive L0:1069 ("references to a male person, particularly He/His", frac=0.0078) → L18:14743 "He" (de=−0.252 and −0.205 at pos 14 and 37).
+- L18:10315 (pronouns, pos 1, de=−0.150) and L19:8814 (pronouns/people, pos 1, de=+0.240) similarly receive their top excitation from the "His" token embedding.
+
+By contrast, the genuinely profession-indicating features (L0:4564 "research", L2:9740 "interest", L18:7400 coding/software) have much smaller absolute direct effects (0.13, 0.13, −0.16) and the coding feature's upstream chain is dominated by generic code-syntax detectors (curly brackets, doc-comment blocks, JavaScript snippets) rather than "computer graphics" or "computer science" specifically. The crucial tokens "computer", "graphics", "PhD", "University of Utah", "Los Alamos National Laboratory" — which would be the *genuine* profession-indicators — do not appear in the top 15 driving features at all.
+
+This is a textbook spurious-correlation circuit: the probe is being driven by the surface form of masculine pronouns in a Wikipedia-style biography, which is strongly correlated with the subject being a male academic in this training distribution, rather than by any actual profession-specific vocabulary. The user's concern is correct — the model/probe is using gender markers as a shortcut rather than the profession-relevant content.
+Results saved to: <repo>/spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-09-07_pass1

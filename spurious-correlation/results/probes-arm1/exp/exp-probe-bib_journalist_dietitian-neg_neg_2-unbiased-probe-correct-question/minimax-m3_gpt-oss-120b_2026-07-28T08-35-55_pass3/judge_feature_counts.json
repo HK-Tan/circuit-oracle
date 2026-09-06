@@ -1,0 +1,58 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Literal report/journalism vocabulary."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets",
+      "reason": "News-outlet/reporting vocabulary."
+    },
+    {
+      "id": "L20:F8433",
+      "label": "words related to news broadcasting",
+      "reason": "News/journalism terminology."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8964",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Generic pronoun detector, not gender-profession link."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word feature."
+    },
+    {
+      "id": "L0:F14287",
+      "label": "the word \"see\"",
+      "reason": "Literal lexical detector."
+    },
+    {
+      "id": "L0:F2203",
+      "label": "instances of the words \"world\" or \"game\" (possibly \"problem\") or expressions of existential quandaries.",
+      "reason": "Content lexical feature, not task-specific."
+    },
+    {
+      "id": "L4:F11898",
+      "label": "Early-layer 'World' context",
+      "reason": "Structural/content context feature."
+    },
+    {
+      "id": "L5:F771",
+      "label": "Early 'see' context",
+      "reason": "Generic lexical context feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 3,
+  "n_other": 6,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Only journalism features are task-relevant; pronoun/function-word features are generic, not gender shortcuts."
+}

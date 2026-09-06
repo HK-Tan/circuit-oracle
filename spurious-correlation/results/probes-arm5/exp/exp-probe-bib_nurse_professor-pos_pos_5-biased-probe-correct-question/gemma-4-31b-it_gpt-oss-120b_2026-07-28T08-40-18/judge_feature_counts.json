@@ -1,0 +1,54 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "Gender Marker Detection (She/Her)",
+      "reason": "Detects feminine pronouns, a gender marker."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "Gender Marker Detection (She/Her)",
+      "reason": "Detects feminine pronouns, a gender marker."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "Female Entity Identification",
+      "reason": "Identifies women/girls, a gender cue."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "Female Entity Identification",
+      "reason": "Encodes women's names/roles, a gender cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13803",
+      "label": "OB/GYN Terms",
+      "reason": "Obstetrics and gynecology terminology."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Labor Delivery (pos 9, 11)",
+      "label": "Emb: Labor Delivery (pos 9, 11)",
+      "reason": "Embedding/output, not a feature."
+    },
+    {
+      "id": "Emb: She (pos 54)",
+      "label": "Emb: She (pos 54)",
+      "reason": "Embedding/output, not a feature."
+    },
+    {
+      "id": "Probe Classification Score",
+      "label": "Probe Classification Score",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 1,
+  "n_other": 3,
+  "spurious_fraction": 0.8,
+  "dominant": "spurious",
+  "notes": "Gender cues outweigh one profession-specific signal."
+}

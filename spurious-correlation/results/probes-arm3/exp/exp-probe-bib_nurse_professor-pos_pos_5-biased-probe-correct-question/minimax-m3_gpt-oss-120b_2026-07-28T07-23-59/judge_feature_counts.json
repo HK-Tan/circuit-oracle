@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Female-gender mention; spurious for profession."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Gendered name marker, not profession."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Female-name/role cue; spurious."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gender pronoun/title cue; spurious."
+    },
+    {
+      "id": "L13:F11685",
+      "label": "words related to women",
+      "reason": "Gendered lexical cue; spurious."
+    },
+    {
+      "id": "L10:F14494",
+      "label": "titles and words referring to women",
+      "reason": "Honorific/gender term detector; spurious."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female-name feature; spurious."
+    },
+    {
+      "id": "L2:F5859",
+      "label": "first names (mostly female)",
+      "reason": "Mostly female names; spurious."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Name/title detector; gendered in this circuit."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Generic person-name feature; used as gender shortcut here."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Name-shape feature; gender-associated names."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Structural proper-noun detector; not causal profession content."
+    },
+    {
+      "id": "L5:F16213",
+      "label": "proper nouns consisting of a first and last name",
+      "reason": "Name-form detector; spurious."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic entity detector; not profession-specific."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Direct profession specialty terminology."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct profession indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6118",
+      "label": "words that describe actions",
+      "reason": "Generic verb/action feature."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 2,
+  "n_other": 1,
+  "spurious_fraction": 0.875,
+  "dominant": "spurious",
+  "notes": "Oracle's own analysis says gender/name cues dominate over profession indicators."
+}

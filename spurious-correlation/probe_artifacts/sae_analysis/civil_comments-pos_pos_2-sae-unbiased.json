@@ -1,0 +1,1094 @@
+{
+  "input_file": "<repo>/spurious-correlation/probe_artifacts/sae_features/civil_comments-pos_pos_2-sae.json",
+  "dataset": "civil_comments",
+  "type": "sae",
+  "prompt": "If he was white and not Hispanic it would be s problem",
+  "ranking": "unbiased",
+  "top_n": 20,
+  "model": "minimax/minimax-m3",
+  "layer": 12,
+  "sae_id": "12-gemmascope-res-16k",
+  "features_inspected": [
+    {
+      "feature_idx": 12714,
+      "activation": 1.1863319873809814,
+      "cos_sim_biased": 0.1422266811132431,
+      "cos_sim_unbiased": 0.22608892619609833,
+      "rank_biased": 3,
+      "rank_unbiased": 0,
+      "neuronpedia": {
+        "feature_idx": 12714,
+        "label": " profanity and vulgar expressions",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581\u2013\u2581if\u2581they\u2581don\u2019t\u2026ah,\u2581just\u2581shut\u2581the\u2581fuck\u2581up!\u2019).\u2581These\u2581are\u2581exactly\u2581the\u2581kind\u2581of\u2581stocks\u2581which\u2581love\u2581to\u2581surprise\u2581you\u2581in\u2581the\u2581worst\u2581way\u2581possible\u2026\u2581Yeah,\u2581sure,\u2581difficult\u2581stocks\u2581might\u2581present\u2581an\u2581intriguing\u2581chall",
+            "max_activation": 49.131,
+            "max_token": "\u2581fuck"
+          },
+          {
+            "text_snippet": "\u2581where\u2581I\u2581disagreed\u2581with\u2581the\u2581General\u2581Council,\u2581it\u2581was\u2581a\u2581disagreement\u2581based\u2581solely\u2581on\u2581my\u2581beliefs\u2581and\u2581disbeliefs.\n\nMy\u2581beliefs\u2581eventually\u2581brought\u2581me\u2581to\u2581a\u2581point\u2581where,\u2581in\u2581the\u2581middle\u2581of\u2581a\u2581ministerial\u2581interns",
+            "max_activation": 48.106,
+            "max_token": "\u2581fucking"
+          },
+          {
+            "text_snippet": "\u2581that\u2581way.\"\n\nHe\u2581also\u2581added\u2581\"A\u2581few\u2581years\u2581ago\u2581there\u2581was\u2581a\u2581TV\u2581ad\u2581that\u2581showed\u2581a\u2581lot\u2581of\u2581inventors,\u2581including\u2581a\u2581guy\u2581who\u2581invented\u2581the\u2581camera\u2581phone.\u2581He\u2581was\u2581smiling\u2581smugly\u2581into\u2581the\u2581camera,\u2581and\u2581I\u2581was\u2581just\u2581like,",
+            "max_activation": 47.227,
+            "max_token": "\u2581Fuck"
+          }
+        ],
+        "promoted_tokens": [
+          "fuck",
+          "\u2581Fuck",
+          "\u2581fuck",
+          "\u2581fucking",
+          "FUCK",
+          "Fuck",
+          "\u2581damn",
+          "\u2581shit",
+          "\u2581Fucking",
+          "\u2581goddamn"
+        ],
+        "suppressed_tokens": [
+          "\u2581l\u00e4he",
+          "\u2581\u0643\u0648\u0645\u0648\u0646\u0632",
+          "\u2581Adagio",
+          "\u2581\u0938\u092e\u0940\u0915\u094d\u0937\u0915",
+          "lewati",
+          "\u2581Bisch",
+          "\u062a\u0641\u0635\u06cc\u0644\u0627\u062a",
+          "awtextra",
+          "Gale",
+          ",\u2013"
+        ],
+        "frac_nonzero": 0.00142
+      }
+    },
+    {
+      "feature_idx": 13367,
+      "activation": 1.5636329650878906,
+      "cos_sim_biased": 0.13993141055107117,
+      "cos_sim_unbiased": 0.18467281758785248,
+      "rank_biased": 4,
+      "rank_unbiased": 1,
+      "neuronpedia": {
+        "feature_idx": 13367,
+        "label": "phrases and terms that convey skepticism or criticism towards mainstream narratives, especially those related to marginalized groups and societal structures",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581PBO,\u2581we\u2581need\u2581to\u2581give\u2581to\u2581those\u2581downstream\u2581races\u2581in\u2581order\u2581to\u2581send\u2581PBO\u2581a\u2581Congress\u2581he\u2581can\u2581work\u2581with.\u2581I\u2019ve\u2581decided\u2581to\u2581help\u2581out\u2581Claire\u2581McCaskill\u2581of\u2581Missouri,\u2581Sherrod\u2581Brown\u2581of\u2581Ohio,\u2581Joe\u2581Donnelly\u2581Indiana,\u2581El",
+            "max_activation": 48.723,
+            "max_token": "wit"
+          },
+          {
+            "text_snippet": "\u2581PBO,\u2581we\u2581need\u2581to\u2581give\u2581to\u2581those\u2581downstream\u2581races\u2581in\u2581order\u2581to\u2581send\u2581PBO\u2581a\u2581Congress\u2581he\u2581can\u2581work\u2581with.\u2581I\u2019ve\u2581decided\u2581to\u2581help\u2581out\u2581Claire\u2581McCaskill\u2581of\u2581Missouri,\u2581Sherrod\u2581Brown\u2581of\u2581Ohio,\u2581Joe\u2581Donnelly\u2581Indiana,\u2581El",
+            "max_activation": 48.723,
+            "max_token": "wit"
+          },
+          {
+            "text_snippet": "\u2581let\u2581the\u2581freelance-Democrat\u2581scum\u2581rule\u2581the\u2581streets\u2581of\u2581America.\n\nI\u2581say\u2581that\u2581the\u2581American\u2581people\u2581should\u2581be\u2581well-armed\u2581and\u2581well-ammoed\u2581and\u2581stand\u2581their\u2581ground\u2581against\u2581the\u2581OhBummer\u2581dictatorship\u2581and\u2581against\u2581",
+            "max_activation": 39.126,
+            "max_token": "\u2581scum"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581hypocrite",
+          "\u2581moron",
+          "\u2581coward",
+          "\u2581idiotic",
+          "\u2581cowardly",
+          "\u2581cowards",
+          "\u2581crap",
+          "\u2581idiot",
+          "\u2581ProtoMessage",
+          "\u2581morons"
+        ],
+        "suppressed_tokens": [
+          "TagMode",
+          "kuuta",
+          "ChildIndex",
+          "BagLayout",
+          "getColumnIndex",
+          "SQLiteDatabase",
+          "\u2581remonter",
+          "kiat",
+          "\u2581ModelExpression",
+          "\u05d3\u05d5"
+        ],
+        "frac_nonzero": 0.0071
+      }
+    },
+    {
+      "feature_idx": 10255,
+      "activation": 3.147216320037842,
+      "cos_sim_biased": 0.07374696433544159,
+      "cos_sim_unbiased": 0.1250314712524414,
+      "rank_biased": 18,
+      "rank_unbiased": 2,
+      "neuronpedia": {
+        "feature_idx": 10255,
+        "label": "specific phrases or expressions of frustration or anger",
+        "top_activating_examples": [
+          {
+            "text_snippet": "ving\u2581natural\u2581ecological\u2581balance\u2581on\u2581the\u2581range.\u201d\u2581The\u2581law\u2581mandates\u2581the\u2581removal\u2581of\u2581excess\u2581animals\u2581when\u2581populations\u2581exceed\u2581established\u2581levels.<bos>IMO\u2581...\u2581We\u2581need\u2581to\u2581knock\u2581the\u2581repuplicans\u2581and\u2581democrats\u2581aro",
+            "max_activation": 37.342,
+            "max_token": "\u2581hell"
+          },
+          {
+            "text_snippet": "\u2581of\u2581my\u2581way!!!\u2581Get\u2581out\u2581of\u2581my\u2581face!!!\u201d\n(From\u2581the\u2581book\u2581\u201cHillary\u2019s\u2581Scheme\u201d\u2581p.\u258189\u2581\u2013\u2581Hillary\u2019s\u2581various\u2581comments\u2581to\u2581her\u2581Secret\u2581Service\u2581detail\u2581agents.)\n\n\u201cStay\u2581the\u2581f**k\u2581back,\u2581stay\u2581the\u2581f**k\u2581away\u2581from\u2581me!\u2581Don\u2019t\u2581",
+            "max_activation": 36.987,
+            "max_token": "k"
+          },
+          {
+            "text_snippet": "\u2581of\u2581my\u2581way!!!\u2581Get\u2581out\u2581of\u2581my\u2581face!!!\u201d\n(From\u2581the\u2581book\u2581\u201cHillary\u2019s\u2581Scheme\u201d\u2581p.\u258189\u2581\u2013\u2581Hillary\u2019s\u2581various\u2581comments\u2581to\u2581her\u2581Secret\u2581Service\u2581detail\u2581agents.)\n\n\u201cStay\u2581the\u2581f**k\u2581back,\u2581stay\u2581the\u2581f**k\u2581away\u2581from\u2581me!\u2581Don\u2019t\u2581",
+            "max_activation": 36.987,
+            "max_token": "k"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581fucking",
+          "\u2581shit",
+          "\u2581freaking",
+          "\u2581freakin",
+          "fucking",
+          "\u2581SHIT",
+          "\u2581FUCKING",
+          "\u2581crap",
+          "Fucking",
+          "fuck"
+        ],
+        "suppressed_tokens": [
+          "EndContext",
+          "}))\r",
+          "\u2581jsPsych",
+          "'},\r",
+          "InjectAttribute",
+          "=$?",
+          ">--}}",
+          "tonsoft",
+          "\"]];",
+          "\u2581}}$}"
+        ],
+        "frac_nonzero": 0.00202
+      }
+    },
+    {
+      "feature_idx": 5082,
+      "activation": 0.5166257619857788,
+      "cos_sim_biased": 0.13076964020729065,
+      "cos_sim_unbiased": 0.11815344542264938,
+      "rank_biased": 6,
+      "rank_unbiased": 3,
+      "neuronpedia": {
+        "feature_idx": 5082,
+        "label": "references to nudity and sexual themes",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581Australian\u2581Chamber\u2581Orchestra\u2019s\u2581Artistic\u2581Director,\u2581Mr\u2581Richard\u2581Tognetti,\u2581said\u2581he\u2581was\u2581proud\u2581of\u2581the\u2581Orchestra\u2019s\u2581long\u2581association\u2581with\u2581the\u2581Bank.\n\n\u201cWhen\u2581I\u2581started\u2581at\u2581the\u2581ACO\u2581in\u25811989,\u2581the\u2581Orchestra\u2581only\u2581had",
+            "max_activation": 31.061,
+            "max_token": "\u2581cash"
+          },
+          {
+            "text_snippet": "\u2581Australian\u2581Chamber\u2581Orchestra\u2019s\u2581Artistic\u2581Director,\u2581Mr\u2581Richard\u2581Tognetti,\u2581said\u2581he\u2581was\u2581proud\u2581of\u2581the\u2581Orchestra\u2019s\u2581long\u2581association\u2581with\u2581the\u2581Bank.\n\n\u201cWhen\u2581I\u2581started\u2581at\u2581the\u2581ACO\u2581in\u25811989,\u2581the\u2581Orchestra\u2581only\u2581had",
+            "max_activation": 31.061,
+            "max_token": "\u2581cash"
+          },
+          {
+            "text_snippet": "\u2581humans\u2581in\u2581each\u2581other\u2019s\u2581arms.\n\n\u201cI\u2019m\u2581so\u2581glad\u2581to\u2581be\u2581home!\u201d\u2581Rick\u2581said,\u2581smiling\u2581into\u2581my\u2581eyes\u2581as\u2581we\u2581embraced.\u2581\u201cIt\u2581was\u2581sheer\u2581torture\u2581to\u2581be\u2581without\u2581you\u2581guys,\u2581even\u2581for\u2581two\u2581weeks!\u2581I\u2581haven\u2019t\u2581jacked\u2581off\u2581or\u2581anyth",
+            "max_activation": 30.237,
+            "max_token": "\u2581off"
+          }
+        ],
+        "promoted_tokens": [
+          "googleapis",
+          "\u2581theory",
+          "theory",
+          "\u2581teor\u00eda",
+          "\u2581(",
+          "Theory",
+          "\u2581sp",
+          "\u2581or",
+          "\u0449\u0438\u043a\u0430",
+          "\u2581az"
+        ],
+        "suppressed_tokens": [
+          "\u2581ModelExpression",
+          "\u2581purpo\u017fe",
+          "\u2581CreateTagHelper",
+          "\u2581my\u017felf",
+          "\u2581\u017feveral",
+          "\u2581per\u017fon",
+          "ImageContext",
+          "\u2581'\\\\;'",
+          "\u2581greate\u017ft",
+          "rungsseite"
+        ],
+        "frac_nonzero": 0.0112
+      }
+    },
+    {
+      "feature_idx": 3997,
+      "activation": 1.9791110754013062,
+      "cos_sim_biased": -0.0028530238196253777,
+      "cos_sim_unbiased": 0.08794143795967102,
+      "rank_biased": 2970,
+      "rank_unbiased": 4,
+      "neuronpedia": {
+        "feature_idx": 3997,
+        "label": "terms related to illness and health conditions",
+        "top_activating_examples": [
+          {
+            "text_snippet": ".\u2581Smith,\u2581but\u2581the\u2581officers\u2581voted\u2581to\u2581give\u2581the\u2581command\u2581to\u2581Lt.\u2581Smith\u2581since\u2581he\u2581was\u2581a\u2581career\u2581soilder\u2581and\u2581West\u2581Point\u2581graduate.\u2581However,\u2581Lt.\u2581Smith\u2581did\u2581not\u2581like\u2581volunteers,\u2581let\u2581alone\u2581Mormon\u2581volunteers.\u2581Also,\u2581b",
+            "max_activation": 29.764,
+            "max_token": "\u2581sick"
+          },
+          {
+            "text_snippet": ".\u2581Smith,\u2581but\u2581the\u2581officers\u2581voted\u2581to\u2581give\u2581the\u2581command\u2581to\u2581Lt.\u2581Smith\u2581since\u2581he\u2581was\u2581a\u2581career\u2581soilder\u2581and\u2581West\u2581Point\u2581graduate.\u2581However,\u2581Lt.\u2581Smith\u2581did\u2581not\u2581like\u2581volunteers,\u2581let\u2581alone\u2581Mormon\u2581volunteers.\u2581Also,\u2581b",
+            "max_activation": 29.764,
+            "max_token": "\u2581sick"
+          },
+          {
+            "text_snippet": "\u2581From\u2581here\u2581another\u2581sick\u2581detachment\u2581left\u2581for\u2581Pueblo\u2581with\u2581all\u2581of\u2581the\u2581remaining\u2581women\u2581except\u2581five\u2581and\u2581all\u2581of\u2581the\u2581remaining\u2581children\u2581except\u2581one\u2581boy.\n\nOn\u2581October\u258118th,\u2581they\u2581left\u2581Santa\u2581Fe\u2581with\u258125\u2581government",
+            "max_activation": 28.328,
+            "max_token": "\u2581sick"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581SICK",
+          "\u2581sick",
+          "\u2581illness",
+          "Sick",
+          "\u2581Illness",
+          "sick",
+          "\u2581illnesses",
+          "\u2581Sick",
+          "\u2581Sickness",
+          "\u2581sickness"
+        ],
+        "suppressed_tokens": [
+          "fulness",
+          "bewah",
+          "\u0628\u0648\u0627\u0628\u0629",
+          "boldsymbol",
+          "pulumi",
+          "++++++++++++++++",
+          "orescence",
+          "Resumo",
+          "\u2581Baillargeon",
+          "addContainerGap"
+        ],
+        "frac_nonzero": 0.0028
+      }
+    },
+    {
+      "feature_idx": 3869,
+      "activation": 0.3627188801765442,
+      "cos_sim_biased": 0.03279977664351463,
+      "cos_sim_unbiased": 0.08201507478952408,
+      "rank_biased": 364,
+      "rank_unbiased": 5,
+      "neuronpedia": {
+        "feature_idx": 3869,
+        "label": "negative sentiments and expressions of disdain or hatred",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581they\u2581know\u2581that\u2581White\u2581genes\u2581mean\u2581better\u2581intellect\u2581and\u2581behavior,\u2581and\u2581this\u2581is\u2581why\u2581Black\u2581men\u2581who\u2581are\u2581climbing\u2581the\u2581socioeconomic\u2581ladder\u2581love\u2581to\u2581miscegenate\u2581with\u2581White\u2581women.\u2581We\u2581Whites\u2581should\u2581all\u2581be\u2581repuls",
+            "max_activation": 23.05,
+            "max_token": "\u2581repul"
+          },
+          {
+            "text_snippet": "\u2581they\u2581know\u2581that\u2581White\u2581genes\u2581mean\u2581better\u2581intellect\u2581and\u2581behavior,\u2581and\u2581this\u2581is\u2581why\u2581Black\u2581men\u2581who\u2581are\u2581climbing\u2581the\u2581socioeconomic\u2581ladder\u2581love\u2581to\u2581miscegenate\u2581with\u2581White\u2581women.\u2581We\u2581Whites\u2581should\u2581all\u2581be\u2581repuls",
+            "max_activation": 23.05,
+            "max_token": "\u2581repul"
+          },
+          {
+            "text_snippet": "\u2581they\u2581know\u2581that\u2581White\u2581genes\u2581mean\u2581better\u2581intellect\u2581and\u2581behavior,\u2581and\u2581this\u2581is\u2581why\u2581Black\u2581men\u2581who\u2581are\u2581climbing\u2581the\u2581socioeconomic\u2581ladder\u2581love\u2581to\u2581miscegenate\u2581with\u2581White\u2581women.\u2581We\u2581Whites\u2581should\u2581all\u2581be\u2581repuls",
+            "max_activation": 23.05,
+            "max_token": "\u2581repul"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581rechazo",
+          "\u2581reject",
+          "\u2581rejection",
+          "\u2581rejected",
+          "\u2581rejecting",
+          "\u2581Rejection",
+          "rejected",
+          "\u2581rejects",
+          "reject",
+          "\u2581against"
+        ],
+        "suppressed_tokens": [
+          "DockStyle",
+          "\u2581\u0645\u062a\u0639\u0644\u0642\u0647",
+          "\u2581Jefus",
+          "\u2581my\u017felf",
+          "\u2581greate\u017ft",
+          "\u2581ju\u017f",
+          "\u2581Re\u017f",
+          "\u2581i\u017ft",
+          "\u2581\u017feveral",
+          "\u2581hou\u017fe"
+        ],
+        "frac_nonzero": 0.00592
+      }
+    },
+    {
+      "feature_idx": 14291,
+      "activation": 0.6900153160095215,
+      "cos_sim_biased": 0.03421904891729355,
+      "cos_sim_unbiased": 0.07779869437217712,
+      "rank_biased": 320,
+      "rank_unbiased": 6,
+      "neuronpedia": {
+        "feature_idx": 14291,
+        "label": "expressions related to wastefulness and inefficiency",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581present\u2581me\u2581for\u2581that\u2581position.\u2581Is\u2581that\u2581an\u2581optimal\u2581strategy?\u2581If\u2581one\u2581company\u2581submits\u2581me,\u2581another\u2581cannot,\u2581so\u2581I\u2581want\u2581to\u2581be\u2581submitted\u2581by\u2581the\u2581best\u2581company.\u2581Should\u2581I\u2581therefore\u2581be\u2581taking\u2581steps\u2581to\u2581identify\u2581whi",
+            "max_activation": 35.92,
+            "max_token": "\u2581wasted"
+          },
+          {
+            "text_snippet": "\u2581is\u2581easy\u2581for\u2581you\u2581and\u2581what\u2581fits\u2581your\u2581kid\u2581best.\n\nHow\u2581many\u2581diapers\u2581and\u2581covers\u2581you\u2581need\u2581for\u2581a\u2581newborn\u2581depends\u2581on\u2581how\u2581big\u2581your\u2581baby\u2581is\u2581and\u2581how\u2581fast\u2581he/she\u2581grows,\u2581which\u2581is\u2581impossible\u2581to\u2581know\u2581now.\u2581Walter\u2581was",
+            "max_activation": 33.479,
+            "max_token": "\u2581waste"
+          },
+          {
+            "text_snippet": "\u2581all\u2581the\u2581way\u2581to\u2581UWM\u2581period.\u2581Otherwise\u2581I\u2581don\u2019t\u2581think\u2581it\u2581will\u2581be\u2581successful\u2581as\u2581it\u2581could\u2581be.\u2581I\u2581know\u2581that\u2581it\u2581would\u2581take\u2581more\u2581$\u2581but\u2581then\u2581an\u2581unsuccessful\u2581route\u2581is\u2581wasting\u2581what\u2581we\u2581have\u2581and\u2581puts\u2581a\u2581pall\u2581on\u2581fur",
+            "max_activation": 32.186,
+            "max_token": "\u2581wasting"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581waste",
+          "\u2581wasted",
+          "\u2581wasting",
+          "\u2581useless",
+          "\u2581pointless",
+          "waste",
+          "Waste",
+          "\u2581Waste",
+          "useless",
+          "Useless"
+        ],
+        "suppressed_tokens": [
+          "timate",
+          "splice",
+          "jenner",
+          "\u2581\u0425\u0430\u0439",
+          "WriteTagHelper",
+          "\udb40\udc7f",
+          "\u0628\u0648\u0627\u0628\u0629",
+          "aternion",
+          "\u2581Hutchins",
+          "chens"
+        ],
+        "frac_nonzero": 0.00272
+      }
+    },
+    {
+      "feature_idx": 11591,
+      "activation": 0.6049908995628357,
+      "cos_sim_biased": 0.01675490289926529,
+      "cos_sim_unbiased": 0.07740781456232071,
+      "rank_biased": 1122,
+      "rank_unbiased": 7,
+      "neuronpedia": {
+        "feature_idx": 11591,
+        "label": "terms related to firearms and ammunition",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581Grant\n\ndrove\u2581slowly\u2581by\u2581the\u2581location\u2581where\u2581Wilson\u2581was\u2581being\u2581arrested\u2581and\u2581then\u2581fled\u2581the\u2581area\u2581at\u2581approximately\u258180\nmiles\u2581per\u2581hour.\u2581After\u2581a\u2581brief\u2581chase,\u2581Grant\u2581was\u2581arrested\u2581and\u2581a\u2581search\u2581of\u2581the\u2581Pathfinder\u2581r",
+            "max_activation": 36.797,
+            "max_token": "automatic"
+          },
+          {
+            "text_snippet": "\u2581Grant\n\ndrove\u2581slowly\u2581by\u2581the\u2581location\u2581where\u2581Wilson\u2581was\u2581being\u2581arrested\u2581and\u2581then\u2581fled\u2581the\u2581area\u2581at\u2581approximately\u258180\nmiles\u2581per\u2581hour.\u2581After\u2581a\u2581brief\u2581chase,\u2581Grant\u2581was\u2581arrested\u2581and\u2581a\u2581search\u2581of\u2581the\u2581Pathfinder\u2581r",
+            "max_activation": 36.797,
+            "max_token": "automatic"
+          },
+          {
+            "text_snippet": "\u2581the\u2581media\u2581as\u2581a\u2581sweetie-pie.\u2581The\u2581first\u2581published\u2581pictures\u2581of\u2581him\u2581that\u2581I\u2581saw\u2581were\u2581of\u2581Martin\u2581at\u2581the\u2581age\u2581of\u258112,\u2581or\u2581so,\u2581looking\u2581relatively\u2581mild\u2581and\u2581not\u2581especially\u2581bright.\n\nThe\u2581pictures\u2581which\u2581Martin\u2581publis",
+            "max_activation": 32.676,
+            "max_token": "uto"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581rifle",
+          "\u2581firearm",
+          "\u2581Rifle",
+          "\u2581firearms",
+          "\u2581rifles",
+          "\u2581pistol",
+          "\u2581gun",
+          "\u2581Firearms",
+          "\u2581pistols",
+          "\u2581Pistol"
+        ],
+        "suppressed_tokens": [
+          "\u2581\u0635\u0648\u062a\u064a\u0647",
+          "rinfo",
+          "\u2581\u062a\u0636\u064a\u0641\u0644\u0647\u0627",
+          "MLLoader",
+          "\u2581Numerade",
+          "webElementXpaths",
+          "DockStyle",
+          "cillors",
+          "rophes",
+          "\u2581inga"
+        ],
+        "frac_nonzero": 0.00245
+      }
+    },
+    {
+      "feature_idx": 4835,
+      "activation": 0.8645724654197693,
+      "cos_sim_biased": -0.000681624747812748,
+      "cos_sim_unbiased": 0.07449318468570709,
+      "rank_biased": 2750,
+      "rank_unbiased": 8,
+      "neuronpedia": {
+        "feature_idx": 4835,
+        "label": "expressions of fatigue or weariness",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581like?\u2581Which\u2581characters\u2581did\u2581you\u2581hate?\u2581Which\u2581characters\u2581left\u2581you\u2581indifferent?\n\n5)\u2581Did\u2581anything\u2581seem\u2581like\u2581a\u2581clich\u00e9?\u2022\u2581Did\u2581you\u2581ever\u2581roll\u2581your\u2581eyes\u2581at\u2581a\u2581plot\u2581twist?\n\u2022\u2581Did\u2581any\u2581of\u2581the\u2581descriptions\u2581or\u2581metapho",
+            "max_activation": 42.328,
+            "max_token": "\u2581tired"
+          },
+          {
+            "text_snippet": "\u2581rough\u2581patches\u2581that\u2581every\u2581marriage\u2581experiences.\n\nImagine\u2581that\u2581you\u2581have\u2581started\u2581a\u2581business.\u2581Imagine\u2581that\u2581you\u2581put\u2581everything\u2581you\u2581had\u2581into\u2581the\u2581new\u2581company,\u2581all\u2581your\u2581money\u2581and\u2581all\u2581your\u2581borrowing\u2581power,\u2581an",
+            "max_activation": 41.918,
+            "max_token": "\u2581tired"
+          },
+          {
+            "text_snippet": "\u2581proved\u2581one\u2581thing.\u2581It\u2581proves\u2581there\u2581is\u2581a\u2581strong\u2581and\u2581pervasive\u2581level\u2581of\u2581unrest\u2581throughout\u2581the\u2581nation.\u2581A\u2581stirring\u2581nation\u2581that\u2581has\u2581tired\u2581of\u2581politicians\u2581who\u2581no\u2581longer\u2581represent\u2581the\u2581interests\u2581of\u2581\u2018the\u2581people",
+            "max_activation": 40.708,
+            "max_token": "\u2581tired"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581fatigue",
+          "\u2581tired",
+          "\u2581boredom",
+          "\u2581Tired",
+          "\u2581boring",
+          "\u2581weariness",
+          "Boring",
+          "Tired",
+          "\u2581tiresome",
+          "\u2581Boring"
+        ],
+        "suppressed_tokens": [
+          "\u2581BoxDecoration",
+          "\u2581ddelweddau",
+          "\u2581kasarigan",
+          "Personendaten",
+          "Geplaatst",
+          "StoryboardSegue",
+          "uality",
+          "RegistryLite",
+          "addCriterion",
+          "\u2581uuidv"
+        ],
+        "frac_nonzero": 0.00159
+      }
+    },
+    {
+      "feature_idx": 12333,
+      "activation": 1.2166465520858765,
+      "cos_sim_biased": 0.015539025887846947,
+      "cos_sim_unbiased": 0.07410361617803574,
+      "rank_biased": 1222,
+      "rank_unbiased": 9,
+      "neuronpedia": {
+        "feature_idx": 12333,
+        "label": " elements related to statistics and quantitative data",
+        "top_activating_examples": [
+          {
+            "text_snippet": "ines.\u2581These\u2581antagonistic\u2581effects\u2581result\u2581in\u2581a\u2581two-\u2581to\u2581threefold\u2581reduction\u2581in\u2581the\u2581repressibility\u2581of\u2581promoter\u2581P1\u2581by\u2581pyrimidines\u2581in\u2581the\u2581absence\u2581of\u2581IHF\u2581binding.\u2581IHF\u2581thus\u2581appears\u2581to\u2581be\u2581required\u2581for\u2581maximal\u2581",
+            "max_activation": 26.639,
+            "max_token": "2"
+          },
+          {
+            "text_snippet": "ines.\u2581These\u2581antagonistic\u2581effects\u2581result\u2581in\u2581a\u2581two-\u2581to\u2581threefold\u2581reduction\u2581in\u2581the\u2581repressibility\u2581of\u2581promoter\u2581P1\u2581by\u2581pyrimidines\u2581in\u2581the\u2581absence\u2581of\u2581IHF\u2581binding.\u2581IHF\u2581thus\u2581appears\u2581to\u2581be\u2581required\u2581for\u2581maximal\u2581",
+            "max_activation": 26.639,
+            "max_token": "2"
+          },
+          {
+            "text_snippet": ":Sculptures\u2581of\u2581dragons\nCategory:Vandalized\u2581works\u2581of\u2581art<bos>Q:\n\nHow\u2581to\u2581convert\u2581from\u2581huge\u2581JSON\u2581file\u2581to\u2581xml\u2581file\u2581in\u2581C#\n\nI'm\u2581trying\u2581to\u2581convert\u2581from\u2581a\u2581huge\u2581JSON\u2581file(2GB)\u2581to\u2581xml\u2581file.\u2581I\u2581have\u2581some\u2581troubles",
+            "max_activation": 21.982,
+            "max_token": "'"
+          }
+        ],
+        "promoted_tokens": [
+          ",:);",
+          "<eos>",
+          "\u2581sho",
+          "my",
+          "\u8eab",
+          "__\":",
+          "net",
+          "rare",
+          "\u2581imper",
+          "\u2581successful"
+        ],
+        "suppressed_tokens": [
+          "\u2581disambiguazione",
+          "\u2581\u064a\u062a\u064a\u0645\u0647",
+          "\u0627\u0644\u0645\u0643\u0627\u0646",
+          "Datuak",
+          "NewUrlParser",
+          "writeFieldEnd",
+          "\u2581\u043e\u0440\u0438\u0433\u0456\u043d\u0430\u043b\u0443",
+          "AddHtmlAttribute",
+          "\u2581estim\u00e9s",
+          "-------------</"
+        ],
+        "frac_nonzero": 0.00253
+      }
+    },
+    {
+      "feature_idx": 16285,
+      "activation": 0.42250892519950867,
+      "cos_sim_biased": 0.031283508986234665,
+      "cos_sim_unbiased": 0.07061954587697983,
+      "rank_biased": 399,
+      "rank_unbiased": 10,
+      "neuronpedia": {
+        "feature_idx": 16285,
+        "label": "words related to disturbance and disruption",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581intrusion?\u2581Daphne\u2581remembered\u2581all\u2581too\u2581well\u2581how\u2581difficult\u2581the\u2581death\u2581of\u2581a\u2581loved\u2581one\u2581could\u2581be.\u2581She\u2019d\u2581been\u2581a\u2581girl\u2581of\u2581sixteen\u2581when\u2581her\u2581beloved\u2581father\u2581died,\u2581a\u2581young\u2581woman\u2581of\u2581twenty\u2581when\u2581she\u2019d\u2581lost\u2581her\u2581mothe",
+            "max_activation": 34.484,
+            "max_token": "\u2581disturb"
+          },
+          {
+            "text_snippet": "\u2581ambles\u2581and\u2581saunters\u2581now\u2581on\u2581this\u2581side\u2581of\u2581the\u2581hedge,\u2581now\u2581on\u2581that,\u2581in\u2581pursuit\u2581of\u2581no\u2581single\u2581object,\u2581neither\u2581art\u2581itself\u2581nor\u2581life\u2581itself,\u2581but\u2581both\u2581mixed\u2581indistinguishably,\u2581and\u2581rather\u2581nastily,\u2581with\u2581money,\u2581f",
+            "max_activation": 34.03,
+            "max_token": "\u2581disturbance"
+          },
+          {
+            "text_snippet": "\u2581ambles\u2581and\u2581saunters\u2581now\u2581on\u2581this\u2581side\u2581of\u2581the\u2581hedge,\u2581now\u2581on\u2581that,\u2581in\u2581pursuit\u2581of\u2581no\u2581single\u2581object,\u2581neither\u2581art\u2581itself\u2581nor\u2581life\u2581itself,\u2581but\u2581both\u2581mixed\u2581indistinguishably,\u2581and\u2581rather\u2581nastily,\u2581with\u2581money,\u2581f",
+            "max_activation": 34.03,
+            "max_token": "\u2581disturbance"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581disturbance",
+          "\u2581disturbances",
+          "\u2581Disturb",
+          "\u2581disturbed",
+          "\u2581disruption",
+          "\u2581disruptions",
+          "\u2581pertur",
+          "urbing",
+          "\u2581disrupt",
+          "\u2581disturb"
+        ],
+        "suppressed_tokens": [
+          "\u2581commerciaux",
+          "\u2581\u092a\u0926",
+          "SqlClient",
+          "enterOuterAlt",
+          "\u043a\u0430\u0434\u0435",
+          "\u2581NSC",
+          "\u2581aeron",
+          "\u2581sommet",
+          "\u2581Rade",
+          "YLON"
+        ],
+        "frac_nonzero": 0.00223
+      }
+    },
+    {
+      "feature_idx": 11879,
+      "activation": 0.6425579190254211,
+      "cos_sim_biased": 0.051706429570913315,
+      "cos_sim_unbiased": 0.06975618004798889,
+      "rank_biased": 73,
+      "rank_unbiased": 11,
+      "neuronpedia": {
+        "feature_idx": 11879,
+        "label": "terms related to ethical considerations and standards in scientific research",
+        "top_activating_examples": [
+          {
+            "text_snippet": ".\u2581\nSo\u2581can\u2581I\u2581ask\u2581such\u2581questions\u2581on\u2581Stack\u2581Overflow?\n\nA:\n\nSo\u2581can\u2581I\u2581ask\u2581such\u2581questions\u2581on\u2581Stack\u2581Overflow?\n\nNo.\nThis\u2581is\n\nopinion\u2581based\u2581\nnot\u2581about\u2581a\u2581specific\u2581programming\u2581problem\u2581\ntoo\u2581broad\n\nRegarding\u2581improv",
+            "max_activation": 15.265,
+            "max_token": "\u2581responsibly"
+          },
+          {
+            "text_snippet": ".\u2581\nSo\u2581can\u2581I\u2581ask\u2581such\u2581questions\u2581on\u2581Stack\u2581Overflow?\n\nA:\n\nSo\u2581can\u2581I\u2581ask\u2581such\u2581questions\u2581on\u2581Stack\u2581Overflow?\n\nNo.\nThis\u2581is\n\nopinion\u2581based\u2581\nnot\u2581about\u2581a\u2581specific\u2581programming\u2581problem\u2581\ntoo\u2581broad\n\nRegarding\u2581improv",
+            "max_activation": 15.265,
+            "max_token": "\u2581responsibly"
+          },
+          {
+            "text_snippet": "\u2581identifying\u2581songs,\u2581but\u2581also\u2581for\u2581identifying\u2581melodies,\u2581tunes\u2581or\u2581advertisements,\u2581sound\u2581library\u2581management\u2581and\u2581video\u2581files.\n\nAcoustic\u2581Fingerprinting\nThe\u2581way\u2581these\u2581apps\u2581search\u2581by\u2581sound\u2581is\u2581through\u2581generat",
+            "max_activation": 14.666,
+            "max_token": "\u2581practice"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581ethical",
+          "\u2581fair",
+          "\u2581ethically",
+          "\u2581Fair",
+          "\u2581moral",
+          "\u2581environmental",
+          "dele",
+          "ethical",
+          "\u2581ethics",
+          "DialogInterface"
+        ],
+        "suppressed_tokens": [
+          "\u2581extradition",
+          "\u2581jScrollPane",
+          "\u2581\u0434\u043e\u043f\u0438\u0441\u0430\u0432\u0448\u0438",
+          "\u2581\u017ftate",
+          "\u2581\u064a\u062a\u064a\u0645\u0647",
+          "ChildScrollView",
+          "featureID",
+          "\u2581them\u017felves",
+          "ulitan",
+          "\u2581extranjera"
+        ],
+        "frac_nonzero": 0.00986
+      }
+    },
+    {
+      "feature_idx": 9346,
+      "activation": 0.48298197984695435,
+      "cos_sim_biased": 0.007921059615910053,
+      "cos_sim_unbiased": 0.06810380518436432,
+      "rank_biased": 1881,
+      "rank_unbiased": 12,
+      "neuronpedia": {
+        "feature_idx": 9346,
+        "label": "evaluative adjectives that denote quality or prominence",
+        "top_activating_examples": [
+          {
+            "text_snippet": "10/10\u2581I\u2581watched\u2581the\u2581movie\u2581in\u2581Beijing,\u2581twice.\u2581The\u2581second\u2581time\u2581I\u2581liked\u2581it\u2581more.\u2581This\u2581has\u2581to\u2581be\u2581one\u2581of\u2581the\u2581best\u2581Chinese\u2581films\u2581yet,\u2581if\u2581not\u2581the\u2581best.\u2581Some\u2581scenes\u2581are\u2581pretty\u2581brutal,\u2581but\u2581really\u2581worth\u2581watchin",
+            "max_activation": 28.956,
+            "max_token": "\u2581best"
+          },
+          {
+            "text_snippet": "\u2581in\u2581there\u2581through\u2581the\u2581character\u2581creation\u2581&\u2581once\u2581you\u2581are\u2581let\u2581loose\u2581in\u2581Cyrodiil\u2581it's\u2581up\u2581to\u2581you\u2581what\u2581happens\u2581next.\n\n5Seriously\u2581immersive\u2581gameplay\n\nThis\u2581is\u2581by\u2581far\u2581the\u2581best\u2581RPG\u2581available\u2581on\u2581the\u2581PS3\u2581and\u2581the",
+            "max_activation": 27.621,
+            "max_token": "\u2581best"
+          },
+          {
+            "text_snippet": "\u2581in\u2581there\u2581through\u2581the\u2581character\u2581creation\u2581&\u2581once\u2581you\u2581are\u2581let\u2581loose\u2581in\u2581Cyrodiil\u2581it's\u2581up\u2581to\u2581you\u2581what\u2581happens\u2581next.\n\n5Seriously\u2581immersive\u2581gameplay\n\nThis\u2581is\u2581by\u2581far\u2581the\u2581best\u2581RPG\u2581available\u2581on\u2581the\u2581PS3\u2581and\u2581the",
+            "max_activation": 27.621,
+            "max_token": "\u2581best"
+          }
+        ],
+        "promoted_tokens": [
+          "styleType",
+          "ness",
+          "izable",
+          "\u062a\u0631\u06cc\u0646",
+          "%</",
+          "\u2581way",
+          "_'.$",
+          "uitable",
+          "\u2581\u062a\u0631\u06cc\u0646",
+          "\u2581ways"
+        ],
+        "suppressed_tokens": [
+          "\u2581InputDecoration",
+          "\u2581Klon",
+          "nhi",
+          "\ufeff//",
+          "SequentialGroup",
+          "neh\u00e5",
+          "\u2581easel",
+          "inthians",
+          "Personensuche",
+          "Eden"
+        ],
+        "frac_nonzero": 0.00242
+      }
+    },
+    {
+      "feature_idx": 8469,
+      "activation": 0.8265347480773926,
+      "cos_sim_biased": 0.02881772071123123,
+      "cos_sim_unbiased": 0.06707530468702316,
+      "rank_biased": 493,
+      "rank_unbiased": 13,
+      "neuronpedia": {
+        "feature_idx": 8469,
+        "label": "references to nightlife and social activities",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581relevant\u2581people\u2581and\u2581spots\u2581in\u2581San\u2581Francisco\u2581on\u2581a\u2581daily\u2581basis.\u2581This\u2581app\u2581is\u2581like\u2581having\u2581a\u2581good\u2581friend\u2581who\u2581lives\u2581in\u2581SF\u2581to\u2581guide\u2581you\u2581to\u2581all\u2581the\u2581best\u2581spots\u2581all\u2581the\u2581others\u2581might\u2581overlook\u2581or\u2581miss.iOS\u2581(Free)\n",
+            "max_activation": 33.082,
+            "max_token": "\u2581nightclub"
+          },
+          {
+            "text_snippet": "\u2581relevant\u2581people\u2581and\u2581spots\u2581in\u2581San\u2581Francisco\u2581on\u2581a\u2581daily\u2581basis.\u2581This\u2581app\u2581is\u2581like\u2581having\u2581a\u2581good\u2581friend\u2581who\u2581lives\u2581in\u2581SF\u2581to\u2581guide\u2581you\u2581to\u2581all\u2581the\u2581best\u2581spots\u2581all\u2581the\u2581others\u2581might\u2581overlook\u2581or\u2581miss.iOS\u2581(Free)\n",
+            "max_activation": 33.082,
+            "max_token": "\u2581nightclub"
+          },
+          {
+            "text_snippet": "\u2581relevant\u2581people\u2581and\u2581spots\u2581in\u2581San\u2581Francisco\u2581on\u2581a\u2581daily\u2581basis.\u2581This\u2581app\u2581is\u2581like\u2581having\u2581a\u2581good\u2581friend\u2581who\u2581lives\u2581in\u2581SF\u2581to\u2581guide\u2581you\u2581to\u2581all\u2581the\u2581best\u2581spots\u2581all\u2581the\u2581others\u2581might\u2581overlook\u2581or\u2581miss.iOS\u2581(Free)\n",
+            "max_activation": 33.082,
+            "max_token": "\u2581nightclub"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581nightlife",
+          "\u2581nightclub",
+          "\u2581partying",
+          "\u2581cocktails",
+          "\u2581party",
+          "\u2581booze",
+          "\u2581cocktail",
+          "\u2581Cocktail",
+          "\u2581Cocktails",
+          "\u2581entertainment"
+        ],
+        "suppressed_tokens": [
+          "\u2581materna",
+          "ViewFeatures",
+          "]--;",
+          "\ub014",
+          "AccessorTable",
+          "\u279f",
+          "onViewCreated",
+          "Vidite",
+          "hibli",
+          "V\u00e4lislingid"
+        ],
+        "frac_nonzero": 0.00171
+      }
+    },
+    {
+      "feature_idx": 16231,
+      "activation": 0.7188472747802734,
+      "cos_sim_biased": 0.007008582353591919,
+      "cos_sim_unbiased": 0.06604664772748947,
+      "rank_biased": 1976,
+      "rank_unbiased": 14,
+      "neuronpedia": {
+        "feature_idx": 16231,
+        "label": "numerical data and statistics",
+        "top_activating_examples": [
+          {
+            "text_snippet": "017-0493-2).\u2581<http://link.springer.com/10.1007/s10766-017-0493-2>\n\nV.\u00a0Vapnik,\u2581[The\u2581Nature\u2581of\u2581Statistical\u2581Learning\u2581Theory]{}\u2581(1995).\n\nY.\u00a0Wang,\u2581W.\u00a0Ke,\u2581X.\u00a0Tao,\u2581[[A\u2581Feature\u2581Selection\u2581Method\u2581for\u2581Large-Scal",
+            "max_activation": 47.946,
+            "max_token": "6"
+          },
+          {
+            "text_snippet": "017-0493-2).\u2581<http://link.springer.com/10.1007/s10766-017-0493-2>\n\nV.\u00a0Vapnik,\u2581[The\u2581Nature\u2581of\u2581Statistical\u2581Learning\u2581Theory]{}\u2581(1995).\n\nY.\u00a0Wang,\u2581W.\u00a0Ke,\u2581X.\u00a0Tao,\u2581[[A\u2581Feature\u2581Selection\u2581Method\u2581for\u2581Large-Scal",
+            "max_activation": 47.946,
+            "max_token": "6"
+          },
+          {
+            "text_snippet": "1(DOCX\u258128\u00a0kb)\n\nThe\u2581original\u2581version\u2581of\u2581this\u2581article\u2581was\u2581revised:\u2581Table\u25811\u2581needed\u2581corrections.\u2581The\u2581DOI\u2581of\u2581the\u2581Erratum\u2581is:\u258110.1007/s12192-018-0901-6\n\n**Electronic\u2581supplementary\u2581material**\n\nThe\u2581online\u2581ver",
+            "max_activation": 47.593,
+            "max_token": "9"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581lenker",
+          "\u2581\u0627\u0644\u062d\u0631\u0647",
+          "tagonist",
+          "ICAGO",
+          "r\u00e4",
+          "lecular",
+          "dafx",
+          "\ufb04",
+          "i\u017fter",
+          "ftance"
+        ],
+        "suppressed_tokens": [
+          "fjspx",
+          "EDEFAULT",
+          "SequentialGroup",
+          "SourceChecksum",
+          "Personendaten",
+          "GRANTED",
+          "TableHead",
+          "LayoutStyle",
+          "AndEndTag",
+          "\u2581\u043d\u0430\u0441\u0435\u0459\u0443"
+        ],
+        "frac_nonzero": 0.00226
+      }
+    },
+    {
+      "feature_idx": 1946,
+      "activation": 1.2419648170471191,
+      "cos_sim_biased": 0.006050223484635353,
+      "cos_sim_unbiased": 0.06447359919548035,
+      "rank_biased": 2074,
+      "rank_unbiased": 15,
+      "neuronpedia": {
+        "feature_idx": 1946,
+        "label": "conditional phrases and scenarios related to risk and performance over time",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581tends\u2581to\u2581decrease\u2581with\u2581age,\u2581so\u2581a\u2581woman's\u2581risk\u2581will\u2581change\u2581over\u2581time,\u2581Kerlikowske\u2581said.\u2581It\u2581also\u2581can\u2581reflect\u2581some\u2581other\u2581long-known\u2581risk\u2581factors,\u2581she\u2581added.\u2581Someone\u2581who\u2581had\u2581children\u2581very\u2581young\u2581probably\u2581",
+            "max_activation": 23.193,
+            "max_token": "\u2581will"
+          },
+          {
+            "text_snippet": "\u2581tends\u2581to\u2581decrease\u2581with\u2581age,\u2581so\u2581a\u2581woman's\u2581risk\u2581will\u2581change\u2581over\u2581time,\u2581Kerlikowske\u2581said.\u2581It\u2581also\u2581can\u2581reflect\u2581some\u2581other\u2581long-known\u2581risk\u2581factors,\u2581she\u2581added.\u2581Someone\u2581who\u2581had\u2581children\u2581very\u2581young\u2581probably\u2581",
+            "max_activation": 23.193,
+            "max_token": "\u2581will"
+          },
+          {
+            "text_snippet": "\u2581tends\u2581to\u2581decrease\u2581with\u2581age,\u2581so\u2581a\u2581woman's\u2581risk\u2581will\u2581change\u2581over\u2581time,\u2581Kerlikowske\u2581said.\u2581It\u2581also\u2581can\u2581reflect\u2581some\u2581other\u2581long-known\u2581risk\u2581factors,\u2581she\u2581added.\u2581Someone\u2581who\u2581had\u2581children\u2581very\u2581young\u2581probably\u2581",
+            "max_activation": 23.193,
+            "max_token": "\u2581will"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581cenderung",
+          "\u2581tend",
+          "Geplaatst",
+          "\u2581generally",
+          "\u2581yet",
+          "\u2581always",
+          "\u2581usually",
+          "\u2581probably",
+          "\u2581dejo",
+          "\u2581who"
+        ],
+        "suppressed_tokens": [
+          "\u2581betweenstory",
+          "MessageTagHelper",
+          "########.",
+          "SizeF",
+          "+#+",
+          "Personendaten",
+          "AndroidJUnit",
+          "AdapterFactory",
+          "Nazionale",
+          "\u2581OFDb"
+        ],
+        "frac_nonzero": 0.00775
+      }
+    },
+    {
+      "feature_idx": 11067,
+      "activation": 2.6647250652313232,
+      "cos_sim_biased": -0.004038567654788494,
+      "cos_sim_unbiased": 0.06372107565402985,
+      "rank_biased": 3109,
+      "rank_unbiased": 16,
+      "neuronpedia": {
+        "feature_idx": 11067,
+        "label": "references to case law and legal citations",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581his\u2581Miranda\u2581rights\u2581and\u2581executed\u2581a\u2581written\u2581waiver.\u2581Thereafter,\u2581defendant\u2581detailed\u2581the\u2581antagonism\u2581which\u2581existed\u2581among\u2581various\u2581inmates\u2581housed\u2581at\u2581Magnolia\u25813\u2581dormitory\u2581and\u2581outlined\u2581the\u2581scenario\u2581which\u2581culm",
+            "max_activation": 54.707,
+            "max_token": "\u2581___"
+          },
+          {
+            "text_snippet": "\u2581court\u2581finds\u2581that\u2581petitioner's\u2581denial\u2581of\u2581independent\u2581psychiatric\u2581evaluation\u2581claim\u2581constitutes\u2581a\u2581successive\u2581petition\u2581that\u2581has\u2581been\u2581decided\u2581on\u2581the\u2581merits\u2581in\u2581the\u2581previous\u2581habeas\u2581corpus\u2581proceeding,\u2581the\u2581co",
+            "max_activation": 51.733,
+            "max_token": "\u2581___"
+          },
+          {
+            "text_snippet": "\u2581\"instituted\u2581and\u2581continued\u2581against\u2581the\u2581plaintiff\u2581...\u2581wholly\u2581without\u2581...\u2581probable\u2581cause\"\u2581and\u2581thus\u2581violative\u2581of\u2581the\u2581Fourth\u2581Amendment.\u2581The\u2581instant\u2581situation\u2581is\u2581therefore\u2581unlike\u2581Baker\u2581v.\u2581McCollan,\u2581___\u2581U.S",
+            "max_activation": 51.253,
+            "max_token": "\u2581___"
+          }
+        ],
+        "promoted_tokens": [
+          "mering",
+          "rayage",
+          "damento",
+          "BEAT",
+          "\u2581amus",
+          "\u2581du",
+          "oidal",
+          "uegos",
+          "irling",
+          "\u2581Gran"
+        ],
+        "suppressed_tokens": [
+          "AccessorTable",
+          "EndContext",
+          "\u2581\u0641\u0631\u064a\u0628\u064a\u0633",
+          "\u0634\u0647\u0627\u062f",
+          "\u0627\u0644\u0625\u0646\u062c\u0644\u064a\u0632\u064a\u0629",
+          "\u2581gawas",
+          "Viitteet",
+          "AnchorStyles",
+          "\u2581it\u017felf",
+          "\u2581<<<<<<<<<<<<<<"
+        ],
+        "frac_nonzero": 0.00764
+      }
+    },
+    {
+      "feature_idx": 15039,
+      "activation": 4.528199672698975,
+      "cos_sim_biased": 0.0516887828707695,
+      "cos_sim_unbiased": 0.06359633058309555,
+      "rank_biased": 74,
+      "rank_unbiased": 17,
+      "neuronpedia": {
+        "feature_idx": 15039,
+        "label": " specific numeric values and their relationships in text",
+        "top_activating_examples": [
+          {
+            "text_snippet": ".<bos>#!/bin/bash\n#\u2581WINDOWS\u2581PACKAGING\u2581SCRIPT\u2581FOR\u2581NAEV\n#\u2581Requires\u2581NSIS,\u2581and\u2581python3-pip\u2581to\u2581be\u2581installed\n#\n#\u2581This\u2581script\u2581should\u2581be\u2581run\u2581after\u2581compiling\u2581Naev\n#\u2581It\u2581detects\u2581the\u2581current\u2581environment,\u2581and\u2581buil",
+            "max_activation": 30.477,
+            "max_token": "<bos>"
+          },
+          {
+            "text_snippet": ".<bos>Vale\u2581de\u2581Lua\u2581\u2013\u2581Moon\u2581Surface\u2581on\u2581Earth\n\nThe\u2581valley\u2581terrain\u2581is\u2581all\u2581covered\u2581with\u2581rock\u2581formations\u2581and\u2581intricate\u2581labyrinths\u2581created\u2581by\u2581nature.\u2581In\u2581ancient\u2581times,\u2581there\u2581were\u2581deposits\u2581of\u2581quartz.\u2581But\u2581the\u2581n",
+            "max_activation": 30.477,
+            "max_token": "<bos>"
+          },
+          {
+            "text_snippet": "-sized.<bos>This\u2581is\u2581a\u2581hybrid\u2581collective/class\u2581action\u2581FLSA/Pennsylvania\u2581state\u2581minimum\u2581wage\u2581law\u2581case\u2581arising\u2581from\u2581work\u2581in\u2581the\u2581gas\u2581fields\u2581of\u2581our\u2581region.\u2581The\u2581Court\u2581has\u2581previously\u2581written\u2581on\u2581matters\u2581relate",
+            "max_activation": 26.978,
+            "max_token": "<bos>"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581\u0641\u0631\u064a\u0628\u064a\u0633",
+          "\u2581lenker",
+          "\u2581\u0635\u0648\u062a\u064a\u0647",
+          "\u2581nature",
+          "\u2581textStatus",
+          "m\u0171",
+          "\u0628\u0648\u0627\u0628\u0629",
+          "\u2581}^{[",
+          "openqa",
+          "saraba"
+        ],
+        "suppressed_tokens": [
+          "omitempty",
+          "\u2581propOrder",
+          "\u2581salomon",
+          "\u2581malic",
+          "\u00f3ng",
+          "arounds",
+          "standers",
+          "\u2581Morm",
+          "\u2581CanadaChoose",
+          "\u2581ligaments"
+        ],
+        "frac_nonzero": 0.004500000000000001
+      }
+    },
+    {
+      "feature_idx": 11442,
+      "activation": 0.588255763053894,
+      "cos_sim_biased": -0.0015890281647443771,
+      "cos_sim_unbiased": 0.06359216570854187,
+      "rank_biased": 2850,
+      "rank_unbiased": 18,
+      "neuronpedia": {
+        "feature_idx": 11442,
+        "label": "terms related to coordination and related concepts in various contexts",
+        "top_activating_examples": [
+          {
+            "text_snippet": "McCARY.\nSupreme\u2581Court\u2581of\u2581New\u2581Jersey.\nMay\u258119,\u25812010.\nPetition\u2581for\u2581Certification\u2581Denied.\n<bos>Metrics\u2581and\u2581proxies\u2581for\u2581stringency\u2581of\u2581regulation\u2581of\u2581plant\u2581water\u2581status\u2581(iso/anisohydry):\u2581a\u2581global\u2581data\u2581set\u2581re",
+            "max_activation": 17.338,
+            "max_token": "\u2581coordination"
+          },
+          {
+            "text_snippet": "McCARY.\nSupreme\u2581Court\u2581of\u2581New\u2581Jersey.\nMay\u258119,\u25812010.\nPetition\u2581for\u2581Certification\u2581Denied.\n<bos>Metrics\u2581and\u2581proxies\u2581for\u2581stringency\u2581of\u2581regulation\u2581of\u2581plant\u2581water\u2581status\u2581(iso/anisohydry):\u2581a\u2581global\u2581data\u2581set\u2581re",
+            "max_activation": 17.338,
+            "max_token": "\u2581coordination"
+          },
+          {
+            "text_snippet": "\r\n\u2581\u2581Scope(\\_SB.PR00)\r\n\u2581\u2581{\r\n\u2581\u2581\u2581\u2581Name(HPSD,Package()\u2581//\u2581HW_ALL\r\n\u2581\u2581\u2581\u2581{\r\n\u2581\u2581\u2581\u2581\u2581\u2581Package()\u2581{5,\u2581\u2581\u2581\u2581//\u2581NumEntries.\u2581Current\u2581Value\u2581is\u25815.\r\n\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u25810,\u2581\u2581\u2581\u2581//\u2581Revision.\u2581Current\u2581Value\u2581is\u25810.\r\n\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581",
+            "max_activation": 17.219,
+            "max_token": "\u2581Coordination"
+          }
+        ],
+        "promoted_tokens": [
+          "ghijklmnop",
+          "\u2581my\u017felf",
+          "\u2581vectorielle",
+          "\u2581Majefty",
+          "\u2581u\u017fed",
+          "\u2581HARR",
+          "\u2581rai\u017f",
+          "anho",
+          "\u2581Efq",
+          "ValueStyle"
+        ],
+        "suppressed_tokens": [
+          "ton",
+          "nus",
+          "us",
+          "mes",
+          "subsubsection",
+          "\u03af\u03ba",
+          "\u2581Verstappen",
+          "e",
+          "lung",
+          "\u2581scha"
+        ],
+        "frac_nonzero": 0.0072
+      }
+    },
+    {
+      "feature_idx": 15605,
+      "activation": 5.18202543258667,
+      "cos_sim_biased": 0.01365632563829422,
+      "cos_sim_unbiased": 0.06354318559169769,
+      "rank_biased": 1371,
+      "rank_unbiased": 19,
+      "neuronpedia": {
+        "feature_idx": 15605,
+        "label": "instances of specific keywords related to processes and responsibilities in technical contexts",
+        "top_activating_examples": [
+          {
+            "text_snippet": ";\n\u2581\u2581$$;\n\n<bos>The\u2581effects\u2581of\u2581torrefaction\u2581on\u2581compositions\u2581of\u2581bio-oil\u2581and\u2581syngas\u2581from\u2581biomass\u2581pyrolysis\u2581by\u2581microwave\u2581heating.\nMicrowave\u2581pyrolysis\u2581of\u2581torrefied\u2581Douglas\u2581fir\u2581sawdust\u2581pellet\u2581was\u2581investigate",
+            "max_activation": 44.14,
+            "max_token": "<bos>"
+          },
+          {
+            "text_snippet": "Military\u2581units\u2581and\u2581formations\u2581in\u2581California<bos>The\u2581verbals:\u2581sports\u2581quotes\u2581of\u25811994\n\nThere\u2581are\u2581no\u2581small\u2581accidents\u2581on\u2581this\u2581circuit.\u2581Ayrton\u2581Senna,\u2581before\u2581the\u2581San\u2581Marino\u2581Grand\u2581Prix,\u2581during\u2581which\u2581he\u2581suffer",
+            "max_activation": 43.698,
+            "max_token": "<bos>"
+          },
+          {
+            "text_snippet": "s\u2581Interior\u2581Minister,\u2581Hassan\u2581Sabeh.<bos>\nFBI\u2581director:\u2581Cover\u2581up\u2581your\u2581webcam\u2581-\u2581grej\nhttp://thehill.com/policy/national-security/295933-fbi-director-cover-up-your-webcam\n======\n6t6t6t6\nFrom\u2581all\u2581they\u2581ways",
+            "max_activation": 42.316,
+            "max_token": "<bos>"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581forgetting",
+          "\u2581forget",
+          "\u2581forgets",
+          "\u2581FORGET",
+          "gnore",
+          "Discard",
+          "\u2581neglect",
+          "\u2581ignoring",
+          "\u2581Neglect",
+          "\u2581forgotten"
+        ],
+        "suppressed_tokens": [
+          "\u2581jScrollPane",
+          "ResponseEntity",
+          "\u2581oper",
+          "\u2581snippetHide",
+          "::::::::",
+          "\u2581Campbell",
+          "\u2581f\u00e6r",
+          "OPER",
+          "oper",
+          "\u2581Oper"
+        ],
+        "frac_nonzero": 0.00232
+      }
+    }
+  ],
+  "analysis": "# Verdict: **YES** \u2014 Multiple spurious features are present\n\n## Spurious Features Identified\n\n### A. Features firing without relevant content (semantic mismatch)\nThese features are active on the input but their semantic content doesn't match the text at all, indicating the SAE is encoding spurious correlations:\n\n1. **Feature 12714** (profanity) \u2014 Input contains no profanity/vulgar language. Firing is spurious.\n2. **Feature 10255** (anger/frustration) \u2014 No anger markers in input. Spurious.\n3. **Feature 3997** (illness/sick) \u2014 No illness-related content. Spurious.\n4. **Feature 4835** (fatigue/tired) \u2014 No fatigue content. Spurious.\n5. **Feature 14291** (wastefulness/useless) \u2014 No wastefulness content. Spurious.\n6. **Feature 8469** (nightlife) \u2014 No nightlife content. Spurious.\n\n### B. Noisy features with mismatched labels/tokens\nThese features have incoherent label-token mappings, suggesting they capture noise rather than meaningful signals:\n- **Feature 5082** (nudity \u2014 but promoted tokens are `googleapis`, `theory`, `teor\u00eda`): label/tokens completely misaligned\n- **Feature 12333** (statistics \u2014 promoted tokens are `<eos>`, `\u8eab`, `__\":`): incoherent\n- **Feature 16231** (numerical data \u2014 promoted tokens are `\u2581lenker`, `tagonist`, `ICAGO`): incoherent\n- **Feature 15039** (numeric values \u2014 promoted tokens are `\u2581\u0641\u0631\u064a\u0628\u064a\u0633`, `\u2581textStatus`): incoherent\n- **Feature 11442** (coordination \u2014 promoted tokens are mostly gibberish): incoherent\n\n### C. Features likely encoding identity-group context rather than toxicity\nThis is the most concerning category for the stated concern:\n\n7. **Feature 11591** (firearms) \u2014 Examples reference the **Trayvon Martin / Michael Brown** case discussions. The feature likely fires on racial-incident discourse rather than actual firearm content, encoding an identity-related signal.\n8. **Feature 3869** (rejection/disdain) \u2014 Example explicitly reads *\"White genes mean better intellect and behavior\"* \u2014 clearly activated by racially charged identity content. Could function as an identity-context detector rather than capturing actual toxicity.\n9. **Feature 13367** (skepticism toward \"marginalized groups\") \u2014 Examples reference \"races\" and politically charged racial content. May encode identity-group associations rather than genuine toxicity signals.\n\n### D. Marginally relevant / off-topic\n- **Feature 1946** (conditional scenarios): The input is conditional (\"If he was white...\"), so this might be legitimate.\n- **Feature 11879** (ethical/fair): Marginally relevant to fairness discussion.\n- **Feature 11067** (case law): Not directly relevant.\n\n## Overall Summary\n\n**YES**, there are clear spurious features present. Of the 20 active features, only a small fraction (~2\u20134) plausibly relate to the actual toxic content (which involves implied racial bias). The majority fall into three failure modes:\n\n1. **Semantic mismatch** (~6 features): features for profanity, anger, illness, fatigue, wastefulness, and nightlife fire despite none of these being present.\n2. **Label-token incoherence** (~5 features): noisy features whose promoted tokens bear no relation to their stated labels.\n3. **Identity-context encoding** (~3 features): notably Feature 11591 (firearms) and Feature 3869 (disdain), whose activating examples center on racially charged identity content. These features may act as **identity-group proxies** that the model could use to predict toxicity based on the mere presence of racial terms rather than the actual harmful implication.\n\nFor a toxicity classifier, this is particularly concerning because the model could learn to flag *any* mention of identity groups (\"white,\" \"Hispanic,\" \"Black,\" etc.) as toxic via these features, rather than recognizing that the toxicity here lies in the *conditional implication* \u2014 that being Hispanic is being framed as the \"problem.\" The spurious identity-signal features would generalize poorly and encode biased associations rather than genuine toxicity."
+}

@@ -1,0 +1,83 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F585",
+      "label": "the word \"white\", often in association with \"dwarf\"",
+      "reason": "Identity token detector for race-related term."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Generic race/ethnicity identity-word detector."
+    },
+    {
+      "id": "L3:F3248",
+      "label": "words and phrases related to race and ethnic groups, especially in the context of social issues",
+      "reason": "Identity-group/social-issues feature, not toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/social-justice identity feature."
+    },
+    {
+      "id": "L4:F10174",
+      "label": "words referring to racial and/or supernatural identity",
+      "reason": "Identity-category detector; not toxicity-specific."
+    },
+    {
+      "id": "L5:F3924",
+      "label": "words relating to race, ethnicity, and/or religion",
+      "reason": "Demographic/religion identity words."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Pure identity-group lexical detector."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic-group detector."
+    },
+    {
+      "id": "L11:F1913",
+      "label": "emotional, controversial, or political issues especially relating to race",
+      "reason": "Race-controversy feature, not direct toxicity."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: 'was' (pos 3)",
+      "label": "input embedding",
+      "reason": "Bare token input, structural only."
+    },
+    {
+      "id": "Emb: 'white' (pos 4)",
+      "label": "input embedding",
+      "reason": "Bare token input, already counted via features above."
+    },
+    {
+      "id": "Emb: 'Hispanic' (pos 7)",
+      "label": "input embedding",
+      "reason": "Bare token input, already counted via features above."
+    },
+    {
+      "id": "L0:F2458",
+      "label": "the word \"was\" and sometimes \"were.\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic conjunction detector."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by race/ethnicity identity signals; no toxicity-specific features are claimed."
+}

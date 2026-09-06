@@ -1,0 +1,149 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F11375@5",
+      "label": "L0 copula 'is' detector",
+      "reason": "Generic copula; syntactic framing, not toxic content."
+    },
+    {
+      "id": "L0:F11375@14",
+      "label": "L0 copula 'is' detector",
+      "reason": "Generic copula; syntactic framing, not toxic content."
+    },
+    {
+      "id": "L0:F3635@6",
+      "label": "L0 'that' complementizer detector",
+      "reason": "Generic complementizer; structural cue only."
+    },
+    {
+      "id": "L0:F880@7",
+      "label": "L0 pronoun 'it' detector",
+      "reason": "Generic pronoun detector; structural only."
+    },
+    {
+      "id": "L0:F7253@2",
+      "label": "L0 'The problem' NP-start detector",
+      "reason": "Shallow noun-phrase template, not toxicity semantics."
+    },
+    {
+      "id": "L2:F8909@2",
+      "label": "L0 'The problem' NP-start detector",
+      "reason": "Shallow noun-phrase template, not toxicity semantics."
+    },
+    {
+      "id": "L0:F2158@3",
+      "label": "L0 preposition 'with' detector (inhibitory)",
+      "reason": "Generic preposition; structural and inhibitory."
+    },
+    {
+      "id": "L4:F16106@3",
+      "label": "L0 preposition 'with' detector (inhibitory)",
+      "reason": "Generic preposition; structural and inhibitory."
+    },
+    {
+      "id": "L3:F8595@3",
+      "label": "L0 preposition 'with' detector (inhibitory)",
+      "reason": "Generic preposition; structural and inhibitory."
+    },
+    {
+      "id": "L7:F9503@3",
+      "label": "L0 preposition 'with' detector (inhibitory)",
+      "reason": "Generic preposition; structural and inhibitory."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F7282@4",
+      "label": "Mid-layer features on 'Islam' \u2014 mixed/weak signs",
+      "reason": "Identity term linked to religion-based toxicity."
+    },
+    {
+      "id": "L8:F16294@4",
+      "label": "Mid-layer features on 'Islam' \u2014 mixed/weak signs",
+      "reason": "Identity term linked to religion-based toxicity."
+    },
+    {
+      "id": "L8:F5783@4",
+      "label": "Mid-layer features on 'Islam' \u2014 mixed/weak signs",
+      "reason": "Identity term linked to religion-based toxicity."
+    },
+    {
+      "id": "L7:F11758@4",
+      "label": "Mid-layer features on 'Islam' \u2014 mixed/weak signs",
+      "reason": "Identity term linked to religion-based toxicity."
+    },
+    {
+      "id": "L0:F13885@4",
+      "label": "Mid-layer features on 'Islam' \u2014 mixed/weak signs",
+      "reason": "Identity term linked to religion-based toxicity."
+    },
+    {
+      "id": "L12:F7779@11",
+      "label": "Late-layer feature on 'false religion' \u2014 weak driver",
+      "reason": "Semantic toxic-religion phrase, content-bearing."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe logit",
+      "label": "toxicity classification",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: 'is' (pos 5)",
+      "label": "embedding/output",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: 'that' (pos 6)",
+      "label": "embedding/output",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: 'it' (pos 7)",
+      "label": "embedding/output",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: 'problem' (pos 2)",
+      "label": "embedding/output",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: 'with' (pos 3)",
+      "label": "embedding/output",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: 'The' (pos 1)",
+      "label": "embedding/output",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: 'is' (pos 14)",
+      "label": "embedding/output",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: 'Islam' (pos 4)",
+      "label": "embedding/output",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: 'false' (pos 10)",
+      "label": "embedding/output",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: 'religion' (pos 11)",
+      "label": "embedding/output",
+      "reason": "Input embedding node."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 6,
+  "n_other": 11,
+  "spurious_fraction": 0.625,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes shallow syntax more than semantic toxicity cues; identity-term features are weakly causal."
+}

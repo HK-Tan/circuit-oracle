@@ -1,0 +1,208 @@
+{
+  "spurious_features": [
+    {
+      "id": "L1:F13646",
+      "label": "text discussing social justice issues",
+      "reason": "Identity-group/social-justice signaling, not toxicity."
+    },
+    {
+      "id": "L2:F1537",
+      "label": "words and phrases related to political and social issues and movements",
+      "reason": "Political-social topic signal, spurious for toxicity."
+    },
+    {
+      "id": "L3:F10868",
+      "label": "the phrase \"I'm a\" or \"I am a\"",
+      "reason": "Identity-phrase syntax, a spurious identity cue."
+    },
+    {
+      "id": "L3:F1526",
+      "label": "references to academic disciplines related to social science",
+      "reason": "Social-science topic marker, not toxic semantics."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Explicit identity-group/race signal."
+    },
+    {
+      "id": "L4:F10459",
+      "label": "words related to politics, especially political parties and movements like the Tea Party.",
+      "reason": "Political-partisan topic, not causal toxicity."
+    },
+    {
+      "id": "L4:F6752",
+      "label": "phrases expressing victimhood and social criticism",
+      "reason": "Social-criticism discourse, not toxic-content detection."
+    },
+    {
+      "id": "L5:F14124",
+      "label": "things that indicate strong and opinionated political discourse",
+      "reason": "Opinionated political discourse, spurious."
+    },
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations.",
+      "reason": "Ideological negativity, not explicit toxic semantics."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: social",
+      "label": "social",
+      "reason": "Input embedding token only."
+    },
+    {
+      "id": "Emb: justice",
+      "label": "justice",
+      "reason": "Input embedding token only."
+    },
+    {
+      "id": "Emb: warrior",
+      "label": "warrior",
+      "reason": "Input embedding token only."
+    },
+    {
+      "id": "Emb: a",
+      "label": "a",
+      "reason": "Input embedding token only."
+    },
+    {
+      "id": "Emb: you",
+      "label": "you",
+      "reason": "Input embedding token only."
+    },
+    {
+      "id": "Emb: bakery",
+      "label": "bakery",
+      "reason": "Input embedding token only."
+    },
+    {
+      "id": "Emb: Muslim",
+      "label": "Muslim",
+      "reason": "Input embedding token only."
+    },
+    {
+      "id": "L0:F3591",
+      "label": "terms related to government social programs",
+      "reason": "General social-policy topic, not toxic."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Purely structural/technical."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L0:F13310",
+      "label": "sentences that include forms of the verb \"are\" indicating a present state of being or necessity.",
+      "reason": "Generic grammar feature."
+    },
+    {
+      "id": "L0:F13756",
+      "label": "the word \"order\" and occasionally \"period,\" in many different contexts from law to food",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F2260",
+      "label": "terms that are medical, legal, or related to social work",
+      "reason": "Domain-topic feature, not toxicity."
+    },
+    {
+      "id": "L0:F3850",
+      "label": "punctuation marks",
+      "reason": "Purely structural punctuation."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F9934",
+      "label": "the word \"particular\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F4478",
+      "label": "terms related to ownership and belief systems.",
+      "reason": "Broad semantic topic, not toxic."
+    },
+    {
+      "id": "L1:F14576",
+      "label": "words relating to food dishes and dining, especially those in restaurants",
+      "reason": "Food/dining topic, not toxicity."
+    },
+    {
+      "id": "L2:F14541",
+      "label": "code snippets and logical statements, especially those involving \"then,\" along with some citation markers and bracketed references.",
+      "reason": "Structural/code-like feature."
+    },
+    {
+      "id": "L2:F14209",
+      "label": "the verb \"go\" in its various forms.",
+      "reason": "Generic verb detector."
+    },
+    {
+      "id": "L2:F8867",
+      "label": "the acronyms WIMP, WMS, WFS, and WCS",
+      "reason": "Acronym/topic-specific, not toxic."
+    },
+    {
+      "id": "L4:F13041",
+      "label": "words related to food and dining experiences",
+      "reason": "Food/dining topic, not toxicity."
+    },
+    {
+      "id": "L4:F11323",
+      "label": "text from blog posts about political and fashion topics.",
+      "reason": "Topic mixture, not toxic semantics."
+    },
+    {
+      "id": "L4:F11526",
+      "label": "words and short phrases related to political and military conflict",
+      "reason": "Conflict topic, not explicit toxicity."
+    },
+    {
+      "id": "L4:F11211",
+      "label": "language related to consumer advocacy and environmentalism",
+      "reason": "Topic marker, not toxic."
+    },
+    {
+      "id": "L5:F1062",
+      "label": "unknown from oracle",
+      "reason": "Oracle gives no semantic label."
+    },
+    {
+      "id": "L5:F14212",
+      "label": "unknown from oracle",
+      "reason": "Oracle gives no semantic label."
+    },
+    {
+      "id": "L5:F4109",
+      "label": "unknown from oracle",
+      "reason": "Oracle gives no semantic label."
+    },
+    {
+      "id": "L5:F6565",
+      "label": "unknown from oracle",
+      "reason": "Oracle gives no semantic label."
+    },
+    {
+      "id": "L6:F9005",
+      "label": "words and phrases related to desserts",
+      "reason": "Food/dessert feature, not toxicity."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 0,
+  "n_other": 30,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle describes an identity/social-justice chain plus food topics; no causal toxicity features are claimed."
+}

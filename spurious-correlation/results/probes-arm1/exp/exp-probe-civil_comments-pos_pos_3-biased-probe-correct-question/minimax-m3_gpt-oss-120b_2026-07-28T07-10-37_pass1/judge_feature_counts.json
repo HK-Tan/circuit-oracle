@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F648",
+      "label": "words related to discrimination against particular religious or ethnic groups",
+      "reason": "Identity-group discrimination detector; names Jews regardless of toxicity."
+    },
+    {
+      "id": "L8:F13197",
+      "label": "words related to religion and faith",
+      "reason": "Religious-identity mention, not toxic content."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Detects religious identity tokens, not abuse."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race discourse feature, not causal toxicity."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Ethnicity mention detector; spurious for toxicity."
+    },
+    {
+      "id": "L2:F3588",
+      "label": "terms related to politics and political parties",
+      "reason": "Political identity signal, not toxicity."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L8:F13875",
+      "label": "negative sentiment related to reputation and betrayal of trust.",
+      "reason": "Negative evaluative sentiment can support toxicity."
+    },
+    {
+      "id": "L4:F8407",
+      "label": "words related to antagonists and fighting",
+      "reason": "Conflict/attack semantics align with toxicity."
+    },
+    {
+      "id": "L3:F592",
+      "label": "words related to love, affection, and hate, including foreign language",
+      "reason": "Hate semantics are directly toxicity-relevant."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe output",
+      "label": "toxicity direction",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "L3:F9615",
+      "label": "words containing the prefix \"self-\"",
+      "reason": "Purely morphological/structural."
+    },
+    {
+      "id": "L3:F12151",
+      "label": "Capitalized token patterns",
+      "reason": "Generic casing pattern."
+    },
+    {
+      "id": "L3:F735",
+      "label": "words and phrases that include the word \"self\" followed by a hyphen",
+      "reason": "Structural token-pattern feature."
+    },
+    {
+      "id": "L3:F13819",
+      "label": "words and phrases about interconnectedness, self-similarity, and things holding together.",
+      "reason": "Theme is unrelated to toxicity here."
+    },
+    {
+      "id": "L2:F3983",
+      "label": "the word \"hat\"",
+      "reason": "Subword match only."
+    },
+    {
+      "id": "L2:F9871",
+      "label": "latex and code snippets and mathematical symbols",
+      "reason": "Pure formatting/code detector."
+    },
+    {
+      "id": "L1:F14516",
+      "label": "equations with symbols, especially those using \"hat\" notation",
+      "reason": "Mathematical notation feature."
+    },
+    {
+      "id": "L1:F1774",
+      "label": "text in a Latex document",
+      "reason": "Document-format detector."
+    },
+    {
+      "id": "Emb: Self (pos 1)",
+      "label": "Embedding",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: hat (pos 3)",
+      "label": "Embedding",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: liberal (pos 5)",
+      "label": "Embedding",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: Jew (pos 6)",
+      "label": "Embedding",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: stain (pos 9)",
+      "label": "Embedding",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "L4:F14733",
+      "label": "Israel-Palestine context",
+      "reason": "Contextual topic feature, not toxic by itself."
+    },
+    {
+      "id": "L4:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Topical discussion detector, not direct toxicity."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 3,
+  "n_other": 16,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Identity-group signals dominate; a few sentiment/conflict cues are present."
+}

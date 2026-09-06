@@ -1,0 +1,144 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F9602",
+      "label": "interjections and filler words",
+      "reason": "Pure filler/interjection detector for 'uh'."
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Generic discourse marker, not semantic content."
+    },
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Contraction-negation surface cue."
+    },
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Conversational acknowledgement cue."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "Dialogue-style surface marker."
+    },
+    {
+      "id": "L0:F15972",
+      "label": "the word \"yeah\"",
+      "reason": "Generic filler/acknowledgement word."
+    },
+    {
+      "id": "L1:F4373",
+      "label": "the letter \"t\" when it is an apostrophe and attached to another word",
+      "reason": "Apostrophe/contraction detector."
+    },
+    {
+      "id": "L2:F9629",
+      "label": "interjections and sounds of hesitation or acknowledgment",
+      "reason": "Hesitation/interjection feature."
+    },
+    {
+      "id": "L2:F859",
+      "label": "words that appear frequently in informal conversation",
+      "reason": "Informal-conversation register cue."
+    },
+    {
+      "id": "L1:F2623",
+      "label": "words in the context of someone talking or expressing opinions.",
+      "reason": "Opinion/talking register cue."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation surface detector on 'haven't'."
+    },
+    {
+      "id": "L2:F1337",
+      "label": "negated verbs with personal pronouns, and foreign language pronouns",
+      "reason": "Negated-pronoun pattern."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation-like lexical detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F5201",
+      "label": "awards and accomplishments in the context of sports",
+      "reason": "Sports-content signal tied to tournament context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L3:F15210",
+      "label": "the phrase \"yet to be\" (or variations with similar words) indicating something is pending or not fully realized.",
+      "reason": "Not cited as active here."
+    },
+    {
+      "id": "L1:F177",
+      "label": "the word \"double\" and words that begin with \"multi\" or \"doubly\"",
+      "reason": "Generic substring feature, dismissed as weak."
+    },
+    {
+      "id": "L0:F7893",
+      "label": "the word \"double\" and words related to entrances and entering",
+      "reason": "Structural/substring ambiguity."
+    },
+    {
+      "id": "L0:F4541",
+      "label": "adverbs of certainty such as \"obviously\" and related words",
+      "reason": "Not relevant to oracle's claim."
+    },
+    {
+      "id": "L3:F2448",
+      "label": "multiple disparate things: youtube videos, computer terminology, links, sports teams, and short French sentences",
+      "reason": "No clear role in the oracle analysis."
+    },
+    {
+      "id": "L3:F3767",
+      "label": "specific phrases such as \"e.g.\", \"array}\", \"for example\", and \"for instance\"",
+      "reason": "Generic explanatory phrasing."
+    },
+    {
+      "id": "L3:F7140",
+      "label": "words or parts of words containing \"man\", \"ent\", \"per\", or \"mate\"",
+      "reason": "Pure substring detector."
+    },
+    {
+      "id": "L3:F16039",
+      "label": "section delimiters and incomplete quotes",
+      "reason": "Structural formatting cue."
+    },
+    {
+      "id": "L0:F10780",
+      "label": "LaTeX commands for including packages and defining document class",
+      "reason": "Formatting-only feature."
+    },
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Not emphasized by oracle."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Purely structural/common-word detector."
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Duplicate of spurious entry; counted there."
+    }
+  ],
+  "n_spurious": 13,
+  "n_causal": 1,
+  "n_other": 12,
+  "spurious_fraction": 0.9285714285714286,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes negation and conversational fillers; only weak sports-content causal signal appears."
+}

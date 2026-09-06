@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F1509",
+      "label": "mentions of countries and nationalities",
+      "reason": "Identity/nationality detector on Indians."
+    },
+    {
+      "id": "L4:F12975",
+      "label": "mentions of Asian countries, calendars, and paganism/eastern religions",
+      "reason": "Nationality/ethnicity signal, not toxicity."
+    },
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Direct racial/ethnic group detector."
+    },
+    {
+      "id": "L0:F3283",
+      "label": "mentions of India and related concepts like Delhi, but sometimes only finds a word indicating importance",
+      "reason": "India mention detector."
+    },
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Group-membership cue, identity-related."
+    },
+    {
+      "id": "L0:F14740",
+      "label": "names of places, people, and organizations",
+      "reason": "Named-entity/identity token cue."
+    },
+    {
+      "id": "L0:F9480",
+      "label": "named countries",
+      "reason": "Country-name detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F15690",
+      "label": "text related to public sentiment and action in response to a problem",
+      "reason": "Late toxicity-relevant semantic framing."
+    },
+    {
+      "id": "L2:F1003",
+      "label": "the word \"abuse\"",
+      "reason": "Abuse/toxic-content lexical detector."
+    },
+    {
+      "id": "L2:F6255",
+      "label": "the word \"abuse\", or phrases related to genitalia",
+      "reason": "Abuse-content detector."
+    },
+    {
+      "id": "L4:F5206",
+      "label": "upstream of L7:15690",
+      "reason": "Feeds toxicity-relevant integrator."
+    },
+    {
+      "id": "L4:F4021",
+      "label": "code snippets or configurations with the word \"as\"",
+      "reason": "Only structure/off-target, not toxicity semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F1053",
+      "label": "the word \"as.\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L1:F7492",
+      "label": "words referring to administrative divisions, animals, or commercial elements",
+      "reason": "Off-target lexical feature."
+    },
+    {
+      "id": "L0:F10389",
+      "label": "words related to legal disputes and technical issues such as device malfunctions or program errors",
+      "reason": "Off-target technical/legal feature."
+    },
+    {
+      "id": "L0:F3564",
+      "label": "mathematical notation symbols",
+      "reason": "Purely structural."
+    },
+    {
+      "id": "L3:F150",
+      "label": "verbs, particularly past participles, and also some words in French",
+      "reason": "Generic syntax/part-of-speech cue."
+    },
+    {
+      "id": "L0:F4199",
+      "label": "the word \"quantity\"",
+      "reason": "Off-target generic lexical feature."
+    },
+    {
+      "id": "L0:F11668",
+      "label": "Baseball terminology",
+      "reason": "Off-target domain term."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 5,
+  "n_other": 8,
+  "spurious_fraction": 0.5833333333333334,
+  "dominant": "spurious",
+  "notes": "Identity signals dominate, but abuse-content features are also clearly present."
+}

@@ -1,0 +1,108 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Profession/role terminology; medical and leadership context."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession indicator."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Healthcare profession vocabulary."
+    },
+    {
+      "id": "L0:F5038",
+      "label": "the word \"graduated\" or variations of it",
+      "reason": "Education/professional background indicator."
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Explicit nursing role terminology."
+    },
+    {
+      "id": "L4:F9036",
+      "label": "words and abbreviations associated with healthcare.",
+      "reason": "Healthcare-profession vocabulary."
+    },
+    {
+      "id": "L8:F9619",
+      "label": "words and phrases related to medical treatment",
+      "reason": "Medical domain profession indicator."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities.",
+      "reason": "Medical workplace/personnel terminology."
+    },
+    {
+      "id": "L7:F15132",
+      "label": "references to medical practices",
+      "reason": "Professional medical practice indicator."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Direct nurse-manager role vocabulary."
+    },
+    {
+      "id": "L15:F15159",
+      "label": "words related to medicine and healthcare",
+      "reason": "Medical profession content."
+    },
+    {
+      "id": "L20:F4927",
+      "label": "titles and acronyms following names, especially within the healthcare field",
+      "reason": "Healthcare professional titles."
+    },
+    {
+      "id": "L1:F1494",
+      "label": "words related to medical practices and studies.",
+      "reason": "Medical/study profession terminology."
+    },
+    {
+      "id": "L14:F6407",
+      "label": "words related to dentistry and medical professionals.",
+      "reason": "Medical profession indicator."
+    },
+    {
+      "id": "L15:F8289",
+      "label": "words and phrases related to clinical medicine, including the terms clinicians use and related scientific fields",
+      "reason": "Clinical medicine vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6270",
+      "label": "the word \"whom\", sometimes also activating on nearby punctuation, sentence starts, discourse markers, and other function words",
+      "reason": "Structural/function-word feature."
+    },
+    {
+      "id": "L6:F4490",
+      "label": "proper nouns corresponding to locations, organizations, medical roles, and coding terms",
+      "reason": "Mixed proper-noun/role feature; oracle cites non-task categories too."
+    },
+    {
+      "id": "L5:F7317",
+      "label": "phrases with names and nicknames",
+      "reason": "Generic name/nickname pattern, not claimed as gendered."
+    },
+    {
+      "id": "L0:F6226",
+      "label": "proper nouns of people",
+      "reason": "Generic name detector, not profession-specific."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 15,
+  "n_other": 4,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle explicitly says no gender-marker features; all listed task-relevant features are profession/medical indicators."
+}

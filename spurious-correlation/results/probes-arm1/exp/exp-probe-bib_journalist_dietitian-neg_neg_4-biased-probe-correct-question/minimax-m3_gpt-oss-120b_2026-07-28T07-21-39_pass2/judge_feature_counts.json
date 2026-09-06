@@ -1,0 +1,154 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Gender pronoun aggregator, not profession"
+    },
+    {
+      "id": "L14:F14097",
+      "label": "occurrences of the word \"he\"",
+      "reason": "Male pronoun detector"
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" ... \"he\" and \"him\"",
+      "reason": "Gendered pronoun feature"
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicitly gendered"
+    },
+    {
+      "id": "L13:F1937",
+      "label": "pronouns used to describe people, including possessive pronouns",
+      "reason": "Pronoun-based gender cue"
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Male pronoun detector"
+    },
+    {
+      "id": "L4:F15567",
+      "label": "sentences with male or female pronouns and possessives, especially ones referring to writing",
+      "reason": "Pronoun-gender signal"
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based"
+    },
+    {
+      "id": "L15:F10510",
+      "label": "references to males in third person and first person pronouns",
+      "reason": "Male reference cue"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession vocabulary"
+    },
+    {
+      "id": "L1:F15416",
+      "label": "the word \"writers\" or \"writer\"",
+      "reason": "Job title"
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters",
+      "reason": "Profession indicator"
+    },
+    {
+      "id": "L4:F13253",
+      "label": "journalism and the media",
+      "reason": "Profession-related"
+    },
+    {
+      "id": "L7:F72",
+      "label": "words related to writing professionally",
+      "reason": "Job-related writing"
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism",
+      "reason": "Profession vocabulary"
+    },
+    {
+      "id": "L1:F4459",
+      "label": "mentions of research institutes",
+      "reason": "Workplace/institution cue"
+    },
+    {
+      "id": "L0:F5288",
+      "label": "the word \"service\" and related terms in different contexts",
+      "reason": "Content-neutral lexical cue"
+    },
+    {
+      "id": "L1:F15063",
+      "label": "mentions of the United States",
+      "reason": "Content-neutral lexical cue"
+    },
+    {
+      "id": "L0:F7124",
+      "label": "the word \"at\"",
+      "reason": "Purely structural/neutral"
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Purely structural/neutral"
+    },
+    {
+      "id": "L0:F4870",
+      "label": "commas and sometimes reach (context not clear)",
+      "reason": "Punctuation/structural"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Output Logit (Probe direction)",
+      "reason": "Not a feature"
+    },
+    {
+      "id": "Emb: he (pos 22)",
+      "label": "he",
+      "reason": "Embedding node, not a curated feature"
+    },
+    {
+      "id": "Emb: writer (pos 28)",
+      "label": "writer",
+      "reason": "Embedding node, not a curated feature"
+    },
+    {
+      "id": "Emb: freelance (pos 27)",
+      "label": "freelance",
+      "reason": "Embedding node, not a curated feature"
+    },
+    {
+      "id": "Emb: Starting (pos 1)",
+      "label": "Starting",
+      "reason": "Embedding node, not a curated feature"
+    },
+    {
+      "id": "Emb: Services (pos 6)",
+      "label": "Services",
+      "reason": "Embedding node, not a curated feature"
+    },
+    {
+      "id": "Emb: United (pos 5)",
+      "label": "United",
+      "reason": "Embedding node, not a curated feature"
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 12,
+  "n_other": 7,
+  "spurious_fraction": 0.42857142857142855,
+  "dominant": "mixed",
+  "notes": "Both journalism cues and male-pronoun cues are present; pronoun path is substantial but not exclusive."
+}

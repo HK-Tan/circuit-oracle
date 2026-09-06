@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Identity/geography detector for Islam-related mentions."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Generic religion/affiliation detector, not toxicity."
+    },
+    {
+      "id": "L8:F13197",
+      "label": "words related to religion and faith",
+      "reason": "Religion/faith detector; no toxic semantics."
+    },
+    {
+      "id": "L7:F14049",
+      "label": "discussion of international political conflicts, especially those regarding Muslims, slavery, race, terrorism and cultural groups.",
+      "reason": "Topic/context feature about Muslims and conflict."
+    },
+    {
+      "id": "L5:F14348",
+      "label": "historical and religious terms, along with associated concepts like slavery and cultural clashes",
+      "reason": "Historical/religious context feature, not direct toxicity."
+    },
+    {
+      "id": "L2:F7214",
+      "label": "early-layer entity/identity detector",
+      "reason": "Identity/entity detector around Islam."
+    },
+    {
+      "id": "L2:F6894",
+      "label": "early-layer entity/identity detector",
+      "reason": "Identity/entity detector around Islam."
+    },
+    {
+      "id": "L1:F2235",
+      "label": "early-layer entity/identity detector",
+      "reason": "Identity detector tied to Allah mention."
+    },
+    {
+      "id": "L0:F13885",
+      "label": "names of people and places, specifically those related to the middle east",
+      "reason": "Middle East name/place detector."
+    },
+    {
+      "id": "L0:F14656",
+      "label": "early-layer entity/identity detector",
+      "reason": "Entity detector on problem token, no toxicity claim."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L12:F7779",
+      "label": "negative language denigrating groups of people",
+      "reason": "Directly encodes denigration of groups."
+    },
+    {
+      "id": "L2:F4053",
+      "label": "inflammatory hateful words, phrases, and names that attack groups of people.",
+      "reason": "Direct hateful/group-attack semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "embed/output",
+      "label": "Probe output direction (toxicity score)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "embed/output",
+      "label": "Emb: Islam (pos 4)",
+      "reason": "Token embedding, not a feature."
+    },
+    {
+      "id": "embed/output",
+      "label": "Emb: Allah (pos 13)",
+      "reason": "Token embedding, not a feature."
+    },
+    {
+      "id": "embed/output",
+      "label": "Emb: false (pos 10)",
+      "reason": "Token embedding, not a feature."
+    },
+    {
+      "id": "embed/output",
+      "label": "Emb: problem (pos 2)",
+      "reason": "Token embedding, not a feature."
+    },
+    {
+      "id": "L8:F16036",
+      "label": "words and phrases related to Israel, Zionism, and related political topics.",
+      "reason": "Political-topic feature, not direct toxicity."
+    },
+    {
+      "id": "L4:F7545",
+      "label": "religious extremism, violence, and terrorism",
+      "reason": "Oracle mentions it, but no standalone authoritative feature label shown."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 2,
+  "n_other": 7,
+  "spurious_fraction": 0.8333333333333334,
+  "dominant": "spurious",
+  "notes": "Mostly identity/context tracking; only two features are direct toxicity detectors."
+}

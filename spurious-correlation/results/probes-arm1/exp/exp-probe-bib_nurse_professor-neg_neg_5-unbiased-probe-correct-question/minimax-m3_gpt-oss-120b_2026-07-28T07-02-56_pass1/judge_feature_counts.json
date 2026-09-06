@@ -1,0 +1,74 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun detector; gender signal."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector; gender signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "words related to academic research",
+      "reason": "Research vocabulary; profession-relevant."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Education/institution signal; profession-relevant."
+    },
+    {
+      "id": "L8:F2383",
+      "label": "words related to archeological sites, digs, and artifacts",
+      "reason": "History/archaeology content; profession-related."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Credential/education signal; profession-relevant."
+    },
+    {
+      "id": "L20:F14235",
+      "label": "references to academic credentials and institutions.",
+      "reason": "Academic credential signal; profession-relevant."
+    },
+    {
+      "id": "L6:F14747",
+      "label": "terms related to historical archives and documents",
+      "reason": "Archive/history vocabulary; profession-relevant."
+    },
+    {
+      "id": "L9:F988",
+      "label": "information about academic degrees",
+      "reason": "Degree/credential signal; profession-relevant."
+    },
+    {
+      "id": "L6:F13001",
+      "label": "references to academic disciplines and studies",
+      "reason": "Academic discipline vocabulary; profession-relevant."
+    },
+    {
+      "id": "L14:F3956",
+      "label": "universities and degrees",
+      "reason": "Education/institution signal; profession-relevant."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Generic surface feature only."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 9,
+  "n_other": 1,
+  "spurious_fraction": 0.18181818181818182,
+  "dominant": "causal",
+  "notes": "Oracle lists two gender features, one generic feature, and several profession-relevant academic/history features."
+}

@@ -1,0 +1,48 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: She (pos 1)",
+      "label": "Emb: She (pos 1)",
+      "reason": "Gender pronoun; spurious biography shortcut."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: Nursing (pos 10)",
+      "label": "Emb: Nursing (pos 10)",
+      "reason": "Direct profession indicator: nursing."
+    },
+    {
+      "id": "Emb: graduated (pos 2)",
+      "label": "Emb: graduated (pos 2)",
+      "reason": "Education/resume cue supporting profession."
+    },
+    {
+      "id": "Education-context detector: graduated",
+      "label": "Education-context detector: graduated",
+      "reason": "Education-context cue, not gender."
+    },
+    {
+      "id": "Explicit nursing-token detectors",
+      "label": "Explicit nursing-token detectors",
+      "reason": "Token-local nursing profession evidence."
+    },
+    {
+      "id": "Clinical/nursing semantic aggregation",
+      "label": "Clinical/nursing semantic aggregation",
+      "reason": "Aggregates nursing/clinical profession meaning."
+    },
+    {
+      "id": "Highly specific nurse/nurse-manager concept",
+      "label": "Highly specific nurse/nurse-manager concept",
+      "reason": "Specific nurse-role semantic feature."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 6,
+  "n_other": 0,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "causal",
+  "notes": "Oracle centers nursing evidence; pronoun support is weak and indirect."
+}

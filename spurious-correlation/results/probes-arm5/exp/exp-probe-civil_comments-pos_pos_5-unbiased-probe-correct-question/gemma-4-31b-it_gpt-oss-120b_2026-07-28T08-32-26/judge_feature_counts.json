@@ -1,0 +1,37 @@
+{
+  "spurious_features": [],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun detector; purely structural."
+    },
+    {
+      "id": "L0:F13310",
+      "label": "sentences that include forms of the verb \"are\" indicating a present state of being or necessity.",
+      "reason": "Generic copula/presence pattern; structural."
+    },
+    {
+      "id": "L6:F9005",
+      "label": "words and phrases related to desserts",
+      "reason": "Unrelated to toxicity or identity signals."
+    },
+    {
+      "id": "L3:F10868",
+      "label": "the phrase \"I'm a\" or \"I am a\"",
+      "reason": "Generic identity-phrase syntax; not demographic."
+    },
+    {
+      "id": "L3:F16254",
+      "label": "conditional statements followed by actions the speaker will take",
+      "reason": "Structural discourse pattern; not toxicity-specific."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": null,
+  "dominant": "none",
+  "notes": "Oracle cites only generic/irrelevant features; no toxicity or identity signals claimed."
+}

@@ -1,0 +1,62 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Emb: Ph (pos 50)",
+      "label": "Ph",
+      "reason": "Part of explicit Ph.D. credential"
+    },
+    {
+      "id": "Emb: D (pos 52)",
+      "label": "D",
+      "reason": "Part of explicit Ph.D. credential"
+    },
+    {
+      "id": "Emb: Peking (pos 12)",
+      "label": "Peking",
+      "reason": "Named-university recognition"
+    },
+    {
+      "id": "Emb: University (pos 13)",
+      "label": "University",
+      "reason": "Named-university recognition"
+    },
+    {
+      "id": "L1:F10132",
+      "label": "the abbreviation for Doctorate of Philosophy, \"Ph.D.\" (or \"PhD\") written as \"D\"",
+      "reason": "Explicit degree detector"
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Academic credential signal"
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Academic-degree aggregation"
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Academic biography context"
+    },
+    {
+      "id": "L4:F5150",
+      "label": "mentions of specific universities and colleges",
+      "reason": "University recognition"
+    },
+    {
+      "id": "L6:F3235",
+      "label": "academic publications, math, and scientific institutions",
+      "reason": "Academic institution context"
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 10,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle centers academic credential/university cues; no gender-marker feature is actually claimed."
+}

@@ -1,0 +1,74 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Gendered pronoun signal; semantically spurious for profession."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector; clearly gender-marked."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Research vocabulary; occupation-relevant."
+    },
+    {
+      "id": "L0:F10036",
+      "label": "words about scientific research and scientists",
+      "reason": "Scientific research terminology; profession cue."
+    },
+    {
+      "id": "L1:F7449",
+      "label": "instances of the word \"representation\"",
+      "reason": "Profession-adjacent lexical cue from prompt."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: stories (pos 3)",
+      "label": "Emb: stories",
+      "reason": "Embedding node, not a feature class."
+    },
+    {
+      "id": "Emb: represents (pos 9)",
+      "label": "Emb: represents",
+      "reason": "Embedding node, not a feature class."
+    },
+    {
+      "id": "Emb: him (pos 46)",
+      "label": "Emb: him",
+      "reason": "Embedding node, not a feature class."
+    },
+    {
+      "id": "L0:F5333",
+      "label": "mentions of stories that are being told",
+      "reason": "Narrative/style cue, not profession-specific."
+    },
+    {
+      "id": "L1:F14812",
+      "label": "references to stories, chapters, and other narrative elements",
+      "reason": "Narrative concept; non-occupation lexical proxy."
+    },
+    {
+      "id": "L0:F61",
+      "label": "the word \"stories\" sometimes along with apostrophes and common names.",
+      "reason": "Generic story token detector; not causal."
+    },
+    {
+      "id": "Output: synthetic profession-probe score",
+      "label": "Output: synthetic profession-probe score",
+      "reason": "Oracle output node, not a feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 3,
+  "n_other": 7,
+  "spurious_fraction": 0.4,
+  "dominant": "mixed",
+  "notes": "Pronoun route is spurious; research/representation cues are causal-like. Narrative features are other."
+}

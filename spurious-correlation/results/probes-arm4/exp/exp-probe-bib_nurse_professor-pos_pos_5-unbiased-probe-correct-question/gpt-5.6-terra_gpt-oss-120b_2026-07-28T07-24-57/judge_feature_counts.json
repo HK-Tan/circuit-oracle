@@ -1,0 +1,68 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L3:F10198",
+      "label": "words related to anesthetics and medical procedures",
+      "reason": "Obstetric clinical procedure context"
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities",
+      "reason": "Hospital/medical-care context"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing profession detector"
+    },
+    {
+      "id": "L6:F4490",
+      "label": "proper nouns corresponding to locations, organizations, medical roles, and coding terms",
+      "reason": "Medical-role/organization context"
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare profile context"
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Broad clinical/professional concept"
+    },
+    {
+      "id": "L0:F8854",
+      "label": "the word \"nurse\" as well as some pronouns",
+      "reason": "Triggered here by nurse, not pronouns"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Labor (pos 9)",
+      "label": "embed/output",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: Delivery (pos 11)",
+      "label": "embed/output",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: nurse (pos 12)",
+      "label": "embed/output",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Probe classification score",
+      "label": "probe output",
+      "reason": "Output node, not a feature"
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 7,
+  "n_other": 4,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Circuit is driven by nursing/medical profession evidence, not gender markers."
+}

@@ -1,0 +1,27 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Entity/topic cue, not negation."
+    },
+    {
+      "id": "L3:F5753",
+      "label": "the word \"includes\" or \"containing\"",
+      "reason": "Lexical inclusion cue; content-neutral."
+    },
+    {
+      "id": "L4:F59",
+      "label": "phrases with the word 'to' preceded by a verb or the word 'start' or 'begin'.",
+      "reason": "Generic verb-to syntax, not semantic contradiction."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 3,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle lists no negation-word detectors; all curated features are causal or structural."
+}

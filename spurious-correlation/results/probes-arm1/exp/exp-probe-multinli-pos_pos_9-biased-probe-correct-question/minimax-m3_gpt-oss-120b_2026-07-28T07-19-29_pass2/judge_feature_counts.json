@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\"",
+      "reason": "Direct negation-word detector; spurious for this NLI task."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Surface negation-word detector; spurious shortcut."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector by token form, not meaning."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation-word detector; spurious surface cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Content-related lexical cue; not negation."
+    },
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Lexical/content feature, not negation."
+    },
+    {
+      "id": "L2:F8776",
+      "label": "words related to finance and property law",
+      "reason": "Content-based lexical feature; not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Purely lexical; oracle gives unrelated menu detector."
+    },
+    {
+      "id": "L1:F12253",
+      "label": "the word 'menu'",
+      "reason": "Purely lexical; oracle gives unrelated menu detector."
+    },
+    {
+      "id": "L0:F13938",
+      "label": "the word \"wild\"",
+      "reason": "Oracle mentions negative contributor, but unrelated."
+    },
+    {
+      "id": "Probe direction",
+      "label": "contradiction classifier",
+      "reason": "Model output node, not a feature."
+    },
+    {
+      "id": "Emb: ' not' (pos 17)",
+      "label": null,
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' do' (pos 16)",
+      "label": null,
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' recorded' (pos 2)",
+      "label": null,
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' menus' (pos 15)",
+      "label": null,
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' menu' (pos 3)",
+      "label": null,
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' obtain' (pos 10)",
+      "label": null,
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: '<bos>' (pos 0)",
+      "label": null,
+      "reason": "Embedding node, not a feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 3,
+  "n_other": 11,
+  "spurious_fraction": 0.5714285714285714,
+  "dominant": "spurious",
+  "notes": "Negation detectors dominate; record-related features are causal/content-based, while menu/wild and embeddings are other."
+}

@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gender pronoun feature; spurious marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F4030",
+      "label": "words related to mission statements and personal development used in career environments",
+      "reason": "Career-environment content words; profession-relevant."
+    },
+    {
+      "id": "L0:F10218",
+      "label": "the word \"lifestyle.\"",
+      "reason": "Topic/content signal linked to profession."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Oracle says food-related concept; topic content."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@15",
+      "label": "Emb: food (pos 15)",
+      "reason": "Raw token embedding; not a semantic feature."
+    },
+    {
+      "id": "L0:F0@41",
+      "label": "Emb: food (pos 41)",
+      "reason": "Raw token embedding; not a semantic feature."
+    },
+    {
+      "id": "L0:F0@14",
+      "label": "Emb: healthy (pos 14)",
+      "reason": "Raw token embedding; not a semantic feature."
+    },
+    {
+      "id": "L0:F0@34",
+      "label": "Emb: dieting (pos 34)",
+      "reason": "Raw token embedding; not a semantic feature."
+    },
+    {
+      "id": "L0:F0@22",
+      "label": "Emb: active (pos 22)",
+      "reason": "Raw token embedding; not a semantic feature."
+    },
+    {
+      "id": "L0:F0@21",
+      "label": "Emb: physically (pos 21)",
+      "reason": "Raw token embedding; not a semantic feature."
+    },
+    {
+      "id": "L0:F0@17",
+      "label": "Emb: lifestyle (pos 17)",
+      "reason": "Raw token embedding; not a semantic feature."
+    },
+    {
+      "id": "L0:F0@3",
+      "label": "Emb: passionate (pos 3)",
+      "reason": "Raw token embedding; not a semantic feature."
+    },
+    {
+      "id": "L0:F0@6",
+      "label": "Emb: others (pos 6)",
+      "reason": "Raw token embedding; not a semantic feature."
+    },
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: She (pos 1)",
+      "reason": "Raw token embedding; not a semantic feature."
+    },
+    {
+      "id": "L4:F13412@34",
+      "label": "Health/diet/physical-activity concepts",
+      "reason": "Grouped high-level concept already counted."
+    },
+    {
+      "id": "L4:F3047@22",
+      "label": "Health/diet/physical-activity concepts",
+      "reason": "Grouped high-level concept already counted."
+    },
+    {
+      "id": "L6:F11327@15",
+      "label": "Food/nutrition concept (multi-pos)",
+      "reason": "Grouped concept; duplicate of food signal."
+    },
+    {
+      "id": "L6:F11327@41",
+      "label": "Food/nutrition concept (multi-pos)",
+      "reason": "Grouped concept; duplicate of food signal."
+    },
+    {
+      "id": "L0:F2349@6",
+      "label": "the word \"others\"",
+      "reason": "Oracle says negative side-channel; not a task feature."
+    },
+    {
+      "id": "L0:F11646@1",
+      "label": "Gender pronoun feature (she/her)",
+      "reason": "Oracle says pronoun feature, but inhibitory side-channel."
+    },
+    {
+      "id": "L0:F2238@4",
+      "label": "Content-word detectors (lifestyle, mission/passionate, pick)",
+      "reason": "Already covered by content-word feature."
+    },
+    {
+      "id": "L0:F2845@9",
+      "label": "Content-word detectors (lifestyle, mission/passionate, pick)",
+      "reason": "Already covered by content-word feature."
+    },
+    {
+      "id": "L0:F8444@12",
+      "label": "Content-word detectors (lifestyle, mission/passionate, pick)",
+      "reason": "Already covered by content-word feature."
+    },
+    {
+      "id": "L0:F0@0",
+      "label": "Output logit (probe direction)",
+      "reason": "Mechanistic output node; not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 3,
+  "n_other": 20,
+  "spurious_fraction": 0.25,
+  "dominant": "causal",
+  "notes": "Oracle says topic content dominates; she/her is inhibitory, not primary."
+}

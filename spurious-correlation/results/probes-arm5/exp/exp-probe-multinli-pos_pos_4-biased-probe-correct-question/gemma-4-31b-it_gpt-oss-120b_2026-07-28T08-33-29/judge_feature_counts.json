@@ -1,0 +1,28 @@
+{
+  "spurious_features": [
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Negation-word detector in hypothesis; classic spurious NLI cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Lexical relation tied to task meaning overlap, not negation."
+    },
+    {
+      "id": "L2:F1016",
+      "label": "forms of the verb \"tour\" and the noun \"tour.\"",
+      "reason": "Content word signal about premise-hypothesis semantics."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 2,
+  "n_other": 0,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Probe uses mostly semantic lexical cues, with one negation-based spurious feature."
+}

@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Negation suffix detector in hypothesis."
+    },
+    {
+      "id": "L0:F4365",
+      "label": "the word \"neither\" and related negative terms.",
+      "reason": "Negative-term detector in hypothesis."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F12862",
+      "label": "the word \"tournament\" and related words such as \"winning\", but not always",
+      "reason": "Task-relevant sports context; may support semantic relation."
+    },
+    {
+      "id": "L1:F13255",
+      "label": "the word \"season\" and words associated with it",
+      "reason": "Content word tied to event semantics."
+    },
+    {
+      "id": "L0:F8083",
+      "label": "the word \"double\" and surrounding words when numbers are also present",
+      "reason": "Potentially content-bearing numeric/syntactic relation."
+    },
+    {
+      "id": "L1:F177",
+      "label": "the word \"double\" and words that begin with \"multi\" or \"doubly\"",
+      "reason": "Likely lexical content, not pure form."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Generic conversational marker."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "Discourse style feature."
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Purely structural/discourse marker."
+    },
+    {
+      "id": "L3:F14620",
+      "label": "the word \"well\" and conjunctions like \"and\"",
+      "reason": "Generic connective wording."
+    },
+    {
+      "id": "L2:F15282",
+      "label": "the words \"anyway\" and \"yeah\"",
+      "reason": "Conversational filler words."
+    },
+    {
+      "id": "L0:F15682",
+      "label": "the word \"okay\" plus a few related expressions.",
+      "reason": "Generic acknowledgement marker."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L6:F11557",
+      "label": "frequently used words such as conjunctions, pronouns, or discourse markers",
+      "reason": "Broad stylistic feature."
+    },
+    {
+      "id": "L4:F6072",
+      "label": "the word \"now\" followed by a verb",
+      "reason": "Syntactic pattern, not semantic role."
+    },
+    {
+      "id": "L0:F15612",
+      "label": "mentions of dollar amounts",
+      "reason": "Irrelevant numeric surface cue."
+    },
+    {
+      "id": "L3:F9770",
+      "label": "technical and scientific writing about neuroscience and chemistry, possibly about calcium",
+      "reason": "Oracle-detected unrelated domain cue."
+    },
+    {
+      "id": "L0:F8659",
+      "label": "the word \"foundation\" in different contexts, including religious, legal, and abstract senses.",
+      "reason": "Unrelated lexical ambiguity."
+    },
+    {
+      "id": "L0:F5912",
+      "label": "\"year\" but also sometimes finds related words that include \"day\", \"living\", or \"sold\"",
+      "reason": "Broad lexical artifact."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Unrelated topical cue."
+    },
+    {
+      "id": "L1:F7762",
+      "label": "the word \"inspection\"",
+      "reason": "Unrelated content word."
+    },
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Common connective, not causal-semantic evidence here."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 4,
+  "n_other": 16,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "mixed",
+  "notes": "Oracle shows mostly other features; remaining semantic cues are mixed, with only two clear negation artifacts."
+}

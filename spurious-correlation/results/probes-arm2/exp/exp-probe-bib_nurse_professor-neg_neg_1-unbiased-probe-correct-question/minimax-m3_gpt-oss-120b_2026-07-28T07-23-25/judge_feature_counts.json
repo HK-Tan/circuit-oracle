@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "Early pronoun/possessive detector",
+      "reason": "Triggered by 'His'; gendered possessive cue."
+    },
+    {
+      "id": "L1:F10986",
+      "label": "Early pronoun/possessive detector",
+      "reason": "Anchored on 'research interests' opener; stylistic biography cue."
+    },
+    {
+      "id": "L0:F13948",
+      "label": "Early pronoun/possessive detector",
+      "reason": "Pronoun/possessive-associated signal; gender-marker related."
+    },
+    {
+      "id": "L0:F13431",
+      "label": "Early pronoun/possessive detector",
+      "reason": "Pronoun/possessive-associated signal; gender-marker related."
+    },
+    {
+      "id": "L0:F10783",
+      "label": "Early pronoun/possessive detector",
+      "reason": "Pronoun/possessive-associated signal; gender-marker related."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "Early pronoun/possessive detector",
+      "reason": "Pronoun/possessive-associated signal; gender-marker related."
+    },
+    {
+      "id": "L0:F2159",
+      "label": "Early pronoun/possessive detector",
+      "reason": "Pronoun/possessive-associated signal; gender-marker related."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "Early pronoun/possessive detector",
+      "reason": "Anchored on 'His'; gendered possessive cue."
+    },
+    {
+      "id": "L5:F12330",
+      "label": "Mid-layer visualization/graphics inhibitory",
+      "reason": "Generic punctuation/segmentation feature, not profession semantics."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F3727",
+      "label": "Mid-layer PhD/credential features",
+      "reason": "Promoted by PhD token; credential indicator."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "Mid-layer PhD/credential features",
+      "reason": "Promoted by PhD token; credential indicator."
+    },
+    {
+      "id": "L5:F11028",
+      "label": "Mid-layer PhD/credential features",
+      "reason": "Promoted by PhD token; credential indicator."
+    },
+    {
+      "id": "L5:F12906",
+      "label": "Mid-layer PhD/credential features",
+      "reason": "Promoted by PhD token; credential indicator."
+    },
+    {
+      "id": "L5:F1644",
+      "label": "Mid-layer PhD/credential features",
+      "reason": "Promoted by PhD token; credential indicator."
+    },
+    {
+      "id": "L4:F13943",
+      "label": "Mid-layer PhD/credential features",
+      "reason": "Promoted by PhD token; credential indicator."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "Mid-layer PhD/credential features",
+      "reason": "Promoted by PhD token at pos 27."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "Mid-layer PhD/credential features",
+      "reason": "Downstream of PhD credential circuit."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe output",
+      "label": "profession classifier",
+      "reason": "Classifier output, not a feature."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "Mid-layer visualization/graphics inhibitory",
+      "reason": "Oracle says inhibitory; feature identity uncertain."
+    },
+    {
+      "id": "L6:F2254@17",
+      "label": "Mid-layer visualization/graphics inhibitory",
+      "reason": "Inhibitory at pos 17; oracle marks as same feature."
+    },
+    {
+      "id": "L8:F11284",
+      "label": "Mid-layer visualization/graphics inhibitory",
+      "reason": "Negative on visualization token; oracle-curated inhibitory."
+    },
+    {
+      "id": "L14:F11252",
+      "label": "Mid-layer visualization/graphics inhibitory",
+      "reason": "Negative on visualization token; oracle-curated inhibitory."
+    },
+    {
+      "id": "L2:F1621",
+      "label": "Mid-layer visualization/graphics inhibitory",
+      "reason": "Attaches to research/interest token; role unclear."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 8,
+  "n_other": 6,
+  "spurious_fraction": 0.5294117647058824,
+  "dominant": "mixed",
+  "notes": "Positive drive is mostly PhD/credential plus gendered pronoun cues; genuine profession tokens are inhibitory."
+}

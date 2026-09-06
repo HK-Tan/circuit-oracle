@@ -1,0 +1,187 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F0@10",
+      "label": "Emb: ' Nursing'",
+      "reason": "Direct profession token at the anchor position."
+    },
+    {
+      "id": "L0:F0@6",
+      "label": "Emb: 'achelors'",
+      "reason": "Part of degree phrase indicating education."
+    },
+    {
+      "id": "L0:F0@8",
+      "label": "Emb: ' Science'",
+      "reason": "Degree phrase component, profession-relevant context."
+    },
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: ' in'",
+      "reason": "Degree-template connector, not gendered."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: ' graduated'",
+      "reason": "Education/work-history cue, profession-related."
+    },
+    {
+      "id": "L1:F14469",
+      "label": "Early 'Nursing' word-form features",
+      "reason": "Detects the profession word form."
+    },
+    {
+      "id": "L1:F10429",
+      "label": "Early 'Nursing' word-form features",
+      "reason": "Detects the profession word form."
+    },
+    {
+      "id": "L1:F5829",
+      "label": "Early 'Nursing' word-form features",
+      "reason": "Detects the profession word form."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "Bigram/subword composition features",
+      "reason": "Composes profession-relevant subword evidence."
+    },
+    {
+      "id": "L2:F9995",
+      "label": "Bigram/subword composition features",
+      "reason": "Composes profession-relevant subword evidence."
+    },
+    {
+      "id": "L4:F3727",
+      "label": "'Bachelors of Science in' degree-phrase template",
+      "reason": "Education template supporting profession inference."
+    },
+    {
+      "id": "L5:F11037",
+      "label": "Mid-layer 'Nursing' word-sense features",
+      "reason": "Refines the profession word sense."
+    },
+    {
+      "id": "L5:F10392",
+      "label": "Mid-layer 'Nursing' word-sense features",
+      "reason": "Refines the profession word sense."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "Mid-layer 'Nursing' word-sense features",
+      "reason": "Refines the profession word sense."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "Core 'Nursing' profession word detector",
+      "reason": "Main profession detector in the circuit."
+    },
+    {
+      "id": "L6:F4490",
+      "label": "Core 'Nursing' profession word detector",
+      "reason": "Main profession detector in the circuit."
+    },
+    {
+      "id": "L6:F170",
+      "label": "Core 'Nursing' profession word detector",
+      "reason": "Main profession detector in the circuit."
+    },
+    {
+      "id": "L6:F3475",
+      "label": "Core 'Nursing' profession word detector",
+      "reason": "Main profession detector in the circuit."
+    },
+    {
+      "id": "L7:F210",
+      "label": "'Nursing' sense refinement / context integration",
+      "reason": "Integrates profession context around the word."
+    },
+    {
+      "id": "L7:F4208",
+      "label": "'Nursing' sense refinement / context integration",
+      "reason": "Integrates profession context around the word."
+    },
+    {
+      "id": "L7:F5829",
+      "label": "'Nursing' sense refinement / context integration",
+      "reason": "Integrates profession context around the word."
+    },
+    {
+      "id": "L7:F8194",
+      "label": "'Nursing' sense refinement / context integration",
+      "reason": "Integrates profession context around the word."
+    },
+    {
+      "id": "L7:F4654",
+      "label": "'Nursing' sense refinement / context integration",
+      "reason": "Integrates profession context around the word."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "Competing-sense suppressor on 'Nursing'",
+      "reason": "Suppresses alternative profession sense."
+    },
+    {
+      "id": "L3:F15901",
+      "label": "General Nursing-context suppressor (competing profession)",
+      "reason": "Competes on profession sense, not gender."
+    },
+    {
+      "id": "L8:F16339",
+      "label": "Late-layer aggregated 'Nursing profession' features",
+      "reason": "Aggregates profession evidence."
+    },
+    {
+      "id": "L8:F440",
+      "label": "Late-layer aggregated 'Nursing profession' features",
+      "reason": "Aggregates profession evidence."
+    },
+    {
+      "id": "L8:F9619",
+      "label": "Late-layer aggregated 'Nursing profession' features",
+      "reason": "Aggregates profession evidence."
+    },
+    {
+      "id": "L8:F4607",
+      "label": "Late-layer aggregated 'Nursing profession' features",
+      "reason": "Aggregates profession evidence."
+    },
+    {
+      "id": "L10:F1461",
+      "label": "Mid-layer refinement (inhibitory)",
+      "reason": "Refines profession-class signal."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "Top output-driving 'Nursing profession' features",
+      "reason": "Directly drives profession classification."
+    },
+    {
+      "id": "L15:F15159",
+      "label": "Secondary output-driving Nursing features",
+      "reason": "Supports profession classification output."
+    },
+    {
+      "id": "L15:F8289",
+      "label": "Secondary output-driving Nursing features",
+      "reason": "Supports profession classification output."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "Highest-activation Nursing feature (dominant anchor)",
+      "reason": "Dominant profession anchor feature."
+    },
+    {
+      "id": "L26:F0@10",
+      "label": "Probe output (classification score)",
+      "reason": "Final score from profession features."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 35,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Circuit is entirely profession/education driven; no gender markers are actually claimed."
+}

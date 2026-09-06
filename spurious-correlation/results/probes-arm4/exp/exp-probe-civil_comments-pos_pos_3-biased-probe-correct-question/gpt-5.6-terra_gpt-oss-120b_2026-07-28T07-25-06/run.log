@@ -1,0 +1,40 @@
+
+============================================================
+Graph: civil_comments-pos_pos_3-biased-probe-correct
+============================================================
+Loading civil_comments-pos_pos_3-biased-probe-correct.pt...
+  4556 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — civil_comments-pos_pos_3-biased-probe-correct
+============================================================
+**Analysis:** The probe’s toxicity score is driven primarily by a conjunction of a highly salient Jewish/ethnic-identity signal and explicit derogatory “stain/disgrace” language, with the identity pathway considerably more dominant than the lexical insult pathway.
+
+**Confidence:** 8/10
+
+**Reasoning:** The synthetic target is the probe direction, not a next-token logit. Its largest positive circuit driver is **L6:F648 at “ Jew” (pos 6)**, contributing **+0.7383** directly to the toxicity-probe score. This is a selective feature (frac_nonzero **0.01607**) labelled *discrimination against particular religious or ethnic groups*; its promoted tokens include **“Jewish,” “Jews,”** and synagogue-related strings. It receives an exceptionally large direct upstream contribution from **Emb: “ Jew” (pos 6), +19.375**, so the group term itself is the principal source of this branch.
+
+The recorded circuit’s identity path is:
+
+`Emb: Jew → Jewish / ethnic-identity detectors → discrimination-against-religious/ethnic-groups detector → probe score`.
+
+The early supernode contains:
+- **L2:F13158 (pos 6)**, +0.2852 direct probe effect, a rare *race/ethnicity* feature (frac_nonzero **0.00986**) that promotes *ethnic, LGBT, Hispanic, Muslim,* and **Jewish**. Its strongest upstream input is again **Emb: Jew, +6.8125**.
+- **L3:F12151 (pos 6)**, a very selective (frac_nonzero **0.00322**) orthographic/letter-sequence feature with promoted tokens **“jew”**. It is not a clean semantic detector, but is still directly driven by **Emb: Jew (+11)** and **Emb: liberal (+3.375)**, making it a lexical association channel rather than evidence of the full proposition.
+- **L4:F2405 (pos 6)**, religious-affiliation signal (frac_nonzero **0.00705**), with **Emb: liberal (+6.75)** and **Emb: Jew (+3.78)** as leading inputs.
+- **L4:F14733 (pos 6)**, Israel/Palestine-associated signal (frac_nonzero **0.00958**) and **L4:F117**, race/racism signal (frac_nonzero **0.01199**). These show that the representation is recruiting a broad social-identity / conflict / prejudice neighborhood, not merely recognizing the sentence’s evaluative meaning.
+
+Thus, there is clear evidence supporting the user’s concern: the **identity-group word “Jew” is not incidental**. It supplies a disproportionately large input contribution to the top downstream toxicity-driving feature, and several early detectors respond to ethnicity, religion, racism, or Israel/Palestine associations. In particular, the dominant L6 feature fires on broad references to Jews and other ethnic/religious groups, including examples that are not necessarily abusive. This makes it a plausible spurious correlate for toxicity when considered in isolation.
+
+However, the circuit is **not identity-only**. A separately grounded negative-evaluation path captures the actual hostile content:
+- **Emb: “ stain” (pos 9)** feeds **L6:F1561 (pos 10)** with +5.4688. L6:F1561 is a respect/status/pride/shame feature (frac_nonzero **0.00847**) promoting *dignity, humiliation, Shame,* and *shame*.
+- That feeds **L8:F13875 (pos 10)**, direct probe effect **+0.2256**, a selective (frac_nonzero **0.01022**) *negative reputation / betrayal / disgrace* feature. It is also directly supported by **Emb: “stain” (+2.02)**. This is semantically appropriate: calling someone “a stain on his brethren and his country” is explicitly demeaning.
+
+A third, weaker branch connects **Emb: “Self” (pos 1), +2.59** through **L3:F9615**, a *self-* construction detector (frac_nonzero **0.00549**), to **L8:F2483 (pos 3)**, which has a +0.1738 probe effect and is labelled around prejudice/disability/slavery discussions (frac_nonzero **0.02256**). Its semantics are broad and noisy; it should be interpreted as a weak contextual association rather than a reliable detector of toxicity.
+
+Overall, the final circuit supports a **mixed mechanism**:
+1. genuine lexical-semantic detection of derogation/shame (“stain,” and the broader self-condemning formulation); and  
+2. a stronger identity-associated route activated by **“Jew”**, “liberal,” and a cluster of race/religion/conflict features.
+
+The second route creates a meaningful risk of false positives on neutral discussion of Jewish identity or other protected groups, because its dominant detector is directly activated by the identity term and its training-distribution associations, not solely by a representation of hostile targeting.
+Results saved to: <repo>/spurious-correlation/results/probes-arm4/exp/exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question/gpt-5.6-terra_gpt-oss-120b_2026-07-28T07-25-06

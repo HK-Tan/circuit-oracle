@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gender marker about women via she/her."
+    },
+    {
+      "id": "L1:F7244",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Female pronoun detector."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Female pronoun detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Scientific nutrition context."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food/eating vocabulary."
+    },
+    {
+      "id": "L15:F2510",
+      "label": "words and phrases related to food preparation and consumption, along with some words relating to the digestive system and eating disorders",
+      "reason": "Food preparation/kitchen."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "General food/nutrition words."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Dietary health terminology."
+    },
+    {
+      "id": "L4:F9554",
+      "label": "words and phrases related to food preparation and consumption, along with some words relating to the digestive system and eating disorders",
+      "reason": "Food/feeding vocabulary."
+    },
+    {
+      "id": "L1:F728",
+      "label": "words related to gaining knowledge",
+      "reason": "Learning/teaching vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural feature."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Structural/token pattern only."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 7,
+  "n_other": 4,
+  "spurious_fraction": 0.3,
+  "dominant": "causal",
+  "notes": "Oracle shows both gender and nutrition paths, but causal food/nutrition features dominate."
+}

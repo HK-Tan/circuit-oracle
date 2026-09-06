@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector; gender marker."
+    },
+    {
+      "id": "L0:F16297",
+      "label": "the pronoun \"him\"",
+      "reason": "Male pronoun detector; gender marker."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Gendered relational terms; spurious."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Possessive pronoun gender marker."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit male-gender feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun detector; gendered in context."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male possessive pronoun detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun token detector."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Male-bias pronoun feature."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "People-name/pronoun feature, male-promoted here."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F7927",
+      "label": "past-participle verbs",
+      "reason": "Structural syntax feature, task-neutral."
+    },
+    {
+      "id": "L0:F2011",
+      "label": "the word \"dream\"",
+      "reason": "Generic lexical item; not profession-specific."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Common function word, not causal profession cue."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Direct reporter/journalism indicator."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession vocabulary; causal."
+    },
+    {
+      "id": "L8:F8437",
+      "label": "Film festival/production",
+      "reason": "Media/production domain cue; profession-related."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Unrelated suppressor feature."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 7,
+  "n_other": 1,
+  "spurious_fraction": 0.5882352941176471,
+  "dominant": "spurious",
+  "notes": "Gender-pronoun circuitry dominates; journalism cues are present but secondary."
+}

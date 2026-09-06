@@ -1,0 +1,69 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-pronoun feature; gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "words related to academic research",
+      "reason": "Research language indicates academic-profession context."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Ph.D./degree detector; profession credential."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Academic biography and credentials."
+    },
+    {
+      "id": "L17:F11003",
+      "label": "university",
+      "reason": "University mention; education terminology."
+    },
+    {
+      "id": "L17:F7973",
+      "label": "phrases describing someone's education and the schools they attended",
+      "reason": "Education-history aggregation."
+    },
+    {
+      "id": "L20:F14235",
+      "label": "references to academic credentials and institutions.",
+      "reason": "Academic credentials and institutions."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: research (pos 2)",
+      "label": "embedding token",
+      "reason": "Token trigger, not a feature."
+    },
+    {
+      "id": "Emb: Ph (pos 13)",
+      "label": "embedding token",
+      "reason": "Token trigger, not a feature."
+    },
+    {
+      "id": "Emb: D (pos 15)",
+      "label": "embedding token",
+      "reason": "Token trigger, not a feature."
+    },
+    {
+      "id": "Emb: from (pos 19)",
+      "label": "embedding token",
+      "reason": "Structural token trigger."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 6,
+  "n_other": 4,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "causal",
+  "notes": "Academic credential circuit dominates; one male-pronoun feature is spurious."
+}

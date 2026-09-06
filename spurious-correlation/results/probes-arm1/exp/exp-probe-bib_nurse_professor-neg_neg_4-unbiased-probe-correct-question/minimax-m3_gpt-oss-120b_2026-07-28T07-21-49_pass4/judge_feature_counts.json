@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun feature; gender marker."
+    },
+    {
+      "id": "L14:F15086",
+      "label": "references to Korea/Korean",
+      "reason": "Nationality/ethnicity marker, not profession."
+    },
+    {
+      "id": "L7:F13010",
+      "label": "Korean names, especially those with multiple parts separated by hyphens, in credits or medical contexts.",
+      "reason": "Name/ethnicity marker, not profession."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree signal relevant to profession."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "abbreviations for degrees and mentions of educational attainment",
+      "reason": "Education/profession indicator."
+    },
+    {
+      "id": "L2:F4627",
+      "label": "the word \"director\"",
+      "reason": "Direct profession keyword."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Academic profession indicator."
+    },
+    {
+      "id": "L1:F14934",
+      "label": "the word \"grid\" and some related terms related to \"grids\"",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F5743",
+      "label": "the word \"lab\" and words that might be associated with equipment or a positive experience",
+      "reason": "Laboratory/profession vocabulary."
+    },
+    {
+      "id": "L4:F12934",
+      "label": "names of academic journals",
+      "reason": "Academic/workplace context."
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "Academic research/profession cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F10846",
+      "label": "the word \"also\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F8658",
+      "label": "the word \"is\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F5718",
+      "label": "the word \"still\" and adverbs that indicate a continuing action",
+      "reason": "Generic adverb/structure."
+    },
+    {
+      "id": "L0:F12208",
+      "label": "the word \"perspective\"",
+      "reason": "Generic content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F12904",
+      "label": "mentions of the day prior or positions of authority",
+      "reason": "Broad structural/authority cue."
+    },
+    {
+      "id": "L0:F1242",
+      "label": "the word \"appropriate\"",
+      "reason": "Not claimed as profession-specific."
+    },
+    {
+      "id": "L0:F15160",
+      "label": "the word \"concerns\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F10457",
+      "label": "the string \"filename\"",
+      "reason": "Dismissed/irrelevant feature."
+    },
+    {
+      "id": "L1:F10132",
+      "label": "the abbreviation for Doctorate of Philosophy, \"Ph.D.\" (or \"PhD\") written as \"D\"",
+      "reason": "Duplicate of degree cue; already counted."
+    },
+    {
+      "id": "L6:F3774",
+      "label": "proper nouns or names with unusual capitalization",
+      "reason": "Structural/name-capitalization cue."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Duplicate of degree cue; already counted."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 8,
+  "n_other": 12,
+  "spurious_fraction": 0.2727272727272727,
+  "dominant": "causal",
+  "notes": "Oracle mix is profession-heavy but includes clear gender and Korea shortcuts."
+}

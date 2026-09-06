@@ -1,0 +1,64 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F3399",
+      "label": "words related to marriage",
+      "reason": "Marriage topic, not toxicity."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity-group token, not abusive semantics."
+    },
+    {
+      "id": "L3:F10004",
+      "label": "words which mean or indicate uncertainty or possibility",
+      "reason": "Hedging/uncertainty is structural."
+    },
+    {
+      "id": "L6:F2851",
+      "label": "books and associated things such as authors and reading",
+      "reason": "Book/author context is unrelated."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "none",
+      "label": "none",
+      "reason": "No toxic-content detector is actually claimed."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: married (pos 6)",
+      "label": "Emb: married (pos 6)",
+      "reason": "Raw embedding, not a feature claim."
+    },
+    {
+      "id": "Emb: white (pos 9)",
+      "label": "Emb: white (pos 9)",
+      "reason": "Raw embedding, not a feature claim."
+    },
+    {
+      "id": "Emb: Maybe (pos 17)",
+      "label": "Emb: Maybe (pos 17)",
+      "reason": "Raw embedding, not a feature claim."
+    },
+    {
+      "id": "Emb: author (pos 2)",
+      "label": "Emb: author (pos 2)",
+      "reason": "Raw embedding, not a feature claim."
+    },
+    {
+      "id": "Synthetic toxicity-probe score",
+      "label": "Synthetic toxicity-probe score",
+      "reason": "Oracle output, not a feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 1,
+  "n_other": 5,
+  "spurious_fraction": 0.8,
+  "dominant": "spurious",
+  "notes": "Oracle claims only identity/topic/hedging branches; no genuine toxicity detector is named."
+}

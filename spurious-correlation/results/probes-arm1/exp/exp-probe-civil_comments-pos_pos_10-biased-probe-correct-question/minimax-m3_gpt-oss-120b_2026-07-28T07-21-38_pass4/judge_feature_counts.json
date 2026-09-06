@@ -1,0 +1,123 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Identity-group vocabulary detector."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Literal race-term detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/Black identity concept feature."
+    },
+    {
+      "id": "L4:F5584",
+      "label": "words related to race, ethnicity, nationality or population groups",
+      "reason": "Demographic-group vocabulary feature."
+    },
+    {
+      "id": "L5:F12135",
+      "label": "terms related to discrimination based on identity",
+      "reason": "Identity-discrimination language detector."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "unknown",
+      "reason": "Appears tied to Black/identity token."
+    },
+    {
+      "id": "L4:F11200",
+      "label": "unknown",
+      "reason": "Feeds from By; likely structural/identity syntax."
+    },
+    {
+      "id": "L3:F3678",
+      "label": "unknown",
+      "reason": "Part of race/ethnicity concept path."
+    },
+    {
+      "id": "L3:F15128",
+      "label": "unknown",
+      "reason": "Part of race/ethnicity concept path."
+    },
+    {
+      "id": "L4:F88",
+      "label": "unknown",
+      "reason": "Part of race concept path."
+    },
+    {
+      "id": "L5:F1431",
+      "label": "unknown",
+      "reason": "Part of race/identity concept path."
+    },
+    {
+      "id": "L6:F343",
+      "label": "unknown",
+      "reason": "Late race-aggregator component."
+    },
+    {
+      "id": "L6:F2267",
+      "label": "unknown",
+      "reason": "Late race-aggregator component."
+    },
+    {
+      "id": "L6:F9228",
+      "label": "unknown",
+      "reason": "Late race-aggregator component."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "unknown",
+      "reason": "Late aggregation/modulation on identity path."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: race (pos 5)",
+      "label": "race",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: of (pos 6)",
+      "label": "of",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: black (pos 16)",
+      "label": "black",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: people (pos 17)",
+      "label": "people",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: force (pos 13)",
+      "label": "force",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: By (pos 1)",
+      "label": "By",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "L26:F0@0",
+      "label": "Probe output direction",
+      "reason": "Output direction, not a detector."
+    }
+  ],
+  "n_spurious": 15,
+  "n_causal": 0,
+  "n_other": 7,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle claims identity/race detectors dominate; no toxicity or threat features are cited."
+}

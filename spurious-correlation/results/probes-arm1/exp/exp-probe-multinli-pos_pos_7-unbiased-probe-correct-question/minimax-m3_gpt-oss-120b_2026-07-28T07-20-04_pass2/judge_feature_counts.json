@@ -1,0 +1,299 @@
+{
+  "spurious_features": [
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Sentence-initial structural cue; not task-semantic."
+    },
+    {
+      "id": "L6:F5342",
+      "label": "the word \"first\" as well as words and prepositions that often follow it",
+      "reason": "Ordinal-position bias, not entailment content."
+    },
+    {
+      "id": "L6:F14585",
+      "label": "the words \"the\" and \"it\" at the beginning of sentences",
+      "reason": "Sentence-start detector; purely structural."
+    },
+    {
+      "id": "L7:F462",
+      "label": "code documentation and import statements",
+      "reason": "Code-block structure, unrelated to NLI semantics."
+    },
+    {
+      "id": "L7:F5741",
+      "label": "code documentation or copyright information",
+      "reason": "Formatting/code cue, not semantic relation."
+    },
+    {
+      "id": "L9:F8770",
+      "label": "sentences beginning with \"It\" or \"In\" and also the word \"There\"",
+      "reason": "Generic sentence-initial pattern detector."
+    },
+    {
+      "id": "L10:F14174",
+      "label": "left curly brackets",
+      "reason": "Pure punctuation/structure feature."
+    },
+    {
+      "id": "L15:F751",
+      "label": "code snippets",
+      "reason": "Code-context detector, not NLI content."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F7056",
+      "label": "mentions of something happening for the first time",
+      "reason": "Temporal meaning relevant to the prompt."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Only noted as a lexical cue; no task-specific role."
+    },
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Only noted as a lexical cue; no task-specific role."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Technical-content token, content-bearing."
+    },
+    {
+      "id": "L0:F11835",
+      "label": "terms used in software code such as \"assembly\", \"using\", \"namespace\", and \"license\"",
+      "reason": "Lexical content only; not negation or structure."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Content-bearing lexical item, not purely structural."
+    },
+    {
+      "id": "L0:F2159",
+      "label": "words that end with \"led\" or are related to worth",
+      "reason": "Morphological/lexical content about prompt tokens."
+    },
+    {
+      "id": "L1:F10498",
+      "label": "the word \"That\"",
+      "reason": "Lexical anchor in the sentence, not generic structure."
+    },
+    {
+      "id": "L1:F5053",
+      "label": "the word \"first\"",
+      "reason": "Directly matches meaningful temporal wording."
+    },
+    {
+      "id": "L1:F10935",
+      "label": "words related to Java programming and/or software testing",
+      "reason": "Content-bearing lexical association."
+    },
+    {
+      "id": "L1:F4103",
+      "label": "the word \"mixed\"",
+      "reason": "Lexical content; not structural."
+    },
+    {
+      "id": "L2:F8518",
+      "label": "the word \"first\"",
+      "reason": "Directly relevant lexical/temporal feature."
+    },
+    {
+      "id": "L2:F5878",
+      "label": "the suffix \"le\"",
+      "reason": "Morphological content from prompt tokens."
+    },
+    {
+      "id": "L2:F8185",
+      "label": "places for shopping or military activities",
+      "reason": "Semantic content about locations/buildings."
+    },
+    {
+      "id": "L2:F12263",
+      "label": "words related to agriculture/mining and to slavery/plantations",
+      "reason": "Content-bearing entity/scene semantics."
+    },
+    {
+      "id": "L2:F16060",
+      "label": "words with the letters \"en\" at the end",
+      "reason": "Lexical morphology, but not purely structural."
+    },
+    {
+      "id": "L2:F14398",
+      "label": "outdoor natural features",
+      "reason": "Semantic content related to prompt nouns."
+    },
+    {
+      "id": "L2:F1924",
+      "label": "words ending in \"ize\" or \"ise\"",
+      "reason": "Morphological lexical feature, not structure."
+    },
+    {
+      "id": "L3:F11165",
+      "label": "the words \"first\" and \"second,\" particularly when used as ordinal indicators",
+      "reason": "Ordinal semantics relevant to the prompt."
+    },
+    {
+      "id": "L3:F3205",
+      "label": "code snippets and documentation references, possibly related to web development",
+      "reason": "Content-bearing lexical pattern, not generic punctuation."
+    },
+    {
+      "id": "L3:F689",
+      "label": "the sequence \"l[ae] [mn]\" or \"leg\"",
+      "reason": "Morphological/lexical content only."
+    },
+    {
+      "id": "L3:F373",
+      "label": "word beginnings with the letters \"a,\" \"h,\"\"i,\" \"r,\" and \"p\" (perhaps prefixes and/or related to medical or scientific terms)",
+      "reason": "Lexical-semantic association."
+    },
+    {
+      "id": "L3:F1806",
+      "label": "occurrences of \"that's\" or similar phrases indicating emphasis or a conversational tone, with a tendency to also pick up on related words like \"calculate\", \"course\" and \"layers\"",
+      "reason": "Content/tone cue, not pure structure."
+    },
+    {
+      "id": "L3:F6362",
+      "label": "words related to research papers that refer to something previously mentioned",
+      "reason": "Discourse-semantic content."
+    },
+    {
+      "id": "L3:F4081",
+      "label": "mentions of the statistical software Stata and the term \"stent\".",
+      "reason": "Specific lexical content."
+    },
+    {
+      "id": "L3:F7650",
+      "label": "abbreviations, geographical locations, and the letter \"l\"",
+      "reason": "Lexical content, not generic structure."
+    },
+    {
+      "id": "L4:F2581",
+      "label": "mentions of things being \"first\"",
+      "reason": "Directly semantically relevant."
+    },
+    {
+      "id": "L4:F3833",
+      "label": "words used when summarizing plot points or providing courtroom insights",
+      "reason": "Discourse-semantic content."
+    },
+    {
+      "id": "L4:F4605",
+      "label": "words related to churches, chapels and other buildings, in addition to other information of Lincolnshire",
+      "reason": "Building/entity semantics, relevant content."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Semantic content about place/building type."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Content-bearing semantics."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Lexical content, not purely structural."
+    },
+    {
+      "id": "L4:F10564",
+      "label": "ordinal numbers or the word \"first\" coupled with a noun or preposition",
+      "reason": "Direct ordinal semantics."
+    },
+    {
+      "id": "L4:F3395",
+      "label": "idiomatic expressions or figures of speech",
+      "reason": "Content/tone feature."
+    },
+    {
+      "id": "L4:F488",
+      "label": "information about a player's first appearance or performance in sports",
+      "reason": "Meaningful lexical-semantic pattern."
+    },
+    {
+      "id": "L4:F12137",
+      "label": "the word \"one\"",
+      "reason": "Lexical content only."
+    },
+    {
+      "id": "L4:F553",
+      "label": "phrases expressing subtle distinctions or sentimental connections",
+      "reason": "Semantic/discourse content."
+    },
+    {
+      "id": "L5:F4305",
+      "label": "words and phrases related to a sequence of events, prior knowledge, and historical progress.",
+      "reason": "Temporal/discourse semantics."
+    },
+    {
+      "id": "L5:F7444",
+      "label": "words or phrases that an individual would express or think",
+      "reason": "Content-bearing mental-state language."
+    },
+    {
+      "id": "L5:F3992",
+      "label": "the start of documentation blocks in code",
+      "reason": "Structural/code formatting, not NLI semantics."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Lexical content; not generic structure."
+    },
+    {
+      "id": "L9:F2762",
+      "label": "various code snippets, especially javascript",
+      "reason": "Content-bearing code-related lexical feature."
+    },
+    {
+      "id": "L11:F11186",
+      "label": "scientific and technical terms",
+      "reason": "Content-bearing lexical semantics."
+    },
+    {
+      "id": "L14:F2510",
+      "label": "the word \"using\"",
+      "reason": "Lexical content, not structure."
+    },
+    {
+      "id": "L16:F10989",
+      "label": "the",
+      "reason": "Single-function lexical feature, not task-semantic."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L13:F8128",
+      "label": "suppressors",
+      "reason": "Oracle gives no task-semantic claim."
+    },
+    {
+      "id": "L15:F851",
+      "label": "code snippets",
+      "reason": "Duplicate-style code cue; treated as dismissed/structural."
+    },
+    {
+      "id": "L15:F10005",
+      "label": "code snippets",
+      "reason": "Duplicate-style code cue; treated as dismissed/structural."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Also listed as main driver; structurally coded."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 45,
+  "n_other": 4,
+  "spurious_fraction": 0.1509433962264151,
+  "dominant": "causal",
+  "notes": "Oracle emphasizes structural bias, but the listed features are mostly content-bearing, not negation-specific."
+}

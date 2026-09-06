@@ -1,0 +1,149 @@
+{
+  "spurious_features": [
+    {
+      "id": "L8:F15771",
+      "label": "'gay' identity-group detector",
+      "reason": "Identity-group token detector; demographic signal."
+    },
+    {
+      "id": "L6:F6085",
+      "label": "'gay' identity detector",
+      "reason": "Identity token detector; demographic signal."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "'Muslim' identity detector",
+      "reason": "Identity token detector; religion signal."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "Muslim-religion-context feature",
+      "reason": "Religion-context identity feature, not toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "'justice'/'social' identity-group feature",
+      "reason": "Identity-group cluster feature across demographic tokens."
+    },
+    {
+      "id": "L3:F5157",
+      "label": "'social' adjective feature",
+      "reason": "Identity-related lexical feature, not hostile content."
+    },
+    {
+      "id": "L4:F8645",
+      "label": "'gay' embedding-fed feature",
+      "reason": "Fires on identity token embedding."
+    },
+    {
+      "id": "L4:F15899",
+      "label": "'gay' embedding-fed feature",
+      "reason": "Fires on identity token embedding."
+    },
+    {
+      "id": "L7:F16171",
+      "label": "'gay' late-layer feature",
+      "reason": "Identity-token feature with demographic semantics."
+    },
+    {
+      "id": "L11:F1291",
+      "label": "'warrior' late-layer feature",
+      "reason": "Identity-cluster feature in social-justice context."
+    },
+    {
+      "id": "L1:F13646",
+      "label": "'justice' early feature",
+      "reason": "Identity-cluster lexical feature, not toxicity."
+    },
+    {
+      "id": "L3:F12024",
+      "label": "'Muslim' negative-direction feature",
+      "reason": "Still an identity detector, just inhibitory."
+    },
+    {
+      "id": "L0:F10421",
+      "label": "Positive 'social'/'justice' L0 feature",
+      "reason": "Identity-related lexical feature."
+    },
+    {
+      "id": "L0:F7519",
+      "label": "Positive 'social'/'justice' L0 feature",
+      "reason": "Identity-related lexical feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F5959",
+      "label": "'go to' / directional feature",
+      "reason": "Imperative/structural language linked to toxic directive."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "Negative 'social justice' / pronoun L0 feature",
+      "reason": "Pronoun/structure feature affecting classification."
+    },
+    {
+      "id": "L0:F6764",
+      "label": "Negative 'social justice' / pronoun L0 feature",
+      "reason": "Pronoun/structure feature affecting classification."
+    },
+    {
+      "id": "L0:F3215",
+      "label": "Negative 'social justice' / pronoun L0 feature",
+      "reason": "Pronoun/structure feature affecting classification."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' gay'",
+      "label": "Embedding",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "Emb: ' Muslim'",
+      "label": "Embedding",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "Emb: ' social'",
+      "label": "Embedding",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "Emb: ' justice'",
+      "label": "Embedding",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "Emb: ' warrior'",
+      "label": "Embedding",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "Emb: ' bakery'",
+      "label": "Embedding",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "Emb: ' you'",
+      "label": "Embedding",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "Emb: ' go'",
+      "label": "Embedding",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "Emb: ' to'",
+      "label": "Embedding",
+      "reason": "Raw embedding node, not a claimed feature."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 4,
+  "n_other": 9,
+  "spurious_fraction": 0.7777777777777778,
+  "dominant": "spurious",
+  "notes": "Oracle centers identity tokens; only minor structural/toxic-direction features appear."
+}

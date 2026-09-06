@@ -1,0 +1,94 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gender pronoun detector; spurious by task definition."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F2589",
+      "label": "words related to medical professionals and medical specialties",
+      "reason": "Profession/title detector for dietitian."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Direct nutrition/diet terminology."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Nutrition concept feature, profession-related."
+    },
+    {
+      "id": "L8:F7732",
+      "label": "terms relating to academia and scientific research",
+      "reason": "Neutral research-register feature supporting profession context."
+    },
+    {
+      "id": "L8:F8003",
+      "label": "words about nutrients, foods, and minerals, especially regarding dietary studies and children's health.",
+      "reason": "Dietary-science vocabulary."
+    },
+    {
+      "id": "L9:F15926",
+      "label": "mentions about eating and meals",
+      "reason": "Eating/meals context tied to nutrition."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food/eating context feature."
+    },
+    {
+      "id": "L17:F14680",
+      "label": "nutrition, food, and diets",
+      "reason": "Strong nutrition/diets detector."
+    },
+    {
+      "id": "L17:F7545",
+      "label": "mentions of architecture, design, nurses and healthcare.",
+      "reason": "Healthcare-profession context."
+    },
+    {
+      "id": "L18:F6105",
+      "label": "text related to eating and health",
+      "reason": "Eating/health semantic feature."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Top output-driving nutrition-study feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Purely structural lexical detector."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Purely structural lexical detector."
+    },
+    {
+      "id": "L0:F8061",
+      "label": "the preposition \"in\"",
+      "reason": "Purely structural lexical detector."
+    },
+    {
+      "id": "L1:F6461",
+      "label": "technical language around physical activity, muscle function, and related studies",
+      "reason": "Related content, but not profession-specific enough."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 11,
+  "n_other": 4,
+  "spurious_fraction": 0.08333333333333333,
+  "dominant": "causal",
+  "notes": "Circuit is overwhelmingly nutrition/profession-driven; only one gender marker appears, and it is weak."
+}

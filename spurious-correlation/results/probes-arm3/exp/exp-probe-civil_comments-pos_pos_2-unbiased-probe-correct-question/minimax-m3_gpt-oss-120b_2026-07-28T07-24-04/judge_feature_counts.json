@@ -1,0 +1,78 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Identity pronoun co-occurrence; demographic cue."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Race-token detector; identity-group cue."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "Contains White House, but not toxicity semantics."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "the word \"possession\" and the words \"white\", \"immediate\" and \"once\" regardless of context",
+      "reason": "Includes white as keyword shortcut."
+    },
+    {
+      "id": "L1:F1480",
+      "label": "the color 'white', sometimes in a context involving race",
+      "reason": "Race-linked white-color feature."
+    },
+    {
+      "id": "L4:F7136",
+      "label": "the color white",
+      "reason": "Color token, identity-linked in oracle note."
+    },
+    {
+      "id": "L1:F8685",
+      "label": "the pronoun \"he\"",
+      "reason": "Pronoun-only detector; demographic cue."
+    },
+    {
+      "id": "L0:F310",
+      "label": "the pronouns \"she\", \"her\", and \"he\" and sometimes the word \"therefore\"",
+      "reason": "Pronoun feature, identity-group cue."
+    },
+    {
+      "id": "L0:F8673",
+      "label": "sentences that contain the word 'she' or 'he' followed by a verb",
+      "reason": "Pronoun syntax; identity-group signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F6983",
+      "label": "words related to race and slavery",
+      "reason": "Racial/slavery content can express abuse or hateful toxicity."
+    },
+    {
+      "id": "L2:F11539",
+      "label": "the word \"if\"",
+      "reason": "Purely structural conditional marker."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Purely structural conjunction."
+    },
+    {
+      "id": "L0:F2458",
+      "label": "the word \"was\" and sometimes \"were.\"",
+      "reason": "Generic verb/structure, not toxicity-specific."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 9,
+  "n_causal": 4,
+  "n_other": 0,
+  "spurious_fraction": 0.6923076923076923,
+  "dominant": "spurious",
+  "notes": "Oracle mainly cites identity tokens; a few generic syntax features are causal only by report."
+}

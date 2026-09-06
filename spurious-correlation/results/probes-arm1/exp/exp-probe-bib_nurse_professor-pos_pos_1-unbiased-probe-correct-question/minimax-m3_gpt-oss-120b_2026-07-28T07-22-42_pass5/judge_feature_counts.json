@@ -1,0 +1,83 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Nursing role/leadership vocabulary"
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Profession/medical terminology"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession indicator"
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities.",
+      "reason": "Medical context supporting nursing"
+    },
+    {
+      "id": "L8:F16339",
+      "label": "text discussing hospital infections and bacteria",
+      "reason": "Healthcare/hospital context"
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare-system terminology"
+    },
+    {
+      "id": "L20:F4927",
+      "label": "titles and acronyms following names, especially within the healthcare field",
+      "reason": "Healthcare professional title pattern"
+    },
+    {
+      "id": "L9:F16275",
+      "label": "terms related to the workplace environment, including job titles, business descriptions or complaints about work",
+      "reason": "Workplace/job-title terminology"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Oracle marks suppressor; negative contribution"
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Oracle marks suppressor; negative contribution"
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Gender feature, but suppressive here"
+    },
+    {
+      "id": "L4:F8736",
+      "label": "the phrase \"born and raised\"",
+      "reason": "Generic biography phrase"
+    },
+    {
+      "id": "L2:F15437",
+      "label": "words related to nurses and sound",
+      "reason": "Oracle dismisses as suppressor"
+    },
+    {
+      "id": "L7:F7",
+      "label": "a seemingly random assortment of words and phrases",
+      "reason": "Structural/garbage feature"
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 8,
+  "n_other": 6,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Positive circuit is nursing/healthcare-driven; gender-related feature is explicitly suppressive."
+}

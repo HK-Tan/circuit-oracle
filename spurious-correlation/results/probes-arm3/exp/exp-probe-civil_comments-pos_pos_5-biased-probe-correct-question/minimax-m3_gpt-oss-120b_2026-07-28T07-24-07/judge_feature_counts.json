@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "Identity-group signal about LGBTQ topics."
+    },
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "Identity-group LGBTQ+ topic detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/identity-related semantic feature."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Religion/nationality identity signal."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity detector."
+    },
+    {
+      "id": "L1:F13646",
+      "label": "text discussing social justice issues",
+      "reason": "Identity/social-justice topic feature."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Protected-identity related content."
+    },
+    {
+      "id": "L3:F12024",
+      "label": "words referencing the religion of Islam, people who practice it, and Arabic names",
+      "reason": "Religion/ethnicity identity signal."
+    },
+    {
+      "id": "L11:F1291",
+      "label": "racist content",
+      "reason": "Oracle says racist-content detector; identity-targeted toxicity."
+    },
+    {
+      "id": "L2:F31",
+      "label": "terms related to paganism, neopaganism, and related cultural celebrations and historical terms",
+      "reason": "Religion/cultural identity terms."
+    },
+    {
+      "id": "L4:F15899",
+      "label": "language associated with the LGBTQ community and discussions of gender and identity.",
+      "reason": "LGBTQ identity-language detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F10969",
+      "label": "swear words and insults",
+      "reason": "Direct toxicity vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Pure pronoun/structural feature."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 1,
+  "n_other": 1,
+  "spurious_fraction": 0.9166666666666666,
+  "dominant": "spurious",
+  "notes": "Oracle mostly identifies protected-identity detectors; only one clear toxic-content feature."
+}

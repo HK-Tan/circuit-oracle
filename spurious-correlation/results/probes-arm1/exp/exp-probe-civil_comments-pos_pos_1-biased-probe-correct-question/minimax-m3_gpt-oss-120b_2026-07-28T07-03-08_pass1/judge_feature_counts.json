@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: white (pos 15)",
+      "label": "Emb: white (pos 15)",
+      "reason": "Identity-group token"
+    },
+    {
+      "id": "Emb: black (pos 32)",
+      "label": "Emb: black (pos 32)",
+      "reason": "Identity-group token"
+    },
+    {
+      "id": "Emb: white (pos 25)",
+      "label": "Emb: white (pos 25)",
+      "reason": "Identity-group token"
+    },
+    {
+      "id": "Emb: race (pos 40)",
+      "label": "Emb: race (pos 40)",
+      "reason": "Identity-group token"
+    },
+    {
+      "id": "L1:F13646",
+      "label": "race / social-justice discourse detectors",
+      "reason": "Race-focused discourse"
+    },
+    {
+      "id": "L2:13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity vocabulary"
+    },
+    {
+      "id": "L4:117",
+      "label": "race/racism, focus on Black people",
+      "reason": "Identity-group race focus"
+    },
+    {
+      "id": "L6:3902",
+      "label": "race and ethnicity terms",
+      "reason": "Race/ethnicity vocabulary"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:15009",
+      "label": "legal / government / civil-unrest features",
+      "reason": "Protest/civil-unrest semantics"
+    },
+    {
+      "id": "L3:12367",
+      "label": "legal / government / civil-unrest features",
+      "reason": "Protest/civil-unrest semantics"
+    },
+    {
+      "id": "L2:9433",
+      "label": "protest / civil-unrest terms",
+      "reason": "Civil-unrest semantics"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ot (pos 9, end of 'bigot')",
+      "label": "Emb: ot (pos 9, end of 'bigot')",
+      "reason": "Token fragment only"
+    },
+    {
+      "id": "Emb: clearly (pos 2)",
+      "label": "Emb: clearly (pos 2)",
+      "reason": "Structural/register cue"
+    },
+    {
+      "id": "Emb: other (pos 14)",
+      "label": "Emb: other (pos 14)",
+      "reason": "Generic word detector"
+    },
+    {
+      "id": "L0:7142",
+      "label": "the word \"axis\" and its plural form",
+      "reason": "Purely lexical/technical"
+    },
+    {
+      "id": "L0:3255",
+      "label": "the word \"and\"",
+      "reason": "Purely structural connector"
+    },
+    {
+      "id": "L0:7969",
+      "label": "the word \"other\"",
+      "reason": "Purely lexical/generic"
+    },
+    {
+      "id": "L0:6154",
+      "label": "uses of 'clearly' and nearby words that are related to arguments and writing",
+      "reason": "Register/argument cue"
+    },
+    {
+      "id": "L0:F5707",
+      "label": "words or phrases related to knowledge or perspective",
+      "reason": "Generic discourse feature"
+    },
+    {
+      "id": "L1:F2407",
+      "label": "the word \"clearly\"",
+      "reason": "Generic word detector"
+    },
+    {
+      "id": "L4:F14582",
+      "label": "references to the White House and the US government",
+      "reason": "Off-task government reference"
+    },
+    {
+      "id": "L5:F8030",
+      "label": "language discussing differences, clarity, and definition",
+      "reason": "Structural/discourse cue"
+    },
+    {
+      "id": "Toxicity-probe score (output logit direction)",
+      "label": "Toxicity-probe score (output logit direction)",
+      "reason": "Probe output, not feature"
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 3,
+  "n_other": 12,
+  "spurious_fraction": 0.7272727272727273,
+  "dominant": "spurious",
+  "notes": "Identity-group vocabulary dominates; causal mentions are only protest/civil-unrest related."
+}

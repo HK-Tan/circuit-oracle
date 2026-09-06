@@ -1,0 +1,94 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female-reference detector fired by she."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Detects women/girls mentions, gender marker."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Explicit female-pronoun feature."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments",
+      "reason": "Women-name/role detector, gendered."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female-name feature, spurious."
+    },
+    {
+      "id": "L0:F12519",
+      "label": "the pronoun \"she\"",
+      "reason": "Direct she detector."
+    },
+    {
+      "id": "L2:F7672",
+      "label": "mentions of women by name and relationship",
+      "reason": "Women-relationship feature, gender marker."
+    },
+    {
+      "id": "L1:F4232",
+      "label": "the possessive pronoun \"her\"",
+      "reason": "Direct her detector."
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "Women-related terms, gender signal."
+    },
+    {
+      "id": "L7:F8952",
+      "label": "references to women, by direct name or pronoun",
+      "reason": "Women reference detector."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Woman-name detector, gendered."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing profession vocabulary."
+    },
+    {
+      "id": "L2:F15728",
+      "label": "mentions of nurses and nursing",
+      "reason": "Nursing profession mention."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe classification score (output)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code snippet detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun; inhibitory, not causal here."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 2,
+  "n_other": 3,
+  "spurious_fraction": 0.8461538461538461,
+  "dominant": "spurious",
+  "notes": "Gender markers overwhelmingly drive the circuit; nursing features are secondary."
+}

@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Gendered pronoun cue, not profession-specific."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun marker; spurious gender signal."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun detector; demographic shortcut."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Single male pronoun; gender marker."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Explicit gender-role context, not causal."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male title/pronoun feature; spurious gender cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F14812",
+      "label": "references to stories, chapters, and other narrative elements",
+      "reason": "Narrative-writing context can indicate journalist/writer profession."
+    },
+    {
+      "id": "L1:F7449",
+      "label": "instances of the word \"representation\"",
+      "reason": "Professional/abstract writing vocabulary."
+    },
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Profession-related research terminology."
+    },
+    {
+      "id": "L0:F5333",
+      "label": "mentions of stories that are being told",
+      "reason": "Storytelling vocabulary relevant to journalism/writing."
+    },
+    {
+      "id": "L0:F61",
+      "label": "the word \"stories\" sometimes along with apostrophes and common names.",
+      "reason": "Story-related writing term; profession indicator."
+    },
+    {
+      "id": "L0:F10036",
+      "label": "words about scientific research and scientists",
+      "reason": "Direct profession/field terminology."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Direct journalism profession indicator."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism/newspaper terminology."
+    },
+    {
+      "id": "L4:F4411",
+      "label": "verbs",
+      "reason": "Generic syntactic feature; content-neutral structural cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/formatting."
+    },
+    {
+      "id": "L0:F7696",
+      "label": "the word \"on\"",
+      "reason": "Generic function word, not profession-specific."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic function word, not profession-specific."
+    },
+    {
+      "id": "L0:F10187",
+      "label": "the word \"time\"",
+      "reason": "Generic lexical item, not causal here."
+    },
+    {
+      "id": "L0:F9121",
+      "label": "the word \"nice\" and words with positive sentiment, sometimes related to the weather or seasons",
+      "reason": "Sentiment/adjacency feature, not task-relevant."
+    },
+    {
+      "id": "L0:F1301",
+      "label": "mentions of cancer and related terms like tumors",
+      "reason": "Oracle lists it, but it's unrelated to this task."
+    },
+    {
+      "id": "L0:F14216",
+      "label": "the word \"signs\" and horizontal lines",
+      "reason": "Structural/lexical, not profession-specific."
+    },
+    {
+      "id": "L0:F8061",
+      "label": "the preposition \"in\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Already counted spurious; not other."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 9,
+  "n_other": 9,
+  "spurious_fraction": 0.4,
+  "dominant": "mixed",
+  "notes": "Oracle shows both journalism/research cues and several gender shortcuts; structural/function-word features go to other."
+}

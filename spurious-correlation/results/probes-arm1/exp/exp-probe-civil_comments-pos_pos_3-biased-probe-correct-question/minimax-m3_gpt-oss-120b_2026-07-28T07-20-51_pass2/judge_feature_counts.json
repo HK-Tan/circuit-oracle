@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F648",
+      "label": "words related to discrimination against particular religious or ethnic groups",
+      "reason": "Identity-group discrimination signal on 'Jew'."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Generic ethnicity mention detector on 'Jew'."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious-identity mention, not toxicity."
+    },
+    {
+      "id": "L4:F14733",
+      "label": "content related to the Israel-Palestine conflict and possibly some related topics like NBA trades",
+      "reason": "Geopolitical identity-linked topic feature."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/social-justice vocabulary on identity token."
+    },
+    {
+      "id": "L2:F8236",
+      "label": "mentions of Jewish people, culture, or religion, along with associated figures and locations",
+      "reason": "Jewish-specific identity detector."
+    },
+    {
+      "id": "L0:F11290",
+      "label": "mentions of Jewish people, Israel, and Christianity",
+      "reason": "Identity mention feature on 'Jew'."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L8:F13875",
+      "label": "negative sentiment related to reputation and betrayal of trust.",
+      "reason": "Negative-reputation meaning of 'stain'."
+    },
+    {
+      "id": "L6:F1561",
+      "label": "words related to respect, status, and pride, both positive and negative",
+      "reason": "Status/shame semantics tied to insult."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L3:F12151",
+      "label": "capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+      "reason": "Purely structural letter-sequence detector."
+    },
+    {
+      "id": "L3:F592",
+      "label": "words related to love, affection, and hate, including foreign language",
+      "reason": "Substring 'hat' from 'hating'; ambiguous."
+    },
+    {
+      "id": "L2:F3983",
+      "label": "the word \"hat\"",
+      "reason": "Literal token mismatch from substring."
+    },
+    {
+      "id": "L1:F1774",
+      "label": "text in a Latex document",
+      "reason": "LaTeX \u02c6hat structural detector."
+    },
+    {
+      "id": "L0:F9369",
+      "label": "subtraction symbols",
+      "reason": "Generic dash/punctuation detector."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 2,
+  "n_other": 5,
+  "spurious_fraction": 0.7777777777777778,
+  "dominant": "spurious",
+  "notes": "Identity-token features dominate; only 'stain' and status/shame are clearly toxic-content related."
+}

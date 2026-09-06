@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Gendered pronoun shortcut"
+    },
+    {
+      "id": "L14:F14097",
+      "label": "occurrences of the word \"he\"",
+      "reason": "Male pronoun marker"
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Gendered pronoun feature"
+    },
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Gender markers, not profession"
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit gender cue"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F4459",
+      "label": "mentions of research institutes",
+      "reason": "Education/research institution indicator"
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession vocabulary"
+    },
+    {
+      "id": "L1:F15416",
+      "label": "the word \"writers\" or \"writer\"",
+      "reason": "Direct profession term"
+    },
+    {
+      "id": "L1:F15323",
+      "label": "the word \"starting\" in academic papers",
+      "reason": "Academic-writing context"
+    },
+    {
+      "id": "L0:F5288",
+      "label": "the word \"service\" and related terms in different contexts",
+      "reason": "Work/service terminology"
+    },
+    {
+      "id": "L0:F13754",
+      "label": "words related to official or functional bodies and their actions, often involving government, structure, or critique.",
+      "reason": "Structural/official-body content"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7124",
+      "label": "the word \"at\"",
+      "reason": "Generic word feature"
+    },
+    {
+      "id": "L0:F15661",
+      "label": "the word \"spin\"",
+      "reason": "Ambiguous lexical feature"
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic stopword detector"
+    },
+    {
+      "id": "L1:F14323",
+      "label": "the word \"starting\" in academic papers",
+      "reason": "Already counted as causal? no, structural-ish"
+    },
+    {
+      "id": "L0:F6556",
+      "label": "instances of the word \"closing\"",
+      "reason": "Generic context-dependent word"
+    },
+    {
+      "id": "L0:F4870",
+      "label": "commas and sometimes reach (context not clear)",
+      "reason": "Punctuation/structure"
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural detector"
+    },
+    {
+      "id": "L2:F9293",
+      "label": "the word \"cover\" used in different contexts",
+      "reason": "Ambiguous generic word"
+    },
+    {
+      "id": "L1:F15063",
+      "label": "mentions of the United States",
+      "reason": "Geographic, not profession"
+    },
+    {
+      "id": "L1:F15416",
+      "label": "the word \"writers\" or \"writer\"",
+      "reason": "Duplicate omitted from causal"
+    },
+    {
+      "id": "L0:F9630",
+      "label": "the word \"topic.\"",
+      "reason": "Generic discourse marker"
+    },
+    {
+      "id": "L0:F5710",
+      "label": "the word \"themes\" and words associated with academic papers",
+      "reason": "Too generic/academic"
+    },
+    {
+      "id": "L4:F11134",
+      "label": "business or financial reports",
+      "reason": "Topic-domain, not profession cue"
+    },
+    {
+      "id": "L0:F8067",
+      "label": "references to Europe",
+      "reason": "Geographic feature"
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 6,
+  "n_other": 14,
+  "spurious_fraction": 0.45454545454545453,
+  "dominant": "mixed",
+  "notes": "Strong gender shortcuts plus several genuine profession/academic indicators; neither class fully dominates."
+}

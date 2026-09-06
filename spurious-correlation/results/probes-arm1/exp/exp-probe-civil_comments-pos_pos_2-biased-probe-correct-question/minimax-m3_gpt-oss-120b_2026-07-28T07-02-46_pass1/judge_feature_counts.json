@@ -1,0 +1,123 @@
+{
+  "spurious_features": [
+    {
+      "id": "L11:F1913",
+      "label": "emotional, controversial, or political issues especially relating to race",
+      "reason": "Race-focused controversy signal; identity-linked toxicity shortcut."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Explicit demographic-group mention detector."
+    },
+    {
+      "id": "L7:F5125",
+      "label": "mentions of demographics",
+      "reason": "Demographic mention, not toxicity itself."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity identity detector."
+    },
+    {
+      "id": "L5:F3924",
+      "label": "words relating to race, ethnicity, and/or religion",
+      "reason": "Identity-group lexical feature."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/social-justice vocabulary, not causal toxicity."
+    },
+    {
+      "id": "L4:F10174",
+      "label": "words referring to racial and/or supernatural identity",
+      "reason": "Identity-token matcher."
+    },
+    {
+      "id": "L3:F3248",
+      "label": "words and phrases related to race and ethnic groups, especially in the context of social issues",
+      "reason": "Race/ethnicity group signal."
+    },
+    {
+      "id": "L3:F11768",
+      "label": "the word \"white\" and related contexts such as diversity",
+      "reason": "Identity-group mention of white."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Demographic-race lexicon feature."
+    },
+    {
+      "id": "L2:F585",
+      "label": "the word \"white\", often in association with \"dwarf\"",
+      "reason": "Promoted token is identity word \"white\"."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Literal identity-token detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F2458",
+      "label": "the word \"was\" and sometimes \"were.\"",
+      "reason": "Purely structural verb detector."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Oracle label is topical, not direct toxicity."
+    },
+    {
+      "id": "L1:F1480",
+      "label": "the color 'white', sometimes in a context involving race",
+      "reason": "Mostly structural/color mention."
+    },
+    {
+      "id": "L1:F4668",
+      "label": "the color white being used to describe image parameters",
+      "reason": "Non-toxic image-parameter usage."
+    },
+    {
+      "id": "L1:F13646",
+      "label": "text discussing social justice issues",
+      "reason": "Topical/social-justice context only."
+    },
+    {
+      "id": "L1:F15969",
+      "label": "terms related to the Civil War and slavery",
+      "reason": "Historical-topic feature, not toxicity."
+    },
+    {
+      "id": "L2:F1708",
+      "label": "mentions of colors",
+      "reason": "Generic color detector."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "Place/entity mention unrelated to toxicity."
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Structural pronoun/subject reference."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic conjunction detector."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 0,
+  "n_other": 10,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Curated circuit is overwhelmingly identity-mention driven; no toxic-content detector is claimed."
+}

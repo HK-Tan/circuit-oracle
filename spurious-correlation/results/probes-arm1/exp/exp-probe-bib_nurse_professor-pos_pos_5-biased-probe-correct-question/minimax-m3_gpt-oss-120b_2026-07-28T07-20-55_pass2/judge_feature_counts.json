@@ -1,0 +1,154 @@
+{
+  "spurious_features": [
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Explicitly tracks women's names/roles."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Detects female-reference mentions."
+    },
+    {
+      "id": "L18:F3679",
+      "label": "personal pronouns and/or proper nouns",
+      "reason": "Includes pronoun/name gender cues."
+    },
+    {
+      "id": "L18:F9023",
+      "label": "personal names and associated titles",
+      "reason": "Name/title detector, gendered here."
+    },
+    {
+      "id": "L14:F12501",
+      "label": "uses of the feminine pronoun.",
+      "reason": "Direct feminine-pronoun feature."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "Female-story/pronoun pathway."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Women-reference detector."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Name detector used for feminine names."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Captures names/titles, not profession."
+    },
+    {
+      "id": "L2:F5859",
+      "label": "first names (mostly female)",
+      "reason": "Mostly-female first-name detector."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Generic proper-noun feature, but used on a name."
+    },
+    {
+      "id": "L0:F15382",
+      "label": "proper nouns",
+      "reason": "Generic proper-noun feature, but used on pronouns/names."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "proper nouns",
+      "reason": "Generic proper-noun feature, but used on pronouns/names."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Direct profession-domain terminology."
+    },
+    {
+      "id": "L3:F9008",
+      "label": "words related to childbirth or birth",
+      "reason": "Obstetric/birth vocabulary."
+    },
+    {
+      "id": "L1:F12174",
+      "label": "words related to childbirth or birth",
+      "reason": "Obstetric/birth vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output",
+      "label": "probe direction",
+      "reason": "Structural output node."
+    },
+    {
+      "id": "Emb: Melissa (pos 5)",
+      "label": "Melissa",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Delivery (pos 11)",
+      "label": "Delivery",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Labor (pos 9)",
+      "label": "Labor",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: nurse (pos 12)",
+      "label": "nurse",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Nursing (pos 19)",
+      "label": "Nursing",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: her (pos 15)",
+      "label": "her",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: She (pos 54)",
+      "label": "She",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: She (pos 68)",
+      "label": "She",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: midwife (pos 66)",
+      "label": "midwife",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Melissa (pos 31)",
+      "label": "Melissa",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Melissa (pos 86)",
+      "label": "Melissa",
+      "reason": "Input token, not a feature."
+    }
+  ],
+  "n_spurious": 13,
+  "n_causal": 3,
+  "n_other": 12,
+  "spurious_fraction": 0.8125,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes female-name/pronoun circuitry more than profession vocabulary."
+}

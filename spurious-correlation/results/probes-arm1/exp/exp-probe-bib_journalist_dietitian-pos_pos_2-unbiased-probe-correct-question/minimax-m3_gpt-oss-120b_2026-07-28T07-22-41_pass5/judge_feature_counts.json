@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female-reference feature from She token; negative influence."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gendered pronoun feature from She token; negative influence."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Nutrition-domain vocabulary relevant to profession."
+    },
+    {
+      "id": "L4:F9554",
+      "label": "words related to food, rations and feeding",
+      "reason": "Food-related occupational vocabulary."
+    },
+    {
+      "id": "L4:F10494",
+      "label": "words related to health, medicine, diet, drugs, age groups, and excercise",
+      "reason": "Health/diet terminology supports nutrition profession."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Direct nutrition vocabulary feature."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food/nutrition semantic content."
+    },
+    {
+      "id": "L14:F9449",
+      "label": "snippets related to weight and diet",
+      "reason": "Diet/weight context tied to nutrition."
+    },
+    {
+      "id": "L15:F2510",
+      "label": "words and phrases related to food preparation and consumption, along with some words relating to the digestive system and eating disorders",
+      "reason": "Cooking-related profession vocabulary from cook token."
+    },
+    {
+      "id": "L15:F12472",
+      "label": "super-activator on 'nutrition'",
+      "reason": "Directly amplifies nutrition semantics."
+    },
+    {
+      "id": "L16:F12752",
+      "label": "diet",
+      "reason": "Diet terminology relevant to nutrition."
+    },
+    {
+      "id": "L17:F14680",
+      "label": "nutrition, food, and diets",
+      "reason": "Core nutrition/food profession concepts."
+    },
+    {
+      "id": "L18:F6105",
+      "label": "text related to eating and health",
+      "reason": "Eating/health content matches nutrition."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Scientific nutrition-study context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Generic word detector, not task-specific."
+    },
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 12,
+  "n_other": 4,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "causal",
+  "notes": "Nutrition/cook features dominate; gender features are present but suppressive."
+}

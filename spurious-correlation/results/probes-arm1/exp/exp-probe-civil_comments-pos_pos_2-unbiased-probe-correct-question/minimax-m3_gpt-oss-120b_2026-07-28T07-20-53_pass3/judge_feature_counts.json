@@ -1,0 +1,108 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "Lexical white detector; identity token feature."
+    },
+    {
+      "id": "L2:F6983",
+      "label": "words related to race and slavery",
+      "reason": "Race/identity discourse feature."
+    },
+    {
+      "id": "L1:F1480",
+      "label": "the color 'white', sometimes in a context involving race",
+      "reason": "White/identity lexical matcher."
+    },
+    {
+      "id": "L4:F7136",
+      "label": "the color white",
+      "reason": "Detects white; identity-related."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "probe logit (toxicity)",
+      "reason": "Not a feature; output logit."
+    },
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Generic pronoun relation."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity-token detector; spurious."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "the word \"possession\" and the words \"white\", \"immediate\" and \"once\" regardless of context",
+      "reason": "Lexical white detector; spurious."
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Generic pronoun/reference feature."
+    },
+    {
+      "id": "L0:F310",
+      "label": "the pronouns \"she\", \"her\", and \"he\" and sometimes the word \"therefore\"",
+      "reason": "Generic pronoun feature."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F12059",
+      "label": "words related to purpose and intent",
+      "reason": "Broad structural/semantic aside; not toxicity."
+    },
+    {
+      "id": "L2:F1139",
+      "label": "various usages of the word \"so\", as well as some instances of the word \"come\"",
+      "reason": "Function-word detector."
+    },
+    {
+      "id": "L2:F11539",
+      "label": "the word \"if\"",
+      "reason": "Conditional function-word detector."
+    },
+    {
+      "id": "L3:F12404",
+      "label": "instances of the conditional word \"if\"",
+      "reason": "Conditional syntax detector."
+    },
+    {
+      "id": "L0:F2303",
+      "label": "the word \"if\"",
+      "reason": "Function-word detector."
+    },
+    {
+      "id": "L0:F2458",
+      "label": "the word \"was\" and sometimes \"were.\"",
+      "reason": "Generic verb detector."
+    },
+    {
+      "id": "L0:F13663",
+      "label": "mentions of pregnancy and related terms",
+      "reason": "Unrelated lexical topic."
+    },
+    {
+      "id": "L0:F0",
+      "label": "Embeddings for input tokens",
+      "reason": "Raw embeddings, not feature semantics."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 15,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity-token white detectors plus generic function-word features."
+}

@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Directly detects male pronouns; gender marker."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Explicit male pronoun detector; gender marker."
+    },
+    {
+      "id": "L2:F3877",
+      "label": "references to \"His\" and religious figures or concepts",
+      "reason": "Triggers on His; gendered pronoun feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "words related to academic research",
+      "reason": "Research vocabulary; profession-related."
+    },
+    {
+      "id": "L5:F12330",
+      "label": "mentions of \"College\" along with a preceding place name like \"County\" or \"Valley\"",
+      "reason": "Academic institution term; profession indicator."
+    },
+    {
+      "id": "L2:F1621",
+      "label": "information about people's education and career",
+      "reason": "Education/career content; profession-related."
+    },
+    {
+      "id": "L0:F10783",
+      "label": "the word \"include\" (and variations of the word)",
+      "reason": "Generic lexical feature, but oracle links it to profile content."
+    },
+    {
+      "id": "L0:F13431",
+      "label": "the word \"owing\".",
+      "reason": "Generic lexical feature, not gender."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree tokens like PhD/BS; profession indicator."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Academic credentials; profession indicator."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "University/degree relation; profession indicator."
+    },
+    {
+      "id": "L4:F3727",
+      "label": "mentions of academic degrees",
+      "reason": "Degree mentions; profession indicator."
+    },
+    {
+      "id": "L20:F14235",
+      "label": "references to academic credentials and institutions.",
+      "reason": "Credentials/institutions; profession indicator."
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "Names/titles/universities/research; profession indicator."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "abbreviations for degrees and mentions of educational attainment",
+      "reason": "Educational attainment; profession indicator."
+    },
+    {
+      "id": "L17:F11003",
+      "label": "university",
+      "reason": "University term; profession indicator."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Scientific notation; content-neutral but field-related."
+    },
+    {
+      "id": "L6:F6331",
+      "label": "technical terms in mechanical engineering papers including \"finite element\" \"stress\" and \"fatigue.\"",
+      "reason": "Technical vocabulary; profession indicator."
+    },
+    {
+      "id": "L3:F4213",
+      "label": "mentions of degree qualifications or awards",
+      "reason": "Qualifications/awards; profession indicator."
+    },
+    {
+      "id": "L14:F11252",
+      "label": "code and coordinate geometry terms",
+      "reason": "Technical/code terms; profession indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F10783",
+      "label": "the word \"include\" (and variations of the word)",
+      "reason": "Generic lexical feature; not inherently causal."
+    },
+    {
+      "id": "L0:F13431",
+      "label": "the word \"owing\".",
+      "reason": "Generic lexical feature; not profession-specific."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Mostly structural/scientific notation."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 17,
+  "n_other": 3,
+  "spurious_fraction": 0.15,
+  "dominant": "causal",
+  "notes": "Oracle says gender cues exist but credentials/research signals dominate."
+}

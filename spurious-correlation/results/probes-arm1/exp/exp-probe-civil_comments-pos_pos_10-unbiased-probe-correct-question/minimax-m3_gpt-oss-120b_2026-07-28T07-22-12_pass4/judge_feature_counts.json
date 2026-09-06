@@ -1,0 +1,103 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F10682",
+      "label": "the word \"race\"",
+      "reason": "Identity-group token detector; demographic vocabulary."
+    },
+    {
+      "id": "L0:F14813",
+      "label": "mentions of race, racial issues, or racism",
+      "reason": "Race/identity-context detector; spurious for toxicity."
+    },
+    {
+      "id": "L6:F9228",
+      "label": "language regarding discrimination based on race, gender, religion, and disability",
+      "reason": "Identity-discrimination language; demographic semantics."
+    },
+    {
+      "id": "L3:F5475",
+      "label": "occurrences of the word \"race\" in different contexts",
+      "reason": "Race-token matcher; identity-related vocabulary."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Literal race token detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Generic negation/structure, not toxic content."
+    },
+    {
+      "id": "L0:F15267",
+      "label": "the word \"not\"",
+      "reason": "Generic negation/structure, not toxic content."
+    },
+    {
+      "id": "L2:F2713",
+      "label": "the word \"not\"",
+      "reason": "Generic negation/structure, not toxic content."
+    },
+    {
+      "id": "L3:F12410",
+      "label": "the word \"By\" at the start of a phrase or sentence",
+      "reason": "Purely structural sentence-start feature."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F1903",
+      "label": "instances of sentences starting with \"The\"",
+      "reason": "Purely structural sentence-start feature."
+    },
+    {
+      "id": "L1:F5477",
+      "label": "instances of the word \"mention\"",
+      "reason": "Generic lexical mention detector."
+    },
+    {
+      "id": "L2:F11639",
+      "label": "the word \"mention\"",
+      "reason": "Generic lexical mention detector."
+    },
+    {
+      "id": "L2:F6539",
+      "label": "the word \"mention\" and words or phrases related to opinions or significance, as well as the word \"matter.\"",
+      "reason": "Discourse/mention feature, not toxicity."
+    },
+    {
+      "id": "L3:F6517",
+      "label": "words related to mentioning something",
+      "reason": "Generic mentioning/discourse feature."
+    },
+    {
+      "id": "L3:F11194",
+      "label": "words related to stating or communicating information",
+      "reason": "Generic communication feature."
+    },
+    {
+      "id": "L4:F15173",
+      "label": "statements about mentioning or discussing something",
+      "reason": "Generic meta-discussion feature."
+    },
+    {
+      "id": "L4:F2668",
+      "label": "instances of realizations coupled with acknowledgement or acknowledgment of something.",
+      "reason": "Generic acknowledgement/discussion feature."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 0,
+  "n_other": 13,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is identity-token and discourse driven; no toxic-content detectors are claimed."
+}

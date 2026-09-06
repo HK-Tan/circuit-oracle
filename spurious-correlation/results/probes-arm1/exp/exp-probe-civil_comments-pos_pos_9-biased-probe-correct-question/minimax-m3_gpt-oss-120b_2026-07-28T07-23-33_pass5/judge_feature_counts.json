@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Direct identity-group detector; fires on white/oriental."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/ethnicity identity signal, not toxicity."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-category vocabulary proxy."
+    },
+    {
+      "id": "L6:F15948",
+      "label": "words and entities referring to gender and pronouns",
+      "reason": "Identity-group detector for gender terms."
+    },
+    {
+      "id": "L4:F12975",
+      "label": "mentions of Asian countries, calendars, and paganism/eastern religions",
+      "reason": "Ethnicity/religion identity cue on oriental."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "mentions of demographic identity, especially race and gender",
+      "reason": "Demographic identity feature."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity lexicon detector."
+    },
+    {
+      "id": "L3:F4512",
+      "label": "mentions of first names, last names, and phone numbers",
+      "reason": "Name/identity marker, not toxic content."
+    },
+    {
+      "id": "L0:F241",
+      "label": "mentions of marriage",
+      "reason": "Purely identity/status-related term."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L5:F13063",
+      "label": "strings of profanity",
+      "reason": "Toxicity-related profanity detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L1:F6576",
+      "label": "the word \"appearance\"",
+      "reason": "Generic word feature."
+    },
+    {
+      "id": "L1:F384",
+      "label": "the string \"ash\" or \"pund\"",
+      "reason": "Arbitrary string matcher."
+    },
+    {
+      "id": "L1:F5220",
+      "label": "references to authors and publications",
+      "reason": "Structural/reference feature."
+    },
+    {
+      "id": "L0:F7773",
+      "label": "the word \"lower\" or \"higher\" in the context of comparisons",
+      "reason": "Generic comparative word detector."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 1,
+  "n_other": 4,
+  "spurious_fraction": 0.9,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity-group proxies; only profanity is clearly causal."
+}

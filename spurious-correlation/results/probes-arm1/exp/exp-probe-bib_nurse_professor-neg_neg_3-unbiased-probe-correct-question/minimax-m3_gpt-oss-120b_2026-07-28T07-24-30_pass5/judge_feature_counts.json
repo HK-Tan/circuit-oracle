@@ -1,0 +1,164 @@
+{
+  "spurious_features": [
+    {
+      "id": "L1:F12922",
+      "label": "the pronoun \"he\" or \"she\" in a narrative context",
+      "reason": "Narrative pronoun detector; gender marker in this task."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F9263",
+      "label": "mentions of academic qualifications and precise temperature values",
+      "reason": "Academic qualification cue; degree-related biography signal."
+    },
+    {
+      "id": "L0:F6127",
+      "label": "instances of the word \"degree\" and words associated with academia, especially higher education",
+      "reason": "Explicit higher-education terminology."
+    },
+    {
+      "id": "L1:F10132",
+      "label": "the abbreviation for Doctorate of Philosophy, \"Ph.D.\" (or \"PhD\") written as \"D\"",
+      "reason": "PhD abbreviation; direct academic degree cue."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Degree/title recognition feature."
+    },
+    {
+      "id": "L3:F4213",
+      "label": "mentions of degree qualifications or awards",
+      "reason": "Qualification/award biography signal."
+    },
+    {
+      "id": "L3:F11994",
+      "label": "academic degrees and professional titles, especially involving \"Ph.D.\"",
+      "reason": "Academic degree/professional title cue."
+    },
+    {
+      "id": "L4:F3727",
+      "label": "mentions of academic degrees",
+      "reason": "Degree mentions; profession-indicative education."
+    },
+    {
+      "id": "L5:F5725",
+      "label": "people's educational history including degrees and schools",
+      "reason": "Educational history; causal biography content."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "abbreviations for degrees and mentions of educational attainment",
+      "reason": "Educational attainment terminology."
+    },
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Academic field vocabulary."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree references are profession-relevant."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Field-of-study vocabulary."
+    },
+    {
+      "id": "L6:F3235",
+      "label": "academic publications, math, and scientific institutions",
+      "reason": "Academic/publication institution cue."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "University/degree association."
+    },
+    {
+      "id": "L17:F11003",
+      "label": "university",
+      "reason": "University mention; education signal."
+    },
+    {
+      "id": "L19:F2496",
+      "label": "mentions of universities and degrees",
+      "reason": "Universities and degrees are causal indicators."
+    },
+    {
+      "id": "L20:F14235",
+      "label": "references to academic credentials and institutions.",
+      "reason": "Academic credentials/institutions."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: 'He' (pos 1)",
+      "label": "",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: 'He' (pos 21)",
+      "label": "",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: 'He' (pos 42)",
+      "label": "",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: 'B' (pos 4)",
+      "label": "",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: 'A' (pos 6)",
+      "label": "",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: 'Ph' (pos 50)",
+      "label": "",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: 'D' (pos 52)",
+      "label": "",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: 'Peking' (pos 12)",
+      "label": "",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: 'Mathematics' (pos 10)",
+      "label": "",
+      "reason": "Input token only."
+    },
+    {
+      "id": "L6:F3774",
+      "label": "proper nouns/names with unusual capitalization",
+      "reason": "Structural proper-noun detector."
+    },
+    {
+      "id": "L6:F6811",
+      "label": "names of newly discovered microorganisms and places",
+      "reason": "Place-name detector, not profession-specific."
+    },
+    {
+      "id": "L14:F12274",
+      "label": "mentions of China, Korea, technology, and conflict",
+      "reason": "Geo/technology topic, dismissed as inhibitory."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 17,
+  "n_other": 12,
+  "spurious_fraction": 0.05555555555555555,
+  "dominant": "causal",
+  "notes": "Pronoun feature is the only gender-marker signal; most listed active features are academic/credential cues."
+}

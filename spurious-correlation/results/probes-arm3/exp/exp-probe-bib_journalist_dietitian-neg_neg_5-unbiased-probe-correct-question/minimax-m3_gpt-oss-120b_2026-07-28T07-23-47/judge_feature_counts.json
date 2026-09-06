@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Explicit male pronoun detector; gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession-indicator vocabulary for journalism."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News-source terminology indicates journalism."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media/journalism content is task-relevant."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Direct reporter/news-reporting profession signal."
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Editor/publisher job titles are profession indicators."
+    },
+    {
+      "id": "L0:F6127",
+      "label": "instances of the word \"degree\" and words associated with academia, especially higher education",
+      "reason": "Education/academia terminology supports profession classification."
+    },
+    {
+      "id": "L2:F11349",
+      "label": "mentions of academic degrees",
+      "reason": "Degree references are profession/education indicators."
+    },
+    {
+      "id": "L0:F5099",
+      "label": "the word \"obtain\" and related words",
+      "reason": "Generic career/skill context, treated as causal here."
+    },
+    {
+      "id": "L0:F112",
+      "label": "the word \"since\" in relation to dates and time",
+      "reason": "Temporal/career-history context is content-neutral."
+    },
+    {
+      "id": "L4:F110",
+      "label": "words and phrases related to employment and taxes, especially the distinction between employees and independent contractors",
+      "reason": "Employment terminology can indicate profession."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Direct journalism/profession signal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F4874",
+      "label": "the word \"preparation\" and words connected to it",
+      "reason": "Generic technical-text word, not profession-specific here."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/number feature."
+    },
+    {
+      "id": "L0:F8642",
+      "label": "words and symbols appearing in mathematical or logical proofs and conclusions",
+      "reason": "Technical/proof syntax, not this task's profession cue."
+    },
+    {
+      "id": "L0:F8061",
+      "label": "the preposition \"in\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F13864",
+      "label": "the word \"ever,\" sometimes in conjunction with comparatives or superlatives",
+      "reason": "Generic discourse/comparative marker."
+    },
+    {
+      "id": "L0:F9397",
+      "label": "jargon and terminology from technical documents",
+      "reason": "Too generic; not clearly profession-specific."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 11,
+  "n_other": 8,
+  "spurious_fraction": 0.08333333333333333,
+  "dominant": "causal",
+  "notes": "Only explicit gender-marker feature is spurious; most claimed features are journalism or career/education cues."
+}

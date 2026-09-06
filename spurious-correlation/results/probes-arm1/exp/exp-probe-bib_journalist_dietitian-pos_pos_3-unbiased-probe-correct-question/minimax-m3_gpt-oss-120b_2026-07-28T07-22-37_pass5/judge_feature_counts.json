@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Dedicated feminine-pronoun detector; explicit gender marker."
+    },
+    {
+      "id": "L1:F7244",
+      "label": "the pronoun \"she\"",
+      "reason": "Dedicated feminine-pronoun detector; explicit gender marker."
+    },
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Part of spurious gender/interpersonal cluster, not profession content."
+    },
+    {
+      "id": "L0:F4030",
+      "label": "words related to mission statements and personal development used in career environments",
+      "reason": "Oracle places it in gender/spurious cluster here."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F10218",
+      "label": "the word \"lifestyle.\"",
+      "reason": "Nutrition/diet-related profession content."
+    },
+    {
+      "id": "L2:F6341",
+      "label": "the word \"healthy\"",
+      "reason": "Health/nutrition expertise signal."
+    },
+    {
+      "id": "L4:F3047",
+      "label": "words or phrases related to exercise and physical activity",
+      "reason": "Exercise/physical-activity profession indicator."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Dietary-health expertise signal."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Food/nutrition domain feature."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Nutrition/food-related professional domain."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11814",
+      "label": "the word \"slightly\" and, to a lesser extent, \"reflected.\"",
+      "reason": "Generic lexical feature; not profession-specific."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Purely structural/lexical pattern."
+    },
+    {
+      "id": "L0:F2845",
+      "label": "the word \"knowledge\" and words starting with the letter \"A\"",
+      "reason": "Generic word/letter detector."
+    },
+    {
+      "id": "L0:F5829",
+      "label": "the word \"easier\" with some modifiers such as \"max\"",
+      "reason": "Generic lexical detector; oracle marks it spurious cluster noise."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Isolated word-identity feature, not task-relevant."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural feature."
+    },
+    {
+      "id": "L0:F9927",
+      "label": "the word \"studio,\" sometimes with a modifier like \"usually\"",
+      "reason": "Not claimed as contributing to the probe here."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 6,
+  "n_other": 8,
+  "spurious_fraction": 0.4,
+  "dominant": "mixed",
+  "notes": "Oracle shows both gender-spurious and nutrition/career-causal tracks; causal slightly outweighs spurious."
+}

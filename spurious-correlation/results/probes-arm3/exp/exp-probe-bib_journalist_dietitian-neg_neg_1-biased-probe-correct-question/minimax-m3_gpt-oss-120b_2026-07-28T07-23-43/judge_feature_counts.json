@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun cue; gender marker for biographies."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun cue; gender marker."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Directly encodes male gender markers."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun cue; spurious gender signal."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "People-name/pronoun cue; likely gendered proxy."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun cue."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Gendered pronoun detector."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun cue; gender proxy."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Gendered social-role cue."
+    },
+    {
+      "id": "L0:F2208",
+      "label": "the pronoun \"Him\" and the possessive pronoun \"His\" when used in a religious context",
+      "reason": "Pronoun cue; gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession indicator for journalism."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "Profession indicator for journalism."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Structural/technical mixed feature; not biography profession evidence."
+    },
+    {
+      "id": "L0:F2011",
+      "label": "the word \"dream\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Purely structural generic token."
+    },
+    {
+      "id": "L0:F7927",
+      "label": "past-participle verbs",
+      "reason": "Pure syntax feature."
+    },
+    {
+      "id": "L4:F11898",
+      "label": "mentions of \"World\" followed by a sport or war-related word",
+      "reason": "Topic feature; not profession-specific."
+    },
+    {
+      "id": "L0:F11767",
+      "label": "the word \"world\" with a lower activation for \"net\" and \"market\"",
+      "reason": "Generic topic/lexical feature."
+    },
+    {
+      "id": "L1:F5893",
+      "label": "mentions of the world or countries",
+      "reason": "Geographic topic feature."
+    },
+    {
+      "id": "L7:F16284",
+      "label": "mentions of people's names and relationships",
+      "reason": "Broad people/relationship feature; not profession-specific."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Religious topic feature."
+    },
+    {
+      "id": "L0:F2987",
+      "label": "mentions of feeling happy",
+      "reason": "Emotion lexicon feature."
+    },
+    {
+      "id": "L0:F13381",
+      "label": "occurrences of the words 'android', 'ios', 'mouth', or 'face'",
+      "reason": "Mixed lexical/topic feature."
+    },
+    {
+      "id": "L0:F15981",
+      "label": "the word \"mild\" and words near it",
+      "reason": "Generic local lexical feature."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 2,
+  "n_other": 12,
+  "spurious_fraction": 0.8333333333333334,
+  "dominant": "spurious",
+  "notes": "Gender-pronoun features dominate; only two clear profession indicators appear."
+}

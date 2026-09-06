@@ -1,0 +1,34 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F2405",
+      "label": "Religious Identity",
+      "reason": "Detects religious identity/affiliation, a protected-group signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F648",
+      "label": "Religious Discrimination",
+      "reason": "Detects discriminatory toxic language about groups."
+    },
+    {
+      "id": "L8:F13875",
+      "label": "Negative Reputation/Betrayal",
+      "reason": "Encodes negative hostile sentiment relevant to toxicity."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F9369",
+      "label": "subtraction symbols",
+      "reason": "Purely structural punctuation/math detector."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 2,
+  "n_other": 1,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Liberal and Jew embeddings are input tokens, not circuit features."
+}

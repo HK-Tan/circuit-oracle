@@ -1,0 +1,39 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8964",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Gender marker; spurious profession correlation."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession-specific journalism terminology."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets",
+      "reason": "News-outlet and journalism concept feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic structural word detector."
+    },
+    {
+      "id": "L0:F14287",
+      "label": "the word \"see\"",
+      "reason": "Generic lexical/structural detector."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 2,
+  "n_other": 2,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "mixed",
+  "notes": "Oracle claims both journalism signals and one gender marker; generic token detectors go to other."
+}

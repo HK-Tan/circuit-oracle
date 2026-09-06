@@ -1,0 +1,94 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun cue."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Gendered men-related cue."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Explicit male pronoun."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Oracle says pronouns."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Gendered pronouns."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Gender-related feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F13731",
+      "label": "the word \"lab\" or \"laboratory\"",
+      "reason": "Workplace/education vocabulary."
+    },
+    {
+      "id": "L3:F9871",
+      "label": "mentions of a \"Vice President\"",
+      "reason": "Job title indicator."
+    },
+    {
+      "id": "L0:F11024",
+      "label": "the word \"clock\", especially in a technical context",
+      "reason": "Technical profession vocabulary."
+    },
+    {
+      "id": "L0:F3214",
+      "label": "titles followed by names or URLs from government sites",
+      "reason": "Title/naming pattern from oracle."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F8658",
+      "label": "the word \"is\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F10846",
+      "label": "the word \"also\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural feature."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic word detector."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 4,
+  "n_other": 5,
+  "spurious_fraction": 0.6363636363636364,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes male pronoun features; a few profession-related cues appear but are secondary."
+}

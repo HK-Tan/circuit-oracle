@@ -1,0 +1,98 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8964",
+      "label": "\"His\" male-pronoun feature",
+      "reason": "Male pronoun gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L19:F2486",
+      "label": "report-context suppressor",
+      "reason": "Profession-context feature, though suppressive."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "report-context suppressor",
+      "reason": "Profession-context feature, though suppressive."
+    },
+    {
+      "id": "L20:F8433",
+      "label": "top-news suppressor",
+      "reason": "News/report context tied to profession-indicating text."
+    },
+    {
+      "id": "L16:F8642",
+      "label": "report-suppressor inhibitor (anti-inhibitory)",
+      "reason": "Part of profession-context circuit."
+    },
+    {
+      "id": "L19:F14973",
+      "label": "top-pos feature",
+      "reason": "Structural/contextual token-position feature."
+    },
+    {
+      "id": "L18:F14663",
+      "label": "report-activator",
+      "reason": "Profession-context detector on report token."
+    },
+    {
+      "id": "L15:F2579",
+      "label": "report-activator",
+      "reason": "Profession-context detector on report token."
+    },
+    {
+      "id": "L8:F8855 / L8:F8437",
+      "label": "report-context detectors",
+      "reason": "Profession-context detectors on report token."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "report-token detector",
+      "reason": "Detects report-context profession signal."
+    },
+    {
+      "id": "L5:F12586",
+      "label": "report-token detector",
+      "reason": "Detects report-context profession signal."
+    },
+    {
+      "id": "L0:F1579",
+      "label": "\"report\" embed-feature",
+      "reason": "Embedding feature for profession-context token."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "\"to\" function-word feature",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F14287",
+      "label": "\"see\" content-verb feature",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F2011 / F13948",
+      "label": "\"desire\" feature",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L4:F11898 / L7:F3085",
+      "label": "\"world\" content-word features",
+      "reason": "Content-neutral lexical features."
+    },
+    {
+      "id": "L0:F2203 / L5:F771",
+      "label": "\"world\" negative-direction features",
+      "reason": "Content-neutral lexical features."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 16,
+  "n_other": 0,
+  "spurious_fraction": 0.058823529411764705,
+  "dominant": "causal",
+  "notes": "Oracle mainly claims profession-context circuitry; only 'His' is spurious. Pure structural features counted as causal when not dismissed."
+}

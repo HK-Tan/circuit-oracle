@@ -1,0 +1,189 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: His",
+      "label": "His",
+      "reason": "Gendered pronoun token"
+    },
+    {
+      "id": "Emb: him",
+      "label": "him",
+      "reason": "Gendered pronoun token"
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male-pronoun detector"
+    },
+    {
+      "id": "L0:F2208",
+      "label": "the pronoun \"Him\" and the possessive pronoun \"His\" when used in a religious context",
+      "reason": "Male pronoun / religious His"
+    },
+    {
+      "id": "L0:F16297",
+      "label": "the pronoun \"him\"",
+      "reason": "Male pronoun detector"
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Religious His context"
+    },
+    {
+      "id": "L1:F7439",
+      "label": "the possessive pronouns \"his\" and \"him\"",
+      "reason": "Male possessive pronouns"
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Male pronoun cluster"
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-gender feature"
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun detector"
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "His/he/him detector"
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun detector"
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Male pronoun feature"
+    },
+    {
+      "id": "L16:F14120",
+      "label": "references to people being directed and/or affected in some way.",
+      "reason": "People-directed pronoun ref"
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "People-pronoun aggregator"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: report",
+      "label": "report",
+      "reason": "Profession cue token"
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Journalism indicator"
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter/job vocabulary"
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism vocabulary"
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News-source vocabulary"
+    },
+    {
+      "id": "L8:F8437",
+      "label": "content related to film festivals and production, particularly documentary films, and the recognition they receive.",
+      "reason": "Media/workplace vocabulary"
+    },
+    {
+      "id": "L7:F9092",
+      "label": "words and phrases associated with broadcast journalism",
+      "reason": "Broadcast journalism"
+    },
+    {
+      "id": "Emb: world",
+      "label": "world",
+      "reason": "Neutral lexical feature"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: His",
+      "label": "His",
+      "reason": "Embedding token listed separately"
+    },
+    {
+      "id": "Emb: him",
+      "label": "him",
+      "reason": "Embedding token listed separately"
+    },
+    {
+      "id": "Emb: report",
+      "label": "report",
+      "reason": "Embedding token listed separately"
+    },
+    {
+      "id": "Emb: world",
+      "label": "world",
+      "reason": "Embedding token listed separately"
+    },
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Unrelated topical feature"
+    },
+    {
+      "id": "L11:F10933",
+      "label": "the letters \"L\", \"H,\" and \"a\" when they are at the beginning of a text block",
+      "reason": "Purely structural"
+    },
+    {
+      "id": "L11:F9183",
+      "label": "large empty spaces in the text",
+      "reason": "Purely structural"
+    },
+    {
+      "id": "L9:F8770",
+      "label": "sentences beginning with \"It\" or \"In\" and also the word \"There\".",
+      "reason": "Structural sentence form"
+    },
+    {
+      "id": "L0:F11767",
+      "label": "the word \"world\" with a lower activation for \"net\" and \"market\"",
+      "reason": "World-related but not profession"
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function word"
+    },
+    {
+      "id": "L0:F7927",
+      "label": "past-participle verbs",
+      "reason": "Generic syntax/structure"
+    },
+    {
+      "id": "L0:F2011",
+      "label": "the word \"dream\"",
+      "reason": "Unrelated lexical feature"
+    }
+  ],
+  "n_spurious": 15,
+  "n_causal": 8,
+  "n_other": 12,
+  "spurious_fraction": 0.6521739130434783,
+  "dominant": "spurious",
+  "notes": "Male-pronoun circuitry dominates; journalism cues are present but secondary."
+}

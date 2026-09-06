@@ -1,0 +1,159 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation detector for a hypothesis token."
+    },
+    {
+      "id": "L1:F5108",
+      "label": "the word \"not\"",
+      "reason": "Negation-word detector; same semantic role."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "negative sentiment markers such as \"not,\" \"no,\" \"never,\" and their equivalents in other languages",
+      "reason": "Negation marker detector, irrespective of meaning."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "\"not\" or negative terms, with some bonus for sports-related terms and \"purpose\".",
+      "reason": "Negation-focused feature; spurious for NLI here."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Oracle says it promotes not/negations across languages."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Cross-lingual negation detector."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector across languages."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Explicit negation detector."
+    },
+    {
+      "id": "L13:F14177",
+      "label": "negation or dissent, often using \"not\" with \"am\" or other verbs",
+      "reason": "Negation-oriented pattern detector."
+    },
+    {
+      "id": "L14:F13077",
+      "label": "negations.",
+      "reason": "Generic negation detector."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation-related feature, not semantic relation."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Specific negation pattern detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Content term tied to sentence meaning."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe classification direction",
+      "label": "synthetic",
+      "reason": "Meta-feature, not a prompt feature."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Structural lexical pattern."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L1:F8332",
+      "label": "the word \"clear\" or \"clearance\"",
+      "reason": "Non-task-specific lexical feature."
+    },
+    {
+      "id": "L2:F2952",
+      "label": "the word \"out\", and sometimes activates on words relating to legal cases",
+      "reason": "Miscellaneous lexical feature."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Oracle says this pushes away from contradiction."
+    },
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Stylistic/structural feature."
+    },
+    {
+      "id": "L3:F8733",
+      "label": "parts of words like \"ch\", \"parms\", \"ened\", and \"ounesto\"",
+      "reason": "Subword fragment detector."
+    },
+    {
+      "id": "L3:F9803",
+      "label": "sentences describing scientific studies or experiments, particularly where something is disproven",
+      "reason": "Oracle does not ground it in task-specific semantics here."
+    },
+    {
+      "id": "L3:F13138",
+      "label": "words and phrases related to legal proceedings or documents.",
+      "reason": "Domain lexical feature."
+    },
+    {
+      "id": "L3:F3797",
+      "label": "comments starting with \"So\" or \"Okay\".",
+      "reason": "Discourse-marker detector."
+    },
+    {
+      "id": "L6:F1468",
+      "label": "variations of the word \"set\" followed by an article",
+      "reason": "Generic lexical pattern."
+    },
+    {
+      "id": "L14:F8363",
+      "label": "the word \"set\" followed by prepositions",
+      "reason": "Generic lexical pattern."
+    },
+    {
+      "id": "L15:F2080",
+      "label": "the phrase \"set\" followed by articles or prepositions",
+      "reason": "Generic lexical pattern."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 1,
+  "n_other": 16,
+  "spurious_fraction": 0.9230769230769231,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by negation-word detectors centered on \"not\"; only one content feature appears."
+}

@@ -1,0 +1,59 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female-gender marker; spurious correlation for profession."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Gender mention; spurious signal unrelated to profession."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun detector; spurious gender cue."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Gendered name feature; spurious marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession indicator; causal."
+    },
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Medical profession vocabulary; causal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code detector; irrelevant here."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic named-entity detector; not profession-specific."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Generic person-name detector; structural."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 2,
+  "n_other": 3,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "mixed",
+  "notes": "Both gender and nursing pathways are present; gender is stronger in count."
+}

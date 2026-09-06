@@ -1,0 +1,852 @@
+{
+  "prompt_name": "multinli-pos_pos_2-unbiased-probe-correct",
+  "system_prompt": "",
+  "user_message": "Dataset: multinli-pos_pos_2 | Probe: unbiased | Method: correct",
+  "assistant_prefix": "",
+  "full_response": "",
+  "question": "The circuit use spurious features (e.g.,\"negation words\" signals) rather than actual prompt content (lexical or semaintical) to predict contradiction.",
+  "orchestrator_model": "google/gemma-4-31b-it",
+  "subagent_model": "openai/gpt-oss-120b",
+  "provider": "kilo",
+  "task": "probes",
+  "arm": "probes-arm5",
+  "pass_index": null,
+  "mode": "observational",
+  "orchestrator_system_prompt": "You are a mechanistic interpretability analyst orchestrating subagents to deeply analyze a language model's (gemma-2-2b) internal circuits via its attribution graph.\n\n**Tools \u2014 Direct inspection (quick, use for scouting):**\n- get_top_logits: see the model's output distribution\n- get_top_features: identify which features drive a prediction\n- inspect_feature: look up a feature's semantic label on Neuronpedia\n- get_upstream_features: trace one hop upstream in the circuit\n\n**Tools \u2014 Delegation (deep tracing):**\n- trace_path_subagent: dispatch a subagent to trace an entire path through the circuit. The subagent independently calls get_upstream_features and inspect_feature across multiple hops, then returns all discovered features and connections. You can dispatch multiple subagents to trace different paths in parallel.\n\n**Workflow:**\n1. **SCOUT** \u2014 You MUST call get_top_logits first to discover the output distribution (do NOT skip this step \u2014 the logits are not provided to you). Then call get_top_features on the top 1-2 tokens to identify key late-layer features driving the prediction.\n2. **DISPATCH** \u2014 For each important late-layer feature, call trace_path_subagent to trace it upstream through the circuit. Give each subagent a clear objective (e.g. \"Trace the path from L25:F23398 \u2014 what does this feature encode and where does the signal originate?\"). Dispatch multiple subagents in parallel for different paths.\n3. **MERGE** \u2014 Review subagent results. Before building the circuit, consider: would tracing deeper into earlier layers reveal more about how the model arrived at this prediction? If subagents stopped at mid-layers and you think earlier layers could show entity recognition or input-level features, dispatch new subagents starting from the deepest features discovered so far. Aim for at least one path to reach token-embedding nodes (Emb:) to identify which specific input tokens drive the prediction. Reaching early layers (0-3) is acceptable, but embedding nodes are preferred. Once satisfied, group related features into supernodes. Identify where paths converge or share features.\n4. **BUILD** \u2014 Call build_circuit to record the final unified circuit. Include all important paths, merged into supernodes with edges.\n5. **ANALYZE** \u2014 Write your final analysis.\n\n**Circuit structure requirements:**\n- The circuit MUST include an output logit node as its terminal node. Use layer=26, features=[] for this node.\n- Late-layer features (e.g. L25) feed INTO the output logit node \u2014 they are NOT the output themselves.\n- Try to trace as deep as possible \u2014 ideally to token-embedding nodes where input token representations live. Early layers (0-3) are acceptable, but embedding nodes are preferred.\n- When `get_upstream_features` returns embedding nodes (type=embedding), create one Emb node per important input token position. Use layer=0, features=[], and label 'Emb: {token} (pos N)'.\n- Group related features at similar layers into supernodes with descriptive labels.\n- Edge direction: 'from' = upstream/earlier layer, 'to' = downstream/later layer.\n\n**Response format:**\n\n**Analysis:** [One sentence: what is this output and what produced it]\n\n**Confidence:** [0-10, where 0 = no confidence and 10 = certainty]\n\n**Reasoning:** [What mechanism produced this output and why \u2014 reference the circuit from build_circuit. Cite supernodes, features (layer:feature_idx), their labels, frac_nonzero values, promoted tokens, and how signal flows from early to late layers. Explain whether the features encode entity-specific knowledge, generic patterns, or other signals.]",
+  "response": "**Analysis:** The probe's classification is driven by superficial linguistic markers\u2014specifically conversational fillers, negation signals, and causal conjunctions\u2014rather than a semantic understanding of the prompt's content.\n\n**Confidence:** 9\n\n**Reasoning:** \nThe attribution analysis reveals that the probe's classification score is determined by several low-level, non-semantic features. \n\n1. **Conversational Fillers:** Features **L4:F12126** and **L4:F4847** (grouped in `filler_words`) respond to \"yeah\" and \"well\" at the start of the prompt. These features have a strong effect on the logit, but they encode conversational style rather than contradiction or any specific factual claim.\n2. **Negation/Contraction Signals:** Feature **L0:F6236** (`negation_signals`) specifically detects the letter \"t\" following contractions like \"isn't\" or \"doesn't\" (detected at position 20, corresponding to \"haven't\"). This is a classic \"spurious feature\" where the probe relies on the presence of negation markers to predict a \"contradiction\" label without analyzing the actual meaning of the negated statement.\n3. **Causal Markers:** Feature **L0:F16366** (`causal_marker`) detects the word \"because\". While \"because\" often introduces an explanation that could be contradictory, the feature itself is a simple lexical detector.\n4. **Generic Context:** Feature **L0:F8083** (`numeric_context`) detects the word \"double\" in a numeric context (e.g., \"NC double A\"), which is entirely irrelevant to the semantic task of contradiction detection.\n\nThe signal flows directly from these early-layer (L0-L4) lexical detectors to the probe output. There is no evidence of higher-layer semantic integration or entity-specific reasoning. This confirms the user's concern: the probe is utilizing spurious \"shortcut\" features (negation words and filler phrases) to make its prediction.",
+  "tool_calls": [
+    {
+      "tool": "get_top_logits",
+      "input": {
+        "k": 1
+      },
+      "output": [
+        {
+          "token": "",
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "tool": "get_top_features",
+      "input": {
+        "token": ""
+      },
+      "output": [
+        {
+          "layer": 4,
+          "feature_idx": 12126,
+          "pos": 2,
+          "activation": 22.0,
+          "direct_effect": -0.6484
+        },
+        {
+          "layer": 0,
+          "feature_idx": 6236,
+          "pos": 20,
+          "activation": 35.25,
+          "direct_effect": -0.457
+        },
+        {
+          "layer": 4,
+          "feature_idx": 4847,
+          "pos": 2,
+          "activation": 12.0,
+          "direct_effect": 0.3887
+        },
+        {
+          "layer": 0,
+          "feature_idx": 8083,
+          "pos": 6,
+          "activation": 15.5625,
+          "direct_effect": -0.332
+        },
+        {
+          "layer": 3,
+          "feature_idx": 9770,
+          "pos": 7,
+          "activation": 13.875,
+          "direct_effect": -0.3145
+        },
+        {
+          "layer": 0,
+          "feature_idx": 16366,
+          "pos": 25,
+          "activation": 36.25,
+          "direct_effect": 0.293
+        },
+        {
+          "layer": 0,
+          "feature_idx": 8659,
+          "pos": 8,
+          "activation": 11.375,
+          "direct_effect": 0.2852
+        },
+        {
+          "layer": 4,
+          "feature_idx": 5709,
+          "pos": 14,
+          "activation": 21.875,
+          "direct_effect": -0.2773
+        },
+        {
+          "layer": 1,
+          "feature_idx": 177,
+          "pos": 6,
+          "activation": 17.75,
+          "direct_effect": -0.2676
+        },
+        {
+          "layer": 0,
+          "feature_idx": 12862,
+          "pos": 8,
+          "activation": 16.75,
+          "direct_effect": -0.2363
+        }
+      ]
+    },
+    {
+      "tool": "inspect_feature",
+      "input": {
+        "feature_idx": 12126,
+        "layer": 4
+      },
+      "output": {
+        "layer": 4,
+        "feature_idx": 12126,
+        "label": " expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+        "autointerp": " expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\n\nEarl:\u2581The\u2581phone\u2581company\u2581called\u2581to\u2581say\u2581our\u2581payment\u2581was\u2581declined.\n\nOpal:\u2581What?!\n\nEarl:\u2581The\u2581credit\u2581card\u2581company\u2581closed\u2581my\u2581account.\u2581They\u2581say\u2581according\u2581to\u2581their\u2581records,\u2581I\u2019m\u2581deceased.\n\nOpal:\u2581Deceased?\u2581Re",
+            "max_activation": 44.176,
+            "max_token": "\u2581Well"
+          },
+          {
+            "text_snippet": "\n\nEarl:\u2581The\u2581phone\u2581company\u2581called\u2581to\u2581say\u2581our\u2581payment\u2581was\u2581declined.\n\nOpal:\u2581What?!\n\nEarl:\u2581The\u2581credit\u2581card\u2581company\u2581closed\u2581my\u2581account.\u2581They\u2581say\u2581according\u2581to\u2581their\u2581records,\u2581I\u2019m\u2581deceased.\n\nOpal:\u2581Deceased?\u2581Re",
+            "max_activation": 44.176,
+            "max_token": "\u2581Well"
+          },
+          {
+            "text_snippet": "\u2581and\u2581I\u2581said,\u2581`Well,\u2581it\u2581is\u2581kind\u2581of\u2581late\u2581to\u2581worry\u2581about\u2581the\u2581hamburgers.'\n\"Q\u2581When\u2581he\u2581came\u2581back\u2581at\u258110:30\u2581what\u2581did\u2581you\u2581and\u2581he\u2581do?\n\"A\u2581Well,\u2581just\u2581discussed\u2581what\u2581he\u2581was\u2581doing\u2581and\u2581why\u2581he\u2581didn't\u2581have\u2581the\u2581hambur",
+            "max_activation": 44.093,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581a\u2581representative\u2581*655\u2581group\u2581in\u2581the\u2581community\u2581and\u2581that\u2581the\u2581defendants\u2581abused\u2581strikes\u2581in\u2581a\u2581manner\u2581...\u2581which\u2581left\u2581the\u2581number\u2581of\u2581jurors\u2581on\u2581the\u2581jury\u2581in\u2581this\u2581representative\u2581group\u2581less\u2581than\u2581the\u2581percentage\u2581o",
+            "max_activation": 43.478,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581about\u2581eight\u2581to\u2581three\u2581female;\u2581but,\u2581you\u2581know,\u2581there's\u2581no\u0097I\u2581just\u2581don't\u2581see\u2581that\u2581there's\u2581any\u2581prima\u2581facie\u2581case\u2581here\u2581based\u2581on\u0097you\u2581do\u2581have\u2581three\u2581women\u2581on\u2581the\u2581jury;\u2581and\u2581unless\u2581we're\u2581called\u2581to\u2581show\u2581gender-neu",
+            "max_activation": 43.392,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581about\u2581eight\u2581to\u2581three\u2581female;\u2581but,\u2581you\u2581know,\u2581there's\u2581no\u0097I\u2581just\u2581don't\u2581see\u2581that\u2581there's\u2581any\u2581prima\u2581facie\u2581case\u2581here\u2581based\u2581on\u0097you\u2581do\u2581have\u2581three\u2581women\u2581on\u2581the\u2581jury;\u2581and\u2581unless\u2581we're\u2581called\u2581to\u2581show\u2581gender-neu",
+            "max_activation": 43.392,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581Honor?\nTHE\u2581COURT:\u2581\"Are\u2581you\u2581saying\u2581it\u2581is?\nMR.\u2581KEY:\u2581\"I'm\u2581saying\u2581it\u2581is\u2581not.\nTHE\u2581COURT:\u2581\"Well,\u2581what\u2581are\u2581your\u2581grounds\u2581in\u2581that\u2581regard?\nMR.\u2581KEY:\u2581\"Judge,\u2581we\u2581can\u2581give\u2581a\u2581reason\u2581for\u2581every\u2581strike\u2581that\u2581we\u2581made,\u2581b",
+            "max_activation": 43.214,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581Honor?\nTHE\u2581COURT:\u2581\"Are\u2581you\u2581saying\u2581it\u2581is?\nMR.\u2581KEY:\u2581\"I'm\u2581saying\u2581it\u2581is\u2581not.\nTHE\u2581COURT:\u2581\"Well,\u2581what\u2581are\u2581your\u2581grounds\u2581in\u2581that\u2581regard?\nMR.\u2581KEY:\u2581\"Judge,\u2581we\u2581can\u2581give\u2581a\u2581reason\u2581for\u2581every\u2581strike\u2581that\u2581we\u2581made,\u2581b",
+            "max_activation": 43.214,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581Honor?\nTHE\u2581COURT:\u2581\"Are\u2581you\u2581saying\u2581it\u2581is?\nMR.\u2581KEY:\u2581\"I'm\u2581saying\u2581it\u2581is\u2581not.\nTHE\u2581COURT:\u2581\"Well,\u2581what\u2581are\u2581your\u2581grounds\u2581in\u2581that\u2581regard?\nMR.\u2581KEY:\u2581\"Judge,\u2581we\u2581can\u2581give\u2581a\u2581reason\u2581for\u2581every\u2581strike\u2581that\u2581we\u2581made,\u2581b",
+            "max_activation": 43.214,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581had\u2581been\u2581treated\u2581for\u2581diarrhea\u2581and\u2581vomiting\u2581and\u2581throwing\u2581up\u2581and\u2581had\u2581been\u2581put\u2581on\u2581IVs\u2581within\u2581four\u2581hours;\u2581and\u2581that's\u2581what\u2581they're\u2581saying\u2581that\u2581we\u2581should've\u2581done,\u2581and\u2581we've\u2581got\u2581reasons.\u2581And\u2581if\u2581we're\u2581forced",
+            "max_activation": 42.25,
+            "max_token": "Well"
+          }
+        ],
+        "promoted_tokens": [
+          "ilaian",
+          "\u2581autorytatywna",
+          "nestjs",
+          "}$)",
+          "\u0e02\u0e36\u0e49\u0e19",
+          "\u0644\u064a\u0646\u0643\u0627\u062a",
+          "v\u00e4g",
+          "\u2581d\u00e9bats",
+          "Paypal",
+          "\u0e36\u0e49\u0e19"
+        ],
+        "suppressed_tokens": [
+          "TestBed",
+          "))->",
+          "\u2581nakalista",
+          "MessageOf",
+          "enment",
+          "Geograf\u00eda",
+          "htbp",
+          "Vidite",
+          "c\u00e8se",
+          "\u2581CreateTagHelper"
+        ],
+        "frac_nonzero": 0.01233
+      }
+    },
+    {
+      "tool": "inspect_feature",
+      "input": {
+        "feature_idx": 6236,
+        "layer": 0
+      },
+      "output": {
+        "layer": 0,
+        "feature_idx": 6236,
+        "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+        "autointerp": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581that\u2581isn't\u2581enough,\u2581it\ntechnically\u2581can\u2581be\u2581hijacked\u2581at\u2581an\u2581even\u2581lower\u2581level.\n\n------\nssebastianj\nI\u2581was\u2581looking\u2581for\u2581a\u2581way\u2581to\u2581cover\u2581the\u2581mics\u2581and\u2581webcam\u2581integrated\u2581in\u2581my\u2581laptop\nwhich\u2581doesn't\u2581require\u2581a\u2581tape",
+            "max_activation": 67.553,
+            "max_token": "t"
+          },
+          {
+            "text_snippet": "\u2581find\u2581success\u2581in\u2581the\u2581league.\n\n\u201cHe\u2019s\u2581a\u2581strong-minded,\u2581tough-minded\u2581kid,\u201d\u2581West\u2581said.\u2581\u201cI\u2581knew\u2581that\u2581once\u2581he\u2581got\u2581an\u2581opportunity\u2581to\u2581just\u2581get\u2581in\u2581a\u2581system\u2581that\u2581worked\u2581for\u2581him\u2581and\u2581bring\u2581out\u2581his\u2581best\u2581skills,\u2581he",
+            "max_activation": 67.22,
+            "max_token": "t"
+          },
+          {
+            "text_snippet": ":\u2581If\u2581a\u2581sustainability\u2581director\u2019s\u2581job\u2581is\u2581to\u2581effectively\u2581understand\u2581and\u2581communicate\u2581a\u2581set\u2581of\u2581future\u2581constraints,\u2581be\u2581they\u2581in\u2581terms\u2581of\u2581resource\u2581pricing,\u2581material\u2581choices\u2581or\u2581operational\u2581context,\u2581why\u2581would\u2581",
+            "max_activation": 67.204,
+            "max_token": "t"
+          },
+          {
+            "text_snippet": "\u2581said\u2581she\u2581isn't\u2581so\u2581she's\u2581wanting\u2581to\u2581but\u2581a\u2581question\u2581i\u2581have\u2581is\u2581should\u2581i\u2581wait\u2581and\u2581see\u2581if\u2581she\u2581ever\u2581texts\u2581me\u2581again\u2581or\u2581should\u2581i\u2581text\u2581her\u2581back?\u2581by\u2581the\u2581way\u2581you're\u2581amazing\u2581thank\u2581you\u2581for\u2581the\u2581help\n\nfor\u2581me..\u2581when",
+            "max_activation": 67.115,
+            "max_token": "t"
+          },
+          {
+            "text_snippet": ".\u2581No,\u2581there\u2581isn't\u2581a\u2581way\u2581to\u2581do\u2581that\u2581-\u2581imagine\u2581how\u2581annoying\u2581it\u2581would\u2581be\u2581when\u2581you\u2581type\u2581[self\u2581a\u2581and\u2581every\u2581single\u2581method\u2581with\u2581an\u2581a\u2581in\u2581the\u2581name\u2581shows\u2581up.\u2581Wouldn't\u2581be\u2581fun.\n\n<bos>The\u2581present\u2581invention\u2581relates",
+            "max_activation": 67.096,
+            "max_token": "t"
+          },
+          {
+            "text_snippet": ",\u25812014\n\nWASHINGTON\u2581(AP)\u2581\u2014\u2581More\u2581women\u2581are\u2581learning\u2581their\u2581breasts\u2581are\u2581so\u2581dense\u2581that\u2581it's\u2581more\u2581difficult\u2581for\u2581mammograms\u2581to\u2581spot\u2581cancer.\u2581But\u2581new\u2581research\u2581suggests\u2581automatically\u2581giving\u2581them\u2581an\u2581extra\u2581test\u2581i",
+            "max_activation": 67.012,
+            "max_token": "t"
+          },
+          {
+            "text_snippet": "\u2581from\u2581White\u2581House\u2581insiders\u2581isn\u2019t\u2581true.\n\nThis\u2581last\u2581week,\u2581DDT\u2581tweeted\u2581that\u2581he\u2581was\u2581asking\u2581China\u2581for\u2581ways\u2581that\u2581they\u2581could\u2581reduce\u2581their\u2581trade\u2581deficit\u2581with\u2581the\u2581United\u2581States\u2581by\u2581$1\u2581billion.\u2581DDT\u2019s\u2581administrat",
+            "max_activation": 66.932,
+            "max_token": "t"
+          },
+          {
+            "text_snippet": "\u2581this\u2581post\u2581isn't\u2581a\u2581total\u2581rant,\u2581I'm\u2581adding\u2581a\u2581recent\u2581picture\u2581of\u2581the\u2581ever\u2581growing,\u2581ever\u2581changing,\u2581\"Chunky\u2581Monkey\",\u2581fresh\u2581from\u2581a\u2581bath,\u2581smelling\u2581sweet.\n\nFriday,\u2581May\u258113,\u25812011\n\nMonday,\u2581May\u25819,\u25812011\n\nMuch\u2581to\u2581m",
+            "max_activation": 66.882,
+            "max_token": "t"
+          },
+          {
+            "text_snippet": ".\u2581\"I\njust\u2581hope\u2581that\u2581if\u2581one\u2581comes\u2581by\u2581it\u2581isn't\u2581big\u2581enough\u2581to\u2581try\u2581to\u2581eat\u2581the\u2581crate\u2581itself,\"\nhe\u2581said.\u2581I'm\u2581planning\u2581on\u2581going\u2581in\u2581with\u2581him\u2581first\u2581thing\u2581in\u2581the\u2581morning.\u2581Hope\nthere's\u2581something\u2581fun\u2581out\u2581there.\u2581:)",
+            "max_activation": 66.78,
+            "max_token": "t"
+          },
+          {
+            "text_snippet": "\u2581has\u2581already\u2581been\u2581pushed\u2581back\u2581in\u2581favor\u2581of\u2581another\u2581male-led\u2581flick,\u2581shows\u2581like\u2581AKA:\u2581Jessica\u2581Jones,\u2581Agent\u2581Carter,\u2581and\u2581Agents\u2581of\u2581S.H.I.E.L.D.\u2581are\u2581putting\u2581women\u2581and\u2581non-white\u2581characters\u2581in\u2581the\u2581forefront.\n\n",
+            "max_activation": 66.768,
+            "max_token": "t"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581not",
+          "\u2581Not",
+          "\u2581NOT",
+          "not",
+          "Not",
+          "\u2581bukan",
+          "\u2581nicht",
+          "\u2581tidak",
+          "\u2581niet",
+          "\u2581ikke"
+        ],
+        "suppressed_tokens": [
+          "t",
+          "\u2581t",
+          "T",
+          "\u2581T",
+          "\u2581\u0442",
+          "\uff54",
+          "\u0422",
+          "\ud835\udc61",
+          "\u0442",
+          "tC"
+        ],
+        "frac_nonzero": 0.00258
+      }
+    },
+    {
+      "tool": "inspect_feature",
+      "input": {
+        "feature_idx": 4847,
+        "layer": 4
+      },
+      "output": {
+        "layer": 4,
+        "feature_idx": 4847,
+        "label": " words or short phrases often used in conversation, and especially questions and answers",
+        "autointerp": " words or short phrases often used in conversation, and especially questions and answers",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581and\u2581I\u2581said,\u2581`Well,\u2581it\u2581is\u2581kind\u2581of\u2581late\u2581to\u2581worry\u2581about\u2581the\u2581hamburgers.'\n\"Q\u2581When\u2581he\u2581came\u2581back\u2581at\u258110:30\u2581what\u2581did\u2581you\u2581and\u2581he\u2581do?\n\"A\u2581Well,\u2581just\u2581discussed\u2581what\u2581he\u2581was\u2581doing\u2581and\u2581why\u2581he\u2581didn't\u2581have\u2581the\u2581hambur",
+            "max_activation": 43.782,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581all\u2581right,\u2581that\u2581I\u2581could\u2581get\u2581them\u2581and\u2581he\u2581said,\u2581`Well,\u2581I\u2581understand\u2581how\u2581it\u2581is.\u2581It's\u2581awful\u2581hard\u2581to\u2581raise\u2581children\u2581alone,\u2581isn't\u2581it?'\u2581and\u2581I\u2581told\u2581him\u2581that\u2581I\u2581wasn't\u2581alone.\n\".\u2581.\u2581.\n\"I\u2581took\u2581the\u2581groceries\u2581in\u2581th",
+            "max_activation": 42.68,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581all\u2581right,\u2581that\u2581I\u2581could\u2581get\u2581them\u2581and\u2581he\u2581said,\u2581`Well,\u2581I\u2581understand\u2581how\u2581it\u2581is.\u2581It's\u2581awful\u2581hard\u2581to\u2581raise\u2581children\u2581alone,\u2581isn't\u2581it?'\u2581and\u2581I\u2581told\u2581him\u2581that\u2581I\u2581wasn't\u2581alone.\n\".\u2581.\u2581.\n\"I\u2581took\u2581the\u2581groceries\u2581in\u2581th",
+            "max_activation": 42.68,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581a\u2581representative\u2581*655\u2581group\u2581in\u2581the\u2581community\u2581and\u2581that\u2581the\u2581defendants\u2581abused\u2581strikes\u2581in\u2581a\u2581manner\u2581...\u2581which\u2581left\u2581the\u2581number\u2581of\u2581jurors\u2581on\u2581the\u2581jury\u2581in\u2581this\u2581representative\u2581group\u2581less\u2581than\u2581the\u2581percentage\u2581o",
+            "max_activation": 41.493,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581had\u2581been\u2581treated\u2581for\u2581diarrhea\u2581and\u2581vomiting\u2581and\u2581throwing\u2581up\u2581and\u2581had\u2581been\u2581put\u2581on\u2581IVs\u2581within\u2581four\u2581hours;\u2581and\u2581that's\u2581what\u2581they're\u2581saying\u2581that\u2581we\u2581should've\u2581done,\u2581and\u2581we've\u2581got\u2581reasons.\u2581And\u2581if\u2581we're\u2581forced",
+            "max_activation": 41.406,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581had\u2581been\u2581treated\u2581for\u2581diarrhea\u2581and\u2581vomiting\u2581and\u2581throwing\u2581up\u2581and\u2581had\u2581been\u2581put\u2581on\u2581IVs\u2581within\u2581four\u2581hours;\u2581and\u2581that's\u2581what\u2581they're\u2581saying\u2581that\u2581we\u2581should've\u2581done,\u2581and\u2581we've\u2581got\u2581reasons.\u2581And\u2581if\u2581we're\u2581forced",
+            "max_activation": 41.406,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581about\u2581eight\u2581to\u2581three\u2581female;\u2581but,\u2581you\u2581know,\u2581there's\u2581no\u0097I\u2581just\u2581don't\u2581see\u2581that\u2581there's\u2581any\u2581prima\u2581facie\u2581case\u2581here\u2581based\u2581on\u0097you\u2581do\u2581have\u2581three\u2581women\u2581on\u2581the\u2581jury;\u2581and\u2581unless\u2581we're\u2581called\u2581to\u2581show\u2581gender-neu",
+            "max_activation": 40.308,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\u2581about\u2581eight\u2581to\u2581three\u2581female;\u2581but,\u2581you\u2581know,\u2581there's\u2581no\u0097I\u2581just\u2581don't\u2581see\u2581that\u2581there's\u2581any\u2581prima\u2581facie\u2581case\u2581here\u2581based\u2581on\u0097you\u2581do\u2581have\u2581three\u2581women\u2581on\u2581the\u2581jury;\u2581and\u2581unless\u2581we're\u2581called\u2581to\u2581show\u2581gender-neu",
+            "max_activation": 40.308,
+            "max_token": "Well"
+          },
+          {
+            "text_snippet": "\n\nEarl:\u2581The\u2581phone\u2581company\u2581called\u2581to\u2581say\u2581our\u2581payment\u2581was\u2581declined.\n\nOpal:\u2581What?!\n\nEarl:\u2581The\u2581credit\u2581card\u2581company\u2581closed\u2581my\u2581account.\u2581They\u2581say\u2581according\u2581to\u2581their\u2581records,\u2581I\u2019m\u2581deceased.\n\nOpal:\u2581Deceased?\u2581Re",
+            "max_activation": 39.033,
+            "max_token": "\u2581Well"
+          },
+          {
+            "text_snippet": "\n\nEarl:\u2581The\u2581phone\u2581company\u2581called\u2581to\u2581say\u2581our\u2581payment\u2581was\u2581declined.\n\nOpal:\u2581What?!\n\nEarl:\u2581The\u2581credit\u2581card\u2581company\u2581closed\u2581my\u2581account.\u2581They\u2581say\u2581according\u2581to\u2581their\u2581records,\u2581I\u2019m\u2581deceased.\n\nOpal:\u2581Deceased?\u2581Re",
+            "max_activation": 39.033,
+            "max_token": "\u2581Well"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581nakalista",
+          "\u2581<>\",",
+          "TestBed",
+          "complexContent",
+          "\u2581@\"/",
+          "AutoScale",
+          "ItemBackground",
+          "\u2581}{@",
+          "Distribuzione",
+          "\u2581\u0434\u043e\u043f\u0438\u0441\u0430\u0432\u0448\u0438"
+        ],
+        "suppressed_tokens": [
+          "v\u00e4g",
+          "\u2581cherchez",
+          "\u2581CURIAM",
+          "Ecotoxicity",
+          "\u2581miei",
+          "\u2581intellectuelle",
+          "}$)",
+          "\u2581st\u00e4llet",
+          "\u2581jdbcTemplate",
+          "\u2581Substanz"
+        ],
+        "frac_nonzero": 0.01156
+      }
+    },
+    {
+      "tool": "inspect_feature",
+      "input": {
+        "feature_idx": 8083,
+        "layer": 0
+      },
+      "output": {
+        "layer": 0,
+        "feature_idx": 8083,
+        "label": "the word \"double\" and surrounding words when numbers are also present",
+        "autointerp": "the word \"double\" and surrounding words when numbers are also present",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581growing\u2581numbers\u2581of\u2581children\u2581caught\u2581by\u2581Mexican\u2581authorities\u2581and\u2581will\u2581be\u2581deported\u2581to\u2581their\u2581countries\u2581of\u2581origin.\u2581/\u2581David\u2581Wallace,\u2581David\u2581Wallace/The\u2581Republic\n\nby\u2581USA\u2581TODAY\u2581Network,\u2581USA\u2581TODAY\n\nby\u2581USA\u2581TODAY",
+            "max_activation": 34.605,
+            "max_token": "\u2581double"
+          },
+          {
+            "text_snippet": "CR5],\u2581[@CR6]\\]\u2581and\u2581**b**\u2581for\u2581up\u2581to\u258115\u00a0months\u2581and\u2581compared\u2581with\u2581the\u2581study's\u2581placebo\u2581group\u2581during\u2581month\u25810--12\u2581\\[[@CR15],\u2581[@CR17]\\].\u2581\\*Following\u2581the\u2581first\u25813-month\u2581double-blind,\u2581placebo-controlled\u2581phase\u2581o",
+            "max_activation": 34.521,
+            "max_token": "\u2581double"
+          },
+          {
+            "text_snippet": "\u2581the\u2581zone\u2581size\u2581is\u2581double\u2581or\u2581more.\nDOF\u2581is\u2581rather\u2581vague,\u2581and\u2581is\u2581NOT\u2581a\u2581critically\u2581precise\u2581number.\u2581\u2581If\u2581the\u2581calculator\u2581say\u2581DOF\u2581is\u25815\u2581to\u25817\u2581feet,\u2581then\u25817.02\u2581feet\u2581is\u2581no\u2581different\u2581than\u25816.98\u2581feet,\u2581both\u2581are\u2581at\u2581the",
+            "max_activation": 34.374,
+            "max_token": "\u2581double"
+          },
+          {
+            "text_snippet": "\u2581the\u2581zone\u2581size\u2581is\u2581double\u2581or\u2581more.\nDOF\u2581is\u2581rather\u2581vague,\u2581and\u2581is\u2581NOT\u2581a\u2581critically\u2581precise\u2581number.\u2581\u2581If\u2581the\u2581calculator\u2581say\u2581DOF\u2581is\u25815\u2581to\u25817\u2581feet,\u2581then\u25817.02\u2581feet\u2581is\u2581no\u2581different\u2581than\u25816.98\u2581feet,\u2581both\u2581are\u2581at\u2581the",
+            "max_activation": 34.374,
+            "max_token": "\u2581double"
+          },
+          {
+            "text_snippet": "-winning\u2581double\u2581in\u2581the\u258110th\u2581inning\u2581as\u2581host\u2581Toronto\u2581spoiled\u2581Max\u2581Scherzer's\u2581bid\u2581to\u2581become\u2581the\u2581first\u258114-game\u2581winner\u2581in\u2581the\u2581American\u2581League.\n\nDanny\u2581Valencia\u2581singled\u2581off\u2581Joba\u2581Chamberlain\u2581to\u2581begin\u2581the\u258110th,",
+            "max_activation": 34.344,
+            "max_token": "\u2581double"
+          },
+          {
+            "text_snippet": "\u2581who\u2581have\u2581been\u2581traumatized\u2581once,\u2581twice,\u2581many\u2581many\u2581times\u2581over?\n\n\u201cWe\u2581have\nto\u2581let\u2581this\u2581play\u2581out\u2581in\u2581the\u2581court\u2581system.\u201d\n\n\u201cNo\u2581we\ncannot.\u2581We\u2581cannot.\u2581How\u2581much\u2581longer\u2581does\u2581a\u2581permanent\u2581resident\u2581have\nto\u2581wait\u2581bef",
+            "max_activation": 34.317,
+            "max_token": "\u2581double"
+          },
+          {
+            "text_snippet": "\u2581double\u2581order-picker\u2581arrangement,\u2581each\u2581acting\u2581independently\u2581of\u2581the\u2581other\u2581to\u2581perform\u2581its\u2581function.\u2581U.S.\u2581Pat.\u2581No.\u25813,323,664\u2581discloses\u2581a\u2581side-loading\u2581fork\u2581truck\u2581which\u2581includes\u2581an\u2581upright\u2581post\u2581or\u2581mast\u2581tha",
+            "max_activation": 34.309,
+            "max_token": "\u2581double"
+          },
+          {
+            "text_snippet": "\u2581for\u2581poor-quality\u2581service\n\nIn\u2581public\u2581services\u2581markets\u2581(health,\u2581education)\u2581there\u2581is\u2581a\u2581high\u2581degree\u2581of\u2581regulatory\u2581supervision\u2581of\u2581quality\u2014such\u2581as\u2581barring\u2581doctors\u2581who\u2581are\u2581found\u2581to\u2581be\u2581negligent,\u2581and\u2581awardin",
+            "max_activation": 34.238,
+            "max_token": "\u2581double"
+          },
+          {
+            "text_snippet": "\u2581companies\u2581as\u2581dividend.\u2581The\u2581move\u2581has\u2581been\u2581resisted\u2581by\u2581others\u2581PSUs\u2581too.\n\nAAI\u2581has\u2581vast\u2581infrastructure\u2581plans\u2581as\u2581it\u2581looks\u2581to\u2581meet\u2581the\u2581requirements\u2581of\u2581the\u2581country\u2019s\u2581aviation\u2581market,\u2581which\u2581has\u2581been\u2581growing\u2581",
+            "max_activation": 34.2,
+            "max_token": "\u2581double"
+          },
+          {
+            "text_snippet": "\u2581time,\u2581double\u2581support\u2581time,\u2581step\u2581length,\u2581step\u2581width,\u2581walking\u2581angle,\u2581and\u2581toe\u2581angle\u2581were\u2581selected\u2581as\u2581gait\u2581parameters.\u2581Knee\u2581extension\u2581strength\u2581was\u2581measured\u2581by\u2581isometric\u2581dynamometry;\u2581and\u2581decreased\u2581visual\u2581",
+            "max_activation": 34.195,
+            "max_token": "\u2581double"
+          }
+        ],
+        "promoted_tokens": [
+          "RepeatedField",
+          "IMPORTED",
+          "Spolja\u0161nje",
+          "\u2581\u00e9toient",
+          "\u2581\u05d7\u05d9\u05e6\u05d5\u05e0\u05d9\u05d9\u05dd",
+          "arakhand",
+          "\u53d1\u8868\u4e8e",
+          "contentLoaded",
+          "\u2581avoient",
+          "\u2581The\u017fe"
+        ],
+        "suppressed_tokens": [
+          "\u2581double",
+          "tomic",
+          "visiae",
+          "\u2581typelib",
+          "clusal",
+          "chyma",
+          "quatch",
+          "g\u00e4ng",
+          "\u2581triple",
+          "kijk"
+        ],
+        "frac_nonzero": 0.01553
+      }
+    },
+    {
+      "tool": "inspect_feature",
+      "input": {
+        "feature_idx": 9770,
+        "layer": 3
+      },
+      "output": {
+        "layer": 3,
+        "feature_idx": 9770,
+        "label": " technical and scientific writing about neuroscience and chemistry, possibly about calcium",
+        "autointerp": " technical and scientific writing about neuroscience and chemistry, possibly about calcium",
+        "top_activating_examples": [
+          {
+            "text_snippet": "12/1)\u2581in\u2581the\u2581Old\u2581Spice\u2581Classic\u2581\u2026\u2581In\u2581that\u2581game,\u2581hit\u25815-of-11\u2581field\u2581goals,\u2581including\u25812-of-3\u2581three-pointers\u2581with\u2581a\u2581season\u2581high\u2581seven\u2581rebounds\u2581and\u2581three\u2581steals,\u2581scoring\u2581a\u2581career\u2581tying\u2581high\u2581of\u258112\u2581points\u2581\u2026\u2581F",
+            "max_activation": 46.742,
+            "max_token": "\u2581figures"
+          },
+          {
+            "text_snippet": "1\u2581rebounds\u2581a\u2581contest.\n\nFRESHMAN\u2581SEASON\u2581(2012-13)Morgan\u2581played\u2581in\u2581all\u258131\u2581games\u2581at\u2581LSU,\u2581with\u258114\u2581starts\u2581and\u2581proved\u2581a\u2581factor\u2581in\u2581many\u2581games\u2581for\u2581the\u2581Tigers\u2581\u2026\u2581Averaged\u25815.3\u2581points\u2581per\u2581game\u2581and\u25812.9\u2581rebounds,\u2581w",
+            "max_activation": 46.445,
+            "max_token": "\u2581figures"
+          },
+          {
+            "text_snippet": "1\u2581rebounds\u2581a\u2581contest.\n\nFRESHMAN\u2581SEASON\u2581(2012-13)Morgan\u2581played\u2581in\u2581all\u258131\u2581games\u2581at\u2581LSU,\u2581with\u258114\u2581starts\u2581and\u2581proved\u2581a\u2581factor\u2581in\u2581many\u2581games\u2581for\u2581the\u2581Tigers\u2581\u2026\u2581Averaged\u25815.3\u2581points\u2581per\u2581game\u2581and\u25812.9\u2581rebounds,\u2581w",
+            "max_activation": 46.445,
+            "max_token": "\u2581figures"
+          },
+          {
+            "text_snippet": "\u2581mM)\u2581was\u2581included\u2581in\u2581the\u2581recording\u2581electrode\u2581solution\u2581to\u2581block\nincreases\u2581in\u2581intracellular\u2581calcium.\u2581To\u2581block\u2581activation\u2581of\u2581the\ncalmodulin-dependent\u2581protein\u2581phosphatase\u2581calcineurin\u2581(PP2b)\u2581slices\u2581were\u2581pr",
+            "max_activation": 45.972,
+            "max_token": "mod"
+          },
+          {
+            "text_snippet": "\u2581mM)\u2581was\u2581included\u2581in\u2581the\u2581recording\u2581electrode\u2581solution\u2581to\u2581block\nincreases\u2581in\u2581intracellular\u2581calcium.\u2581To\u2581block\u2581activation\u2581of\u2581the\ncalmodulin-dependent\u2581protein\u2581phosphatase\u2581calcineurin\u2581(PP2b)\u2581slices\u2581were\u2581pr",
+            "max_activation": 45.972,
+            "max_token": "mod"
+          },
+          {
+            "text_snippet": "receptor-dependent\u2581LTD\u2581in\u2581the\u2581hippocampus.\u2581Long-term\u2581depression\u2581of\u2581superficial\nlayer\u2581inputs\u2581to\u2581layer\u2581II\u2581is\u2581dependent\u2581on\u2581NMDA\u2581receptor\u2581activation\u2581both\u2581in\u2581vivo\nand\u2581in\u2581vitro\u2581[17,\u258118,\u258128,\u258133]\u2581but\u2581does\u2581not",
+            "max_activation": 45.791,
+            "max_token": "mod"
+          },
+          {
+            "text_snippet": "receptor-dependent\u2581LTD\u2581in\u2581the\u2581hippocampus.\u2581Long-term\u2581depression\u2581of\u2581superficial\nlayer\u2581inputs\u2581to\u2581layer\u2581II\u2581is\u2581dependent\u2581on\u2581NMDA\u2581receptor\u2581activation\u2581both\u2581in\u2581vivo\nand\u2581in\u2581vitro\u2581[17,\u258118,\u258128,\u258133]\u2581but\u2581does\u2581not",
+            "max_activation": 45.791,
+            "max_token": "mod"
+          },
+          {
+            "text_snippet": "dependent\u2581spike-timing-dependent\u2581LTD\u2581in\u2581layer\u2581II-III\u2581cells\u2581[44].\u2581Calcium\u2581influx\u2581through\u2581voltage-gated\nchannels\u2581also\u2581mediates\u2581bidirectional\u2581spike-timing-dependent\u2581plasticity\u2581of\ninhibitory\u2581synapses\u2581in\u2581e",
+            "max_activation": 45.668,
+            "max_token": "mod"
+          },
+          {
+            "text_snippet": "on\u2581activation\u2581of\u2581the\u2581calmodulin-dependent\u2581protein\u2581phosphatase\u2581calcineurin.\nAlthough\u2581LTD\u2581was\u2581only\u2581partially\u2581inhibited\u2581by\u2581pre-exposure\u2581to\u2581cyclosporin\u2581A,\u2581it\nwas\u2581completely\u2581blocked\u2581when\u2581FK506\u2581was\u2581included",
+            "max_activation": 44.844,
+            "max_token": "mod"
+          },
+          {
+            "text_snippet": "on\u2581activation\u2581of\u2581the\u2581calmodulin-dependent\u2581protein\u2581phosphatase\u2581calcineurin.\nAlthough\u2581LTD\u2581was\u2581only\u2581partially\u2581inhibited\u2581by\u2581pre-exposure\u2581to\u2581cyclosporin\u2581A,\u2581it\nwas\u2581completely\u2581blocked\u2581when\u2581FK506\u2581was\u2581included",
+            "max_activation": 44.844,
+            "max_token": "mod"
+          }
+        ],
+        "promoted_tokens": [
+          "reportWebVitals",
+          "\u2581Begle",
+          "\u2581useContext",
+          "\u2581?>>",
+          "__':",
+          "Suara",
+          "hmer",
+          "\u2581garagem",
+          "\u2581authService",
+          "\u2581ense\u00f1"
+        ],
+        "suppressed_tokens": [
+          "DockStyle",
+          "AddTagHelper",
+          "LoadScene",
+          "\u2581Italijani",
+          "\u044c\u0430\u0436",
+          "\u2581OFDb",
+          "AndEndTag",
+          "ApiRequest",
+          "InteropServices",
+          "labus"
+        ],
+        "frac_nonzero": 0.01089
+      }
+    },
+    {
+      "tool": "inspect_feature",
+      "input": {
+        "feature_idx": 16366,
+        "layer": 0
+      },
+      "output": {
+        "layer": 0,
+        "feature_idx": 16366,
+        "label": " the word \"because\"",
+        "autointerp": " the word \"because\"",
+        "top_activating_examples": [
+          {
+            "text_snippet": "8\u2581subjects,\u2581resolved\u2581in\u25817-10\u2581days;\u25812\u2581withdrew\u2581because\u2581of\u2581diarrhea.\u2581No\u2581toxicity\u2581for\u258113\u2581subjects\u2581completing\u2581study\u2581\u2581\u258118\u2581g\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\\[[@B154]\\]\n\n\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581",
+            "max_activation": 65.068,
+            "max_token": "\u2581because"
+          },
+          {
+            "text_snippet": "\u2581of\u2581the\u2581competing\u2581products\u2581will\u2581advance\u2581unhindered\u2581because\u2581overseas\u2581sales\u2581dominate.\u2581Eventually\u2581Amazon\u2581is\u2581going\u2581to\u2581fall\u2581behind.\u2581And\u2581eventually\u2581Amazon\u2581has\u2581to\u2581make\u2581money\u2581here\u2581-\u2581they\u2581can't\u2581keep\u2581dividing\u2581u",
+            "max_activation": 64.965,
+            "max_token": "\u2581because"
+          },
+          {
+            "text_snippet": "\u2581easy\u2581way\u2581to\u2581cover/uncover\u2581fast.\n\n------\nboxkite\nI\u2581keep\u2581mine\u2581covered\u2581because\u2581I\u2581work\u2581remotely\u2581a\u2581lot\u2581and\u2581I\u2581don't\u2581want\u2581to\naccidentally\u2581shirtless\u2581video\u2581chat\u2581someone\u2581from\u2581bed\u2581when\u2581I\u2581meant\u2581to\u2581make\u2581a\ndiffere",
+            "max_activation": 64.887,
+            "max_token": "\u2581because"
+          },
+          {
+            "text_snippet": "10+deb9u4,\u2581OpenSSL\u25811.0.2l\u2581\u258125\u2581May\u25812017\ndebug1:\u2581Reading\u2581configuration\u2581data\u2581/etc/ssh/ssh_config\ndebug1:\u2581/etc/ssh/ssh_config\u2581line\u258119:\u2581Applying\u2581options\u2581for\u2581*\nPseudo-terminal\u2581will\u2581not\u2581be\u2581allocated\u2581because\u2581",
+            "max_activation": 64.834,
+            "max_token": "\u2581because"
+          },
+          {
+            "text_snippet": "have\u2581been\u2581fired;\u2581two,\u2581Dana\u2581Boente\u2581and\u2581Rod\u2581Rosenstein,\u2581remain\u2581in\u2581the\u2581government.\u2581Rod\u2581Rosenstein\u2581may\u2581be\u2581fired\u2581because\u2581he\u2581might\u2581not\u2581be\u2581willing\u2581to\u2581fire\u2581Robert\u2581Mueller.\n\nNunes\u2581claimed\u2581that\u2581Christopher\u2581Stee",
+            "max_activation": 64.821,
+            "max_token": "\u2581because"
+          },
+          {
+            "text_snippet": "\u2581density\u2581could\u2581be\u2581considered\u2581because\u2581only\u2581two\u2581density\u2581values\u2581have\u2581been\u2581simulated.\n\nEq.\u2581(3)\u2581can\u2581be\u2581reformulated\u2581in\u2581order\u2581to\u2581isolate\u2581the\u2581contribution\u2581of\u2581the\u2581screw\u2581diameter:\n\n$$Y\u2581=\u2581\\mathit{\\mu}\u2581+\u2581d\u2581\\cdot",
+            "max_activation": 64.818,
+            "max_token": "\u2581because"
+          },
+          {
+            "text_snippet": "\u2581it\u2581won't\u2581be\u2581because\u2581I\u2581destroyed\u2581it\u2581on\u2581purpose.\u2581Smart\u2581girl,\u2581she\u2581knows\u2581not\u2581to\u2581mess\u2581with\u2581my\u2581two\u2581remaining\u2581brain\u2581cells.\u2581She\u2581will\u2581need\u2581a\u2581sitter,\u2581at\u2581some\u2581point.\n\nMonday,\u2581May\u25812,\u25812011\n\n**\u2581Pat,\u2581and\u2581any\u2581other\u2581",
+            "max_activation": 64.768,
+            "max_token": "\u2581because"
+          },
+          {
+            "text_snippet": ":\n\nThe\u2581error\u2581you\u2581were\u2581facing\u2581was\u2581because\u2581the\u2581user\u2581has\u2581no\u2581permission\u2581to\u2581perform\u2581that\u2581operation\u2581on\u2581the\u2581specified\u2581directory.\nThe\u2581solution,\u2581in\u2581this\u2581case,\u2581is\u2581use\u2581sudo:\nsudo\u2581cat\u2581>\u2581/etc/yum.repos.d/fiware.re",
+            "max_activation": 64.759,
+            "max_token": "\u2581because"
+          },
+          {
+            "text_snippet": "\u2581I\u2581felt\u2581as\u2581if\u2581the\u2581baby\u2581would\u2581never\u2581come\u2581out\u2581because\u2581things\u2581weren\u2019t\u2581progressing\u2581fast\u2581enough.\u2581After\u2581his\u2581head\u2581came\u2581out,\u2581I\u2581thought\u2581it\u2581was\u2581all\u2581over\u2581until\u2581I\u2581heard\u2581my\u2581husband\u2581say\u2581\u201cpush,\u2581his\u2581body\u2581is\u2581stuck!\u201d\u2581I",
+            "max_activation": 64.594,
+            "max_token": "\u2581because"
+          },
+          {
+            "text_snippet": "\u2581in\u2581the\u2581original\u2581complaint,\u2581none\u2581had\u2581been\u2581added\u2581by\u2581a\n\nproper\u2581amendment,\u2581and\u2581none\u2581were\u2581properly\u2581joined\u2581because\u2581Mr.\u2581Grissom\u2581did\u2581not\n\nshow\u2581they\u2581were\u2581related\u2581to\u2581the\u2581incident\u2581underlying\u2581the\u2581claims\u2581in\u2581his\u2581o",
+            "max_activation": 64.578,
+            "max_token": "\u2581because"
+          }
+        ],
+        "promoted_tokens": [
+          "'",
+          "\"",
+          "2",
+          "u",
+          "e",
+          "T",
+          "1",
+          "i",
+          "\n",
+          "a"
+        ],
+        "suppressed_tokens": [
+          "\u2581because",
+          "\u2581becau\u017fe",
+          "because",
+          "\u2581porque",
+          "\u2581\u043f\u043e\u0442\u043e\u043c\u0443",
+          "\u2581\u041f\u043e\u0442\u043e\u043c\u0443",
+          "\u2581becau",
+          "\u2581karena",
+          "\u2581omdat",
+          "\u2581BECAUSE"
+        ],
+        "frac_nonzero": 0.01813
+      }
+    },
+    {
+      "tool": "get_top_logits",
+      "input": {
+        "k": 5
+      },
+      "output": [
+        {
+          "token": "",
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "tool": "build_circuit",
+      "input": {
+        "edges": [
+          {
+            "from": "filler_words",
+            "to": "probe_logit"
+          },
+          {
+            "from": "negation_signals",
+            "to": "probe_logit"
+          },
+          {
+            "from": "causal_marker",
+            "to": "probe_logit"
+          },
+          {
+            "from": "numeric_context",
+            "to": "probe_logit"
+          }
+        ],
+        "nodes": [
+          {
+            "features": [
+              {
+                "feature_idx": 12126,
+                "layer": 4,
+                "pos": 2
+              },
+              {
+                "feature_idx": 4847,
+                "layer": 4,
+                "pos": 2
+              }
+            ],
+            "id": "filler_words",
+            "label": "Conversational Fillers ('yeah', 'well')",
+            "layer": 4
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 6236,
+                "layer": 0,
+                "pos": 20
+              }
+            ],
+            "id": "negation_signals",
+            "label": "Negation/Contraction Signal ('n't')",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 16366,
+                "layer": 0,
+                "pos": 25
+              }
+            ],
+            "id": "causal_marker",
+            "label": "Causal Marker ('because')",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 8083,
+                "layer": 0,
+                "pos": 6
+              }
+            ],
+            "id": "numeric_context",
+            "label": "Numeric/Double Context ('double')",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "probe_logit",
+            "label": "Probe Classification Score",
+            "layer": 26
+          }
+        ]
+      },
+      "output": {
+        "nodes": [
+          {
+            "features": [
+              {
+                "feature_idx": 12126,
+                "layer": 4,
+                "pos": 2
+              },
+              {
+                "feature_idx": 4847,
+                "layer": 4,
+                "pos": 2
+              }
+            ],
+            "id": "filler_words",
+            "label": "Conversational Fillers ('yeah', 'well')",
+            "layer": 4
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 6236,
+                "layer": 0,
+                "pos": 20
+              }
+            ],
+            "id": "negation_signals",
+            "label": "Negation/Contraction Signal ('n't')",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 16366,
+                "layer": 0,
+                "pos": 25
+              }
+            ],
+            "id": "causal_marker",
+            "label": "Causal Marker ('because')",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 8083,
+                "layer": 0,
+                "pos": 6
+              }
+            ],
+            "id": "numeric_context",
+            "label": "Numeric/Double Context ('double')",
+            "layer": 0
+          },
+          {
+            "features": [],
+            "id": "probe_logit",
+            "label": "Probe Classification Score",
+            "layer": 26
+          }
+        ],
+        "edges": [
+          {
+            "from": "filler_words",
+            "to": "probe_logit"
+          },
+          {
+            "from": "negation_signals",
+            "to": "probe_logit"
+          },
+          {
+            "from": "causal_marker",
+            "to": "probe_logit"
+          },
+          {
+            "from": "numeric_context",
+            "to": "probe_logit"
+          }
+        ],
+        "status": "circuit_saved",
+        "warning": "Circuit reaches early layers but not token embedding nodes. Consider tracing to embedding nodes to identify which specific input tokens drive the prediction."
+      }
+    }
+  ],
+  "usage": {
+    "orchestrator": {
+      "model": "google/gemma-4-31b-it",
+      "input_tokens": 87423,
+      "output_tokens": 937,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "providers": {
+        "SambaNova": 3,
+        "OpenInference": 3
+      }
+    },
+    "subagents": []
+  },
+  "total_cost_usd": 0.01261402,
+  "turns": 6,
+  "elapsed_seconds": 43.83196064457297,
+  "control_results": [],
+  "self_rating_confidence": null,
+  "self_rating_raw": null,
+  "interventions": [],
+  "discovery_reassess": [],
+  "reassess_records": {},
+  "timestamp": "2026-07-28T08-31-25"
+}

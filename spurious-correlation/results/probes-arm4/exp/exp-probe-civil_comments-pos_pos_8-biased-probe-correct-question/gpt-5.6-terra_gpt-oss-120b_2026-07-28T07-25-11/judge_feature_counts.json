@@ -1,0 +1,64 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F13885",
+      "label": "names of people and places, specifically those related to the middle east",
+      "reason": "Middle-East identity detector."
+    },
+    {
+      "id": "L2:F7214",
+      "label": "references to countries or regions associated with Islam",
+      "reason": "Islam-associated region detector."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity marker."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Islam/Middle-East identity representation."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F14049",
+      "label": "discussion of international political conflicts, especially those regarding Muslims, slavery, race, terrorism and cultural groups.",
+      "reason": "Conflict/abuse-related semantics."
+    },
+    {
+      "id": "L8:F13197",
+      "label": "words related to religion and faith",
+      "reason": "Broad religion-topic semantics."
+    },
+    {
+      "id": "L4:F7545",
+      "label": "words or phrases relating to religious extremism, violence, and terrorism.",
+      "reason": "Violence/terrorism semantics."
+    },
+    {
+      "id": "L5:F14348",
+      "label": "historical and religious terms, along with associated concepts like slavery and cultural clashes",
+      "reason": "Cultural-clash semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Pure punctuation/formatting feature."
+    },
+    {
+      "id": "L0:F3031",
+      "label": "the word \"bias\"",
+      "reason": "Not part of traced toxic circuit."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 4,
+  "n_other": 2,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Identity proxies and conflict/toxicity semantics both contribute strongly; punctuation is secondary."
+}

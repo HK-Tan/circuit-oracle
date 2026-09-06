@@ -1,0 +1,107 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Generic pronoun detector; content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Generic lexical detector; not semantic contradiction reasoning."
+    },
+    {
+      "id": "L0:F15492",
+      "label": "the word \"for\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L2:F14822",
+      "label": "the abbreviation \"SO\" followed by other characters",
+      "reason": "Structural token-form detector, not task semantics."
+    },
+    {
+      "id": "L2:F15312",
+      "label": "the word \"about.\"",
+      "reason": "Generic lexical detector; content-neutral."
+    },
+    {
+      "id": "L3:F4464",
+      "label": "the word \"about\"",
+      "reason": "Generic lexical detector; content-neutral."
+    },
+    {
+      "id": "L1:F461",
+      "label": "the word \"land\"",
+      "reason": "Mention of land/property; content word, not negation."
+    },
+    {
+      "id": "L2:F11518",
+      "label": "the word \"land\" in scientific/agricultural contexts",
+      "reason": "Content word; not negation-word detection."
+    },
+    {
+      "id": "L3:F15978",
+      "label": "mentions of land, property, and acreage.",
+      "reason": "Content word feature; not semantic contradiction."
+    },
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Content word detector; not negation-related."
+    },
+    {
+      "id": "L2:F10849",
+      "label": "the word \"set\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L4:F5450",
+      "label": "code snippets from different languages and words related to starting or beginning something",
+      "reason": "Structural/lexical-start feature, not task semantics."
+    },
+    {
+      "id": "L4:F12225",
+      "label": "transitional conclusion words, often used in legal or academic writing",
+      "reason": "Discourse-structure feature, content-neutral."
+    },
+    {
+      "id": "L1:F361",
+      "label": "words related to agriculture and ecology",
+      "reason": "Topical content feature, not contradiction reasoning."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Purely structural sentence \u0564\u056b\u0580."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Pure punctuation/format feature."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Topical content feature; oracle says heterogeneous, not semantics."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Generic lexical detector; not negation or entailment."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 19,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows only generic lexical/structural content features; no negation-word detectors or semantic contradiction features."
+}

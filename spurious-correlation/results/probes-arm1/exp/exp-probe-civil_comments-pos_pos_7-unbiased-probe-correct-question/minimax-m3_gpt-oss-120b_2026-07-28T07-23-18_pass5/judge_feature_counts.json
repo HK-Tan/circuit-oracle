@@ -1,0 +1,113 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Identity-group token, not toxic content."
+    },
+    {
+      "id": "L2:F11363",
+      "label": "colors and words like Diamond.",
+      "reason": "Generic color feature; here includes Black as color."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Race/identity discourse detector."
+    },
+    {
+      "id": "L2:F10371",
+      "label": "words related to race and gender, as well as the Clayman institute at Stanford",
+      "reason": "Identity-discourse feature."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "Pride-context / identity-compound features",
+      "reason": "Identity phrase compound, not toxicity."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "Pride-context / identity-compound features",
+      "reason": "Identity phrase compound, not toxicity."
+    },
+    {
+      "id": "L4:F5217",
+      "label": "Pride-context / identity-compound features",
+      "reason": "Identity phrase compound, not toxicity."
+    },
+    {
+      "id": "L6:F15295",
+      "label": "words and abbreviations related to HIV/AIDS and viral infections.",
+      "reason": "Projects Pride toward LGBT identity vocabulary."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb:Black",
+      "label": "Emb: 'Black' (pos 1, capital B)",
+      "reason": "Input token only; feature role unspecified."
+    },
+    {
+      "id": "Emb: black",
+      "label": "Emb: ' black' (pos 5, lowercase)",
+      "reason": "Input token only; feature role unspecified."
+    },
+    {
+      "id": "Emb: being",
+      "label": "Emb: ' being' (pos 4)",
+      "reason": "Input token only; feature role unspecified."
+    },
+    {
+      "id": "Emb: Pride",
+      "label": "Emb: ' Pride' (pos 2)",
+      "reason": "Input token only; feature role unspecified."
+    },
+    {
+      "id": "Emb: =",
+      "label": "Emb: ' =' (pos 3)",
+      "reason": "Input token only; feature role unspecified."
+    },
+    {
+      "id": "L0:F45",
+      "label": "the word \"being\" in different contexts",
+      "reason": "Generic structural word feature."
+    },
+    {
+      "id": "L0:F12717",
+      "label": "the word \"pride\" in different contexts",
+      "reason": "Generic word feature."
+    },
+    {
+      "id": "L0:F9222",
+      "label": "the equals sign",
+      "reason": "Pure punctuation/structure."
+    },
+    {
+      "id": "L0:F10164",
+      "label": "relative pronouns",
+      "reason": "Purely structural language feature."
+    },
+    {
+      "id": "L1:F12078",
+      "label": "the word \"proud\" and words associated with oaths or declarations of loyalty",
+      "reason": "Generic pride/loyalty wording."
+    },
+    {
+      "id": "L2:F5266",
+      "label": "phrases that include the word \"being\"",
+      "reason": "Generic structural phrase feature."
+    },
+    {
+      "id": "L3:F12034",
+      "label": "technical terms, especially those used to describe graphs and figures",
+      "reason": "Generic technical/punctuation context."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 0,
+  "n_other": 12,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes identity/pride discourse; no toxic-content detector is claimed."
+}

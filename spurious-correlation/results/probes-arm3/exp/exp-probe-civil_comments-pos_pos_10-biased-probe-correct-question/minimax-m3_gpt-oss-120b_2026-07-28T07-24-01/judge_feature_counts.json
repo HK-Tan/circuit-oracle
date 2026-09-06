@@ -1,0 +1,103 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Identity-group demographic terms."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Identity-group token mention."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race-related vocabulary."
+    },
+    {
+      "id": "L6:F9228",
+      "label": "language regarding discrimination based on race, gender, religion, and disability",
+      "reason": "Identity-discrimination language."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issue terms."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic identity signals."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity identity terms."
+    },
+    {
+      "id": "L5:F12135",
+      "label": "terms related to discrimination based on identity",
+      "reason": "Identity-based discrimination terms."
+    },
+    {
+      "id": "L6:F343",
+      "label": "references to patient demographics and characteristics",
+      "reason": "Generic demographics, not toxicity."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F7820",
+      "label": "words indicating uncertainty or tentativeness",
+      "reason": "Generic uncertainty cue."
+    },
+    {
+      "id": "L0:F1823",
+      "label": "occurances of the word 'Bureau'",
+      "reason": "Pure token detector."
+    },
+    {
+      "id": "L4:F11200",
+      "label": "a variety of words and phrases related to authorship and origination of something.",
+      "reason": "Structural/authorship language."
+    },
+    {
+      "id": "L3:F6517",
+      "label": "words related to mentioning something",
+      "reason": "Generic mentioning/quotation cue."
+    },
+    {
+      "id": "L0:F2961",
+      "label": "words that act as qualifications or negations, with a high preference for \"necessarily\" and \"uncommon.\"",
+      "reason": "Generic negation/qualification."
+    },
+    {
+      "id": "L2:F13653",
+      "label": "the word \"force\"",
+      "reason": "Single lexical token detector."
+    },
+    {
+      "id": "L0:F1910",
+      "label": "the phrase \"not only\"",
+      "reason": "Generic phrase detector."
+    },
+    {
+      "id": "L0:F5021",
+      "label": "the phrase \"in relation to\"",
+      "reason": "Generic relation phrase."
+    },
+    {
+      "id": "L1:F2461",
+      "label": "the word \"operator\"",
+      "reason": "Single lexical token detector."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 0,
+  "n_other": 9,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle claims identity-related features dominate; no toxic-content features are identified."
+}

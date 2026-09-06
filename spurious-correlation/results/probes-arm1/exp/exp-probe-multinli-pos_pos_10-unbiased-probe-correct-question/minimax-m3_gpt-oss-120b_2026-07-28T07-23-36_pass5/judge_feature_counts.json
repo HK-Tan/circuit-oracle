@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L3:F12079",
+      "label": "negations and Chinese names",
+      "reason": "Oracle says negation/absence detector."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation/absence cue, not semantic NLI."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Direct negation detector."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Direct negation detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Direct negation detector."
+    },
+    {
+      "id": "L10:F6670",
+      "label": "technical terms, especially within scientific or medical contexts",
+      "reason": "Oracle links it to negation-driven late-layer path."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Oracle places it on negation/superlative driving path."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F12420",
+      "label": "artistic elements that break established guidelines",
+      "reason": "Oracle says it is driven by structure/reversal, not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F5232",
+      "label": "the word \"now\"",
+      "reason": "Pure lexical detector."
+    },
+    {
+      "id": "L0:F7696",
+      "label": "the word \"on\"",
+      "reason": "Pure preposition detector."
+    },
+    {
+      "id": "L1:F15749",
+      "label": "the word \"strange\", or related words",
+      "reason": "Lexical word detector, not NLI semantics."
+    },
+    {
+      "id": "L1:F2580",
+      "label": "the word \"reverse\" in code snippets",
+      "reason": "Structural/lexical detector."
+    },
+    {
+      "id": "L2:F16097",
+      "label": "superlative adjectives and the words \"test\" or \"point\"",
+      "reason": "Surface form/superlative detector."
+    },
+    {
+      "id": "L2:F10827",
+      "label": "words that reflect strikingness or emotional impact",
+      "reason": "Too indirect; oracle doesn't tie it to NLI semantics."
+    },
+    {
+      "id": "L3:F1438",
+      "label": "the word \"now\"",
+      "reason": "Pure lexical detector."
+    },
+    {
+      "id": "L3:F7449",
+      "label": "the word \"now\" often in the context of describing current situations",
+      "reason": "Temporal lexical cue."
+    },
+    {
+      "id": "L3:F8960",
+      "label": "words related to how other people are perceived",
+      "reason": "Oracle doesn't claim direct NLI causality."
+    },
+    {
+      "id": "L3:F319",
+      "label": "words ending in the suffix \"-est\" or \"-ier\" (the superlative and comparative suffixes).",
+      "reason": "Pure suffix detector."
+    },
+    {
+      "id": "L4:F7409",
+      "label": "words like \"vice versa\", \"inverse\", \"reverse\", \"around\", or directions",
+      "reason": "Structural reversal cue."
+    },
+    {
+      "id": "L4:F12799",
+      "label": "words ending in \"-ly\" along with phrases that contain the word 'odd' or 'oddities'",
+      "reason": "Surface-form lexical detector."
+    },
+    {
+      "id": "L4:F14368",
+      "label": "words related to importance or roles in a system",
+      "reason": "Generic role-related lexical feature."
+    },
+    {
+      "id": "L5:F9068",
+      "label": "words and phrases related to populations",
+      "reason": "Content topic, not NLI-relation semantics."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Topic lexical feature, not causal NLI relation."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Pure negation lexicon detector."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 1,
+  "n_other": 16,
+  "spurious_fraction": 0.8888888888888888,
+  "dominant": "spurious",
+  "notes": "Oracle mostly reports lexical negation cues and surface patterns, with one weak relation-like feature."
+}

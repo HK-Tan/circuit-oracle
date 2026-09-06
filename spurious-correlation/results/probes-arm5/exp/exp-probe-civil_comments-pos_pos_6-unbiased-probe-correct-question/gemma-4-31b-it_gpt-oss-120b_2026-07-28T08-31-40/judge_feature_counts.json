@@ -1,0 +1,38 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Demographic token detector; identity-group signal."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "Promoted token includes White; identity-linked lexical feature."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social issue vocabulary; demographic signal."
+    },
+    {
+      "id": "L9:F11035",
+      "label": "mentions of different racial or ethnic groups, news, payments, political concepts and geographical locations.",
+      "reason": "Racial/ethnic group mentions; identity-group feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F4008",
+      "label": "expletives, strong opinions and negative words",
+      "reason": "Toxic-content detector for expletives and negative tone."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 4,
+  "n_causal": 1,
+  "n_other": 0,
+  "spurious_fraction": 0.8,
+  "dominant": "spurious",
+  "notes": "Identity signals dominate; one causal negative-tone feature is present."
+}

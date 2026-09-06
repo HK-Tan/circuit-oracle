@@ -1,0 +1,103 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4408",
+      "label": "the word \"authors\" in academic papers or similar documents",
+      "reason": "Academic author token, not toxicity."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Demographic identity signal, spurious."
+    },
+    {
+      "id": "L0:F2242",
+      "label": "the word \"guys\"",
+      "reason": "Gendered group token, spurious."
+    },
+    {
+      "id": "L2:F3399",
+      "label": "words related to marriage",
+      "reason": "Identity/status topic, not toxicity."
+    },
+    {
+      "id": "L3:F494",
+      "label": "text relating to marriage, birth, death, family and religion",
+      "reason": "Identity-topic detector, spurious."
+    },
+    {
+      "id": "L3:F6262",
+      "label": "mentions of marriage",
+      "reason": "Marriage mention, non-toxic identity cue."
+    },
+    {
+      "id": "L3:F8254",
+      "label": "words and phrases related to marriage and family relationships",
+      "reason": "Family/relationship topic, spurious."
+    },
+    {
+      "id": "L6:F2851",
+      "label": "books and associated things such as authors and reading",
+      "reason": "Author/reading topic, not toxic content."
+    },
+    {
+      "id": "L6:F13528",
+      "label": "words related to academic works and their writers",
+      "reason": "Academic writer topic, spurious."
+    },
+    {
+      "id": "L2:F14801",
+      "label": "mentions of authors and their written works",
+      "reason": "Bridges on author/topic cues, not toxicity."
+    },
+    {
+      "id": "L0:F9881",
+      "label": "the word \"appear\" and its variants",
+      "reason": "Structural/lexical verb detector, not toxicity."
+    },
+    {
+      "id": "L3:F10004",
+      "label": "words which mean or indicate uncertainty or possibility",
+      "reason": "Uncertainty cue, not toxic semantics."
+    },
+    {
+      "id": "L3:F11152",
+      "label": "words that indicate uncertainty or possibility",
+      "reason": "Uncertainty cue, not toxic semantics."
+    },
+    {
+      "id": "L0:F753",
+      "label": "the word \"author\" and words related to selling and prices",
+      "reason": "Neutral academic/frame detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure filler/grammar feature."
+    },
+    {
+      "id": "L0:F13691",
+      "label": "words of positive sentiment and verbs associated with leisure activities.",
+      "reason": "Oracle not used in written analysis."
+    },
+    {
+      "id": "L1:F1431",
+      "label": "instances of the word \"fair\" and the phrase \"ends of justice\" in legal documents",
+      "reason": "Legal wording, dismissed as irrelevant."
+    },
+    {
+      "id": "L0:F5538",
+      "label": "the word \"authors\" in academic papers or similar documents",
+      "reason": "Duplicate author detector, neutral topic."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 0,
+  "n_other": 4,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle-driven signal is overwhelmingly identity/topic lexical, not toxic-content semantics."
+}

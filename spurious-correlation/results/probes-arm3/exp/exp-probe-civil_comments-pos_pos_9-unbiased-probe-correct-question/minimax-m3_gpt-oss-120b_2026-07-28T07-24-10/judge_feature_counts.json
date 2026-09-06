@@ -1,0 +1,128 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Demographic identity cue, not toxicity content."
+    },
+    {
+      "id": "L0:F2242",
+      "label": "the word \"guys\"",
+      "reason": "Generic address term; not causal toxicity signal."
+    },
+    {
+      "id": "L0:F5538",
+      "label": "the word \"hero\"",
+      "reason": "Non-toxic descriptor; not toxicity semantics."
+    },
+    {
+      "id": "L0:F9796",
+      "label": "the word \"ordinary\" and related words like \"authors\"",
+      "reason": "Author-related shortcut, not toxicity."
+    },
+    {
+      "id": "L0:F6087",
+      "label": "mentions of performers or artists, and sometimes \"man\"",
+      "reason": "Identity/descriptor lexical cue, not toxic content."
+    },
+    {
+      "id": "L0:F9881",
+      "label": "the word \"appear\" and its variants",
+      "reason": "Purely generic structural/lexical feature."
+    },
+    {
+      "id": "L2:F3399",
+      "label": "words related to marriage",
+      "reason": "Demographic-family shortcut, not toxicity."
+    },
+    {
+      "id": "L3:F6262",
+      "label": "mentions of marriage",
+      "reason": "Demographic-family shortcut, not toxicity."
+    },
+    {
+      "id": "L3:F8254",
+      "label": "words and phrases related to marriage and family relationships",
+      "reason": "Demographic-family shortcut, not toxicity."
+    },
+    {
+      "id": "L3:F494",
+      "label": "text relating to marriage, birth, death, family and religion",
+      "reason": "Identity/family/religion cue, not toxicity."
+    },
+    {
+      "id": "L4:F5276",
+      "label": "words related to marriage",
+      "reason": "Demographic-family shortcut, not toxicity."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "White House is a named entity, not identity toxicity."
+    },
+    {
+      "id": "L0:F753",
+      "label": "the word \"author\" and words related to selling and prices",
+      "reason": "Author/sales topic, not toxicity."
+    },
+    {
+      "id": "L6:F2851",
+      "label": "books and associated things such as authors and reading",
+      "reason": "Book/author topic, not toxicity."
+    },
+    {
+      "id": "L0:F4408",
+      "label": "the word \"authors\" in academic papers or similar documents",
+      "reason": "Academic author reference, not toxicity."
+    },
+    {
+      "id": "L6:F13528",
+      "label": "words related to academic works and their writers",
+      "reason": "Academic writing topic, not toxicity."
+    },
+    {
+      "id": "L1:F11419",
+      "label": "the word \"author\" and its variations",
+      "reason": "Writer-related lexical cue, not toxicity."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L3:F10004",
+      "label": "words which mean or indicate uncertainty or possibility",
+      "reason": "Hedging/structure, not toxicity."
+    },
+    {
+      "id": "L1:F384",
+      "label": "the string \"ash\" or \"pund\"",
+      "reason": "Oracle gives no toxicity claim."
+    },
+    {
+      "id": "L3:F11152",
+      "label": "words that indicate uncertainty or possibility",
+      "reason": "Hedging/structure, not toxicity."
+    },
+    {
+      "id": "L0:F8720",
+      "label": "the letters 'n', 'a', or 'y' in the middle of words or phrases",
+      "reason": "Purely structural character pattern."
+    },
+    {
+      "id": "L3:F4512",
+      "label": "mentions of first names, last names, and phone numbers",
+      "reason": "Generic PII/name detector, not toxicity."
+    }
+  ],
+  "n_spurious": 17,
+  "n_causal": 0,
+  "n_other": 6,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle claims only identity/family/author shortcuts; no toxic-content detector is identified."
+}

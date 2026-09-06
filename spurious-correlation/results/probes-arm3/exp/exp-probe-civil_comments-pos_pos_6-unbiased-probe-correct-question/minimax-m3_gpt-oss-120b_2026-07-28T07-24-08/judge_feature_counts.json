@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity token; race-related shortcut for toxicity."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "Promoted token is 'White'; identity-adjacent, not toxic content."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity-group signals used as toxicity shortcut."
+    },
+    {
+      "id": "L9:F11035",
+      "label": "mentions of different racial or ethnic groups, news, payments, political concepts and geographical locations.",
+      "reason": "Includes racial/ethnic group mentions; spurious identity cue."
+    },
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Identity token; race-related shortcut for toxicity."
+    },
+    {
+      "id": "L6:F627",
+      "label": "words used when describing groups of people",
+      "reason": "Demographic/group descriptor, not toxicity semantics."
+    },
+    {
+      "id": "L1:F1480",
+      "label": "the color 'white', sometimes in a context involving race",
+      "reason": "Race-linked identity feature, not toxic content."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F4008",
+      "label": "expletives, strong opinions and negative words",
+      "reason": "Captures profanity and negative toxic language."
+    },
+    {
+      "id": "L6:F1330",
+      "label": "opinions and commentary about current events, possibly with a negative tone",
+      "reason": "Negative tone can reflect abusive/toxic language."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F4090",
+      "label": "the word \"another\"",
+      "reason": "Generic word detector; not toxic or identity-related."
+    },
+    {
+      "id": "L0:F7136",
+      "label": "the color white",
+      "reason": "Purely structural/color feature; not toxicity-specific."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "the word \"possession\" and the words \"white\", \"immediate\" and \"once\" regardless of context",
+      "reason": "Mixed generic tokens; not clearly toxicity semantics."
+    },
+    {
+      "id": "L0:F15621",
+      "label": "the word \"noise,\" sometimes \"noisy,\" and occasionally a related word like \"improvement.\"",
+      "reason": "Generic lexical feature; not toxic content."
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Structural/data-like tokens; irrelevant to toxicity."
+    },
+    {
+      "id": "L0:F13663",
+      "label": "mentions of pregnancy and related terms",
+      "reason": "Topic/medical terms; not toxicity or identity."
+    },
+    {
+      "id": "L1:F7821",
+      "label": "mentions of computer fans.",
+      "reason": "Unrelated topic feature."
+    },
+    {
+      "id": "L1:F10336",
+      "label": "the word \"grand\" in legal documents or health questionnaires",
+      "reason": "Generic domain word; not toxic or identity-related."
+    },
+    {
+      "id": "L0:F1903",
+      "label": "instances of sentences starting with \"The\"",
+      "reason": "Purely structural sentence \u0622\u063a\u0627\u0632 feature."
+    },
+    {
+      "id": "L0:F13096",
+      "label": "instances of the word \"the\", often followed by nouns or other determiners",
+      "reason": "Generic function-word pattern."
+    },
+    {
+      "id": "L2:F2850",
+      "label": "the word \"another\"",
+      "reason": "Generic word detector; not toxic."
+    },
+    {
+      "id": "L2:F5925",
+      "label": "verbs ending in \"ing\"",
+      "reason": "Morphological pattern; not toxicity-specific."
+    },
+    {
+      "id": "L3:F12848",
+      "label": "the word \"another,\" sometimes in combination with \"world\" or technical alternatives",
+      "reason": "Generic lexical pattern; not toxic."
+    },
+    {
+      "id": "L4:F7136",
+      "label": "the color white",
+      "reason": "Structural/color detector; not toxic content."
+    },
+    {
+      "id": "L6:F14669",
+      "label": "a variety of seemingly unrelated words and symbols, possibly indicating multiple weak associations or noisy data.",
+      "reason": "Noisy/mixed associations; not a clear causal toxicity feature."
+    },
+    {
+      "id": "L9:F2762",
+      "label": "various code snippets, especially javascript",
+      "reason": "Code-like structural tokens; irrelevant to toxicity."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 2,
+  "n_other": 16,
+  "spurious_fraction": 0.7777777777777778,
+  "dominant": "spurious",
+  "notes": "Identity-related signals dominate; only two features clearly track toxic language."
+}

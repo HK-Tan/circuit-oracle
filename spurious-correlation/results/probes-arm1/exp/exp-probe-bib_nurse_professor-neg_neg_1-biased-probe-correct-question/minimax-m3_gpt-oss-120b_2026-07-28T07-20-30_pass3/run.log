@@ -1,0 +1,37 @@
+
+============================================================
+Graph: bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+Loading bib_nurse_professor-neg_neg_1-biased-probe-correct.pt...
+  6392 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+**Analysis:** The probe's classification score is driven almost entirely by a cascade of male-gender/possessive-pronoun features originating from the token "His" at position 1, with negligible contribution from genuine profession indicators like "research", "science", or "visualization".
+
+**Confidence:** 9
+
+**Reasoning:**
+
+The attribution circuit reveals a textbook case of a **spurious gender-marker circuit** rather than a profession-indicator circuit. Tracing the top 20 features driving the probe direction confirms this:
+
+**The dominant positive pathway (pos 1, "His"):**
+- **L7:F14893** (direct_effect = +0.43, frac_nonzero = 0.009) — labeled "pronouns or possessive pronouns," promotes tokens like `▁herself`, `▁she`, `▁elle`. This is the single strongest positive driver.
+- **L19:F8814** (direct_effect = +0.24, frac_nonzero = 0.087) — labeled "various pronouns and names referring to people," strongly promotes feminine pronouns `▁herself`, `▁she`, `▁her`. Despite the feminine-promotion, this feature aggregates the entire gender-pronoun signal and is fed by a chain of male-pronoun detectors.
+- **L0:F2994** (direct_effect = +0.23) — literally labeled "the pronoun 'his' and the pronoun 'he.'"
+
+These all trace back to the **embedding node for "His" at position 1** (`Emb: His`), which contributes direct_effect = +9.3 directly to L19:F8814 and +23.5 to L4:F4315. The multi-hop path is: `Emb: His → L4:F4315 (his surface) → L6:F12990 (male pronouns) → L7:F14946 (his core) / L7:F14893 (possessive) → L19:F8814 (gender gate) → logit`. The L7:L19:gender gate supernode's promoted tokens (`herself`, `she`, `her`) indicate it is encoding a gender axis that happens to correlate with the male "His" input on this prompt.
+
+**Negative pathway (also gender):**
+- **L6:F12990** at pos 1 (direct_effect = −0.29) is labeled "male pronouns and titles along with descriptors associated with men." It acts as an inhibitory male-pronoun gate.
+- **L18:F14743** at pos 14 and pos 37 (direct_effect ≈ −0.25, −0.21) is labeled simply "He" — this fires on the subject pronoun "He" later in the text and suppresses the probe score. The "He" at pos 14 (in "He received a BS...") is also a male-gender marker.
+- **L18:F7400** (direct_effect = −0.16) has coding/UI top examples but its promoted tokens are `▁himself`, `▁his`, `▁seine` — again a male-pronoun signal.
+
+**Genuine profession indicators are absent or weak:**
+- L0:F2827 ("the word science"), L0:F4564 ("the word research"), and L2:F9740 ("the word interest") — all features whose top-activating examples clearly point to *computer science / research* content — appear in the circuit with **small direct effects** (≤+0.16). Crucially, none of them feed into a profession-classification supernode; they only weakly push the probe.
+- L0:F14201 (direct_effect = −0.11), labeled "words related to trade (business, finance, and health)," is generic and unrelated to CS/academia.
+- No features fire on "visualization," "computer graphics," "PhD," "university," or "laboratory" in the top-20 list.
+
+**Conclusion:** The user's concern is validated. The probe direction is driven primarily by a chain of **gender-pronoun features** anchored at the word "His" (pos 1) and "He" (pos 14, 37). The positive contribution from the L7:L19:possessive/gender-pronoun features (L7:F14893 +0.43, L19:F8814 +0.24, L0:F2994 +0.23 ≈ +0.90 total) is partially cancelled by the negative male-pronoun gates (L6:F12990 −0.29, L18:F14743 ≈ −0.25, L18:F7400 −0.16 ≈ −0.70), but the net signal is still gender-driven. Genuine profession content features (research, science, interest) are present but contribute only weakly (≤+0.16) and do not form any profession-classification pathway. The circuit thus exhibits exactly the kind of **spurious correlation with male gender markers** that the user suspected — the probe is using pronoun-based gender cues as a shortcut rather than profession-specific semantic content.
+Results saved to: <repo>/spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-30_pass3

@@ -1,0 +1,184 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Gendered-pronoun co-occurrence; explicitly spurious for this task."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct profession-indicating journalism vocabulary."
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Editor/publisher titles indicate profession."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media and journalism terms are profession cues."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter/news-reporting language is causally relevant."
+    },
+    {
+      "id": "L6:F10984",
+      "label": "mentions of TV and radio broadcasting",
+      "reason": "Broadcasting terms indicate media profession."
+    },
+    {
+      "id": "L6:F5849",
+      "label": "references to blogs and blog posts",
+      "reason": "Blogging/writing terms indicate profession."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3007",
+      "label": "the word \"middle\", and sometimes the word \"character\", and \"camp\"",
+      "reason": "Generic lexical feature; not profession-specific."
+    },
+    {
+      "id": "L0:F10881",
+      "label": "the word \"coverage\"",
+      "reason": "Ambiguous standalone word; not enough semantic role."
+    },
+    {
+      "id": "L0:F7124",
+      "label": "the word \"at\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F15661",
+      "label": "the word \"spin\"",
+      "reason": "Could be many senses; oracle gives no profession role."
+    },
+    {
+      "id": "L0:F6484",
+      "label": "the word \"sky\"",
+      "reason": "Unrelated generic token detector."
+    },
+    {
+      "id": "L1:F4459",
+      "label": "mentions of research institutes",
+      "reason": "Institution mention, but not profession-indicating here."
+    },
+    {
+      "id": "L0:F1229",
+      "label": "the word \"shake,\" and words related to the middle of something",
+      "reason": "Generic non-profession lexical feature."
+    },
+    {
+      "id": "L0:F9297",
+      "label": "mentions of government ministries and ministers.",
+      "reason": "Topic/institution mention; oracle doesn't tie to profession."
+    },
+    {
+      "id": "L3:F10489",
+      "label": "the word \"Institute\"",
+      "reason": "Generic institution word, not a profession cue alone."
+    },
+    {
+      "id": "L2:F12901",
+      "label": "the phrase \"Middle East\"",
+      "reason": "Geographic topic, not profession by itself."
+    },
+    {
+      "id": "L1:F1445",
+      "label": "terms related to the military, especially vehicles and weapons",
+      "reason": "Military topic, not profession according to oracle claim."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Already counted as causal above."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Already counted as causal above."
+    },
+    {
+      "id": "L6:F10984",
+      "label": "mentions of TV and radio broadcasting",
+      "reason": "Already counted as causal above."
+    },
+    {
+      "id": "L0:F13096",
+      "label": "instances of the word \"the\", often followed by nouns or other determiners",
+      "reason": "Pure structural/common-word detector."
+    },
+    {
+      "id": "L0:F9728",
+      "label": "the word \"sponsor\"",
+      "reason": "Generic lexical item; not profession-specific."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Pure punctuation/format feature."
+    },
+    {
+      "id": "L0:F12713",
+      "label": "mentions of \"New York City.\"",
+      "reason": "Location mention; not profession-specific here."
+    },
+    {
+      "id": "L4:F5060",
+      "label": "references to institutions and technology",
+      "reason": "Too broad; not a direct profession indicator."
+    },
+    {
+      "id": "L0:F8690",
+      "label": "mentions of research studies",
+      "reason": "Academic topic mention, not profession role."
+    },
+    {
+      "id": "L1:F15323",
+      "label": "the word \"starting\" in academic papers",
+      "reason": "Academic discourse marker, not profession-specific."
+    },
+    {
+      "id": "L0:F15880",
+      "label": "mentions of the Middle East",
+      "reason": "Geographic topic, not profession by itself."
+    },
+    {
+      "id": "L2:F12068",
+      "label": "words related to starting points, beginnings, or initiations in various contexts.",
+      "reason": "Broad syntactic/lexical feature."
+    },
+    {
+      "id": "L0:F2127",
+      "label": "the word \"dream\"",
+      "reason": "Unrelated generic lexical feature."
+    },
+    {
+      "id": "L0:F4870",
+      "label": "commas and sometimes reach (context not clear)",
+      "reason": "Structural/punctuation-style feature."
+    },
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic auxiliary-verb detector."
+    },
+    {
+      "id": "L0:F4308",
+      "label": "the word \"partial\" and related usages like \"partially\"",
+      "reason": "Generic academic/technical word feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 6,
+  "n_other": 27,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "mixed",
+  "notes": "Mostly legitimate journalism cues, with one clear gendered-pronoun spurious feature."
+}

@@ -1,0 +1,88 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Identity-group detector for race/ethnicity."
+    },
+    {
+      "id": "L6:F343",
+      "label": "references to patient demographics and characteristics",
+      "reason": "Generic demographic/identity reference."
+    },
+    {
+      "id": "L6:F9228",
+      "label": "language regarding discrimination based on race, gender, religion, and disability",
+      "reason": "Identity/discrimination vocabulary, not toxic harm."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic-group detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Black/race-focused identity detector."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issues vocabulary."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity terms."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Direct race-token detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L2:F13653",
+      "label": "the word \"force\"",
+      "reason": "Single lexical token; not toxicity-specific."
+    },
+    {
+      "id": "L3:F6517",
+      "label": "words related to mentioning something",
+      "reason": "Structural mention cue, not harmful content."
+    },
+    {
+      "id": "L0:F7820",
+      "label": "words indicating uncertainty or tentativeness",
+      "reason": "Generic modality/structure feature."
+    },
+    {
+      "id": "L0:F2961",
+      "label": "words that act as qualifications or negations, with a high preference for \"necessarily\" and \"uncommon.\"",
+      "reason": "Generic negation/qualification."
+    },
+    {
+      "id": "L0:F1910",
+      "label": "the phrase \"not only\"",
+      "reason": "Purely structural phrase detector."
+    },
+    {
+      "id": "L0:F1823",
+      "label": "occurances of the word 'Bureau'",
+      "reason": "Unrelated lexical detector."
+    },
+    {
+      "id": "L4:F11200",
+      "label": "a variety of words and phrases related to authorship and origination of something.",
+      "reason": "Authorship/origination, not toxicity."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 0,
+  "n_other": 7,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly identity-race vocabulary, with no causal toxicity semantics."
+}

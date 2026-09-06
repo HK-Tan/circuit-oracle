@@ -1,0 +1,53 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Pronoun detector; generic subject, not negation."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Not negation; oracle notes mixed pronoun/lexical trigger."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F15312",
+      "label": "the word \"about.\"",
+      "reason": "Generic word detector; structural lexical feature."
+    },
+    {
+      "id": "L3:F4464",
+      "label": "the word \"about\"",
+      "reason": "Generic word detector; structural lexical feature."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Phrase/number pattern, not task-specific meaning."
+    },
+    {
+      "id": "L1:F461",
+      "label": "the word \"land\"",
+      "reason": "Generic word detector; no semantic relation claim."
+    },
+    {
+      "id": "L2:F11518",
+      "label": "the word \"land\" in scientific/agricultural contexts",
+      "reason": "Content-specific lexical detector, not entailment logic."
+    },
+    {
+      "id": "L4:F12225",
+      "label": "transitional conclusion words, often used in legal or academic writing",
+      "reason": "Discourse marker, structurally motivated."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 2,
+  "n_other": 6,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation detector is actually claimed; oracle mainly lists generic lexical/discourse features."
+}

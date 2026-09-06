@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Detects demographic identity vocabulary."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-group semantics, not toxicity."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-group semantics, not toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race-focused feature; identity-group signal."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "Race-context aggregator",
+      "reason": "Aggregates race-context, not abusive content."
+    },
+    {
+      "id": "L8:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Race/prejudice context, not toxicity."
+    },
+    {
+      "id": "L9:F8462",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Race/prejudice context, not toxicity."
+    },
+    {
+      "id": "L11:F2332",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Race/prejudice context, not toxicity."
+    },
+    {
+      "id": "L12:F13522",
+      "label": "terms relating to race, specifically focusing on black and white people and slavery",
+      "reason": "Explicitly racial identity/slavery terms."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F12341",
+      "label": "the word \"steal\" and words related to taking and basic needs",
+      "reason": "Theft/abuse semantics can indicate toxicity."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: ' white' (pos 2)",
+      "reason": "Embedding only; no semantic claim."
+    },
+    {
+      "id": "L0:F0@6",
+      "label": "Emb: ' black' (pos 6)",
+      "reason": "Embedding only; no semantic claim."
+    },
+    {
+      "id": "L0:F0@3",
+      "label": "Emb: ' dude' (pos 3)",
+      "reason": "Embedding only; no semantic claim."
+    },
+    {
+      "id": "L0:F0@4",
+      "label": "Emb: ' stealing' (pos 4)",
+      "reason": "Embedding only; no semantic claim."
+    },
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: 'Another' (pos 1)",
+      "reason": "Embedding only; no semantic claim."
+    },
+    {
+      "id": "L4:F9880",
+      "label": "phrases indicating repetition or continuation which often use the word \"another\"",
+      "reason": "Purely structural continuation cue."
+    },
+    {
+      "id": "L2:F9528",
+      "label": "the color black",
+      "reason": "Literal color feature; not identity or toxicity."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 1,
+  "n_other": 7,
+  "spurious_fraction": 0.9,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly identity-group driven; only theft-related feature is causal."
+}

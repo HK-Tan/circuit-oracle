@@ -1,0 +1,43 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Direct male-gender marker."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Explicit male pronoun feature."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Broad person-reference feature, not profession-specific."
+    },
+    {
+      "id": "Emb: His (pos 0)",
+      "label": "His",
+      "reason": "Input token only; triggers spurious feature."
+    },
+    {
+      "id": "Probe Classification Score",
+      "label": "",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 0,
+  "n_other": 3,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle claims only gender markers drive the probe; no profession indicators are cited."
+}

@@ -1,0 +1,64 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "Pronoun / His marker",
+      "reason": "Fires on gendered pronoun 'His'."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "Interests / profession-context token",
+      "reason": "Generic biography content, not gendered."
+    },
+    {
+      "id": "L6:L4\u2013L8",
+      "label": "Academic-field pathway",
+      "reason": "Academic degrees and field vocabulary."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "Ph.D. circuit feature",
+      "reason": "Degree indicator tied to profession/education."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "Ph.D./education feature",
+      "reason": "Education terminology relevant to profession."
+    },
+    {
+      "id": "L1:F10132",
+      "label": "Education circuit feature",
+      "reason": "Professional/education-related signal."
+    },
+    {
+      "id": "L20:F14235",
+      "label": "Degree-institution template",
+      "reason": "Academic degree/institution context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "Period punctuation detector",
+      "reason": "Structural punctuation feature."
+    },
+    {
+      "id": "L8:F2383",
+      "label": "History token feature",
+      "reason": "Oracle says it is negatively weighted."
+    },
+    {
+      "id": "L6:F14747",
+      "label": "Content feature",
+      "reason": "Oracle gives no semantic label."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 6,
+  "n_other": 3,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "causal",
+  "notes": "Oracle reports mixed evidence, but causal profession/education signals outnumber the single gender marker."
+}

@@ -1,0 +1,194 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct gendered pronoun detector."
+    },
+    {
+      "id": "L0:F2208",
+      "label": "the pronoun \"Him\" and the possessive pronoun \"His\" when used in a religious context",
+      "reason": "Pronoun-based, gendered cue."
+    },
+    {
+      "id": "L0:F16297",
+      "label": "the pronoun \"him\"",
+      "reason": "Direct male pronoun detector."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Gender/social-role feature."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Oracle maps it to His/He at this prompt."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Gendered pronoun cluster."
+    },
+    {
+      "id": "L5:F10952",
+      "label": "third person pronouns in varying contexts",
+      "reason": "Pronoun detector, not profession."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-gender marker."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Possessive pronoun detector."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic pronoun cue."
+    },
+    {
+      "id": "L13:F10255",
+      "label": "a lot of uses of the word \"I\" and \"me\" and the phrase \"made me\"",
+      "reason": "Oracle claims pronoun-direction at him position."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun aggregator."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male pronoun token."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Pronoun/name aggregator."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Profession indicator: journalism."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter profession vocabulary."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Job-domain lexical cue."
+    },
+    {
+      "id": "L14:F10344",
+      "label": "pronouns related to feelings or actions",
+      "reason": "Oracle treats as content-neutral syntax."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News/reporting domain feature."
+    },
+    {
+      "id": "L4:F11898",
+      "label": "mentions of \"World\" followed by a sport or war-related word",
+      "reason": "Content-neutral lexical co-occurrence."
+    },
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Non-gendered lexical content."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb:His",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb:him",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb:report",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb:world",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb:desire",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "L0:F11767",
+      "label": "the word \"world\" with a lower activation for \"net\" and \"market\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Structural/common-word feature."
+    },
+    {
+      "id": "L0:F2011",
+      "label": "the word \"dream\"",
+      "reason": "Oracle-linked lexical feature, not causal here."
+    },
+    {
+      "id": "L0:F7927",
+      "label": "past-participle verbs",
+      "reason": "Purely structural/grammatical."
+    },
+    {
+      "id": "L8:F8437",
+      "label": "content related to film festivals and production, particularly documentary films, and the recognition they receive.",
+      "reason": "Not claimed relevant to this profession."
+    },
+    {
+      "id": "L11:F10933",
+      "label": "the letters \"L\", \"H,\" and \"a\" when they are at the beginning of a text block",
+      "reason": "Purely structural."
+    },
+    {
+      "id": "L11:F9183",
+      "label": "large empty spaces in the text",
+      "reason": "Purely structural."
+    },
+    {
+      "id": "L9:F8770",
+      "label": "sentences beginning with \"It\" or \"In\" and also the word \"There\".",
+      "reason": "Purely structural."
+    },
+    {
+      "id": "L13:F8128",
+      "label": "sentences beginning with the word \"In\"",
+      "reason": "Purely structural."
+    },
+    {
+      "id": "Probe",
+      "label": "male profession classifier",
+      "reason": "Classifier, not a feature."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 7,
+  "n_other": 15,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Pronoun-driven male cue dominates; journalism/profession cues are secondary."
+}

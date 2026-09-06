@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "negative sentiment markers ('not', 'no', 'never', etc.)",
+      "reason": "Negation marker detector."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "'not' / negative terms",
+      "reason": "Negation-term detector."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Absence/negation detector."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Multilingual negation detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Multilingual negation detector."
+    },
+    {
+      "id": "L9:F14687",
+      "label": "phrases using the word \"not\", often followed by \"because\" or \"but.\"",
+      "reason": "Negation phrase detector."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation detector."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation-plus-copula detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: reversal (pos 4)",
+      "label": "Emb: reversal",
+      "reason": "Semantic content relevant to relation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: not (pos 17)",
+      "label": "Emb: not",
+      "reason": "Token embedding, not a feature role."
+    },
+    {
+      "id": "Emb: is (pos 16)",
+      "label": "Emb: is",
+      "reason": "Token embedding, not a feature role."
+    },
+    {
+      "id": "Emb: There (pos 15)",
+      "label": "Emb: There",
+      "reason": "Token embedding, not a feature role."
+    },
+    {
+      "id": "L1:F15749",
+      "label": "the word \"strange\" (pos 2)",
+      "reason": "Topic word, not causal relation."
+    },
+    {
+      "id": "L2:F16097",
+      "label": "superlative adjectives / 'est' (pos 2)",
+      "reason": "Content-neutral lexical marker."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 1,
+  "n_other": 5,
+  "spurious_fraction": 0.9,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly negation-word driven; only reversal is plausibly causal."
+}

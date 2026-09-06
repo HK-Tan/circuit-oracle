@@ -1,0 +1,188 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Fires on 'not allowed to' surface pattern, not contradiction meaning."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "embed/output",
+      "label": "Probe output (contradiction direction)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "L2:F11518",
+      "label": "the word \"land\" in scientific/agricultural contexts",
+      "reason": "Single-word detector, generic lexical cue."
+    },
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Single-word detector, generic lexical cue."
+    },
+    {
+      "id": "L2:F10849",
+      "label": "the word \"set\"",
+      "reason": "Single-word detector, generic lexical cue."
+    },
+    {
+      "id": "L1:F461",
+      "label": "the word \"land\"",
+      "reason": "Single-word detector, generic lexical cue."
+    },
+    {
+      "id": "L1:F361",
+      "label": "words related to agriculture and ecology",
+      "reason": "Generic content-word cue, not semantic relation."
+    },
+    {
+      "id": "L2:F15312",
+      "label": "the word \"about.\"",
+      "reason": "Single-word detector, generic lexical cue."
+    },
+    {
+      "id": "L3:F4464",
+      "label": "the word \"about\"",
+      "reason": "Single-word detector, generic lexical cue."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Surface lexical pattern only."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F15492",
+      "label": "the word \"for\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Pure punctuation/formatting detector."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Oracle says driven by 'not allowed' tokens, not semantics."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Purely structural sentence-start feature."
+    },
+    {
+      "id": "L10:F14174",
+      "label": "left curly brackets",
+      "reason": "Code/syntax detector."
+    },
+    {
+      "id": "L10:F10933",
+      "label": "the first word of a paragraph or title",
+      "reason": "Structural boundary detector."
+    },
+    {
+      "id": "L9:F3056",
+      "label": "various keywords in programming languages, markup languages, and mathematical notations",
+      "reason": "Code/syntax detector."
+    },
+    {
+      "id": "L9:F15819",
+      "label": "code snippets",
+      "reason": "Code/syntax detector."
+    },
+    {
+      "id": "L9:F2762",
+      "label": "various code snippets, especially javascript",
+      "reason": "Code/syntax detector."
+    },
+    {
+      "id": "L9:F13483",
+      "label": "lines with a large amount of whitespace",
+      "reason": "Structural formatting detector."
+    },
+    {
+      "id": "L9:F8770",
+      "label": "sentences beginning with \"It\" or \"In\" and also the word \"There\".",
+      "reason": "Structural sentence-beginning detector."
+    },
+    {
+      "id": "L7:F462",
+      "label": "code documentation and import statements",
+      "reason": "Code/syntax detector."
+    },
+    {
+      "id": "L7:F5741",
+      "label": "code documentation or copyright information",
+      "reason": "Code/syntax detector."
+    },
+    {
+      "id": "L5:F3992",
+      "label": "the start of documentation blocks in code",
+      "reason": "Code/syntax detector."
+    },
+    {
+      "id": "L4:F12225",
+      "label": "transitional conclusion words, often used in legal or academic writing",
+      "reason": "Generic discourse marker, not task semantics."
+    },
+    {
+      "id": "L4:F5450",
+      "label": "code snippets from different languages and words related to starting or beginning something",
+      "reason": "Mixed code/structure detector."
+    },
+    {
+      "id": "L6:F14744",
+      "label": "the words \"about,\" \"to,\" and \"work.\"",
+      "reason": "Generic lexical co-occurrence detector."
+    },
+    {
+      "id": "L4:F9085",
+      "label": "phrases related to starting or doing a task with effort.",
+      "reason": "Generic lexical cue, not NLI semantics."
+    },
+    {
+      "id": "L9:F5948",
+      "label": "capitalized words at the beginning of lines",
+      "reason": "Pure structural capitalization detector."
+    },
+    {
+      "id": "L0:F7820",
+      "label": "words indicating uncertainty or tentativeness",
+      "reason": "Generic stylistic cue."
+    },
+    {
+      "id": "L1:F2493",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L10:F12232",
+      "label": "code-related statements and whitespace",
+      "reason": "Code/syntax detector."
+    },
+    {
+      "id": "L10:F6804",
+      "label": "references",
+      "reason": "Citation/reference formatting detector."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 0,
+  "n_other": 34,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle supports only surface negation and many structural/lexical cues; no causal semantic-relation feature appears."
+}

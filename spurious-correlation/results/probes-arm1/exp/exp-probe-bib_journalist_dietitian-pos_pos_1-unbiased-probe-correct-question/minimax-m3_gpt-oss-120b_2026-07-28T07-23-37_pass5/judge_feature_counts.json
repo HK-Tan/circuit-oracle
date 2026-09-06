@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F5697",
+      "label": "the word \"accompanied\"",
+      "reason": "Not gender; content-neutral token feature."
+    },
+    {
+      "id": "L5:F3400",
+      "label": "verbs, adjectives, or nouns related to the act of spending time or enjoying experiences with others",
+      "reason": "Triggered by loves; not gendered."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Directly encodes nutrition/scientific profession context."
+    },
+    {
+      "id": "L18:F6105",
+      "label": "text related to eating and health",
+      "reason": "Health/nutrition content supports dietitian class."
+    },
+    {
+      "id": "L17:F7545",
+      "label": "mentions of architecture, design, nurses and healthcare.",
+      "reason": "Healthcare context is profession-relevant."
+    },
+    {
+      "id": "L16:F12752",
+      "label": "unknown",
+      "reason": "Late-layer profession-context driver."
+    },
+    {
+      "id": "L15:F12472",
+      "label": "words associated with legal, academic, or technical documents, and numerical references",
+      "reason": "Academic/technical context is causal."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food/nutrition semantic support."
+    },
+    {
+      "id": "L15:F8177",
+      "label": "words associated with eating",
+      "reason": "Eating/nutrition semantics."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Direct nutrition feature."
+    },
+    {
+      "id": "L6:F8984",
+      "label": "words and phrases related to health",
+      "reason": "Health semantics support dietitian."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Direct diet/dietitian feature."
+    },
+    {
+      "id": "L4:F12213",
+      "label": "strings of letters followed by \"ls\" and \"an\", plus words associated with health research",
+      "reason": "Health-research context is causal."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words related to counseling, therapy, social work, and academic degree programs",
+      "reason": "Education/degree context is causal."
+    },
+    {
+      "id": "L4:F1626",
+      "label": "phrases that occur in the context of food consumption.",
+      "reason": "Food consumption semantics."
+    },
+    {
+      "id": "L0:F11021",
+      "label": "mentions of eating",
+      "reason": "Eating-related lexical signal."
+    },
+    {
+      "id": "L4:F9554",
+      "label": "words related to food, rations and feeding",
+      "reason": "Food/feeding semantics."
+    },
+    {
+      "id": "L1:F15251",
+      "label": "the word \"client\" and its plural form more often than not when capitalized as the first word of a sentence or preceded by a special character",
+      "reason": "Client/commercial path, not gender."
+    },
+    {
+      "id": "L4:F14782",
+      "label": "terms related to clients, user accounts, and tables",
+      "reason": "Client-related commercial feature."
+    },
+    {
+      "id": "L4:F5739",
+      "label": "the word \"client\" and other words related to software applications and data management",
+      "reason": "Client/software feature."
+    },
+    {
+      "id": "L5:F2213",
+      "label": "words related to working relationships between businesses and customers or clients",
+      "reason": "Client/customer commercial semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/format feature."
+    },
+    {
+      "id": "L0:F9888",
+      "label": "words related to formal schooling",
+      "reason": "Generic education, not profession-specific."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F11021",
+      "label": "mentions of eating",
+      "reason": "Already counted causal; omitted from other."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 19,
+  "n_other": 4,
+  "spurious_fraction": 0.09523809523809523,
+  "dominant": "causal",
+  "notes": "No true gender-marker feature is present; profession-content features dominate."
+}

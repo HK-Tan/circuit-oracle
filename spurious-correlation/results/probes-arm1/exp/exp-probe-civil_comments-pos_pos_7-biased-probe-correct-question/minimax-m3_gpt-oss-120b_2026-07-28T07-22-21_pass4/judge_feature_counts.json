@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F1644",
+      "label": "different forms of the word \"pride\"",
+      "reason": "Identity-pride token detector"
+    },
+    {
+      "id": "L1:F12542",
+      "label": "mentions of the word \"proud\" or words relating to TV shows and TV seasons.",
+      "reason": "Structural/lexical pride detector"
+    },
+    {
+      "id": "L3:F7993",
+      "label": "the word \"black\" and its plural form \"blacks\"",
+      "reason": "Race-token detector"
+    },
+    {
+      "id": "L2:F11363",
+      "label": "colors and words like Diamond.",
+      "reason": "Black/White color-word detector"
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issues vocabulary"
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity vocabulary"
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/racism social-justice topic"
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity topic detector"
+    },
+    {
+      "id": "L4:F15899",
+      "label": "language associated with the LGBTQ community and discussions of gender and identity.",
+      "reason": "LGBTQ identity-language detector"
+    },
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "LGBTQ-topic detector"
+    },
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "LGBTQ-issues discussion detector"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15295",
+      "label": "words and abbreviations related to HIV/AIDS and viral infections.",
+      "reason": "Medical vocabulary; not causal toxicity"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F9528",
+      "label": "the color black",
+      "reason": "Pure color/structural feature"
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Oracle says pushes down; not toxicity"
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 1,
+  "n_other": 2,
+  "spurious_fraction": 0.9166666666666666,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly identity-topic based, with only non-toxicity topic features cited."
+}

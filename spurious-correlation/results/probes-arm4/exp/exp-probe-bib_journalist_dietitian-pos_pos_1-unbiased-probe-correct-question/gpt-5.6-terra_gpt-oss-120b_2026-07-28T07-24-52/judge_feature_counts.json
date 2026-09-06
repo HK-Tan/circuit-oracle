@@ -1,0 +1,68 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L6:F6115",
+      "label": "words related to commercial activity and customers",
+      "reason": "Client-facing professional-context cue."
+    },
+    {
+      "id": "L4:F1626",
+      "label": "phrases that occur in the context of food consumption.",
+      "reason": "Food/eating semantic detector."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Food/nutrition profession evidence."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-related semantic detector."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Dietetics/nutrition terminology."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Explicit nutrition-science context."
+    },
+    {
+      "id": "L17:F7545",
+      "label": "mentions of architecture, design, nurses and healthcare.",
+      "reason": "Secondary healthcare/profession cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: clients (pos 5)",
+      "label": "embed/output",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: eat (pos 9)",
+      "label": "embed/output",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Nutrition (pos 20)",
+      "label": "embed/output",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Die (pos 22)",
+      "label": "embed/output",
+      "reason": "Input token, not a feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 7,
+  "n_other": 4,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle attributes the score to nutrition/profession cues, not gender markers."
+}

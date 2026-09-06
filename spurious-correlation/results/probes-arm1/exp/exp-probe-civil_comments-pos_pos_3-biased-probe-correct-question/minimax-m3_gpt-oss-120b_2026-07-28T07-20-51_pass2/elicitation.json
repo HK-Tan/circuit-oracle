@@ -1,0 +1,305 @@
+{
+  "prompt": "Dataset: civil_comments-pos_pos_3 | Probe: biased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 26,
+      "feature_idx": 0,
+      "pos": 6,
+      "supernode_label": "Probe Output (toxicity direction)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/26-gemmascope-transcoder-16k/0"
+    },
+    {
+      "layer": 6,
+      "feature_idx": 648,
+      "pos": 6,
+      "supernode_label": "L6:F648 \u2014 discrimination against religious/ethnic groups (pos 6)",
+      "autointerp": " words related to discrimination against particular religious or ethnic groups",
+      "frac_nonzero": 0.01607,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/648"
+    },
+    {
+      "layer": 8,
+      "feature_idx": 13875,
+      "pos": 10,
+      "supernode_label": "L8:F13875 \u2014 negative sentiment / reputation / betrayal (pos 10)",
+      "autointerp": "negative sentiment related to reputation and betrayal of trust.",
+      "frac_nonzero": 0.01022,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/8-gemmascope-transcoder-16k/13875"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 13158,
+      "pos": 6,
+      "supernode_label": "L2:F13158 \u2014 words about race and ethnicity (pos 6)",
+      "autointerp": " words about race and ethnicity",
+      "frac_nonzero": 0.00986,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/13158"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 2405,
+      "pos": 6,
+      "supernode_label": "L4:F2405 \u2014 religious identity / affiliation (pos 6)",
+      "autointerp": " words related to religious identity/affiliation or spirituality including related holidays",
+      "frac_nonzero": 0.00705,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/2405"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 14733,
+      "pos": 6,
+      "supernode_label": "L4:F14733 \u2014 Israel-Palestine conflict content (pos 6)",
+      "autointerp": " content related to the Israel-Palestine conflict and possibly some related topics like NBA trades.",
+      "frac_nonzero": 0.00958,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/14733"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 117,
+      "pos": 6,
+      "supernode_label": "L4:F117 \u2014 race/racism/social-justice terms (pos 6)",
+      "autointerp": " terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "frac_nonzero": 0.01199,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/117"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 12151,
+      "pos": 6,
+      "supernode_label": "L3:F12151 \u2014 capitalized suffix detector (pos 6)",
+      "autointerp": " capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+      "frac_nonzero": 0.00322,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/12151"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 8236,
+      "pos": 6,
+      "supernode_label": "L2:F8236 \u2014 Jewish-specific detector (pos 6)",
+      "autointerp": " mentions of Jewish people, culture, or religion, along with associated figures and locations",
+      "frac_nonzero": 0.0044,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/8236"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 11290,
+      "pos": 6,
+      "supernode_label": "L0:F11290 \u2014 Jewish/Israeli/Christian mentions (pos 6)",
+      "autointerp": "mentions of Jewish people, Israel, and Christianity",
+      "frac_nonzero": 0.00508,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/11290"
+    },
+    {
+      "layer": 6,
+      "feature_idx": 1561,
+      "pos": 10,
+      "supernode_label": "L6:F1561 \u2014 respect/status/dignity/shame (pos 10)",
+      "autointerp": " words related to respect, status, and pride, both positive and negative",
+      "frac_nonzero": 0.00847,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/1561"
+    },
+    {
+      "layer": 5,
+      "feature_idx": 7488,
+      "pos": 10,
+      "supernode_label": "L5:F7488 \u2014 legal/accusation language incl. \"stain\" (pos 10)",
+      "autointerp": " legal language, specifically terms related to evidence and accusations",
+      "frac_nonzero": 0.01055,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/5-gemmascope-transcoder-16k/7488"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 592,
+      "pos": 3,
+      "supernode_label": "L3:F592 \u2014 love/affection/hate vocabulary (pos 3)",
+      "autointerp": "words related to love, affection, and hate, including foreign language",
+      "frac_nonzero": 0.0044,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/592"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 3983,
+      "pos": 3,
+      "supernode_label": "L2:F3983 \u2014 literal \"hat\" token detector (pos 3)",
+      "autointerp": "the word \"hat\"",
+      "frac_nonzero": 0.00561,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/3983"
+    },
+    {
+      "layer": 1,
+      "feature_idx": 1774,
+      "pos": 3,
+      "supernode_label": "L1:F1774 \u2014 LaTeX \"hat\" detector (pos 3)",
+      "autointerp": " text in a Latex document",
+      "frac_nonzero": 0.006500000000000001,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/1-gemmascope-transcoder-16k/1774"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 9369,
+      "pos": 7,
+      "supernode_label": "L0:F9369 \u2014 dash/subtraction symbol detector (pos 7)",
+      "autointerp": " subtraction symbols",
+      "frac_nonzero": 0.06038,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/9369"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "discrim_L6",
+      "to": "output"
+    },
+    {
+      "from": "stain_neg_L8",
+      "to": "output"
+    },
+    {
+      "from": "race_L2",
+      "to": "output"
+    },
+    {
+      "from": "religion_L4",
+      "to": "output"
+    },
+    {
+      "from": "israel_L4",
+      "to": "output"
+    },
+    {
+      "from": "racism_L4",
+      "to": "output"
+    },
+    {
+      "from": "love_hate_L3",
+      "to": "output"
+    },
+    {
+      "from": "hat_L2",
+      "to": "output"
+    },
+    {
+      "from": "hat_L1",
+      "to": "output"
+    },
+    {
+      "from": "dash_L0",
+      "to": "output"
+    },
+    {
+      "from": "emb_jew",
+      "to": "discrim_L6"
+    },
+    {
+      "from": "emb_jew",
+      "to": "religion_L4"
+    },
+    {
+      "from": "emb_jew",
+      "to": "race_L2"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "religion_L4"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "stain_neg_L8"
+    },
+    {
+      "from": "cap_L3",
+      "to": "discrim_L6"
+    },
+    {
+      "from": "cap_L3",
+      "to": "religion_L4"
+    },
+    {
+      "from": "cap_L3",
+      "to": "israel_L4"
+    },
+    {
+      "from": "cap_L3",
+      "to": "racism_L4"
+    },
+    {
+      "from": "race_L2",
+      "to": "religion_L4"
+    },
+    {
+      "from": "jewish_L2",
+      "to": "religion_L4"
+    },
+    {
+      "from": "emb_jew",
+      "to": "jewish_L2"
+    },
+    {
+      "from": "jewish_L0",
+      "to": "race_L2"
+    },
+    {
+      "from": "emb_jew",
+      "to": "jewish_L0"
+    },
+    {
+      "from": "emb_stain",
+      "to": "legal_L5"
+    },
+    {
+      "from": "emb_stain",
+      "to": "respect_L6"
+    },
+    {
+      "from": "emb_stain",
+      "to": "stain_neg_L8"
+    },
+    {
+      "from": "legal_L5",
+      "to": "respect_L6"
+    },
+    {
+      "from": "respect_L6",
+      "to": "stain_neg_L8"
+    },
+    {
+      "from": "legal_L5",
+      "to": "stain_neg_L8"
+    },
+    {
+      "from": "emb_hat",
+      "to": "love_hate_L3"
+    },
+    {
+      "from": "emb_hat",
+      "to": "hat_L2"
+    },
+    {
+      "from": "emb_hat",
+      "to": "hat_L1"
+    },
+    {
+      "from": "emb_hat",
+      "to": "racism_L4"
+    },
+    {
+      "from": "love_hate_L3",
+      "to": "racism_L4"
+    },
+    {
+      "from": "emb_dash",
+      "to": "dash_L0"
+    },
+    {
+      "from": "emb_self",
+      "to": "love_hate_L3"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "**Analysis:** This is a probe attribution graph for the input \"Self-hating liberal Jew \u2014 a stain on his brethren and his country.\" The probe's \"toxic\" classification is driven primarily by a constellation of identity-group and slur-adjacent features firing on the token \"Jew\" (pos 6) \u2014 discrimination-against-religious/ethnic-groups (L6:F648), religious-identity (L4:F2405), race/ethnicity (L2:F13158), Israel-Palestine (L4:F14733), and racism/social-justice (L4:F117) \u2014 supplemented by negative-reputation features firing on the token \"stain\" (pos 10) and love/hate features firing on the \"hat\" substring of \"Self-hating\" (pos 3).\n\n**Confidence:** 8\n\n**Reasoning:** The user's suspicion is strongly corroborated. The circuit reaches token-embedding nodes (Emb: \"Jew\" at pos 6) and shows that the largest direct contributors to the probe are **identity-group detectors** rather than features encoding the *content* of the slur or the *sentiment valence* of the sentence. Specifically:\n\n- **L6:F648** (frac_nonzero 0.016) is a \"discrimination against particular religious or ethnic groups\" feature with the single largest direct effect (0.74) on the probe; it fires on the literal \"Jew\" token and is fed by L3:F12151 (a capitalized-suffix detector), L4:F2405 (religious identity), L4:F14733 (Israel-Palestine), L4:F117 (race/racism), L2:F13158 (race/ethnicity), L2:F8236 (Jewish-specific), and L0:F11290 (Jewish/Israeli mentions) \u2014 i.e., a stack of low-frac_nonzero features that all activate on **identity tokens**, with no \"slur\" or \"attitude\" feature in the path.\n- **L2:F13158** (race/ethnicity, frac_nonzero 0.0099) and **L4:F2405** (religious identity, frac_nonzero 0.007) also push the probe directly with positive direct_effects (0.29 and 0.24), reinforced by L2:F8236 (Jewish-specific, frac_nonzero 0.0044) and L4:F14733 (Israel-Palestine, frac_nonzero 0.0096). These features have **no discrimination/sentiment valence** baked in \u2014 they fire on any mention of \"Jew,\" \"Muslim,\" \"Black,\" etc. Their top-activating examples include neutral or even pro-civil-rights contexts.\n- The only **non-identity** contributors are (a) **L8:F13875** on \"stain\" (pos 10) \u2014 a legitimate negative-reputation feature; (b) **L3:F592** (love/hate vocabulary) firing on the \"hat\" suffix of \"hating\" at pos 3; and (c) **L0:F9369** (dash detector) and **L1:F1774** / **L2:F3983** (literal \"hat\" token detectors \u2014 including a LaTeX \\hat detector!). These literal-substring detectors are particularly striking: the model is treating the four characters h-a-t inside \"Self-**hat**-ing\" as the noun \"hat\" (clothing item, LaTeX accent), which is the wrong sense but contributes 0.13\u20130.28 of positive direct effect.\n- Critically, **no feature in the top 15 specifically encodes slurs, hateful intent, or a \"this person hates group X\" composition.** The discrimination feature (L6:F648) is the closest, but its own top-activating examples are anti-discrimination *discussions* (J\u00e4ger report on \u0160eduva, posts about Jewish identity, civil-rights contexts) \u2014 it is essentially an \"identity group mentioned alongside a possibly-charged context\" detector, not a toxicity detector. It just happens to fire here because the prompt contains the identity token \"Jew.\"\n\nThe conclusion: the probe is largely being driven by the **mere presence of the identity token \"Jew\"** plus the literal \"hat\" substring, not by features that would recognize the actual hateful construction (a self-referential insult combining a group identity with a degradation predicate). The single most diagnostic non-identity feature (L8:F13875 on \"stain\") only contributes 0.23, and the race/ethnicity + religion + Israel-Palestine + racism features collectively contribute more than 1.0 of direct effect, meaning the identity-membership signal dominates the sentiment signal. This is exactly the spurious-feature concern the user raised.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

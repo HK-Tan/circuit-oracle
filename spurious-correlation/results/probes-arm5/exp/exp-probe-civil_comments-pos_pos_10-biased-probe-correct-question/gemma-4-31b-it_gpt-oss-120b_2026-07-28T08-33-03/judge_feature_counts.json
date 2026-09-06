@@ -1,0 +1,38 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Direct demographic-token detector; identity mention, not toxicity."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issue lexicon detector; spurious for toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity-group/social-justice terms; not causal toxicity."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Demographic term detector; correlational identity signal."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "embed/output",
+      "label": "Toxicity Probe Score",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 1,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle claims identity-mention circuitry, with no toxic-content features."
+}

@@ -1,0 +1,143 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: \"She\"",
+      "reason": "Female pronoun trigger."
+    },
+    {
+      "id": "L0:F0@24",
+      "label": "Emb: \" Linda\"",
+      "reason": "Gendered name cue."
+    },
+    {
+      "id": "L2:F2128@1",
+      "label": "Low-layer pronoun / female-reference features",
+      "reason": "Female-reference detector."
+    },
+    {
+      "id": "L4:F7864@1",
+      "label": "Low-layer pronoun / female-reference features",
+      "reason": "Promoted tokens are feminine pronouns."
+    },
+    {
+      "id": "L5:F10952@1",
+      "label": "Low-layer pronoun / female-reference features",
+      "reason": "Female-reference detector."
+    },
+    {
+      "id": "L4:F15317@2",
+      "label": "Low-layer pronoun / female-reference features",
+      "reason": "Named-entity/person cue, not profession."
+    },
+    {
+      "id": "L0:F7532@24",
+      "label": "Low-layer name/proper-noun features",
+      "reason": "Proper-name cue."
+    },
+    {
+      "id": "L2:F5859@24",
+      "label": "Low-layer name/proper-noun features",
+      "reason": "Name detector, gender-associated."
+    },
+    {
+      "id": "L4:F1276@24",
+      "label": "Low-layer name/proper-noun features",
+      "reason": "Proper-name cue."
+    },
+    {
+      "id": "L4:F15644@24",
+      "label": "Low-layer name/proper-noun features",
+      "reason": "Proper-name cue."
+    },
+    {
+      "id": "L6:F8166@24",
+      "label": "Low-layer name/proper-noun features",
+      "reason": "Proper-name heuristic."
+    },
+    {
+      "id": "L7:F8644@24",
+      "label": "Low-layer name/proper-noun features",
+      "reason": "Woman's-name feature."
+    },
+    {
+      "id": "L7:F2765@24",
+      "label": "Low-layer name/proper-noun features",
+      "reason": "Person/detail feature, not profession."
+    },
+    {
+      "id": "L6:F11646@1",
+      "label": "Mid-layer female-reference feature",
+      "reason": "References to women."
+    },
+    {
+      "id": "L6:F11646@2",
+      "label": "Mid-layer female-reference feature",
+      "reason": "References to women."
+    },
+    {
+      "id": "L12:F12940@2",
+      "label": "Mid-layer female-reference feature",
+      "reason": "Female pronoun detector."
+    },
+    {
+      "id": "L18:F14677@1",
+      "label": "Late-layer women-references feature",
+      "reason": "Women/girls mention."
+    },
+    {
+      "id": "L18:F14677@55",
+      "label": "Late-layer women-references feature",
+      "reason": "Women/girls mention."
+    },
+    {
+      "id": "L19:F9685@24",
+      "label": "Late-layer women's-names + roles feature",
+      "reason": "Women's names and roles."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F0@7",
+      "label": "Emb: \" nurse\"",
+      "reason": "Profession token."
+    },
+    {
+      "id": "L0:F0@8",
+      "label": "Emb: \" practitioner\"",
+      "reason": "Healthcare profession term."
+    },
+    {
+      "id": "L1:F1494@8",
+      "label": "Low-layer medical/nursing features",
+      "reason": "Medical vocabulary cue."
+    },
+    {
+      "id": "L4:F11037@8",
+      "label": "Low-layer medical/nursing features",
+      "reason": "Medical/nursing vocabulary."
+    },
+    {
+      "id": "L5:F1275@8",
+      "label": "Low-layer medical/nursing features",
+      "reason": "Healthcare-profession feature."
+    },
+    {
+      "id": "L4:F13803@46",
+      "label": "Low-layer medical/nursing features",
+      "reason": "Medical terminology, not gender."
+    },
+    {
+      "id": "L6:F15267@8",
+      "label": "Mid-layer nursing-specific feature",
+      "reason": "Explicit nursing profession detector."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 19,
+  "n_causal": 7,
+  "n_other": 0,
+  "spurious_fraction": 0.7307692307692307,
+  "dominant": "spurious",
+  "notes": "Gender/name cues outnumber profession cues; probe relies mainly on spurious female references."
+}

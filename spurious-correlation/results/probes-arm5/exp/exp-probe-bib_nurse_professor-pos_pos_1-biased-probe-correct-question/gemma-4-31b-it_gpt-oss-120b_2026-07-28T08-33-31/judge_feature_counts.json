@@ -1,0 +1,64 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female gender marker from pronoun 'she'."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Detects women/girls mentions; gender signal."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun detector from 'she'."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F15437",
+      "label": "Specific Nursing Feature",
+      "reason": "Specific profession indicator for nursing."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "Healthcare/Medical Context",
+      "reason": "Medical context supporting profession classification."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "Healthcare/Medical Context",
+      "reason": "Medical context supporting profession classification."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "Nursing Profession Driver",
+      "reason": "Direct nursing profession detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@7",
+      "label": "Emb: she",
+      "reason": "Input embedding token; not a feature claim."
+    },
+    {
+      "id": "L0:F0@15",
+      "label": "Emb: nurses",
+      "reason": "Input embedding token; not a feature claim."
+    },
+    {
+      "id": "embed/output",
+      "label": "Probe Classification Score",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 4,
+  "n_other": 3,
+  "spurious_fraction": 0.42857142857142855,
+  "dominant": "mixed",
+  "notes": "Oracle claims both gender and nursing pathways contribute positively."
+}

@@ -1,0 +1,98 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F648",
+      "label": "identity-token detector",
+      "reason": "Fires on 'Jew' and 'liberal' identity tokens."
+    },
+    {
+      "id": "L8:F13875",
+      "label": "slur/identity phrase detector",
+      "reason": "Matches identity-linked phrase 'stain on his brethren/country'."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "early identity-token feature",
+      "reason": "Triggered by 'Jew' as demographic label."
+    },
+    {
+      "id": "L1:F15359",
+      "label": "early identity-token feature",
+      "reason": "Triggered by 'Jew' identity token."
+    },
+    {
+      "id": "L2:F8236",
+      "label": "early identity-token feature",
+      "reason": "Triggered by 'Jew' identity token."
+    },
+    {
+      "id": "L4:F14733",
+      "label": "identity-token detector",
+      "reason": "Upstream identity-token feature on 'Jew'."
+    },
+    {
+      "id": "L4:F117",
+      "label": "identity-token detector",
+      "reason": "Upstream identity-token feature on 'Jew'."
+    },
+    {
+      "id": "L3:F12151",
+      "label": "identity-token detector",
+      "reason": "Tracks 'Jew' and 'liberal' identity terms."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "identity-token detector",
+      "reason": "Identity-group token detector on 'Jew'."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "identity-token detector",
+      "reason": "Upstream feature driven by 'liberal'/'Jew'."
+    },
+    {
+      "id": "L6:F1561",
+      "label": "slur/identity phrase detector",
+      "reason": "Part of 'stain on his brethren/country' phrase path."
+    },
+    {
+      "id": "L5:F7488",
+      "label": "slur/identity phrase detector",
+      "reason": "Part of identity-linked negative phrase path."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe classification score (toxicity probe)",
+      "label": "Probe classification score (toxicity probe)",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "Emb: \"Jew\"",
+      "label": "Embedding: \"Jew\"",
+      "reason": "Token embedding, not a feature."
+    },
+    {
+      "id": "Emb: \" liberal\"",
+      "label": "Embedding: \" liberal\"",
+      "reason": "Token embedding, not a feature."
+    },
+    {
+      "id": "Emb: \" stain\"",
+      "label": "Embedding: \" stain\"",
+      "reason": "Token embedding, not a feature."
+    },
+    {
+      "id": "Emb: \" on\"",
+      "label": "Embedding: \" on\"",
+      "reason": "Token embedding, not a feature."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes identity-token and identity-phrase shortcuts; no causal toxicity detectors are claimed."
+}

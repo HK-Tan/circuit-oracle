@@ -1,0 +1,149 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F8645",
+      "label": "passages discussing same-sex marriage",
+      "reason": "LGBTQ identity/topic detector on 'gay'."
+    },
+    {
+      "id": "L4:F15899",
+      "label": "language associated with the LGBTQ community and discussions of gender and identity",
+      "reason": "Identity/community detector on 'gay'."
+    },
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "Homosexuality topic detector on 'gay'."
+    },
+    {
+      "id": "L7:F16171",
+      "label": "texts about homosexuality, gay marriage, and religious views on these topics",
+      "reason": "LGBTQ-topic detector on 'gay'."
+    },
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "LGBTQ issues detector on 'gay'."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/social-justice detector on 'warrior' and 'justice'."
+    },
+    {
+      "id": "L0:F3591",
+      "label": "terms related to government social programs",
+      "reason": "Structural/social-topic detector on 'social'."
+    },
+    {
+      "id": "L1:F13646",
+      "label": "text discussing social justice issues",
+      "reason": "Social-justice topic detector on 'justice'."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issues detector on 'social justice'."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious-identity detector on 'Muslim'."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Islam/ethnicity detector on 'Muslim'."
+    },
+    {
+      "id": "L3:F12024",
+      "label": "?",
+      "reason": "Claimed by oracle as Muslim-linked identity detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F10969",
+      "label": "swear words and insults",
+      "reason": "Toxic-content detector, though weakly evidenced here."
+    },
+    {
+      "id": "L11:F1291",
+      "label": "racist content",
+      "reason": "Toxicity-related content detector, if genuinely claimed."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Purely structural pronoun detector."
+    },
+    {
+      "id": "L0:F6764",
+      "label": "words related to things subjects/people have done or felt",
+      "reason": "Generic semantic/structural feature."
+    },
+    {
+      "id": "L0:F3215",
+      "label": "terms related to scientific studies, environments, and social issues",
+      "reason": "Broad topical feature, not toxicity-specific."
+    },
+    {
+      "id": "L0:F10421",
+      "label": "mentions of fields of study and legal terms",
+      "reason": "Generic topical/legal detector."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Structural/technical-text feature."
+    },
+    {
+      "id": "L0:F8497",
+      "label": "words related to tourism and sales",
+      "reason": "Unrelated topical feature."
+    },
+    {
+      "id": "L0:F3591",
+      "label": "terms related to government social programs",
+      "reason": "Broad topical feature; also listed as spurious above due oracle claim."
+    },
+    {
+      "id": "L3:F5157",
+      "label": "references to social services and social work",
+      "reason": "Generic social-work topic feature."
+    },
+    {
+      "id": "L8:F16036",
+      "label": "words and phrases related to Israel, Zionism, and related political topics.",
+      "reason": "Political-topic feature, not toxicity-specific."
+    },
+    {
+      "id": "L7:F8154",
+      "label": "highly charged political commentary, particularly with a right-leaning perspective",
+      "reason": "Political commentary, not toxicity-specific."
+    },
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations.",
+      "reason": "Broad ideological negativity feature."
+    },
+    {
+      "id": "L9:F4798",
+      "label": "references to racial issues, particularly slavery and discrimination",
+      "reason": "Racial-issues topic detector."
+    },
+    {
+      "id": "L0:FNone",
+      "label": "?",
+      "reason": "Oracle provided no label."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 2,
+  "n_other": 13,
+  "spurious_fraction": 0.8571428571428571,
+  "dominant": "spurious",
+  "notes": "Identity-topic detectors dominate; toxicity-specific evidence is weak and secondary."
+}

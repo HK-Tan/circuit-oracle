@@ -1,0 +1,98 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Conspiracy semantics, not negation."
+    },
+    {
+      "id": "L8:F12761",
+      "label": "words associated with the QAnon conspiracy theory",
+      "reason": "Conspiracy-topic detector."
+    },
+    {
+      "id": "L2:F15808",
+      "label": "mentions of credit cards and payment.",
+      "reason": "Payment semantics."
+    },
+    {
+      "id": "L7:F1062",
+      "label": "words and phrases related to credit cards, loans, spending, gambling, and money in general.",
+      "reason": "Financial-content relation."
+    },
+    {
+      "id": "L1:F8696",
+      "label": "the word \"invest\" and its derivatives",
+      "reason": "Investment-related content."
+    },
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "Chip/device semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F16015",
+      "label": "the prefix \"cons\"",
+      "reason": "Pure string/structural prefix detector."
+    },
+    {
+      "id": "L2:F16241",
+      "label": "partial strings of the word \"constructor\" or words ending in \"dering\"",
+      "reason": "Irrelevant substring detector."
+    },
+    {
+      "id": "L0:F4287",
+      "label": "words or phrases that relate to marketing or advertising",
+      "reason": "Oracle dismissed; not part of cited mechanism."
+    },
+    {
+      "id": "L0:F15958",
+      "label": "the word \"tomorrow\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F4287",
+      "label": "words or phrases that relate to marketing or advertising",
+      "reason": "Generic/dismissed feature."
+    },
+    {
+      "id": "L0:F12377",
+      "label": "large gaps of whitespace",
+      "reason": "Pure whitespace feature."
+    },
+    {
+      "id": "L0:F4802",
+      "label": "large blocks of whitespace and numbers",
+      "reason": "Pure formatting feature."
+    },
+    {
+      "id": "L1:F13684",
+      "label": "the word \"theory\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function word."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 6,
+  "n_other": 11,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation detectors claimed; cited signal is conspiracy/finance/chip semantics."
+}

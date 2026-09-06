@@ -1,0 +1,144 @@
+{
+  "spurious_features": [
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Person-reference feature, used via male pronoun context."
+    },
+    {
+      "id": "L19:F8186",
+      "label": "references to a person, especially third-person pronouns and possessive pronouns.",
+      "reason": "Explicit third-person pronoun detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male pronoun feature."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male pronoun feature."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male pronoun feature."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun detector, not profession-related."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Male pronoun / possessive pronoun detector."
+    },
+    {
+      "id": "L21:F6216",
+      "label": "references to a specific person, often using pronouns or names",
+      "reason": "Person-reference feature, driven by pronouns."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct gendered pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Direct male-person reference feature."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit male/gendered feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F1773",
+      "label": "the word \"history\"",
+      "reason": "Content token with minor genuine task relevance."
+    },
+    {
+      "id": "L12:F10137",
+      "label": "names of universities, cities, publications and other institutions.",
+      "reason": "Institution/education terminology relevant to biographies."
+    },
+    {
+      "id": "L20:F10934",
+      "label": "action verbs with past tense forms",
+      "reason": "Structural/biographical content, not gendered."
+    },
+    {
+      "id": "L17:F3683",
+      "label": "biographies",
+      "reason": "Biography-domain content feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic pronoun detector; not specifically male."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Mixed pronoun/non-ASCII feature; oracle treats as detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Duplicate entry already counted once; not re-counted."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Oracle says religious reference, not task-related."
+    },
+    {
+      "id": "L15:F851",
+      "label": "code documentation blocks in various programming languages",
+      "reason": "Unrelated structural/code feature."
+    },
+    {
+      "id": "L11:F10933",
+      "label": "the letters \"L\", \"H,\" and \"a\" when they are at the beginning of a text block",
+      "reason": "Purely structural/character-position feature."
+    },
+    {
+      "id": "L11:F9183",
+      "label": "large empty spaces in the text",
+      "reason": "Purely structural spacing feature."
+    },
+    {
+      "id": "L9:F8770",
+      "label": "sentences beginning with \"It\" or \"In\" and also the word \"There\".",
+      "reason": "Generic syntactic/start-of-sentence feature."
+    },
+    {
+      "id": "L21:F4895",
+      "label": "prepositions and related words",
+      "reason": "Generic structural language feature."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "Female-oriented pronoun feature, not causal here."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Generic people/pronoun detector."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 4,
+  "n_other": 11,
+  "spurious_fraction": 0.7333333333333333,
+  "dominant": "spurious",
+  "notes": "Male pronoun circuitry dominates; profession/education signals are minor."
+}

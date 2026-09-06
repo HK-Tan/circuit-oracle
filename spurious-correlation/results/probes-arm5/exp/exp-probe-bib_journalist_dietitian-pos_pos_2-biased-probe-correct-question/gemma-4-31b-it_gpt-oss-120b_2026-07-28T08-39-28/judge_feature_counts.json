@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Oracle claims it as a bridge only; not gender semantics."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female-reference detector; spurious gender marker."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Explicit female pronoun feature; spurious gender marker."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Woman/girl mentions; spurious gender marker."
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "Women-related terms; spurious gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F6246",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Nutrition vocabulary; profession-relevant causal cue."
+    },
+    {
+      "id": "L0:F5201",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Nutrition vocabulary; profession-relevant causal cue."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Nutrition concept feature; profession-related."
+    },
+    {
+      "id": "L4:F9554",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Nutrition concept feature; profession-related."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Food/nutrition terminology; profession-related."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe Classification Score",
+      "label": "Probe Classification Score",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: She (pos 0)",
+      "label": "Emb: She (pos 0)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: nutrition (pos 13)",
+      "label": "Emb: nutrition (pos 13)",
+      "reason": "Input token, not a feature."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 5,
+  "n_other": 3,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle claims both gender and nutrition paths; neither dominates by count."
+}

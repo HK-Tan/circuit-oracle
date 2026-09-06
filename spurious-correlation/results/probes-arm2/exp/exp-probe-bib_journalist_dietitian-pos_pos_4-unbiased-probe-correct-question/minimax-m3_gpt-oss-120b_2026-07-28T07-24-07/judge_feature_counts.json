@@ -1,0 +1,183 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Probe direction",
+      "label": "output logit",
+      "reason": "Target direction aggregating profession evidence."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "profession/nutrition concept features",
+      "reason": "Profession-concept detector tied to nutrition terms."
+    },
+    {
+      "id": "L18:F6105",
+      "label": "dietitian-as-entity feature",
+      "reason": "Represents the profession entity itself."
+    },
+    {
+      "id": "L17:F7545",
+      "label": "dietitian-token features",
+      "reason": "Detects dietitian lexical tokens."
+    },
+    {
+      "id": "L17:F14680",
+      "label": "dietitian-token features",
+      "reason": "Detects dietitian lexical tokens."
+    },
+    {
+      "id": "L16:F2393",
+      "label": "inhibitory profession-offset features",
+      "reason": "Profession-related suppression, not gender."
+    },
+    {
+      "id": "L16:F12752",
+      "label": "inhibitory profession-offset features",
+      "reason": "Profession-related suppression, not gender."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "nutrition-domain concept feature",
+      "reason": "Fires on nutrition-domain vocabulary."
+    },
+    {
+      "id": "L9:F15926",
+      "label": "mid-layer profession refiners",
+      "reason": "Refines profession recognition."
+    },
+    {
+      "id": "L9:F14144",
+      "label": "mid-layer profession refiners",
+      "reason": "Refines profession recognition."
+    },
+    {
+      "id": "L8:F8003",
+      "label": "mid-layer concept refiners",
+      "reason": "Supports profession concept abstraction."
+    },
+    {
+      "id": "L8:F7732",
+      "label": "mid-layer concept refiners",
+      "reason": "Supports profession concept abstraction."
+    },
+    {
+      "id": "L8:F10253",
+      "label": "mid-layer concept refiners",
+      "reason": "Supports profession concept abstraction."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "\"Die/titian\" profession-token detector",
+      "reason": "Detects dietitian subword pattern."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "repeated \"Dietitian\" / profession-name token feature",
+      "reason": "Aggregates repeated profession-name tokens."
+    },
+    {
+      "id": "L4:F9554",
+      "label": "secondary \"titian\"-end feature",
+      "reason": "Captures dietitian word ending."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "secondary \"titian\"-end feature",
+      "reason": "Captures dietitian word ending."
+    },
+    {
+      "id": "L4:F10494",
+      "label": "secondary \"titian\"-end feature",
+      "reason": "Linked to nutrition/profession tokens."
+    },
+    {
+      "id": "L3:F11774",
+      "label": "\"Die/te\" subword composition features",
+      "reason": "Composes dietitian subwords."
+    },
+    {
+      "id": "L3:F10028",
+      "label": "\"Die/te\" subword composition features",
+      "reason": "Composes dietitian subwords."
+    },
+    {
+      "id": "L3:F7212",
+      "label": "\"Die/te\" subword composition features",
+      "reason": "Composes dietitian subwords."
+    },
+    {
+      "id": "L2:F2589",
+      "label": "\"Die/te\" subword composition features",
+      "reason": "Composes dietitian subwords."
+    },
+    {
+      "id": "L2:F7473",
+      "label": "\"Die/te\" subword composition features",
+      "reason": "Composes dietitian subwords."
+    },
+    {
+      "id": "L0:F8153",
+      "label": "lexical/te features",
+      "reason": "Low-level dietitian subword cue."
+    },
+    {
+      "id": "L0:F1083",
+      "label": "lexical/te features",
+      "reason": "Low-level dietitian subword cue."
+    },
+    {
+      "id": "L1:F6461",
+      "label": "lexical/te features",
+      "reason": "Low-level nutrition/profession cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Die (pos 20) / te (pos 21) - the word \"Dietetic/Dietitian\" tokens",
+      "label": "input embeddings",
+      "reason": "Token-level profession evidence."
+    },
+    {
+      "id": "Emb: Nutritional (pos 9)",
+      "label": "input embeddings",
+      "reason": "Nutrition-domain profession cue."
+    },
+    {
+      "id": "Emb: titian / Die (pos 36-37) - the word \"Dietitian\"",
+      "label": "input embeddings",
+      "reason": "Token-level profession evidence."
+    },
+    {
+      "id": "Emb: RD (pos 55) - professional credential",
+      "label": "input embeddings",
+      "reason": "Credential, but oracle lists it separately."
+    },
+    {
+      "id": "Emb: nutrition (pos 50)",
+      "label": "input embeddings",
+      "reason": "Nutrition-domain profession cue."
+    },
+    {
+      "id": "Emb: Sports / Nutrition (pos 63-64)",
+      "label": "input embeddings",
+      "reason": "Profession-related phrase."
+    },
+    {
+      "id": "Emb: She (pos 1) / has (pos 2) / Heather (further in text) - female-pronoun/name markers (NEGATIVE direct effect)",
+      "label": "input embeddings",
+      "reason": "Negative direct effect; not promoting."
+    },
+    {
+      "id": "Emb: from (pos 11) (NEGATIVE direct effect)",
+      "label": "input embeddings",
+      "reason": "Negative direct effect; not promoting."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 26,
+  "n_other": 8,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle attributes prediction to profession vocabulary; gender markers are explicitly negative/irrelevant."
+}

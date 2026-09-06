@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L14:F5600",
+      "label": "places and regions, particularly in Canada",
+      "reason": "Canadian geography cue, not profession content."
+    },
+    {
+      "id": "L7:F8870",
+      "label": "locations and names of organizations or people",
+      "reason": "Location/name scaffold; not task-causing."
+    },
+    {
+      "id": "L4:F8439",
+      "label": "stock ticker symbols and Canadian geography",
+      "reason": "Canadian geography signal, irrelevant to profession."
+    },
+    {
+      "id": "L0:F4687",
+      "label": "place names",
+      "reason": "Generic place-name detector."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Generic biography pronoun scaffold."
+    },
+    {
+      "id": "L0:F13553",
+      "label": "verbs in the past tense or past participle",
+      "reason": "Purely grammatical biography scaffold."
+    },
+    {
+      "id": "L0:F2743",
+      "label": "the word 'later'",
+      "reason": "Biography timeline scaffold."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F1372",
+      "label": "the word \"engineer\"",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "L2:F16309",
+      "label": "people's names",
+      "reason": "Name detector used as biography cue."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Degree/university signal for academic profession."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Explicit degree terminology."
+    },
+    {
+      "id": "L2:F13360",
+      "label": "words related to academic titles and positions.",
+      "reason": "Academic title/position terminology."
+    },
+    {
+      "id": "L1:F10132",
+      "label": "the abbreviation for Doctorate of Philosophy, \"Ph.D.\" (or \"PhD\") written as \"D\"",
+      "reason": "Doctorate abbreviation tied to academic background."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Academic credential indicator."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "abbreviations for degrees and mentions of educational attainment",
+      "reason": "Education/degree terminology."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6515",
+      "label": "the year 199X or 200X.",
+      "reason": "Generic date format."
+    },
+    {
+      "id": "L0:F11333",
+      "label": "the 1990's",
+      "reason": "Generic year fragment detector."
+    },
+    {
+      "id": "L2:F14934",
+      "label": "years in the 1900s",
+      "reason": "Generic date/year detector."
+    },
+    {
+      "id": "L0:F11132",
+      "label": "a mix of possessive pronouns like \"his\", names associated with historical records, and years.",
+      "reason": "Mixed historical-format feature."
+    },
+    {
+      "id": "L0:F15320",
+      "label": "the word \"ice\"",
+      "reason": "Oracle says this is unrelated noise."
+    },
+    {
+      "id": "L0:F2085",
+      "label": "the word \"reception\"",
+      "reason": "Unrelated lexical feature."
+    },
+    {
+      "id": "L0:F7905",
+      "label": "the word \"route,\" referencing paths, directions, or means of transportation",
+      "reason": "Generic direction/transport feature."
+    },
+    {
+      "id": "L0:F12235",
+      "label": "words related to legal documents and hunting",
+      "reason": "Oracle dismisses as unrelated."
+    },
+    {
+      "id": "L6:F3235",
+      "label": "academic publications, math, and scientific institutions",
+      "reason": "Not claimed in the curated circuit summary."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 8,
+  "n_other": 9,
+  "spurious_fraction": 0.4666666666666667,
+  "dominant": "mixed",
+  "notes": "Main signal mixes profession/degree cues with Canadian and biography scaffolding."
+}

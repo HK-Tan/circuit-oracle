@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "Fires on racial term 'white'; identity-group lexical trigger."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Direct identity-group word detector."
+    },
+    {
+      "id": "L0:F7969",
+      "label": "the word \"other\"",
+      "reason": "Generic identity-adjacent lexical trigger."
+    },
+    {
+      "id": "L4:F11580",
+      "label": "negative language and swear words",
+      "reason": "Triggered by 'ot' from bigot; toxicity lexeme cue."
+    },
+    {
+      "id": "L4:F7545",
+      "label": "words or phrases relating to religious extremism, violence, and terrorism.",
+      "reason": "Activated on toxic/violence semantics."
+    },
+    {
+      "id": "L2:F9199",
+      "label": "instances of \"ot\" in code",
+      "reason": "Subword surface match, not semantic toxicity."
+    },
+    {
+      "id": "L2:F15769",
+      "label": "the word \"tie\" in various contexts",
+      "reason": "Literal word detector, structural/lexical only."
+    },
+    {
+      "id": "L4:F2720",
+      "label": "mentions of a 'tie' or a similar word",
+      "reason": "Literal token feature, not task semantics."
+    },
+    {
+      "id": "L4:F14582",
+      "label": "references to the White House and the US government",
+      "reason": "Entity-recognition of Trump/US politics."
+    },
+    {
+      "id": "L6:F15063",
+      "label": "references to American politics, elections, and politicians",
+      "reason": "Name/politics entity cue, not toxicity."
+    },
+    {
+      "id": "L3:F3136",
+      "label": "names of people involved in the Trump administration",
+      "reason": "Trump-name recognition, surface political entity."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F12866",
+      "label": "adverbs such as \"clearly,\" \"plainly,\" and \"as\"",
+      "reason": "Generic discourse marker; structural emphasis."
+    },
+    {
+      "id": "L0:F7621",
+      "label": "the word \"clearly\", and to a lesser extent words associated with amounts of things",
+      "reason": "Generic discourse marker, not toxicity."
+    },
+    {
+      "id": "L0:F4422",
+      "label": "the word \"seriously\"",
+      "reason": "General tone/intonation feature."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Purely structural/common function-word feature."
+    },
+    {
+      "id": "L0:F15831",
+      "label": "the word \"again\" and words associated with time",
+      "reason": "Temporal discourse marker, not identity."
+    },
+    {
+      "id": "L0:F164",
+      "label": "the words \"show\" and \"your\", particularly when talking about presenting something",
+      "reason": "Identity-independent lexical/syntactic feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L1:F9761",
+      "label": "language asserting that a statement is obvious, undisputed, or in accordance with a rule",
+      "reason": "General rhetorical marker; dismissed as structural."
+    },
+    {
+      "id": "L0:F7142",
+      "label": "the word \"axis\" and its plural form, often in the context of scientific or technical documents",
+      "reason": "Irrelevant lexical artifact."
+    },
+    {
+      "id": "L0:F3916",
+      "label": "common short words in legal documents",
+      "reason": "Generic domain-short-word detector."
+    },
+    {
+      "id": "L0:F2411",
+      "label": "words related to phone calls and making statements or complaints",
+      "reason": "Surface lexical feature, not toxicity."
+    },
+    {
+      "id": "L0:F425",
+      "label": "instances of the word \"pitch\" and \"sensitivity\" in technical contexts",
+      "reason": "Technical-context artifact."
+    },
+    {
+      "id": "L0:F4517",
+      "label": "the word \"destroyed\"",
+      "reason": "Word-only detector; no causal toxicity semantics claimed."
+    },
+    {
+      "id": "L0:F13663",
+      "label": "mentions of pregnancy and related terms",
+      "reason": "Off-target accidental activation."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 6,
+  "n_other": 7,
+  "spurious_fraction": 0.6470588235294118,
+  "dominant": "spurious",
+  "notes": "Circuit is mostly identity/politics lexical cues plus surface toxicity fragments, not deep causal toxicity semantics."
+}

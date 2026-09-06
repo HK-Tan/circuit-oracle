@@ -1,0 +1,94 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Women-reference feature; likely gender-marker shortcut."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Mentions women/girls; gender cue, not profession."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun detector; spurious gender marker."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women's names/roles; gender-related shortcut."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female-name feature; spurious gender signal."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Detects women's names; gender marker."
+    },
+    {
+      "id": "L14:F12501",
+      "label": "uses of the feminine pronoun.",
+      "reason": "Feminine pronoun detector; spurious."
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "Woman-related terms; gender cue."
+    },
+    {
+      "id": "L2:F7672",
+      "label": "mentions of women by name and relationship",
+      "reason": "Women-by-name/relationship; spurious gender feature."
+    },
+    {
+      "id": "L7:F8952",
+      "label": "references to women, by direct name or pronoun",
+      "reason": "Direct women/pronoun references; gender marker."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun; gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Task-relevant profession vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code snippet detector."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic entity detector, not profession-specific."
+    },
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Generic lexical token."
+    },
+    {
+      "id": "L7:F2765",
+      "label": "mentions of people or characters, and their performance, roles, injuries, or personal details such as age, death, or family.",
+      "reason": "Broad people/details feature; not profession-specific."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 1,
+  "n_other": 4,
+  "spurious_fraction": 0.9166666666666666,
+  "dominant": "spurious",
+  "notes": "Mostly gender markers; only one profession-related feature."
+}

@@ -1,0 +1,63 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Nutrition/diet vocabulary signals profession content."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Food/nutrition terminology is task-relevant."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Scientific nutrition context reflects profession indicators."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-security terminology is nutrition-domain content."
+    },
+    {
+      "id": "L2:F2589",
+      "label": "words related to medical professionals and medical specialties",
+      "reason": "Medical-professional vocabulary is causal task evidence."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Nutritional (pos 9)",
+      "label": "(embed/output)",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: Die (pos 20)",
+      "label": "(embed/output)",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: te (pos 21)",
+      "label": "(embed/output)",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Probe Classification Score",
+      "label": "(embed/output)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic structural token detector."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 5,
+  "n_other": 5,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle cites nutrition/profession vocabulary only; no gender-marker evidence."
+}

@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Explicit women/gender marker pathway."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Direct female pronoun detector."
+    },
+    {
+      "id": "L1:F7244",
+      "label": "the pronoun \"she\"",
+      "reason": "Female pronoun feature."
+    },
+    {
+      "id": "L0:F12519",
+      "label": "the pronoun \"she\"",
+      "reason": "Triggers on female pronoun."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Nutrition/diet-related content."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "mentions of food",
+      "reason": "Food content signal."
+    },
+    {
+      "id": "L8:F10609",
+      "label": "mentions of food",
+      "reason": "Food content signal."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Dietary health content."
+    },
+    {
+      "id": "L3:F8425",
+      "label": "mentions of food",
+      "reason": "Food vocabulary."
+    },
+    {
+      "id": "L2:F13049",
+      "label": "mentions of food",
+      "reason": "Food vocabulary."
+    },
+    {
+      "id": "L4:F8343",
+      "label": "words related to food and dining, particularly in the context of reviews and recipes",
+      "reason": "Food/dining content."
+    },
+    {
+      "id": "L1:F5219",
+      "label": "mentions of food, cooking, and dining",
+      "reason": "Food/cooking content."
+    },
+    {
+      "id": "L4:F3047",
+      "label": "physical activity and exercise",
+      "reason": "Exercise/health content."
+    },
+    {
+      "id": "L0:F3597",
+      "label": "the word \"active\" optionally preceded by an adverb of degree",
+      "reason": "Activity/fitness terminology."
+    },
+    {
+      "id": "L0:F4030",
+      "label": "words related to mission statements and personal development used in career environments",
+      "reason": "Career-adjacent content."
+    },
+    {
+      "id": "L0:F10218",
+      "label": "the word \"lifestyle.\"",
+      "reason": "Lifestyle content."
+    },
+    {
+      "id": "L0:F2845",
+      "label": "the word \"knowledge\" and words starting with the letter \"A\"",
+      "reason": "Knowledge-related lexical cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Output logit (probe direction)",
+      "reason": "Probe output, not a feature."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code-like feature."
+    },
+    {
+      "id": "L0:F11814",
+      "label": "the word \"slightly\" and, to a lesser extent, \"reflected.\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F5829",
+      "label": "the word \"easier\" with some modifiers such as \"max\"",
+      "reason": "Generic structural/lexical feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 13,
+  "n_other": 6,
+  "spurious_fraction": 0.23529411764705882,
+  "dominant": "causal",
+  "notes": "Gender cues are present, but food/diet and exercise content dominates the circuit."
+}

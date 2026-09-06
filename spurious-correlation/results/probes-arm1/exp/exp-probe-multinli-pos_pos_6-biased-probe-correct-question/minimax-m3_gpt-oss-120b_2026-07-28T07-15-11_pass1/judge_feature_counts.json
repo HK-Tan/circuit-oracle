@@ -1,0 +1,159 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Explicit negation/absence detector at not."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector, regardless of language."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector, not semantic content."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts",
+      "reason": "Absence/negation detector triggered by not."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Oracle says it promotes not/NOT."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation token detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Task-relevant content/lexical meaning feature."
+    },
+    {
+      "id": "L15:F2080",
+      "label": "the phrase \"set\" followed by articles or prepositions",
+      "reason": "Content-neutral lexical pattern used in hypothesis."
+    },
+    {
+      "id": "L1:F8332",
+      "label": "the word \"clear\" or \"clearance\"",
+      "reason": "Content/lexical feature tied to clearing."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Lexical feature in the input prompt."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Content-neutral pronoun feature."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Oracle links it to not token, but feature is structural."
+    },
+    {
+      "id": "L3:F13138",
+      "label": "words and phrases related to legal proceedings or documents.",
+      "reason": "Content/lexical semantics, not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L3:F8733",
+      "label": "parts of words like \"ch\", \"parms\", \"ened\", and \"ounesto\"",
+      "reason": "Purely structural subword detector."
+    },
+    {
+      "id": "Emb:not",
+      "label": "Emb: not (pos 21)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:were",
+      "label": "Emb: were (pos 20)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:to",
+      "label": "Emb: to (pos 23)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:allowed",
+      "label": "Emb: allowed (pos 22)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:set",
+      "label": "Emb: set (pos 3)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:about",
+      "label": "Emb: about (pos 4)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:fire",
+      "label": "Emb: fire (pos 12)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:the",
+      "label": "Emb: the (pos 6)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:to",
+      "label": "Emb: to (pos 13)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:clearing",
+      "label": "Emb: clearing (pos 5)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:they",
+      "label": "Emb: they (pos 2)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb:So",
+      "label": "Emb: So (pos 1)",
+      "reason": "Input embedding, not a claimed feature."
+    },
+    {
+      "id": "L26:F0",
+      "label": "Probe Logit (contradiction)",
+      "reason": "Output logit, not a feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 9,
+  "n_other": 14,
+  "spurious_fraction": 0.4,
+  "dominant": "causal",
+  "notes": "Oracle still centers negation, but also includes many content features."
+}

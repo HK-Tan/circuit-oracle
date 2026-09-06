@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic form cue; not semantic contradiction"
+    },
+    {
+      "id": "L0:F7360",
+      "label": "the word \"an\" and sometimes also the acronym COX",
+      "reason": "Generic word detector"
+    },
+    {
+      "id": "L0:F7513",
+      "label": "the word \"together\"",
+      "reason": "Generic wording cue"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F1027",
+      "label": "the word \"tower\"",
+      "reason": "Topic word relevant to entailment/contradiction content"
+    },
+    {
+      "id": "L2:F1430",
+      "label": "mentions of the U.S. White House or a generic house",
+      "reason": "Content word affecting semantic relation"
+    },
+    {
+      "id": "L2:F4429",
+      "label": "mentions of the beginning of a period",
+      "reason": "Temporal meaning feature"
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Semantic/property association"
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Meaning-based fortification context"
+    },
+    {
+      "id": "L6:F486",
+      "label": "Scottish locations and political terms",
+      "reason": "Contextual topic feature"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb:castle (pos 2)",
+      "label": "castle",
+      "reason": "Embedding input only"
+    },
+    {
+      "id": "Emb:tower (pos 13)",
+      "label": "tower",
+      "reason": "Embedding input only"
+    },
+    {
+      "id": "Emb:house (pos 14)",
+      "label": "house",
+      "reason": "Embedding input only"
+    },
+    {
+      "id": "Emb:early (pos 39)",
+      "label": "early",
+      "reason": "Embedding input only"
+    },
+    {
+      "id": "Emb:with (pos 17)",
+      "label": "with",
+      "reason": "Embedding input only"
+    },
+    {
+      "id": "Emb:an (pos 5)",
+      "label": "an",
+      "reason": "Embedding input only"
+    },
+    {
+      "id": "Emb:together (pos 26)",
+      "label": "together",
+      "reason": "Embedding input only"
+    },
+    {
+      "id": "Output",
+      "label": "contradiction probe score",
+      "reason": "Not a feature"
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 6,
+  "n_other": 8,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "No negation detectors appear; mostly topical/semantic features plus generic word cues."
+}

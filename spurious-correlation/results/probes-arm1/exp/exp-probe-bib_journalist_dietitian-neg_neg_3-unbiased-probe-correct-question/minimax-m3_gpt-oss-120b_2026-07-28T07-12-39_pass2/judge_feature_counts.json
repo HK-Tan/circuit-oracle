@@ -1,0 +1,159 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "'He' pronoun detector (pos 1)",
+      "reason": "Gendered pronoun; spurious gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F4564",
+      "label": "'research' word (pos 2)",
+      "reason": "Professional/education vocabulary; task-relevant."
+    },
+    {
+      "id": "L0:F5333",
+      "label": "story / narrative (pos 3)",
+      "reason": "Content vocabulary; not gender-related."
+    },
+    {
+      "id": "L0:F14906",
+      "label": "'binding' word (pos 3)",
+      "reason": "Lexical/content feature, not gendered."
+    },
+    {
+      "id": "L0:F11261",
+      "label": "'migration' word (pos 3)",
+      "reason": "Lexical/content feature, not gendered."
+    },
+    {
+      "id": "L0:F9201",
+      "label": "'represent' (pos 9)",
+      "reason": "Content-neutral lexical/syntactic feature."
+    },
+    {
+      "id": "L1:F2344",
+      "label": "'country' word (pos 11)",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F15423",
+      "label": "'country' collector (pos 11)",
+      "reason": "Content lexical collector, not gendered."
+    },
+    {
+      "id": "L0:F8061",
+      "label": "preposition 'in' (pos 12)",
+      "reason": "Purely structural/function-word feature."
+    },
+    {
+      "id": "L1:F14812",
+      "label": "story/narrative (pos 3)",
+      "reason": "Content-neutral narrative lexical feature."
+    },
+    {
+      "id": "L1:F16233",
+      "label": "'tips'/'unit' (pos 3)",
+      "reason": "Content lexical feature, not gendered."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "journalism & media (pos 13)",
+      "reason": "Profession-indicator vocabulary."
+    },
+    {
+      "id": "L6:F12712",
+      "label": "editors/publishers (pos 13)",
+      "reason": "Profession-specific workplace/role vocabulary."
+    },
+    {
+      "id": "L0:F2711",
+      "label": "'foreign' word (pos 20)",
+      "reason": "Content lexical feature."
+    },
+    {
+      "id": "L0:F11603",
+      "label": "'too' word (pos 27)",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F6962",
+      "label": "'env' code-token (pos 7)",
+      "reason": "Oracle says code-token; not task-related."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods/spaces/1 (pos 15)",
+      "reason": "Purely structural punctuation/format feature."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "journalism/newspaper words (pos 13)",
+      "reason": "Profession-specific journalism vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: 'He' (pos 1)",
+      "label": "He",
+      "reason": "Input token, not a curated feature."
+    },
+    {
+      "id": "Emb: ' researches' (pos 2)",
+      "label": "researches",
+      "reason": "Input token, not a curated feature."
+    },
+    {
+      "id": "Emb: ' stories' (pos 3)",
+      "label": "stories",
+      "reason": "Input token, not a curated feature."
+    },
+    {
+      "id": "Emb: ' same' (pos 7)",
+      "label": "same",
+      "reason": "Input token, not a curated feature."
+    },
+    {
+      "id": "Emb: ' represents' (pos 9)",
+      "label": "represents",
+      "reason": "Input token, not a curated feature."
+    },
+    {
+      "id": "Emb: ' the country' (pos 10-11)",
+      "label": "the country",
+      "reason": "Input token, not a curated feature."
+    },
+    {
+      "id": "Emb: ' in' (pos 12)",
+      "label": "in",
+      "reason": "Input token, not a curated feature."
+    },
+    {
+      "id": "Emb: ' journalistic' (pos 13)",
+      "label": "journalistic",
+      "reason": "Input token, not a curated feature."
+    },
+    {
+      "id": "Emb: '.' (pos 15)",
+      "label": ".",
+      "reason": "Input token, not a curated feature."
+    },
+    {
+      "id": "Emb: ' foreign' (pos 20)",
+      "label": "foreign",
+      "reason": "Input token, not a curated feature."
+    },
+    {
+      "id": "Emb: ' too' (pos 27)",
+      "label": "too",
+      "reason": "Input token, not a curated feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 17,
+  "n_other": 11,
+  "spurious_fraction": 0.05555555555555555,
+  "dominant": "causal",
+  "notes": "Mostly journalism/profession and lexical/content features; one clear gendered pronoun cue."
+}

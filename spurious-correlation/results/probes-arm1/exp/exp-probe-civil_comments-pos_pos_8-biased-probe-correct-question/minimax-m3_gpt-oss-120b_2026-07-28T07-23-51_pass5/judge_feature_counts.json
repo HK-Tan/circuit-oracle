@@ -1,0 +1,199 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F13885",
+      "label": "names of people and places, specifically those related to the middle east",
+      "reason": "Middle East identity/location signal"
+    },
+    {
+      "id": "L3:F12024",
+      "label": "words referencing the religion of Islam, people who practice it, and Arabic names",
+      "reason": "Islam/religion identity detector"
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity signal"
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Islam/Middle East identity feature"
+    },
+    {
+      "id": "L6:F5764",
+      "label": "various proper nouns and adjectives, including ethnic groups, nationalities, religions, job titles, deities, and locations.",
+      "reason": "Identity-group/proper noun detector"
+    },
+    {
+      "id": "L6:F3265",
+      "label": "religion, religious figures, and related concepts and groups",
+      "reason": "Generic religion feature"
+    },
+    {
+      "id": "L7:F12448",
+      "label": "words and phrases related to religion",
+      "reason": "Religion signal"
+    },
+    {
+      "id": "L7:F14049",
+      "label": "discussion of international political conflicts, especially those regarding Muslims, slavery, race, terrorism and cultural groups.",
+      "reason": "Muslim/group-conflict identity feature"
+    },
+    {
+      "id": "L8:F13197",
+      "label": "words related to religion and faith",
+      "reason": "Religion/faith detector"
+    },
+    {
+      "id": "L8:F16036",
+      "label": "words and phrases related to Israel, Zionism, and related political topics.",
+      "reason": "Identity/geopolitical group feature"
+    },
+    {
+      "id": "L10:F2716",
+      "label": "mentions of religion, faith, parenting, and family when they appear together.",
+      "reason": "Religion-context identity feature"
+    },
+    {
+      "id": "L1:F4314",
+      "label": "the word Muslim",
+      "reason": "Explicit identity token"
+    },
+    {
+      "id": "L1:F2352",
+      "label": "words associated with Islam",
+      "reason": "Islam identity detector"
+    },
+    {
+      "id": "L2:F7214",
+      "label": "references to countries or regions associated with Islam",
+      "reason": "Islam-associated geography"
+    },
+    {
+      "id": "L2:F15887",
+      "label": "Arabic words mentioning Allah and Quranic passages",
+      "reason": "Religion-scripture identity signal"
+    },
+    {
+      "id": "L5:F6331",
+      "label": "words about race, religion, and slavery",
+      "reason": "Race/religion identity mix"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L12:F7779",
+      "label": "negative language denigrating groups of people",
+      "reason": "Actual denigration/toxicity signal"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@4",
+      "label": "Emb: Islam (pos 4)",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "L0:F0@13",
+      "label": "Emb: Allah (pos 13)",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "L0:F0@12",
+      "label": "Emb: . (pos 12)",
+      "reason": "Punctuation/structural token"
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: problem (pos 2)",
+      "reason": "Input token"
+    },
+    {
+      "id": "L0:F0@7",
+      "label": "Emb: it (pos 7)",
+      "reason": "Pronoun/structural token"
+    },
+    {
+      "id": "L0:F0@10",
+      "label": "Emb: false (pos 10)",
+      "reason": "Oracle didn't claim toxicity here"
+    },
+    {
+      "id": "L0:F14656@2",
+      "label": "the word \"problem\" and words associated with it",
+      "reason": "Generic problem-context feature"
+    },
+    {
+      "id": "L0:F6051@12",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural"
+    },
+    {
+      "id": "L3:F14698@3",
+      "label": "expressions of disagreement or problems with something",
+      "reason": "Structural disagreement/problem frame"
+    },
+    {
+      "id": "L4:F4011@3",
+      "label": "words and phrases related to challenges, advantages, and other main points",
+      "reason": "Generic discourse feature"
+    },
+    {
+      "id": "L4:F15997@3",
+      "label": "discussion of advantages and/or disadvantages",
+      "reason": "Generic discourse feature"
+    },
+    {
+      "id": "L0:F880@7",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Pronoun/structural feature"
+    },
+    {
+      "id": "L3:F8595",
+      "label": "descriptive writing",
+      "reason": "Generic style feature"
+    },
+    {
+      "id": "L3:F1395",
+      "label": "the word \u201cwrong\u201d and various prefixes",
+      "reason": "Oracle doesn't link to toxicity"
+    },
+    {
+      "id": "L6:F8487",
+      "label": "words and phrases related to terrorism, security, and policing.",
+      "reason": "Oracle didn't claim it drives toxicity here"
+    },
+    {
+      "id": "L6:F2267",
+      "label": "words that appear in programming code, legal jargon, or scientific texts",
+      "reason": "Unrelated register feature"
+    },
+    {
+      "id": "L1:F12107",
+      "label": "mentions of political entities and concepts",
+      "reason": "Generic political-topic feature"
+    },
+    {
+      "id": "L4:F7696",
+      "label": "well-wishing phrases like blessings, protection, or longevity wishes",
+      "reason": "Non-toxic unrelated language"
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Technical-text feature"
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic function-word detector"
+    }
+  ],
+  "n_spurious": 16,
+  "n_causal": 1,
+  "n_other": 20,
+  "spurious_fraction": 0.9411764705882353,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by Islam/religion identity features; only one genuine toxicity feature appears."
+}

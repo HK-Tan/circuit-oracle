@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F11298",
+      "label": "no",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Detects negation words."
+    },
+    {
+      "id": "L13:F10768",
+      "label": "negative sentiments and words like \"no\" in the context of a discussion or argument.",
+      "reason": "Negation-related detector."
+    },
+    {
+      "id": "L12:F8719",
+      "label": "phrases that start with \"no.\"",
+      "reason": "Phrase-level negation cue."
+    },
+    {
+      "id": "L6:F15886",
+      "label": "the word \"no\" and related negative words like \"not\" or \"never,\" often near other important keywords.",
+      "reason": "Negation-word detector."
+    },
+    {
+      "id": "L4:F434",
+      "label": "words and phrases expressing disagreement or negation",
+      "reason": "Negation/disagreement detector."
+    },
+    {
+      "id": "L15:F13061",
+      "label": "uses of the word \"no\" or similar negative statements and words associated with \"one\"",
+      "reason": "Tracks negation plus one."
+    },
+    {
+      "id": "L0:F1143",
+      "label": "the word \"no\" and related words like \"nobody\" and \"trust\"",
+      "reason": "Primarily a no/nobody detector."
+    },
+    {
+      "id": "L0:F14862",
+      "label": "the word \"no\"",
+      "reason": "Literal negation-word detector."
+    },
+    {
+      "id": "L0:F4438",
+      "label": "the word \"one\".",
+      "reason": "Part of \"no one\" negation unit."
+    },
+    {
+      "id": "L1:F15800",
+      "label": "the word \"one\"",
+      "reason": "Fires on \"no one\" collocation."
+    },
+    {
+      "id": "L2:F8837",
+      "label": "the word \"one\" or \"body\" when preceded by the words \"no\" or \"every.\"",
+      "reason": "Detects \"no one/nobody\" pattern."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Content lexical feature, not negation."
+    },
+    {
+      "id": "L0:F10562",
+      "label": "the word \"up\"",
+      "reason": "Generic lexical content feature."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Content word about action."
+    },
+    {
+      "id": "L2:F11769",
+      "label": "the word \"up\"",
+      "reason": "Content/lexical feature."
+    },
+    {
+      "id": "L0:F13092",
+      "label": "the words \"down\" and \"up\", often in combination",
+      "reason": "Structural/lexical directional content."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Meaning-bearing content word."
+    },
+    {
+      "id": "L2:F1016",
+      "label": "forms of the verb \"tour\" and the noun \"tour.\"",
+      "reason": "Semantic content about tours."
+    },
+    {
+      "id": "L1:F6872",
+      "label": "the word \"interpretation\"",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L4:F11969",
+      "label": "mentions of printed advertising materials",
+      "reason": "Unrelated content feature."
+    },
+    {
+      "id": "L8:F1872",
+      "label": "words and phrases related to diagrams and presentations",
+      "reason": "Content feature, not negation."
+    },
+    {
+      "id": "L0:F13354",
+      "label": "the word \"ask\"",
+      "reason": "Content word suggesting request semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F10722",
+      "label": "uses of the word \"here\" alongside demonstrative pronouns and temporal words",
+      "reason": "Purely structural/deictic feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Punctuation/formatting detector."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 11,
+  "n_other": 2,
+  "spurious_fraction": 0.5217391304347826,
+  "dominant": "spurious",
+  "notes": "Negation cascade dominates; content words push opposite direction."
+}

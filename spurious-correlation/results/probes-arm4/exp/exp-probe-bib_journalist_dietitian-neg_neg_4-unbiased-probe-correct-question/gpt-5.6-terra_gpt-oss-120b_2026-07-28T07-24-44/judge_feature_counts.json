@@ -1,0 +1,44 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Male-pronoun/gender signal; explicitly spurious."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: writer (pos 28)",
+      "label": "Embedding token: writer",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "Emb: freelance (pos 27)",
+      "label": "Embedding token: freelance",
+      "reason": "Supports writing occupation phrase."
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Occupation/title detector for writing/publishing."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Explicit journalism occupation detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: he (pos 22)",
+      "label": "Embedding token: he",
+      "reason": "Token alone is spurious input, but oracle lists only direct male-pronoun feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 4,
+  "n_other": 1,
+  "spurious_fraction": 0.2,
+  "dominant": "causal",
+  "notes": "Main circuit is profession-related; one explicit male-pronoun feature adds spurious bias."
+}

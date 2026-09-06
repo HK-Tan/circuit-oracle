@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L12:F13522",
+      "label": "terms relating to race, specifically focusing on black and white people and slavery.",
+      "reason": "Race/black-white/slavery discourse."
+    },
+    {
+      "id": "L8:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Slavery/prejudice identity discourse."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/identity-group mention feature."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity term detector."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity mention feature."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "mentions of demographic identity, especially race and gender",
+      "reason": "Demographic identity mention."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Race/gender social-issue mention."
+    },
+    {
+      "id": "L5:F6786",
+      "label": "terms associated with gender, race, sexual orientation, and disability",
+      "reason": "Identity-group signal."
+    },
+    {
+      "id": "L9:F8462",
+      "label": "language related to the Black community and multicultural marketing.",
+      "reason": "Black-community identity language."
+    },
+    {
+      "id": "L11:F2332",
+      "label": "text related to race.",
+      "reason": "Race-related discourse."
+    },
+    {
+      "id": "L2:F9528",
+      "label": "the color black",
+      "reason": "Triggered by literal black token here."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F12341",
+      "label": "the word \"steal\" and words related to taking and basic needs",
+      "reason": "Content-related theft/harassment cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "probe output direction",
+      "label": "probe output direction",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "Emb: Another",
+      "label": "Emb: Another",
+      "reason": "Embedding token, not a feature."
+    },
+    {
+      "id": "Emb: white",
+      "label": "Emb: white",
+      "reason": "Embedding token, not a feature."
+    },
+    {
+      "id": "Emb: dude",
+      "label": "Emb: dude",
+      "reason": "Embedding token, not a feature."
+    },
+    {
+      "id": "Emb: stealing",
+      "label": "Emb: stealing",
+      "reason": "Embedding token, not a feature."
+    },
+    {
+      "id": "Emb: the",
+      "label": "Emb: the",
+      "reason": "Embedding token, not a feature."
+    },
+    {
+      "id": "Emb: black",
+      "label": "Emb: black",
+      "reason": "Embedding token, not a feature."
+    },
+    {
+      "id": "L4:F9880",
+      "label": "phrases indicating repetition or continuation which often use the word \"another\"",
+      "reason": "Purely structural continuation."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 1,
+  "n_other": 8,
+  "spurious_fraction": 0.9166666666666666,
+  "dominant": "spurious",
+  "notes": "Identity-group features dominate; only weak theft-content signal appears."
+}

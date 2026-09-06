@@ -1,0 +1,154 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F15382",
+      "label": "mentions of a female person",
+      "reason": "Female-gender marker; directly encodes woman/she."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Medical/profession terminology relevant to nursing."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession indicator."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities",
+      "reason": "Healthcare context for profession classification."
+    },
+    {
+      "id": "L15:F15159",
+      "label": "words related to medicine and healthcare",
+      "reason": "General medical vocabulary."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Nursing-related semantic feature."
+    },
+    {
+      "id": "L5:F9749",
+      "label": "words related to various medical conditions, procedures, and practitioners",
+      "reason": "Medical practitioner vocabulary."
+    },
+    {
+      "id": "L6:F9980",
+      "label": "words and abbreviations associated with pediatric gastroenterology and inflammatory bowel disease",
+      "reason": "Specialty medical terminology."
+    },
+    {
+      "id": "L4:F9036",
+      "label": "words and abbreviations associated with healthcare",
+      "reason": "Healthcare-domain signal."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "words related to healthcare professionals and medical fields",
+      "reason": "Directly reflects profession context."
+    },
+    {
+      "id": "L3:F9008",
+      "label": "words related to childbirth or birth in general, including in animals",
+      "reason": "Labor/delivery-related medical content."
+    },
+    {
+      "id": "L3:F10198",
+      "label": "words related to anesthetics and medical procedures",
+      "reason": "Medical procedure vocabulary."
+    },
+    {
+      "id": "L1:F1494",
+      "label": "words related to medical practices and studies",
+      "reason": "General medical practice terms."
+    },
+    {
+      "id": "L0:F1832",
+      "label": "the word \"labor\"",
+      "reason": "Task-relevant labor/delivery vocabulary."
+    },
+    {
+      "id": "L0:F3175",
+      "label": "the word \"minute\" and the word \"voltage\"",
+      "reason": "Not structural; but oracle cites irrelevant lexical pair."
+    },
+    {
+      "id": "L1:F7152",
+      "label": "the word \"delivery\"",
+      "reason": "Direct childbirth/delivery cue."
+    },
+    {
+      "id": "L3:F9123",
+      "label": "terms related to business, science, and finance",
+      "reason": "General content vocabulary, not gendered."
+    },
+    {
+      "id": "L8:F16339",
+      "label": "text discussing hospital infections and bacteria",
+      "reason": "Healthcare setting indicator."
+    },
+    {
+      "id": "L7:F15132",
+      "label": "references to medical practices",
+      "reason": "Medical practice vocabulary."
+    },
+    {
+      "id": "L6:F4490",
+      "label": "proper nouns corresponding to locations, organizations, medical roles, and coding terms",
+      "reason": "Includes medical roles terminology."
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare-system name cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' nurse' (pos 7)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature classification."
+    },
+    {
+      "id": "Emb: ' practitioner' (pos 8)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature classification."
+    },
+    {
+      "id": "Emb: ' labor' (pos 44)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature classification."
+    },
+    {
+      "id": "Emb: ' delivery' (pos 46)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature classification."
+    },
+    {
+      "id": "Emb: ' Medicine' (pos 11)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature classification."
+    },
+    {
+      "id": "Emb: 'She' (pos 1)",
+      "label": "embedding token",
+      "reason": "Input token, not a feature classification."
+    },
+    {
+      "id": "L0:F8854",
+      "label": "the word \"nurse\" as well as some pronouns",
+      "reason": "Oracle explicitly says nurse detector; not pure gender."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 20,
+  "n_other": 7,
+  "spurious_fraction": 0.047619047619047616,
+  "dominant": "causal",
+  "notes": "Oracle\u2019s claim is overwhelmingly profession/medical; only one female-gender feature appears."
+}

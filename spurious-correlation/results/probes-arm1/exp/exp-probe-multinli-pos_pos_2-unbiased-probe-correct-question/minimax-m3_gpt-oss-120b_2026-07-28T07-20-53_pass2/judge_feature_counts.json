@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Orthographic negation-contraction detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Causal connector can signal premise-hypothesis relation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Discourse marker, structurally shallow."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "Generic conversational phrasing detector."
+    },
+    {
+      "id": "L0:F8083",
+      "label": "the word \"double\" and surrounding words when numbers are also present",
+      "reason": "Number/lexical pattern, not semantic relation."
+    },
+    {
+      "id": "L3:F9770",
+      "label": "technical and scientific writing about neuroscience and chemistry, possibly about calcium",
+      "reason": "Topic/style feature, dismissed."
+    },
+    {
+      "id": "L1:F177",
+      "label": "the word \"double\" and words that begin with \"multi\" or \"doubly\"",
+      "reason": "Lexical pattern detector."
+    },
+    {
+      "id": "L0:F12862",
+      "label": "the word \"tournament\" and related words such as \"winning\", but not always",
+      "reason": "Topic lexical detector."
+    },
+    {
+      "id": "L3:F12849",
+      "label": "words or phrases that include the word \"double\", or contain a hyphen",
+      "reason": "Mostly structural/lexical pattern."
+    },
+    {
+      "id": "L3:F14620",
+      "label": "the word \"well\" and conjunctions like \"and\"",
+      "reason": "Shallow discourse/connector detector."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Off-topic domain feature."
+    },
+    {
+      "id": "L0:F8659",
+      "label": "the word \"foundation\" in different contexts, including religious, legal, and abstract senses.",
+      "reason": "Lexical topic detector; not claimed relevant."
+    },
+    {
+      "id": "L0:F5112",
+      "label": "the word \"resolution\", sometimes in the context of displaying images or patterns",
+      "reason": "Generic lexical/topic feature."
+    },
+    {
+      "id": "L6:F11557",
+      "label": "frequently used words such as conjunctions, pronouns, or discourse markers",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Single-token lexical detector."
+    },
+    {
+      "id": "L0:F4365",
+      "label": "the word \"neither\" and related negative terms.",
+      "reason": "Negation-word detector, but oracle dismisses as shallow."
+    },
+    {
+      "id": "L0:F5912",
+      "label": "\"year\" but also sometimes finds related words that include \"day\", \"living\", or \"sold\"",
+      "reason": "Lexical association, not semantics."
+    },
+    {
+      "id": "L0:F15682",
+      "label": "the word \"okay\" plus a few related expressions.",
+      "reason": "Generic discourse-word detector."
+    },
+    {
+      "id": "L4:F10592",
+      "label": "conjunctions, sentence fragments, and legal documents",
+      "reason": "Structural/style feature."
+    },
+    {
+      "id": "L4:F3528",
+      "label": "code related to the Swift Protobuf library",
+      "reason": "Unrelated code-domain feature."
+    },
+    {
+      "id": "L2:F7222",
+      "label": "the word \"well\"",
+      "reason": "Single-word lexical detector."
+    },
+    {
+      "id": "L2:F15133",
+      "label": "capital letters, especially those that are used as labels on figures, tables, experimental conditions, or chemical compounds",
+      "reason": "Purely orthographic/structural."
+    },
+    {
+      "id": "L2:F1766",
+      "label": "number and data related to sizing in different contexts",
+      "reason": "Numeric/format feature, not semantic."
+    },
+    {
+      "id": "L1:F2623",
+      "label": "words in the context of someone talking or expressing opinions.",
+      "reason": "Broad conversational style feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 1,
+  "n_other": 22,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle is dominated by shallow discourse/lexical features; only because plausibly causal."
+}

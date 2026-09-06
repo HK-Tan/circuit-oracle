@@ -1,0 +1,179 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "Late-layer pronoun/identity aggregator at pos 22 (he)",
+      "reason": "Male pronoun identity signal."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "Late-layer pronoun/identity aggregator at pos 39 (He)",
+      "reason": "Male pronoun identity signal."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "Mid-layer pronoun/people features",
+      "reason": "Pronoun-based people reference."
+    },
+    {
+      "id": "L13:F1937",
+      "label": "Mid-layer pronoun/people features",
+      "reason": "Pronouns describing people."
+    },
+    {
+      "id": "L13:F6622",
+      "label": "Mid-layer pronoun/people features",
+      "reason": "Generic pronoun feature."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "Mid-layer pronoun/people features",
+      "reason": "Pronoun-linked people signal."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "Mid-layer pronoun/people features",
+      "reason": "Pronoun-based people reference."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "Mid-layer pronoun/people features",
+      "reason": "Pronoun-based people reference."
+    },
+    {
+      "id": "L0:F12768",
+      "label": "Low-layer he-pronoun detector at pos 22",
+      "reason": "Direct he pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "Low-layer capitalized He detector at pos 39/67",
+      "reason": "Capitalized male pronoun detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F15416",
+      "label": "Profession-relevant word features (writer at pos 28)",
+      "reason": "Explicit profession term."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F9630",
+      "label": "Generic topic/structure features (topics, Defence, service, covering)",
+      "reason": "Generic topic/structure cue."
+    },
+    {
+      "id": "L0:F13754",
+      "label": "Generic topic/structure features (topics, Defence, service, covering)",
+      "reason": "Generic topical vocabulary."
+    },
+    {
+      "id": "L0:F5288",
+      "label": "Generic topic/structure features (topics, Defence, service, covering)",
+      "reason": "Generic service/topic term."
+    },
+    {
+      "id": "L0:F5710",
+      "label": "Generic topic/structure features (topics, Defence, service, covering)",
+      "reason": "Academic topic structure."
+    },
+    {
+      "id": "L2:F9293",
+      "label": "Generic topic/structure features (topics, Defence, service, covering)",
+      "reason": "Generic cover-word feature."
+    },
+    {
+      "id": "L1:F15323",
+      "label": "Sentence-start features (Starting, Starting at)",
+      "reason": "Sentence-start structural cue."
+    },
+    {
+      "id": "L1:F4459",
+      "label": "Sentence-start features (Starting, Starting at)",
+      "reason": "Sentence-start structural cue."
+    },
+    {
+      "id": "L0:F5585",
+      "label": "Sentence-start features (Starting, Starting at)",
+      "reason": "Sentence-start structural cue."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "Function-word features (the, comma, at, as)",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F4870",
+      "label": "Function-word features (the, comma, at, as)",
+      "reason": "Punctuation/structure cue."
+    },
+    {
+      "id": "L0:F7124",
+      "label": "Function-word features (the, comma, at, as)",
+      "reason": "Generic preposition."
+    },
+    {
+      "id": "L0:F1053",
+      "label": "Function-word features (the, comma, at, as)",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F15661",
+      "label": "Function-word features (the, comma, at, as)",
+      "reason": "Non-profession lexical noise."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "Function-word features (the, comma, at, as)",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F6556",
+      "label": "Function-word features (the, comma, at, as)",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L1:F15063",
+      "label": "Function-word features (the, comma, at, as)",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "embed/output",
+      "label": "Emb: he (pos 22)",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "embed/output",
+      "label": "Emb: He (pos 39)",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "embed/output",
+      "label": "Emb: writer (pos 28)",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "embed/output",
+      "label": "Emb: Services (pos 6)",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "embed/output",
+      "label": "Emb: Starting (pos 1)",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "embed/output",
+      "label": "Emb: covering (pos 12)",
+      "reason": "Input embedding only."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 1,
+  "n_other": 22,
+  "spurious_fraction": 0.9090909090909091,
+  "dominant": "spurious",
+  "notes": "Pronoun/gender circuitry dominates; only writer is clearly causal."
+}

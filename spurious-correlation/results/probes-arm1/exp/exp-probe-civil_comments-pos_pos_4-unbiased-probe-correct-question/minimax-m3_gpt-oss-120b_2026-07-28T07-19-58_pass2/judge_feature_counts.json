@@ -1,0 +1,169 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Ethnic-group reference on Indians."
+    },
+    {
+      "id": "L2:F2123",
+      "label": "suffix detector for -ian/-ians demonyms",
+      "reason": "Matches demonym morphology on Indians."
+    },
+    {
+      "id": "L2:F1680",
+      "label": "words that refer to people participating in some activity, such as consumers, patients in healthcare, or voters",
+      "reason": "Generic people-group detector triggered by Indians."
+    },
+    {
+      "id": "L0:F11668",
+      "label": "Baseball terminology",
+      "reason": "Sports-name pattern tied to Indians, not toxicity."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F4327",
+      "label": "words and phrases that end with \"ive\", and also a few words that end in \"ices\" or \"ishes\", and also the phrase \"advantage of the\"",
+      "reason": "Catches abusive/hostile wording via abusive."
+    },
+    {
+      "id": "L3:F2705",
+      "label": "words related to cheating or being deceptive",
+      "reason": "Abuse/harassment-adjacent toxic-content cue."
+    },
+    {
+      "id": "L2:F9873",
+      "label": "toxic / abuse content",
+      "reason": "Direct toxic-language detector on abusers."
+    },
+    {
+      "id": "L2:F821",
+      "label": "toxic / abuse content",
+      "reason": "Direct toxic-language detector on abusers."
+    },
+    {
+      "id": "L1:F12073",
+      "label": "the word \"problems\" and words that frequently appear with it",
+      "reason": "Non-identity lexical negativity near toxic content."
+    },
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Oracle says it pushes toward probe; not identity-only."
+    },
+    {
+      "id": "L5:F2812",
+      "label": "a variety of terms and proper nouns, seemingly without much rhyme or reason, across many unrelated topics.",
+      "reason": "Oracle lists it as positive direct_effect."
+    },
+    {
+      "id": "L4:F11580",
+      "label": "negative language and swear words",
+      "reason": "Direct profanity/toxicity cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L6:F1600",
+      "label": "negative words and phrases related to problems and imperfections",
+      "reason": "Oracle says it pushes away from the probe."
+    },
+    {
+      "id": "L5:F3229",
+      "label": "words related to violent assault and murder",
+      "reason": "Oracle says it pushes away from the probe."
+    },
+    {
+      "id": "L4:F148",
+      "label": "late-layer feature",
+      "reason": "Oracle only says negative direct_effect."
+    },
+    {
+      "id": "L3:F150",
+      "label": "verbs, particularly past participles, and also some words in French",
+      "reason": "Structural/linguistic, oracle says away from probe."
+    },
+    {
+      "id": "L3:F5853",
+      "label": "instances of people speaking and making statements",
+      "reason": "Speech/reporting feature, oracle says away."
+    },
+    {
+      "id": "L1:F13535",
+      "label": "words related to business, education, religion, and stories",
+      "reason": "Generic semantic mix, not toxicity."
+    },
+    {
+      "id": "L1:F16351",
+      "label": "the word 'problem', or related terms",
+      "reason": "Oracle says negative direct_effect; generic lexical."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Oracle does not claim toxicity role here."
+    },
+    {
+      "id": "L0:F6035",
+      "label": "the word \"depending\"",
+      "reason": "Pure lexical detector."
+    },
+    {
+      "id": "L0:F15956",
+      "label": "the word \"those\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F8381",
+      "label": "the word 'by'",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F2115",
+      "label": "data reported as a percentage inside brackets, especially in a laboratory or medical context, and also recognizes countries",
+      "reason": "Structural/data-format feature."
+    },
+    {
+      "id": "L0:F5346",
+      "label": "words semantically similar to 'travel' and 'experiment'",
+      "reason": "Unrelated semantic feature."
+    },
+    {
+      "id": "L0:F4218",
+      "label": "the word \"angle.\"",
+      "reason": "Unrelated lexical detector."
+    },
+    {
+      "id": "L0:F8240",
+      "label": "words and phrases related to strong emotions or opinions",
+      "reason": "Generic sentiment/affect feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 8,
+  "n_other": 19,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Oracle supports both identity-driven and toxicity-driven signals; toxicity features are more numerous."
+}

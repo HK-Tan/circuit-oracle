@@ -1,0 +1,69 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Identity-group mention detector on \u201cIndians\u201d."
+    },
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Generic group-membership signal, not toxicity."
+    },
+    {
+      "id": "L0:F3283",
+      "label": "mentions of India and related concepts like Delhi, but sometimes only finds a word indicating importance",
+      "reason": "Nationality/ethnic reference detector on \u201cIndians\u201d."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F1003",
+      "label": "the word \"abuse\"",
+      "reason": "Direct toxic-content lexical detector."
+    },
+    {
+      "id": "L2:F6255",
+      "label": "the word \"abuse\", or phrases related to genitalia",
+      "reason": "Abuse/harassment content detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Purely structural/common word feature."
+    },
+    {
+      "id": "L0:F13194",
+      "label": "occurrences of the word \"are\" or \"were.\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F14740",
+      "label": "names of places, people, and organizations",
+      "reason": "Generic named-entity feature."
+    },
+    {
+      "id": "L0:F11835",
+      "label": "terms used in software code such as \"assembly\", \"using\", \"namespace\", and \"license\"",
+      "reason": "Unrelated code/text artifact detector."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Technical-document structure, not toxicity."
+    },
+    {
+      "id": "L0:F10389",
+      "label": "words related to legal disputes and technical issues such as device malfunctions or program errors",
+      "reason": "Domain/topic feature, not toxic content."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 2,
+  "n_other": 6,
+  "spurious_fraction": 0.6,
+  "dominant": "spurious",
+  "notes": "Identity-mention features outweigh abuse lexicon; generic token features are excluded."
+}

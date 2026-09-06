@@ -1,0 +1,23 @@
+
+============================================================
+Graph: civil_comments-pos_pos_3-biased-probe-correct
+============================================================
+Loading civil_comments-pos_pos_3-biased-probe-correct.pt...
+  4556 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — civil_comments-pos_pos_3-biased-probe-correct
+============================================================
+**Analysis:** The toxicity probe is driven by a combination of identity-group detection (specifically religious/ethnic identity) and sentiment features related to reputation and disgrace.
+
+**Confidence:** 8
+
+**Reasoning:** 
+The circuit reveals two primary parallel paths that feed into the probe's classification score:
+
+1.  **Identity/Discrimination Path:** The signal originates from input tokens like "Jew" (pos 5) and "liberal" (pos 3), which activate **L4:F2405** (Religious identity/affiliation). This signal then flows into **L6:F648**, a highly specific feature (frac_nonzero: 0.016) that detects "words related to discrimination against particular religious or ethnic groups." The promotion of tokens like "Jewish" and "holocaust" in L6:F648 suggests it is a specialized detector for anti-Semitic or similar discriminatory contexts. This path directly increases the probe's toxicity score.
+
+2.  **Negative Sentiment Path:** Separately, the word "stain" (pos 8) activates **L8:F13875**, which encodes "negative sentiment related to reputation and betrayal of trust." This feature promotes tokens such as "disgraced" and "scandal," capturing the derogatory nature of the phrase "a stain on his brethren."
+
+The "user concern" is partially validated: the model utilizes a broad "religious identity" feature (L4:F2405) and a general "discrimination" feature (L6:F648). However, these are not merely "spurious" identity markers; L6:F648 specifically captures the *discrimination* aspect, while L8:F13875 captures the *hostile sentiment*. The probe identifies toxicity by intersecting the detection of a protected group (Religious/Ethnic identity) with the detection of derogatory sentiment (Disgrace/Stain).
+Results saved to: <repo>/spurious-correlation/results/probes-arm5/exp/exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question/gemma-4-31b-it_gpt-oss-120b_2026-07-28T08-31-46

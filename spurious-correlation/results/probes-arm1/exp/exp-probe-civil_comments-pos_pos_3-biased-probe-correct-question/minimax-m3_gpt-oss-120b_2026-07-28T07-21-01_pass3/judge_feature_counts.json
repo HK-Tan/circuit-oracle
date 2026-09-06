@@ -1,0 +1,69 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9026",
+      "label": "Low-level 'Jew' presence detector",
+      "reason": "Directly detects protected identity token."
+    },
+    {
+      "id": "L2:F8236",
+      "label": "Explicit Jewish-people detector",
+      "reason": "Detects Jewish identity mention."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "Race/ethnicity vocabulary",
+      "reason": "Triggers on ethnicity-related identity terms."
+    },
+    {
+      "id": "L3:F12151",
+      "label": "Uppercase fragment amplifier",
+      "reason": "Amplifies identity-token signal, structural only."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "Religious identity/affiliation",
+      "reason": "Detects religious identity mention."
+    },
+    {
+      "id": "L4:F14733",
+      "label": "Jewish-targeted discrimination",
+      "reason": "Targeted-group signal centered on Jewish identity."
+    },
+    {
+      "id": "L6:F648",
+      "label": "Discrimination against religious/ethnic groups",
+      "reason": "Identity-group discrimination feature, not generic toxicity."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L5:F7488",
+      "label": "'Stain' / reputation-negation lexical feature",
+      "reason": "Lexical negativity tied to toxic framing."
+    },
+    {
+      "id": "L6:F1561",
+      "label": "Stain / disgrace phrase feature",
+      "reason": "Disgrace/reputation attack semantics."
+    },
+    {
+      "id": "L8:F13875",
+      "label": "Negative-sentiment reputation/betrayal",
+      "reason": "Negative evaluative sentiment relevant to toxicity."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Output: probe direction (toxicity)",
+      "reason": "Not a circuit feature."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 3,
+  "n_other": 1,
+  "spurious_fraction": 0.7,
+  "dominant": "spurious",
+  "notes": "Identity-path dominates; stain path is secondary causal signal."
+}

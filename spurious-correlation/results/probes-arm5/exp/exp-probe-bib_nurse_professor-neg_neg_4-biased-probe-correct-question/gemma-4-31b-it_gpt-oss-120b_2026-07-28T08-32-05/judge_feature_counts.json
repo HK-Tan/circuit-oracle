@@ -1,0 +1,33 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronouns are explicit gender markers."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Encodes male identity cues, not profession."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic gender-pronoun signal used as shortcut."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe Classification Score",
+      "label": "(embed/output)",
+      "reason": "Output score, not a feature."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 0,
+  "n_other": 1,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle attributes prediction to gender markers; no profession evidence is claimed."
+}

@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Direct male-pronoun detector; gender marker."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector; gender marker."
+    },
+    {
+      "id": "L2:F3877",
+      "label": "references to \"His\" and religious figures or concepts",
+      "reason": "Fires on His; gendered pronoun feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "words related to academic research",
+      "reason": "Research-related profession vocabulary."
+    },
+    {
+      "id": "L2:F1621",
+      "label": "information about people's education and career",
+      "reason": "Education/career information signal."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Academic degree indicator."
+    },
+    {
+      "id": "L3:F4213",
+      "label": "mentions of degree qualifications or awards",
+      "reason": "Degree/qualification terminology."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Academic degree detector."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "University/degree career signal."
+    },
+    {
+      "id": "L7:F3549",
+      "label": "technical text containing numbers and letters, possibly related to medicine, mathematics or computer programming.",
+      "reason": "Content-neutral technical-text feature."
+    },
+    {
+      "id": "L7:F16358",
+      "label": "text referencing design and virtual reality.",
+      "reason": "Technical/design vocabulary."
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "Research/university profession signal."
+    },
+    {
+      "id": "L14:F11252",
+      "label": "code and coordinate geometry terms",
+      "reason": "Technical code/geometry vocabulary."
+    },
+    {
+      "id": "L17:F11003",
+      "label": "university",
+      "reason": "University/education indicator."
+    },
+    {
+      "id": "L19:F2496",
+      "label": "mentions of universities and degrees",
+      "reason": "University/degree credential signal."
+    },
+    {
+      "id": "L20:F14235",
+      "label": "references to academic credentials and institutions.",
+      "reason": "Academic credentials/institutions."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: 'His' (pos 1)",
+      "label": "His",
+      "reason": "Token trigger only; already counted via semantic features."
+    },
+    {
+      "id": "Emb: ' research' (pos 2)",
+      "label": "research",
+      "reason": "Token trigger only; reflected in research feature."
+    },
+    {
+      "id": "Emb: ' interests' (pos 3)",
+      "label": "interests",
+      "reason": "Token trigger only; part of phrase detector."
+    },
+    {
+      "id": "Emb: ' visualization' (pos 9)",
+      "label": "visualization",
+      "reason": "Token trigger only; technical-content feature covers it."
+    },
+    {
+      "id": "Emb: ' graphics' (pos 12)",
+      "label": "graphics",
+      "reason": "Token trigger only; technical-content feature covers it."
+    },
+    {
+      "id": "Emb: ' BS' (pos 17)",
+      "label": "BS",
+      "reason": "Token trigger only; degree feature covers it."
+    },
+    {
+      "id": "Emb: ' PhD' (pos 27)",
+      "label": "PhD",
+      "reason": "Token trigger only; degree feature covers it."
+    },
+    {
+      "id": "Emb: ' from' (pos 31)",
+      "label": "from",
+      "reason": "Token trigger only; credential-aggregator context."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 13,
+  "n_other": 8,
+  "spurious_fraction": 0.1875,
+  "dominant": "causal",
+  "notes": "Mostly education/research signals, but early male-pronoun features are present and positive."
+}

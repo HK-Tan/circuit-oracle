@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F5181",
+      "label": "terms relating to political parties or ideologies",
+      "reason": "Identity-adjacent discourse, not toxicity itself."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F8492",
+      "label": "the word \"hate\"",
+      "reason": "Direct toxicity/hostility cue."
+    },
+    {
+      "id": "L3:F592",
+      "label": "words related to love, affection, and hate, including foreign language",
+      "reason": "Sentiment/hostility semantics."
+    },
+    {
+      "id": "L3:F13302",
+      "label": "words related to negative opinions, harm, and warnings",
+      "reason": "Negative/harm semantics relevant to toxicity."
+    },
+    {
+      "id": "L4:F8407",
+      "label": "words related to antagonists and fighting",
+      "reason": "Violence/conflict semantics."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Generic syntax/pronoun cue in toxic phrasing."
+    },
+    {
+      "id": "L0:F6660",
+      "label": "the word \"hat\" or pronouns referring to a female",
+      "reason": "Oracle ties to hat/hate morphology, not identity."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L1:F2107",
+      "label": "the word \"enter\", and other words and symbols common to mathematical and legal documents",
+      "reason": "Purely structural/legal-math pattern."
+    },
+    {
+      "id": "L0:F8938",
+      "label": "hyphens adjacent to numbers",
+      "reason": "Generic punctuation/formatting feature."
+    },
+    {
+      "id": "L3:F735",
+      "label": "words and phrases that include the word \"self\" followed by a hyphen",
+      "reason": "Structural morphology, not identity."
+    },
+    {
+      "id": "L0:F3090",
+      "label": "JavaScript or other C-style code with member access via \".\" and \"->\"",
+      "reason": "Code syntax detector."
+    },
+    {
+      "id": "L3:F9615",
+      "label": "words containing the prefix \"self-\"",
+      "reason": "Structural morphology, not identity."
+    },
+    {
+      "id": "L4:F10004",
+      "label": "hyphenated words beginning with \"self\"",
+      "reason": "Structural morphology, not identity."
+    },
+    {
+      "id": "L3:F5808",
+      "label": "words ending in \"-ing\" that have a sense of driving something forward",
+      "reason": "General lexical/semantic pattern."
+    },
+    {
+      "id": "L2:F16224",
+      "label": "words and phrases related to self-awareness, self-reference, or self-publishing",
+      "reason": "Self-reference, not identity-group."
+    },
+    {
+      "id": "L1:F14516",
+      "label": "equations with symbols, especially those using \"hat\" notation",
+      "reason": "Mathematical notation."
+    },
+    {
+      "id": "L0:F1094",
+      "label": "words and suffixes related to states and senses",
+      "reason": "Broad semantic feature, not toxicity-specific."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 6,
+  "n_other": 10,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "causal",
+  "notes": "Mostly toxicity/hostility semantics; one identity-adjacent ideology feature and several structural detectors."
+}

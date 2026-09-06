@@ -1,0 +1,49 @@
+{
+  "spurious_features": [
+    {
+      "id": "L15:F13061",
+      "label": "uses of the word \"no\" or similar negative statements and words associated with \"one\"",
+      "reason": "Negation-word detector in hypothesis."
+    },
+    {
+      "id": "L16:F11298",
+      "label": "no",
+      "reason": "Direct detector for \"no\" in \"No one\"."
+    },
+    {
+      "id": "L4:F15764",
+      "label": "fragments of sentences that contain a pronoun, a verb, and the word \"one\", or words with similar meanings",
+      "reason": "Catches \"No one\" as negation-like phrase."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F44",
+      "label": "words starting with \"cons\" that might indicate a constitution or consolidated standard, alongside \"pride\"",
+      "reason": "Semantic role unclear; not contradiction-related."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F14574",
+      "label": "the possessive adjective \"your.\"",
+      "reason": "Generic lexical detector only."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "Probe Logit",
+      "label": "(embed/output)",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 1,
+  "n_other": 3,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "Oracle says negation detectors dominate; no semantic entailment/contradiction feature is claimed."
+}

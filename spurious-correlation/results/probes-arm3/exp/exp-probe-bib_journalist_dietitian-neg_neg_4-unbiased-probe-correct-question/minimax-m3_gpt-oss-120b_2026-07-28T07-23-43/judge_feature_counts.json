@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Gendered pronouns are spurious cues for profession."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct profession indicator: journalism."
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Profession-specific editor/publisher terminology."
+    },
+    {
+      "id": "L1:F4459",
+      "label": "mentions of research institutes",
+      "reason": "Workplace/institution context tied to profession."
+    },
+    {
+      "id": "L1:F1445",
+      "label": "terms related to the military, especially vehicles and weapons",
+      "reason": "Profession-related military vocabulary."
+    },
+    {
+      "id": "L2:F12901",
+      "label": "the phrase \"Middle East\"",
+      "reason": "Topical content relevant to journalist coverage."
+    },
+    {
+      "id": "L0:F15880",
+      "label": "mentions of the Middle East",
+      "reason": "Geopolitical reporting context."
+    },
+    {
+      "id": "L0:F3007",
+      "label": "the word \"middle\", and sometimes the word \"character\", and \"camp\"",
+      "reason": "Oracle claims contextual middle-east related content."
+    },
+    {
+      "id": "L6:F10984",
+      "label": "mentions of TV and radio broadcasting",
+      "reason": "Media profession terminology."
+    },
+    {
+      "id": "L4:F5060",
+      "label": "references to institutions and technology",
+      "reason": "Institutional/technical wording supports professional context."
+    },
+    {
+      "id": "L0:F8690",
+      "label": "mentions of research studies",
+      "reason": "Academic/professional research content."
+    },
+    {
+      "id": "L0:F10881",
+      "label": "the word \"coverage\"",
+      "reason": "Journalism-related reporting term."
+    },
+    {
+      "id": "L3:F10489",
+      "label": "the word \"Institute\"",
+      "reason": "Institutional reference; profession context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7124",
+      "label": "the word \"at\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F15661",
+      "label": "the word \"spin\"",
+      "reason": "Unrelated lexical item."
+    },
+    {
+      "id": "L0:F6484",
+      "label": "the word \"sky\"",
+      "reason": "Unrelated lexical item."
+    },
+    {
+      "id": "L0:F2348",
+      "label": "the word \"rapid\"",
+      "reason": "Generic adjective, not profession-specific."
+    },
+    {
+      "id": "L0:F1229",
+      "label": "the word \"shake,\" and words related to the middle of something",
+      "reason": "Structural/generic wording."
+    },
+    {
+      "id": "L0:F9297",
+      "label": "mentions of government ministries and ministers.",
+      "reason": "Not claimed as profession signal here."
+    },
+    {
+      "id": "L0:F13096",
+      "label": "instances of the word \"the\", often followed by nouns or other determiners",
+      "reason": "Purely structural detector."
+    },
+    {
+      "id": "L0:F9728",
+      "label": "the word \"sponsor\"",
+      "reason": "Generic word, not profession-specific."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/punctuation feature."
+    },
+    {
+      "id": "L0:F12713",
+      "label": "mentions of \"New York City.\"",
+      "reason": "Geographic reference, not profession indicator."
+    },
+    {
+      "id": "L1:F15323",
+      "label": "the word \"starting\" in academic papers",
+      "reason": "Generic academic phrasing, not a profession cue."
+    },
+    {
+      "id": "L2:F12068",
+      "label": "words related to starting points, beginnings, or initiations in various contexts.",
+      "reason": "Broad structural/semantic generality."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 12,
+  "n_other": 12,
+  "spurious_fraction": 0.07692307692307693,
+  "dominant": "causal",
+  "notes": "Oracle claims a profession-driven circuit; only gender pronouns are spurious."
+}

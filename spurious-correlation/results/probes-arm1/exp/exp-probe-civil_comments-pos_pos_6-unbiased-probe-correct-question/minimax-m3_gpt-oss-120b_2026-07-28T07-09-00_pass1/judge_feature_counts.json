@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "Treats White as an identity token here."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Direct racial identity-token detector."
+    },
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Direct racial identity-token detector."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Explicit race/ethnicity mention feature."
+    },
+    {
+      "id": "L2:F9837",
+      "label": "references to men",
+      "reason": "Demographic gender reference."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issues signal, not toxicity."
+    },
+    {
+      "id": "L2:F9909",
+      "label": "group-of-people term",
+      "reason": "Dude/guys group reference is demographic-like."
+    },
+    {
+      "id": "L5:F10172",
+      "label": "ethnic slur / Southern-US terms",
+      "reason": "Oracle ties it to ethnic terms."
+    },
+    {
+      "id": "L9:F11035",
+      "label": "mentions of different racial or ethnic groups, news, payments, political concepts and geographical locations.",
+      "reason": "Racial/ethnic-group mention feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F4008",
+      "label": "expletives, strong opinions and negative words",
+      "reason": "Negative-opinion/toxicity detector."
+    },
+    {
+      "id": "L6:F1330",
+      "label": "opinions and commentary about current events, possibly with a negative tone",
+      "reason": "Negative tone can indicate toxicity."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F4090",
+      "label": "the word \"another\"",
+      "reason": "Pure word detector; also inhibitory."
+    },
+    {
+      "id": "L0:F15621",
+      "label": "the word \"noise,\" sometimes \"noisy,\" and occasionally a related word like \"improvement.\"",
+      "reason": "Unrelated lexical detector."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: white (pos 2)",
+      "reason": "Raw embedding, not a semantic feature."
+    },
+    {
+      "id": "L0:F0@3",
+      "label": "Emb: dude (pos 3)",
+      "reason": "Raw embedding, not a semantic feature."
+    },
+    {
+      "id": "L0:F0@6",
+      "label": "Emb: black (pos 6)",
+      "reason": "Raw embedding, not a semantic feature."
+    },
+    {
+      "id": "L0:F0@8",
+      "label": "Emb: man (pos 8)",
+      "reason": "Raw embedding, not a semantic feature."
+    },
+    {
+      "id": "L26:F0@0",
+      "label": "Probe classification score (output direction)",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 2,
+  "n_other": 7,
+  "spurious_fraction": 0.8181818181818182,
+  "dominant": "spurious",
+  "notes": "Identity-token and demographic features dominate; only two negative-tone toxicity features are causal."
+}

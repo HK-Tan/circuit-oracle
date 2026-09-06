@@ -1,0 +1,174 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F7244",
+      "label": "'She' pronoun (pos 1)",
+      "reason": "Gender marker; directly matches the spurious-feature definition."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4197",
+      "label": "'food' / nutrition context (pos 15)",
+      "reason": "Nutrition/profession-related vocabulary."
+    },
+    {
+      "id": "L4:F3047",
+      "label": "'physically active' (pos 22)",
+      "reason": "Health/wellness terminology relevant to profession."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "'food' token (pos 15 & 41)",
+      "reason": "Food/nutrition content, causal for this task."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "'dieting' (pos 34)",
+      "reason": "Domain-specific wellness vocabulary."
+    },
+    {
+      "id": "L2:F6341",
+      "label": "'healthy' (pos 14)",
+      "reason": "Health-related content indicating profession."
+    },
+    {
+      "id": "L0:F4030",
+      "label": "content-word feature ('passionate')",
+      "reason": "Content word; not a gender marker or structural feature."
+    },
+    {
+      "id": "L0:F11814",
+      "label": "content-word feature ('confidence')",
+      "reason": "Content word; not a gender marker or structural feature."
+    },
+    {
+      "id": "L0:F10218",
+      "label": "content-word feature ('lifestyle')",
+      "reason": "Content word; not a gender marker or structural feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "content-word feature ('to')",
+      "reason": "Generic lexical feature dismissed as content-word by oracle."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "content-word feature ('about')",
+      "reason": "Generic lexical feature dismissed as content-word by oracle."
+    },
+    {
+      "id": "L0:F2845",
+      "label": "content-word feature ('knowledge')",
+      "reason": "Content word; not a gender marker or structural feature."
+    },
+    {
+      "id": "L0:F5829",
+      "label": "content-word feature ('passionate')",
+      "reason": "Content word; not a gender marker or structural feature."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "content-word feature ('knowledge')",
+      "reason": "Content word; not a gender marker or structural feature."
+    },
+    {
+      "id": "L0:F2349",
+      "label": "content-word feature ('others')",
+      "reason": "Content word; not a gender marker or structural feature."
+    },
+    {
+      "id": "L0:F9927",
+      "label": "content-word feature ('passionate')",
+      "reason": "Content word; not a gender marker or structural feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output",
+      "label": "probe direction",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "Emb: food (pos 15)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: food (pos 41)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: healthy (pos 14)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: active (pos 22)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: physically (pos 21)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: dieting (pos 34)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: She (pos 1)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: passionate (pos 3)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: empowering (pos 5)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: others (pos 6)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: knowledge (pos 9)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: to (pos 12)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: about (pos 4)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: lifestyle (pos 17)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    },
+    {
+      "id": "Emb: confidence (pos 11)",
+      "label": "embedding/output",
+      "reason": "Embedding node, not a feature claim."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 15,
+  "n_other": 16,
+  "spurious_fraction": 0.0625,
+  "dominant": "causal",
+  "notes": "Oracle says content dominates; pronoun contribution is small and outweighed by health/nutrition signals."
+}

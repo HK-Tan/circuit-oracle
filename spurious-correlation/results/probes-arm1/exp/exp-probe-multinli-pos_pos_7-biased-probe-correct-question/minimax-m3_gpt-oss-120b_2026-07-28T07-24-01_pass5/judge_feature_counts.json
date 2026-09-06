@@ -1,0 +1,154 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation-clause detector: 'not' + copula."
+    },
+    {
+      "id": "L16:F9779",
+      "label": "negation words or contractions like \"won't\", \"not\", \"never\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Surface negation pattern detector."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Oracle says it matches negation-like wording."
+    },
+    {
+      "id": "L15:F3521",
+      "label": "sentences containing words expressing negation or uncertainty in past or future tense",
+      "reason": "Negation/uncertainty language detector."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Literal negation token feature."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Oracle explicitly dismisses it as mixed-language noise."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F10408",
+      "label": "geographical locations, especially related to bodies of water",
+      "reason": "Semantic location/content feature on 'sea'."
+    },
+    {
+      "id": "L4:F4173",
+      "label": "words and phrases related to marine environments or legal terminology related to maritime issues.",
+      "reason": "Content-bearing marine-environment feature."
+    },
+    {
+      "id": "L6:F3848",
+      "label": "words related to marine biology and fishing",
+      "reason": "Content-related marine vocabulary."
+    },
+    {
+      "id": "L8:F3174",
+      "label": "words and phrases related to tides and shorelines",
+      "reason": "Content-related shoreline feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe",
+      "label": "Probe (contradiction) logit",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: not (pos 23)",
+      "label": "Emb: not",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: not (pos 29)",
+      "label": "Emb: not",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: is (pos 28)",
+      "label": "Emb: is",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: is (pos 18)",
+      "label": "Emb: is",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: you (pos 21)",
+      "label": "Emb: you",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: will (pos 22)",
+      "label": "Emb: will",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: <bos> (pos 0)",
+      "label": "Emb: <bos>",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Literal word detector, not semantic."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Pronoun detector only."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Function-word detector."
+    },
+    {
+      "id": "L0:F5060",
+      "label": "mentions of dinner or breakfast",
+      "reason": "Oracle's label is unrelated to NLI meaning."
+    },
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Function-word detector."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Duplicate function-word detector."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Duplicate function-word detector."
+    },
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Duplicate function-word detector."
+    },
+    {
+      "id": "L0:F5060",
+      "label": "mentions of dinner or breakfast",
+      "reason": "Duplicate unrelated label."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 4,
+  "n_other": 17,
+  "spurious_fraction": 0.6363636363636364,
+  "dominant": "spurious",
+  "notes": "Oracle says contradiction is driven mainly by negation-word/coplanar patterns, with only generic content features."
+}

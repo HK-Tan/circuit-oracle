@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F9615",
+      "label": "words containing the prefix \"self-\"",
+      "reason": "Identity phrase morphology; self- prefix in self-hating."
+    },
+    {
+      "id": "L3:F735",
+      "label": "words and phrases that include the word \"self\" followed by a hyphen",
+      "reason": "Structural self-hyphen pattern, identity-phrase cue."
+    },
+    {
+      "id": "L4:F10004",
+      "label": "hyphenated words beginning with \"self\"",
+      "reason": "Identity-phrase morphology, not toxicity content."
+    },
+    {
+      "id": "L4:F5181",
+      "label": "terms relating to political parties or ideologies",
+      "reason": "Political-identity signal; liberal is group/ideology related."
+    },
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Identity/race rhetoric, not direct toxic semantics."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F8407",
+      "label": "words related to antagonists and fighting",
+      "reason": "Hostility semantics can indicate toxicity."
+    },
+    {
+      "id": "L3:F592",
+      "label": "words related to love, affection, and hate, including foreign language",
+      "reason": "Contains hate polarity, a toxicity cue."
+    },
+    {
+      "id": "L3:F8492",
+      "label": "the word \"hate\"",
+      "reason": "Direct hate-language detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Generic pronoun detector; structural only."
+    },
+    {
+      "id": "L1:F2107",
+      "label": "the word \"enter\", and other words and symbols common to mathematical and legal documents",
+      "reason": "Unrelated legal/math token-form feature."
+    },
+    {
+      "id": "L0:F8938",
+      "label": "hyphens adjacent to numbers",
+      "reason": "Pure punctuation/formatting feature."
+    },
+    {
+      "id": "L0:F3090",
+      "label": "JavaScript or other C-style code with member access via \".\" and \"->\"",
+      "reason": "Code-syntax detector, irrelevant here."
+    },
+    {
+      "id": "L0:F4336",
+      "label": "the word \"favor\" and words used in legal contexts",
+      "reason": "Legal-context lexical feature, not toxicity."
+    },
+    {
+      "id": "L3:F13717",
+      "label": "statistical estimation terms, especially those involving \"hat\" notation",
+      "reason": "\"hat\" is structural/statistical, not toxic."
+    },
+    {
+      "id": "L3:F15509",
+      "label": "code diffs like those produced by `git diff`",
+      "reason": "Code-diff syntax, irrelevant."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 3,
+  "n_other": 7,
+  "spurious_fraction": 0.625,
+  "dominant": "spurious",
+  "notes": "Prompt is driven mainly by identity/ideology and self-hyphen morphology, with some hate lexical cues."
+}

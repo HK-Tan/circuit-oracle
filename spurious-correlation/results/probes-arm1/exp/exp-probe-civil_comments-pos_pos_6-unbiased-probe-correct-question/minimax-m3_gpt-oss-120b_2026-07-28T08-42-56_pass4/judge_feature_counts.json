@@ -1,0 +1,154 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Direct identity-token detector."
+    },
+    {
+      "id": "L0:F10910",
+      "label": "the word \"possession\" and the words \"white\", \"immediate\" and \"once\" regardless of context",
+      "reason": "Includes white as demographic shortcut."
+    },
+    {
+      "id": "L0:F6548",
+      "label": "the word \"national\"",
+      "reason": "Nationality/identity-related token signal."
+    },
+    {
+      "id": "L0:F10849",
+      "label": "the words \"man\", \"men\", or \"woman\"",
+      "reason": "Gender-token detector."
+    },
+    {
+      "id": "L2:F585",
+      "label": "the word \"white\", often in association with \"dwarf\"",
+      "reason": "White-token matcher."
+    },
+    {
+      "id": "L2:F9837",
+      "label": "references to men",
+      "reason": "Identity-group mention."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity identity signal."
+    },
+    {
+      "id": "L2:F9909",
+      "label": "terms used to describe groups of people or places",
+      "reason": "Group-descriptor identity feature."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issues detector."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "mentions of demographic identity, especially race and gender",
+      "reason": "Demographic identity signal."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race-discourse feature."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "White-phrase semantic shortcut."
+    },
+    {
+      "id": "L4:F7136",
+      "label": "the color white",
+      "reason": "Color/white token feature."
+    },
+    {
+      "id": "L5:F10172",
+      "label": "ethnic slurs and terms related to the American South",
+      "reason": "Identity/ethnic slur-related."
+    },
+    {
+      "id": "L5:F14851",
+      "label": "slang terms and phrases used in rap music",
+      "reason": "Slang/identity-associated feature."
+    },
+    {
+      "id": "L5:F6786",
+      "label": "terms associated with gender, race, sexual orientation, and disability",
+      "reason": "Identity-group detector."
+    },
+    {
+      "id": "L6:F3077",
+      "label": "places and categorizations of people by place",
+      "reason": "Demographic categorization feature."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity signal."
+    },
+    {
+      "id": "L8:F13464",
+      "label": "discussions of racial issues, particularly those involving white and black people",
+      "reason": "Race-discussion detector."
+    },
+    {
+      "id": "L9:F11035",
+      "label": "mentions of different racial or ethnic groups, news, payments, political concepts and geographical locations.",
+      "reason": "Identity-group mention feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F9058",
+      "label": "various slang and strong language.",
+      "reason": "Slang/strong-language toxicity cue."
+    },
+    {
+      "id": "L6:F4008",
+      "label": "expletives, strong opinions and negative words",
+      "reason": "Negative-tone toxicity cue."
+    },
+    {
+      "id": "L6:F1330",
+      "label": "opinions and commentary about current events, possibly with a negative tone",
+      "reason": "Negative tone / hostility cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F4090",
+      "label": "the word \"another\"",
+      "reason": "Pure word detector; not toxicity-specific."
+    },
+    {
+      "id": "L1:F4668",
+      "label": "the color white being used to describe image parameters",
+      "reason": "Structural/image-parameter feature."
+    },
+    {
+      "id": "L0:F15621",
+      "label": "the word \"noise,\" sometimes \"noisy,\" and occasionally a related word like \"improvement.\"",
+      "reason": "Noise-related generic lexical feature."
+    },
+    {
+      "id": "L6:F627",
+      "label": "words used when describing groups of people",
+      "reason": "Generic group-description, not clearly causal."
+    },
+    {
+      "id": "L9:F2762",
+      "label": "various code snippets, especially javascript",
+      "reason": "Unrelated code-snippet detector."
+    }
+  ],
+  "n_spurious": 20,
+  "n_causal": 3,
+  "n_other": 5,
+  "spurious_fraction": 0.8695652173913043,
+  "dominant": "spurious",
+  "notes": "Identity-token and race-discourse features dominate; toxicity cues are secondary."
+}

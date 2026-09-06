@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male reference / pronoun feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Gendered pronoun detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-gender marker circuit."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Possessive pronoun feature."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Explicit gender-word detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Capitalized male pronoun detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F1326",
+      "label": "mentions of organizations and government agencies.",
+      "reason": "Institution mentions can be content-neutral."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Structural proper-noun detector."
+    },
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Academic field / profession-adjacent terminology."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic field reference."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: his (pos 3)",
+      "label": "his",
+      "reason": "Token embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb: He (pos 22)",
+      "label": "He",
+      "reason": "Token embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb: Daniel (pos 1)",
+      "label": "Daniel",
+      "reason": "Token embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb: University (pos 12)",
+      "label": "University",
+      "reason": "Token embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb: Waterloo (pos 14)",
+      "label": "Waterloo",
+      "reason": "Token embedding, not a claimed feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic pronoun feature."
+    },
+    {
+      "id": "L13:F6622",
+      "label": "pronouns.",
+      "reason": "Generic pronoun feature."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "Narrative/she pattern, not claimed for this prompt."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Broad pronoun/person detector."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 4,
+  "n_other": 9,
+  "spurious_fraction": 0.6363636363636364,
+  "dominant": "spurious",
+  "notes": "Dominated by male-pronoun/gender circuits; academic-field signals are secondary."
+}

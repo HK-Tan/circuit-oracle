@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gender pronoun feature, though suppressive."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L19:F1589",
+      "label": "Scientific nutrition context detector (promotes diet/food/nutrition)",
+      "reason": "Nutrition/dietetics content signal."
+    },
+    {
+      "id": "L17:F7545",
+      "label": "Healthcare/architecture terms (mixed; includes nurse, registered)",
+      "reason": "Healthcare profession vocabulary."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "Food-insecurity / hunger context detector (promotes food/feed)",
+      "reason": "Food-related task content."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "Generic food/nutrition word detector (promotes food, eating, meals)",
+      "reason": "Food/nutrition vocabulary."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "Diet/dietary-health terminology detector (promotes diet, diets)",
+      "reason": "Dietetics terminology."
+    },
+    {
+      "id": "L4:F10494",
+      "label": "Generic health/medicine/diet terms",
+      "reason": "Health/medicine content."
+    },
+    {
+      "id": "L2:F2589",
+      "label": "Medical professional/specialty suffix detector (-ologist, -ician)",
+      "reason": "Profession-specific morphology."
+    },
+    {
+      "id": "L0:F9888",
+      "label": "'Education'/schooling word detector (positive)",
+      "reason": "Education terminology."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8061",
+      "label": "Preposition 'in' detector (NEGATIVE; generic function word)",
+      "reason": "Generic structural function word."
+    },
+    {
+      "id": "L0:F14824",
+      "label": "Word 'has' detector (NEGATIVE; generic verb)",
+      "reason": "Generic structural function word."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "Word 'from' detector (NEGATIVE; generic preposition)",
+      "reason": "Generic structural function word."
+    },
+    {
+      "id": "Emb:Die",
+      "label": "German article; here in 'Dietetics'",
+      "reason": "Token trigger only; not a feature."
+    },
+    {
+      "id": "Emb:She",
+      "label": "subject pronoun",
+      "reason": "Token trigger only; not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 8,
+  "n_other": 5,
+  "spurious_fraction": 0.1111111111111111,
+  "dominant": "causal",
+  "notes": "Gender marker is suppressive; positive drive comes from nutrition/dietetics and profession vocabulary."
+}

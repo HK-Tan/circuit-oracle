@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Promotes ethnic identity terms like Jewish."
+    },
+    {
+      "id": "L6:F648",
+      "label": "words related to discrimination against particular religious or ethnic groups",
+      "reason": "Identity-group discrimination detector; not toxicity itself."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity feature; tracks protected-group mentions."
+    },
+    {
+      "id": "L3:F12151",
+      "label": "capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+      "reason": "Orthographic pattern; oracle ties it to Jew token."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race-social-justice signal, not abuse semantics."
+    },
+    {
+      "id": "L4:F14733",
+      "label": "content related to the Israel-Palestine conflict and possibly some related topics like NBA trades.",
+      "reason": "Topic/identity association, not toxicity semantics."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F9615",
+      "label": "words containing the prefix \"self-\"",
+      "reason": "Oracle frames self-construction/prejudice context."
+    },
+    {
+      "id": "L8:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Contextual prejudice/disability discussion, weakly tied to insult."
+    },
+    {
+      "id": "L6:F1561",
+      "label": "words related to respect, status, and pride, both positive and negative",
+      "reason": "Captures shame/dignity semantics relevant to insult."
+    },
+    {
+      "id": "L8:F13875",
+      "label": "negative sentiment related to reputation and betrayal of trust.",
+      "reason": "Direct disgrace/reputation-harm semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Jew (pos 6)",
+      "label": "Jew",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: liberal (pos 5)",
+      "label": "liberal",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: Self (pos 1)",
+      "label": "Self",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: stain (pos 9)",
+      "label": "stain",
+      "reason": "Input token, not a feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 4,
+  "n_other": 4,
+  "spurious_fraction": 0.6,
+  "dominant": "mixed",
+  "notes": "Identity-group pathway is stronger, but disgrace/shame semantics are also present."
+}

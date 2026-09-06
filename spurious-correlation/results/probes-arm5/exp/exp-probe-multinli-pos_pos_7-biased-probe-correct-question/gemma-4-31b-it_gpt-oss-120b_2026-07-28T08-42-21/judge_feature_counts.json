@@ -1,0 +1,32 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "Token \"not\" Detectors (L0)",
+      "reason": "Directly detects the negation token \"not\"."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Explicit negation-pattern detector."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Tracks a negation word pattern."
+    },
+    {
+      "id": "L16:F9779",
+      "label": "negation words or contractions like \"won't\", \"not\", \"never\"",
+      "reason": "Detects negation words/contractions."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 0,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle attributes the probe to negation-token heuristics, not semantic contradiction understanding."
+}

@@ -1,0 +1,148 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\".",
+      "reason": "Negation-word detector via isn't/doesn't spelling."
+    },
+    {
+      "id": "L4:F2884",
+      "label": "the word \"but\" and other contrastive conjunctions and adverbs.",
+      "reason": "Contrast cue, not semantic NLI reasoning."
+    },
+    {
+      "id": "L4:F5347",
+      "label": "the conjunction \"but\".",
+      "reason": "Surface conjunction detector."
+    },
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Sentence-level but/contrast template."
+    },
+    {
+      "id": "L16:F7295",
+      "label": "the phrase \"but also\".",
+      "reason": "Fixed negation/contrast phrase cue."
+    },
+    {
+      "id": "L2:F5627",
+      "label": "instances of the phrase \"not only\".",
+      "reason": "Fixed spurious negation phrase detector."
+    },
+    {
+      "id": "L9:F12274",
+      "label": "the phrase \"not only\"",
+      "reason": "Phrase-template cue, not meaning."
+    },
+    {
+      "id": "L15:F1990",
+      "label": "the phrase \"not only\".",
+      "reason": "Template detector for not-only construction."
+    },
+    {
+      "id": "L16:F6005",
+      "label": "Not only",
+      "reason": "Surface pattern feature."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F15525",
+      "label": "places where something is being explained or reported",
+      "reason": "Reporting-context feature, structurally unrelated."
+    },
+    {
+      "id": "L1:F11907",
+      "label": "the word \"program\"",
+      "reason": "Content word detector; generic lexical feature."
+    },
+    {
+      "id": "L0:F8046",
+      "label": "the word \"will.\"",
+      "reason": "Generic future-tense token detector."
+    },
+    {
+      "id": "L0:F12154",
+      "label": "instances of the words \"program\", \"programme\", and \"President\", sometimes in conjunction with adverbial modifiers",
+      "reason": "Lexical detector; not NLI semantics."
+    },
+    {
+      "id": "L0:F10875",
+      "label": "words related to being somewhat like something but not entirely or always.",
+      "reason": "Broad lexical pattern, not task-specific."
+    },
+    {
+      "id": "L0:F2961",
+      "label": "words that act as qualifications or negations, with a high preference for \"necessarily\" and \"uncommon.\"",
+      "reason": "Generic negation/qualification, oracle not task-semantic."
+    },
+    {
+      "id": "L1:F13438",
+      "label": "the word \"only\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F4723",
+      "label": "the word \"only\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F1910",
+      "label": "the phrase \"not only\"",
+      "reason": "Phrase-template cue."
+    },
+    {
+      "id": "L12:F3005",
+      "label": "the phrase \"not only\"",
+      "reason": "Phrase-template cue."
+    },
+    {
+      "id": "L14:F10765",
+      "label": "the phrase \"not only\"",
+      "reason": "Phrase-template cue."
+    },
+    {
+      "id": "L17:F3763",
+      "label": "only",
+      "reason": "Generic token detector."
+    },
+    {
+      "id": "L2:F13565",
+      "label": "the word \"program(me)s\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L4:F6000",
+      "label": "the word \"program\" and its plural form",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L4:F12847",
+      "label": "sentences with some reporting verb and the word 'that'",
+      "reason": "Reporting syntax, not NLI semantics."
+    },
+    {
+      "id": "L4:F15629",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Quotation/reporting syntax."
+    },
+    {
+      "id": "L4:F8258",
+      "label": "sentences including verbs having to do with speaking or stating",
+      "reason": "Reporting-verb detector."
+    },
+    {
+      "id": "L5:F11718",
+      "label": "references to people speaking or being quoted",
+      "reason": "Quote/speech marker."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 0,
+  "n_other": 18,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes surface negation/contrast cues; no causal semantic features are actually claimed."
+}

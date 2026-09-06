@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F5181",
+      "label": "terms relating to political parties or ideologies",
+      "reason": "Identity-adjacent ideology term, not toxicity semantics."
+    },
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Race/identity rhetoric is spurious for toxicity."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F8407",
+      "label": "words related to antagonists and fighting",
+      "reason": "Violence/fighting semantics indicate toxicity."
+    },
+    {
+      "id": "L3:F592",
+      "label": "words related to love, affection, and hate, including foreign language",
+      "reason": "Hate semantics are causally toxic."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8938",
+      "label": "hyphens adjacent to numbers",
+      "reason": "Purely structural punctuation feature."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Generic pronoun detector, not toxicity."
+    },
+    {
+      "id": "L0:F4336",
+      "label": "the word \"favor\" and words used in legal contexts",
+      "reason": "Legal/formal vocabulary, not toxicity."
+    },
+    {
+      "id": "L1:F2107",
+      "label": "the word \"enter\", and other words and symbols common to mathematical and legal documents",
+      "reason": "Legal/math boilerplate, not toxicity."
+    },
+    {
+      "id": "L3:F735",
+      "label": "words and phrases that include the word \"self\" followed by a hyphen",
+      "reason": "Structural self-hyphen pattern."
+    },
+    {
+      "id": "L3:F9615",
+      "label": "words containing the prefix \"self-\"",
+      "reason": "Structural prefix detector."
+    },
+    {
+      "id": "L3:F13717",
+      "label": "statistical estimation terms, especially those involving \"hat\" notation",
+      "reason": "Technical notation feature."
+    },
+    {
+      "id": "L3:F8492",
+      "label": "formally-phrased text",
+      "reason": "Style feature, not toxicity."
+    },
+    {
+      "id": "L4:F10004",
+      "label": "hyphenated words beginning with \"self\"",
+      "reason": "Structural word-form detector."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 2,
+  "n_other": 9,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle claims both identity-linked and toxic-content cues, with substantial structural noise."
+}

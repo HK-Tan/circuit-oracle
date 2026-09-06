@@ -1,0 +1,78 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Identity-group mention cue, not toxicity content."
+    },
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Generic group-membership identity signal."
+    },
+    {
+      "id": "L6:F1509",
+      "label": "mentions of countries and nationalities",
+      "reason": "Nationality/identity token detector."
+    },
+    {
+      "id": "L0:F9480",
+      "label": "named countries",
+      "reason": "Country-name identity cue."
+    },
+    {
+      "id": "L0:F3283",
+      "label": "mentions of India and related concepts like Delhi, but sometimes only finds a word indicating importance",
+      "reason": "Country-related identity signal."
+    },
+    {
+      "id": "L4:F12975",
+      "label": "mentions of Asian countries, calendars, and paganism/eastern religions",
+      "reason": "Religion/nationality identity cue."
+    },
+    {
+      "id": "L0:F14740",
+      "label": "names of places, people, and organizations",
+      "reason": "Named-entity detector, not toxicity semantics."
+    },
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Purely structural function-word feature."
+    },
+    {
+      "id": "L2:F2123",
+      "label": "words ending in \"ian\", \"jani\", \"iti\", \"ino\", or \"olan\"",
+      "reason": "Morphology matching ethnic/nationality endings."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F1003",
+      "label": "the word \"abuse\"",
+      "reason": "Direct toxic-content term."
+    },
+    {
+      "id": "L2:F6255",
+      "label": "the word \"abuse\", or phrases related to genitalia",
+      "reason": "Abuse/sexual-content toxicity cue."
+    },
+    {
+      "id": "L4:F10949",
+      "label": "strings of words related to shady or negative human behaviors and traits",
+      "reason": "Negative behavior semantics."
+    },
+    {
+      "id": "L7:F15690",
+      "label": "text related to public sentiment and action in response to a problem",
+      "reason": "Structural/contextual, not identity-related."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 9,
+  "n_causal": 4,
+  "n_other": 0,
+  "spurious_fraction": 0.6923076923076923,
+  "dominant": "spurious",
+  "notes": "Identity cues dominate; one feature is structural, and one cited causal feature is actually other."
+}

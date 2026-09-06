@@ -1,0 +1,63 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Acknowledgment/style cue, not task semantics."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "Generic conversational register feature."
+    },
+    {
+      "id": "L4:F9602",
+      "label": "interjections and filler words",
+      "reason": "Filler/interjection detector, not semantic relation."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Surface negation detector in hypothesis."
+    },
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Token-level contraction ending cue."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: well (pos 2)",
+      "label": "(embed/output)",
+      "reason": "Input token embedding only."
+    },
+    {
+      "id": "Emb: uh (pos 4)",
+      "label": "(embed/output)",
+      "reason": "Input token embedding only."
+    },
+    {
+      "id": "Emb: t (pos 37; completes haven't)",
+      "label": "(embed/output)",
+      "reason": "Input token embedding only."
+    },
+    {
+      "id": "Emb: haven (pos 35)",
+      "label": "(embed/output)",
+      "reason": "Input token embedding only."
+    },
+    {
+      "id": "Output",
+      "label": "synthetic probe classification score",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites shallow conversational cues and negation tokens, not proposition-level comparison."
+}

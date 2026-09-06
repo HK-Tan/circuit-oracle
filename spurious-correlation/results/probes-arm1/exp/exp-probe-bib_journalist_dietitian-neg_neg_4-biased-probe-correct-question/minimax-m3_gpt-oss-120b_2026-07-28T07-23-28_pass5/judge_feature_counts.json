@@ -1,0 +1,159 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun feature"
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based gender signal"
+    },
+    {
+      "id": "L15:F10510",
+      "label": "references to males in third person and first person pronouns",
+      "reason": "Male pronoun descriptor"
+    },
+    {
+      "id": "L14:F14097",
+      "label": "occurrences of the word \"he\"",
+      "reason": "Male pronoun detector"
+    },
+    {
+      "id": "L13:F1937",
+      "label": "pronouns used to describe people, including possessive pronouns",
+      "reason": "Person pronoun signal"
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun feature"
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Gendered male feature"
+    },
+    {
+      "id": "L6:F6622",
+      "label": "pronouns and possessive pronouns in the context of legal and athletic situations",
+      "reason": "Pronoun-based gender signal"
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Male pronoun detector"
+    },
+    {
+      "id": "L4:F15567",
+      "label": "sentences with male or female pronouns and possessives, especially ones referring to writing",
+      "reason": "Gendered pronoun feature"
+    },
+    {
+      "id": "L2:F6155",
+      "label": "references to people, especially pronouns like \"he\" or \"she\"",
+      "reason": "Pronoun-based person signal"
+    },
+    {
+      "id": "L1:F8685",
+      "label": "the pronoun \"he\"",
+      "reason": "Male pronoun detector"
+    },
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Gendered pronoun context"
+    },
+    {
+      "id": "L0:F7124",
+      "label": "the word \"at\"",
+      "reason": "Structural/other"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession vocabulary"
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Profession indicator"
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Profession vocabulary"
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Profession/title term"
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Profession-related media terms"
+    },
+    {
+      "id": "L1:F4459",
+      "label": "mentions of research institutes",
+      "reason": "Institution/profession context"
+    },
+    {
+      "id": "L1:F15323",
+      "label": "the word \"starting\" in academic papers",
+      "reason": "Academic-paper opener"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe direction",
+      "label": "output logit",
+      "reason": "Not a feature"
+    },
+    {
+      "id": "Emb: he (pos 22)",
+      "label": "he",
+      "reason": "Token embedding"
+    },
+    {
+      "id": "Emb: writer (pos 28)",
+      "label": "writer",
+      "reason": "Token embedding"
+    },
+    {
+      "id": "Emb: freelance (pos 27)",
+      "label": "freelance",
+      "reason": "Token embedding"
+    },
+    {
+      "id": "Emb: Institute (pos 7)",
+      "label": "Institute",
+      "reason": "Token embedding"
+    },
+    {
+      "id": "Emb: Starting (pos 1)",
+      "label": "Starting",
+      "reason": "Token embedding"
+    },
+    {
+      "id": "Emb: at (pos 2)",
+      "label": "at",
+      "reason": "Token embedding"
+    },
+    {
+      "id": "Emb: Defence (pos 9)",
+      "label": "Defence",
+      "reason": "Token embedding"
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 7,
+  "n_other": 8,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Male-pronoun chain dominates, though journalism/institute cues are also present."
+}

@@ -1,0 +1,57 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Emb",
+      "label": "nutrition (pos 13)",
+      "reason": "Profession-related nutrition term from input"
+    },
+    {
+      "id": "Emb",
+      "label": "cook (pos 17)",
+      "reason": "Profession-related cooking term from input"
+    },
+    {
+      "id": "L3:F6246",
+      "label": "nutrition terms",
+      "reason": "Nutrition vocabulary directly indicates profession"
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Diet/health vocabulary is profession-linked"
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Food/nutrition context is causal here"
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity",
+      "reason": "Nutrition-domain context, not gender"
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Scientific nutrition context signals profession"
+    },
+    {
+      "id": "L4:F14942",
+      "label": "cooking/kitchen context",
+      "reason": "Cooking vocabulary indicates culinary profession"
+    },
+    {
+      "id": "L15:F2510",
+      "label": "food preparation and consumption context",
+      "reason": "Food-prep terminology is profession-specific"
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 9,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle cites only nutrition/cooking features; no gender markers or structural-only features."
+}

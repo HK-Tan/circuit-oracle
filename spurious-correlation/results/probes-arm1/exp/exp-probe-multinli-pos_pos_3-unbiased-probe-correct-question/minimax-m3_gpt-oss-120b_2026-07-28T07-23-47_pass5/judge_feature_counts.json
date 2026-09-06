@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F10815",
+      "label": "the word \"any\".",
+      "reason": "Hypothesis negation-scope cue; explicit negation-related shortcut."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Semantic content feature, not a negation detector."
+    },
+    {
+      "id": "L6:F486",
+      "label": "Scottish locations and political terms",
+      "reason": "Content-relation feature; can support factual/semantic alignment."
+    },
+    {
+      "id": "L2:F1430",
+      "label": "mentions of the U.S. White House or a generic house",
+      "reason": "Entity/meaning overlap about house; semantic content."
+    },
+    {
+      "id": "L2:F4429",
+      "label": "mentions of the beginning of a period",
+      "reason": "Temporal/semantic structure, relevant to meaning."
+    },
+    {
+      "id": "L1:F1027",
+      "label": "the word \"tower\"",
+      "reason": "Content word detector used as entity/semantic feature."
+    },
+    {
+      "id": "L1:F11220",
+      "label": "instances of the word \"restore\" and related words",
+      "reason": "Meaning-bearing content word feature."
+    },
+    {
+      "id": "L0:F5494",
+      "label": "the word \"early\" often related to time",
+      "reason": "Temporal content feature, not negation."
+    },
+    {
+      "id": "L0:F4367",
+      "label": "references to centuries",
+      "reason": "Temporal semantic content."
+    },
+    {
+      "id": "L0:F9604",
+      "label": "the word \"house\" along with words about social class/gatherings",
+      "reason": "Content-based semantic association."
+    },
+    {
+      "id": "L0:F4079",
+      "label": "the words \"exposure,\" \"tower\" and words related to legal trials",
+      "reason": "Content association feature, not structural."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Semantic content about fortifications/castles."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F7360",
+      "label": "the word \"an\" and sometimes also the acronym COX",
+      "reason": "Generic article/token detector."
+    },
+    {
+      "id": "L0:F7513",
+      "label": "the word \"together\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F8082",
+      "label": "the word \"itself\" and sometimes words ending in \"ing\"",
+      "reason": "Function-word/structural detector."
+    },
+    {
+      "id": "L0:F14108",
+      "label": "the word \"appropriate\"",
+      "reason": "Dismissed generic word detector."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic function-word detector."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 11,
+  "n_other": 6,
+  "spurious_fraction": 0.08333333333333333,
+  "dominant": "causal",
+  "notes": "Oracle says negation is only a small contributor; most drivers are content-based, with many generic function-word detectors."
+}

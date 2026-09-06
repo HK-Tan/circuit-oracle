@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector triggered by 'not'."
+    },
+    {
+      "id": "L3:F3534",
+      "label": "n\"t contraction",
+      "reason": "Negation/contraction feature in the negation pipeline."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Still a negation detector; oracle places it in negation path."
+    },
+    {
+      "id": "L5:F3553",
+      "label": "negation-related feature",
+      "reason": "Part of the oracle's negation-word pathway."
+    },
+    {
+      "id": "L14:F6648",
+      "label": "speculative/negating language",
+      "reason": "Higher-level negation feature, not semantic entailment."
+    },
+    {
+      "id": "L15:F11794",
+      "label": "disagreement/negation phrases",
+      "reason": "Detects negation/disagreement wording, spurious shortcut."
+    },
+    {
+      "id": "L16:F6800",
+      "label": "negations 'not', 'no', and contractions with 't'",
+      "reason": "High-level negation gate directly driving output."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F3691",
+      "label": "recording in scientific documentation",
+      "reason": "Oracle frames it as content/semantic relation on recorded."
+    },
+    {
+      "id": "L2:F8776",
+      "label": "content feature driven by 'recorded'",
+      "reason": "Content-related detector; not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' not' (pos 17)",
+      "label": "input embedding token",
+      "reason": "Raw token embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb: ' recorded' (pos 2)",
+      "label": "input embedding token",
+      "reason": "Raw token embedding, not a claimed feature."
+    },
+    {
+      "id": "Emb: ' menu' (pos 3)",
+      "label": "input embedding token",
+      "reason": "Raw token embedding, not a claimed feature."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word 'not'",
+      "reason": "Already counted as spurious; duplicate oracle trace omitted."
+    },
+    {
+      "id": "L0:F7443",
+      "label": "lexical content detector",
+      "reason": "Generic content detector; oracle gives no semantic role."
+    },
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Pure lexical detector for menu, structural shortcut."
+    },
+    {
+      "id": "L1:F12253",
+      "label": "the word 'menu'",
+      "reason": "Pure lexical detector; not semantic reasoning."
+    },
+    {
+      "id": "L3:F3534",
+      "label": "n\"t contraction",
+      "reason": "Already counted as spurious; duplicate oracle trace omitted."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Already counted as spurious; duplicate oracle trace omitted."
+    },
+    {
+      "id": "L5:F3553",
+      "label": "negation-related feature",
+      "reason": "Already counted as spurious; duplicate oracle trace omitted."
+    },
+    {
+      "id": "L14:F6648",
+      "label": "speculative/negating language",
+      "reason": "Already counted as spurious; duplicate oracle trace omitted."
+    },
+    {
+      "id": "L15:F11794",
+      "label": "disagreement/negation phrases",
+      "reason": "Already counted as spurious; duplicate oracle trace omitted."
+    },
+    {
+      "id": "L16:F6800",
+      "label": "negations 'not', 'no', and contractions with 't'",
+      "reason": "Already counted as spurious; duplicate oracle trace omitted."
+    },
+    {
+      "id": "probe output",
+      "label": "probe classification output",
+      "reason": "Output node, not an interpretable feature."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 2,
+  "n_other": 14,
+  "spurious_fraction": 0.7777777777777778,
+  "dominant": "spurious",
+  "notes": "Oracle says output is primarily driven by negation-word pathway; content-word detectors are secondary."
+}

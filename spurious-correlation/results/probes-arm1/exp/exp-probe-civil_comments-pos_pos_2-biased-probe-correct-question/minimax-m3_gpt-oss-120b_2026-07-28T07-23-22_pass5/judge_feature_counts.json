@@ -1,0 +1,183 @@
+{
+  "spurious_features": [
+    {
+      "id": "L11:F1913",
+      "label": "emotional, controversial, or political issues especially relating to race",
+      "reason": "Race-linked controversy aggregator, not toxicity"
+    },
+    {
+      "id": "L9-10:F2249",
+      "label": "conditional-frame + identity aggregation",
+      "reason": "Aggregates identity within conditionals"
+    },
+    {
+      "id": "L9-10:F8939",
+      "label": "conditional-frame + identity aggregation",
+      "reason": "Aggregates identity within conditionals"
+    },
+    {
+      "id": "L9-10:F3438",
+      "label": "conditional-frame + identity aggregation",
+      "reason": "Aggregates identity within conditionals"
+    },
+    {
+      "id": "L9-10:F12707",
+      "label": "conditional-frame + identity aggregation",
+      "reason": "Aggregates identity within conditionals"
+    },
+    {
+      "id": "L6-7:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Explicit race/ethnicity term detector"
+    },
+    {
+      "id": "L6-7:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Explicit race/ethnicity term detector"
+    },
+    {
+      "id": "L7:F5125",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic-group detector"
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic-group detector"
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic-group detector"
+    },
+    {
+      "id": "L3-4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/social-justice semantics"
+    },
+    {
+      "id": "L3-4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/social-justice semantics"
+    },
+    {
+      "id": "L3-4:F10174",
+      "label": "words referring to racial and/or supernatural identity",
+      "reason": "Identity-label semantics"
+    },
+    {
+      "id": "L3-4:F13434",
+      "label": "descriptions of a person's size, particularly height and weight",
+      "reason": "Oracle-linked demographic context"
+    },
+    {
+      "id": "L1-2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity word detector"
+    },
+    {
+      "id": "L1-2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity word detector"
+    },
+    {
+      "id": "L1-2:F585",
+      "label": "the word \"white\", often in association with \"dwarf\"",
+      "reason": "Identity token detector"
+    },
+    {
+      "id": "L1-2:F1708",
+      "label": "mentions of colors",
+      "reason": "Color-word detector used on identity token"
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Race/slavery context detector"
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L6-8:F616",
+      "label": "phrases about the conditions or circumstances surrounding some event",
+      "reason": "Purely structural conditional context"
+    },
+    {
+      "id": "L6-8:F550",
+      "label": "clauses that convey some kind of condition or past regret",
+      "reason": "Structural conditional grammar"
+    },
+    {
+      "id": "L6-8:F15213",
+      "label": "sentences using conditional clauses including \"would\", \"had\" and \"have\"",
+      "reason": "Conditional syntax"
+    },
+    {
+      "id": "L6-8:F8840",
+      "label": "sentences including the word \"were\" or \"been\"",
+      "reason": "Generic tense marker"
+    },
+    {
+      "id": "L0-1:F2458",
+      "label": "the word \"was\" and sometimes \"were.\"",
+      "reason": "Generic function-word detector"
+    },
+    {
+      "id": "L0-1:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Generic pronoun/context feature"
+    },
+    {
+      "id": "L0-1:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic conjunction detector"
+    },
+    {
+      "id": "Emb: white (pos 4)",
+      "label": "white",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: Hispanic (pos 7)",
+      "label": "Hispanic",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: was (pos 3)",
+      "label": "was",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: and (pos 5)",
+      "label": "and",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: it (pos 8)",
+      "label": "it",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: If (pos 1)",
+      "label": "If",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: he (pos 2)",
+      "label": "he",
+      "reason": "Input embedding only"
+    },
+    {
+      "id": "Emb: <bos> (pos 0)",
+      "label": "<bos>",
+      "reason": "Input embedding only"
+    }
+  ],
+  "n_spurious": 19,
+  "n_causal": 0,
+  "n_other": 15,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows identity/race features only; no toxicity-content detectors appear."
+}

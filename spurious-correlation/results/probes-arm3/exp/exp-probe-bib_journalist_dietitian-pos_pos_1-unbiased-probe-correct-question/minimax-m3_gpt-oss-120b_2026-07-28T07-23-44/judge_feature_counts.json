@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gender marker feature; matches spurious gender-related signals."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F6115",
+      "label": "words related to commercial activity and customers",
+      "reason": "Client-facing work vocabulary; profession-relevant."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Direct diet/nutrition profession content."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-related substantive content."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Direct nutrition vocabulary."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Nutrition-science context; profession indicator."
+    },
+    {
+      "id": "L4:F12213",
+      "label": "strings of letters followed by \"ls\" and \"an\", plus words associated with health research",
+      "reason": "Health research terminology; relevant context."
+    },
+    {
+      "id": "L0:F9888",
+      "label": "words related to formal schooling",
+      "reason": "Education/training terminology; profession-relevant."
+    },
+    {
+      "id": "L6:F8984",
+      "label": "words and phrases related to health",
+      "reason": "Health-related substantive vocabulary."
+    },
+    {
+      "id": "L15:F8177",
+      "label": "words associated with eating",
+      "reason": "Eating-related content; profession indicator."
+    },
+    {
+      "id": "L0:F2175",
+      "label": "the word \"eat\"",
+      "reason": "Direct food/eating signal."
+    },
+    {
+      "id": "L1:F5530",
+      "label": "words relating to meals, ingredients, and food consumption",
+      "reason": "Direct nutrition/food vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural formatting feature."
+    },
+    {
+      "id": "L1:F15251",
+      "label": "the word \"client\" and its plural form more often than not when capitalized as the first word of a sentence or preceded by a special character",
+      "reason": "Oracle treats as formatting/token artifact."
+    },
+    {
+      "id": "L0:F5697",
+      "label": "the word \"accompanied\"",
+      "reason": "Generic lexical token, not profession-specific."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L4:F15160",
+      "label": "words that indicate strong emotions or reactions",
+      "reason": "Generic affective feature, not task-specific."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 11,
+  "n_other": 5,
+  "spurious_fraction": 0.08333333333333333,
+  "dominant": "causal",
+  "notes": "Dominant signal is nutrition/health profession content; one clear gender-based spurious feature."
+}

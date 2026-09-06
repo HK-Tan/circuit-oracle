@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct male-pronoun detector."
+    },
+    {
+      "id": "L0:F16297",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Possessive male pronoun feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L5:F10952",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Third-person pronoun feature in gendered chain."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit male-gender feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun aggregator over his/him."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "His/he/him detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun token feature."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Generic pronoun feature here used gendered."
+    },
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Oracle says coding/UI, not profession here."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "People/pronoun feature, not profession."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Gendered social-role feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Direct journalism/profession cue."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "words and phrases associated with broadcast journalism",
+      "reason": "Broadcast journalism vocabulary."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "News reporter profession indicator."
+    },
+    {
+      "id": "L8:F8437",
+      "label": "content related to film festivals and production, particularly documentary films, and the recognition they receive.",
+      "reason": "Content-specific professional media cue."
+    },
+    {
+      "id": "L11:F5996",
+      "label": "references to news publications and their staff.",
+      "reason": "Publication/staff journalism cue."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism/newspaper cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: report (pos 21)",
+      "label": "(embed/output)",
+      "reason": "Raw token embedding, not a semantic feature."
+    },
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Input token, not oracle feature."
+    },
+    {
+      "id": "Emb: him (pos 9)",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Input token, not oracle feature."
+    },
+    {
+      "id": "Emb: see (pos 4)",
+      "label": "the word \"dream\"",
+      "reason": "Unrelated structural/token embedding."
+    },
+    {
+      "id": "Emb: taken (pos 8)",
+      "label": "past-participle verbs",
+      "reason": "Structural verb-form feature."
+    },
+    {
+      "id": "Emb: to (pos 3)",
+      "label": "the word \"to\"",
+      "reason": "Purely structural function-word feature."
+    },
+    {
+      "id": "L26:F0",
+      "label": "Probe classification score (output)",
+      "reason": "Output node, not feature."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 6,
+  "n_other": 7,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Oracle circuit is dominated by male-pronoun/gender signals; journalism features are present but fewer."
+}

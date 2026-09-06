@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Identity/race-related rhetoric; triggered by 'Indians'."
+    },
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Direct identity-group mention detector."
+    },
+    {
+      "id": "L2:F1680",
+      "label": "words that refer to people participating in some activity, such as consumers, patients in healthcare, or voters",
+      "reason": "Identity token treated as people-category mention."
+    },
+    {
+      "id": "L2:F2123",
+      "label": "demonym/nationality suffix '-ian'",
+      "reason": "Morphology on 'Indians'; identity-linked suffix."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F1600",
+      "label": "negative words and phrases related to problems and imperfections",
+      "reason": "Negative toxicity-adjacent semantic cue."
+    },
+    {
+      "id": "L5:F3229",
+      "label": "words related to violent assault and murder",
+      "reason": "Violence/abuse semantics."
+    },
+    {
+      "id": "L4:F148",
+      "label": "sexual assault & abuse words",
+      "reason": "Direct abuse/toxicity semantics."
+    },
+    {
+      "id": "L3:F2705",
+      "label": "words related to cheating or being deceptive",
+      "reason": "Harassment/deception semantic cue."
+    },
+    {
+      "id": "L2:F5368",
+      "label": "words related to legal trouble and crime",
+      "reason": "Crime/abuse-related semantic cue."
+    },
+    {
+      "id": "L2:F9873",
+      "label": "instances of abusive language or words that end in \"ally\"",
+      "reason": "Abusive-language detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F4021",
+      "label": "code snippets or configurations with the word \"as\"",
+      "reason": "Generic structural pattern."
+    },
+    {
+      "id": "L3:F4327",
+      "label": "words and phrases that end with \"ive\", and also a few words that end in \"ices\" or \"ishes\", and also the phrase \"advantage of the\"",
+      "reason": "Mostly suffix/format pattern."
+    },
+    {
+      "id": "L3:F5853",
+      "label": "instances of people speaking and making statements",
+      "reason": "Generic speech/reporting feature."
+    },
+    {
+      "id": "L3:F9646",
+      "label": "verbs and associated nouns.",
+      "reason": "Generic syntactic/lexical feature."
+    },
+    {
+      "id": "L1:F13535",
+      "label": "words related to business, education, religion, and stories",
+      "reason": "Broad topical feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 6,
+  "n_other": 5,
+  "spurious_fraction": 0.4,
+  "dominant": "mixed",
+  "notes": "Both identity-group and abuse/toxicity features contribute; identity signal is substantial but not exclusive."
+}

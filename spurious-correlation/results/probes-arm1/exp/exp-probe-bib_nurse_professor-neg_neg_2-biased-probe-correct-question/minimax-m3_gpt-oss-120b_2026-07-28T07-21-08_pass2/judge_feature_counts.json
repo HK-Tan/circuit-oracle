@@ -1,0 +1,159 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Gendered possessive/pronoun signal."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Explicit male-gender marker."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Triggered by pronoun gender context."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-coded language feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Possessive pronoun detector."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Possessive pronoun signal."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Gender reference feature."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "Pronoun-based gender/story context."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based person reference."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "\"He\" pronoun",
+      "reason": "Direct male pronoun feature."
+    },
+    {
+      "id": "L12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Gender-pronoun co-occurrence."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Name identification, content-neutral."
+    },
+    {
+      "id": "L0:F1326",
+      "label": "mentions of organizations and government agencies.",
+      "reason": "Institutional context, not gender."
+    },
+    {
+      "id": "L0:F12351",
+      "label": "words related to obtaining something, like receiving money or a receipt",
+      "reason": "Task-neutral verb semantics."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Education/profession-related signal."
+    },
+    {
+      "id": "L2:F1440",
+      "label": "the word \"engineering\" and words related to its definition",
+      "reason": "Profession indicator."
+    },
+    {
+      "id": "L3:F4113",
+      "label": "mentions of academic degrees and areas of study",
+      "reason": "Degree/field phrase."
+    },
+    {
+      "id": "L4:F3727",
+      "label": "mentions of academic degrees",
+      "reason": "Education/profession clue."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words related to counseling, therapy, social work, and academic degree programs",
+      "reason": "Profession/education vocabulary."
+    },
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Field-of-study signal."
+    },
+    {
+      "id": "L5:F6384",
+      "label": "words related to higher education and professions",
+      "reason": "Profession-related vocabulary."
+    },
+    {
+      "id": "L5:F6228",
+      "label": "past tense verbs",
+      "reason": "Content-neutral syntax feature."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic-field indicator."
+    },
+    {
+      "id": "L17:F15906",
+      "label": "sentences describing scientific research goals and methodology",
+      "reason": "Research/profession-style content."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F13526",
+      "label": "months of the year, sometimes in connection to a number",
+      "reason": "Generic calendar token."
+    },
+    {
+      "id": "L0:F15320",
+      "label": "the word \"ice\"",
+      "reason": "Unrelated lexical detector."
+    },
+    {
+      "id": "L5:F7317",
+      "label": "phrases with names and nicknames",
+      "reason": "Structural name phrase feature."
+    },
+    {
+      "id": "L7:F7210",
+      "label": "words and phrases that connote conflict and stress.",
+      "reason": "Generic sentiment/stress feature."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 13,
+  "n_other": 4,
+  "spurious_fraction": 0.48,
+  "dominant": "mixed",
+  "notes": "Gender markers are strong, but profession/education features also appear substantially."
+}

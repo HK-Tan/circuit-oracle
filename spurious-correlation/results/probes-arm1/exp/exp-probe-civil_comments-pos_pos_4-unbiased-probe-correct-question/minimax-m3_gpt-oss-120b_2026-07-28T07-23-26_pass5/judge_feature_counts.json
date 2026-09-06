@@ -1,0 +1,149 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F1680",
+      "label": "words that refer to people participating in some activity, such as consumers, patients in healthcare, or voters",
+      "reason": "Generic group-membership cue, identity-adjacent."
+    },
+    {
+      "id": "L2:F2123",
+      "label": "words ending in \"ian\", \"jani\", \"iti\", \"ino\", or \"olan\"",
+      "reason": "Morphological demographic-name pattern."
+    },
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Direct identity-group mention detector."
+    },
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Group identity signal on subject noun."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity-token detector, not toxicity."
+    },
+    {
+      "id": "L0:F13535",
+      "label": "words related to business, education, religion, and stories",
+      "reason": "Promoted token is a demographic/religious label."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F148",
+      "label": "words and phrases related to sexual assault and abuse",
+      "reason": "Direct toxicity/abuse semantics."
+    },
+    {
+      "id": "L5:F3229",
+      "label": "words related to violent assault and murder",
+      "reason": "Violence and assault semantics."
+    },
+    {
+      "id": "L6:F1600",
+      "label": "negative words and phrases related to problems and imperfections",
+      "reason": "General negative-content toxicity cue."
+    },
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Identity-independent rhetoric content."
+    },
+    {
+      "id": "L4:F14198",
+      "label": "terms found in legal or political discourse, especially where rights are being violated or impinged.",
+      "reason": "Rights-violation discourse linked to abuse."
+    },
+    {
+      "id": "L5:F8793",
+      "label": "language expressing strong opinions or negativity, potentially related to political, social, or historical issues.",
+      "reason": "Negativity/hostility cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Purely structural copula."
+    },
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Purely structural verb."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Anaphoric pronoun; structural only."
+    },
+    {
+      "id": "L0:F15956",
+      "label": "the word \"those\"",
+      "reason": "Demonstrative/structural token."
+    },
+    {
+      "id": "L0:F8381",
+      "label": "the word 'by'",
+      "reason": "Function word."
+    },
+    {
+      "id": "L3:F5853",
+      "label": "instances of people speaking and making statements",
+      "reason": "Generic reporting structure."
+    },
+    {
+      "id": "L3:F4327",
+      "label": "words and phrases that end with \"ive\", and also a few words that end in \"ices\" or \"ishes\", and also the phrase \"advantage of the\".",
+      "reason": "Mixed generic pattern, not oracle-claimed toxicity."
+    },
+    {
+      "id": "L3:F2705",
+      "label": "words related to cheating or being deceptive",
+      "reason": "Not claimed relevant to toxicity here."
+    },
+    {
+      "id": "L3:F9646",
+      "label": "verbs and associated nouns.",
+      "reason": "Too generic to classify."
+    },
+    {
+      "id": "L3:F12378",
+      "label": "words related to medicine, law, and infection",
+      "reason": "Generic topical lexicon."
+    },
+    {
+      "id": "L4:F4021",
+      "label": "code snippets or configurations with the word \"as\".",
+      "reason": "Irrelevant structural/code feature."
+    },
+    {
+      "id": "L0:F11668",
+      "label": "Baseball terminology",
+      "reason": "Clearly unrelated lexical detector."
+    },
+    {
+      "id": "L0:F1847",
+      "label": "scientific terms and experimental details related to biological and chemical research",
+      "reason": "Unrelated domain lexicon."
+    },
+    {
+      "id": "L0:F6035",
+      "label": "the word \"depending\"",
+      "reason": "Generic lexical item."
+    },
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Could be spurious, but broad membership cue."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 6,
+  "n_other": 15,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Circuit mixes identity-group shortcuts with genuine abuse/negativity cues."
+}

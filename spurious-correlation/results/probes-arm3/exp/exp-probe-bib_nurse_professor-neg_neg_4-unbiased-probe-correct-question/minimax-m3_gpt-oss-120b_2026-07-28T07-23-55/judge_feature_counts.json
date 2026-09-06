@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Explicit male-gender pronoun cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Profession/education indicator."
+    },
+    {
+      "id": "L2:F4627",
+      "label": "the word \"director\"",
+      "reason": "Direct profession title."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Education/career context."
+    },
+    {
+      "id": "L3:F4213",
+      "label": "mentions of degree qualifications or awards",
+      "reason": "Credential-related profession signal."
+    },
+    {
+      "id": "L4:F15748",
+      "label": "titles within organizations and/or descriptions of processes and management",
+      "reason": "Organizational role indicator."
+    },
+    {
+      "id": "L2:F12316",
+      "label": "the word \"mobile\" when used in a technical context",
+      "reason": "Technical workplace vocabulary."
+    },
+    {
+      "id": "L0:F4621",
+      "label": "words related to administrative positions and bodies",
+      "reason": "Job/authority terminology."
+    },
+    {
+      "id": "L14:F15086",
+      "label": "references to Korea/Korean",
+      "reason": "Content-neutral geographic/topic feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L6:F3774",
+      "label": "proper nouns or names with unusual capitalization",
+      "reason": "Generic name/capitalization detector."
+    },
+    {
+      "id": "L0:F10846",
+      "label": "the word \"also\"",
+      "reason": "Generic filler word."
+    },
+    {
+      "id": "L1:F14934",
+      "label": "the word \"grid\" and some related terms related to \"grids\"",
+      "reason": "Domain-specific but not profession indicator."
+    },
+    {
+      "id": "L0:F8658",
+      "label": "the word \"is\"",
+      "reason": "Generic syntax token."
+    },
+    {
+      "id": "L0:F12904",
+      "label": "mentions of the day prior or positions of authority",
+      "reason": "Mixed generic/time phrase; not clearly profession."
+    },
+    {
+      "id": "L0:F1242",
+      "label": "the word \"appropriate\"",
+      "reason": "Generic adjective."
+    },
+    {
+      "id": "L0:F15160",
+      "label": "the word \"concerns\"",
+      "reason": "Generic discourse word."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic conjunction."
+    },
+    {
+      "id": "L0:F5743",
+      "label": "the word \"lab\" and words that might be associated with equipment or a positive experience",
+      "reason": "Oracle labels it as mixed/generic."
+    },
+    {
+      "id": "L4:F12934",
+      "label": "names of academic journals",
+      "reason": "Publication metadata, not biography profession cue."
+    },
+    {
+      "id": "L0:F5718",
+      "label": "the word \"still\" and adverbs that indicate a continuing action",
+      "reason": "Purely structural/adverbial."
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "Broad generic research metadata."
+    },
+    {
+      "id": "L0:F12208",
+      "label": "the word \"perspective\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F10457",
+      "label": "the string \"filename\"",
+      "reason": "Irrelevant string literal."
+    },
+    {
+      "id": "L4:F148",
+      "label": "<oracle's label>",
+      "reason": "Not provided in oracle report."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "<oracle's label>",
+      "reason": "Not provided in oracle report."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 8,
+  "n_other": 16,
+  "spurious_fraction": 0.1111111111111111,
+  "dominant": "causal",
+  "notes": "One explicit gender cue; several profession/education cues; many generic or non-qualifying features."
+}

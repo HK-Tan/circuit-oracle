@@ -1,0 +1,179 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F11298",
+      "label": "the word \"no\" or related negative words",
+      "reason": "Negation detector at hypothesis 'No'."
+    },
+    {
+      "id": "L15:F13061",
+      "label": "uses of the word \"no\" or similar negative statements and words associated with \"one\"",
+      "reason": "Negation-plus-one chain at 'No one'."
+    },
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Direct no/negation detector."
+    },
+    {
+      "id": "L13:F10768",
+      "label": "negative sentiments and words like \"no\" in the context of a discussion or argument",
+      "reason": "No-word negativity cue."
+    },
+    {
+      "id": "L12:F8719",
+      "label": "phrases that start with \"no.\"",
+      "reason": "Sentence-initial no detector."
+    },
+    {
+      "id": "L0:F1143",
+      "label": "the word \"no\" and related words like \"nobody\" and \"trust\"",
+      "reason": "Surface negation word detector."
+    },
+    {
+      "id": "L2:F2771",
+      "label": "the word \"no\" as well as words and phrases that are conceptually related to negation",
+      "reason": "Negation-word feature."
+    },
+    {
+      "id": "L2:F8837",
+      "label": "the word \"one\" or \"body\" when preceded by the words \"no\" or \"every.\"",
+      "reason": "'No one' compound detector."
+    },
+    {
+      "id": "L1:F15800",
+      "label": "the word \"one\"",
+      "reason": "'One' in 'No one' support."
+    },
+    {
+      "id": "L0:F4438",
+      "label": "the word \"one\".",
+      "reason": "Generic one detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Task-content overlap from premise phrase."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Shared tourism semantics."
+    },
+    {
+      "id": "L1:F6872",
+      "label": "the word \"interpretation\"",
+      "reason": "Oracle uses it as meaning/argumentation."
+    },
+    {
+      "id": "L2:F1016",
+      "label": "forms of the verb \"tour\" and the noun \"tour.\"",
+      "reason": "Semantically aligned tour feature."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Content overlap with phrasal verb."
+    },
+    {
+      "id": "L0:F10562",
+      "label": "the word \"up\"",
+      "reason": "Content part of 'pick up'."
+    },
+    {
+      "id": "L4:F10722",
+      "label": "uses of the word \"here\" alongside demonstrative pronouns and temporal words",
+      "reason": "Locative/semantic context feature."
+    },
+    {
+      "id": "L0:F7204",
+      "label": "the word \"here\"",
+      "reason": "Locative content cue."
+    },
+    {
+      "id": "L0:F7727",
+      "label": "code or documentation mentioning the word \"mapping.\"",
+      "reason": "Oracle's positive map/mapping signal."
+    },
+    {
+      "id": "L4:F11969",
+      "label": "mentions of printed advertising materials",
+      "reason": "Oracle's auxiliary content feature."
+    },
+    {
+      "id": "L8:F1872",
+      "label": "words and phrases related to diagrams and presentations",
+      "reason": "Content-neutral lexical/semantic cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe classification score",
+      "label": "contradiction direction",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "Emb: No (pos 16)",
+      "label": "embedded token",
+      "reason": "Input token, not feature."
+    },
+    {
+      "id": "Emb: one (pos 17)",
+      "label": "embedded token",
+      "reason": "Input token, not feature."
+    },
+    {
+      "id": "Emb: Pick (pos 1)",
+      "label": "embedded token",
+      "reason": "Input token, not feature."
+    },
+    {
+      "id": "Emb: up (pos 2)",
+      "label": "embedded token",
+      "reason": "Input token, not feature."
+    },
+    {
+      "id": "Emb: about (pos 12)",
+      "label": "embedded token",
+      "reason": "Input token, not feature."
+    },
+    {
+      "id": "Emb: here (pos 9)",
+      "label": "embedded token",
+      "reason": "Input token, not feature."
+    },
+    {
+      "id": "Emb: tours (pos 14)",
+      "label": "embedded token",
+      "reason": "Input token, not feature."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Structural/number-context detector."
+    },
+    {
+      "id": "L0:F13092",
+      "label": "the words \"down\" and \"up\", often in combination",
+      "reason": "Generic lexical pattern."
+    },
+    {
+      "id": "L0:F10904",
+      "label": "the word \"adequate\" (and words that appear near it)",
+      "reason": "Oracle says likely co-occurring, not task-causal."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural detector."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 11,
+  "n_other": 12,
+  "spurious_fraction": 0.47619047619047616,
+  "dominant": "mixed",
+  "notes": "Negation dominates the shortcut, but content overlap features are also present."
+}

@@ -1,0 +1,167 @@
+{
+  "spurious_features": [],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "embed/output",
+      "label": "Probe contradiction-direction output",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Entity/topic detector, not negation or relation."
+    },
+    {
+      "id": "L3:F123",
+      "label": "mentions of the United States Congress",
+      "reason": "Entity/topic detector, not negation or relation."
+    },
+    {
+      "id": "L2:F6735",
+      "label": "political parties and politicians",
+      "reason": "Political-topic detector, not task relation."
+    },
+    {
+      "id": "L3:F5753",
+      "label": "the word \"includes\" or \"containing\".",
+      "reason": "Lexical include detector; structural, not semantic relation."
+    },
+    {
+      "id": "L3:F8351",
+      "label": "words related to including and code language symbols",
+      "reason": "Mostly structural/lexical; oracle dismisses it."
+    },
+    {
+      "id": "L4:F59",
+      "label": "phrases with the word 'to' preceded by a verb or the word 'start' or 'begin'.",
+      "reason": "Syntactic sequence feature, not semantic."
+    },
+    {
+      "id": "L3:F12596",
+      "label": "actions or methods, sometimes preceeded by the preposition 'a' or 'to'.",
+      "reason": "Broad syntactic pattern, not semantic relation."
+    },
+    {
+      "id": "L2:F11469",
+      "label": "the word \"to\"",
+      "reason": "Pure token detector."
+    },
+    {
+      "id": "L3:F4374",
+      "label": "instances of the word \"to\"",
+      "reason": "Pure token detector."
+    },
+    {
+      "id": "L1:F13759",
+      "label": "the word 'to'",
+      "reason": "Pure token detector."
+    },
+    {
+      "id": "L0:F6044",
+      "label": "the word \"yield\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L0:F15411",
+      "label": "terms relating to political bodies, figures, and processes",
+      "reason": "Broad political-topic feature."
+    },
+    {
+      "id": "L0:F10198",
+      "label": "the word \"Congress\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L0:F7021",
+      "label": "the word \"Congress\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L0:F14517",
+      "label": "the word \"including\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L0:F10783",
+      "label": "the word \"include\" (and variations of the word)",
+      "reason": "Single-word/lexical detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L0:F13437",
+      "label": "the word \"who\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L0:F13564",
+      "label": "the word \"which\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L0:F11640",
+      "label": "the word \"funding\"",
+      "reason": "Single-word detector."
+    },
+    {
+      "id": "L0:F4870",
+      "label": "commas and sometimes reach (context not clear)",
+      "reason": "Punctuation/structural feature."
+    },
+    {
+      "id": "L0:F15773",
+      "label": "the possessive pronoun \"our\"",
+      "reason": "Function-word detector."
+    },
+    {
+      "id": "L1:F3276",
+      "label": "mentions of the United States Congress",
+      "reason": "Entity/topic detector."
+    },
+    {
+      "id": "L1:F14850",
+      "label": "references to the U.S. Congress.",
+      "reason": "Entity/topic detector."
+    },
+    {
+      "id": "L1:F6853",
+      "label": "proper nouns from the Indian subcontinent",
+      "reason": "Named-entity/topic detector."
+    },
+    {
+      "id": "L1:F3231",
+      "label": "discussions of political unrest and curfews in districts",
+      "reason": "Topic detector, not NLI relation."
+    },
+    {
+      "id": "L1:F2408",
+      "label": "words related to organizations, especially governmental and educational institutions",
+      "reason": "Broad organizational-topic feature."
+    },
+    {
+      "id": "L4:F7775",
+      "label": "various forms of punctuation",
+      "reason": "Pure structural punctuation feature."
+    },
+    {
+      "id": "L0:F14818",
+      "label": "the word \"level\" when referring to a level of government or societal organization",
+      "reason": "Topic/lexical detector, not relation."
+    },
+    {
+      "id": "L0:F7021",
+      "label": "the word \"Congress\"",
+      "reason": "Single-word detector."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 0,
+  "n_other": 31,
+  "spurious_fraction": null,
+  "dominant": "none",
+  "notes": "Oracle shows only surface/structural features; no negation-based spurious or semantic causal features are actually claimed."
+}

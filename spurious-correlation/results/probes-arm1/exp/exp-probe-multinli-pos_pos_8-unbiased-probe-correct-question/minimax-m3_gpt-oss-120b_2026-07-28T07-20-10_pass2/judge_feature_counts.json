@@ -1,0 +1,78 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Congress topic/entity anchor, not negation."
+    },
+    {
+      "id": "L2:F6735",
+      "label": "political parties and politicians",
+      "reason": "Congress/politics lexical topic feature."
+    },
+    {
+      "id": "L1:F4224",
+      "label": "the word \"registration\" and its variations",
+      "reason": "Misfire on context; not NLI meaning."
+    },
+    {
+      "id": "L3:F5753",
+      "label": "the word \"includes\" or \"containing\".",
+      "reason": "Hypothesis content word relevant to semantic relation."
+    },
+    {
+      "id": "L3:F8351",
+      "label": "words related to including and code language symbols",
+      "reason": "Includes-related lexical feature, not negation."
+    },
+    {
+      "id": "L4:F59",
+      "label": "phrases with the word 'to' preceded by a verb or the word 'start' or 'begin'.",
+      "reason": "Local syntactic pattern around 'began to'."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6044",
+      "label": "the word \"yield\"",
+      "reason": "Generic lexical misfire."
+    },
+    {
+      "id": "L0:F15411",
+      "label": "terms relating to political bodies, figures, and processes",
+      "reason": "Broad political-topic detector."
+    },
+    {
+      "id": "L0:F10401",
+      "label": "mentions of genes and proteins",
+      "reason": "Unrelated spurious lexical activation."
+    },
+    {
+      "id": "L0:F9557",
+      "label": "the word \"clean\" and words/phrases associated with people",
+      "reason": "Unrelated lexical activation."
+    },
+    {
+      "id": "L0:F3204",
+      "label": "proper nouns, especially including titles of works and organizations",
+      "reason": "Generic proper-noun detector."
+    },
+    {
+      "id": "L0:F10783",
+      "label": "the word \"include\" (and variations of the word)",
+      "reason": "Pure lexical detector; not negation."
+    },
+    {
+      "id": "L3:F123",
+      "label": "mentions of the United States Congress",
+      "reason": "Generic entity mention feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 6,
+  "n_other": 7,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation detector appears; circuit is mostly Congress/include/topic and syntax features."
+}

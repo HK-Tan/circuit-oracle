@@ -1,0 +1,160 @@
+{
+  "prompt": "Dataset: civil_comments-pos_pos_3 | Probe: biased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 2,
+      "feature_idx": 13158,
+      "pos": 6,
+      "supernode_label": "Jewish / ethnic-identity detectors",
+      "autointerp": " words about race and ethnicity",
+      "frac_nonzero": 0.00986,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/13158"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 12151,
+      "pos": 6,
+      "supernode_label": "Jewish / ethnic-identity detectors",
+      "autointerp": " capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+      "frac_nonzero": 0.00322,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/12151"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 2405,
+      "pos": 6,
+      "supernode_label": "Jewish / ethnic-identity detectors",
+      "autointerp": " words related to religious identity/affiliation or spirituality including related holidays",
+      "frac_nonzero": 0.00705,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/2405"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 14733,
+      "pos": 6,
+      "supernode_label": "Jewish / ethnic-identity detectors",
+      "autointerp": " content related to the Israel-Palestine conflict and possibly some related topics like NBA trades.",
+      "frac_nonzero": 0.00958,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/14733"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 117,
+      "pos": 6,
+      "supernode_label": "Jewish / ethnic-identity detectors",
+      "autointerp": " terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "frac_nonzero": 0.01199,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/117"
+    },
+    {
+      "layer": 6,
+      "feature_idx": 648,
+      "pos": 6,
+      "supernode_label": "Discrimination-against-religious/ethnic-groups detector",
+      "autointerp": " words related to discrimination against particular religious or ethnic groups",
+      "frac_nonzero": 0.01607,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/648"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 9615,
+      "pos": 3,
+      "supernode_label": "Self- construction / prejudice-associated detector",
+      "autointerp": " words containing the prefix \"self-\"",
+      "frac_nonzero": 0.00549,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/9615"
+    },
+    {
+      "layer": 8,
+      "feature_idx": 2483,
+      "pos": 3,
+      "supernode_label": "Self- construction / prejudice-associated detector",
+      "autointerp": " discussions of slavery, prejudice, and disabilities",
+      "frac_nonzero": 0.02256,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/8-gemmascope-transcoder-16k/2483"
+    },
+    {
+      "layer": 5,
+      "feature_idx": 7488,
+      "pos": 10,
+      "supernode_label": "Stain, disgrace, reputation-harm semantics",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/5-gemmascope-transcoder-16k/7488"
+    },
+    {
+      "layer": 6,
+      "feature_idx": 1561,
+      "pos": 10,
+      "supernode_label": "Stain, disgrace, reputation-harm semantics",
+      "autointerp": " words related to respect, status, and pride, both positive and negative",
+      "frac_nonzero": 0.00847,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/1561"
+    },
+    {
+      "layer": 8,
+      "feature_idx": 13875,
+      "pos": 10,
+      "supernode_label": "Stain, disgrace, reputation-harm semantics",
+      "autointerp": "negative sentiment related to reputation and betrayal of trust.",
+      "frac_nonzero": 0.01022,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/8-gemmascope-transcoder-16k/13875"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "emb_jew",
+      "to": "id_early"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "id_early"
+    },
+    {
+      "from": "id_early",
+      "to": "id_late"
+    },
+    {
+      "from": "emb_jew",
+      "to": "id_late"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "id_late"
+    },
+    {
+      "from": "emb_self",
+      "to": "self_social"
+    },
+    {
+      "from": "id_late",
+      "to": "self_social"
+    },
+    {
+      "from": "emb_stain",
+      "to": "reputation"
+    },
+    {
+      "from": "id_late",
+      "to": "output"
+    },
+    {
+      "from": "id_early",
+      "to": "output"
+    },
+    {
+      "from": "self_social",
+      "to": "output"
+    },
+    {
+      "from": "reputation",
+      "to": "output"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "**Analysis:** The probe\u2019s toxicity score is driven primarily by a conjunction of a highly salient Jewish/ethnic-identity signal and explicit derogatory \u201cstain/disgrace\u201d language, with the identity pathway considerably more dominant than the lexical insult pathway.\n\n**Confidence:** 8/10\n\n**Reasoning:** The synthetic target is the probe direction, not a next-token logit. Its largest positive circuit driver is **L6:F648 at \u201c Jew\u201d (pos 6)**, contributing **+0.7383** directly to the toxicity-probe score. This is a selective feature (frac_nonzero **0.01607**) labelled *discrimination against particular religious or ethnic groups*; its promoted tokens include **\u201cJewish,\u201d \u201cJews,\u201d** and synagogue-related strings. It receives an exceptionally large direct upstream contribution from **Emb: \u201c Jew\u201d (pos 6), +19.375**, so the group term itself is the principal source of this branch.\n\nThe recorded circuit\u2019s identity path is:\n\n`Emb: Jew \u2192 Jewish / ethnic-identity detectors \u2192 discrimination-against-religious/ethnic-groups detector \u2192 probe score`.\n\nThe early supernode contains:\n- **L2:F13158 (pos 6)**, +0.2852 direct probe effect, a rare *race/ethnicity* feature (frac_nonzero **0.00986**) that promotes *ethnic, LGBT, Hispanic, Muslim,* and **Jewish**. Its strongest upstream input is again **Emb: Jew, +6.8125**.\n- **L3:F12151 (pos 6)**, a very selective (frac_nonzero **0.00322**) orthographic/letter-sequence feature with promoted tokens **\u201cjew\u201d**. It is not a clean semantic detector, but is still directly driven by **Emb: Jew (+11)** and **Emb: liberal (+3.375)**, making it a lexical association channel rather than evidence of the full proposition.\n- **L4:F2405 (pos 6)**, religious-affiliation signal (frac_nonzero **0.00705**), with **Emb: liberal (+6.75)** and **Emb: Jew (+3.78)** as leading inputs.\n- **L4:F14733 (pos 6)**, Israel/Palestine-associated signal (frac_nonzero **0.00958**) and **L4:F117**, race/racism signal (frac_nonzero **0.01199**). These show that the representation is recruiting a broad social-identity / conflict / prejudice neighborhood, not merely recognizing the sentence\u2019s evaluative meaning.\n\nThus, there is clear evidence supporting the user\u2019s concern: the **identity-group word \u201cJew\u201d is not incidental**. It supplies a disproportionately large input contribution to the top downstream toxicity-driving feature, and several early detectors respond to ethnicity, religion, racism, or Israel/Palestine associations. In particular, the dominant L6 feature fires on broad references to Jews and other ethnic/religious groups, including examples that are not necessarily abusive. This makes it a plausible spurious correlate for toxicity when considered in isolation.\n\nHowever, the circuit is **not identity-only**. A separately grounded negative-evaluation path captures the actual hostile content:\n- **Emb: \u201c stain\u201d (pos 9)** feeds **L6:F1561 (pos 10)** with +5.4688. L6:F1561 is a respect/status/pride/shame feature (frac_nonzero **0.00847**) promoting *dignity, humiliation, Shame,* and *shame*.\n- That feeds **L8:F13875 (pos 10)**, direct probe effect **+0.2256**, a selective (frac_nonzero **0.01022**) *negative reputation / betrayal / disgrace* feature. It is also directly supported by **Emb: \u201cstain\u201d (+2.02)**. This is semantically appropriate: calling someone \u201ca stain on his brethren and his country\u201d is explicitly demeaning.\n\nA third, weaker branch connects **Emb: \u201cSelf\u201d (pos 1), +2.59** through **L3:F9615**, a *self-* construction detector (frac_nonzero **0.00549**), to **L8:F2483 (pos 3)**, which has a +0.1738 probe effect and is labelled around prejudice/disability/slavery discussions (frac_nonzero **0.02256**). Its semantics are broad and noisy; it should be interpreted as a weak contextual association rather than a reliable detector of toxicity.\n\nOverall, the final circuit supports a **mixed mechanism**:\n1. genuine lexical-semantic detection of derogation/shame (\u201cstain,\u201d and the broader self-condemning formulation); and  \n2. a stronger identity-associated route activated by **\u201cJew\u201d**, \u201cliberal,\u201d and a cluster of race/religion/conflict features.\n\nThe second route creates a meaningful risk of false positives on neutral discussion of Jewish identity or other protected groups, because its dominant detector is directly activated by the identity term and its training-distribution associations, not solely by a representation of hostile targeting.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

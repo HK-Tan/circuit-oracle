@@ -1,0 +1,173 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "mid-layer \"race\" identity-token detectors",
+      "reason": "fires on race token, identity-group signal"
+    },
+    {
+      "id": "L6:F3902",
+      "label": "mid-layer \"race\" identity-token detectors",
+      "reason": "race-token detector feeding probe"
+    },
+    {
+      "id": "L6:F9228",
+      "label": "mid-layer \"race\" identity-token detectors",
+      "reason": "identity-token detector"
+    },
+    {
+      "id": "L7:F8030",
+      "label": "mid-layer \"race\" identity-token detectors",
+      "reason": "identity-token detector"
+    },
+    {
+      "id": "L4:F117",
+      "label": "early identity / race-token features",
+      "reason": "identity-token feature"
+    },
+    {
+      "id": "L4:F117",
+      "label": "early identity / race-token features",
+      "reason": "identity-token feature"
+    },
+    {
+      "id": "L4:F117",
+      "label": "early identity / race-token features",
+      "reason": "identity-token feature"
+    },
+    {
+      "id": "L4:F5584",
+      "label": "early identity / race-token features",
+      "reason": "race/identity token feature"
+    },
+    {
+      "id": "L4:F5584",
+      "label": "early identity / race-token features",
+      "reason": "race/identity token feature"
+    },
+    {
+      "id": "L4:F11200",
+      "label": "early identity / race-token features",
+      "reason": "identity-token feature"
+    },
+    {
+      "id": "L3:F13061",
+      "label": "early \"black people\" identity features",
+      "reason": "\"black people\" identity cue"
+    },
+    {
+      "id": "L3:F13493",
+      "label": "early \"black people\" identity features",
+      "reason": "\"black people\" identity cue"
+    },
+    {
+      "id": "L3:F16373",
+      "label": "early \"black people\" identity features",
+      "reason": "\"black people\" identity cue"
+    },
+    {
+      "id": "L3:F6517",
+      "label": "early \"black people\" identity features",
+      "reason": "identity-phrase feature"
+    },
+    {
+      "id": "L2:F10509",
+      "label": "inhibitory race-position features",
+      "reason": "race-position feature"
+    },
+    {
+      "id": "L2:F13158",
+      "label": "inhibitory race-position features",
+      "reason": "race-position feature"
+    },
+    {
+      "id": "L2:F13158",
+      "label": "inhibitory race-position features",
+      "reason": "race-position feature"
+    },
+    {
+      "id": "L0:F7820",
+      "label": "low-layer token-identity features",
+      "reason": "token-identity detector"
+    },
+    {
+      "id": "L0:F1823",
+      "label": "low-layer token-identity features",
+      "reason": "token-identity detector"
+    },
+    {
+      "id": "L0:F2961",
+      "label": "low-layer token-identity features",
+      "reason": "token-identity detector"
+    },
+    {
+      "id": "L0:F2848",
+      "label": "low-layer token-identity features",
+      "reason": "token-identity detector"
+    },
+    {
+      "id": "L0:F9026",
+      "label": "low-layer token-identity features",
+      "reason": "token-identity detector"
+    },
+    {
+      "id": "L0:F9076",
+      "label": "low-layer token-identity features",
+      "reason": "token-identity detector"
+    },
+    {
+      "id": "L0:F358",
+      "label": "low-layer token-identity features",
+      "reason": "token-identity detector"
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe output",
+      "label": "toxicity classifier direction",
+      "reason": "output node, not a feature"
+    },
+    {
+      "id": "Emb: \" race\"",
+      "label": "(embed/output)",
+      "reason": "input embedding"
+    },
+    {
+      "id": "Emb: \" black\"",
+      "label": "(embed/output)",
+      "reason": "input embedding"
+    },
+    {
+      "id": "Emb: \" people\"",
+      "label": "(embed/output)",
+      "reason": "input embedding"
+    },
+    {
+      "id": "Emb: \" of\"",
+      "label": "(embed/output)",
+      "reason": "input embedding"
+    },
+    {
+      "id": "Emb: \" cops\"",
+      "label": "(embed/output)",
+      "reason": "input embedding"
+    },
+    {
+      "id": "Emb: \" mentioning\"",
+      "label": "(embed/output)",
+      "reason": "input embedding"
+    },
+    {
+      "id": "Emb: <bos>",
+      "label": "(embed/output)",
+      "reason": "input embedding"
+    }
+  ],
+  "n_spurious": 24,
+  "n_causal": 0,
+  "n_other": 8,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle attributes prediction mainly to identity/race detectors; no causal toxicity features are claimed."
+}

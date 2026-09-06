@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations",
+      "reason": "Political/ideological cue; not toxicity itself."
+    },
+    {
+      "id": "L0:F4478",
+      "label": "terms related to ownership and belief systems.",
+      "reason": "Identity/orientation association; spurious demographic cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Direct-address/targeting in hostile construction."
+    },
+    {
+      "id": "L3:F10868",
+      "label": "the phrase \"I'm a\" or \"I am a\"",
+      "reason": "Identity-phrase template tied to classification context."
+    },
+    {
+      "id": "L3:F16254",
+      "label": "conditional statements followed by actions the speaker will take",
+      "reason": "Conditional directive syntax, identity-independent."
+    },
+    {
+      "id": "L0:F3850",
+      "label": "punctuation marks",
+      "reason": "Structural punctuation supporting utterance form."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: you (pos 2)",
+      "label": "you",
+      "reason": "Embedding token only."
+    },
+    {
+      "id": "Emb: a (pos 4)",
+      "label": "a",
+      "reason": "Embedding token only."
+    },
+    {
+      "id": "Emb: If (pos 1)",
+      "label": "If",
+      "reason": "Embedding token only."
+    },
+    {
+      "id": "Emb: warrior (pos 7)",
+      "label": "warrior",
+      "reason": "Embedding token only."
+    },
+    {
+      "id": "Emb: social (pos 5)",
+      "label": "social",
+      "reason": "Embedding token only."
+    },
+    {
+      "id": "Emb: bakery (pos 13)",
+      "label": "bakery",
+      "reason": "Embedding token only."
+    },
+    {
+      "id": "L6:F9005",
+      "label": "words and phrases related to desserts",
+      "reason": "Benign bakery/dessert topic; opposes probe."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 4,
+  "n_other": 7,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Circuit mixes structural/directive cues with two identity-related shortcuts; benign dessert feature opposes the probe."
+}

@@ -1,0 +1,186 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Emb: castle (pos 2)",
+      "label": "castle embedding",
+      "reason": "Premise content overlap; building semantics."
+    },
+    {
+      "id": "Emb: house (pos 14)",
+      "label": "house embedding",
+      "reason": "Premise content overlap; building semantics."
+    },
+    {
+      "id": "Emb: tower (pos 13)",
+      "label": "tower embedding",
+      "reason": "Premise content overlap; fortification semantics."
+    },
+    {
+      "id": "Emb: early (pos 6)",
+      "label": "early embedding",
+      "reason": "Temporal content relevant to relation."
+    },
+    {
+      "id": "Emb: early (pos 39)",
+      "label": "early embedding",
+      "reason": "Temporal content relevant to relation."
+    },
+    {
+      "id": "Emb: together (pos 26)",
+      "label": "together embedding",
+      "reason": "Content-neutral relational phrasing."
+    },
+    {
+      "id": "Emb: any (pos 38)",
+      "label": "any embedding",
+      "reason": "Structural quantifier, not negation word."
+    },
+    {
+      "id": "Emb: with (pos 17)",
+      "label": "with embedding",
+      "reason": "Structural/compositional marker."
+    },
+    {
+      "id": "Emb: itself (pos 3)",
+      "label": "itself embedding",
+      "reason": "Reflexive/compositional cue."
+    },
+    {
+      "id": "Emb: from (pos 20)",
+      "label": "from embedding",
+      "reason": "Structural relation marker."
+    },
+    {
+      "id": "L0:F9604",
+      "label": "the word \"house\" along with words about social class/gatherings",
+      "reason": "House/building semantics."
+    },
+    {
+      "id": "L0:F1027",
+      "label": "the word \"tower\"",
+      "reason": "Fortification/building semantics."
+    },
+    {
+      "id": "L0:F5494",
+      "label": "the word \"early\" often related to time",
+      "reason": "Temporal semantic feature."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic preposition detector."
+    },
+    {
+      "id": "L0:F8082",
+      "label": "the word \"itself\" and sometimes words ending in \"ing\"",
+      "reason": "Reflexive/content-neutral cue."
+    },
+    {
+      "id": "L0:F10815",
+      "label": "the word \"any\"",
+      "reason": "Generic quantifier detector."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic preposition detector."
+    },
+    {
+      "id": "L0:F7513",
+      "label": "the word \"together\"",
+      "reason": "Generic content-word detector."
+    },
+    {
+      "id": "L1:F1027",
+      "label": "the word \"tower\"",
+      "reason": "Reinforces building content."
+    },
+    {
+      "id": "L1:F11220",
+      "label": "instances of the word \"restore\" and related words",
+      "reason": "Dismissed by oracle; irrelevant here."
+    },
+    {
+      "id": "L1:F8633",
+      "label": "words or phrases related to tourism and historical places",
+      "reason": "Historical-place semantics."
+    },
+    {
+      "id": "L2:F1430",
+      "label": "mentions of the U.S. White House or a generic house",
+      "reason": "House/building semantics."
+    },
+    {
+      "id": "L2:F4429",
+      "label": "mentions of the beginning of a period",
+      "reason": "Temporal relation feature."
+    },
+    {
+      "id": "L2:F8185",
+      "label": "places for shopping or military activities",
+      "reason": "Location/place semantics."
+    },
+    {
+      "id": "L2:F15739",
+      "label": "the word \"tower,\" possibly in contexts relating to radio or construction",
+      "reason": "Tower/construction semantics."
+    },
+    {
+      "id": "L2:F9529",
+      "label": "words related to slavery and slave ownership",
+      "reason": "Oracle-specified semantics, but not negation."
+    },
+    {
+      "id": "L2:F9989",
+      "label": "the word \"molecular\"",
+      "reason": "Dismissed/irrelevant content word."
+    },
+    {
+      "id": "L3:F10598",
+      "label": "the word \"himself\"",
+      "reason": "Reflexive/compositional cue."
+    },
+    {
+      "id": "L3:F14368",
+      "label": "house/early composition path",
+      "reason": "Content composition feature."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Estate/administration semantics."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Fortification semantics."
+    },
+    {
+      "id": "L4:F8583",
+      "label": "historical references including people, titles, and dates",
+      "reason": "Historical alignment feature."
+    },
+    {
+      "id": "L4:F3089",
+      "label": "words related to housing, especially apartments and condominiums",
+      "reason": "Housing semantics."
+    },
+    {
+      "id": "L6:F486",
+      "label": "Scottish locations and political terms",
+      "reason": "Oracle says driven by house/tower paths."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Spurious code-documentation detector."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 35,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle emphasizes content-overlap and structural cues, not negation-word shortcut features."
+}

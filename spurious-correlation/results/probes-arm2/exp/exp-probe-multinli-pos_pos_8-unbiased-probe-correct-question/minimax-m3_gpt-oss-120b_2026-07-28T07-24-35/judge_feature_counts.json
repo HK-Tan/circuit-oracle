@@ -1,0 +1,113 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L2:F2701",
+      "label": "'Congress' entity feature at pos 2 (the premise)",
+      "reason": "Premise entity anchor; semantic relation context."
+    },
+    {
+      "id": "L3:F5753",
+      "label": "'include' verb feature at pos 12",
+      "reason": "Hypothesis content verb; semantic relation cue."
+    },
+    {
+      "id": "L4:F59",
+      "label": "'began to' phrase feature at pos 11 (hyp start)",
+      "reason": "Hypothesis phrase structure; meaning-bearing."
+    },
+    {
+      "id": "L4:F7775",
+      "label": "'comma/which' syntactic feature at pos 9 (premise clause)",
+      "reason": "Clause boundary supporting relation reasoning."
+    },
+    {
+      "id": "L0:F6044",
+      "label": "'Congress' word-piece feature at pos 2",
+      "reason": "Lexical anchor tied to premise semantics."
+    },
+    {
+      "id": "L0:F15411",
+      "label": "'Congress' word-piece feature at pos 2",
+      "reason": "Duplicate entity lexical anchor."
+    },
+    {
+      "id": "L3:F12596",
+      "label": "'to' / 'began to' feature at pos 11 (hyp)",
+      "reason": "Hypothesis verb-phrase semantics."
+    },
+    {
+      "id": "L2:F11469",
+      "label": "'began to' phrase feature at pos 11 (hyp)",
+      "reason": "Meaning-bearing phrase in hypothesis."
+    },
+    {
+      "id": "L2:F11734",
+      "label": "clause/relative-pronoun syntactic feature at pos 9",
+      "reason": "Syntax used for relation encoding."
+    },
+    {
+      "id": "L0:F4870",
+      "label": "comma token feature at pos 9",
+      "reason": "Pure punctuation feature; structural only."
+    },
+    {
+      "id": "L3:F10633",
+      "label": "'which ... The' opening tokens feature at pos 3/4",
+      "reason": "Structural opening-token pattern."
+    },
+    {
+      "id": "L0:F13564",
+      "label": "'which' word feature at pos 4",
+      "reason": "Relative-pronoun syntax; structural."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe output",
+      "label": "contradiction",
+      "reason": "Output node, not a circuit feature."
+    },
+    {
+      "id": "Emb: ' Congress' (pos 2)",
+      "label": "embedding token",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: ' include' (pos 12)",
+      "label": "embedding token",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: ' began' (pos 10)",
+      "label": "embedding token",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: ' to' (pos 11)",
+      "label": "embedding token",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: ',' (pos 9)",
+      "label": "embedding token",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: ' which' (pos 4)",
+      "label": "embedding token",
+      "reason": "Input embedding, not a feature."
+    },
+    {
+      "id": "Emb: 'The' (pos 1)",
+      "label": "embedding token",
+      "reason": "Input embedding, not a feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 12,
+  "n_other": 8,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle denies negation-driven signal; circuit is lexical/syntactic and semantic-relation based."
+}

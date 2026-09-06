@@ -1,0 +1,338 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F7998",
+      "label": "words related to telecommunications and telephones",
+      "reason": "Oracle says it fires on list/context surfaces, not negation semantics."
+    },
+    {
+      "id": "L4:F7998",
+      "label": "words related to telecommunications and telephones",
+      "reason": "Duplicate feature entry in oracle list; still non-causal surface detector."
+    },
+    {
+      "id": "L4:F7643",
+      "label": "words related to providing assistance or describing results",
+      "reason": "Help/result wording, not NLI meaning relation."
+    },
+    {
+      "id": "L4:F14061",
+      "label": "terms related to menus and data relations",
+      "reason": "Menu/list topic, not entailment logic."
+    },
+    {
+      "id": "L4:F14061",
+      "label": "terms related to menus and data relations",
+      "reason": "Duplicate feature entry in oracle list; topical only."
+    },
+    {
+      "id": "L4:F14235",
+      "label": "the word \"list\" and words like \"listed\" and \"alphabetically\"",
+      "reason": "Direct list-word detector, no semantic relation."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Explicit negation-word detector on \"not\"."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Explicit negation-word detector on \"not\"."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Pure token detector."
+    },
+    {
+      "id": "L1:F12253",
+      "label": "the word 'menu'",
+      "reason": "Pure token detector."
+    },
+    {
+      "id": "L0:F8046",
+      "label": "the word \"will.\"",
+      "reason": "Pure token detector."
+    },
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Word-level surface feature."
+    },
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Word-level surface feature."
+    },
+    {
+      "id": "L3:F3573",
+      "label": "the word \"menu\" often in conjunction with interface elements",
+      "reason": "Topic/interface detector."
+    },
+    {
+      "id": "L0:F6649",
+      "label": "the word \"Title\"",
+      "reason": "Pure token detector."
+    },
+    {
+      "id": "L0:F7404",
+      "label": "the word \"faith\", sometimes in association with related ideas like \"links\" or \"opportunities\"",
+      "reason": "Unrelated lexical association."
+    },
+    {
+      "id": "L0:F5128",
+      "label": "the word \"words\" or words that are similar in meaning (word, Word, phrases, matrix)",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F4523",
+      "label": "the word \"domestic\" and words associated with globalism",
+      "reason": "Topic/lexical detector."
+    },
+    {
+      "id": "L2:F3648",
+      "label": "code snippets related to menus and restaurants",
+      "reason": "Code/menu topic, not NLI meaning."
+    },
+    {
+      "id": "L2:F188",
+      "label": "the word \"will\" in various contexts, sometimes alongside words related to consequences or legal matters",
+      "reason": "Surface word feature."
+    },
+    {
+      "id": "L2:F3059",
+      "label": "the verb \"record\"",
+      "reason": "Surface lexical feature."
+    },
+    {
+      "id": "L2:F11317",
+      "label": "abbreviated examples",
+      "reason": "Structural/style feature."
+    },
+    {
+      "id": "L5:F14641",
+      "label": "words relating to recording audio and/or video",
+      "reason": "Topic detector."
+    },
+    {
+      "id": "L6:F11757",
+      "label": "references to videos, particularly on YouTube",
+      "reason": "Topic detector."
+    },
+    {
+      "id": "L6:F6132",
+      "label": "mentions pertaining to surveillance and video technology",
+      "reason": "Topic detector."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Generic phrasing detector."
+    },
+    {
+      "id": "L10:F6670",
+      "label": "technical terms, especially within scientific or medical contexts",
+      "reason": "Generic technical-context feature."
+    },
+    {
+      "id": "L16:F10989",
+      "label": "the",
+      "reason": "Pure stopword/structure feature."
+    },
+    {
+      "id": "L16:F11696",
+      "label": "does/did",
+      "reason": "Auxiliary-word detector."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Pure structural feature."
+    },
+    {
+      "id": "L2:F8776",
+      "label": "words related to finance and property law",
+      "reason": "Unrelated topical detector."
+    },
+    {
+      "id": "L0:F13280",
+      "label": "passages discussing real estate",
+      "reason": "Unrelated topical detector."
+    },
+    {
+      "id": "L0:F15480",
+      "label": "usages of the word \"back\" and similar words involved in processes",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Generic document-style feature."
+    },
+    {
+      "id": "L0:F9990",
+      "label": "the word \"concert\" and some words related to concerts",
+      "reason": "Unrelated topical detector."
+    },
+    {
+      "id": "L0:F5099",
+      "label": "the word \"obtain\" and related words",
+      "reason": "Surface lexical feature."
+    },
+    {
+      "id": "L0:F16046",
+      "label": "question words",
+      "reason": "Pure structural feature."
+    },
+    {
+      "id": "L0:F11835",
+      "label": "terms used in software code such as \"assembly\", \"using\", \"namespace\", and \"license\"",
+      "reason": "Code/style feature."
+    },
+    {
+      "id": "L0:F9489",
+      "label": "the word \"would\" and words adjacent to would",
+      "reason": "Auxiliary/surface feature."
+    },
+    {
+      "id": "L0:F4071",
+      "label": "the words \"assigned\" and \"assigning\", sometimes with a very weak association to \"particular\"",
+      "reason": "Lexical association only."
+    },
+    {
+      "id": "L2:F10798",
+      "label": "words related to music recording",
+      "reason": "Topic detector."
+    },
+    {
+      "id": "L2:F7863",
+      "label": "the word \"provide\" in various forms.",
+      "reason": "Surface lexical feature."
+    },
+    {
+      "id": "L2:F9012",
+      "label": "instances where something was not successful",
+      "reason": "General negated-context feature, not NLI contradiction semantics."
+    },
+    {
+      "id": "L2:F4147",
+      "label": "the word \"recorded\" (and related reporting terms)",
+      "reason": "Surface lexical feature."
+    },
+    {
+      "id": "L1:F6817",
+      "label": "the word \"category\" or \"categories\" regardless of the context they appear in",
+      "reason": "Pure token detector."
+    },
+    {
+      "id": "L1:F5249",
+      "label": "the word \"pipe\" or \"pipes\"",
+      "reason": "Pure token detector."
+    },
+    {
+      "id": "L1:F10242",
+      "label": "text about animals and/or experimental subjects being fed something in a scientific or agricultural context",
+      "reason": "Unrelated topical detector."
+    },
+    {
+      "id": "L1:F11170",
+      "label": "words related to telephones and connecting/disconnecting calls",
+      "reason": "Unrelated topical detector."
+    },
+    {
+      "id": "L1:F7463",
+      "label": "the word \"will,\" possibly indicating a future tense or prediction",
+      "reason": "Surface auxiliary detector."
+    },
+    {
+      "id": "L1:F1958",
+      "label": "the word \"provide\" and its variations.",
+      "reason": "Surface lexical feature."
+    },
+    {
+      "id": "L1:F4515",
+      "label": "details of album arrangements",
+      "reason": "Unrelated topic feature."
+    },
+    {
+      "id": "L1:F7207",
+      "label": "mathematical notation, especially exponents with negative signs",
+      "reason": "Structural/math feature."
+    },
+    {
+      "id": "L1:F14137",
+      "label": "words or phrases that appear in legal or technical documents, like names of laws, legal terms (pleaded, testified), and technical terms, especially when abbreviated or in code",
+      "reason": "Generic legal/technical style feature."
+    },
+    {
+      "id": "L1:F763",
+      "label": "mentions of being in bed or going to bed",
+      "reason": "Unrelated topical detector."
+    },
+    {
+      "id": "L1:F11363",
+      "label": "the word \"list\" and variations",
+      "reason": "Surface lexical feature."
+    },
+    {
+      "id": "L3:F11479",
+      "label": "the word \"list\"",
+      "reason": "Surface lexical feature."
+    },
+    {
+      "id": "L3:F15841",
+      "label": "proper nouns or other named items, including websites",
+      "reason": "Generic named-entity feature."
+    },
+    {
+      "id": "L3:F14624",
+      "label": "the word \"recording\" along with related verbs and nouns",
+      "reason": "Surface lexical feature."
+    },
+    {
+      "id": "L3:F11448",
+      "label": "code syntax where the word \"list\" appears frequently",
+      "reason": "Code syntax feature."
+    },
+    {
+      "id": "L2:F13545",
+      "label": "code mentions of lists and listboxes",
+      "reason": "Code/list topic feature."
+    },
+    {
+      "id": "L5:F14534",
+      "label": "unknown",
+      "reason": "Oracle provides no semantic label here."
+    },
+    {
+      "id": "L5:F6053",
+      "label": "unknown",
+      "reason": "Oracle provides no semantic label here."
+    },
+    {
+      "id": "L10:F14174",
+      "label": "left curly brackets",
+      "reason": "Pure structural feature."
+    },
+    {
+      "id": "L1:F763",
+      "label": "mentions of being in bed or going to bed",
+      "reason": "Unrelated topical detector."
+    },
+    {
+      "id": "L1:F14137",
+      "label": "words or phrases that appear in legal or technical documents, like names of laws, legal terms (pleaded, testified), and technical terms, especially when abbreviated or in code",
+      "reason": "Generic legal/technical style feature."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 0,
+  "n_other": 57,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows only negation-word and topic/structure features; no genuine semantic-relation feature is claimed."
+}

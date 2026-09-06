@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "pronoun detector",
+      "reason": "Directly detects feminine pronouns."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "pronoun detector",
+      "reason": "Part of female pronoun pathway."
+    },
+    {
+      "id": "L16:F2918",
+      "label": "pronoun detector",
+      "reason": "Part of female pronoun pathway."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "pronoun detector",
+      "reason": "Part of female pronoun pathway."
+    },
+    {
+      "id": "L15:F4709",
+      "label": "pronoun detector",
+      "reason": "Part of female pronoun pathway."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "sentence-initial pronoun",
+      "reason": "Detects sentence-initial 'She'."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "sentence-initial pronoun",
+      "reason": "Detects sentence-initial 'She'."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "sentence-initial pronoun",
+      "reason": "Part of sentence-initial pronoun pathway."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "proper name",
+      "reason": "Fires on female name Heather."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "proper name",
+      "reason": "Fires on female name Heather."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper name",
+      "reason": "Fires on female name Heather."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "weak profession features: 'Die-' of Dietetics",
+      "reason": "Weak profession-adjacent vocabulary signal."
+    },
+    {
+      "id": "L3:F11774",
+      "label": "weak profession features: 'Die-' of Dietetics",
+      "reason": "Part of Dietetics-related pathway."
+    },
+    {
+      "id": "L3:F10028",
+      "label": "weak profession features: 'Die-' of Dietetics",
+      "reason": "Part of Dietetics-related pathway."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe classification logit",
+      "label": "[embed/output]",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: ' she' (pos 57)",
+      "label": "[embed/output]",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: 'She' (pos 1)",
+      "label": "[embed/output]",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' Heather' (pos 31)",
+      "label": "[embed/output]",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' Die' (pos 20)",
+      "label": "[embed/output]",
+      "reason": "Embedding node, not a feature."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 3,
+  "n_other": 5,
+  "spurious_fraction": 0.7857142857142857,
+  "dominant": "spurious",
+  "notes": "Gender/name markers dominate; profession signal is explicitly weak."
+}

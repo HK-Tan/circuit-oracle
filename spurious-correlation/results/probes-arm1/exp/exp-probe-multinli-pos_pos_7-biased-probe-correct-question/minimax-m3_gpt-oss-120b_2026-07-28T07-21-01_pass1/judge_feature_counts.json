@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Direct negation pattern in hypothesis."
+    },
+    {
+      "id": "L16:F9779",
+      "label": "negation words or contractions like \"won't\", \"not\", \"never\"",
+      "reason": "Plain negation-word detector."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Negation pattern detector."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "broader negation/equivocation detector",
+      "reason": "Broad negation cue."
+    },
+    {
+      "id": "L15:F3521",
+      "label": "broader negation/equivocation detector",
+      "reason": "Broad negation cue."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Raw lexical not detector."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "\"not\"/negative-term detector",
+      "reason": "Negative-term detector."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "multilingual negation-fragment detector",
+      "reason": "Negation fragment detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "cross-language negations",
+      "reason": "Negation cue in another language."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F10408",
+      "label": "geographical locations, especially related to bodies of water",
+      "reason": "Semantic content about sea."
+    },
+    {
+      "id": "L4:F4173",
+      "label": "words and phrases related to marine environments or legal terminology related to maritime issues.",
+      "reason": "Water-domain semantic feature."
+    },
+    {
+      "id": "L6:F3848",
+      "label": "words related to marine biology and fishing",
+      "reason": "Water-domain semantic feature."
+    },
+    {
+      "id": "L4:F4605",
+      "label": "words and phrases related to marine environments or legal terminology related to maritime issues.",
+      "reason": "Church/building semantics."
+    },
+    {
+      "id": "L5:F14591",
+      "label": "words and phrases related to marine environments or legal terminology related to maritime issues.",
+      "reason": "Abbey/building semantics."
+    },
+    {
+      "id": "L4:F3833",
+      "label": "summarization/perception cue",
+      "reason": "Content cue, not negation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe contradiction score",
+      "label": "output direction",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "L2:F12694",
+      "label": "possibility/Canisius cue",
+      "reason": "Oracle says unrelated cue."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Purely structural lexical feature."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Purely structural lexical feature."
+    },
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Purely structural lexical feature."
+    },
+    {
+      "id": "L0:F5060",
+      "label": "mentions of dinner or breakfast",
+      "reason": "Oracle-curated generic lexical feature."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 6,
+  "n_other": 6,
+  "spurious_fraction": 0.6,
+  "dominant": "spurious",
+  "notes": "Negation-word circuitry dominates; content features are secondary."
+}

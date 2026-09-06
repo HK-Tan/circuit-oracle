@@ -1,0 +1,154 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F15382",
+      "label": "mentions of a female person.",
+      "reason": "Direct female-person mention detector."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Explicit female pronoun detector."
+    },
+    {
+      "id": "L0:F3232",
+      "label": "mentions of the third person plural pronoun \"They\"",
+      "reason": "Not gendered; excluded from spurious."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female-referent detector."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Woman's-name detector."
+    },
+    {
+      "id": "L7:F2765",
+      "label": "mentions of people or characters, and their performance, roles, injuries, or personal details such as age, death, or family.",
+      "reason": "No gender role; generic people feature."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Generic name detector; not gendered."
+    },
+    {
+      "id": "L12:F15193",
+      "label": "proper names",
+      "reason": "Generic proper-name detector."
+    },
+    {
+      "id": "L13:F6622",
+      "label": "pronouns.",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L14:F5740",
+      "label": "sentences with multiple pronouns in them",
+      "reason": "Structural pronoun pattern."
+    },
+    {
+      "id": "L14:F8671",
+      "label": "capitalized names of people",
+      "reason": "Generic capitalized-name detector."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Direct women/girls mention detector."
+    },
+    {
+      "id": "L18:F9023",
+      "label": "personal names and associated titles",
+      "reason": "Title/name pattern; can reflect gender markers."
+    },
+    {
+      "id": "L18:F10572",
+      "label": "proper nouns, especially names of people and characters",
+      "reason": "Generic proper-noun detector."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women's-name detector."
+    },
+    {
+      "id": "L16:F6025",
+      "label": "capitalized first names, sometimes followed by last names",
+      "reason": "Generic name detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Nutrition/diet profession vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: 'Her'",
+      "label": "'Her' (pos 1)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' She'",
+      "label": "' She' (pos 15)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' Heather'",
+      "label": "' Heather' (pos 46)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: ' nutrition'",
+      "label": "' nutrition' (pos 7)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "Emb: '<bos>'",
+      "label": "'<bos>' (pos 0)",
+      "reason": "Embedding node, not a feature."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Generic proper-noun detector."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Generic name/title pattern."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Clearly unrelated structural/code feature."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Generic pronoun feature."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "Narrative/gendered, but oracle centers women; still spurious."
+    },
+    {
+      "id": "L15:F13002",
+      "label": "titles and names of people followed by their role or profession",
+      "reason": "Name-to-role pattern; not profession itself."
+    }
+  ],
+  "n_spurious": 16,
+  "n_causal": 1,
+  "n_other": 11,
+  "spurious_fraction": 0.9411764705882353,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly driven by female-gender markers, with one nutrition-related causal feature."
+}

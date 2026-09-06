@@ -1,0 +1,98 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "His",
+      "reason": "Gendered possessive pronoun; spurious male marker."
+    },
+    {
+      "id": "Emb: He (pos 14)",
+      "label": "He",
+      "reason": "Male pronoun; spurious gender cue."
+    },
+    {
+      "id": "Emb: He (pos 37)",
+      "label": "He",
+      "reason": "Male pronoun; spurious gender cue."
+    },
+    {
+      "id": "Emb: His (pos 1) - pos 0 BOS context",
+      "label": "His",
+      "reason": "Contextual gender marker from initial pronoun."
+    },
+    {
+      "id": "Early male pronoun detectors (L0)",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Explicitly detects male pronouns."
+    },
+    {
+      "id": "L4:4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Pronoun detector for gendered references."
+    },
+    {
+      "id": "L6:12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Direct male-person concept detector."
+    },
+    {
+      "id": "L7:14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Includes possessives; used here for gendered pronouns."
+    },
+    {
+      "id": "L7:14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Explicitly includes his/he/him."
+    },
+    {
+      "id": "L18:14743",
+      "label": "He",
+      "reason": "Literal male pronoun detector."
+    },
+    {
+      "id": "L19:8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "People/pronoun feature, used on male pronouns here."
+    },
+    {
+      "id": "L18:10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun feature firing on gendered tokens."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: research (pos 2)",
+      "label": "research",
+      "reason": "Profession-related academic vocabulary."
+    },
+    {
+      "id": "Emb: interest (pos 3)",
+      "label": "interest",
+      "reason": "Content word linked to professional biography."
+    },
+    {
+      "id": "L0:4564",
+      "label": "the word \"research.\"",
+      "reason": "Academic/profession-indicator word."
+    },
+    {
+      "id": "L2:9740",
+      "label": "the word \"interest\" and related words.",
+      "reason": "Neutral lexical content, not gender."
+    },
+    {
+      "id": "L18:7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Tool/skill vocabulary relevant to profession."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 12,
+  "n_causal": 5,
+  "n_other": 0,
+  "spurious_fraction": 0.7058823529411765,
+  "dominant": "spurious",
+  "notes": "Male-pronoun circuitry dominates; only a few profession-related lexical features appear."
+}

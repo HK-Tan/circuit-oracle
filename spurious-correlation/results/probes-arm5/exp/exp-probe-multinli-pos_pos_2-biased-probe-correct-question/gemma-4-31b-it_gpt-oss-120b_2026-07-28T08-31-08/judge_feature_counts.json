@@ -1,0 +1,44 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F9602",
+      "label": "interjections and filler words",
+      "reason": "Filler/discourse marker, not semantic NLI content."
+    },
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Agreement marker; purely conversational and noncausal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Generic connective; not entailment-specific semantic evidence."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Common article; structural, not causal semantic relation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Negation-related token detector; oracle says it has strong effect."
+    },
+    {
+      "id": "Probe Score",
+      "label": "[(embed/output)]",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 2,
+  "n_other": 2,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle cites superficial markers; generic keywords are treated as other, not causal."
+}

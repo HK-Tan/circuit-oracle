@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: white",
+      "label": "identity/race token",
+      "reason": "Identity-group token directly tied to demographic signal."
+    },
+    {
+      "id": "Emb: dude",
+      "label": "gendered/demographic token",
+      "reason": "Demographic identity token, not toxic content."
+    },
+    {
+      "id": "Emb: black",
+      "label": "identity/race token",
+      "reason": "Identity-group token directly tied to demographic signal."
+    },
+    {
+      "id": "Emb: man",
+      "label": "gendered token",
+      "reason": "Gendered demographic token, not toxicity."
+    },
+    {
+      "id": "L0:F3436@2",
+      "label": "generic subword detector on \"white\"",
+      "reason": "Triggered by demographic token; identity signal."
+    },
+    {
+      "id": "L0:F10910@2",
+      "label": "generic subword detector on \"white\"",
+      "reason": "Triggered by demographic token; identity signal."
+    },
+    {
+      "id": "L0:F13442@2",
+      "label": "generic subword detector on \"white\"",
+      "reason": "Triggered by demographic token; identity signal."
+    },
+    {
+      "id": "L0:F13663@2",
+      "label": "generic subword detector on \"white\"",
+      "reason": "Triggered by demographic token; identity signal."
+    },
+    {
+      "id": "L0:F1015@6",
+      "label": "generic subword detector on \"black\"",
+      "reason": "Triggered by demographic token; identity signal."
+    },
+    {
+      "id": "L3:F13061@7",
+      "label": "identity group token encoding on \"dude\"",
+      "reason": "Encodes identity-group token representation."
+    },
+    {
+      "id": "L3:F13061@3",
+      "label": "identity group token encoding on \"dude\"",
+      "reason": "Encodes identity-group token representation."
+    },
+    {
+      "id": "L4:F15204@2",
+      "label": "feature on \"white\"/\"dude\" tokens",
+      "reason": "Oracle places it on identity tokens."
+    },
+    {
+      "id": "L4:F7136@2",
+      "label": "feature on \"white\"/\"dude\" tokens",
+      "reason": "Oracle places it on identity tokens."
+    },
+    {
+      "id": "L4:F117@3",
+      "label": "feature on \"white\"/\"dude\" tokens",
+      "reason": "Oracle places it on identity tokens."
+    },
+    {
+      "id": "L6:F4008@3",
+      "label": "entity token representation on \"dude\"",
+      "reason": "Identity-related token representation."
+    },
+    {
+      "id": "L6:F1330@3",
+      "label": "entity token representation on \"dude\"",
+      "reason": "Identity-related token representation."
+    },
+    {
+      "id": "L6:F627@3",
+      "label": "entity token representation on \"dude\"",
+      "reason": "Identity-related token representation."
+    },
+    {
+      "id": "L6:F14669@3",
+      "label": "entity token representation on \"dude\"",
+      "reason": "Identity-related token representation."
+    },
+    {
+      "id": "L9:F11035@3",
+      "label": "late-layer identity composition on \"dude\"",
+      "reason": "Late identity composition feature."
+    },
+    {
+      "id": "L8:F13464@3",
+      "label": "late-layer identity composition on \"dude\"",
+      "reason": "Late identity composition feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: stealing",
+      "label": "verb, mildly negative",
+      "reason": "Negative action verb relevant to toxicity."
+    },
+    {
+      "id": "L0:F15621@4",
+      "label": "feature on \"stealing\"",
+      "reason": "Only feature tied to toxic/negative content."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe direction",
+      "label": "toxicity classifier",
+      "reason": "Model output direction, not a feature."
+    }
+  ],
+  "n_spurious": 20,
+  "n_causal": 2,
+  "n_other": 1,
+  "spurious_fraction": 0.9090909090909091,
+  "dominant": "spurious",
+  "notes": "Oracle indicates identity tokens dominate; toxic verb contributes minimally."
+}

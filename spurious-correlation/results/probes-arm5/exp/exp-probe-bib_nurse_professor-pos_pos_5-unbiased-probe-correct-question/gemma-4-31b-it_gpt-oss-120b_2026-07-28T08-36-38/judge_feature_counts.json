@@ -1,0 +1,58 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L3:F10198",
+      "label": "Medical Procedure/Birth Context",
+      "reason": "Birth/labor context is profession-relevant medical content."
+    },
+    {
+      "id": "L3:F9008",
+      "label": "Medical Procedure/Birth Context",
+      "reason": "Birth/labor context is profession-relevant medical content."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "Medical Environment/Institution",
+      "reason": "Detects medical settings, personnel, and facilities."
+    },
+    {
+      "id": "L6:F4490",
+      "label": "Medical Environment/Institution",
+      "reason": "Detects medical settings, personnel, and facilities."
+    },
+    {
+      "id": "L6:F9980",
+      "label": "words and abbreviations associated with pediatric gastroenterology and inflammatory bowel disease",
+      "reason": "Specialized medical terminology signals profession."
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare institution names indicate medical profession context."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Professional medical/leadership terminology is causal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: Labor",
+      "reason": "Input embedding token, not a feature claim."
+    },
+    {
+      "id": "embed/output",
+      "label": "Probe Score (Residual Stream)",
+      "reason": "Output score, not a semantic feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 7,
+  "n_other": 2,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle supports medical/professional cues only; no gender-marker features are claimed."
+}

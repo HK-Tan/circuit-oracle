@@ -1,0 +1,38 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F7214",
+      "label": "references to countries or regions associated with Islam",
+      "reason": "Identity-group geography signal, not toxicity semantics."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Direct Islam/Middle East identity mention."
+    },
+    {
+      "id": "L8:F16294",
+      "label": "proper nouns related to the Middle East and Central Asia, and potentially to Islam",
+      "reason": "Identity-associated proper nouns, not toxic content."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic structural word detector."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic structural word detector."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 0,
+  "n_other": 2,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows identity-only Islam pathway; no toxic-content features are claimed."
+}

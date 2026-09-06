@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "Female pronoun detector",
+      "reason": "Fires on \"She\""
+    },
+    {
+      "id": "L4:F7864",
+      "label": "Female pronoun feature",
+      "reason": "Direct from \"She\" embedding"
+    },
+    {
+      "id": "L18:F14677",
+      "label": "Mid/Late layer aggregation features (L12-L19)",
+      "reason": "Aggregates repeated \"She\" signals"
+    },
+    {
+      "id": "L19:F9685",
+      "label": "Mid/Late layer aggregation features (L12-L19)",
+      "reason": "Downstream of pronoun pathway"
+    },
+    {
+      "id": "L17:F5889",
+      "label": "Mid/Late layer aggregation features (L12-L19)",
+      "reason": "Downstream of pronoun pathway"
+    },
+    {
+      "id": "L15:F3330",
+      "label": "Mid/Late layer aggregation features (L12-L19)",
+      "reason": "Downstream of pronoun pathway"
+    },
+    {
+      "id": "L13:F6622",
+      "label": "Mid/Late layer aggregation features (L12-L19)",
+      "reason": "Downstream of pronoun pathway"
+    },
+    {
+      "id": "L0:F12519",
+      "label": "Early-layer token-level features (L0-L2)",
+      "reason": "Tied to \"She\" token"
+    },
+    {
+      "id": "L0:F15382",
+      "label": "Early-layer token-level features (L0-L2)",
+      "reason": "Tied to \"She\" token"
+    },
+    {
+      "id": "L0:F9519",
+      "label": "Early-layer token-level features (L0-L2)",
+      "reason": "Tied to \"She\" token"
+    },
+    {
+      "id": "L2:F7672",
+      "label": "Early-layer token-level features (L0-L2)",
+      "reason": "Tied to \"She\" token"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "Profession word feature",
+      "reason": "Fires on \"Nursing\""
+    },
+    {
+      "id": "L4:F11037",
+      "label": "Profession word feature",
+      "reason": "Downstream of \"Nursing\""
+    },
+    {
+      "id": "L5:F10392",
+      "label": "Profession word feature",
+      "reason": "Downstream of \"Nursing\""
+    },
+    {
+      "id": "L4:F15317",
+      "label": "Sentence-pattern feature",
+      "reason": "Biographical syntax on \"graduated\""
+    },
+    {
+      "id": "L12:F12940",
+      "label": "Mid/Late layer aggregation features (L12-L19)",
+      "reason": "Sentence-pattern aggregation"
+    },
+    {
+      "id": "Probe Direction",
+      "label": "Nurse classification",
+      "reason": "Target output direction"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: She (pos 1)",
+      "label": "Embedding token",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: She (pos 19)",
+      "label": "Embedding token",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: Nursing (pos 10)",
+      "label": "Embedding token",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: graduated (pos 2)",
+      "label": "Embedding token",
+      "reason": "Input token, not a feature"
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 6,
+  "n_other": 4,
+  "spurious_fraction": 0.6470588235294118,
+  "dominant": "spurious",
+  "notes": "Pronoun pathway dominates; nursing signal exists but is smaller."
+}

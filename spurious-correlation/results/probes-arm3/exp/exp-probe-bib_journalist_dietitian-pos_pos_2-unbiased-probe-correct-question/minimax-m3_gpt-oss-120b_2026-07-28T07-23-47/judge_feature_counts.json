@@ -1,0 +1,98 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Profession-relevant nutrition vocabulary."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Nutrition/food-domain terminology."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Directly indicates nutrition profession context."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Scientific nutrition-study context."
+    },
+    {
+      "id": "L15:F2510",
+      "label": "words and phrases related to food preparation and consumption, along with some words relating to the digestive system and eating disorders",
+      "reason": "Food/nutrition and digestive terminology."
+    },
+    {
+      "id": "L1:F728",
+      "label": "words related to gaining knowledge",
+      "reason": "Education/learning cue relevant to profession."
+    },
+    {
+      "id": "L4:F10494",
+      "label": "words related to health, medicine, diet, drugs, age groups, and excercise",
+      "reason": "Health/diet terminology."
+    },
+    {
+      "id": "L4:F9554",
+      "label": "words related to food, rations and feeding",
+      "reason": "Food-related professional vocabulary."
+    },
+    {
+      "id": "L3:F6920",
+      "label": "words related to consuming food, nutrients, and specific diets",
+      "reason": "Nutrition-domain indicators."
+    },
+    {
+      "id": "L0:F5201",
+      "label": "the word \"nutrition\"",
+      "reason": "Explicit profession-related term."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Structural/numerical pattern."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural pattern."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F5829",
+      "label": "the word \"easier\" with some modifiers such as \"max\"",
+      "reason": "Not profession-specific."
+    },
+    {
+      "id": "L0:F9927",
+      "label": "the word \"studio,\" sometimes with a modifier like \"usually\"",
+      "reason": "Oracle does not connect it to profession."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 10,
+  "n_other": 7,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle explicitly treats gender features as non-driving; profession/nutrition features dominate."
+}

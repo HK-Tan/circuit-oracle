@@ -1,0 +1,94 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male-pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-reference detector."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Tracks gendered pronouns."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit male-gender feature."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Promotes male pronouns in context."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male-pronoun detector."
+    },
+    {
+      "id": "L18:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Used here for male-reference chain."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Same male-reference feature instance."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun-only feature, gendered here."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" ... \"he\" and \"him\"",
+      "reason": "Explicitly male-pronoun focused."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L22:F12117",
+      "label": "references to actions that people can take or have taken.",
+      "reason": "Structural/action feature, not profession-specific."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: 'His' (pos 1)",
+      "label": "His",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: ' his' (pos 12)",
+      "label": " his",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: ' He' (pos 10)",
+      "label": " He",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Oracle notes divine-pronoun pattern, not task causal."
+    },
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Not a profession-biography signal here."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 1,
+  "n_other": 5,
+  "spurious_fraction": 0.9090909090909091,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly driven by male-pronoun signals, not profession indicators."
+}

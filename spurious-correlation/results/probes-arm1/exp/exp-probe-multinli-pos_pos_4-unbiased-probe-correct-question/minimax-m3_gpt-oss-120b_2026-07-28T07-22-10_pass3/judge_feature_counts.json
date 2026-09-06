@@ -1,0 +1,178 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13586",
+      "label": "words ending in 'thing' and 'one' often with preceding words indicating the presence of something",
+      "reason": "Tracks 'No one' absence cue."
+    },
+    {
+      "id": "L0:F4438",
+      "label": "the word \"one\".",
+      "reason": "Part of 'No one' negation/absence cue."
+    },
+    {
+      "id": "L1:F15800",
+      "label": "the word \"one\"",
+      "reason": "Part of 'No one' negation/absence cue."
+    },
+    {
+      "id": "L0:F7321",
+      "label": "the word \"so,\" and also matches some words ending in \"ware\" and \"such\"",
+      "reason": "Conjunction cue in negation/contrast context."
+    },
+    {
+      "id": "L1:F8159",
+      "label": "the word \"usually\" and, to a lesser extent, words that sometimes accompany it",
+      "reason": "Oracle groups it with negation/absence cues."
+    },
+    {
+      "id": "L3:F10901",
+      "label": "the word \"usually\"",
+      "reason": "Oracle groups it with negation/absence cues."
+    },
+    {
+      "id": "L2:F8837",
+      "label": "the word \"one\" or \"body\" when preceded by the words \"no\" or \"every.\"",
+      "reason": "Explicit 'No one' absence detector."
+    },
+    {
+      "id": "L3:F12229",
+      "label": "conjunctions and words connecting ideas",
+      "reason": "Supports contrast/negation linkage."
+    },
+    {
+      "id": "L4:F4739",
+      "label": "the word \"so\" followed by personal pronouns or words associated with personal experience",
+      "reason": "Contrast/discourse cue in negation path."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F12961",
+      "label": "words pertaining to tourism",
+      "reason": "Direct tourism content relevant to task."
+    },
+    {
+      "id": "L3:F9405",
+      "label": "words related to tourism, travel, and organized events",
+      "reason": "Semantic travel/tourism relation."
+    },
+    {
+      "id": "L3:F10711",
+      "label": "the word \"tour\"",
+      "reason": "Tourism meaning feature."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Tourism content feature."
+    },
+    {
+      "id": "L3:F8202",
+      "label": "mentions of legal or governmental offices",
+      "reason": "Content-bearing office semantics."
+    },
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Action/content feature in prompt."
+    },
+    {
+      "id": "L2:F11769",
+      "label": "the word \"up\"",
+      "reason": "Part of phrasal action content."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Action content feature."
+    },
+    {
+      "id": "L0:F10562",
+      "label": "the word \"up\"",
+      "reason": "Action content feature."
+    },
+    {
+      "id": "L0:F10904",
+      "label": "the word \"adequate\" (and words that appear near it)",
+      "reason": "Oracle includes as action/content path."
+    },
+    {
+      "id": "L4:F11236",
+      "label": "calls to action and imperative verbs",
+      "reason": "Imperative/action semantics."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic function-word signal."
+    },
+    {
+      "id": "L0:F8478",
+      "label": "SQL queries",
+      "reason": "Oracle-dismissed structural artifact."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Content-neutral lexical pattern."
+    },
+    {
+      "id": "L0:F7204",
+      "label": "the word \"here\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/number detector."
+    },
+    {
+      "id": "L0:F306",
+      "label": "the word \"adoption\" in various contexts",
+      "reason": "Oracle-dismissed irrelevant content."
+    },
+    {
+      "id": "L0:F10219",
+      "label": "the indefinite article \"a\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F474",
+      "label": "the word \"crop\" when used to refer to farmed plants",
+      "reason": "Oracle-dismissed irrelevant content."
+    },
+    {
+      "id": "L0:F7036",
+      "label": "the word \"thing\" and words associated with an idea or concept",
+      "reason": "Content-neutral lexical pattern."
+    },
+    {
+      "id": "L0:F11658",
+      "label": "occurrences of the substring \"up\" and phrases that end in the word \"from\"",
+      "reason": "Structural substring detector."
+    },
+    {
+      "id": "L0:F16358",
+      "label": "the word \"up\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L1:F7976",
+      "label": "the word \"load\" in technical documents",
+      "reason": "Oracle-dismissed domain-specific artifact."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 9,
+  "n_causal": 24,
+  "n_other": 0,
+  "spurious_fraction": 0.2727272727272727,
+  "dominant": "mixed",
+  "notes": "Oracle shows both tourism content and negation/absence cues; not purely spurious."
+}

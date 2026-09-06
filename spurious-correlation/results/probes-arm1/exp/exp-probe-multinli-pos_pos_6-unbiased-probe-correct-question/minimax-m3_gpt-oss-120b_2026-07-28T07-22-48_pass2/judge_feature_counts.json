@@ -1,0 +1,149 @@
+{
+  "spurious_features": [
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Negation/state detector driving contradiction via 'not/allowed' pattern."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe (contradiction classifier)",
+      "reason": "Classifier output, not an interpretable feature."
+    },
+    {
+      "id": "L2:F11518",
+      "label": "the word \"land\" in scientific/agricultural contexts",
+      "reason": "Content/topic detector; semantic overlap feature."
+    },
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Content/topic detector; semantic overlap feature."
+    },
+    {
+      "id": "L1:F361",
+      "label": "words related to agriculture and ecology",
+      "reason": "Content/topic detector; semantic overlap feature."
+    },
+    {
+      "id": "L3:F15978",
+      "label": "mentions of land, property, and acreage.",
+      "reason": "Content/topic detector; semantic overlap feature."
+    },
+    {
+      "id": "L1:F461",
+      "label": "the word \"land\"",
+      "reason": "Content/topic detector; semantic overlap feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F15492",
+      "label": "the word \"for\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L2:F10849",
+      "label": "the word \"set\"",
+      "reason": "Pure lexical detector; not semantic."
+    },
+    {
+      "id": "L2:F15312",
+      "label": "the word \"about.\"",
+      "reason": "Pure lexical detector; not semantic."
+    },
+    {
+      "id": "L3:F4464",
+      "label": "the word \"about\"",
+      "reason": "Pure lexical detector; not semantic."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Pure structural feature."
+    },
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Structural/style feature, not task semantic role."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Pronoun detector; dismissed as unrelated."
+    },
+    {
+      "id": "L4:F12225",
+      "label": "transitional conclusion words, often used in legal or academic writing",
+      "reason": "Generic discourse marker; dismissed by oracle."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Generic pronoun/transition detector."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Pure structural lexical pattern."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Punctuation/format detector."
+    },
+    {
+      "id": "L2:F14822",
+      "label": "the abbreviation \"SO\" followed by other characters",
+      "reason": "Code/abbreviation detector."
+    },
+    {
+      "id": "L6:F14744",
+      "label": "the words \"about,\" \"to,\" and \"work.\"",
+      "reason": "Generic lexical pattern; not semantic."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Pronoun detector; dismissed as unrelated."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Pure structural feature."
+    },
+    {
+      "id": "L1:F361",
+      "label": "words related to agriculture and ecology",
+      "reason": "Already counted as causal above."
+    },
+    {
+      "id": "L3:F15978",
+      "label": "mentions of land, property, and acreage.",
+      "reason": "Already counted as causal above."
+    },
+    {
+      "id": "L6:F14744",
+      "label": "the words \"about,\" \"to,\" and \"work.\"",
+      "reason": "Generic lexical pattern; not semantic."
+    },
+    {
+      "id": "L2:F15312",
+      "label": "the word \"about.\"",
+      "reason": "Pure lexical detector; not semantic."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 6,
+  "n_other": 20,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "causal",
+  "notes": "Main causal signal is topic overlap; one negation-like spurious feature also appears."
+}

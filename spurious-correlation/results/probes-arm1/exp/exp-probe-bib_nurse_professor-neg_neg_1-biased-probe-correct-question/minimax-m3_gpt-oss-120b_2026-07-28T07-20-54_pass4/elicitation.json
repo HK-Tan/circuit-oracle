@@ -1,0 +1,159 @@
+{
+  "prompt": "Dataset: bib_nurse_professor-neg_neg_1 | Probe: biased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 7,
+      "feature_idx": 14893,
+      "pos": 1,
+      "supernode_label": "Pos 1 ('His') pronoun/gender features",
+      "autointerp": " pronouns or possessive pronouns",
+      "frac_nonzero": 0.00885,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/7-gemmascope-transcoder-16k/14893"
+    },
+    {
+      "layer": 7,
+      "feature_idx": 14946,
+      "pos": 1,
+      "supernode_label": "Pos 1 ('His') pronoun/gender features",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/7-gemmascope-transcoder-16k/14946"
+    },
+    {
+      "layer": 6,
+      "feature_idx": 12990,
+      "pos": 1,
+      "supernode_label": "Pos 1 ('His') pronoun/gender features",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/12990"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 4315,
+      "pos": 1,
+      "supernode_label": "Pos 1 ('His') pronoun/gender features",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/4315"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 5491,
+      "pos": 1,
+      "supernode_label": "Pos 1 ('His') pronoun/gender features",
+      "autointerp": "references to God in the third person.",
+      "frac_nonzero": 0.008239999999999999,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/5491"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 2994,
+      "pos": 1,
+      "supernode_label": "Pos 1 ('His') pronoun/gender features",
+      "autointerp": "the pronoun \"his\" and the pronoun \"he.\"",
+      "frac_nonzero": 0.07325999999999999,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/2994"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 1069,
+      "pos": 1,
+      "supernode_label": "Pos 1 ('His') pronoun/gender features",
+      "autointerp": " references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "frac_nonzero": 0.007800000000000001,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/1069"
+    },
+    {
+      "layer": 18,
+      "feature_idx": 14743,
+      "pos": 14,
+      "supernode_label": "Pos 14 (' He') pronoun features",
+      "autointerp": "He",
+      "frac_nonzero": 0.01809,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/18-gemmascope-transcoder-16k/14743"
+    },
+    {
+      "layer": 18,
+      "feature_idx": 7400,
+      "pos": 1,
+      "supernode_label": "Pos 14 (' He') pronoun features",
+      "autointerp": " words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "frac_nonzero": 0.01585,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/18-gemmascope-transcoder-16k/7400"
+    },
+    {
+      "layer": 18,
+      "feature_idx": 10315,
+      "pos": 1,
+      "supernode_label": "Pos 14 (' He') pronoun features",
+      "autointerp": " pronouns and possessive pronouns",
+      "frac_nonzero": 0.03892,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/18-gemmascope-transcoder-16k/10315"
+    },
+    {
+      "layer": 19,
+      "feature_idx": 8814,
+      "pos": 1,
+      "supernode_label": "Pos 14 (' He') pronoun features",
+      "autointerp": " various pronouns and names referring to people",
+      "frac_nonzero": 0.08654999999999999,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/19-gemmascope-transcoder-16k/8814"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 0,
+      "pos": 1,
+      "supernode_label": "Emb: His (pos 1)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/0"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 0,
+      "pos": 14,
+      "supernode_label": "Emb:  He (pos 14)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/0"
+    },
+    {
+      "layer": 26,
+      "feature_idx": 0,
+      "pos": 0,
+      "supernode_label": "Probe classification score (output direction)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/26-gemmascope-transcoder-16k/0"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "emb_his",
+      "to": "pos1_pronoun_features"
+    },
+    {
+      "from": "emb_he",
+      "to": "pos14_he_features"
+    },
+    {
+      "from": "pos1_pronoun_features",
+      "to": "pos14_he_features"
+    },
+    {
+      "from": "pos1_pronoun_features",
+      "to": "output_logit"
+    },
+    {
+      "from": "pos14_he_features",
+      "to": "output_logit"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "**Analysis:** The probe's classification score is driven almost entirely by male-gendered pronoun features (his/He) at two token positions, with no representation of profession-specific semantics (computer graphics, visualization, PhD, etc.) anywhere in the circuit.\n\n**Confidence:** 9\n\n**Reasoning:** The circuit confirms the user's concern that the probe relies on spurious gender markers rather than genuine profession indicators.\n\n**Evidence:**\n- **Top driver (positive, direct_effect = +0.43):** L7:F14893, labeled \"pronouns or possessive pronouns,\" fired on `His` at pos 1. Its top activating examples are all \"his\" tokens, and its promoted tokens are feminine (\"herself,\" \"she,\" \"ihrer\") while suppressed are masculine (\"himself,\" \"his,\" \"\u5f7c\u306e\") \u2014 yet it *pushes toward* the probe class here, meaning the probe treats male pronouns as evidence.\n- **Second strong positive (+0.24):** L19:F8814 (\"various pronouns and names referring to people\") at pos 1, similarly a gender/pronoun detector (promoted: \"she/her\"; suppressed: \"himself/his/\u5f7c\").\n- **Strong positive (+0.23):** L0:F2994 explicitly labeled \"the pronoun 'his' and the pronoun 'he'\" \u2014 a pure male-pronoun feature with frac_nonzero \u2248 0.073.\n- **Strong negative (\u22120.25, \u22120.21):** L18:F14743 (\"He\") at pos 14 *and* pos 37 \u2014 an explicit capitalized \"He\" detector that pushes against the probe's classification.\n\n**Tracing to embeddings:** Following the L7:F14893 \u2192 L0:F2994 path upward reaches `Emb: His (pos 1)` with direct_effect 23.5 \u2014 the \"His\" token embedding is the deepest identifiable source. Likewise, L18:F14743 traces to `Emb:  He (pos 14)` with direct_effect 22.4. The two male-pronoun token positions (pos 1 \"His\" and pos 14 \" He\") supply essentially all of the signal.\n\n**What's missing:** No feature in the top-15 drives encodes \"computer graphics,\" \"visualization,\" \"PhD,\" \"researcher,\" \"scientist,\" \"lab,\" or any profession-specific semantic content. The probe has learned a heuristic: \"male pronouns at sentence start \u2192 male-dominated profession.\" The same circuit on a bio about a female scientist would presumably give the opposite classification, indicating the probe is detecting the biographical subject's gender, not their profession.\n\n**Conclusion:** The user's hypothesis is correct \u2014 the probe's circuit is dominated by male-pronoun/gender features with direct token-embedding roots at the gendered tokens themselves, and contains no profession-representing features.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

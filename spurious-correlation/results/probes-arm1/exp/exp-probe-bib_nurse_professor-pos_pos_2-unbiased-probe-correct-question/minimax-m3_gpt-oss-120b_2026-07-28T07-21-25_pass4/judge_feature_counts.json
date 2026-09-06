@@ -1,0 +1,83 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F5038",
+      "label": "the word \"graduated\" or variations of it",
+      "reason": "Education/background term; profession-related, not gender."
+    },
+    {
+      "id": "L0:F11959",
+      "label": "the word \"graduated\" and the word \"more.\"",
+      "reason": "Graduation/education language supports profession inference."
+    },
+    {
+      "id": "L0:F6270",
+      "label": "the word \"whom\", sometimes also activating on nearby punctuation, sentence starts, discourse markers, and other function words",
+      "reason": "Oracle says institution-name detector; structural or education context."
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Direct nursing profession indicator."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit profession label for nursing."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Healthcare vocabulary is profession-specific."
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare/hospital names signal medical profession."
+    },
+    {
+      "id": "L8:F16339",
+      "label": "text discussing hospital infections and bacteria",
+      "reason": "Medical/hospital content is profession-indicating."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Contains medicine/studies; causal profession terminology."
+    },
+    {
+      "id": "L15:F15159",
+      "label": "words related to medicine and healthcare",
+      "reason": "Medical/healthcare terms directly indicate nursing."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Nurse-manager role is a profession indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' Nursing' (pos 10)",
+      "label": "Embedding: Nursing",
+      "reason": "Input token itself; not a feature claim."
+    },
+    {
+      "id": "Emb: 'graduated' (pos 2)",
+      "label": "Embedding: graduated",
+      "reason": "Input token itself; not a feature claim."
+    },
+    {
+      "id": "Emb: 'University' (pos 14)",
+      "label": "Embedding: University",
+      "reason": "Input token itself; not a feature claim."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 11,
+  "n_other": 3,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle claims profession-indicator circuit; no gender-marker features are actually cited."
+}

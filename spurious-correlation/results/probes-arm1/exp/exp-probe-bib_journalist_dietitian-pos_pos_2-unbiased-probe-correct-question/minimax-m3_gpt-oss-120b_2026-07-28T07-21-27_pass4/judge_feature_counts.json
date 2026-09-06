@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "female pronoun / she-her feature",
+      "reason": "Gender marker; explicitly spurious for profession."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gender pronoun feature; spurious signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Nutrition/scientific profession content."
+    },
+    {
+      "id": "L15:F2510",
+      "label": "words and phrases related to food preparation and consumption, along with some words relating to the digestive system and eating disorders",
+      "reason": "Cooking/food vocabulary; profession indicator."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-topic content; causal profession cue."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Direct nutrition vocabulary; causal."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Diet/health terminology; causal."
+    },
+    {
+      "id": "L1:F728",
+      "label": "word 'learn' (educational verb)",
+      "reason": "Educational terminology; content-neutral causal cue."
+    },
+    {
+      "id": "L1:F815",
+      "label": "word 'passion'",
+      "reason": "Content-neutral lexical feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic word/structure feature."
+    },
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "the punctuation \".\"",
+      "reason": "Pure punctuation detector."
+    },
+    {
+      "id": "Emb: ' nutrition' (pos 13)",
+      "label": "token embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: ' cook' (pos 17)",
+      "label": "token embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: 'She' (pos 1)",
+      "label": "token embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: ' has' (pos 2)",
+      "label": "token embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: ' others' (pos 7)",
+      "label": "token embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: ' about' (pos 9)",
+      "label": "token embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: ' learn' (pos 8)",
+      "label": "token embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: ' passion' (pos 4)",
+      "label": "token embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: ' to' (pos 16)",
+      "label": "token embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: '.' (pos 22)",
+      "label": "token embedding",
+      "reason": "Raw token, not a feature."
+    },
+    {
+      "id": "Emb: '<bos>' (pos 0)",
+      "label": "token embedding",
+      "reason": "BOS token; structural only."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 7,
+  "n_other": 16,
+  "spurious_fraction": 0.2222222222222222,
+  "dominant": "causal",
+  "notes": "Oracle says nutrition/food content drives the probe; gender markers are inhibitory and spurious."
+}

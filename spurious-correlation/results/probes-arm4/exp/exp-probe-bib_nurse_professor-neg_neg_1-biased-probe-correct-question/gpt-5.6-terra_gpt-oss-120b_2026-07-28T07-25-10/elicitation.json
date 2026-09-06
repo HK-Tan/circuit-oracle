@@ -1,0 +1,143 @@
+{
+  "prompt": "Dataset: bib_nurse_professor-neg_neg_1 | Probe: biased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 0,
+      "feature_idx": 2994,
+      "pos": 1,
+      "supernode_label": "Early male-pronoun detectors",
+      "autointerp": "the pronoun \"his\" and the pronoun \"he.\"",
+      "frac_nonzero": 0.07325999999999999,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/2994"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 4315,
+      "pos": 1,
+      "supernode_label": "Early male-pronoun detectors",
+      "autointerp": " mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "frac_nonzero": 0.02624,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/4315"
+    },
+    {
+      "layer": 6,
+      "feature_idx": 12990,
+      "pos": 1,
+      "supernode_label": "Early male-pronoun detectors",
+      "autointerp": " male pronouns and titles along with descriptors associated with men",
+      "frac_nonzero": 0.06766,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/12990"
+    },
+    {
+      "layer": 7,
+      "feature_idx": 14893,
+      "pos": 1,
+      "supernode_label": "L7 pronoun / gender contrast",
+      "autointerp": " pronouns or possessive pronouns",
+      "frac_nonzero": 0.00885,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/7-gemmascope-transcoder-16k/14893"
+    },
+    {
+      "layer": 7,
+      "feature_idx": 14946,
+      "pos": 1,
+      "supernode_label": "L7 pronoun / gender contrast",
+      "autointerp": " the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "frac_nonzero": 0.01669,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/7-gemmascope-transcoder-16k/14946"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 4564,
+      "pos": 2,
+      "supernode_label": "Research lexical detector",
+      "autointerp": "the word \"research.\"",
+      "frac_nonzero": 0.006939999999999999,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/4564"
+    },
+    {
+      "layer": 18,
+      "feature_idx": 14743,
+      "pos": 14,
+      "supernode_label": "Late He / male-reference detector",
+      "autointerp": "He",
+      "frac_nonzero": 0.01809,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/18-gemmascope-transcoder-16k/14743"
+    },
+    {
+      "layer": 18,
+      "feature_idx": 14743,
+      "pos": 37,
+      "supernode_label": "Late He / male-reference detector",
+      "autointerp": "He",
+      "frac_nonzero": 0.01809,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/18-gemmascope-transcoder-16k/14743"
+    },
+    {
+      "layer": 18,
+      "feature_idx": 10315,
+      "pos": 1,
+      "supernode_label": "Late person/pronoun representation",
+      "autointerp": " pronouns and possessive pronouns",
+      "frac_nonzero": 0.03892,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/18-gemmascope-transcoder-16k/10315"
+    },
+    {
+      "layer": 19,
+      "feature_idx": 8814,
+      "pos": 1,
+      "supernode_label": "Late person/pronoun representation",
+      "autointerp": " various pronouns and names referring to people",
+      "frac_nonzero": 0.08654999999999999,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/19-gemmascope-transcoder-16k/8814"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "emb_his",
+      "to": "early_male"
+    },
+    {
+      "from": "early_male",
+      "to": "pronoun_contrast"
+    },
+    {
+      "from": "emb_his",
+      "to": "pronoun_contrast"
+    },
+    {
+      "from": "emb_his",
+      "to": "late_person"
+    },
+    {
+      "from": "pronoun_contrast",
+      "to": "late_person"
+    },
+    {
+      "from": "emb_he",
+      "to": "late_male"
+    },
+    {
+      "from": "pronoun_contrast",
+      "to": "probe"
+    },
+    {
+      "from": "late_male",
+      "to": "probe"
+    },
+    {
+      "from": "late_person",
+      "to": "probe"
+    },
+    {
+      "from": "research",
+      "to": "probe"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "**Analysis:** The profession-probe score is driven predominantly by a male-reference/pronoun circuit centered on *\u201cHis\u201d* and *\u201cHe,\u201d* with only weak direct evidence of genuine research/professional content.\n\n**Confidence:** 9/10\n\n**Reasoning:** The saved circuit indicates a substantial spurious gender pathway into the profession-classification direction.\n\n- The most important positive direct driver is **L7:14893 at pos 1** (+0.4297). It is a selective pronoun feature (frac_nonzero **0.00885**) labeled \u201cpronouns or possessive pronouns\u201d; its strongest English examples activate on *his*, and its promoted tokens include *she/herself* while suppressing *his/himself*. Its strongest upstream source is directly **Emb: His (pos 1)** (+23.5), not a profession term.\n- The near-equal countervailing feature, **L7:14946 at pos 1** (\u22120.4258; frac_nonzero **0.01669**), is explicitly a *his/he/him* detector. It too receives its dominant positive input from **Emb: His (pos 1)** (+18.375). Thus the probe contains a strong learned **gender/pronoun contrast**, rather than merely a generic biography feature.\n- Earlier components reinforce that interpretation: **L0:2994**, **L4:4315**, and **L6:12990** are all male-pronoun detectors. In particular, L6:12990 is labeled male pronouns/titles/descriptors, has frac_nonzero **0.06766**, promotes *himself*, and suppresses feminine forms. These form the circuit\u2019s **Early male-pronoun detectors** supernode feeding the L7 contrast.\n- A second major negative contribution is **L18:14743** at both pos 14 (\u22120.2520) and pos 37 (\u22120.2051). This is a highly selective *He* feature (frac_nonzero **0.01809**), and at pos 14 its overwhelmingly largest upstream input is **Emb: He (pos 14)** (+22.375). Its activity is therefore again explained by masculine coreference, not \u201cvisualization,\u201d \u201cgraphics,\u201d or another occupation-specific concept.\n- The late **person/pronoun representation** also enters the score: **L19:8814 at pos 1** contributes positively (+0.2402), is a broad person/pronoun feature (frac_nonzero **0.08655**), and receives input from *His*, L7:14946, and **L18:10315**, another possessive-pronoun detector (frac_nonzero **0.03892**). This preserves the gender/reference signal into late layers before it projects to the probe.\n- There is some authentic topical signal available: **L0:4564 at pos 2** is a sparse lexical detector for *\u201cresearch\u201d* (frac_nonzero **0.00694**), sourced by the input\u2019s \u201cresearch.\u201d But its direct effect on the probe is only **+0.1572**, far smaller than the combined magnitude of the pronoun-related features. The inspected late \u201csoftware/coding\u201d feature **L18:7400** also appeared in the pathway, but its direct probe effect is negative (\u22120.1592) and it is not an unambiguous profession detector in this particular input.\n\nIn short, the circuit supports the user\u2019s concern. The classification direction is not cleanly reading the explicit profession evidence\u2014*research interests, scientific visualization, computer graphics, computer science degrees, technical staff, Advanced Computing Laboratory*. Instead, its largest causal components are highly specific features tracking **male pronouns and male person-reference structure**. The net score reflects a mixture of genuine research/technical-biography evidence and a much more prominent gender-correlated shortcut.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

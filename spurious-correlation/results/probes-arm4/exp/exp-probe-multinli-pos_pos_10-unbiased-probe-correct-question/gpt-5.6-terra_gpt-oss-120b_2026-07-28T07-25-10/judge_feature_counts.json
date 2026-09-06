@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Literal negation detector in hypothesis."
+    },
+    {
+      "id": "L3:F12079",
+      "label": "negations and Chinese names",
+      "reason": "Negation detector firing on not."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Cross-sentence negation cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F16097",
+      "label": "superlative adjectives and the words \"test\" or \"point\"",
+      "reason": "Strangeness/superlative cue linked to meaning."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb:not",
+      "label": "not (pos 17)",
+      "reason": "Raw embedding token, not a feature."
+    },
+    {
+      "id": "Emb:There",
+      "label": "There (pos 15)",
+      "reason": "Raw embedding token, not a feature."
+    },
+    {
+      "id": "Emb:strangest",
+      "label": "strangest (pos 2)",
+      "reason": "Raw embedding token, not a feature."
+    },
+    {
+      "id": "Emb:reversal",
+      "label": "reversal (pos 4)",
+      "reason": "Raw embedding token, not a feature."
+    },
+    {
+      "id": "L10:F6670",
+      "label": "technical terms, especially within scientific or medical contexts",
+      "reason": "Generic topical/technical surface feature."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Generic topical/template feature."
+    },
+    {
+      "id": "L4:F12799",
+      "label": "words ending in \"-ly\" along with phrases that contain the word 'odd' or 'oddities'",
+      "reason": "Surface oddness/word-shape feature."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Unrelated topical lexical detector."
+    },
+    {
+      "id": "L6:F12420",
+      "label": "artistic elements that break established guidelines",
+      "reason": "Generic stylistic/conceptual surface feature."
+    },
+    {
+      "id": "L7:F905",
+      "label": "words indicating amounts, changes, or trends",
+      "reason": "Purely structural/trend-like feature."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 1,
+  "n_other": 10,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "Oracle mainly cites negation-triggered paths; only weak semantic overlap signal appears."
+}

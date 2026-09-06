@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-pronoun feature; gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism/profession indicator."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media/journalism semantic signal."
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Professional title/vocation terminology."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "words and phrases associated with broadcast journalism",
+      "reason": "Broadcast-news profession feature."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Explicit journalism/reporting indicator."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter profession vocabulary."
+    },
+    {
+      "id": "L6:F8529",
+      "label": "news or press reports in the media",
+      "reason": "Press/reporting content signal."
+    },
+    {
+      "id": "L7:F9521",
+      "label": "news sources and people involved in journalism",
+      "reason": "Journalism-related people/content."
+    },
+    {
+      "id": "L7:F16076",
+      "label": "words and phrases related to media, news, and reporting",
+      "reason": "Media/news/reporting semantics."
+    },
+    {
+      "id": "L8:F2309",
+      "label": "words related to broadcast news",
+      "reason": "Broadcast-news semantics."
+    },
+    {
+      "id": "L8:F8437",
+      "label": "content related to film festivals and production, particularly documentary films, and the recognition they receive.",
+      "reason": "Media production/content indicator."
+    },
+    {
+      "id": "L1:F14812",
+      "label": "references to stories, chapters, and other narrative elements",
+      "reason": "Narrative/content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F5333",
+      "label": "mentions of stories that are being told",
+      "reason": "Narrative/story content."
+    },
+    {
+      "id": "L1:F2344",
+      "label": "instances of the word \"country\"",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F15423",
+      "label": "The neuron seems to activate any time the word \"country\" is used, but also sometimes seems to activate for words related to groups of people such as \"kids\", \"rest\", or \"total\".",
+      "reason": "Generic lexical/grouping feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11603",
+      "label": "the word \"too\"",
+      "reason": "Purely generic word detector."
+    },
+    {
+      "id": "L0:F11261",
+      "label": "the word \"migration\" and words related to it",
+      "reason": "Not a profession or gender marker."
+    },
+    {
+      "id": "L0:F6061",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/punctuation feature."
+    },
+    {
+      "id": "L0:F2711",
+      "label": "the word \"foreign.\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L1:F9201",
+      "label": "the word \"represent\" and its variations in scientific contexts",
+      "reason": "Scientific-context lexical feature."
+    },
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Generic research-term detector."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 15,
+  "n_other": 6,
+  "spurious_fraction": 0.0625,
+  "dominant": "causal",
+  "notes": "Journalism/profession circuitry dominates; male pronoun is present but inhibitory, not driving."
+}

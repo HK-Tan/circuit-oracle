@@ -1,0 +1,83 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Nutritional-study context tied to dietetics profession."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-related vocabulary supports nutrition-domain classification."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Direct food/nutrition semantics match dietitian."
+    },
+    {
+      "id": "L6:F6115",
+      "label": "words related to commercial activity and customers",
+      "reason": "Client-facing professional context is causally relevant."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Core diet/health terminology indicates dietitian."
+    },
+    {
+      "id": "L4:F12213",
+      "label": "strings of letters followed by \"ls\" and \"an\", plus words associated with health research",
+      "reason": "Health-research vocabulary supports profession identification."
+    },
+    {
+      "id": "L15:F8177",
+      "label": "words associated with eating",
+      "reason": "Eating vocabulary aligns with nutrition expertise."
+    },
+    {
+      "id": "L6:F8984",
+      "label": "words and phrases related to health",
+      "reason": "General health terms are profession-domain evidence."
+    },
+    {
+      "id": "L0:F9888",
+      "label": "words related to formal schooling",
+      "reason": "Education terminology is a relevant profession clue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F5697",
+      "label": "the word \"accompanied\"",
+      "reason": "Single generic lexical detector, not profession-specific."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Purely structural/common-word feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Generic punctuation/spacing suppressor."
+    },
+    {
+      "id": "L1:F15251",
+      "label": "the word \"client\" and its plural form more often than not when capitalized as the first word of a sentence or preceded by a special character",
+      "reason": "Specific token detector, but oracle treats it as suppressor."
+    },
+    {
+      "id": "L5:F3400",
+      "label": "verbs, adjectives, or nouns related to the act of spending time or enjoying experiences with others",
+      "reason": "Generic social-action feature, dismissed by oracle."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 9,
+  "n_other": 5,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle reports no gender-marker features; circuit is dominated by nutrition/profession semantics."
+}

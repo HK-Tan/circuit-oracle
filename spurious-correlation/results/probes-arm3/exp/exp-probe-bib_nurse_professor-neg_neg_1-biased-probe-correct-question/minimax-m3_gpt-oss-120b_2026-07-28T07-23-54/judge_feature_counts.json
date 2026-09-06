@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic pronoun detector; gender signal in this task."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Gendered pronoun cue, despite extra non-ascii note."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicitly encodes male/gender markers."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Single male pronoun detector."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "People/pronoun references; here used as gender cue."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct male-pronoun feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Pronoun cluster centered on gendered cues."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Broad pronoun detector; spurious here."
+    },
+    {
+      "id": "L7:F16284",
+      "label": "mentions of people's names and relationships",
+      "reason": "Relationships can encode gender markers."
+    },
+    {
+      "id": "L0:F2749",
+      "label": "references to ownership or association with a person or group of people",
+      "reason": "Generic association/person feature, not profession."
+    },
+    {
+      "id": "L19:F8186",
+      "label": "references to a person, especially third-person pronouns and possessive pronouns.",
+      "reason": "Third-person pronoun cue."
+    },
+    {
+      "id": "L14:F14097",
+      "label": "occurrences of the word \"he\"",
+      "reason": "Direct male-pronoun detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Explicit male reference."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Profession-adjacent educational/work vocabulary."
+    },
+    {
+      "id": "L2:F9740",
+      "label": "the word \"interest\" and related words.",
+      "reason": "Neutral professional/biographical wording."
+    },
+    {
+      "id": "L0:F2827",
+      "label": "the word \"science\"",
+      "reason": "Profession-relevant domain vocabulary."
+    },
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Work/tool vocabulary tied to professions."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L22:F12117",
+      "label": "references to actions that people can take or have taken.",
+      "reason": "Purely structural/action language."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Not relevant to profession labels."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/punctuation feature."
+    },
+    {
+      "id": "L0:F14201",
+      "label": "words related to trade (business, finance, and health)",
+      "reason": "Oracle didn't claim profession causality here."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Already counted as spurious; none remaining."
+    }
+  ],
+  "n_spurious": 13,
+  "n_causal": 4,
+  "n_other": 5,
+  "spurious_fraction": 0.7647058823529411,
+  "dominant": "spurious",
+  "notes": "Oracle overwhelmingly cites gender/pronoun features; task-content features are few and lower-salience."
+}

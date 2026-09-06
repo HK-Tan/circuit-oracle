@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gender marker feature; directly spurious for profession prediction."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gendered pronouns are spurious markers here."
+    },
+    {
+      "id": "L1:F7244",
+      "label": "the pronoun \"she\"",
+      "reason": "Gender pronoun; spurious correlation with labels."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Profession-domain vocabulary; causal content signal."
+    },
+    {
+      "id": "L4:F3047",
+      "label": "words or phrases related to exercise and physical activity",
+      "reason": "Task-relevant domain vocabulary; causal."
+    },
+    {
+      "id": "L0:F4030",
+      "label": "words related to mission statements and personal development used in career environments",
+      "reason": "Career/profession terminology; causal."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Topical content signal tied to profession contexts."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Profession-specific lexical content; causal."
+    },
+    {
+      "id": "L2:F6341",
+      "label": "the word \"healthy\"",
+      "reason": "Health-domain indicator; causal content."
+    },
+    {
+      "id": "L0:F10218",
+      "label": "the word \"lifestyle.\"",
+      "reason": "Content word relevant to biography/profession context."
+    },
+    {
+      "id": "L0:F2845",
+      "label": "the word \"knowledge\" and words starting with the letter \"A\"",
+      "reason": "Claimed knowledge token is causal; ignore structural subfeature."
+    },
+    {
+      "id": "L1:F815",
+      "label": "the word \"passion\"",
+      "reason": "Career-oriented subjective/professional language; causal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Generic lexical feature; not profession or gender."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Generic word detector; not task-specific."
+    },
+    {
+      "id": "L0:F5829",
+      "label": "the word \"easier\" with some modifiers such as \"max\"",
+      "reason": "Generic comparative/structural pattern."
+    },
+    {
+      "id": "L0:F11814",
+      "label": "the word \"slightly\" and, to a lesser extent, \"reflected.\"",
+      "reason": "Generic modifier/word feature."
+    },
+    {
+      "id": "L0:F9927",
+      "label": "the word \"studio,\" sometimes with a modifier like \"usually\"",
+      "reason": "Generic word feature; not role-specific."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural feature; dismiss as other."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function word detector; structural."
+    },
+    {
+      "id": "L0:F8392",
+      "label": "the word \"reward\"",
+      "reason": "Generic lexical feature; not causal or spurious."
+    },
+    {
+      "id": "L0:F5942",
+      "label": "words related to subjective interest",
+      "reason": "Too generic; not profession-specific."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 9,
+  "n_other": 9,
+  "spurious_fraction": 0.25,
+  "dominant": "causal",
+  "notes": "Oracle explicitly claims gender features are incidental; profession-content features dominate."
+}

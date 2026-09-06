@@ -1,0 +1,93 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector; directly tracks contradiction cues."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector; tracks contradiction cues."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation/absence semantics, though domain-specific."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L3:F12079",
+      "label": "negations and Chinese names",
+      "reason": "Contains negation detection."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Specific negation pattern detector."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "negative sentiment markers such as \"not,\" \"no,\" \"never,\" and their equivalents in other languages",
+      "reason": "Negation marker feature."
+    },
+    {
+      "id": "L4:F7500",
+      "label": "negation words",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "\"not\" or negative terms, with some bonus for sports-related terms and \"purpose\".",
+      "reason": "Negation/negative-term detector."
+    },
+    {
+      "id": "L9:F14687",
+      "label": "phrases using the word \"not\", often followed by \"because\" or \"but.\"",
+      "reason": "Negation phrasing detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F15749",
+      "label": "the word \"strange\", or related words",
+      "reason": "Oracle says actual prompt content; not negation."
+    },
+    {
+      "id": "L0:F630",
+      "label": "the word \"going\"",
+      "reason": "Content word; not negation."
+    },
+    {
+      "id": "L1:F2580",
+      "label": "the word \"reverse\" in code snippets",
+      "reason": "Content-specific, not negation."
+    },
+    {
+      "id": "L3:F10225",
+      "label": "the word \"on\"",
+      "reason": "Structural/content-neutral token."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Structural/copula detector."
+    },
+    {
+      "id": "L4:F430",
+      "label": "phrases containing the word \"moment\" and often the word \"now\"",
+      "reason": "Content words; no negation role."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 10,
+  "n_causal": 6,
+  "n_other": 0,
+  "spurious_fraction": 0.625,
+  "dominant": "spurious",
+  "notes": "Oracle chiefly attributes the probe to negation cues; remaining features are non-negation content."
+}

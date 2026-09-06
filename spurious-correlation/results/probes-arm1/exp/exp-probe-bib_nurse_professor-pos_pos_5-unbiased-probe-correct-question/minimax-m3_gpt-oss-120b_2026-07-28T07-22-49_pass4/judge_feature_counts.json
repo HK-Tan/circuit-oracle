@@ -1,0 +1,279 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: ' Melissa' (pos 5)",
+      "label": "proper nouns",
+      "reason": "Name token; could be gendered marker."
+    },
+    {
+      "id": "Emb: ' her' (pos 15)",
+      "label": "possessive pronouns like \"his\", names associated with historical records, and years",
+      "reason": "Gendered pronoun marker."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Name detector, can encode gendered names."
+    },
+    {
+      "id": "L0:F11132",
+      "label": "a mix of possessive pronouns like \"his\", names associated with historical records, and years.",
+      "reason": "Contains gendered pronouns."
+    },
+    {
+      "id": "L7:F2861",
+      "label": "words and phrases relating to pregnancy and labor",
+      "reason": "Labor/pregnancy context, can correlate with gender."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: ' nurse' (pos 12)",
+      "label": "the word \"nurse\"",
+      "reason": "Direct profession token."
+    },
+    {
+      "id": "Emb: ' Labor' (pos 9)",
+      "label": "the word \"labor\"",
+      "reason": "Obstetric/profession context."
+    },
+    {
+      "id": "Emb: ' Delivery' (pos 11)",
+      "label": "the word \"delivery\"",
+      "reason": "Obstetric/profession context."
+    },
+    {
+      "id": "Emb: ' Nursing' (pos 19)",
+      "label": "words and phrases related to nurses, nursing, and nurse management",
+      "reason": "Nursing profession indicator."
+    },
+    {
+      "id": "Emb: ' midwife' (pos 66)",
+      "label": "words and phrases relating to pregnancy and labor",
+      "reason": "Obstetric profession indicator."
+    },
+    {
+      "id": "L0:F8854",
+      "label": "the word \"nurse\" as well as some pronouns",
+      "reason": "Primarily nurse detector."
+    },
+    {
+      "id": "L0:F10920",
+      "label": "the word \"nurse\"",
+      "reason": "Direct nurse vocabulary."
+    },
+    {
+      "id": "L0:F15074",
+      "label": "words and phrases related to nurses, nursing, and nurse management",
+      "reason": "Profession-specific nursing feature."
+    },
+    {
+      "id": "L0:F1832",
+      "label": "the word \"labor\"",
+      "reason": "Medical labor terminology."
+    },
+    {
+      "id": "L1:F7152",
+      "label": "the word \"delivery\"",
+      "reason": "Delivery terminology."
+    },
+    {
+      "id": "L1:F14469",
+      "label": "mentions of 'nurse'",
+      "reason": "Direct nurse mentions."
+    },
+    {
+      "id": "L2:F10127",
+      "label": "the word \"delivery\" or \"deliver\"",
+      "reason": "Delivery-related profession cue."
+    },
+    {
+      "id": "L2:F15437",
+      "label": "words related to nurses and sound",
+      "reason": "Contains nurse-related signal."
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Nursing profession aggregator."
+    },
+    {
+      "id": "L3:F10198",
+      "label": "words related to anesthetics and medical procedures",
+      "reason": "Medical procedure terminology."
+    },
+    {
+      "id": "L3:F9123",
+      "label": "terms related to business, science, and finance",
+      "reason": "Content-neutral lexical domain feature."
+    },
+    {
+      "id": "L3:F14128",
+      "label": "the word \"following\" and occasionally the word \"after\"",
+      "reason": "Structural/temporal word feature."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "words and phrases related to medical environments, treatments, personnel, and facilities.",
+      "reason": "Medical environment indicator."
+    },
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "OB/GYN profession context."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words related to counseling, therapy, social work, and academic degree programs",
+      "reason": "Education/workplace terminology."
+    },
+    {
+      "id": "L4:F9036",
+      "label": "words and abbreviations associated with healthcare.",
+      "reason": "Healthcare profession cue."
+    },
+    {
+      "id": "L5:F9749",
+      "label": "words related to various medical conditions, procedures, and practitioners",
+      "reason": "Medical practitioner terminology."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "words related to healthcare professionals and medical fields",
+      "reason": "Healthcare profession cue."
+    },
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Education terminology."
+    },
+    {
+      "id": "L5:F12279",
+      "label": "terms relating to jobs and education",
+      "reason": "Job/education terminology."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession feature."
+    },
+    {
+      "id": "L6:F9980",
+      "label": "words and abbreviations associated with pediatric gastroenterology and inflammatory bowel disease.",
+      "reason": "Medical specialty terminology."
+    },
+    {
+      "id": "L6:F4490",
+      "label": "proper nouns corresponding to locations, organizations, medical roles, and coding terms",
+      "reason": "Medical roles included."
+    },
+    {
+      "id": "L6:F3475",
+      "label": "words related to military titles, professional sports, or the medical profession",
+      "reason": "Medical profession cue."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "words related to nursing",
+      "reason": "Nursing profession cue."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Nursing/healthcare cue."
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare organization cue."
+    },
+    {
+      "id": "L8:F8185",
+      "label": "words related to hospitals, medical specialities, and medical staff",
+      "reason": "Medical staff/profession cue."
+    },
+    {
+      "id": "L8:F16339",
+      "label": "text discussing hospital infections and bacteria",
+      "reason": "Healthcare context."
+    },
+    {
+      "id": "L8:F4607",
+      "label": "phrases in job advertisements related to pay",
+      "reason": "Job-ad language."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "terms related to management, leadership, medicine, studies, and research",
+      "reason": "Medicine/leadership terminology."
+    },
+    {
+      "id": "L16:F6954",
+      "label": "Professional",
+      "reason": "Generic profession cue."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "text about the role, skills and leadership of nurse managers",
+      "reason": "Nurse-manager profession feature."
+    },
+    {
+      "id": "L18:F14457",
+      "label": "words or phrases related to healthcare implementation, patient care and technology",
+      "reason": "Healthcare implementation cue."
+    },
+    {
+      "id": "L19:F11110",
+      "label": "text describing people's education history",
+      "reason": "Education history cue."
+    },
+    {
+      "id": "L19:F7484",
+      "label": "words and jargon used to describe military, medical, and government personnel",
+      "reason": "Medical personnel cue."
+    },
+    {
+      "id": "L20:F4927",
+      "label": "titles and acronyms following names, especially within the healthcare field",
+      "reason": "Healthcare title cue."
+    },
+    {
+      "id": "Output: L26:F0@0",
+      "label": "probe direction (nurse profession)",
+      "reason": "Final profession classifier direction."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F9911",
+      "label": "the word \"that\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F6515",
+      "label": "the year 199X or 200X.",
+      "reason": "Temporal pattern."
+    },
+    {
+      "id": "L0:F11333",
+      "label": "the 1990's",
+      "reason": "Temporal pattern."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Generic technical-text marker."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 43,
+  "n_other": 5,
+  "spurious_fraction": 0.10416666666666667,
+  "dominant": "causal",
+  "notes": "Circuit is overwhelmingly profession-focused; gender markers are present but not primary."
+}

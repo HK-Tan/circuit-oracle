@@ -1,0 +1,94 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Contracted negation detector in the hypothesis."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Conversational opener; not task-specific."
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "General dialogue marker; not semantic NLI."
+    },
+    {
+      "id": "L0:F8083",
+      "label": "the word \"double\" and surrounding words when numbers are also present",
+      "reason": "Lexical sports/stat form cue; not contradiction semantics."
+    },
+    {
+      "id": "L3:F9770",
+      "label": "technical and scientific writing about neuroscience and chemistry, possibly about calcium",
+      "reason": "Oracle says driven by sports-stat token context here."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Only a local \"now\" cue; not semantic relation."
+    },
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Lexical connective detector; not causal reasoning."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: well (pos 2)",
+      "label": "(embed/output)",
+      "reason": "Bare embedding node."
+    },
+    {
+      "id": "Emb: yeah (pos 1)",
+      "label": "(embed/output)",
+      "reason": "Bare embedding node."
+    },
+    {
+      "id": "Emb: double (pos 6)",
+      "label": "(embed/output)",
+      "reason": "Bare embedding node."
+    },
+    {
+      "id": "Emb: now (pos 14)",
+      "label": "(embed/output)",
+      "reason": "Bare embedding node."
+    },
+    {
+      "id": "Emb: haven (pos 18)",
+      "label": "(embed/output)",
+      "reason": "Bare embedding node."
+    },
+    {
+      "id": "Emb: ' (pos 19)",
+      "label": "(embed/output)",
+      "reason": "Bare embedding node."
+    },
+    {
+      "id": "Emb: t (pos 20)",
+      "label": "(embed/output)",
+      "reason": "Bare embedding node."
+    },
+    {
+      "id": "Emb: because (pos 25)",
+      "label": "(embed/output)",
+      "reason": "Bare embedding node."
+    },
+    {
+      "id": "Output",
+      "label": "linear contradiction-probe score",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 6,
+  "n_other": 9,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "causal",
+  "notes": "Oracle emphasizes lexical cues; only contracted negation is spurious by task definition."
+}

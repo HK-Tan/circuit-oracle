@@ -1,0 +1,49 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F14582",
+      "label": "references to the White House and the US government",
+      "reason": "Political/government context, not toxicity."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F12866",
+      "label": "adverbs such as \"clearly,\" \"plainly,\" and \"as\"",
+      "reason": "Generic syntactic/tonal feature."
+    },
+    {
+      "id": "L0:F7621",
+      "label": "the word \"clearly\", and to a lesser extent words associated with amounts of things",
+      "reason": "Generic adverb/structure cue."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Pure function word, structural only."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F4422",
+      "label": "the word \"seriously\"",
+      "reason": "Generic word feature; not toxic or identity."
+    },
+    {
+      "id": "Emb: clearly (pos 1)",
+      "label": "clearly",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: is (pos 4)",
+      "label": "is",
+      "reason": "Input token only."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 3,
+  "n_other": 3,
+  "spurious_fraction": 0.25,
+  "dominant": "causal",
+  "notes": "Oracle cites government context; remaining features are structural, not identity-toxic."
+}

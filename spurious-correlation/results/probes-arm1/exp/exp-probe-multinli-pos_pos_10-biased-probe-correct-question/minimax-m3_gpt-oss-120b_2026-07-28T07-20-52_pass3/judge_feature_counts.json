@@ -1,0 +1,209 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector on hypothesis token."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "negative sentiment markers such as \"not,\" \"no,\" \"never,\" and their equivalents in other languages",
+      "reason": "Explicit negation marker feature."
+    },
+    {
+      "id": "L1:F14680",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector on hypothesis token."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "\"not\" or negative terms, with some bonus for sports-related terms and \"purpose\".",
+      "reason": "Negation/negative-term detector."
+    },
+    {
+      "id": "L2:F6993",
+      "label": "phrases describing uncertainty or difficulty",
+      "reason": "Oracle treats as uncertainty tied to negation path."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Negation/absence detector."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Oracle says promoted by 'not'; negation shortcut."
+    },
+    {
+      "id": "L3:F12079",
+      "label": "negations and Chinese names",
+      "reason": "Negation-related feature."
+    },
+    {
+      "id": "L3:F2232",
+      "label": "character sequences like \"NOC\", \"NO\", \"ORES\", \"NOS\", \"OF\", \"UNCH\", and \"oooooooo\" within a series of hexadecimal codes, sometimes also picking up on related words such as \"dangerously\", \"Bantus\", \"slave\", and \"plantation\"",
+      "reason": "Oracle links it to promoted 'no' negation."
+    },
+    {
+      "id": "L3:F9803",
+      "label": "sentences describing scientific studies or experiments, particularly where something is disproven",
+      "reason": "Negation/disproof-associated feature."
+    },
+    {
+      "id": "L3:F10742",
+      "label": "fragments of French sentences, particularly those containing the verb \"avoir\"",
+      "reason": "Oracle claims promoted by negation circuit."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Explicit multilingual negation detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Explicit negation detector."
+    },
+    {
+      "id": "L4:F7500",
+      "label": "negation words",
+      "reason": "Generic negation-word detector."
+    },
+    {
+      "id": "L4:F13171",
+      "label": "passages where something is negated",
+      "reason": "Negation semantics detector."
+    },
+    {
+      "id": "L9:F14687",
+      "label": "phrases using the word \"not\", often followed by \"because\" or \"but.\"",
+      "reason": "Direct 'not' phrase detector."
+    },
+    {
+      "id": "L9:F742",
+      "label": "negation, uncertainty, or sensory statements",
+      "reason": "Negation-related feature."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Specific 'is not' negation pattern."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F15749",
+      "label": "the word \"strange\", or related words",
+      "reason": "Semantic content feature for adjective meaning."
+    },
+    {
+      "id": "L1:F2580",
+      "label": "the word \"reverse\" in code snippets",
+      "reason": "Lexical semantic content, not negation."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Purely content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F630",
+      "label": "the word \"going\"",
+      "reason": "Purely content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F5188",
+      "label": "the word \"now\"",
+      "reason": "Purely content-neutral lexical feature."
+    },
+    {
+      "id": "L0:F13522",
+      "label": "the word \"speed\" and related words about definition and measurement",
+      "reason": "Non-negation lexical content."
+    },
+    {
+      "id": "L2:F16097",
+      "label": "superlative adjectives and the words \"test\" or \"point\"",
+      "reason": "Meaning-bearing degree/comparison feature."
+    },
+    {
+      "id": "L3:F3669",
+      "label": "references to ordinal rankings of things",
+      "reason": "Semantic comparison feature."
+    },
+    {
+      "id": "L4:F7409",
+      "label": "words like \"vice versa\", \"inverse\", \"reverse\", \"around\", or directions",
+      "reason": "Semantic reversal feature."
+    },
+    {
+      "id": "L4:F430",
+      "label": "phrases containing the word \"moment\" and often the word \"now\"",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Unrelated lexical content feature."
+    },
+    {
+      "id": "L6:F5819",
+      "label": "words and phrases indicating superlatives or high degrees",
+      "reason": "Meaning-bearing degree feature."
+    },
+    {
+      "id": "L10:F6670",
+      "label": "technical terms, especially within scientific or medical contexts",
+      "reason": "Content-neutral lexical feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb:not (pos 17)",
+      "label": "not",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb:strangest (pos 2)",
+      "label": "strangest",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb:reversal (pos 4)",
+      "label": "reversal",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb:is (pos 5)",
+      "label": "is",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb:going (pos 6)",
+      "label": "going",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb:now (pos 9)",
+      "label": "now",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb:There (pos 15)",
+      "label": "There",
+      "reason": "Raw token embedding only."
+    },
+    {
+      "id": "Emb:is (pos 16)",
+      "label": "is",
+      "reason": "Raw token embedding only."
+    }
+  ],
+  "n_spurious": 18,
+  "n_causal": 13,
+  "n_other": 8,
+  "spurious_fraction": 0.5806451612903226,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes negation shortcut, with some semantic reversal and superlative features."
+}

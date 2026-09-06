@@ -1,0 +1,78 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F0",
+      "label": "Identity group tokens (white, black, bigot, race, nonwhites)",
+      "reason": "Direct identity vocabulary, not toxicity semantics."
+    },
+    {
+      "id": "L1:F13646",
+      "label": "Early race/identity recognition features",
+      "reason": "Detects race/identity mentions, a spurious cue here."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "Mid-layer race/ethnicity features",
+      "reason": "General race/ethnicity vocabulary detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "Race/racism/social-justice features",
+      "reason": "Identity/race discourse, not direct toxic content."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "Late-layer race/ethnicity terms feature",
+      "reason": "Race/ethnicity terms, not toxicity."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L5:F8030",
+      "label": "Clarity/difference language features (clearly, and, other)",
+      "reason": "Structural/argumentative language only."
+    },
+    {
+      "id": "L4:F15009",
+      "label": "Clarity/difference language features (clearly, and, other)",
+      "reason": "Structural/argumentative language only."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Pure connector token."
+    },
+    {
+      "id": "L0:F7969",
+      "label": "the word \"other\"",
+      "reason": "Pure function word."
+    },
+    {
+      "id": "L0:F6154",
+      "label": "uses of 'clearly' and nearby words related to arguments and writing",
+      "reason": "Generic writing/argument structure."
+    },
+    {
+      "id": "L1:F2407",
+      "label": "the word \"clearly\"",
+      "reason": "Generic discourse marker."
+    },
+    {
+      "id": "L0:F5707",
+      "label": "words or phrases related to knowledge or perspective",
+      "reason": "Generic abstract language."
+    },
+    {
+      "id": "L3:F15009",
+      "label": "words or phrases related to courts, legalese, and mental states",
+      "reason": "Oracle label irrelevant to toxicity here."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 0,
+  "n_other": 8,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Identity-vocabulary circuit dominates; no true toxic-content detector is claimed."
+}

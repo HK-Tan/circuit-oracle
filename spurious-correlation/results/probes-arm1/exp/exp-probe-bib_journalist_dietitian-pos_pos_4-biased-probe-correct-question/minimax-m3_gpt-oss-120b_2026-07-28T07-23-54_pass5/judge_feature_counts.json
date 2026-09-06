@@ -1,0 +1,68 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F7864",
+      "label": "She-token feature, direct_effect 0.13",
+      "reason": "Directly encodes female pronoun."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "female-name feature",
+      "reason": "Encodes a female proper name."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Person/identity feature, not profession-specific."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Explicit woman-reference feature."
+    },
+    {
+      "id": "L7:F2765",
+      "label": "mentions of people or characters, and their performance, roles, injuries, or personal details such as age, death, or family.",
+      "reason": "Person/role details, not job-specific."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Female-name detector; suppressive gender signal."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun/person reference feature."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Mentions women/girls explicitly."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women/name/role feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Profession-specific nutrition vocabulary."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic preposition; purely structural."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 9,
+  "n_causal": 2,
+  "n_other": 0,
+  "spurious_fraction": 0.8181818181818182,
+  "dominant": "spurious",
+  "notes": "Gender features dominate; dietetics signal is present but entangled with woman-reference circuitry."
+}

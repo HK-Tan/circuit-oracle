@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Promotes female pronouns; gender-person pathway."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Explicit female-name feature; gender marker."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Women/pronoun/title detector; gendered."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Direct women/girls mention feature."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Female-name plus role/accomplishment association."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based person detector; gender-linked here."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "She-based women-story detector."
+    },
+    {
+      "id": "L0:F15382",
+      "label": "mentions of a female person.",
+      "reason": "Explicit female-person mention."
+    },
+    {
+      "id": "L0:F12519",
+      "label": "generic female-name/pronoun feature",
+      "reason": "Female-name/pronoun detector."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Female-name context feature; gendered."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession vocabulary."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "words related to healthcare professionals and medical fields",
+      "reason": "Healthcare/medical profession indicator."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words related to counseling, therapy, social work, and academic degree programs",
+      "reason": "Professional/education terminology."
+    },
+    {
+      "id": "L1:F1494",
+      "label": "medical practices and studies",
+      "reason": "Medical field terminology."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Structural proper-name detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe Output Logit",
+      "label": "Nursing profession direction",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: 'She'",
+      "label": "She",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' nurse'",
+      "label": "nurse",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' practitioner'",
+      "label": "practitioner",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' Nursing'",
+      "label": "Nursing",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: 'Lori'",
+      "label": "Lori",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' graduated'",
+      "label": "graduated",
+      "reason": "Input token, not a feature."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 5,
+  "n_other": 7,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Curated circuit mixes real nursing vocabulary with strong female-gender pathways."
+}

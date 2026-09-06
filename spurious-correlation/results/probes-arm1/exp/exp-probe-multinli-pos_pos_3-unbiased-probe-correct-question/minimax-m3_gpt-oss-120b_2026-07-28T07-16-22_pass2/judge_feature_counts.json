@@ -1,0 +1,183 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Premise content about castle/estate context."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Premise architectural/fortification semantics."
+    },
+    {
+      "id": "L2:F1430",
+      "label": "mentions of the U.S. White House or a generic house",
+      "reason": "Shared house/houses content suppresses contradiction."
+    },
+    {
+      "id": "L6:F486",
+      "label": "Scottish locations and political terms",
+      "reason": "Architectural/location semantics in premise."
+    },
+    {
+      "id": "L2:F4429",
+      "label": "mentions of the beginning of a period",
+      "reason": "Temporal alignment via early repetition."
+    },
+    {
+      "id": "L0:F5494",
+      "label": "the word \"early\" often related to time",
+      "reason": "Temporal feature on early."
+    },
+    {
+      "id": "L0:F1454",
+      "label": "mentions of specific centuries or decades",
+      "reason": "Century-time relation supports semantic alignment."
+    },
+    {
+      "id": "L0:F4367",
+      "label": "references to centuries",
+      "reason": "Century feature matches task-relevant time."
+    },
+    {
+      "id": "L1:F11220",
+      "label": "instances of the word \"restore\" and related words",
+      "reason": "Premise restoration content is task-relevant."
+    },
+    {
+      "id": "L0:F8082",
+      "label": "the word \"itself\" and sometimes words ending in \"ing\"",
+      "reason": "Sentence-reference structure, not negation."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic function word; structural only."
+    },
+    {
+      "id": "L0:F7513",
+      "label": "the word \"together\"",
+      "reason": "Generic lexical detector; non-semantic."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic function word; structural only."
+    },
+    {
+      "id": "L0:F14108",
+      "label": "the word \"appropriate\"",
+      "reason": "Oracle-dismissed / generic word feature."
+    },
+    {
+      "id": "L0:F10815",
+      "label": "the word \"any\".",
+      "reason": "Hypothesis quantifier; not a negation-word detector."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Premise content feature."
+    },
+    {
+      "id": "L7:F462",
+      "label": "The castle itself... sentence-start deep path",
+      "reason": "Sentence-start alignment path."
+    },
+    {
+      "id": "L7:F5741",
+      "label": "The castle itself... sentence-start deep path",
+      "reason": "Sentence-start alignment path."
+    },
+    {
+      "id": "L6:F14585",
+      "label": "The castle itself... sentence-start deep path",
+      "reason": "Sentence-start alignment path."
+    },
+    {
+      "id": "L5:F3992",
+      "label": "The castle itself... sentence-start deep path",
+      "reason": "Sentence-start alignment path."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Oracle-cited deep path; structural alignment."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output Probe",
+      "label": "NLI contradiction class",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: castle (pos 2)",
+      "label": "Emb: castle (pos 2)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: itself (pos 3)",
+      "label": "Emb: itself (pos 3)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: tower (pos 13)",
+      "label": "Emb: tower (pos 13)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: house (pos 14)",
+      "label": "Emb: house (pos 14)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: restored (pos 16)",
+      "label": "Emb: restored (pos 16)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: with (pos 17)",
+      "label": "Emb: with (pos 17)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: from (pos 20)",
+      "label": "Emb: from (pos 20)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: together (pos 26)",
+      "label": "Emb: together (pos 26)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: contain (pos 37)",
+      "label": "Emb: contain (pos 37)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: any (pos 38)",
+      "label": "Emb: any (pos 38)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: early (pos 6)",
+      "label": "Emb: early (pos 6)",
+      "reason": "Embedding token, not feature."
+    },
+    {
+      "id": "Emb: century (pos 12)",
+      "label": "Emb: century (pos 12)",
+      "reason": "Embedding token, not feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 21,
+  "n_other": 13,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle supports causal semantic/temporal features; no true negation-word detector is actually claimed."
+}

@@ -1,0 +1,24 @@
+
+============================================================
+Graph: bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+Loading bib_nurse_professor-neg_neg_1-biased-probe-correct.pt...
+  6392 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+**Analysis:** The probe's classification score is driven by a circuit that detects male pronouns (specifically "His" at position 1) rather than professional qualifications.
+
+**Confidence:** 10/10
+
+**Reasoning:** 
+The attribution circuit reveals that the probe's score is primarily driven by a chain of features focused on gendered language. The strongest positive contribution to the probe's output comes from feature **L7:F14893** (labeled "pronouns or possessive pronouns", $\text{frac\_nonzero}=0.00885$), which is excited by a series of upstream male-pronoun detectors.
+
+The signal flows as follows:
+1. **Input:** The token `"His"` at position 1 (represented by **L0:F2994** and other early layer features) initiates the signal.
+2. **Intermediate Processing:** This signal propagates through a sequence of gender-specific features, including **L4:F4315** (mentions of "his" and associated pronouns), **L4:F15567** (male/female pronouns), and **L6:F12990** (male pronouns and titles).
+3. **Terminal Driver:** These converge on **L7:F14893**, which then directly drives the probe's output logit.
+
+Notably, the top features driving the prediction are almost exclusively centered on the token `"His"` at position 1. No features related to the subject's actual profession (e.g., "scientific visualization", "computer graphics", "PhD", "University of Utah") appear in the top-k drivers or the traced upstream paths. This confirms the user's concern: the probe is utilizing a spurious gender marker as a proxy for the profession rather than identifying genuine professional indicators.
+Results saved to: <repo>/spurious-correlation/results/probes-arm5/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/gemma-4-31b-it_gpt-oss-120b_2026-07-28T08-33-23

@@ -1,0 +1,138 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L14:F4197",
+      "label": "Mid-layer profession context aggregators",
+      "reason": "Aggregates profession-related nutrition/dietetics context."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "Late-layer dietitian/Academy recognizer",
+      "reason": "Recognizes dietitian/nutrition profession concepts."
+    },
+    {
+      "id": "L17:F7545",
+      "label": "Dietitian concept aggregators (layer 17-18)",
+      "reason": "Builds dietitian concept from profession terms."
+    },
+    {
+      "id": "L18:F6105",
+      "label": "Dietitian concept aggregators (layer 17-18)",
+      "reason": "Builds dietitian concept from profession terms."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "Nutrition/Dietetics word detector (layer 4)",
+      "reason": "Detects nutrition and dietetics vocabulary."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "Eat/healthier food context detector (layer 6)",
+      "reason": "Tracks food and health context relevant to dietitian."
+    },
+    {
+      "id": "L6:F6115",
+      "label": "Eat/healthier food context detector (layer 6)",
+      "reason": "Uses food context, not gender markers."
+    },
+    {
+      "id": "L3:F11774",
+      "label": "Subword token features (layers 0-3)",
+      "reason": "Subword piece supporting dietetics vocabulary."
+    },
+    {
+      "id": "L3:F10028",
+      "label": "Subword token features (layers 0-3)",
+      "reason": "Subword piece supporting dietetics vocabulary."
+    },
+    {
+      "id": "L3:F9216",
+      "label": "Subword token features (layers 0-3)",
+      "reason": "Subword piece supporting nutrition terms."
+    },
+    {
+      "id": "L3:F2310",
+      "label": "Subword token features (layers 0-3)",
+      "reason": "Subword piece supporting food/profession terms."
+    },
+    {
+      "id": "L0:F11021",
+      "label": "Subword token features (layers 0-3)",
+      "reason": "Lower-level subword cue for nutrition terms."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "Subword token features (layers 0-3)",
+      "reason": "Lower-level subword cue for dietetics terms."
+    },
+    {
+      "id": "L0:F9888",
+      "label": "Subword token features (layers 0-3)",
+      "reason": "Lower-level subword cue for educating."
+    },
+    {
+      "id": "L0:F3106",
+      "label": "Subword token features (layers 0-3)",
+      "reason": "Lower-level subword cue for clients."
+    },
+    {
+      "id": "L0:F2175",
+      "label": "Subword token features (layers 0-3)",
+      "reason": "Lower-level subword cue for nutrition terms."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe output",
+      "label": "Probe output (dietitian/nutrition profession classifier)",
+      "reason": "Model output, not a feature."
+    },
+    {
+      "id": "Emb: clients",
+      "label": "Emb: clients",
+      "reason": "Token embedding, not a classified feature."
+    },
+    {
+      "id": "Emb: eat",
+      "label": "Emb: eat",
+      "reason": "Token embedding, not a classified feature."
+    },
+    {
+      "id": "Emb: healthier",
+      "label": "Emb: healthier",
+      "reason": "Token embedding, not a classified feature."
+    },
+    {
+      "id": "Emb: educating",
+      "label": "Emb: educating",
+      "reason": "Token embedding, not a classified feature."
+    },
+    {
+      "id": "Emb: Die",
+      "label": "Emb: Die",
+      "reason": "Token embedding, not a classified feature."
+    },
+    {
+      "id": "Emb: Nutrition",
+      "label": "Emb: Nutrition",
+      "reason": "Token embedding, not a classified feature."
+    },
+    {
+      "id": "Emb: te",
+      "label": "Emb: te",
+      "reason": "Token embedding, not a classified feature."
+    },
+    {
+      "id": "Emb: .",
+      "label": "Emb: .",
+      "reason": "Token embedding, not a classified feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 16,
+  "n_other": 9,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "All claimed active features reflect dietitian/nutrition vocabulary; no gender-marker feature is actually claimed."
+}

@@ -1,0 +1,28 @@
+
+============================================================
+Graph: bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+Loading bib_nurse_professor-neg_neg_1-biased-probe-correct.pt...
+  6392 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+**Analysis:** The probe's classification score is driven almost entirely by male-gendered pronoun features (his/He) at two token positions, with no representation of profession-specific semantics (computer graphics, visualization, PhD, etc.) anywhere in the circuit.
+
+**Confidence:** 9
+
+**Reasoning:** The circuit confirms the user's concern that the probe relies on spurious gender markers rather than genuine profession indicators.
+
+**Evidence:**
+- **Top driver (positive, direct_effect = +0.43):** L7:F14893, labeled "pronouns or possessive pronouns," fired on `His` at pos 1. Its top activating examples are all "his" tokens, and its promoted tokens are feminine ("herself," "she," "ihrer") while suppressed are masculine ("himself," "his," "彼の") — yet it *pushes toward* the probe class here, meaning the probe treats male pronouns as evidence.
+- **Second strong positive (+0.24):** L19:F8814 ("various pronouns and names referring to people") at pos 1, similarly a gender/pronoun detector (promoted: "she/her"; suppressed: "himself/his/彼").
+- **Strong positive (+0.23):** L0:F2994 explicitly labeled "the pronoun 'his' and the pronoun 'he'" — a pure male-pronoun feature with frac_nonzero ≈ 0.073.
+- **Strong negative (−0.25, −0.21):** L18:F14743 ("He") at pos 14 *and* pos 37 — an explicit capitalized "He" detector that pushes against the probe's classification.
+
+**Tracing to embeddings:** Following the L7:F14893 → L0:F2994 path upward reaches `Emb: His (pos 1)` with direct_effect 23.5 — the "His" token embedding is the deepest identifiable source. Likewise, L18:F14743 traces to `Emb:  He (pos 14)` with direct_effect 22.4. The two male-pronoun token positions (pos 1 "His" and pos 14 " He") supply essentially all of the signal.
+
+**What's missing:** No feature in the top-15 drives encodes "computer graphics," "visualization," "PhD," "researcher," "scientist," "lab," or any profession-specific semantic content. The probe has learned a heuristic: "male pronouns at sentence start → male-dominated profession." The same circuit on a bio about a female scientist would presumably give the opposite classification, indicating the probe is detecting the biographical subject's gender, not their profession.
+
+**Conclusion:** The user's hypothesis is correct — the probe's circuit is dominated by male-pronoun/gender features with direct token-embedding roots at the gendered tokens themselves, and contains no profession-representing features.
+Results saved to: <repo>/spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-54_pass4

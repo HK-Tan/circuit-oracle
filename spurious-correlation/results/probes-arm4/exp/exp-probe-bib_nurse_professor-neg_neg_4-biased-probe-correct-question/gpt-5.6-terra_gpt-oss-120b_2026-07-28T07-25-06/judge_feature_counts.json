@@ -1,0 +1,54 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: his (pos 37)",
+      "label": "Emb: his (pos 37)",
+      "reason": "Direct gendered possessive pronoun token."
+    },
+    {
+      "id": "Emb: His (pos 13)",
+      "label": "Emb: His (pos 13)",
+      "reason": "Capitalized gendered possessive pronoun token."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Explicit male-pronoun detector."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun/person-reference detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Generic function word, not profession-specific."
+    },
+    {
+      "id": "L0:F11024",
+      "label": "the word \"clock\", especially in a technical context",
+      "reason": "Technical vocabulary, potentially profession-related."
+    },
+    {
+      "id": "L0:F8658",
+      "label": "the word \"is\"",
+      "reason": "Generic lexical/syntactic cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Profession-classification probe score",
+      "label": "Profession-classification probe score",
+      "reason": "Model output, not a feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 3,
+  "n_other": 1,
+  "spurious_fraction": 0.5714285714285714,
+  "dominant": "spurious",
+  "notes": "Dominated by gender/pronoun cues, with only generic/technical lexical support."
+}

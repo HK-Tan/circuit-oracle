@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F10682",
+      "label": "the word \"race\"",
+      "reason": "Identity token; race-related lexical trigger."
+    },
+    {
+      "id": "L0:F14813",
+      "label": "mentions of race, racial issues, or racism",
+      "reason": "Identity-group/race issues detector."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Race token feature; identity-linked here."
+    },
+    {
+      "id": "L3:F5475",
+      "label": "occurrences of the word \"race\" in different contexts",
+      "reason": "Race-token matcher; identity signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F15173",
+      "label": "statements about mentioning or discussing something",
+      "reason": "Discourse-about-mentioning feature."
+    },
+    {
+      "id": "L4:F2668",
+      "label": "instances of realizations coupled with acknowledgement or acknowledgment of something.",
+      "reason": "Acknowledgement/realization semantics."
+    },
+    {
+      "id": "L3:F6517",
+      "label": "words related to mentioning something",
+      "reason": "Mention/discussion semantics."
+    },
+    {
+      "id": "L2:F11639",
+      "label": "the word \"mention\"",
+      "reason": "Mentioning/discussing semantics."
+    },
+    {
+      "id": "L2:F6539",
+      "label": "the word \"mention\" and words or phrases related to opinions or significance, as well as the word \"matter.\"",
+      "reason": "Mention/opinion/matter semantics."
+    },
+    {
+      "id": "L2:F14569",
+      "label": "phrases indicating uncertainty or lack of clarity",
+      "reason": "Uncertainty/lack-of-clarity semantics."
+    },
+    {
+      "id": "L2:F12770",
+      "label": "the word \"question\" and related words",
+      "reason": "Question-related discourse semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L3:F12410",
+      "label": "the word \"By\" at the start of a phrase or sentence",
+      "reason": "Purely structural sentence-start detector."
+    },
+    {
+      "id": "L3:F672",
+      "label": "the word \"question\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Generic negation word detector."
+    },
+    {
+      "id": "L0:F819",
+      "label": "the word \"question\" specifically in the context of legal documents or investigations",
+      "reason": "Legal-context word detector."
+    },
+    {
+      "id": "L0:F1903",
+      "label": "instances of sentences starting with \"The\"",
+      "reason": "Purely structural BOS/sentence-start feature."
+    },
+    {
+      "id": "L0:F573",
+      "label": "code snippets containing boolean operators and comparison symbols",
+      "reason": "Off-target structural suppressor."
+    },
+    {
+      "id": "L0:F2317",
+      "label": "words or phrases expressing uncertainty or doubt",
+      "reason": "Generic uncertainty phrasing."
+    },
+    {
+      "id": "L0:F8061",
+      "label": "the preposition \"in\"",
+      "reason": "Purely structural word detector."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 7,
+  "n_other": 8,
+  "spurious_fraction": 0.36363636363636365,
+  "dominant": "causal",
+  "notes": "Main driver is mention/question discourse, not identity alone; race features are present but secondary."
+}

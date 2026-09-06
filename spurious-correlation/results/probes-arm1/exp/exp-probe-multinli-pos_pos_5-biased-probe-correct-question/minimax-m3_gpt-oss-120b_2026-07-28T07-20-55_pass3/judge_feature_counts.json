@@ -1,0 +1,133 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1910",
+      "label": "the phrase \"not only\"",
+      "reason": "Negation-contrast cue, not semantic relation."
+    },
+    {
+      "id": "L2:F5627",
+      "label": "instances of the phrase \"not only\"",
+      "reason": "Negation-contrast cue, not semantic relation."
+    },
+    {
+      "id": "L9:F12274",
+      "label": "the phrase \"not only\"",
+      "reason": "Negation-contrast cue, not semantic relation."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L13:F4368",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Direct negation-pattern detector."
+    },
+    {
+      "id": "L16:F15025",
+      "label": "usage of the word \"not\" combined with personal pronouns or related emotional or motivational language",
+      "reason": "Negation detector, regardless of meaning."
+    },
+    {
+      "id": "L14:F2476",
+      "label": "negative polarity, sometimes in the context of politics or social issues",
+      "reason": "Negative polarity cue, not entailment semantics."
+    },
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Generic contrast cue, not semantic relation."
+    },
+    {
+      "id": "L4:F15629",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Reported-speech marker, not NLI semantics."
+    },
+    {
+      "id": "L4:F12337",
+      "label": "speech attribution, especially \"said\"",
+      "reason": "Reported-speech marker, not NLI semantics."
+    },
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Purely orthographic negation suffix detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F15525",
+      "label": "places where something is being explained or reported",
+      "reason": "Generic reported/expository context."
+    },
+    {
+      "id": "L0:F14950",
+      "label": "instances of the word \"program\" and the word \"step\"",
+      "reason": "Content word detector, not NLI semantics."
+    },
+    {
+      "id": "L1:F11907",
+      "label": "the word \"program\"",
+      "reason": "Content word detector, not NLI semantics."
+    },
+    {
+      "id": "L2:F13565",
+      "label": "the word \"program(me)s\"",
+      "reason": "Content word detector, not NLI semantics."
+    },
+    {
+      "id": "L2:F8279",
+      "label": "the word \"program\" or the plural \"programs\", sometimes weakly activating on words related to changes of state",
+      "reason": "Mostly lexical/content cue."
+    },
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Purely structural/formal feature."
+    },
+    {
+      "id": "L15:F15779",
+      "label": "hedging language",
+      "reason": "Generic discourse feature, oracle doesn't link to NLI."
+    },
+    {
+      "id": "L2:F7654",
+      "label": "unknown",
+      "reason": "Oracle provides no label/role."
+    },
+    {
+      "id": "L16:F9779",
+      "label": "unknown",
+      "reason": "Oracle provides no label/role."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "unknown",
+      "reason": "Oracle provides no label/role."
+    },
+    {
+      "id": "L0:F6131",
+      "label": "the word \"trick\", often within the context of telling or describing a trick",
+      "reason": "Oracle dismissed as irrelevant content cue."
+    },
+    {
+      "id": "L5:F2329",
+      "label": "legal and judicial terminology",
+      "reason": "Domain vocabulary, not semantic relation."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 0,
+  "n_other": 12,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows only negation/contrast/reporting cues; no semantic entailment features."
+}

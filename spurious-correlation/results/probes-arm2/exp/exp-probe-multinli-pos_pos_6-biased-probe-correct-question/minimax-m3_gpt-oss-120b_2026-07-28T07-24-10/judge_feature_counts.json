@@ -1,0 +1,143 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "low-level 'not' feature",
+      "reason": "Direct negation-word detector in the hypothesis."
+    },
+    {
+      "id": "L0:F9646",
+      "label": "low-level 'not' feature",
+      "reason": "Direct negation-word detector in the hypothesis."
+    },
+    {
+      "id": "L0:F15454",
+      "label": "low-level 'not' feature",
+      "reason": "Direct negation-word detector in the hypothesis."
+    },
+    {
+      "id": "L0:F7257",
+      "label": "low-level 'not' feature",
+      "reason": "Direct negation-word detector in the hypothesis."
+    },
+    {
+      "id": "L1:F5108",
+      "label": "low-level 'not' feature",
+      "reason": "Direct negation-word detector in the hypothesis."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "low-level 'not' feature",
+      "reason": "Direct negation-word detector in the hypothesis."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "mid-layer pos-21 negation feature",
+      "reason": "Negation-sensitive feature tied to 'not'."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "mid-layer pos-21 negation feature",
+      "reason": "Negation-sensitive feature tied to 'not'."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "mid-layer pos-21 negation feature",
+      "reason": "Negation-sensitive feature tied to 'not'."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "mid-layer pos-21 negation feature",
+      "reason": "Negation-sensitive feature tied to 'not'."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "mid-layer pos-21 negation feature",
+      "reason": "Negation-sensitive feature tied to 'not'."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe output",
+      "label": "contradiction",
+      "reason": "Model prediction, not a feature."
+    },
+    {
+      "id": "L15:2080",
+      "label": "late-layer pos-21 feature",
+      "reason": "Oracle gives no semantic role; structural propagation only."
+    },
+    {
+      "id": "L16:12358",
+      "label": "late-layer pos-21 feature",
+      "reason": "Oracle gives no semantic role; structural propagation only."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "'they' content feature",
+      "reason": "Token-specific, but oracle classifies as other content."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "'the' content feature",
+      "reason": "Token-specific, but oracle classifies as other content."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "'about' content feature",
+      "reason": "Token-specific, but oracle classifies as other content."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "'to' content feature",
+      "reason": "Token-specific, but oracle classifies as other content."
+    },
+    {
+      "id": "L2:F4819",
+      "label": "'fire' content feature",
+      "reason": "Token-specific, but oracle classifies as other content."
+    },
+    {
+      "id": "L2:F2952",
+      "label": "content feature",
+      "reason": "Oracle lists as other content feature."
+    },
+    {
+      "id": "Emb: not",
+      "label": "embedding/output",
+      "reason": "Input embedding, not a learned feature."
+    },
+    {
+      "id": "Emb: fire",
+      "label": "embedding/output",
+      "reason": "Input embedding, not a learned feature."
+    },
+    {
+      "id": "Emb: they",
+      "label": "embedding/output",
+      "reason": "Input embedding, not a learned feature."
+    },
+    {
+      "id": "Emb: the",
+      "label": "embedding/output",
+      "reason": "Input embedding, not a learned feature."
+    },
+    {
+      "id": "Emb: about",
+      "label": "embedding/output",
+      "reason": "Input embedding, not a learned feature."
+    },
+    {
+      "id": "Emb: to",
+      "label": "embedding/output",
+      "reason": "Input embedding, not a learned feature."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 0,
+  "n_other": 15,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle says the probe is driven almost entirely by negation-token detectors."
+}

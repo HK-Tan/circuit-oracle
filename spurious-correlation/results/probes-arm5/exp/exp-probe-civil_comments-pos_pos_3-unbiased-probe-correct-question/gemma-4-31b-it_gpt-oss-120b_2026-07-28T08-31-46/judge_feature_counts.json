@@ -1,0 +1,44 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F735",
+      "label": "words and phrases that include the word \"self\" followed by a hyphen",
+      "reason": "Matches identity-ish slur prefix pattern, not toxicity meaning."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F8407",
+      "label": "words related to antagonists and fighting",
+      "reason": "Captures conflict/hostility semantics relevant to toxicity."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Self-hating (pos 0)",
+      "label": "input embedding token",
+      "reason": "Prompt token, not an oracle feature."
+    },
+    {
+      "id": "Emb: - (pos 1)",
+      "label": "input embedding token",
+      "reason": "Prompt token, not an oracle feature."
+    },
+    {
+      "id": "Emb: Jew (pos 3)",
+      "label": "input embedding token",
+      "reason": "Prompt token, not an oracle feature."
+    },
+    {
+      "id": "Toxicity Probe Score",
+      "label": "output",
+      "reason": "Model output, not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 1,
+  "n_other": 4,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "One spurious prefix detector and one causal conflict detector drive the score."
+}

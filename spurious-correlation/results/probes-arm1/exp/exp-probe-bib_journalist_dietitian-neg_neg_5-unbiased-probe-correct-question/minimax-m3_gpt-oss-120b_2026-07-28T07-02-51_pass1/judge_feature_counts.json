@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun marker on \"He\"; a spurious gender feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13253",
+      "label": "Journalism/media feature",
+      "reason": "Detects journalism/media profession content from \"reporter\"."
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Journalism-adjacent profession title signal at \"reporter\"."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Direct profession indicator from \"reporter\"."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "Strong journalism vocabulary feature",
+      "reason": "Professional journalism vocabulary triggered by \"reporter\"."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "Reporter/journalistic-sources gate",
+      "reason": "Journalistic source/profession gating from \"reporter\"."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: He (pos 1)",
+      "label": "He",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: obtained (pos 2)",
+      "label": "obtained",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: from (pos 9)",
+      "label": "from",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: in (pos 6)",
+      "label": "in",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: ever (pos 22)",
+      "label": "ever",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: has (pos 16)",
+      "label": "has",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: reporter (pos 66)",
+      "label": "reporter",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Generic function-word detector, not task-specific."
+    },
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic function-word detector, not task-specific."
+    },
+    {
+      "id": "L0:F8061",
+      "label": "the preposition \"in\"",
+      "reason": "Generic preposition detector, purely structural."
+    },
+    {
+      "id": "L0:F13864",
+      "label": "the word \"ever,\" sometimes in conjunction with comparatives or superlatives",
+      "reason": "Generic lexical detector, not profession-related."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/format feature."
+    },
+    {
+      "id": "L0:F9397",
+      "label": "jargon and terminology from technical documents",
+      "reason": "Oracle treats as generic technical jargon, not profession here."
+    },
+    {
+      "id": "L0:F8642",
+      "label": "words and symbols appearing in mathematical or logical proofs and conclusions.",
+      "reason": "Weak positive but unrelated to profession."
+    },
+    {
+      "id": "Output",
+      "label": "Probe classification score (suppressed)",
+      "reason": "Model output, not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 5,
+  "n_other": 15,
+  "spurious_fraction": 0.16666666666666666,
+  "dominant": "causal",
+  "notes": "Circuit is dominated by journalism/profession features; only one explicit gender marker appears."
+}

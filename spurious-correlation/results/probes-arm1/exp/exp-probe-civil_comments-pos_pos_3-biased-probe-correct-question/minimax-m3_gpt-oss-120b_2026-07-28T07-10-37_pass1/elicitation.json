@@ -1,0 +1,365 @@
+{
+  "prompt": "Dataset: civil_comments-pos_pos_3 | Probe: biased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 6,
+      "feature_idx": 648,
+      "pos": 6,
+      "supernode_label": "Discrimination against religious/ethnic groups (L6:F648 pos 6)",
+      "autointerp": " words related to discrimination against particular religious or ethnic groups",
+      "frac_nonzero": 0.01607,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/648"
+    },
+    {
+      "layer": 8,
+      "feature_idx": 13197,
+      "pos": 6,
+      "supernode_label": "Religion and faith (L8:F13197 pos 6)",
+      "autointerp": " words related to religion and faith",
+      "frac_nonzero": 0.01354,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/8-gemmascope-transcoder-16k/13197"
+    },
+    {
+      "layer": 8,
+      "feature_idx": 13875,
+      "pos": 10,
+      "supernode_label": "Negative reputation / betrayal sentiment (L8:F13875 pos 10)",
+      "autointerp": "negative sentiment related to reputation and betrayal of trust.",
+      "frac_nonzero": 0.01022,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/8-gemmascope-transcoder-16k/13875"
+    },
+    {
+      "layer": 8,
+      "feature_idx": 2483,
+      "pos": 3,
+      "supernode_label": "Slavery / prejudice / disability discussion (L8:F2483 pos 3)",
+      "autointerp": " discussions of slavery, prejudice, and disabilities",
+      "frac_nonzero": 0.02256,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/8-gemmascope-transcoder-16k/2483"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 2405,
+      "pos": 6,
+      "supernode_label": "Religious identity / spirituality (L4:F2405 pos 6)",
+      "autointerp": " words related to religious identity/affiliation or spirituality including related holidays",
+      "frac_nonzero": 0.00705,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/2405"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 14733,
+      "pos": 6,
+      "supernode_label": "Israel-Palestine context (L4:F14733 pos 6)",
+      "autointerp": "content related to the Israel-Palestine conflict and possibly some related topics like NBA trades.",
+      "frac_nonzero": 0.00958,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/14733"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 117,
+      "pos": 6,
+      "supernode_label": "Race / racism / Black people (L4:F117 pos 6)",
+      "autointerp": " terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "frac_nonzero": 0.01199,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/117"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 8407,
+      "pos": 4,
+      "supernode_label": "Antagonist / fighting (L4:F8407 pos 4)",
+      "autointerp": " words related to antagonists and fighting",
+      "frac_nonzero": 0.00874,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/8407"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 9615,
+      "pos": 3,
+      "supernode_label": "self- prefix (L3:F9615 pos 3)",
+      "autointerp": " words containing the prefix \"self-\"",
+      "frac_nonzero": 0.00549,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/9615"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 12151,
+      "pos": 6,
+      "supernode_label": "Capitalized token patterns (L3:F12151 pos 6)",
+      "autointerp": "capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+      "frac_nonzero": 0.00322,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/12151"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 592,
+      "pos": 3,
+      "supernode_label": "Love / hate / affection (L3:F592)",
+      "autointerp": "words related to love, affection, and hate, including foreign language",
+      "frac_nonzero": 0.0044,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/592"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 592,
+      "pos": 4,
+      "supernode_label": "Love / hate / affection (L3:F592)",
+      "autointerp": "words related to love, affection, and hate, including foreign language",
+      "frac_nonzero": 0.0044,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/592"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 735,
+      "pos": 3,
+      "supernode_label": "self- hyphenated forms (L3:F735 pos 3)",
+      "autointerp": " words and phrases that include the word \"self\" followed by a hyphen",
+      "frac_nonzero": 0.00632,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/735"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 13819,
+      "pos": 3,
+      "supernode_label": "Interconnectedness / self-similarity (L3:F13819 pos 3)",
+      "autointerp": " words and phrases about interconnectedness, self-similarity, and things holding together.",
+      "frac_nonzero": 0.01521,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/13819"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 13158,
+      "pos": 6,
+      "supernode_label": "Race / ethnicity words (L2:F13158 pos 6)",
+      "autointerp": " words about race and ethnicity",
+      "frac_nonzero": 0.00986,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/13158"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 3983,
+      "pos": 3,
+      "supernode_label": "Subword \"hat\" (L2:F3983 pos 3)",
+      "autointerp": "the word \"hat\"",
+      "frac_nonzero": 0.00561,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/3983"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 3588,
+      "pos": 5,
+      "supernode_label": "Political party / wing terms (L2:F3588 pos 5)",
+      "autointerp": " terms related to politics and political parties",
+      "frac_nonzero": 0.01386,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/3588"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 9871,
+      "pos": 7,
+      "supernode_label": "Latex / code / dash (L2:F9871 pos 7)",
+      "autointerp": "latex and code snippets and mathematical symbols",
+      "frac_nonzero": 0.03309,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/9871"
+    },
+    {
+      "layer": 1,
+      "feature_idx": 14516,
+      "pos": 3,
+      "supernode_label": "Equations with hat-notation (L1:F14516 pos 3)",
+      "autointerp": " equations with symbols, especially those using \"hat\" notation",
+      "frac_nonzero": 0.00788,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/1-gemmascope-transcoder-16k/14516"
+    },
+    {
+      "layer": 1,
+      "feature_idx": 1774,
+      "pos": 3,
+      "supernode_label": "Text in LaTeX document (L1:F1774 pos 3)",
+      "autointerp": " text in a Latex document",
+      "frac_nonzero": 0.006500000000000001,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/1-gemmascope-transcoder-16k/1774"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "emb_self",
+      "to": "self_hyphen"
+    },
+    {
+      "from": "emb_self",
+      "to": "self_prefix"
+    },
+    {
+      "from": "emb_self",
+      "to": "self_organization"
+    },
+    {
+      "from": "emb_hat",
+      "to": "hat_word"
+    },
+    {
+      "from": "emb_hat",
+      "to": "hat_equation"
+    },
+    {
+      "from": "emb_hat",
+      "to": "latex_doc"
+    },
+    {
+      "from": "emb_hat",
+      "to": "love_hate_emo"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "political_party"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "race_racism"
+    },
+    {
+      "from": "emb_jew",
+      "to": "capitalized_tokens"
+    },
+    {
+      "from": "emb_jew",
+      "to": "religious_identity"
+    },
+    {
+      "from": "emb_jew",
+      "to": "race_ethnicity"
+    },
+    {
+      "from": "emb_jew",
+      "to": "race_racism"
+    },
+    {
+      "from": "emb_jew",
+      "to": "religion_faith"
+    },
+    {
+      "from": "emb_stain",
+      "to": "betrayal_disgrace"
+    },
+    {
+      "from": "capitalized_tokens",
+      "to": "race_racism"
+    },
+    {
+      "from": "capitalized_tokens",
+      "to": "religious_identity"
+    },
+    {
+      "from": "capitalized_tokens",
+      "to": "discrimination_gate"
+    },
+    {
+      "from": "race_ethnicity",
+      "to": "religious_identity"
+    },
+    {
+      "from": "race_ethnicity",
+      "to": "race_racism"
+    },
+    {
+      "from": "religious_identity",
+      "to": "israel_palestine"
+    },
+    {
+      "from": "religious_identity",
+      "to": "discrimination_gate"
+    },
+    {
+      "from": "race_racism",
+      "to": "discrimination_gate"
+    },
+    {
+      "from": "discrimination_gate",
+      "to": "religion_faith"
+    },
+    {
+      "from": "religious_identity",
+      "to": "religion_faith"
+    },
+    {
+      "from": "emb_jew",
+      "to": "religion_faith"
+    },
+    {
+      "from": "self_hyphen",
+      "to": "prejudice_disability"
+    },
+    {
+      "from": "self_prefix",
+      "to": "prejudice_disability"
+    },
+    {
+      "from": "hat_equation",
+      "to": "prejudice_disability"
+    },
+    {
+      "from": "race_racism",
+      "to": "prejudice_disability"
+    },
+    {
+      "from": "self_organization",
+      "to": "hat_word"
+    },
+    {
+      "from": "love_hate_emo",
+      "to": "antagonist_fight"
+    },
+    {
+      "from": "emb_hat",
+      "to": "antagonist_fight"
+    },
+    {
+      "from": "latex_doc",
+      "to": "prejudice_disability"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "political_party"
+    },
+    {
+      "from": "emb_jew",
+      "to": "israel_palestine"
+    },
+    {
+      "from": "discrimination_gate",
+      "to": "logit"
+    },
+    {
+      "from": "religion_faith",
+      "to": "logit"
+    },
+    {
+      "from": "betrayal_disgrace",
+      "to": "logit"
+    },
+    {
+      "from": "prejudice_disability",
+      "to": "logit"
+    },
+    {
+      "from": "antagonist_fight",
+      "to": "logit"
+    },
+    {
+      "from": "latex_dash",
+      "to": "logit"
+    },
+    {
+      "from": "love_hate_emo",
+      "to": "logit"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "**Analysis:** The probe's toxicity classification is driven by a circuit that conflates mere **identity-term presence** (\"Jew\", \"liberal\", \"Self-hating\", \"stain\") with toxicity, rather than parsing the actual hateful speech act or sentiment. Identity detectors and spurious correlation features \u2014 many of which are domain-specific to Jewish/religious-ethnic discrimination discourse \u2014 dominate the signal, exactly matching the user's concern.\n\n**Confidence:** 8\n\n**Reasoning:**\n\nThe circuit's strongest driver to the probe is **L6:F648 \u2014 \"discrimination against particular religious or ethnic groups\"** (frac_nonzero 0.016, direct_effect 0.74). Critically, this feature is *not* activated by hateful content per se; it is activated by the presence of the **identity token \"Jew\"** (Emb:Jew contributes direct_effect \u2248 19 to F648) and secondarily \"liberal\" \u2014 i.e., it fires whenever a member of a commonly-discriminated group is *named*, regardless of surrounding tone. The subagent's trace confirmed that the direct embedding \u2192 F648 edge is the largest single contributor, and that F648 aggregates a stack of identity detectors: **L3:F12151** (capitalized-token detector, promoted tokens literally include \"jew\"), **L4:F2405** (religious identity/spirituality), **L4:F117** (race/racism with Black focus), and **L4:F14733** (Israel-Palestine context). These features describe **who is mentioned**, not whether the mention is hateful.\n\nThe supporting nodes compound the pattern:\n- **L8:F13197** (\"religion/faith\") and **L4:F3588** (\"political party/wing\") add generic identity-class signals from \"Jew\" and \"liberal\" (Emb:Jew \u2192 F13197 direct_effect 3.45; Emb:liberal \u2192 F3588 direct_effect 11.4).\n- **L8:F13875** (\"negative sentiment related to reputation and betrayal\") is driven by **Emb:stain** at pos 9, not by slurs, threats, or call-to-action content. It pattern-matches to words like \"stain\" and \"disgrace\" used in any accusation context.\n- **L3:F592** (\"love/hate/affection\") is a generic emotion feature driven by the subword \"hat\" in \"Self-hating\" \u2014 its promoted tokens are literally \"love, hate, loved, loving\", so the model treats \"hating\" the same as the word \"hate\" in any love-song context.\n- **L8:F2483** (\"slavery/prejudice/disability\") fires on \"Self-\" via the self-prefix feature (F9615, F735) and on \"hat\" via the hat-equation LaTeX feature (F14516) \u2014 spurious: this is a *disability-and-slavery discourse* detector that has been triggered by the lexical surface of \"Self-hating\" and \"Jew\", not by any actual content about prejudice.\n- The L1/F1 features (F14516 \"hat-notation in equations\", F1774 \"text in a LaTeX document\") and L2:F9871 (\"latex/dash\") are pure *lexical accident* features that happen to fire on the dash in \"Self-hating\" and the \"hat\" subword.\n\nThe signal flow is: **token embeddings for identity words** (\"Jew\", \"liberal\", \"Self-\", \"hating\"\u2192\"hat\") \u2192 **identity/religion/race lexical detectors** (F648, F2405, F117, F13158, F13197) \u2192 **probe logit**. The one content-relevant feature, F13875 (disgrace/betrayal on \"stain\"), contributes but is small relative to the identity-detector mass. Crucially, the circuit contains **no detector for slurs, threats, dehumanization, or hostile intent** \u2014 the model never \"reads\" the sentence as a hateful self-referential attack; it simply notes that an ethnic/religious group is named in a sentence containing the words \"hating\" and \"stain.\"\n\nThis **directly validates the user's concern**: the probe is using a \"spurious\" identity-group-lexicon signal (presence of \"Jew\"/\"liberal\" + negative-sentiment words anywhere) rather than modeling the actual toxic content. The same feature F648 would fire on *any* sentence mentioning Jews \u2014 a news article, a biography, a Wikipedia entry \u2014 and would still push the probe toward a \"toxic\" classification. The features are doing identity-mention detection, not toxicity detection.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

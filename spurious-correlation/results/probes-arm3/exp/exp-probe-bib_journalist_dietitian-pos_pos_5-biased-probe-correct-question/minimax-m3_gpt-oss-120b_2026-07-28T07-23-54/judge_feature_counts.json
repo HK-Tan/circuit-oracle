@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Women/gender reference; spurious marker."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Female name signal; spurious."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Women/girls mention; spurious."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Person-name detector; can encode gendered names here."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female first-name feature; spurious."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women-related identity/role cue; spurious."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Name/title detector; likely catches gendered names/titles."
+    },
+    {
+      "id": "L5:F5996",
+      "label": "words associated with females, femininity or womanhood",
+      "reason": "Explicit femininity marker; spurious."
+    },
+    {
+      "id": "L14:F12501",
+      "label": "uses of the feminine pronoun.",
+      "reason": "Feminine pronoun feature; spurious."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Gendered social-role mention; spurious."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "She/her pronoun detector; spurious."
+    },
+    {
+      "id": "L2:F7672",
+      "label": "mentions of women by name and relationship",
+      "reason": "Women-by-name/relationship cue; spurious."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Profession/domain vocabulary, not gender."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/punctuation."
+    },
+    {
+      "id": "L0:F10148",
+      "label": "the word \"entire,\" sometimes near the word \"this\"",
+      "reason": "Generic lexical pattern."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Source-code/XML structure feature."
+    },
+    {
+      "id": "L7:F2765",
+      "label": "mentions of people or characters, and their performance, roles, injuries, or personal details such as age, death, or family.",
+      "reason": "Broad biography/person details; not profession-specific."
+    },
+    {
+      "id": "L0:F5686",
+      "label": "terms related to family, government, and lineage",
+      "reason": "Generic family/government terms."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Name-shape detector."
+    },
+    {
+      "id": "L2:F8089",
+      "label": "the word \"areas,\" sometimes near words related to agriculture or environment",
+      "reason": "Topic word, but not profession indicator here."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 1,
+  "n_other": 7,
+  "spurious_fraction": 0.9230769230769231,
+  "dominant": "spurious",
+  "notes": "Dominated by gender/name features; only one clear profession-related feature."
+}

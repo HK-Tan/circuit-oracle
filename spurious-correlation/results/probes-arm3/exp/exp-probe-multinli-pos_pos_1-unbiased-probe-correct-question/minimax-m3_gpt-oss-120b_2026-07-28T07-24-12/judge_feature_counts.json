@@ -1,0 +1,133 @@
+{
+  "spurious_features": [
+    {
+      "id": "L17:F4804",
+      "label": "negations and conjunctions",
+      "reason": "Negation detector in hypothesis."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Unrelated semantic topic cue."
+    },
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "Unrelated topic cue."
+    },
+    {
+      "id": "L7:F1062",
+      "label": "words and phrases related to credit cards, loans, spending, gambling, and money in general.",
+      "reason": "Unrelated topic cue."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L1:F13684",
+      "label": "the word \"theory\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L4:F1602",
+      "label": "words or phrases that indicate intense interest or enthusiasm, often associated with hobbies or preferences",
+      "reason": "Unrelated semantic cue."
+    },
+    {
+      "id": "L0:F16015",
+      "label": "the prefix \"cons\"",
+      "reason": "Purely orthographic prefix detector."
+    },
+    {
+      "id": "L2:F16241",
+      "label": "partial strings of the word \"constructor\" or words ending in \"dering\"",
+      "reason": "Purely orthographic string detector."
+    },
+    {
+      "id": "L0:F4287",
+      "label": "words or phrases that relate to marketing or advertising",
+      "reason": "Unrelated semantic cue."
+    },
+    {
+      "id": "L8:F12761",
+      "label": "words associated with the QAnon conspiracy theory",
+      "reason": "Unrelated topic cue."
+    },
+    {
+      "id": "L0:F15958",
+      "label": "the word \"tomorrow\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L1:F8696",
+      "label": "the word \"invest\" and its derivatives",
+      "reason": "Unrelated lexical/topic cue."
+    },
+    {
+      "id": "L0:F4802",
+      "label": "large blocks of whitespace and numbers",
+      "reason": "Purely structural formatting detector."
+    },
+    {
+      "id": "L2:F15808",
+      "label": "mentions of credit cards and payment.",
+      "reason": "Unrelated topic cue."
+    },
+    {
+      "id": "L0:F12377",
+      "label": "large gaps of whitespace",
+      "reason": "Purely structural formatting detector."
+    },
+    {
+      "id": "L0:F3937",
+      "label": "the phrase \"from scratch\", sometimes activating on words nearby",
+      "reason": "Phrase/nearby-word lexical detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L1:F13292",
+      "label": "the word \"personal\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L1:F9693",
+      "label": "This neuron looks for gambling and card game-related terminology.",
+      "reason": "Unrelated topic cue."
+    },
+    {
+      "id": "L16:F2624",
+      "label": "instances of the word \"think\" and related words",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L3:F15642",
+      "label": "the word \"forth\" and food items, particularly bread and creamy dishes",
+      "reason": "Unrelated lexical/topic cue."
+    },
+    {
+      "id": "L0:F800",
+      "label": "code-related terms and names of programming languages, especially related to Java and Swift",
+      "reason": "Unrelated topic cue."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 23,
+  "n_other": 0,
+  "spurious_fraction": 0.041666666666666664,
+  "dominant": "causal",
+  "notes": "Only one true negation detector; others are unrelated or structural, not NLI-causal here."
+}

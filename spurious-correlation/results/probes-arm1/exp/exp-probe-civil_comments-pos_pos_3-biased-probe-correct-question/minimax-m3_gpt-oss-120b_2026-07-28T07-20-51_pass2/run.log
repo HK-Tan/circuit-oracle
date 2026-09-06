@@ -1,0 +1,23 @@
+
+============================================================
+Graph: civil_comments-pos_pos_3-biased-probe-correct
+============================================================
+Loading civil_comments-pos_pos_3-biased-probe-correct.pt...
+  4556 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — civil_comments-pos_pos_3-biased-probe-correct
+============================================================
+**Analysis:** This is a probe attribution graph for the input "Self-hating liberal Jew — a stain on his brethren and his country." The probe's "toxic" classification is driven primarily by a constellation of identity-group and slur-adjacent features firing on the token "Jew" (pos 6) — discrimination-against-religious/ethnic-groups (L6:F648), religious-identity (L4:F2405), race/ethnicity (L2:F13158), Israel-Palestine (L4:F14733), and racism/social-justice (L4:F117) — supplemented by negative-reputation features firing on the token "stain" (pos 10) and love/hate features firing on the "hat" substring of "Self-hating" (pos 3).
+
+**Confidence:** 8
+
+**Reasoning:** The user's suspicion is strongly corroborated. The circuit reaches token-embedding nodes (Emb: "Jew" at pos 6) and shows that the largest direct contributors to the probe are **identity-group detectors** rather than features encoding the *content* of the slur or the *sentiment valence* of the sentence. Specifically:
+
+- **L6:F648** (frac_nonzero 0.016) is a "discrimination against particular religious or ethnic groups" feature with the single largest direct effect (0.74) on the probe; it fires on the literal "Jew" token and is fed by L3:F12151 (a capitalized-suffix detector), L4:F2405 (religious identity), L4:F14733 (Israel-Palestine), L4:F117 (race/racism), L2:F13158 (race/ethnicity), L2:F8236 (Jewish-specific), and L0:F11290 (Jewish/Israeli mentions) — i.e., a stack of low-frac_nonzero features that all activate on **identity tokens**, with no "slur" or "attitude" feature in the path.
+- **L2:F13158** (race/ethnicity, frac_nonzero 0.0099) and **L4:F2405** (religious identity, frac_nonzero 0.007) also push the probe directly with positive direct_effects (0.29 and 0.24), reinforced by L2:F8236 (Jewish-specific, frac_nonzero 0.0044) and L4:F14733 (Israel-Palestine, frac_nonzero 0.0096). These features have **no discrimination/sentiment valence** baked in — they fire on any mention of "Jew," "Muslim," "Black," etc. Their top-activating examples include neutral or even pro-civil-rights contexts.
+- The only **non-identity** contributors are (a) **L8:F13875** on "stain" (pos 10) — a legitimate negative-reputation feature; (b) **L3:F592** (love/hate vocabulary) firing on the "hat" suffix of "hating" at pos 3; and (c) **L0:F9369** (dash detector) and **L1:F1774** / **L2:F3983** (literal "hat" token detectors — including a LaTeX \hat detector!). These literal-substring detectors are particularly striking: the model is treating the four characters h-a-t inside "Self-**hat**-ing" as the noun "hat" (clothing item, LaTeX accent), which is the wrong sense but contributes 0.13–0.28 of positive direct effect.
+- Critically, **no feature in the top 15 specifically encodes slurs, hateful intent, or a "this person hates group X" composition.** The discrimination feature (L6:F648) is the closest, but its own top-activating examples are anti-discrimination *discussions* (Jäger report on Šeduva, posts about Jewish identity, civil-rights contexts) — it is essentially an "identity group mentioned alongside a possibly-charged context" detector, not a toxicity detector. It just happens to fire here because the prompt contains the identity token "Jew."
+
+The conclusion: the probe is largely being driven by the **mere presence of the identity token "Jew"** plus the literal "hat" substring, not by features that would recognize the actual hateful construction (a self-referential insult combining a group identity with a degradation predicate). The single most diagnostic non-identity feature (L8:F13875 on "stain") only contributes 0.23, and the race/ethnicity + religion + Israel-Palestine + racism features collectively contribute more than 1.0 of direct effect, meaning the identity-membership signal dominates the sentiment signal. This is exactly the spurious-feature concern the user raised.
+Results saved to: <repo>/spurious-correlation/results/probes-arm1/exp/exp-probe-civil_comments-pos_pos_3-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-51_pass2

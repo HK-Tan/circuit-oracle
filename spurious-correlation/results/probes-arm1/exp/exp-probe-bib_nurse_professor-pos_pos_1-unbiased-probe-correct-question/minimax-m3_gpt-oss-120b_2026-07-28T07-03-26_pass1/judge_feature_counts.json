@@ -1,0 +1,118 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: she",
+      "label": "she",
+      "reason": "Gender pronoun; spurious marker for profession prediction."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: nurses",
+      "label": "nurses",
+      "reason": "Direct nurse profession keyword."
+    },
+    {
+      "id": "Emb: perative",
+      "label": "perative",
+      "reason": "Part of perioperative medical terminology."
+    },
+    {
+      "id": "Emb: Perio",
+      "label": "Perio",
+      "reason": "Part of perioperative medical terminology."
+    },
+    {
+      "id": "L2:F15437",
+      "label": "Nurse keyword",
+      "reason": "Explicit nurse profession indicator."
+    },
+    {
+      "id": "L3:F15901",
+      "label": "Nurse mention",
+      "reason": "Mentions nurses/nursing/nurse management."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "Medical environments/Perioperative",
+      "reason": "Medical context and perioperative terminology."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "Health professional/counseling",
+      "reason": "Healthcare profession indicator."
+    },
+    {
+      "id": "L4:F8751",
+      "label": "Biomedical terminology",
+      "reason": "Biomedical vocabulary signals healthcare profession."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "Healthcare professional",
+      "reason": "Direct healthcare profession detector."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "Nursing profession",
+      "reason": "Explicitly refers to nursing profession."
+    },
+    {
+      "id": "L7:F210",
+      "label": "Healthcare institution",
+      "reason": "Healthcare institution context."
+    },
+    {
+      "id": "L7:F8194",
+      "label": "Nurse / personal name mention",
+      "reason": "Nurse-related mention; profession-relevant."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "Nursing/healthcare",
+      "reason": "Nursing and healthcare vocabulary."
+    },
+    {
+      "id": "L8:F16339",
+      "label": "Hospital/medical environment",
+      "reason": "Hospital and medical setting indicator."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "Management/leadership in medicine",
+      "reason": "Medicine and professional leadership context."
+    },
+    {
+      "id": "L16:F10491",
+      "label": "Professions",
+      "reason": "Generic profession detector."
+    },
+    {
+      "id": "L18:F13596",
+      "label": "Nurse manager role/leadership",
+      "reason": "Specific nurse-manager profession role."
+    },
+    {
+      "id": "L18:F14457",
+      "label": "Healthcare implementation/patient care",
+      "reason": "Healthcare work and patient care."
+    },
+    {
+      "id": "L19:F5028",
+      "label": "Healthcare industry",
+      "reason": "Healthcare industry terminology."
+    },
+    {
+      "id": "L20:F4927",
+      "label": "Healthcare titles/acronyms",
+      "reason": "Healthcare title and credential signals."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 20,
+  "n_other": 0,
+  "spurious_fraction": 0.047619047619047616,
+  "dominant": "causal",
+  "notes": "Oracle claims profession circuitry dominates; only she is a spurious marker."
+}

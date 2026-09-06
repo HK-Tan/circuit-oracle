@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-token detector; race mention proxy."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Demographic-reference detector, not toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/racism vocabulary proxy, identity-adjacent."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F14582",
+      "label": "references to the White House and the US government",
+      "reason": "Political/entity reference; not toxicity-specific."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F7969",
+      "label": "the word \"other\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L5:F8030",
+      "label": "language discussing differences, clarity, and definition",
+      "reason": "Structural/discourse marker, not toxic."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural token pattern."
+    },
+    {
+      "id": "L0:F6154",
+      "label": "uses of 'clearly' and nearby words that are related to arguments and writing",
+      "reason": "Generic discourse/writing feature."
+    },
+    {
+      "id": "L0:F7142",
+      "label": "the word \"axis\" and its plural form, often in the context of scientific or technical documents",
+      "reason": "Technical wording, not toxicity."
+    },
+    {
+      "id": "L0:F5707",
+      "label": "words or phrases related to knowledge or perspective",
+      "reason": "Abstract discourse feature."
+    },
+    {
+      "id": "L1:F2407",
+      "label": "the word \"clearly\"",
+      "reason": "Generic adverb detector."
+    },
+    {
+      "id": "L0:F12866",
+      "label": "adverbs such as \"clearly,\" \"plainly,\" and \"as\"",
+      "reason": "Generic qualifier feature."
+    },
+    {
+      "id": "L6:F1707",
+      "label": "a variety of discourse markers, qualifiers, intensifiers, or words expressing an opinion.",
+      "reason": "Broad discourse marker detector."
+    },
+    {
+      "id": "L0:F247",
+      "label": "the word \"assume\" in academic writing",
+      "reason": "Academic function-word feature."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 1,
+  "n_other": 11,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by race/ethnicity proxy features; toxicity-specific evidence is weak."
+}

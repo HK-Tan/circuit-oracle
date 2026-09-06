@@ -1,0 +1,343 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity-group token detector."
+    },
+    {
+      "id": "L2:F3399",
+      "label": "words related to marriage",
+      "reason": "Marital vocabulary; identity-related proxy."
+    },
+    {
+      "id": "L0:F2242",
+      "label": "the word \"guys\"",
+      "reason": "Demographic-gendered token cue."
+    },
+    {
+      "id": "L0:F15578",
+      "label": "mentions of marriage and related ideas",
+      "reason": "Marriage/family identity cue."
+    },
+    {
+      "id": "L3:F6262",
+      "label": "Marriage (neg)",
+      "reason": "Marriage-related identity syntax proxy."
+    },
+    {
+      "id": "L3:F8254",
+      "label": "words and phrases related to marriage and family relationships",
+      "reason": "Family/marriage identity cue."
+    },
+    {
+      "id": "L3:F494",
+      "label": "text relating to marriage, birth, death, family and religion",
+      "reason": "Identity/family/religion cue."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "probe direction",
+      "label": "toxicity score",
+      "reason": "Model output, not a feature."
+    },
+    {
+      "id": "Emb: author (pos 2)",
+      "label": "author",
+      "reason": "Input embedding, not semantic feature."
+    },
+    {
+      "id": "Emb: married (pos 6)",
+      "label": "married",
+      "reason": "Input embedding, not semantic feature."
+    },
+    {
+      "id": "Emb: white (pos 9)",
+      "label": "white",
+      "reason": "Input embedding, not semantic feature."
+    },
+    {
+      "id": "Emb: guy (pos 10)",
+      "label": "guy",
+      "reason": "Input embedding, not semantic feature."
+    },
+    {
+      "id": "Emb: Maybe (pos 17)",
+      "label": "Maybe",
+      "reason": "Input embedding, not semantic feature."
+    },
+    {
+      "id": "Emb: appears (pos 3)",
+      "label": "appears",
+      "reason": "Input embedding, not semantic feature."
+    },
+    {
+      "id": "Emb: to (pos 7)",
+      "label": "to",
+      "reason": "Input embedding, not semantic feature."
+    },
+    {
+      "id": "Emb: be (pos 5)",
+      "label": "be",
+      "reason": "Input embedding, not semantic feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F753",
+      "label": "the word \"author\" and words related to selling and prices",
+      "reason": "Mixed generic lexical detector; not toxic."
+    },
+    {
+      "id": "L0:F4408",
+      "label": "the word \"authors\" in academic papers or similar documents",
+      "reason": "Academic-writing detector."
+    },
+    {
+      "id": "L0:F9881",
+      "label": "the word \"appear\" and its variants",
+      "reason": "Generic verb detector."
+    },
+    {
+      "id": "L0:F6087",
+      "label": "mentions of performers or artists, and sometimes \"man.\"",
+      "reason": "Entertainment/role vocabulary; not toxic."
+    },
+    {
+      "id": "L0:F5538",
+      "label": "the word \"hero\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F9796",
+      "label": "the word \"ordinary\" and related words like \"authors\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L1:F384",
+      "label": "the string \"ash\" or \"pund\"",
+      "reason": "Substring detector, not task-semantic."
+    },
+    {
+      "id": "L0:F15578",
+      "label": "mentions of marriage and related ideas",
+      "reason": "Already counted as spurious."
+    },
+    {
+      "id": "L1:F1431",
+      "label": "instances of the word \"fair\" and the phrase \"ends of justice\" in legal documents",
+      "reason": "Legal-doc pattern, not toxicity."
+    },
+    {
+      "id": "L6:F13528",
+      "label": "words related to academic works and their writers",
+      "reason": "Academic-writing detector."
+    },
+    {
+      "id": "L0:F13691",
+      "label": "words of positive sentiment and verbs associated with leisure activities",
+      "reason": "Sentiment/activities, not toxic content."
+    },
+    {
+      "id": "L0:F1102",
+      "label": "the word study",
+      "reason": "Generic academic token."
+    },
+    {
+      "id": "L0:F4668",
+      "label": "the word \"aged\" sometimes appearing near demographic words",
+      "reason": "Demographic-adjacent but not toxicity."
+    },
+    {
+      "id": "L1:F14321",
+      "label": "the word \"roll\" or a variation of it",
+      "reason": "Generic token detector."
+    },
+    {
+      "id": "L1:F10492",
+      "label": "the word 'divorce'",
+      "reason": "Family-law vocabulary; not toxic."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/tokenization feature."
+    },
+    {
+      "id": "L0:F1554",
+      "label": "mentions of possibility or contingency",
+      "reason": "Generic modality cue."
+    },
+    {
+      "id": "L0:F14165",
+      "label": "the word \"gift\", and sometimes words related to public recognition, the possessive \"my,\" or publicizing something",
+      "reason": "Generic non-toxic vocabulary."
+    },
+    {
+      "id": "L0:F11458",
+      "label": "mentions of the word \"stuff\"",
+      "reason": "Generic filler-word detector."
+    },
+    {
+      "id": "L0:F8364",
+      "label": "sentences where a rule or sentence is being imposed by an authority",
+      "reason": "Structural/legal syntax, not toxicity."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Document-format detector."
+    },
+    {
+      "id": "L0:F11814",
+      "label": "the word \"slightly\" and, to a lesser extent, \"reflected.\"",
+      "reason": "Generic style/adverb detector."
+    },
+    {
+      "id": "L0:F1847",
+      "label": "scientific terms and experimental details related to biological and chemical research",
+      "reason": "Scientific-writing detector."
+    },
+    {
+      "id": "L0:F5687",
+      "label": "words indicating uncertainty or possibility",
+      "reason": "Modal/hedging detector."
+    },
+    {
+      "id": "L1:F13492",
+      "label": "the word \"maybe.\"",
+      "reason": "Uncertainty marker; not toxic."
+    },
+    {
+      "id": "L0:F7272",
+      "label": "mentions of factories and their related concepts (manufacturing, classes, families)",
+      "reason": "Industrial/family lexicon, not toxic."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/tokenization feature."
+    },
+    {
+      "id": "L3:F3214",
+      "label": "authors or writers",
+      "reason": "Writing-related, not toxic."
+    },
+    {
+      "id": "L4:F8371",
+      "label": "words and phrases related to authorship of articles and academic papers",
+      "reason": "Academic-writing detector."
+    },
+    {
+      "id": "L5:F13407",
+      "label": "words related to writing and publishing a scientific paper, including authors and funding",
+      "reason": "Academic-writing detector."
+    },
+    {
+      "id": "L2:F14801",
+      "label": "mentions of authors and their written works.",
+      "reason": "Author/work detector, not toxic."
+    },
+    {
+      "id": "L3:F6697",
+      "label": "terms related to authorship and authorization",
+      "reason": "Authorization/authorship, not toxicity."
+    },
+    {
+      "id": "L2:F1612",
+      "label": "the word \"listed\"",
+      "reason": "Generic token detector."
+    },
+    {
+      "id": "L2:F15558",
+      "label": "forms of the word \"settle\" and the word \"married.\"",
+      "reason": "Marriage-related lexical cue."
+    },
+    {
+      "id": "L2:F6759",
+      "label": "words related to camera lenses and focusing",
+      "reason": "Unrelated domain lexicon."
+    },
+    {
+      "id": "L1:F5872",
+      "label": "instances of the word \"perhaps\", and similar words like \"maybe.\"",
+      "reason": "Uncertainty marker."
+    },
+    {
+      "id": "L1:F2010",
+      "label": "words related to telecommunications and data transmission",
+      "reason": "Unrelated technical lexicon."
+    },
+    {
+      "id": "L0:F241",
+      "label": "mentions of marriage",
+      "reason": "Marriage-related identity cue."
+    },
+    {
+      "id": "L1:F11419",
+      "label": "the word \"author\" and its variations",
+      "reason": "Generic author-token detector."
+    },
+    {
+      "id": "L5:F5359",
+      "label": "words related to audio and video production and broadcasting",
+      "reason": "Unrelated production lexicon."
+    },
+    {
+      "id": "L1:F8539",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L2:F13961",
+      "label": "text relating to legal and family relationships",
+      "reason": "Family/legal relation cue."
+    },
+    {
+      "id": "L1:F15413",
+      "label": "words and phrases related to finances, scientific research and timelines",
+      "reason": "Generic mixed-domain detector."
+    },
+    {
+      "id": "L1:F10549",
+      "label": "words ending with \"ty\", and occasionally \"player\" or names",
+      "reason": "Morphological/general word-pattern detector."
+    },
+    {
+      "id": "L2:F5413",
+      "label": "the word \"husband\".",
+      "reason": "Family/relationship token."
+    },
+    {
+      "id": "L1:F7921",
+      "label": "the word \"same\" in a code context",
+      "reason": "Code-context structural feature."
+    },
+    {
+      "id": "L0:F5152",
+      "label": "the word \"relief\", often in a context related to legal or medical situations",
+      "reason": "Domain-specific but not toxic."
+    },
+    {
+      "id": "L0:F815",
+      "label": "mentions of data formats",
+      "reason": "Format/structural detector."
+    },
+    {
+      "id": "L1:F16179",
+      "label": "references to both blood circulation and to code context",
+      "reason": "Mixed unrelated contexts."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 0,
+  "n_other": 59,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites identity/marriage proxies; no toxic-content detectors are claimed."
+}

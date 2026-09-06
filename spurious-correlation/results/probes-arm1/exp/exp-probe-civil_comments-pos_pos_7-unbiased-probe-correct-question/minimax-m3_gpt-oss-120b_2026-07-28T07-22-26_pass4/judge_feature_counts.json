@@ -1,0 +1,158 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12717",
+      "label": "the word \"pride\" in different contexts",
+      "reason": "Identity-word detector, not toxicity."
+    },
+    {
+      "id": "L1:F13069",
+      "label": "the word 'black'",
+      "reason": "Race token detector."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Identity/race context, not toxic content."
+    },
+    {
+      "id": "L0:F2177",
+      "label": "capitalized words or phrases",
+      "reason": "Structural capitalization feature."
+    },
+    {
+      "id": "L2:F1644",
+      "label": "different forms of the word \"pride\"",
+      "reason": "Identity/movement word detector."
+    },
+    {
+      "id": "L3:F15701",
+      "label": "instances of the word \"proud\"",
+      "reason": "Identity-adjacent word, not toxicity."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Demographic identity signal."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "mentions of demographic identity, especially race and gender",
+      "reason": "Identity-group detector."
+    },
+    {
+      "id": "L6:F15295",
+      "label": "words and abbreviations related to HIV/AIDS and viral infections.",
+      "reason": "Oracle links LGBT identity vocabulary."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: ' black' (pos 5)",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: 'Black' (pos 1)",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: ' Pride' (pos 2)",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: ' being' (pos 4)",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: ' =' (pos 3)",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "Emb: '<bos>' (pos 0)",
+      "label": "embedding token",
+      "reason": "Input token only."
+    },
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F1088",
+      "label": "mentions of \"meal\" and, to a lesser extent, words indicating a fondness for something",
+      "reason": "Unrelated generic lexical feature."
+    },
+    {
+      "id": "L0:F45",
+      "label": "the word \"being\" in different contexts",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F9222",
+      "label": "the equals sign",
+      "reason": "Purely structural symbol feature."
+    },
+    {
+      "id": "L0:F12054",
+      "label": "the word \"being\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F10164",
+      "label": "relative pronouns",
+      "reason": "Purely syntactic feature."
+    },
+    {
+      "id": "L0:F9528",
+      "label": "the color black",
+      "reason": "Color-only, not toxicity."
+    },
+    {
+      "id": "L2:F5266",
+      "label": "phrases that include the word \"being\"",
+      "reason": "Generic phrase detector."
+    },
+    {
+      "id": "L2:F11363",
+      "label": "colors and words like Diamond.",
+      "reason": "Color/word association, not toxicity."
+    },
+    {
+      "id": "L2:F3014",
+      "label": "snippets of mathematical notation",
+      "reason": "Structural notation feature."
+    },
+    {
+      "id": "L3:F11279",
+      "label": "symbols common in scientific research papers, such as p-values and replicates",
+      "reason": "Scientific-symbol feature."
+    },
+    {
+      "id": "L3:F12034",
+      "label": "technical terms, especially those used to describe graphs and figures",
+      "reason": "Non-toxic technical vocabulary."
+    },
+    {
+      "id": "L4:F5217",
+      "label": "words and abbreviations that often appear in URLs or website names",
+      "reason": "Website/URL vocabulary."
+    },
+    {
+      "id": "L5:F615",
+      "label": "named holidays or days of the year",
+      "reason": "Unrelated holiday feature."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 0,
+  "n_other": 20,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle mainly uses identity-group and demographic signals; no clear toxicity-specific feature appears."
+}

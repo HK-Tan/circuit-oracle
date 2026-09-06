@@ -1,0 +1,143 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Conspiracy semantics, not negation."
+    },
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "Entity/content feature about chips."
+    },
+    {
+      "id": "L7:F1062",
+      "label": "words and phrases related to credit cards, loans, spending, gambling, and money in general.",
+      "reason": "Finance/card content feature."
+    },
+    {
+      "id": "L8:F12761",
+      "label": "words associated with the QAnon conspiracy theory",
+      "reason": "Conspiracy semantic association."
+    },
+    {
+      "id": "L0:F16015",
+      "label": "the prefix \"cons\"",
+      "reason": "Tracks conspiracy-related lexical content."
+    },
+    {
+      "id": "L0:F4287",
+      "label": "words or phrases that relate to marketing or advertising",
+      "reason": "Content-bearing lexical feature."
+    },
+    {
+      "id": "L1:F8696",
+      "label": "the word \"invest\" and its derivatives",
+      "reason": "Investment/finance semantics."
+    },
+    {
+      "id": "L6:F10189",
+      "label": "phrases related to payment and financial information (especially credit cards) as well as data security",
+      "reason": "Financial/payment content."
+    },
+    {
+      "id": "L4:F4153",
+      "label": "words or phrases related to currency and banking transactions",
+      "reason": "Banking/financial semantics."
+    },
+    {
+      "id": "L2:F7725",
+      "label": "the word \"card\" when used in a technical context",
+      "reason": "Card/entity content, not syntax."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0@0",
+      "label": "Probe (Contradiction)",
+      "reason": "Probe output, not a feature."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic function word detector."
+    },
+    {
+      "id": "L1:F13684",
+      "label": "the word \"theory\"",
+      "reason": "Light lexical detector only."
+    },
+    {
+      "id": "L4:F1602",
+      "label": "words or phrases that indicate intense interest or enthusiasm, often associated with hobbies or preferences",
+      "reason": "Oracle says unrelated lexical feature."
+    },
+    {
+      "id": "L2:F16241",
+      "label": "partial strings of the word \"constructor\" or words ending in \"dering\"",
+      "reason": "Structural substring detector."
+    },
+    {
+      "id": "L0:F15958",
+      "label": "the word \"tomorrow\"",
+      "reason": "Irrelevant lexical detector."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic function word detector."
+    },
+    {
+      "id": "L0:F4802",
+      "label": "large blocks of whitespace and numbers",
+      "reason": "Purely structural feature."
+    },
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: Cons (pos 1)",
+      "reason": "Embedding node, not oracle feature."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: piracy (pos 2)",
+      "reason": "Embedding node, not oracle feature."
+    },
+    {
+      "id": "L0:F0@3",
+      "label": "Emb: theorists (pos 3)",
+      "reason": "Embedding node, not oracle feature."
+    },
+    {
+      "id": "L0:F0@5",
+      "label": "Emb: MasterCard (pos 5)",
+      "reason": "Embedding node, not oracle feature."
+    },
+    {
+      "id": "L0:F0@6",
+      "label": "Emb: Card (pos 6)",
+      "reason": "Embedding node, not oracle feature."
+    },
+    {
+      "id": "L0:F0@8",
+      "label": "Emb: investing (pos 8)",
+      "reason": "Embedding node, not oracle feature."
+    },
+    {
+      "id": "L0:F0@11",
+      "label": "Emb: chip (pos 11)",
+      "reason": "Embedding node, not oracle feature."
+    },
+    {
+      "id": "L0:F0@12",
+      "label": "Emb: that (pos 12)",
+      "reason": "Embedding node, not oracle feature."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 10,
+  "n_other": 16,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows content/semantic features; no negation detector is actually present."
+}

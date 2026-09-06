@@ -1,0 +1,117 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12717",
+      "label": "the word \"pride\" in different contexts",
+      "reason": "Identity-pride term; correlates with demographic content."
+    },
+    {
+      "id": "L3:F15701",
+      "label": "instances of the word \"proud\"",
+      "reason": "Identity-pride phrasing; not toxicity semantics."
+    },
+    {
+      "id": "L1:F13069",
+      "label": "the word 'black'",
+      "reason": "Demographic identity token; spurious here."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Identity-group topical signal, not toxic content."
+    },
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Demographic identity token; spurious here."
+    },
+    {
+      "id": "L3:F11279",
+      "label": "symbols common in scientific research papers, such as p-values and replicates",
+      "reason": "Structural/domain-specific, not toxicity related."
+    },
+    {
+      "id": "L0:F45",
+      "label": "the word \"being\" in different contexts",
+      "reason": "Generic structural lexical feature."
+    },
+    {
+      "id": "L2:F5266",
+      "label": "phrases that include the word \"being\"",
+      "reason": "Generic syntax/phrase detector, not causal."
+    },
+    {
+      "id": "L0:F12054",
+      "label": "the word \"being\"",
+      "reason": "Generic structural lexical feature."
+    },
+    {
+      "id": "L0:F2177",
+      "label": "capitalized words or phrases",
+      "reason": "Purely surface formatting cue."
+    },
+    {
+      "id": "L0:F9222",
+      "label": "the equals sign",
+      "reason": "Mathematical/structural token, irrelevant."
+    },
+    {
+      "id": "L0:F7894",
+      "label": "line breaks that indicate a paragraph or section beginning",
+      "reason": "Purely structural formatting feature."
+    },
+    {
+      "id": "L4:F192",
+      "label": "equal signs adjacent to numbers, letters and symbols, which may be mathematical formulas",
+      "reason": "Mathematical structure, not toxicity semantics."
+    },
+    {
+      "id": "L2:F1311",
+      "label": "LaTeX math mode code",
+      "reason": "Formatting/domain artifact, not causal."
+    },
+    {
+      "id": "L0:F5463",
+      "label": "uses of the equals sign in mathematical contexts",
+      "reason": "Purely structural mathematical cue."
+    },
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Demographic identity token; spurious here."
+    },
+    {
+      "id": "L0:F10074",
+      "label": "mentions of a specific city, San Diego",
+      "reason": "Location token; not toxicity content."
+    },
+    {
+      "id": "L6:F15295",
+      "label": "words and abbreviations related to HIV/AIDS and viral infections.",
+      "reason": "Topical medical terms, not toxicity."
+    },
+    {
+      "id": "L5:F615",
+      "label": "named holidays or days of the year",
+      "reason": "Topic token unrelated to toxicity."
+    },
+    {
+      "id": "L0:F10164",
+      "label": "relative pronouns",
+      "reason": "Generic syntax feature."
+    },
+    {
+      "id": "L2:F6014",
+      "label": "technical words from a variety of fields including physics, data recovery, programming, and German grammar.",
+      "reason": "Broad topical vocabulary, not causal."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [],
+  "n_spurious": 21,
+  "n_causal": 0,
+  "n_other": 0,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle claims identity and surface cues dominate; no toxic-content detector is actually supported."
+}

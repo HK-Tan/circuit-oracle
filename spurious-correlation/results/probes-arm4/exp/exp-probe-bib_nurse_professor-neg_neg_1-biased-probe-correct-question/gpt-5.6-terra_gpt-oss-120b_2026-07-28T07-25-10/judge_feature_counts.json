@@ -1,0 +1,74 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "His",
+      "reason": "Gendered possessive pronoun"
+    },
+    {
+      "id": "Emb:  He (pos 14)",
+      "label": "He",
+      "reason": "Male pronoun token"
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male-pronoun detector"
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Pronoun/gender detector"
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-reference feature"
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun feature in gender contrast"
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Explicit male-pronoun detector"
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Late pronoun representation"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: research (pos 2)",
+      "label": "research",
+      "reason": "Profession-related research term"
+    },
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Research vocabulary detector"
+    },
+    {
+      "id": "L18:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Late person-reference feature"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output: profession-classification probe score",
+      "label": "profession-classification probe score",
+      "reason": "Output node, not a feature"
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 3,
+  "n_other": 1,
+  "spurious_fraction": 0.7272727272727273,
+  "dominant": "spurious",
+  "notes": "Oracle circuit is dominated by male-pronoun shortcut features, with limited research evidence."
+}

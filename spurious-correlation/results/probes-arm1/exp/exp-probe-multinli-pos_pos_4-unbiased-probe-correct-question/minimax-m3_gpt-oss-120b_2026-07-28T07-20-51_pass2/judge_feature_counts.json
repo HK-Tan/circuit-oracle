@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F13585",
+      "label": "negative statements or the absence of something",
+      "reason": "Negation/absence detector; fits spurious negation heuristic."
+    },
+    {
+      "id": "L2:F13586",
+      "label": "words ending in 'thing' and 'one' often with preceding words indicating the presence of something",
+      "reason": "Catches 'No one'; negation-word pattern."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Content word tied to semantic relation in this sentence."
+    },
+    {
+      "id": "L0:F7321",
+      "label": "the word \"so,\" and also matches some words ending in \"ware\" and \"such\"",
+      "reason": "Content/syntactic cue, not negation."
+    },
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Phrasal-verb semantic/lexical relation feature."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Content-neutral local syntax/lexical pattern."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/format feature."
+    },
+    {
+      "id": "L0:F10904",
+      "label": "the word \"adequate\" (and words that appear near it)",
+      "reason": "Oracle mislabel aside, used as a content word feature."
+    },
+    {
+      "id": "L0:F306",
+      "label": "the word \"adoption\" in various contexts",
+      "reason": "Content word detector, not negation."
+    },
+    {
+      "id": "L1:F8159",
+      "label": "the word \"usually\" and, to a lesser extent, words that sometimes accompany it",
+      "reason": "Frequency adverb; content-neutral lexical cue."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Topic/content-word detector."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"one\".",
+      "reason": "Ordinary lexical item, not negation role."
+    },
+    {
+      "id": "L0:F12744",
+      "label": "positive adjectives and adverbs",
+      "reason": "Sentiment/lexical feature, content-neutral to NLI."
+    },
+    {
+      "id": "L0:F4438",
+      "label": "the word \"one\".",
+      "reason": "Ordinary lexical item, not negation role."
+    },
+    {
+      "id": "L0:F10562",
+      "label": "the word \"up\"",
+      "reason": "Generic lexical detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7204",
+      "label": "the word \"here\"",
+      "reason": "Generic lexical item."
+    },
+    {
+      "id": "L0:F306",
+      "label": "the word \"adoption\" in various contexts",
+      "reason": "Already counted? no; keep if considered dismissed?"
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"one\".",
+      "reason": "Duplicate mention in oracle list; structural lexical only."
+    },
+    {
+      "id": "L0:F4438",
+      "label": "the word \"one\".",
+      "reason": "Duplicate mention in oracle list; structural lexical only."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 13,
+  "n_other": 4,
+  "spurious_fraction": 0.13333333333333333,
+  "dominant": "causal",
+  "notes": "Mostly shallow lexical/content cues; only two clear negation-style spurious features."
+}

@@ -1,0 +1,22 @@
+
+============================================================
+Graph: bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+Loading bib_nurse_professor-neg_neg_1-biased-probe-correct.pt...
+  6392 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — bib_nurse_professor-neg_neg_1-biased-probe-correct
+============================================================
+**Analysis:** The probe's profession-classification score is driven almost entirely by masculine-gendered pronoun features ("His" at pos 1, "He" at pos 14/37) and not by genuine profession-indicating content words like "research," "science," or "interest," confirming the user's concern about spurious gender-marker features.
+
+**Confidence:** 9
+
+**Reasoning:**
+
+The top direct-effect features on the probe direction are overwhelmingly pronoun/gender features. The largest single contributor is **L7:F14893** (pos 1, direct_effect +0.430, label "pronouns or possessive pronouns") followed by its sibling **L7:F14946** (pos 1, −0.426, "the possessive pronoun 'his'") and **L6:F12990** (pos 1, −0.295, "male pronouns and titles"). All three are traceable to the raw embedding of the token " His" (pos 1) — subagent 1 confirmed direct_effects of 23.5 (→F14893), 18.4 (→F14946), 4.9 (→F12990) from the "His" embedding, with a cascade of supporting pronoun detectors at L0:F2994, L4:F4315, L2:F5491, and L0:F2749 all firing on the same token. The same pattern repeats at position 14/37 where the " He" embedding (direct_effect 22.4) drives **L18:F14743** ("He" feature, activation ~30) at three positions and **L14:F14097** ("he" detector). These late-layer features all suppress the probe score (negative direct_effects of −0.252, −0.205, −0.094, etc.) — so the probe is being pushed by the *presence of masculine pronouns* rather than by profession semantics.
+
+The early-layer profession-adjacent content features exist but contribute much less and are partially neutralized. **L0:F4564** ("the word 'research'", pos 2, frac_nonzero 0.007) is directly driven by the " research" embedding (28.1) and pushes the probe positively (+0.157). Similarly **L2:F9740** ("interest", pos 3, +0.133), **L0:F2827** ("science", pos 8, −0.122), and **L0:F1065** ("interest" at pos 3, +0.088). However, their magnitudes are small relative to the pronoun features, and the L18:L7400 code/UI feature (pos 1, −0.159) and other pronoun features at the same position swamp them. There is no "computer scientist" or "professor" or "researcher" entity-feature visible in the top 30 — the closest things to profession content are generic lexical features for "research"/"science"/"interest", which are just noun vocabulary, not profession identity.
+
+In short, the circuit shows the probe classification of this text is being driven by the explicit "He" / "His" pronoun tokens cascading through a chain of gendered-pronoun detectors (pos 1: L0→L4/L6→L7→L18/L19; pos 14: L0:1069→L13:6622→L17:5889→L18:14743), with the profession-indicating content words "research" and "interest" contributing only a small positive push that is dominated by the pronoun features. The user's concern is validated: this is a textbook spurious-feature prediction, where the probe has learned a gender-marker shortcut (male pronouns ⇔ "computer scientist" profession) rather than a profession-concept representation.
+Results saved to: <repo>/spurious-correlation/results/probes-arm1/exp/exp-probe-bib_nurse_professor-neg_neg_1-biased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-20-19_pass2

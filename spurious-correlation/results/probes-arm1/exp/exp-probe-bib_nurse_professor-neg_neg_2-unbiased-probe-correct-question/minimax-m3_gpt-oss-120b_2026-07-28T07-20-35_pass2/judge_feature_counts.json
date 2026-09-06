@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F11132",
+      "label": "a mix of possessive pronouns like \"his\", names associated with historical records, and years.",
+      "reason": "Can encode gender pronouns; judged here as year-driven, not causal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F1372",
+      "label": "the word \"engineer\"",
+      "reason": "Direct profession keyword."
+    },
+    {
+      "id": "L6:F3235",
+      "label": "academic publications, math, and scientific institutions",
+      "reason": "Profession-related academic context."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Education/profession indicator."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Education and career context."
+    },
+    {
+      "id": "L14:F5600",
+      "label": "places and regions, particularly in Canada",
+      "reason": "Geography shortcut tied to profession context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2743",
+      "label": "the word 'later'",
+      "reason": "Pure temporal connective."
+    },
+    {
+      "id": "L0:F15320",
+      "label": "the word \"ice\"",
+      "reason": "Subword coincidence, not semantic."
+    },
+    {
+      "id": "L2:F16309",
+      "label": "people's names",
+      "reason": "Name entity, not profession."
+    },
+    {
+      "id": "L0:F6515",
+      "label": "the year 199X or 200X.",
+      "reason": "Pure year detector."
+    },
+    {
+      "id": "L0:F7905",
+      "label": "the word \"route,\" referencing paths, directions, or means of transportation",
+      "reason": "Structural/lexical coincidence."
+    },
+    {
+      "id": "L0:F4687",
+      "label": "place names",
+      "reason": "Generic location detector."
+    },
+    {
+      "id": "L0:F11333",
+      "label": "the 1990's",
+      "reason": "Year/decade detector."
+    },
+    {
+      "id": "L0:F2085",
+      "label": "the word \"reception\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F12235",
+      "label": "words related to legal documents and hunting",
+      "reason": "Unrelated lexical detector."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 5,
+  "n_other": 9,
+  "spurious_fraction": 0.16666666666666666,
+  "dominant": "causal",
+  "notes": "No strong gender-marker feature is actually driving the probe; profession/education cues dominate."
+}

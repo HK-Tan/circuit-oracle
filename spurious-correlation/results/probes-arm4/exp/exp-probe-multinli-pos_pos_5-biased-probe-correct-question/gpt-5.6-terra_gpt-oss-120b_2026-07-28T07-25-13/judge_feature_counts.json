@@ -1,0 +1,53 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F5627",
+      "label": "instances of the phrase \"not only\"",
+      "reason": "Explicit negation cue in hypothesis."
+    },
+    {
+      "id": "L9:F12274",
+      "label": "the phrase \"not only\"",
+      "reason": "Explicit negation phrase detector."
+    },
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Contraction-negation marker."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation before copula."
+    },
+    {
+      "id": "L13:F4368",
+      "label": "the word \"not\"",
+      "reason": "Bare negation detector."
+    },
+    {
+      "id": "L16:F15025",
+      "label": "usage of the word \"not\" combined with personal pronouns or related emotional or motivational language",
+      "reason": "Contextual negation cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Contrastive relation relevant to meaning."
+    },
+    {
+      "id": "L4:F15629",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Reporting context, not task-specific."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 6,
+  "n_causal": 2,
+  "n_other": 0,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "Negation cues dominate; contrast and speech attribution are not pure semantic relation features here."
+}

@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male pronouns/titles feature."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun pathway."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "words referring to gender",
+      "reason": "Gender-word feature."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "He pronoun gate."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Academic-field indicator."
+    },
+    {
+      "id": "L5:F15490",
+      "label": "academic subjects and professions",
+      "reason": "Academic/profession vocabulary."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic field / humanities."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Oracle says non-pronoun context/suppressed."
+    },
+    {
+      "id": "L0:F6270",
+      "label": "the word \"whom\", sometimes also activating on nearby punctuation, sentence starts, discourse markers, and other function words",
+      "reason": "Function-word/structural detector."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "Subject/sentence-initial pronoun",
+      "reason": "Purely structural pronoun-position feature."
+    },
+    {
+      "id": "L3:F4113",
+      "label": "Question/inquiry context",
+      "reason": "Contextual structure, not task content."
+    },
+    {
+      "id": "L4:F993",
+      "label": "contractions of the verb to be in the third person singular",
+      "reason": "Generic contraction detector."
+    },
+    {
+      "id": "L4:F15567",
+      "label": "Pronoun/possessive bridge",
+      "reason": "Bridge feature, not semantic profession cue."
+    },
+    {
+      "id": "L4:F14796",
+      "label": "Capitalized name/initials",
+      "reason": "Structural capitalization feature."
+    },
+    {
+      "id": "L5:F645",
+      "label": "Past-tense verbs",
+      "reason": "Generic syntax/tense feature."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Broad pronoun-context feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 3,
+  "n_other": 9,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Oracle shows a stronger male-pronoun circuit than academic-field evidence."
+}

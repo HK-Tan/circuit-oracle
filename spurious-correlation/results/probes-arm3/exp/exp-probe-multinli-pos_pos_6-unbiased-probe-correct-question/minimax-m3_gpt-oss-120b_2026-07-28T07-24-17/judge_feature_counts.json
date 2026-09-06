@@ -1,0 +1,87 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L1:F461",
+      "label": "the word \"land\"",
+      "reason": "Agricultural content tied to premise/hypothesis meaning."
+    },
+    {
+      "id": "L3:F15978",
+      "label": "mentions of land, property, and acreage.",
+      "reason": "Content about land use and ownership."
+    },
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Describes task-relevant action content."
+    },
+    {
+      "id": "L2:F15312",
+      "label": "the word \"about.\"",
+      "reason": "Structural/content-bearing filler, not negation."
+    },
+    {
+      "id": "L3:F4464",
+      "label": "the word \"about\"",
+      "reason": "Generic lexical feature, not spurious negation."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Numerical phrase detector, structurally content-neutral."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L2:F10849",
+      "label": "the word \"set\"",
+      "reason": "General lexical content, not negation."
+    },
+    {
+      "id": "L0:F15492",
+      "label": "the word \"for\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L6:F14744",
+      "label": "the words \"about,\" \"to,\" and \"work.\"",
+      "reason": "Structural word-pattern feature."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Pronoun feature; not negation."
+    },
+    {
+      "id": "L0:F16315",
+      "label": "the pronouns \"them,\" \"they,\" and \"their\" in text",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "L1:F361",
+      "label": "words related to agriculture and ecology",
+      "reason": "Task-relevant semantic content."
+    },
+    {
+      "id": "L4:F12225",
+      "label": "transitional conclusion words, often used in legal or academic writing",
+      "reason": "Discourse marker, content-neutral."
+    },
+    {
+      "id": "L2:F11518",
+      "label": "the word \"land\" in scientific/agricultural contexts",
+      "reason": "Domain-specific content supporting semantics."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 15,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows only content/structural features; no negation-word detector is actually claimed."
+}

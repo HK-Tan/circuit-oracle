@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F15382",
+      "label": "Early pronoun/name detection",
+      "reason": "Detects female pronoun/name cues, not profession content."
+    },
+    {
+      "id": "L0:F10148",
+      "label": "Early pronoun/name detection",
+      "reason": "Detects female pronoun/name cues, not profession content."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "Early pronoun/name detection",
+      "reason": "Detects female pronoun/name cues, not profession content."
+    },
+    {
+      "id": "L0:F5686",
+      "label": "Early pronoun/name detection",
+      "reason": "Detects female pronoun/name cues, not profession content."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "Early pronoun/name detection",
+      "reason": "Detects female pronoun/name cues, not profession content."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "Early pronoun/name detection",
+      "reason": "Detects female pronoun/name cues, not profession content."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "Early pronoun/name detection",
+      "reason": "Detects female pronoun/name cues, not profession content."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "Mid-layer pronoun/female features",
+      "reason": "Female pronoun feature, not profession indicator."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "Mid-layer pronoun/female features",
+      "reason": "Female pronoun feature, not profession indicator."
+    },
+    {
+      "id": "L7:F2765",
+      "label": "Mid-layer pronoun/female features",
+      "reason": "Female name/pronoun representation, not profession content."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "Mid-layer pronoun/female features",
+      "reason": "Female name/pronoun representation, not profession content."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "Late-layer female subject features",
+      "reason": "Encodes female-subject context, not profession."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "Late-layer female subject features",
+      "reason": "Encodes female-subject context, not profession."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "Late-layer female subject features",
+      "reason": "Encodes female-subject context, not profession."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "Late-layer female subject features",
+      "reason": "Encodes female-subject context, not profession."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "Late-layer female subject features",
+      "reason": "Encodes female-subject context, not profession."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "Topic/keyword features",
+      "reason": "Tracks nutrition/eating topic words relevant to profession."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "Topic/keyword features",
+      "reason": "Tracks nutrition/eating topic words relevant to profession."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "Mid-layer profession-relevant",
+      "reason": "Supports profession-related content, not gender cues."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe classification score",
+      "reason": "Output score, not a feature."
+    }
+  ],
+  "n_spurious": 16,
+  "n_causal": 3,
+  "n_other": 1,
+  "spurious_fraction": 0.8421052631578947,
+  "dominant": "spurious",
+  "notes": "Gender-marker path dominates; profession-topic features are present but smaller."
+}

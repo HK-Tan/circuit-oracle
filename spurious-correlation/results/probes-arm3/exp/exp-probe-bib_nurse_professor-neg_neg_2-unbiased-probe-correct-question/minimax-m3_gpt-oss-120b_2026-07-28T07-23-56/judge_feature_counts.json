@@ -1,0 +1,63 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Gendered pronouns are spurious profession correlates."
+    },
+    {
+      "id": "L0:F11132",
+      "label": "a mix of possessive pronouns like \"his\", names associated with historical records, and years.",
+      "reason": "Includes gendered pronoun signals; spurious here."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F1372",
+      "label": "the word \"engineer\"",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Education terminology supports profession."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Education and affiliation cues are causal."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Profession-relevant education/title signal."
+    },
+    {
+      "id": "L2:F13360",
+      "label": "words related to academic titles and positions.",
+      "reason": "Job/title terminology is causal."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Field-of-study content relates to profession."
+    },
+    {
+      "id": "L2:F14934",
+      "label": "years in the 1900s",
+      "reason": "Content-neutral temporal feature; allowed as causal."
+    },
+    {
+      "id": "L0:F6515",
+      "label": "the year 199X or 200X.",
+      "reason": "Content-neutral year detector; not gendered."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 2,
+  "n_causal": 8,
+  "n_other": 0,
+  "spurious_fraction": 0.2,
+  "dominant": "causal",
+  "notes": "Oracle cites mostly profession/education signals; only pronoun features are spurious."
+}

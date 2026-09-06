@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Generic proper-noun detector; not a gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe classification (nurse/midwife)",
+      "reason": "Directly encodes the target profession class."
+    },
+    {
+      "id": "L14:F3985",
+      "label": "Late-layer nursing/clinical leadership feature",
+      "reason": "Nursing and clinical-profession vocabulary."
+    },
+    {
+      "id": "L6:F4490",
+      "label": "Hospital / clinical setting entity features",
+      "reason": "Hospital and medical-role context."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing-profession terminology."
+    },
+    {
+      "id": "L6:F9980",
+      "label": "Hospital / clinical setting entity features",
+      "reason": "Clinical setting and medical-role signals."
+    },
+    {
+      "id": "L4:F4665",
+      "label": "Medical environments / settings (hospital, delivery rooms)",
+      "reason": "Birth and hospital context relevant to nursing."
+    },
+    {
+      "id": "L4:F13803",
+      "label": "Medical environments / settings (hospital, delivery rooms)",
+      "reason": "Delivery-room and medical-setting terminology."
+    },
+    {
+      "id": "L5:F15022",
+      "label": "OB/GYN / obstetrician profession features",
+      "reason": "Obstetrics profession indicator."
+    },
+    {
+      "id": "L3:F10198",
+      "label": "Procedural / anesthetic terminology",
+      "reason": "Medical procedure vocabulary."
+    },
+    {
+      "id": "L3:F9008",
+      "label": "Procedural / anesthetic terminology",
+      "reason": "Childbirth/procedure-related language."
+    },
+    {
+      "id": "L7:F210",
+      "label": "words and names associated with the Asante Healthcare system",
+      "reason": "Healthcare-system entity signal."
+    },
+    {
+      "id": "L7:F3979",
+      "label": "words related to nursing and healthcare",
+      "reason": "Healthcare vocabulary relevant to profession."
+    },
+    {
+      "id": "L3:F15901",
+      "label": "mentions of nurses, nursing, and nurse management",
+      "reason": "Nurse-specific terminology, despite suppression."
+    },
+    {
+      "id": "L0:F10771",
+      "label": "the word \"linked\" and related words, in technical and scientific contexts",
+      "reason": "Generic scientific lexical cue."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word feature."
+    },
+    {
+      "id": "L0:F9911",
+      "label": "the word \"that\"",
+      "reason": "Generic function-word feature."
+    },
+    {
+      "id": "L0:F6515",
+      "label": "the year 199X or 200X.",
+      "reason": "Neutral date feature, not gender."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: Labor",
+      "reason": "Input token embedding; not an oracle feature."
+    },
+    {
+      "id": "L0:F0@11",
+      "label": "Emb: Delivery",
+      "reason": "Input token embedding; not an oracle feature."
+    },
+    {
+      "id": "L0:F0@12",
+      "label": "Emb: nurse",
+      "reason": "Input token embedding; not an oracle feature."
+    },
+    {
+      "id": "L0:F0@5",
+      "label": "Emb: Melissa",
+      "reason": "Input token embedding; not an oracle feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 17,
+  "n_other": 4,
+  "spurious_fraction": 0.05555555555555555,
+  "dominant": "causal",
+  "notes": "Circuit is overwhelmingly profession/clinical; only a generic proper-noun feature is remotely spurious."
+}

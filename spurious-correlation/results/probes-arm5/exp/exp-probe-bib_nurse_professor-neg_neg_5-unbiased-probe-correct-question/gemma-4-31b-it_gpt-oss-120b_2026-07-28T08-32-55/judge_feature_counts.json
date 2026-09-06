@@ -1,0 +1,34 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "Male Gender Marker (He/His)",
+      "reason": "Explicit male pronoun/gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "Academic Research Context",
+      "reason": "Signals research-related profession content."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "Academic Degrees/Universities",
+      "reason": "Indicates education and academic affiliation."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/punctuation pattern."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 2,
+  "n_other": 1,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Oracle claims both academic cues and one male gender cue; structural feature goes to other."
+}

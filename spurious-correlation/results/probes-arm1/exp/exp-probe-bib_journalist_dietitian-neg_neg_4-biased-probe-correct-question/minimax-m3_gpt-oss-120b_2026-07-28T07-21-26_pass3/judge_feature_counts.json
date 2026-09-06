@@ -1,0 +1,194 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based person reference."
+    },
+    {
+      "id": "L15:F10510",
+      "label": "references to males in third person and first person pronouns",
+      "reason": "Explicit male-pronoun signal."
+    },
+    {
+      "id": "L13:F1937",
+      "label": "pronouns used to describe people, including possessive pronouns",
+      "reason": "People/pronoun detector."
+    },
+    {
+      "id": "L13:F6622",
+      "label": "pronouns.",
+      "reason": "Generic pronoun feature."
+    },
+    {
+      "id": "L14:F14097",
+      "label": "occurrences of the word \"he\"",
+      "reason": "Direct male pronoun count."
+    },
+    {
+      "id": "L14:F5740",
+      "label": "sentences with multiple pronouns in them",
+      "reason": "Pronoun aggregation."
+    },
+    {
+      "id": "L14:F13478",
+      "label": "occurrences of people's names, often with titles",
+      "reason": "Name/title pattern, triggered by He."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Pronoun/possessive detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-gendered description."
+    },
+    {
+      "id": "L4:F15567",
+      "label": "sentences with male or female pronouns and possessives, especially ones referring to writing",
+      "reason": "Pronoun-based structural cue."
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Direct male pronoun detector."
+    },
+    {
+      "id": "L3:F6712",
+      "label": "references to people, particularly pronouns and titles in legal contexts, and verbs that refer to intent or performance",
+      "reason": "Pronoun/title people feature."
+    },
+    {
+      "id": "L2:F6155",
+      "label": "references to people, especially pronouns like \"he\" or \"she\"",
+      "reason": "Pronoun/person reference."
+    },
+    {
+      "id": "L2:F9233",
+      "label": "the pronouns \"she\" and \"he\"",
+      "reason": "Gender pronoun detector."
+    },
+    {
+      "id": "L2:F11473",
+      "label": "instances of the word 'he' and words related to government and law",
+      "reason": "He-pronoun feature."
+    },
+    {
+      "id": "L1:F8685",
+      "label": "the pronoun \"he\"",
+      "reason": "Direct pronoun detector."
+    },
+    {
+      "id": "L1:F4459",
+      "label": "mentions of research institutes",
+      "reason": "Institution token, not profession-specific."
+    },
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Pronoun proximity detector."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male-person pronoun feature."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun pair."
+    },
+    {
+      "id": "L0:F2241",
+      "label": "the pronoun \"she\"",
+      "reason": "Gender-pronoun feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F15661",
+      "label": "the word \"spin\"",
+      "reason": "Content word; could reflect journalism."
+    },
+    {
+      "id": "L0:F5288",
+      "label": "the word \"service\" and related terms in different contexts",
+      "reason": "Lexical content, not gender."
+    },
+    {
+      "id": "L0:F8466",
+      "label": "the word \"volume.\"",
+      "reason": "Neutral lexical feature."
+    },
+    {
+      "id": "L0:F10439",
+      "label": "the word \"agenda\" and sometimes the word \"Institute\"",
+      "reason": "Institution/education terminology."
+    },
+    {
+      "id": "L0:F11002",
+      "label": "terminology used in legal documents, science (chemistry, physics, general research), software development, manufacturing and government agencies",
+      "reason": "General content/terminology feature."
+    },
+    {
+      "id": "L0:F15492",
+      "label": "the word \"for\"",
+      "reason": "Purely structural function word."
+    },
+    {
+      "id": "L0:F11322",
+      "label": "the word \"manual\" in the context of instructions or product descriptions",
+      "reason": "Content-neutral lexical cue."
+    },
+    {
+      "id": "L0:F3800",
+      "label": "the word \"services\" (especially \"health services\") and the word \"sum\"",
+      "reason": "Institutional/workplace vocabulary."
+    },
+    {
+      "id": "L0:F13751",
+      "label": "the word \"for.\"",
+      "reason": "Structural punctuation/word pattern."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7124",
+      "label": "the word \"at\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic function word."
+    },
+    {
+      "id": "L0:F6556",
+      "label": "instances of the word \"closing\"",
+      "reason": "Not profession-specific."
+    },
+    {
+      "id": "L0:F4870",
+      "label": "commas and sometimes reach (context not clear)",
+      "reason": "Purely structural."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural."
+    }
+  ],
+  "n_spurious": 22,
+  "n_causal": 9,
+  "n_other": 5,
+  "spurious_fraction": 0.7096774193548387,
+  "dominant": "spurious",
+  "notes": "Dominated by male-pronoun circuitry; institute/content cues are secondary."
+}

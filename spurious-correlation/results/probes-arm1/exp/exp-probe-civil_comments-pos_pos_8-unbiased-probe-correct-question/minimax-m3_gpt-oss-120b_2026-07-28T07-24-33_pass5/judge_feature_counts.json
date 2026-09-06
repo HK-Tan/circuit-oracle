@@ -1,0 +1,194 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F7214",
+      "label": "references to countries or regions associated with Islam",
+      "reason": "Identity-group/region detector for Islam-related terms"
+    },
+    {
+      "id": "L1:F4314",
+      "label": "the word \"Muslim\"",
+      "reason": "Direct demographic identity token"
+    },
+    {
+      "id": "L1:F2352",
+      "label": "words associated with Islam",
+      "reason": "Religion/identity association"
+    },
+    {
+      "id": "L0:F13885",
+      "label": "names of people and places, specifically those related to the middle east",
+      "reason": "Middle East identity/geography cue"
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity cue"
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Islam/Middle East mention detector"
+    },
+    {
+      "id": "L7:F11743",
+      "label": "arabic names and islamic terms",
+      "reason": "Ethnic/religious term detector"
+    },
+    {
+      "id": "L7:F14049",
+      "label": "discussion of international political conflicts, especially those regarding Muslims, slavery, race, terrorism and cultural groups.",
+      "reason": "Muslim/cultural-group association"
+    },
+    {
+      "id": "L8:F16294",
+      "label": "proper nouns related to the Middle East and Central Asia, and potentially to Islam",
+      "reason": "Regional identity cue"
+    },
+    {
+      "id": "L8:F5783",
+      "label": "Middle Eastern cultural / historical terms",
+      "reason": "Region-linked cultural terms"
+    },
+    {
+      "id": "L7:F11758",
+      "label": "words with some cultural (often middle eastern) or historical aspect that may be a name or location",
+      "reason": "Culture/place identity cue"
+    },
+    {
+      "id": "L7:F4618",
+      "label": "Arabic names and geographical locations in Central Asia",
+      "reason": "Ethnic/geographic identity cue"
+    },
+    {
+      "id": "L6:F13586",
+      "label": "words related to religion and spirituality",
+      "reason": "Religion identity cue"
+    },
+    {
+      "id": "L0:F11726",
+      "label": "words related to religion and relationships",
+      "reason": "Religion-related identity cue"
+    },
+    {
+      "id": "L12:F7779",
+      "label": "negative language denigrating groups of people",
+      "reason": "Group-targeted denigration"
+    },
+    {
+      "id": "L10:F326",
+      "label": "hateful, racist, and discriminatory terms that are often used in hateful speech",
+      "reason": "Hate-speech lexicon"
+    },
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations.",
+      "reason": "Negative ideological framing"
+    },
+    {
+      "id": "L7:F8154",
+      "label": "highly charged political commentary, particularly with a right-leaning perspective",
+      "reason": "Political commentary cue"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F8909",
+      "label": "mentions of problems, defects, complaints",
+      "reason": "Complaint/negative sentiment toward target"
+    },
+    {
+      "id": "L4:F7647",
+      "label": "passages that describe differences",
+      "reason": "Identity-independent syntactic contrast"
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic function-word detector"
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic function-word detector"
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Generic discourse reference"
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic structural token"
+    },
+    {
+      "id": "L7:F9503",
+      "label": "suppressor of \"with\" (pos 3)",
+      "reason": "Structural suppressor"
+    },
+    {
+      "id": "L0:F7253",
+      "label": "the word \"present\" or the word \"left\" or inflected forms thereof",
+      "reason": "Not used by oracle here"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output Logit",
+      "label": "Probe direction",
+      "reason": "Not a feature"
+    },
+    {
+      "id": "Emb: \" Islam\" (pos 4)",
+      "label": "embedded token",
+      "reason": "Input token, not feature"
+    },
+    {
+      "id": "Emb: \" problem\" (pos 2)",
+      "label": "embedded token",
+      "reason": "Input token, not feature"
+    },
+    {
+      "id": "Emb: \" with\" (pos 3)",
+      "label": "embedded token",
+      "reason": "Input token, not feature"
+    },
+    {
+      "id": "Emb: \" is\" (pos 5)",
+      "label": "embedded token",
+      "reason": "Input token, not feature"
+    },
+    {
+      "id": "Emb: \" that\" (pos 6)",
+      "label": "embedded token",
+      "reason": "Input token, not feature"
+    },
+    {
+      "id": "Emb: \" it\" (pos 7)",
+      "label": "embedded token",
+      "reason": "Input token, not feature"
+    },
+    {
+      "id": "Emb: \" false\" (pos 10)",
+      "label": "embedded token",
+      "reason": "Input token, not feature"
+    },
+    {
+      "id": "Emb: \" religion\" (pos 11)",
+      "label": "embedded token",
+      "reason": "Input token, not feature"
+    },
+    {
+      "id": "Emb: <bos> (pos 0)",
+      "label": "embedded token",
+      "reason": "Input token, not feature"
+    }
+  ],
+  "n_spurious": 18,
+  "n_causal": 8,
+  "n_other": 10,
+  "spurious_fraction": 0.6923076923076923,
+  "dominant": "spurious",
+  "notes": "Oracle is dominated by Islam/Middle-East identity cues; toxicity cues are secondary."
+}

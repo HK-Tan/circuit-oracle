@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male-pronoun detector"
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-reference aggregator"
+    },
+    {
+      "id": "L14:F14097",
+      "label": "occurrences of the word 'he'",
+      "reason": "Male-pronoun detector"
+    },
+    {
+      "id": "L13:F1937",
+      "label": "pronouns used to describe people, including possessive pronouns",
+      "reason": "People-pronoun detector"
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male-pronoun feature"
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Gender-marker detector"
+    },
+    {
+      "id": "L4:F15567",
+      "label": "sentences with male or female pronouns and possessives, especially ones referring to writing",
+      "reason": "Pronoun-based feature"
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Direct male-pronoun detector"
+    },
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Pronoun-pair detector"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism profession indicator"
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter/profession detector"
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Media/journalism indicator"
+    },
+    {
+      "id": "L1:F15416",
+      "label": "the word \"writers\" or \"writer\"",
+      "reason": "Writer profession vocabulary"
+    },
+    {
+      "id": "L1:F4459",
+      "label": "mentions of research institutes",
+      "reason": "Workplace/institution terminology"
+    },
+    {
+      "id": "L1:F15063",
+      "label": "mentions of the United States",
+      "reason": "Content-neutral context feature"
+    },
+    {
+      "id": "L2:F9293",
+      "label": "the word \"cover\" used in different contexts",
+      "reason": "Content-neutral lexical feature"
+    },
+    {
+      "id": "L1:F15323",
+      "label": "the word \"starting\" in academic papers",
+      "reason": "Content-neutral lexical feature"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7124",
+      "label": "the word \"at\"",
+      "reason": "Generic word detector"
+    },
+    {
+      "id": "L0:F15661",
+      "label": "the word \"spin\"",
+      "reason": "Generic word detector"
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic word detector"
+    },
+    {
+      "id": "L0:F5288",
+      "label": "the word \"service\" and related terms in different contexts",
+      "reason": "Oracle dismisses as broad context"
+    },
+    {
+      "id": "L0:F6556",
+      "label": "instances of the word \"closing\"",
+      "reason": "Generic lexical feature"
+    },
+    {
+      "id": "L0:F4870",
+      "label": "commas and sometimes reach (context not clear)",
+      "reason": "Purely structural/punctuation"
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural feature"
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 8,
+  "n_other": 7,
+  "spurious_fraction": 0.5294117647058824,
+  "dominant": "mixed",
+  "notes": "Pronoun features dominate, but journalism/writer cues are also clearly present."
+}

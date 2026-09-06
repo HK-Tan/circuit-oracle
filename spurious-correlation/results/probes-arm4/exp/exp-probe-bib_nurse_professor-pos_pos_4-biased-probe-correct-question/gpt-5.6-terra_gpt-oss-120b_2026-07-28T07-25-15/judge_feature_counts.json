@@ -1,0 +1,53 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Name cue tied to feminine person signal."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Promoted by she/her feminine-person cues."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Explicit women/girls feature from pronoun route."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments",
+      "reason": "Women\u2019s names/roles feature, gender-coded."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Directly detects feminine pronouns/titles."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F1494",
+      "label": "words related to medical practices and studies",
+      "reason": "Medical/professional vocabulary for nursing."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "words related to healthcare professionals and medical fields",
+      "reason": "Healthcare-professional terminology."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession detector."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 5,
+  "n_causal": 3,
+  "n_other": 0,
+  "spurious_fraction": 0.625,
+  "dominant": "mixed",
+  "notes": "Circuit mixes genuine nursing evidence with a substantial gender shortcut."
+}

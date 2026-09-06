@@ -1,0 +1,78 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Direct race/ethnicity term detector."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issues vocabulary."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity lexical matcher."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/racism identity term feature."
+    },
+    {
+      "id": "L6:F5671",
+      "label": "references to people, with an emphasis on gender and family relations",
+      "reason": "Gender/family relation detector."
+    },
+    {
+      "id": "L6:F15948",
+      "label": "words and entities referring to gender and pronouns",
+      "reason": "Gendered word detector."
+    },
+    {
+      "id": "L3:F4512",
+      "label": "mentions of first names, last names, and phone numbers",
+      "reason": "Name mention, identity-adjacent."
+    },
+    {
+      "id": "L4:F10004",
+      "label": "hyphenated words beginning with \"self\"",
+      "reason": "Identity-prefix morphology, not toxicity."
+    },
+    {
+      "id": "L0:F241",
+      "label": "mentions of marriage",
+      "reason": "Marriage lexical feature."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Output",
+      "label": "probe direction (toxicity / identity-targeted score)",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "L1:F6576",
+      "label": "the word \"appearance\"",
+      "reason": "Structural/neutral lexical feature."
+    },
+    {
+      "id": "L0:F7773",
+      "label": "the word \"lower\" or \"higher\" in the context of comparisons",
+      "reason": "Generic comparison structure."
+    },
+    {
+      "id": "L1:F5220",
+      "label": "references to authors and publications",
+      "reason": "Non-toxicity topical word."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 0,
+  "n_other": 4,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity-term detectors; no clear toxic-content features are claimed."
+}

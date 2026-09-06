@@ -1,0 +1,118 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: ' gay'",
+      "label": "gay",
+      "reason": "LGBTQ identity token"
+    },
+    {
+      "id": "Emb: ' Muslim'",
+      "label": "Muslim",
+      "reason": "religious identity token"
+    },
+    {
+      "id": "L1:F13646",
+      "label": "identity/social category",
+      "reason": "identity-group category detector"
+    },
+    {
+      "id": "L3:F13061",
+      "label": "race/gender/social-issues vocabulary",
+      "reason": "identity/social-issues vocabulary"
+    },
+    {
+      "id": "L4:F117",
+      "label": "race/racism/social-justice terms",
+      "reason": "social-justice and race terms"
+    },
+    {
+      "id": "L4:F2405",
+      "label": "religious identity/spirituality",
+      "reason": "religious identity detector"
+    },
+    {
+      "id": "L4:F8645",
+      "label": "same-sex marriage passages",
+      "reason": "LGBTQ topic detector"
+    },
+    {
+      "id": "L6:F6085",
+      "label": "homosexuality / same-sex marriage",
+      "reason": "LGBTQ topic detector"
+    },
+    {
+      "id": "L6:F7282",
+      "label": "Islam / Muslim / Middle East",
+      "reason": "religious/ethnic identity detector"
+    },
+    {
+      "id": "L7:F8154",
+      "label": "right-wing political commentary",
+      "reason": "political commentary, not toxicity"
+    },
+    {
+      "id": "L8:F15771",
+      "label": "LGBTQ+ issues / same-sex marriage",
+      "reason": "LGBTQ issue/topic detector"
+    },
+    {
+      "id": "L8:F16036",
+      "label": "Israel/Zionism/political-state references",
+      "reason": "political-state topic detector"
+    },
+    {
+      "id": "L9:F4798",
+      "label": "racial issues / slavery / discrimination",
+      "reason": "racial-issues vocabulary"
+    },
+    {
+      "id": "L11:F1291",
+      "label": "racist content",
+      "reason": "racial-discourse detector"
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: ' justice'",
+      "label": "justice",
+      "reason": "structural token, no toxic semantics"
+    },
+    {
+      "id": "Emb: ' social'",
+      "label": "social",
+      "reason": "structural token, no toxic semantics"
+    },
+    {
+      "id": "Emb: ' warrior'",
+      "label": "warrior",
+      "reason": "structural token, no toxic semantics"
+    },
+    {
+      "id": "L0:F3591",
+      "label": "government social programs",
+      "reason": "policy-topic, not toxicity"
+    },
+    {
+      "id": "L3:F5157",
+      "label": "social services / social work",
+      "reason": "social-work topic, not toxicity"
+    },
+    {
+      "id": "L6:F2674",
+      "label": "political/ideological content, neg. connotation",
+      "reason": "ideological tone, not toxic"
+    },
+    {
+      "id": "Probe output (toxicity direction)",
+      "label": "toxicity direction",
+      "reason": "not a feature"
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 0,
+  "n_other": 7,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows identity-topic pathways; no genuine toxic-content detector is claimed."
+}

@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "circuit-oracle"
+version = "0.1.0"
+description = "Circuit Oracle: agentic attribution-graph analysis (spurious probes, secret elicitation, refusal jailbreaking)"
+# PEP 621 string form, which setuptools>=68 accepts. The SPDX-expression form
+# (license = "MIT") needs setuptools>=77, above the floor pinned above.
+license = {text = "MIT"}
+# 3.12, not 3.10. Several modules use PEP 701 multi-line expressions inside
+# f-strings (e.g. run_oracle_on_taboo.py:452), which is a 3.12 language feature.
+# On 3.11 the package installs and imports fine and then dies with a SyntaxError
+# the first time one of those modules is loaded, which on a fan-out means every
+# worker fails at once. Corrected 2026-07-28 after that happened on a 3.11 pod.
+requires-python = ">=3.12"
+dependencies = [
+    # LLM + HTTP. LLMClient speaks the OpenAI /v1/chat/completions protocol
+    # exclusively (OpenRouter, Modal vLLM, and Anthropic models via OpenRouter),
+    # so nothing in the shipped package imports the anthropic SDK.
+    "openai",
+    "requests",
+    # subject-model / circuit_tracer stack (causal pins preserved verbatim)
+    "torch",
+    "transformer-lens>=2.16.0",
+    "transformers>=4.56.0,<=4.57.3",
+    "huggingface-hub",
+    "safetensors",
+    "einops",
+    "numpy",
+    "pyyaml",
+    "tqdm",
+    # local autointerp Neuronpedia shim
+    "fastapi",
+    "uvicorn",
+    # entry scripts
+    "python-dotenv",
+    # src/circuit_tracer/utils/demo_utils.py does a module-level
+    # `from IPython.display import HTML, display`, and
+    # spurious-correlation/scripts/circuit_extraction.py imports that module, so
+    # graph extraction fails at import without it. Base, not an extra.
+    "ipython",
+]
+
+# NOTE: no PyPI "circuit-tracer" dependency on purpose. The fork ships inside this
+# distribution as circuit_tracer/, and a PyPI install would race it for the import
+# name (upstream also lacks the batched intervention machinery this package needs).
+
+[project.urls]
+Repository = "https://github.com/HK-Tan/circuit-oracle"
+# The earlier version of this work, at the ICML 2026 Mechanistic Interpretability Workshop.
+Paper = "https://openreview.net/forum?id=ANY6YrYUZE"
+
+[project.optional-dependencies]
+data = ["datasets"]      # spurious-correlation/adapters/*, refusal-jailbreaking/baselines/arditi/fetch_data.py
+plots = ["matplotlib"]   # secret-elicitation/scripts/plot_elk_results.py, spurious-correlation/scripts/eval_oracle_feature_counts.py
+probes = ["nnsight"]     # spurious-correlation/probe_extraction/{train_probes,layer_sweep}.py
+lora = ["peft"]          # secret-elicitation/scripts/build_taboo_graphs.py
+# Modal client for the hosted-inference path: refusal-jailbreaking/baselines/arditi/
+# modal_qwen3_inference.py, and stage 2 (screen) of refusal-jailbreaking/scripts/
+# build_prompt_set.py, which imports that module.
+screen = ["modal"]
+# spurious-correlation/scripts/rank_sae_features_by_probe.py loads gemma-scope
+# SAEs and transcoders through sae_lens.
+baselines = ["sae-lens"]
+all = ["circuit-oracle[data,plots,probes,lora,screen,baselines]"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["circuit_oracle*", "circuit_tracer*"]
+
+[tool.setuptools.package-data]
+# circuit_tracer is vendored MIT code. Attribution is by citation in the README,
+# which points at the upstream repository and pins the tag. This line just keeps
+# the 1 KB upstream LICENSE next to the code it covers, since MIT asks for the
+# notice to travel with redistributed copies.
+circuit_tracer = ["LICENSE", "*.md", "utils/*.md"]
+
+[tool.mypy]
+# Type-check only the file(s) named on the command line. Imports are still
+# followed for type inference, but errors in those modules are suppressed,
+# since the rest of the package was written before mypy --strict was a goal.
+follow_imports = "silent"

@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Late gender marker signal."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun detector."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Women/title gender reference."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "Low-Layer Gender Detector",
+      "reason": "Gender-marker detector."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Oracle dismisses; structural/nonsemantic."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Name/title detector; gendered in this circuit."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Woman-name detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Profession indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe Score Logit",
+      "label": "[embed/output]",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: She (pos 0)",
+      "label": "[embed/output]",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "Emb: Diet (pos 20)",
+      "label": "[embed/output]",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "Emb: Nutritional (pos 9)",
+      "label": "[embed/output]",
+      "reason": "Input embedding only."
+    },
+    {
+      "id": "L7:F2765",
+      "label": "mentions of people or characters, and their performance, roles, injuries, or personal details such as age, death, or family.",
+      "reason": "Generic person/role feature."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 1,
+  "n_other": 5,
+  "spurious_fraction": 0.875,
+  "dominant": "spurious",
+  "notes": "Gender features dominate; diet/health is the only causal feature."
+}

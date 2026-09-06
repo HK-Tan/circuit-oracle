@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F14813",
+      "label": "mentions of race, racial issues, or racism",
+      "reason": "Identity-group race/racism signal"
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Race token; demographic term"
+    },
+    {
+      "id": "L0:F10682",
+      "label": "the word \"race\"",
+      "reason": "Race token; demographic term"
+    },
+    {
+      "id": "L3:F5475",
+      "label": "occurrences of the word \"race\" in different contexts",
+      "reason": "Race-term matcher, not toxicity"
+    },
+    {
+      "id": "L6:F9228",
+      "label": "language regarding discrimination based on race, gender, religion, and disability",
+      "reason": "Identity/discrimination group signal"
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Negation/structure, not toxic content"
+    },
+    {
+      "id": "L0:F15267",
+      "label": "the word \"not\"",
+      "reason": "Negation/structure, not toxic content"
+    },
+    {
+      "id": "L2:F2713",
+      "label": "the word \"not\"",
+      "reason": "Negation/structure, not toxic content"
+    },
+    {
+      "id": "L3:F12410",
+      "label": "the word \"By\" at the start of a phrase or sentence",
+      "reason": "Purely structural discourse marker"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F15173",
+      "label": "statements about mentioning or discussing something",
+      "reason": "Identity-independent discourse about mention/discussion"
+    },
+    {
+      "id": "L2:F11639",
+      "label": "the word \"mention\"",
+      "reason": "Generic communication/discussion cue"
+    },
+    {
+      "id": "L3:F11194",
+      "label": "words related to stating or communicating information",
+      "reason": "Generic communication/statement semantics"
+    },
+    {
+      "id": "L2:F6539",
+      "label": "the word \"mention\" and words or phrases related to opinions or significance, as well as the word \"matter.\"",
+      "reason": "Generic mention/opinion semantics"
+    },
+    {
+      "id": "L4:F2668",
+      "label": "instances of realizations coupled with acknowledgement or acknowledgment of something.",
+      "reason": "Neutral acknowledgment semantics"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F1903",
+      "label": "instances of sentences starting with \"The\"",
+      "reason": "Purely structural sentence-initial word"
+    },
+    {
+      "id": "L3:F672",
+      "label": "the word \"question\"",
+      "reason": "Generic word; not claimed toxic/identity"
+    },
+    {
+      "id": "L0:F2317",
+      "label": "words or phrases expressing uncertainty or doubt",
+      "reason": "Generic uncertainty, not task-specific"
+    },
+    {
+      "id": "L0:F819",
+      "label": "the word \"question\" specifically in the context of legal documents or investigations",
+      "reason": "Domain-specific but not toxicity/identity"
+    },
+    {
+      "id": "L4:F573",
+      "label": "code snippets containing boolean operators and comparison symbols",
+      "reason": "Non-language structural/code feature"
+    },
+    {
+      "id": "L3:F14273",
+      "label": "AT&T (or A&T) company mentions",
+      "reason": "Company mention, irrelevant to toxicity"
+    },
+    {
+      "id": "L0:F1137",
+      "label": "the word \"questions\" and words like \"University\"",
+      "reason": "Academic/question pattern, not toxicity"
+    },
+    {
+      "id": "L5:F3992",
+      "label": "the start of documentation blocks in code",
+      "reason": "Code formatting feature"
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic function word"
+    },
+    {
+      "id": "L3:F324",
+      "label": "the word \"question\"",
+      "reason": "Generic word; no toxic/identity role"
+    },
+    {
+      "id": "L0:F13096",
+      "label": "instances of the word \"the\", often followed by nouns or other determiners",
+      "reason": "Generic syntax/structure"
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 5,
+  "n_other": 11,
+  "spurious_fraction": 0.6428571428571429,
+  "dominant": "spurious",
+  "notes": "Identity/race cues dominate; remaining useful features are generic mention/communication semantics."
+}

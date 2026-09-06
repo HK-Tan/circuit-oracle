@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9026",
+      "label": "Jew-token amplifier",
+      "reason": "Amplifies identity token 'Jew'."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-group race/ethnicity detector."
+    },
+    {
+      "id": "L2:F3588",
+      "label": "terms related to politics and political parties",
+      "reason": "Political identity term detector."
+    },
+    {
+      "id": "L3:F12151",
+      "label": "capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+      "reason": "Oracle says it catches Jew-like identity substring."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race discourse detector."
+    },
+    {
+      "id": "L4:F14733",
+      "label": "content related to the Israel-Palestine conflict and possibly some related topics like NBA trades.",
+      "reason": "Geopolitical identity-context feature."
+    },
+    {
+      "id": "L6:F648",
+      "label": "words related to discrimination against particular religious or ethnic groups",
+      "reason": "Protected-group discrimination detector."
+    },
+    {
+      "id": "L8:F13197",
+      "label": "words related to religion and faith",
+      "reason": "Religion/faith identity feature."
+    },
+    {
+      "id": "L8:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Prejudice/discourse feature, not toxic content."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F592",
+      "label": "words related to love, affection, and hate, including foreign language",
+      "reason": "Includes hate/affective toxicity semantics."
+    },
+    {
+      "id": "L8:F13875",
+      "label": "negative sentiment related to reputation and betrayal of trust.",
+      "reason": "Negative evaluative semantics relevant to abuse."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L1:F14516",
+      "label": "hat-token",
+      "reason": "Generic wordform detector."
+    },
+    {
+      "id": "L3:F13819",
+      "label": "words and phrases about interconnectedness, self-similarity, and things holding together.",
+      "reason": "Non-toxic abstract semantic feature."
+    },
+    {
+      "id": "L6:F1561",
+      "label": "words related to respect, status, and pride, both positive and negative",
+      "reason": "General valence/status feature."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 2,
+  "n_other": 3,
+  "spurious_fraction": 0.8333333333333334,
+  "dominant": "spurious",
+  "notes": "Identity-group routing dominates; toxic-content features are present but fewer."
+}

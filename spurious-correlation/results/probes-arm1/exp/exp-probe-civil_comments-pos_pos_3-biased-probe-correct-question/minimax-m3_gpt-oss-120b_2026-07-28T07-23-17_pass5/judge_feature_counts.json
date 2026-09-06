@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-group words for race/ethnicity."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity detector."
+    },
+    {
+      "id": "L4:F14733",
+      "label": "content related to the Israel-Palestine conflict and possibly some related topics like NBA trades.",
+      "reason": "Identity/geopolitical group context."
+    },
+    {
+      "id": "L6:F648",
+      "label": "words related to discrimination against particular religious or ethnic groups",
+      "reason": "Targets protected-group discrimination terms."
+    },
+    {
+      "id": "L8:F13197",
+      "label": "words related to religion and faith",
+      "reason": "Religion/faith identity signal."
+    },
+    {
+      "id": "L3:F12151",
+      "label": "capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+      "reason": "Letter-pattern alias for JE/JEW identity signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L8:F13875",
+      "label": "negative sentiment related to reputation and betrayal of trust.",
+      "reason": "Negative evaluative semantics."
+    },
+    {
+      "id": "L6:F1561",
+      "label": "words related to respect, status, and pride, both positive and negative",
+      "reason": "Tone/status semantics, not identity."
+    },
+    {
+      "id": "L4:F8407",
+      "label": "words related to antagonists and fighting",
+      "reason": "Conflict/hostility semantics."
+    },
+    {
+      "id": "L8:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Prejudice/discrimination semantics."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' Jew' (pos 6)",
+      "label": "embedding/output",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' liberal' (pos 5)",
+      "label": "embedding/output",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: 'hat' (pos 3)",
+      "label": "embedding/output",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' stain' (pos 9)",
+      "label": "embedding/output",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' -' (pos 7)",
+      "label": "embedding/output",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "L0-F9026",
+      "label": "'jew' letter fragment",
+      "reason": "Subword fragment only."
+    },
+    {
+      "id": "L0-F9369",
+      "label": "subtraction symbol ' -'",
+      "reason": "Pure punctuation/structural."
+    },
+    {
+      "id": "L0-F8736",
+      "label": "'hat' token",
+      "reason": "Generic word-form detector."
+    },
+    {
+      "id": "L2:F3983",
+      "label": "the word \"hat\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L1:F1774",
+      "label": "text in a Latex document",
+      "reason": "Structural LaTeX pattern."
+    },
+    {
+      "id": "L3:F13819",
+      "label": "words and phrases about interconnectedness, self-similarity, and things holding together.",
+      "reason": "Abstract structural semantics."
+    },
+    {
+      "id": "L5:F7488",
+      "label": "legal language, specifically terms related to evidence and accusations",
+      "reason": "Oracle-driven non-toxic legal language."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 4,
+  "n_other": 12,
+  "spurious_fraction": 0.6,
+  "dominant": "spurious",
+  "notes": "Identity-group detectors dominate; toxic-content signals are secondary."
+}

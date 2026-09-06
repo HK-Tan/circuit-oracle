@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Direct negation detector; matches spurious rule."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F5201",
+      "label": "awards and accomplishments in the context of sports",
+      "reason": "Task-relevant semantic content about entailment/contradiction."
+    },
+    {
+      "id": "L1:F177",
+      "label": "the word \"double\" and words that begin with \"multi\" or \"doubly\"",
+      "reason": "Content-related lexical cue, not negation or pure structure."
+    },
+    {
+      "id": "L1:F13255",
+      "label": "the word \"season\" and words associated with it",
+      "reason": "Task-content semantic cue, not a generic detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F9602",
+      "label": "interjections and filler words",
+      "reason": "Pure conversational filler / structural cue."
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Single lexical filler; structural."
+    },
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Conversational marker, not task semantics."
+    },
+    {
+      "id": "L0:F15972",
+      "label": "the word \"yeah\"",
+      "reason": "Generic filler/acknowledgement."
+    },
+    {
+      "id": "L2:F9629",
+      "label": "interjections and sounds of hesitation or acknowledgment",
+      "reason": "Hesitation/acknowledgement cue only."
+    },
+    {
+      "id": "L4:F2740",
+      "label": "conversational language",
+      "reason": "Broad register feature, not semantic content."
+    },
+    {
+      "id": "L2:F752",
+      "label": "phrases expressing personal opinions or viewpoints, often using words like \"I,\" \"think,\" \"kind of,\" and related terms.",
+      "reason": "Opinion-style discourse marker, not causal semantics."
+    },
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Generic discourse connective; not dismissed as causal content."
+    },
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Subtoken/orthographic detector; purely structural."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Pure function-word detector."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 3,
+  "n_other": 10,
+  "spurious_fraction": 0.25,
+  "dominant": "other",
+  "notes": "Oracle mostly cites filler and structural cues; only one explicit negation feature and a few task-content features."
+}

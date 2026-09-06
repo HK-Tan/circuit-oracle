@@ -1,0 +1,113 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F7021",
+      "label": "the word \"Congress\"",
+      "reason": "Congress topic/entity signal tied to premise meaning"
+    },
+    {
+      "id": "L1:F3276",
+      "label": "mentions of the United States Congress",
+      "reason": "Congress entity/topic feature, semantically relevant"
+    },
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Government-topic feature, not negation"
+    },
+    {
+      "id": "L6:F6096",
+      "label": "political parties and affiliations",
+      "reason": "Political-context feature supporting meaning relation"
+    },
+    {
+      "id": "L0:F11606",
+      "label": "the word \"fund\"",
+      "reason": "Premise funding content, causally relevant"
+    },
+    {
+      "id": "L0:F15773",
+      "label": "the possessive pronoun \"our\"",
+      "reason": "Content-neutral syntax/lexical feature"
+    },
+    {
+      "id": "L0:F13437",
+      "label": "the word \"who\"",
+      "reason": "Relative-pronoun syntax feature"
+    },
+    {
+      "id": "L0:F15792",
+      "label": "the word \"many\"",
+      "reason": "Quantifier feature; content-neutral"
+    },
+    {
+      "id": "L3:F13271",
+      "label": "controls",
+      "reason": "Premise relation content relevant to task"
+    },
+    {
+      "id": "L3:F8382",
+      "label": "many",
+      "reason": "Quantifier in premise; syntactic/lexical"
+    },
+    {
+      "id": "L3:F12596",
+      "label": "actions or methods, sometimes preceeded by the preposition 'a' or 'to'.",
+      "reason": "Generic syntactic/phrase-structure feature"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6044",
+      "label": "the word \"yield\"",
+      "reason": "Oracle says generic misfire on Congress token"
+    },
+    {
+      "id": "L1:F6948",
+      "label": "the word \"lift\" in the context of mechanical devices or ski infrastructure",
+      "reason": "Low-specificity generic word feature"
+    },
+    {
+      "id": "L2:F6735",
+      "label": "political parties and politicians",
+      "reason": "Oracle marks negative/polarity-conflicting, not task-role"
+    },
+    {
+      "id": "L2:F156",
+      "label": "negative on 'levels'",
+      "reason": "Oracle marks negative, role unclear"
+    },
+    {
+      "id": "L6:F13778",
+      "label": "negative on 'our'",
+      "reason": "Oracle marks negative, role unclear"
+    },
+    {
+      "id": "L0:F9557",
+      "label": "the word \"clean\" and words/phrases associated with people",
+      "reason": "Oracle-derived mismatch, not clearly task-relevant"
+    },
+    {
+      "id": "L0:F13564",
+      "label": "the word \"which\"",
+      "reason": "Generic relative-word feature; not claimed causal here"
+    },
+    {
+      "id": "L0:F9135",
+      "label": "mentions of music, specifically songs, and also the word \"blank\"",
+      "reason": "Spurious lexical association"
+    },
+    {
+      "id": "L0:F13929",
+      "label": "instances of the word \"power\" in a political or technical context",
+      "reason": "Topic/lexical feature, not specifically causal here"
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 11,
+  "n_other": 9,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation-word features; oracle emphasizes premise topic and syntax signals."
+}

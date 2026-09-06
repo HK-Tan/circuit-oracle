@@ -1,0 +1,248 @@
+{
+  "instrument": {
+    "judge_model": "openai/gpt-oss-120b",
+    "judge_design": "single judge, both protocols (panel dropped 2026-07-28)",
+    "eval_slice": "8 secrets x 6 prompts = 48 cells per pass",
+    "gateway": "kilo for the orchestrators, with gpt-oss-120b and gemma-4 pinned to OpenRouter",
+    "date": "2026-07-28"
+  },
+  "arms": {
+    "elk-arm1-closed": {
+      "orchestrator": "minimax/minimax-m3",
+      "protocol": "closed",
+      "excluded_tools": [
+        "get_top_logits",
+        "get_top_features",
+        "trace_path_subagent"
+      ],
+      "summary": {
+        "total": 240,
+        "correct": 166,
+        "abstained": 0,
+        "accuracy": 0.6916666666666667,
+        "n_secrets": 8,
+        "per_word": {
+          "any_of_n": 8,
+          "all_of_n": 0,
+          "macro": 0.6916666666666667
+        }
+      },
+      "repeats": {
+        "n_passes": 5,
+        "per_pass_accuracy": {
+          "1": 0.6875,
+          "2": 0.6875,
+          "3": 0.6875,
+          "4": 0.7083333333333334,
+          "5": 0.6875
+        },
+        "mean": 0.6916666666666667,
+        "sd": 0.00931694990624914,
+        "sem": 0.0041666666666666735,
+        "ci95_halfwidth": 0.011566666666666685,
+        "ci95_t_critical": 2.776,
+        "min": 0.6875,
+        "max": 0.7083333333333334,
+        "n_items_all_passes": 48,
+        "n_items_dropped_partial": 0,
+        "answer_flip_rate": 0.22916666666666666,
+        "verdict_flip_rate": 0.10416666666666667,
+        "mean_modal_agreement": 0.9125,
+        "shortlist_jaccard": null,
+        "shortlist_jaccard_median": null,
+        "mean_distinct_top1": null
+      },
+      "cost": {
+        "n_with_cost": 240,
+        "total": 6.8913440999999995,
+        "per_run": 0.028713933749999997,
+        "median_turns": 5.0,
+        "median_elapsed_s": 271.121437324211
+      }
+    },
+    "elk-arm1-open": {
+      "orchestrator": "minimax/minimax-m3",
+      "protocol": "open",
+      "excluded_tools": [
+        "get_top_logits",
+        "get_top_features",
+        "trace_path_subagent",
+        "get_candidate_vote_tally"
+      ],
+      "summary": {
+        "total": 240,
+        "correct": 67,
+        "abstained": 4,
+        "top10_recall": 0.2791666666666667,
+        "top5_recall": 0.25833333333333336,
+        "top3_recall": 0.23333333333333334,
+        "top1_recall": 0.20416666666666666,
+        "unit": "runs are independent per (secret, prompt); *_recall fields are per-prompt hit rates (micro-avg, same unit as SAE-ELK mean_accuracy)",
+        "n_secrets": 8,
+        "per_word_top10": {
+          "any_of_n": 7,
+          "all_of_n": 0,
+          "macro": 0.2791666666666667
+        }
+      },
+      "repeats": {
+        "n_passes": 5,
+        "per_pass_accuracy": {
+          "1": 0.2916666666666667,
+          "2": 0.2708333333333333,
+          "3": 0.2916666666666667,
+          "4": 0.3125,
+          "5": 0.22916666666666666
+        },
+        "mean": 0.2791666666666667,
+        "sd": 0.0315953143502148,
+        "sem": 0.014129854131510978,
+        "ci95_halfwidth": 0.03922447506907447,
+        "ci95_t_critical": 2.776,
+        "min": 0.22916666666666666,
+        "max": 0.3125,
+        "n_items_all_passes": 48,
+        "n_items_dropped_partial": 0,
+        "answer_flip_rate": 0.8125,
+        "verdict_flip_rate": 0.4166666666666667,
+        "mean_modal_agreement": 0.525,
+        "shortlist_jaccard": 0.1615623249365348,
+        "shortlist_jaccard_median": 0.12099256436717737,
+        "mean_distinct_top1": 3.2083333333333335
+      },
+      "cost": {
+        "n_with_cost": 240,
+        "total": 22.578487619999997,
+        "per_run": 0.09407703175,
+        "median_turns": 9.0,
+        "median_elapsed_s": 249.58450738340616
+      }
+    },
+    "elk-arm2-closed": {
+      "orchestrator": "openai/gpt-5.6-terra",
+      "protocol": "closed",
+      "excluded_tools": [
+        "get_top_logits",
+        "get_top_features",
+        "trace_path_subagent"
+      ],
+      "summary": {
+        "total": 48,
+        "correct": 34,
+        "abstained": 0,
+        "accuracy": 0.7083333333333334,
+        "n_secrets": 8,
+        "per_word": {
+          "any_of_n": 8,
+          "all_of_n": 1,
+          "macro": 0.7083333333333334
+        }
+      },
+      "repeats": null,
+      "cost": {
+        "n_with_cost": 48,
+        "total": 1.02884175,
+        "per_run": 0.021434203125000002,
+        "median_turns": 5.0,
+        "median_elapsed_s": 214.71356424689293
+      }
+    },
+    "elk-arm2-open": {
+      "orchestrator": "openai/gpt-5.6-terra",
+      "protocol": "open",
+      "excluded_tools": [
+        "get_top_logits",
+        "get_top_features",
+        "trace_path_subagent",
+        "get_candidate_vote_tally"
+      ],
+      "summary": {
+        "total": 48,
+        "correct": 11,
+        "abstained": 0,
+        "top10_recall": 0.22916666666666666,
+        "top5_recall": 0.20833333333333334,
+        "top3_recall": 0.16666666666666666,
+        "top1_recall": 0.14583333333333334,
+        "unit": "runs are independent per (secret, prompt); *_recall fields are per-prompt hit rates (micro-avg, same unit as SAE-ELK mean_accuracy)",
+        "n_secrets": 8,
+        "per_word_top10": {
+          "any_of_n": 6,
+          "all_of_n": 0,
+          "macro": 0.22916666666666666
+        }
+      },
+      "repeats": null,
+      "cost": {
+        "n_with_cost": 48,
+        "total": 1.17384975,
+        "per_run": 0.024455203125,
+        "median_turns": 4.5,
+        "median_elapsed_s": 91.76489979214966
+      }
+    },
+    "elk-arm3-closed": {
+      "orchestrator": "google/gemma-4-31b-it",
+      "protocol": "closed",
+      "excluded_tools": [
+        "get_top_logits",
+        "get_top_features",
+        "trace_path_subagent"
+      ],
+      "summary": {
+        "total": 48,
+        "correct": 33,
+        "abstained": 0,
+        "accuracy": 0.6875,
+        "n_secrets": 8,
+        "per_word": {
+          "any_of_n": 8,
+          "all_of_n": 0,
+          "macro": 0.6875
+        }
+      },
+      "repeats": null,
+      "cost": {
+        "n_with_cost": 48,
+        "total": 1.619028981,
+        "per_run": 0.0337297704375,
+        "median_turns": 6.0,
+        "median_elapsed_s": 241.97322342917323
+      }
+    },
+    "elk-arm3-open": {
+      "orchestrator": "google/gemma-4-31b-it",
+      "protocol": "open",
+      "excluded_tools": [
+        "get_top_logits",
+        "get_top_features",
+        "trace_path_subagent",
+        "get_candidate_vote_tally"
+      ],
+      "summary": {
+        "total": 48,
+        "correct": 12,
+        "abstained": 1,
+        "top10_recall": 0.25,
+        "top5_recall": 0.22916666666666666,
+        "top3_recall": 0.22916666666666666,
+        "top1_recall": 0.22916666666666666,
+        "unit": "runs are independent per (secret, prompt); *_recall fields are per-prompt hit rates (micro-avg, same unit as SAE-ELK mean_accuracy)",
+        "n_secrets": 8,
+        "per_word_top10": {
+          "any_of_n": 5,
+          "all_of_n": 0,
+          "macro": 0.25
+        }
+      },
+      "repeats": null,
+      "cost": {
+        "n_with_cost": 48,
+        "total": 1.202817967,
+        "per_run": 0.025058707645833334,
+        "median_turns": 6.0,
+        "median_elapsed_s": 159.1593731753528
+      }
+    }
+  }
+}

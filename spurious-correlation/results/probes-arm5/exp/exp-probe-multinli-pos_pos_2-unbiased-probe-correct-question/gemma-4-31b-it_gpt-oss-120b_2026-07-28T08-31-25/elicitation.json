@@ -1,0 +1,74 @@
+{
+  "prompt": "Dataset: multinli-pos_pos_2 | Probe: unbiased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 4,
+      "feature_idx": 12126,
+      "pos": 2,
+      "supernode_label": "Conversational Fillers ('yeah', 'well')",
+      "autointerp": " expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "frac_nonzero": 0.01233,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/12126"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 4847,
+      "pos": 2,
+      "supernode_label": "Conversational Fillers ('yeah', 'well')",
+      "autointerp": " words or short phrases often used in conversation, and especially questions and answers",
+      "frac_nonzero": 0.01156,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/4847"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 6236,
+      "pos": 20,
+      "supernode_label": "Negation/Contraction Signal ('n't')",
+      "autointerp": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "frac_nonzero": 0.00258,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/6236"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 16366,
+      "pos": 25,
+      "supernode_label": "Causal Marker ('because')",
+      "autointerp": " the word \"because\"",
+      "frac_nonzero": 0.01813,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/16366"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 8083,
+      "pos": 6,
+      "supernode_label": "Numeric/Double Context ('double')",
+      "autointerp": "the word \"double\" and surrounding words when numbers are also present",
+      "frac_nonzero": 0.01553,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/8083"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "filler_words",
+      "to": "probe_logit"
+    },
+    {
+      "from": "negation_signals",
+      "to": "probe_logit"
+    },
+    {
+      "from": "causal_marker",
+      "to": "probe_logit"
+    },
+    {
+      "from": "numeric_context",
+      "to": "probe_logit"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "**Analysis:** The probe's classification is driven by superficial linguistic markers\u2014specifically conversational fillers, negation signals, and causal conjunctions\u2014rather than a semantic understanding of the prompt's content.\n\n**Confidence:** 9\n\n**Reasoning:** \nThe attribution analysis reveals that the probe's classification score is determined by several low-level, non-semantic features. \n\n1. **Conversational Fillers:** Features **L4:F12126** and **L4:F4847** (grouped in `filler_words`) respond to \"yeah\" and \"well\" at the start of the prompt. These features have a strong effect on the logit, but they encode conversational style rather than contradiction or any specific factual claim.\n2. **Negation/Contraction Signals:** Feature **L0:F6236** (`negation_signals`) specifically detects the letter \"t\" following contractions like \"isn't\" or \"doesn't\" (detected at position 20, corresponding to \"haven't\"). This is a classic \"spurious feature\" where the probe relies on the presence of negation markers to predict a \"contradiction\" label without analyzing the actual meaning of the negated statement.\n3. **Causal Markers:** Feature **L0:F16366** (`causal_marker`) detects the word \"because\". While \"because\" often introduces an explanation that could be contradictory, the feature itself is a simple lexical detector.\n4. **Generic Context:** Feature **L0:F8083** (`numeric_context`) detects the word \"double\" in a numeric context (e.g., \"NC double A\"), which is entirely irrelevant to the semantic task of contradiction detection.\n\nThe signal flows directly from these early-layer (L0-L4) lexical detectors to the probe output. There is no evidence of higher-layer semantic integration or entity-specific reasoning. This confirms the user's concern: the probe is utilizing spurious \"shortcut\" features (negation words and filler phrases) to make its prediction.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

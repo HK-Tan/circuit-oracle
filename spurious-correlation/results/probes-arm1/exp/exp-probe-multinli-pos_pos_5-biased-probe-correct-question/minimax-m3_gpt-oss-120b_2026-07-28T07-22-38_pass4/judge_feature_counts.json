@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Negation cue, independent of meaning"
+    },
+    {
+      "id": "L16:F15025",
+      "label": "usage of the word \"not\" combined with personal pronouns or related emotional or motivational language",
+      "reason": "Negation cue, not semantic relation"
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation heuristic, surface-level"
+    },
+    {
+      "id": "L13:F4368",
+      "label": "the word \"not\"",
+      "reason": "Generic negation detector"
+    },
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Contraction/negation token detector"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L15:F12905",
+      "label": "the word \"but\" along with surrounding words that indicate a contrasting or consequential relationship.",
+      "reason": "Contrastive relation relevant to meaning"
+    },
+    {
+      "id": "L14:F11020",
+      "label": "the word \"but\". and \"also\"",
+      "reason": "Contrast structure tied to relation"
+    },
+    {
+      "id": "L4:F2884",
+      "label": "the word \"but\" and other contrastive conjunctions and adverbs.",
+      "reason": "Contrastive syntax supporting semantic relation"
+    },
+    {
+      "id": "L2:F5627",
+      "label": "instances of the phrase \"not only\"",
+      "reason": "Phrase-level contrast structure"
+    },
+    {
+      "id": "L9:F12274",
+      "label": "the phrase \"not only\"",
+      "reason": "Contrastive construction affecting meaning"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F15629",
+      "label": "speech attribution, such as the word \"said\" and phrases like \"talking about\"",
+      "reason": "Quoted-speech marker, not task semantics"
+    },
+    {
+      "id": "L4:F12337",
+      "label": "speech attribution, especially \"said\"",
+      "reason": "Attribution detector, structural"
+    },
+    {
+      "id": "L6:F4419",
+      "label": "instances of people providing information during an official capacity",
+      "reason": "Reporting/attribution context"
+    },
+    {
+      "id": "L2:F13565",
+      "label": "the word \"program(me)s\"",
+      "reason": "Content word detector only"
+    },
+    {
+      "id": "L0:F1910",
+      "label": "the phrase \"not only\"",
+      "reason": "Structural phrase detector"
+    },
+    {
+      "id": "L1:F11907",
+      "label": "the word \"program\"",
+      "reason": "Generic lexical detector"
+    },
+    {
+      "id": "L2:F8279",
+      "label": "the word \"program\" or the plural \"programs\", sometimes weakly activating on words related to changes of state",
+      "reason": "Mostly lexical; not clear causal role"
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Other-language negation detector"
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Multilingual negation detector"
+    },
+    {
+      "id": "L3:F6227",
+      "label": "sentence fragments and informal or ungrammatical language, often including abbreviations.",
+      "reason": "Structural text-quality feature"
+    },
+    {
+      "id": "L0:F15525",
+      "label": "places where something is being explained or reported",
+      "reason": "Reporting context, not NLI semantics"
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 5,
+  "n_other": 11,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Negation cues and contrastive markers both matter; attribution and lexical detectors are other."
+}

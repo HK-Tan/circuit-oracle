@@ -1,0 +1,74 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F10682",
+      "label": "the word \"race\"",
+      "reason": "Identity-term detector; demographic token signal."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Identity-term detector; demographic token signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F12410",
+      "label": "the word \"By\" at the start of a phrase or sentence",
+      "reason": "Structural token, not toxicity-specific."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Generic negation word; identity-independent."
+    },
+    {
+      "id": "L4:F15173",
+      "label": "statements about mentioning or discussing something",
+      "reason": "Identity-independent discourse feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: By (pos 0)",
+      "label": "By",
+      "reason": "Embed node only; not a circuit feature."
+    },
+    {
+      "id": "Emb: not (pos 1)",
+      "label": "not",
+      "reason": "Embed node only; not a circuit feature."
+    },
+    {
+      "id": "Emb: race (pos 6)",
+      "label": "race",
+      "reason": "Embed node only; not a circuit feature."
+    },
+    {
+      "id": "Emb: mentioning (pos 3)",
+      "label": "mentioning",
+      "reason": "Embed node only; not a circuit feature."
+    },
+    {
+      "id": "L23:F22255",
+      "label": "Lexical Aggregator",
+      "reason": "Aggregator is structural, not semantic content."
+    },
+    {
+      "id": "L25:F23398",
+      "label": "Toxicity/Probe Driver",
+      "reason": "Oracle dismisses as driver, not interpretable feature."
+    },
+    {
+      "id": "Probe Classification Score",
+      "label": "[(embed/output)]",
+      "reason": "Output score, not a feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 3,
+  "n_other": 7,
+  "spurious_fraction": 0.4,
+  "dominant": "causal",
+  "notes": "Oracle shows mostly generic lexical/structural features; only 'race' detectors are spurious."
+}

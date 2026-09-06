@@ -1,0 +1,11 @@
+{
+  "prompt": "Dataset: multinli-pos_pos_2 | Probe: unbiased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [],
+  "pinned_edges": [],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "## One-shot analysis\n\nThe top features driving the probe are dominated by surface-level conversational and discourse markers ('well', 'yeah', 'the', 'okay', 'anyway', conjunctions) and low-level lexical features (letters, the word 'double', 'tournament', 'year', 'season'). There is almost no semantic content about the actual claim (NCAA tournament, Sweet 16, watching games). Notably, L0:F4365 ('neither' and negative terms) and L0:F6236 ('t' after 'isn''/'doesn'') are negation-related artifacts, though the input text does contain 'haven't' and 'I haven't missed'. The most content-relevant feature is L0:F12862 ('tournament'), but overall the circuit is driven by stylistic/discourse markers and spurious lexical cues rather than the actual semantic content about the sporting event claim.\n\n**Verdict:** spurious\n\n**Spurious features:** L4:F12126, L0:F6236, L0:F4365, L0:F8352, L3:F14620, L2:F15282, L0:F15682, L0:F3820, L6:F11557, L4:F4847\n**Causal features:** L0:F12862, L1:F13255, L0:F8083, L1:F177\n",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

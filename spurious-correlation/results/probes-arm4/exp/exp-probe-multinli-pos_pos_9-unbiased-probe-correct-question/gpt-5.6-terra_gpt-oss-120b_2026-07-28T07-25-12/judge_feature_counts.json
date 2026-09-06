@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Lexical record detector; not negation or meaning relation."
+    },
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Literal record/recording word feature, not semantic contradiction."
+    },
+    {
+      "id": "L2:F3059",
+      "label": "the verb \"record\"",
+      "reason": "Word-form detector for record, not task semantics."
+    },
+    {
+      "id": "L2:F8776",
+      "label": "words related to finance and property law",
+      "reason": "Oracle rejects label for this input; not task-relevant."
+    },
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Pure word detector, structurally local."
+    },
+    {
+      "id": "L1:F12253",
+      "label": "the word 'menu'",
+      "reason": "Pure word detector, not semantic relation."
+    },
+    {
+      "id": "L2:F3648",
+      "label": "code snippets related to menus and restaurants",
+      "reason": "Menu-context lexical feature, not NLI semantics."
+    },
+    {
+      "id": "L3:F3573",
+      "label": "the word \"menu\" often in conjunction with interface elements",
+      "reason": "Interface/menu lexical association only."
+    },
+    {
+      "id": "L0:F8046",
+      "label": "the word \"will.\"",
+      "reason": "Literal will detector; not causal semantics."
+    },
+    {
+      "id": "L2:F188",
+      "label": "the word \"will\" in various contexts, sometimes alongside words related to consequences or legal matters",
+      "reason": "Word-level will feature, not relation feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Synthetic contradiction-probe score",
+      "label": "Synthetic contradiction-probe score",
+      "reason": "Probe output itself; not a feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: recorded (pos 2)",
+      "label": "Emb: recorded (pos 2)",
+      "reason": "Input embedding node, not a feature."
+    },
+    {
+      "id": "Emb: menu (pos 3)",
+      "label": "Emb: menu (pos 3)",
+      "reason": "Input embedding node, not a feature."
+    },
+    {
+      "id": "Emb: will (pos 4)",
+      "label": "Emb: will (pos 4)",
+      "reason": "Input embedding node, not a feature."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 1,
+  "n_other": 3,
+  "spurious_fraction": 0.9090909090909091,
+  "dominant": "spurious",
+  "notes": "No causal semantic-relation feature is actually claimed; circuit is mostly word detectors."
+}

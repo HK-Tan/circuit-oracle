@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Gender/pronoun feature, but inhibitory here."
+    },
+    {
+      "id": "L0:F15322",
+      "label": "reflexive pronouns, particularly \"herself\" and \"itself.\"",
+      "reason": "Pronoun-related gender cue, but inhibitory."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F5201",
+      "label": "the word \"nutrition\"",
+      "reason": "Direct profession keyword for nutrition."
+    },
+    {
+      "id": "L0:F10254",
+      "label": "the word \"sports\".",
+      "reason": "Profession-related vocabulary in bio context."
+    },
+    {
+      "id": "L0:F2268",
+      "label": "mentions of people communicating information via speech",
+      "reason": "Token-detector tied to spokesperson/profession wording."
+    },
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Diet/nutrition semantics, clearly causal."
+    },
+    {
+      "id": "L4:F10494",
+      "label": "words related to health, medicine, diet, drugs, age groups, and excercise",
+      "reason": "Health/diet profession terminology."
+    },
+    {
+      "id": "L6:F11327",
+      "label": "words or phrases related to food or nutrition",
+      "reason": "Aggregates nutrition-related profession cues."
+    },
+    {
+      "id": "L7:F13562",
+      "label": "physical activity / training / exercise detectors",
+      "reason": "Relevant profession-domain exercise vocabulary."
+    },
+    {
+      "id": "L8:F7057",
+      "label": "physical activity / training / exercise detectors",
+      "reason": "Relevant profession-domain exercise vocabulary."
+    },
+    {
+      "id": "L14:F4197",
+      "label": "words and phrases related to food insecurity.",
+      "reason": "Food-related context supporting nutrition domain."
+    },
+    {
+      "id": "L14:F16195",
+      "label": "mentions of physical activity and training.",
+      "reason": "Exercise/training content supports profession class."
+    },
+    {
+      "id": "L17:F7545",
+      "label": "context of scientific, specially nutritional, studies",
+      "reason": "Scientific nutrition context is causal."
+    },
+    {
+      "id": "L19:F1589",
+      "label": "a context of scientific, specially nutritional, studies",
+      "reason": "Terminal nutritionist/dietitian semantic feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: nutrition",
+      "label": "nutrition",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: sports",
+      "label": "sports",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: eating",
+      "label": "eating",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: disordered",
+      "label": "disordered",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: spokesperson",
+      "label": "spokesperson",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: Her",
+      "label": "Her",
+      "reason": "Input token, not a circuit feature."
+    },
+    {
+      "id": "Emb: Nutrition/Die",
+      "label": "Nutrition/Die",
+      "reason": "Input token span, not a circuit feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 12,
+  "n_other": 7,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "causal",
+  "notes": "Circuit is dominated by nutrition/diet/exercise semantics; gender cues are present but inhibitory."
+}

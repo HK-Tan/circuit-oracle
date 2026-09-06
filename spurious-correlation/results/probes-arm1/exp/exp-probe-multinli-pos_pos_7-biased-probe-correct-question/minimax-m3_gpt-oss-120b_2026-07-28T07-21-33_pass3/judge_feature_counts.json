@@ -1,0 +1,149 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Direct negation pattern, independent of sentence meaning."
+    },
+    {
+      "id": "L16:F9779",
+      "label": "negation words or contractions like \"won't\", \"not\", \"never\"",
+      "reason": "Generic negation-word detector in the hypothesis."
+    },
+    {
+      "id": "L13:F3295",
+      "label": "negations in the form of \"is/are not\" as well as other uses of \"not\"",
+      "reason": "Generic negation detector, not semantic relation."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Literal negation-word feature."
+    },
+    {
+      "id": "L2:F12021",
+      "label": "\"not\" or negative terms, with some bonus for sports-related terms and \"purpose\".",
+      "reason": "Negation-term detector; role is lexical spurious cue."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation-related lexical cue, not causal semantics."
+    },
+    {
+      "id": "L15:F3521",
+      "label": "sentences containing words expressing negation or uncertainty in past or future tense",
+      "reason": "Targets negation/uncertainty wording rather than entailment."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Generic negation-word detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F10408",
+      "label": "geographical locations, especially related to bodies of water",
+      "reason": "Content semantics about a sea/location."
+    },
+    {
+      "id": "L5:F14591",
+      "label": "words related to the Catholic church",
+      "reason": "Semantic content about abbey/church entities."
+    },
+    {
+      "id": "L3:F16223",
+      "label": "mentions of the Baltic Sea",
+      "reason": "Geographic semantic feature tied to marine context."
+    },
+    {
+      "id": "L4:F4173",
+      "label": "words and phrases related to marine environments or legal terminology related to maritime issues.",
+      "reason": "Marine semantic content."
+    },
+    {
+      "id": "L6:F3848",
+      "label": "words related to marine biology and fishing",
+      "reason": "Sea-related content signal."
+    },
+    {
+      "id": "L4:F4605",
+      "label": "words related to churches, chapels and other buildings, in addition to other information of Lincolnshire",
+      "reason": "Church/building semantics relevant to the hypothesis."
+    },
+    {
+      "id": "L4:F4872",
+      "label": "words related to religious organizations, especially the Catholic Church",
+      "reason": "Religious entity semantics, not just token form."
+    },
+    {
+      "id": "L4:F1104",
+      "label": "words related to history, geography, and the middle ages, especially names and places",
+      "reason": "Place/history semantics."
+    },
+    {
+      "id": "L7:F5770",
+      "label": "words related to geography, especially to islands, coasts, and marine wildlife",
+      "reason": "Geographic/marine meaning."
+    },
+    {
+      "id": "L5:F5540",
+      "label": "words associated with ships, seas, or geographical locations",
+      "reason": "Sea/location semantics."
+    },
+    {
+      "id": "L13:F15057",
+      "label": "geographic locations, especially bodies of water, parks and trails",
+      "reason": "Geographic semantic feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F5060",
+      "label": "mentions of dinner or breakfast",
+      "reason": "Top boosting, low-semantic relevance."
+    },
+    {
+      "id": "L4:F3833",
+      "label": "words used when summarizing plot points or providing courtroom insights",
+      "reason": "Structural/topic boilerplate, not NLI semantics."
+    },
+    {
+      "id": "L4:F11810",
+      "label": "the words \"that\", \"way\", \"refer\", \"affirmative\", \"ished\", located near a long sentence or paragraph",
+      "reason": "Paragraph-context/structural feature."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Language-mixing detector, structural."
+    },
+    {
+      "id": "L0:F9646",
+      "label": "words that indicate the degree, scale, or validity of something",
+      "reason": "Generic discourse-level feature."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 11,
+  "n_other": 8,
+  "spurious_fraction": 0.42105263157894735,
+  "dominant": "causal",
+  "notes": "Oracle emphasizes negation detectors, but also includes substantial semantic geography/church features."
+}

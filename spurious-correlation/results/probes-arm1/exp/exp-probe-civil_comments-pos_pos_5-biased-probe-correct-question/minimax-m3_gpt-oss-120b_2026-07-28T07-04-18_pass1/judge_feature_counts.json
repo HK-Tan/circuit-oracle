@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "Identity-group discussion, not toxic content."
+    },
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "Identity/topic mention, not toxicity."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Religion/geography identity signal."
+    },
+    {
+      "id": "L3:F12024",
+      "label": "words referencing the religion of Islam, people who practice it, and Arabic names",
+      "reason": "Religion reference, not toxic content."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious-affiliation detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/social-justice terms."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issue vocabulary."
+    },
+    {
+      "id": "L1:F13646",
+      "label": "text discussing social justice issues",
+      "reason": "Social-justice discussion, not toxicity."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L11:F1291",
+      "label": "racist content",
+      "reason": "Directly encodes hostile/toxic content."
+    },
+    {
+      "id": "L6:F10969",
+      "label": "swear words and insults",
+      "reason": "Profanity/insult toxicity detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe classification score",
+      "reason": "Output node, not a semantic feature."
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun detector."
+    },
+    {
+      "id": "Emb",
+      "label": "Emb: 'social' 'justice' (pos 5-6)",
+      "reason": "Input embedding, not a feature."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 2,
+  "n_other": 3,
+  "spurious_fraction": 0.8,
+  "dominant": "spurious",
+  "notes": "Identity-topic features dominate; toxic-content features are present but fewer."
+}

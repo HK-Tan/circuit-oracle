@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Literal negation-word detector in hypothesis."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "promotes 'not'/NOT negation token",
+      "reason": "Direct negation-token feature."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "Error/absence/negation in software contexts",
+      "reason": "Negation/absence cue, not semantic NLI."
+    },
+    {
+      "id": "L3:F12079",
+      "label": "negations and Chinese names",
+      "reason": "Negation marker detector, multilingual artifact."
+    },
+    {
+      "id": "L3:F2232",
+      "label": "character sequences like \"NOC\", \"NO\", \"ORES\", \"NOS\", \"OF\", \"UNCH\", and \"oooooooo\" within a series of hexadecimal codes, sometimes also picking up on related words such as \"dangerously\", \"Bantus\", \"slave\", and \"plantation\"",
+      "reason": "Surface NO-pattern detector."
+    },
+    {
+      "id": "L3:F9803",
+      "label": "sentences describing scientific studies or experiments, particularly where something is disproven",
+      "reason": "Negation/disproof language cue."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "Multilingual negative marker detector",
+      "reason": "Negation marker detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "Multilingual negation detector (positive driver)",
+      "reason": "Negation detector, surface cue."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "Multilingual negation detector (negative driver)",
+      "reason": "Negation detector, surface cue."
+    },
+    {
+      "id": "L8:F9880",
+      "label": "phrases expressing doubt, negation, or uncertainty",
+      "reason": "Negation/uncertainty cue."
+    },
+    {
+      "id": "L9:F14687",
+      "label": "phrases using the word \"not\", often followed by \"because\" or \"but.\"",
+      "reason": "Direct 'not' phrase detector."
+    },
+    {
+      "id": "L15:F10071",
+      "label": "negations and equivocations",
+      "reason": "Negation cue."
+    },
+    {
+      "id": "L15:F6160",
+      "label": "'not' followed by 'to be' within a few tokens",
+      "reason": "Negation phrase pattern."
+    },
+    {
+      "id": "L16:F12358",
+      "label": "the word \"not\" followed within a few tokens by a form of the verb \"to be\"",
+      "reason": "Direct negation phrase detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F15749",
+      "label": "the word \"strange\", or related words",
+      "reason": "Content-word semantic cue."
+    },
+    {
+      "id": "L2:F16097",
+      "label": "references to ordinal rankings of things",
+      "reason": "Content-neutral lexical/syntactic feature."
+    },
+    {
+      "id": "L3:F3669",
+      "label": "references to ordinal rankings of things",
+      "reason": "Content-neutral lexical/syntactic feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' not' (pos 17)",
+      "label": "embed/output",
+      "reason": "Input embedding, not a feature claim."
+    },
+    {
+      "id": "?",
+      "label": "embed/output",
+      "reason": "Unspecified placeholder."
+    },
+    {
+      "id": "?",
+      "label": "embed/output",
+      "reason": "Unspecified placeholder."
+    },
+    {
+      "id": "Emb: 'strangest' (pos 2)",
+      "label": "embed/output",
+      "reason": "Input embedding, not a feature claim."
+    },
+    {
+      "id": "Emb: ' is' (pos 16)",
+      "label": "embed/output",
+      "reason": "Input embedding, not a feature claim."
+    },
+    {
+      "id": "Emb: 'There' (pos 15)",
+      "label": "embed/output",
+      "reason": "Input embedding, not a feature claim."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Pure structural word detector."
+    },
+    {
+      "id": "L3:F10742",
+      "label": "fragments of French sentences, particularly those containing the verb \"avoir\"",
+      "reason": "Foreign-language fragment detector."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 3,
+  "n_other": 8,
+  "spurious_fraction": 0.8235294117647058,
+  "dominant": "spurious",
+  "notes": "Negation cues dominate; only minor content-word signals appear."
+}

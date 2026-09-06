@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women-name/role detector"
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Women/girls mention detector"
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun detector"
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female reference detector"
+    },
+    {
+      "id": "L10:F14965",
+      "label": "terms relating to women",
+      "reason": "Women-related term detector"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Proper-name/person feature"
+    },
+    {
+      "id": "L16:F6025",
+      "label": "capitalized first names, sometimes followed by last names",
+      "reason": "Proper-name feature"
+    },
+    {
+      "id": "L2:F5859",
+      "label": "first names (mostly female)",
+      "reason": "Name feature used as person marker"
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Generic proper-noun detector"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Nursing profession indicator"
+    },
+    {
+      "id": "L5:F1275",
+      "label": "words related to healthcare professionals and medical fields",
+      "reason": "Medical profession vocabulary"
+    },
+    {
+      "id": "L1:F1494",
+      "label": "words related to medical practices and studies.",
+      "reason": "Medical terminology"
+    },
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Obstetrics/gynecology vocabulary"
+    },
+    {
+      "id": "L3:F9008",
+      "label": "words related to childbirth or birth in general, including in animals.",
+      "reason": "Childbirth terminology"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L7:F2765",
+      "label": "mentions of people or characters, and their performance, roles, injuries, or personal details such as age, death, or family.",
+      "reason": "Broad person/role feature"
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic entity detector"
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Dismissed unrelated feature"
+    },
+    {
+      "id": "L15:F851",
+      "label": "code documentation blocks in various programming languages",
+      "reason": "Dismissed unrelated feature"
+    },
+    {
+      "id": "L11:F9183",
+      "label": "large empty spaces in the text",
+      "reason": "Purely structural feature"
+    },
+    {
+      "id": "L10:F12232",
+      "label": "code-related statements and whitespace",
+      "reason": "Dismissed unrelated feature"
+    },
+    {
+      "id": "L8:F7245",
+      "label": "content in languages other than English, particularly French and possibly Sanskrit.",
+      "reason": "Unrelated language feature"
+    },
+    {
+      "id": "L9:F8770",
+      "label": "sentences beginning with \"It\" or \"In\" and also the word \"There\"",
+      "reason": "Structural sentence-start feature"
+    },
+    {
+      "id": "L12:F12493",
+      "label": "words that end in \"ing\", \"ecti\", \"tial\", or \"ogi\", and also the word \"gauge\"",
+      "reason": "Morphological/structural pattern"
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Generic name/title pattern"
+    },
+    {
+      "id": "L13:F8128",
+      "label": "sentences beginning with the word \"In\"",
+      "reason": "Purely structural feature"
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 9,
+  "n_other": 11,
+  "spurious_fraction": 0.35714285714285715,
+  "dominant": "mixed",
+  "notes": "Gender markers and nursing/obstetrics terms both contribute; gender pathway is stronger."
+}

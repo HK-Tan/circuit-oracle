@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "Pronoun 'his'/'he'",
+      "reason": "Generic pronoun, not an identity-group signal."
+    },
+    {
+      "id": "L3:F735",
+      "label": "'self-hyphenated'",
+      "reason": "Morphological form only; not toxic semantics."
+    },
+    {
+      "id": "L3:F9615",
+      "label": "'self-' prefix",
+      "reason": "Prefix detector; structural, not causal toxicity."
+    },
+    {
+      "id": "L6:F10545",
+      "label": "Race/political-rhetoric",
+      "reason": "Identity/race-related rhetoric, not direct toxicity semantics."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F8407",
+      "label": "Antagonists/fighting",
+      "reason": "Fighting/hostility semantics align with toxicity."
+    },
+    {
+      "id": "L3:F592",
+      "label": "Love/hate vocabulary",
+      "reason": "Contains hate vocabulary, directly toxicity-related."
+    },
+    {
+      "id": "L1:F2107",
+      "label": "'enter'/legal",
+      "reason": "Oracle labels it legal/mathematical text; not causal here."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@11",
+      "label": "Emb: ' his' (pos 11)",
+      "reason": "Token embedding only."
+    },
+    {
+      "id": "L0:F0@1",
+      "label": "Emb: 'Self' (pos 1)",
+      "reason": "Token embedding only."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: '-' (pos 2)",
+      "reason": "Token embedding only."
+    },
+    {
+      "id": "L0:F0@3",
+      "label": "Emb: 'hat' (pos 3)",
+      "reason": "Token embedding only."
+    },
+    {
+      "id": "L0:F0@7",
+      "label": "Emb: ' -' (pos 7)",
+      "reason": "Token embedding only."
+    },
+    {
+      "id": "L0:F8938",
+      "label": "Hyphen-adjacent-to-text",
+      "reason": "Purely structural punctuation feature."
+    },
+    {
+      "id": "L0:F3090",
+      "label": "Code/member-access",
+      "reason": "Code-format detector, not toxicity."
+    },
+    {
+      "id": "L0:F4336",
+      "label": "'favor'/legal terms",
+      "reason": "Legal vocabulary, unrelated to toxicity."
+    },
+    {
+      "id": "L3:F15509",
+      "label": "Git-diff/code-diff format",
+      "reason": "Structural code-diff pattern."
+    },
+    {
+      "id": "L3:F13717",
+      "label": "'hat' statistical notation",
+      "reason": "Mathematical notation, not toxicity."
+    },
+    {
+      "id": "L4:F5181",
+      "label": "Political parties/ideologies",
+      "reason": "Political ideology, not itself toxic."
+    },
+    {
+      "id": "L3:F5808",
+      "label": "'-ing' driving-forward",
+      "reason": "Generic suffix/structure feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 3,
+  "n_other": 12,
+  "spurious_fraction": 0.5714285714285714,
+  "dominant": "mixed",
+  "notes": "Mostly structural and lexical cues, with some genuine hate/hostility semantics."
+}

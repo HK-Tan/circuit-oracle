@@ -1,0 +1,93 @@
+{
+  "spurious_features": [
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "Detects LGBTQ+ identity/topic language."
+    },
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "Detects homosexuality topic, not toxicity."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Detects Muslim/Islam identity references."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Detects religion affiliation, not abuse."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Detects race/social-justice vocabulary."
+    },
+    {
+      "id": "L4:F8645",
+      "label": "gay-token identity features",
+      "reason": "Identity-token matcher for gay."
+    },
+    {
+      "id": "L4:F15899",
+      "label": "gay-token identity features",
+      "reason": "Identity-token matcher for gay."
+    },
+    {
+      "id": "L3:F12024",
+      "label": "words referencing the religion of Islam, people who practice it, and Arabic names",
+      "reason": "Identity/religion lexical detector."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Social-issues/identity vocabulary detector."
+    },
+    {
+      "id": "L1:F13646",
+      "label": "text discussing social justice issues",
+      "reason": "Social-justice topic feature."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "warrior-token identity feature",
+      "reason": "Token identity feature, not causal toxicity."
+    },
+    {
+      "id": "L0:F3591",
+      "label": "social-token / 'things done' context",
+      "reason": "Triggered by social context, identity-related here."
+    },
+    {
+      "id": "L0:F6556",
+      "label": "justice-token feature",
+      "reason": "Token identity feature for justice."
+    },
+    {
+      "id": "L0:F13885",
+      "label": "muslim-token identity feature",
+      "reason": "Identity-token matcher for Muslim."
+    },
+    {
+      "id": "L0:F3031",
+      "label": "muslim-token identity feature",
+      "reason": "Identity-token matcher for Muslim."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic grammar feature; not toxicity-specific."
+    }
+  ],
+  "n_spurious": 15,
+  "n_causal": 0,
+  "n_other": 1,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Score is driven by identity/topic detectors; no causal toxicity features are claimed."
+}

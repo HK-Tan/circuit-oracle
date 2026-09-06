@@ -1,0 +1,157 @@
+{
+  "prompt": "Dataset: civil_comments-pos_pos_3 | Probe: biased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 6,
+      "feature_idx": 648,
+      "pos": 6,
+      "supernode_label": "Probe driver: identity-token detector (L6:F648)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/648"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 14733,
+      "pos": 6,
+      "supernode_label": "Probe driver: identity-token detector (L6:F648)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/14733"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 117,
+      "pos": 6,
+      "supernode_label": "Probe driver: identity-token detector (L6:F648)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/117"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 12151,
+      "pos": 6,
+      "supernode_label": "Probe driver: identity-token detector (L6:F648)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/12151"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 13158,
+      "pos": 6,
+      "supernode_label": "Probe driver: identity-token detector (L6:F648)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/13158"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 2405,
+      "pos": 6,
+      "supernode_label": "Probe driver: identity-token detector (L6:F648)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/2405"
+    },
+    {
+      "layer": 8,
+      "feature_idx": 13875,
+      "pos": 10,
+      "supernode_label": "Slur/identity phrase detector (L8:F13875 at pos 10, \"stain on his brethren/country\")",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/8-gemmascope-transcoder-16k/13875"
+    },
+    {
+      "layer": 6,
+      "feature_idx": 1561,
+      "pos": 10,
+      "supernode_label": "Slur/identity phrase detector (L8:F13875 at pos 10, \"stain on his brethren/country\")",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/1561"
+    },
+    {
+      "layer": 5,
+      "feature_idx": 7488,
+      "pos": 10,
+      "supernode_label": "Slur/identity phrase detector (L8:F13875 at pos 10, \"stain on his brethren/country\")",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/5-gemmascope-transcoder-16k/7488"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 9026,
+      "pos": 6,
+      "supernode_label": "Early identity-token features (L0-L1) firing on \"Jew\"",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/9026"
+    },
+    {
+      "layer": 1,
+      "feature_idx": 15359,
+      "pos": 6,
+      "supernode_label": "Early identity-token features (L0-L1) firing on \"Jew\"",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/1-gemmascope-transcoder-16k/15359"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 8236,
+      "pos": 6,
+      "supernode_label": "Early identity-token features (L0-L1) firing on \"Jew\"",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/8236"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "emb_jew",
+      "to": "early_jew_feat"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "early_jew_feat"
+    },
+    {
+      "from": "early_jew_feat",
+      "to": "probe_driver"
+    },
+    {
+      "from": "emb_jew",
+      "to": "probe_driver"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "probe_driver"
+    },
+    {
+      "from": "probe_driver",
+      "to": "output"
+    },
+    {
+      "from": "emb_stain",
+      "to": "slur_path"
+    },
+    {
+      "from": "emb_on",
+      "to": "slur_path"
+    },
+    {
+      "from": "slur_path",
+      "to": "output"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "**Analysis:** The probe's toxicity classification is driven almost entirely by features that fire on the identity tokens \"Jew\" (pos 6) and \"liberal\" (pos 5) \u2014 and on the slur-adjacent phrase \"stain on his\" (pos 9-10) \u2014 rather than by features that encode the actual hate-speech *structure* (e.g., the verb \"self-hating\", the predicate \"a stain on\", the second-person framing).\n\n**Confidence:** 8\n\n**Reasoning:**\n\nThe circuit has two converging supernodes that feed the probe's output logit (L26 terminal):\n\n1. **Probe driver supernode (L2\u2013L6, pos 6)** \u2014 anchored by L6:F648 (direct_effect=0.74, activation=28.5), the single largest contributor to the probe score. Tracing upstream, L6:F648 is fed primarily by the raw embedding of \"Jew\" (direct_effect=19.4) and \"liberal\" (1.63), then by L3:F12151 (5.9) and L4:F2405 (2.95). Both mid-layer features trace back to the same identity-token embeddings: L3:F12151 has \"Jew\" at 11.0 and \"liberal\" at 3.38; L4:F2405 has \"liberal\" at 6.75 and \"Jew\" at 3.78. Further upstream, L0:F9026 at pos 6 receives a massive 31.4 direct_effect from the \"Jew\" embedding alone \u2014 this is essentially an \"identity group label\" detector.\n\n2. **Slur-path supernode (L5\u2013L8, pos 10)** \u2014 L8:F13875 (direct_effect=0.23) traces back to L6:F1561 (3.42), which in turn is fed by L5:F7488 (6.19) and the \"stain\" embedding (5.47). The phrase \"stain on his\" is the second cluster driving the probe.\n\nCritically, the **predicate and syntactic structure** of the sentence \u2014 \"Self-hating\", \"a stain on\", \"his brethren and his country\" \u2014 do not appear as upstream drivers of the probe. None of the top features activate on \"Self\", \"hating\", or \"his\". The probe is therefore picking up on:\n- The mere presence of a **minority identity noun** (\"Jew\") and a **political identity adjective** (\"liberal\"), and\n- A **negatively-charged noun** (\"stain\") adjacent to \"on his\".\n\nThis confirms the user's concern: the probe relies on **identity-group token presence** (a \"Jewish person mentioned\" signal) and an isolated slur-adjacent word (\"stain\") rather than on compositional features that would encode the actual toxic structure (the compound noun \"Self-hating [identity] Jew\", the predicate \"is a stain on his group and country\", etc.). The model has not learned a structural notion of \"slur against an identity group\"; it has learned a bag-of-identity-words-and-negative-lexeme detector. The embedding \"Jew\" (pos 6) is the single largest causal contributor (31.4 \u2192 F9026, 19.4 \u2192 F648, 15.2 \u2192 F15359, 11.0 \u2192 F12151, 6.8 \u2192 F13158), making the probe classification highly sensitive to the mere occurrence of the identity token itself \u2014 a classic spurious-correlation / identity-mention shortcut.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F15382",
+      "label": "mentions of a female person.",
+      "reason": "Female-person detector; gender cue."
+    },
+    {
+      "id": "L0:F16075",
+      "label": "the word \"of\" and court names",
+      "reason": "Oracle says structural/court-name pattern; not task-relevant."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female pronoun/title detector."
+    },
+    {
+      "id": "L2:F2128",
+      "label": "multilingual pronouns",
+      "reason": "Low-level pronoun detector; gender cue cascade."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code snippet feature."
+    },
+    {
+      "id": "L5:F10952",
+      "label": "pronoun detector",
+      "reason": "Low-level pronoun detector; gender cue."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female-name detector."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Female-name detector."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun detector."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "Gendered personal-story feature."
+    },
+    {
+      "id": "L15:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based feature; gendered here."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-based feature; gendered here."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Women/girls mentioned; gender cue."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women-name/role feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F0",
+      "label": "Emb: Nursing",
+      "reason": "Profession token directly indicates nursing."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Explicit nursing profession detector."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "professional-services and named-entity context (RN, degree terms)",
+      "reason": "Profession/education context."
+    },
+    {
+      "id": "L5:F1275",
+      "label": "Healthcare professional terminology",
+      "reason": "Healthcare profession vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0",
+      "label": "Emb: She",
+      "reason": "Raw embedding token; counted via semantics elsewhere."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic named-entity/person detector."
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Generic name-format detector."
+    },
+    {
+      "id": "L4:F1302",
+      "label": "parts of names or titles, sometimes followed by numbers",
+      "reason": "Generic name/title structure."
+    },
+    {
+      "id": "L11:F9183",
+      "label": "large empty spaces in the text",
+      "reason": "Purely structural spacing feature."
+    },
+    {
+      "id": "L18:F3679",
+      "label": "Other late features",
+      "reason": "Oracle gave no task-specific semantic role."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 4,
+  "n_other": 6,
+  "spurious_fraction": 0.7777777777777778,
+  "dominant": "spurious",
+  "notes": "Gender/pronoun cascade dominates; nursing signal is present but weaker."
+}

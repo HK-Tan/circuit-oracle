@@ -1,0 +1,159 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13586",
+      "label": "words ending in 'thing' and 'one' often with preceding words indicating the presence of something",
+      "reason": "Captures 'one' in a negated hypothesis context."
+    },
+    {
+      "id": "L2:F8837",
+      "label": "the word \"one\" or \"body\" when preceded by the words \"no\" or \"every.\"",
+      "reason": "Direct negation-word detector in hypothesis."
+    },
+    {
+      "id": "L3:F1828",
+      "label": "the word \"one\" or \"body\" referring to people",
+      "reason": "Fires on 'No one', supporting negation pattern."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Shared task-relevant action and object content."
+    },
+    {
+      "id": "L2:F11769",
+      "label": "the word \"up\"",
+      "reason": "Part of the content-bearing phrasal verb."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Content word matching premise/hypothesis meaning."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Tourism content aligns with the premise."
+    },
+    {
+      "id": "L3:F8202",
+      "label": "mentions of legal or governmental offices",
+      "reason": "Office location is task-relevant shared content."
+    },
+    {
+      "id": "L4:F12961",
+      "label": "words pertaining to tourism",
+      "reason": "Tourism context supports semantic overlap."
+    },
+    {
+      "id": "L6:F10619",
+      "label": "words about maps, navigation and travel",
+      "reason": "Map/travel semantics relate directly to the hypothesis."
+    },
+    {
+      "id": "L4:F15094",
+      "label": "words associated with paper and the use of paper",
+      "reason": "Map/paper context is semantically relevant."
+    },
+    {
+      "id": "L4:F11969",
+      "label": "mentions of printed advertising materials",
+      "reason": "Paper/map-related content, not just surface syntax."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Pure function-word detector."
+    },
+    {
+      "id": "L0:F7321",
+      "label": "the word \"so,\" and also matches some words ending in \"ware\" and \"such\"",
+      "reason": "Structural connective; not semantic NLI content."
+    },
+    {
+      "id": "L0:F7204",
+      "label": "the word \"here\"",
+      "reason": "Generic location word detector."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Pattern-based function-word feature."
+    },
+    {
+      "id": "L1:F8159",
+      "label": "the word \"usually\" and, to a lesser extent, words that sometimes accompany it",
+      "reason": "Frequency-word detector; not causal by itself."
+    },
+    {
+      "id": "L0:F15047",
+      "label": "the words \"often\", \"usually\", and \"typically.\"",
+      "reason": "Generic frequency-word detector."
+    },
+    {
+      "id": "L0:F10562",
+      "label": "the word \"up\"",
+      "reason": "Too generic outside the phrasal-verb context."
+    },
+    {
+      "id": "L0:F10219",
+      "label": "the indefinite article \"a\"",
+      "reason": "Purely structural article detector."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Function-word detector."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic conjunction feature."
+    },
+    {
+      "id": "L3:F10901",
+      "label": "the word \"usually\"",
+      "reason": "Frequency-word cue, not meaning relation."
+    },
+    {
+      "id": "L4:F9952",
+      "label": "adverbs that describe how frequently something happens",
+      "reason": "Surface frequency cue rather than semantic entailment."
+    },
+    {
+      "id": "L4:F4739",
+      "label": "the word \"so\" followed by personal pronouns or words associated with personal experience",
+      "reason": "Pragmatic/surface pattern, not task semantics."
+    },
+    {
+      "id": "L3:F14712",
+      "label": "occurrences of the word \"so\"",
+      "reason": "Generic token occurrence detector."
+    },
+    {
+      "id": "L4:F7069",
+      "label": "words related to the geoserver and accessing layers in it",
+      "reason": "Unrelated domain-specific feature."
+    },
+    {
+      "id": "L14:F7909",
+      "label": "both positive and negative sentiment and descriptive words, especially in reviews.",
+      "reason": "Unrelated to NLI entailment/contradiction."
+    },
+    {
+      "id": "L10:F6670",
+      "label": "technical terms, especially within scientific or medical contexts",
+      "reason": "Unrelated technical-context feature."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 9,
+  "n_other": 17,
+  "spurious_fraction": 0.25,
+  "dominant": "causal",
+  "notes": "Oracle emphasizes mixed signals, but causal content features outnumber direct negation detectors."
+}

@@ -1,0 +1,64 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "possessive-pronoun feature",
+      "reason": "Driven by \"his\"; gender marker, not profession."
+    },
+    {
+      "id": "L0:F8658",
+      "label": "male-pronoun/copula feature",
+      "reason": "Traces to \"He is\"; gendered subject cue."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "male-pronoun detector",
+      "reason": "Upstream from \"He\" embedding; gender marker."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male-pronoun detector",
+      "reason": "Upstream from \"He\"; negative-direction gender cue."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "male-pronoun detector",
+      "reason": "Driven by \"He\" embedding; gender marker."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "male-pronoun detector",
+      "reason": "Indirectly traces to \"He\" via earlier layer."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "male-pronoun detector",
+      "reason": "Upstream from \" He\" embedding; gender cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F11024",
+      "label": "director lexical feature",
+      "reason": "\"Director\" is a profession indicator."
+    },
+    {
+      "id": "L0:F2848",
+      "label": "preposition/title pattern feature",
+      "reason": "\"of\" with Director; part of profession context."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe Logit",
+      "label": "profession classifier output",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 2,
+  "n_other": 1,
+  "spurious_fraction": 0.7777777777777778,
+  "dominant": "spurious",
+  "notes": "Oracle says prediction is driven mainly by male-gender cues, with only weak profession lexical signal."
+}

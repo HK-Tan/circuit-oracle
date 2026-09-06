@@ -1,0 +1,94 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8964",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Gender marker; spurious for profession classification."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F661",
+      "label": "report token feature",
+      "reason": "Direct journalism/profession vocabulary."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "journalism-associated features at \"report\"",
+      "reason": "Detects journalism-related content."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "journalism-associated features at \"report\"",
+      "reason": "Detects journalism-related content."
+    },
+    {
+      "id": "L7:F12495",
+      "label": "journalism-associated features at \"report\"",
+      "reason": "Detects journalism-related content."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "news/reporter features at \"report\"",
+      "reason": "Reporter/news profession indicator."
+    },
+    {
+      "id": "L8:F8437",
+      "label": "news/reporter features at \"report\"",
+      "reason": "Reporter/news profession indicator."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "journalism/newspapers feature (pos 21)",
+      "reason": "Explicit journalism/newspapers semantics."
+    },
+    {
+      "id": "L15:F2579",
+      "label": "people reporting/informing officially",
+      "reason": "Official reporting/informing is profession-linked."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources/news outlets (pos 21)",
+      "reason": "News outlets are profession-related."
+    },
+    {
+      "id": "L20:F8433",
+      "label": "news broadcasting words (pos 26)",
+      "reason": "Broadcasting/news vocabulary is causal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L0:F14287",
+      "label": "the word \"see\"",
+      "reason": "Generic lexical detector, not task-specific."
+    },
+    {
+      "id": "Emb:His",
+      "label": "His",
+      "reason": "Input embedding only; already counted via feature."
+    },
+    {
+      "id": "Emb: report",
+      "label": " report",
+      "reason": "Input embedding only; already counted via feature."
+    },
+    {
+      "id": "Emb: top",
+      "label": " top",
+      "reason": "Input embedding only; already counted via feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 10,
+  "n_other": 5,
+  "spurious_fraction": 0.09090909090909091,
+  "dominant": "causal",
+  "notes": "Circuit is overwhelmingly journalism/profession-driven; only 'His' is spurious."
+}

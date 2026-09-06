@@ -1,0 +1,69 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female pronoun/title gender signal."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Mentions women/girls; gender marker."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Woman's-name detector; gender marker."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Female name feature; gender marker."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female name/possessive detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Nutrition/profession terminology."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Proper-name detector; content-neutral lexical feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Purely structural/proper-noun detector."
+    },
+    {
+      "id": "L0:F10148",
+      "label": "the word \"entire,\" sometimes near the word \"this\"",
+      "reason": "Generic lexical/structural feature."
+    },
+    {
+      "id": "L0:F15382",
+      "label": "unknown from oracle output",
+      "reason": "Oracle listed feature only, no semantic claim."
+    },
+    {
+      "id": "Output",
+      "label": "Probe direction (synthetic)",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 2,
+  "n_other": 4,
+  "spurious_fraction": 0.7142857142857143,
+  "dominant": "spurious",
+  "notes": "Gender markers dominate; nutrition signal exists but is weaker."
+}

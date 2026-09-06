@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F10682",
+      "label": "the word \"race\"",
+      "reason": "Identity-group token detector."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Detects demographic identity terms."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issue vocabulary."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race mention feature."
+    },
+    {
+      "id": "L4:F5584",
+      "label": "words related to race, ethnicity, nationality or population groups",
+      "reason": "Demographic-group detector."
+    },
+    {
+      "id": "L4:F14329",
+      "label": "mentions of the colors black, white, or another color with \"or\" in its name",
+      "reason": "Promoted to racial color mentions."
+    },
+    {
+      "id": "L5:F12135",
+      "label": "terms related to discrimination based on identity",
+      "reason": "Identity-discrimination language."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Explicit race/ethnicity detector."
+    },
+    {
+      "id": "L6:F9228",
+      "label": "language regarding discrimination based on race, gender, religion, and disability",
+      "reason": "Identity-based discrimination language."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic-group mention detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F14824",
+      "label": "descriptions of violent crimes, particularly shootings, and their legal outcomes, often including racial demographics",
+      "reason": "Violence/crime semantics."
+    },
+    {
+      "id": "L2:F13653",
+      "label": "the word \"force\"",
+      "reason": "Used in violent-crime context here."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Pure function word."
+    },
+    {
+      "id": "L0:F47",
+      "label": "references to people or personhood, and sometimes costs",
+      "reason": "Generic personhood/structure."
+    },
+    {
+      "id": "L0:F9076",
+      "label": "mentions of men, boys, areas, or general locations in a text",
+      "reason": "Generic noun/location detector."
+    },
+    {
+      "id": "L3:F6517",
+      "label": "words related to mentioning something",
+      "reason": "Structural mention cue."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Ambiguous lexical token, not toxicity."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 2,
+  "n_other": 5,
+  "spurious_fraction": 0.8333333333333334,
+  "dominant": "spurious",
+  "notes": "Signal is dominated by identity-term mentions, with only a small violence-related branch."
+}

@@ -1,0 +1,152 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Entity/meaning overlap about Congress."
+    },
+    {
+      "id": "L1:F14850",
+      "label": "references to the U.S. Congress.",
+      "reason": "Congress reference, relevant to premise-hypothesis alignment."
+    },
+    {
+      "id": "L1:F2089",
+      "label": "mentions of constructor or congress",
+      "reason": "Congress mention, task-relevant lexical semantics."
+    },
+    {
+      "id": "L1:F3276",
+      "label": "mentions of the United States Congress",
+      "reason": "Congress entity feature, semantically relevant."
+    },
+    {
+      "id": "L3:F123",
+      "label": "mentions of the United States Congress",
+      "reason": "Congress entity feature, semantically relevant."
+    },
+    {
+      "id": "L0:F10198",
+      "label": "the word \"Congress\"",
+      "reason": "Congress token indicates semantic topic overlap."
+    },
+    {
+      "id": "L0:F15411",
+      "label": "terms relating to political bodies, figures, and processes",
+      "reason": "Political-body semantics, content-relevant."
+    },
+    {
+      "id": "L0:F6044",
+      "label": "the word \"yield\"",
+      "reason": "Oracle says off-topic lexical neighbor; dismissed."
+    },
+    {
+      "id": "L0:F10401",
+      "label": "mentions of genes and proteins",
+      "reason": "Off-topic; dismissed by oracle."
+    },
+    {
+      "id": "L0:F3204",
+      "label": "proper nouns, especially including titles of works and organizations",
+      "reason": "Generic named-entity structure, not negation."
+    },
+    {
+      "id": "L0:F13168",
+      "label": "the words \"broad,\" \"wild,\" and \"faced\"",
+      "reason": "Oracle treats as off-target lexical neighbor."
+    },
+    {
+      "id": "L1:F2335",
+      "label": "technical descriptions of mechanical parts for guiding linear motion",
+      "reason": "Off-topic lexical noise."
+    },
+    {
+      "id": "L3:F5753",
+      "label": "the word \"includes\" or \"containing\".",
+      "reason": "Inclusion/containment semantics."
+    },
+    {
+      "id": "L0:F10783",
+      "label": "the word \"include\" (and variations of the word)",
+      "reason": "Inclusion semantics, content-bearing."
+    },
+    {
+      "id": "L0:F14517",
+      "label": "the word \"including\"",
+      "reason": "Inclusion semantics."
+    },
+    {
+      "id": "L1:F3271",
+      "label": "the word \"including\" or its variants",
+      "reason": "Inclusion semantics."
+    },
+    {
+      "id": "L2:F13152",
+      "label": "scientific and legal jargon, as well as present tense verbs",
+      "reason": "Oracle includes it in inclusion cluster."
+    },
+    {
+      "id": "L4:F59",
+      "label": "phrases with the word 'to' preceded by a verb or the word 'start' or 'begin'.",
+      "reason": "Syntactic relation tied to begin-to construction."
+    },
+    {
+      "id": "L3:F4374",
+      "label": "instances of the word \"to\"",
+      "reason": "Reported as part of begin-to pattern cluster."
+    },
+    {
+      "id": "L2:F11469",
+      "label": "the word \"to\"",
+      "reason": "Part of begin-to cluster."
+    },
+    {
+      "id": "L3:F12596",
+      "label": "actions or methods, sometimes preceeded by the preposition 'a' or 'to'.",
+      "reason": "Begin-to/action construction."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Part of begin-to construction."
+    },
+    {
+      "id": "L1:F13759",
+      "label": "unknown",
+      "reason": "Oracle lists it in begin-to cluster."
+    },
+    {
+      "id": "L1:F2493",
+      "label": "unknown",
+      "reason": "Oracle lists it in begin-to cluster."
+    },
+    {
+      "id": "L4:F7775",
+      "label": "various forms of punctuation",
+      "reason": "Structural punctuation cue, content-neutral."
+    },
+    {
+      "id": "L2:F11734",
+      "label": "phrases containing punctuation such as quotes and dashes",
+      "reason": "Structural punctuation cue."
+    },
+    {
+      "id": "L0:F4870",
+      "label": "commas and sometimes reach (context not clear)",
+      "reason": "Comma/punctuation cue."
+    },
+    {
+      "id": "L0:F195",
+      "label": "the word \"who\"",
+      "reason": "Relativizer; structural, not negation."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 28,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows no negation detectors; mostly Congress/inclusion/begin-to semantic and structural cues."
+}

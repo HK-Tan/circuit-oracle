@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector; direct gender marker."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Explicit male-person pronoun feature."
+    },
+    {
+      "id": "L0:F16297",
+      "label": "the pronoun \"him\"",
+      "reason": "Male pronoun detector; gender marker."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Aggregates gendered pronouns."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male-title and gender descriptor feature."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Claims pronoun pathway; sex-linked here."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Includes gendered pronouns."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun detector, gendered in context."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male pronoun feature."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Mixed pronoun/name feature; not profession-specific."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Profession/vocation vocabulary."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter/journalism indicator."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism profession feature."
+    },
+    {
+      "id": "L16:F8642",
+      "label": "text related to official reporting and legal issues.",
+      "reason": "Reporting-related professional terminology."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News/media profession vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: His",
+      "label": "His",
+      "reason": "Just an embedding token; not a feature."
+    },
+    {
+      "id": "Emb: him",
+      "label": "him",
+      "reason": "Just an embedding token; not a feature."
+    },
+    {
+      "id": "Emb: report",
+      "label": "report",
+      "reason": "Just an embedding token; not a feature."
+    },
+    {
+      "id": "Emb: desire",
+      "label": "desire",
+      "reason": "Just an embedding token; not a feature."
+    },
+    {
+      "id": "Emb: world",
+      "label": "world",
+      "reason": "Just an embedding token; not a feature."
+    },
+    {
+      "id": "L4:F11898",
+      "label": "mentions of \"World\" followed by a sport or war-related word",
+      "reason": "Structural/semantic-world pairing, not task-relevant."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 5,
+  "n_other": 6,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Male-pronoun pathway dominates; journalism features are present but weaker."
+}

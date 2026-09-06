@@ -1,0 +1,58 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L4:F4605",
+      "label": "words related to churches, chapels and other buildings, in addition to other information of Lincolnshire",
+      "reason": "Religious-building semantics, not negation"
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Historical-settlement semantics, not negation"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Generic discourse/start cue"
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Purely structural sentence-beginning cue"
+    },
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic pronoun detector"
+    },
+    {
+      "id": "L4:F2581",
+      "label": "mentions of things being \"first\"",
+      "reason": "Content-neutral ordinal cue"
+    },
+    {
+      "id": "L5:F7444",
+      "label": "words or phrases that an individual would express or think",
+      "reason": "Generic speech/thought cue"
+    },
+    {
+      "id": "L4:F9757",
+      "label": "various acronyms, IDs, and symbols, possibly related to scientific data",
+      "reason": "Unrelated technical-token detector"
+    },
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Generic function-word detector"
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 2,
+  "n_other": 7,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "No negation-word detectors are claimed; most features are generic surface cues."
+}

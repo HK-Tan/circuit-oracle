@@ -1,0 +1,169 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13586",
+      "label": "negation phrase",
+      "reason": "Encodes 'No one' negation in hypothesis."
+    },
+    {
+      "id": "L2:F3116",
+      "label": "negation phrase",
+      "reason": "Upstream to 'No one' negation pattern."
+    },
+    {
+      "id": "L2:F11769",
+      "label": "negation phrase",
+      "reason": "Upstream to 'No one' negation pattern."
+    },
+    {
+      "id": "L0:F4438",
+      "label": "negation phrase",
+      "reason": "Strong 'one' detector within 'No one'."
+    },
+    {
+      "id": "L0:F11351",
+      "label": "negation phrase",
+      "reason": "Strong 'one' detector within 'No one'."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F14413",
+      "label": "content-word feature ('tours')",
+      "reason": "Content word tied to situation semantics."
+    },
+    {
+      "id": "L1:F8159",
+      "label": "content-word feature ('usually')",
+      "reason": "Modality/frequency affects semantic consistency."
+    },
+    {
+      "id": "L3:F10901",
+      "label": "content-word feature ('usually')",
+      "reason": "Mildly weakens certainty of the premise."
+    },
+    {
+      "id": "L0:F10904",
+      "label": "content-word feature ('Pick')",
+      "reason": "Lexical content, not mere structure."
+    },
+    {
+      "id": "L1:F474",
+      "label": "content-word feature ('map')",
+      "reason": "Content word contributing to semantics."
+    },
+    {
+      "id": "L1:F6872",
+      "label": "content-word feature ('tours')",
+      "reason": "Content word tied to situation semantics."
+    },
+    {
+      "id": "L0:F9924",
+      "label": "content-word feature ('tours')",
+      "reason": "Content word tied to situation semantics."
+    },
+    {
+      "id": "L0:F10891",
+      "label": "content-word feature ('tours')",
+      "reason": "Content word tied to situation semantics."
+    },
+    {
+      "id": "L0:F8380",
+      "label": "content-word feature ('tours')",
+      "reason": "Content word tied to situation semantics."
+    },
+    {
+      "id": "L0:F12851",
+      "label": "content-word feature ('map')",
+      "reason": "Lexical content, not mere structure."
+    },
+    {
+      "id": "L0:F2854",
+      "label": "content-word feature ('usually')",
+      "reason": "Modality/frequency affects semantic consistency."
+    },
+    {
+      "id": "L0:F3507",
+      "label": "content-word feature ('usually')",
+      "reason": "Modality/frequency affects semantic consistency."
+    },
+    {
+      "id": "L0:F6518",
+      "label": "content-word feature ('usually')",
+      "reason": "Modality/frequency affects semantic consistency."
+    },
+    {
+      "id": "L0:F12167",
+      "label": "content-word feature ('usually')",
+      "reason": "Modality/frequency affects semantic consistency."
+    },
+    {
+      "id": "L0:F5038",
+      "label": "content-word feature ('map')",
+      "reason": "Lexical content, not mere structure."
+    },
+    {
+      "id": "L0:F6495",
+      "label": "content-word feature ('map')",
+      "reason": "Lexical content, not mere structure."
+    },
+    {
+      "id": "L0:F6356",
+      "label": "content-word feature ('map')",
+      "reason": "Lexical content, not mere structure."
+    },
+    {
+      "id": "L2:F8478",
+      "label": "content-word feature ('Pick')",
+      "reason": "Lexical content, not mere structure."
+    },
+    {
+      "id": "L2:F5495",
+      "label": "content-word feature ('usually')",
+      "reason": "Modality/frequency affects semantic consistency."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8974",
+      "label": "function-word feature ('from')",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F7321",
+      "label": "function-word feature ('so')",
+      "reason": "Generic connective / structural cue."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "function-word feature (period)",
+      "reason": "Pure punctuation detector."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "function-word feature ('about')",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F306",
+      "label": "function-word feature ('tourist')",
+      "reason": "Oracle classifies as function-word/structural cue."
+    },
+    {
+      "id": "L0:F7204",
+      "label": "function-word feature",
+      "reason": "Oracle dismisses as shallow structural cue."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "function-word feature",
+      "reason": "Oracle dismisses as shallow structural cue."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 19,
+  "n_other": 7,
+  "spurious_fraction": 0.20833333333333334,
+  "dominant": "causal",
+  "notes": "Oracle says semantics dominate, with shallow function-word cues also present."
+}

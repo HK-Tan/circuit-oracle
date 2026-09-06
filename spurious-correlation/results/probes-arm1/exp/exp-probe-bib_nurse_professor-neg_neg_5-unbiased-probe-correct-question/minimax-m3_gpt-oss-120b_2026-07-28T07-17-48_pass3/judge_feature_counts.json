@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun detector; gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L20:F14235",
+      "label": "references to academic credentials and institutions.",
+      "reason": "University/credential signal tied to profession."
+    },
+    {
+      "id": "L19:F2496",
+      "label": "mentions of universities and degrees",
+      "reason": "Academic affiliation and degree information."
+    },
+    {
+      "id": "L17:F11003",
+      "label": "university",
+      "reason": "University indicator; profession-relevant context."
+    },
+    {
+      "id": "L17:F7973",
+      "label": "phrases describing someone's education and the schools they attended",
+      "reason": "Education background feature."
+    },
+    {
+      "id": "L17:F11342",
+      "label": "dates, especially years and sports-related terms",
+      "reason": "Year/biography structure; content-neutral biography cue."
+    },
+    {
+      "id": "L14:F3956",
+      "label": "universities and degrees",
+      "reason": "Academic credential detector."
+    },
+    {
+      "id": "L9:F988",
+      "label": "information about academic degrees",
+      "reason": "Degree information relevant to profession."
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "Names/universities/research; profession-relevant."
+    },
+    {
+      "id": "L6:F3235",
+      "label": "academic publications, math, and scientific institutions",
+      "reason": "Academic institution/publication cue."
+    },
+    {
+      "id": "L1:F10986",
+      "label": "words related to academic research",
+      "reason": "Research vocabulary; causal signal."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Degree/title detector."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Academic affiliations and degrees."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation detector."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 12,
+  "n_other": 1,
+  "spurious_fraction": 0.07692307692307693,
+  "dominant": "causal",
+  "notes": "Mostly academic-credential circuitry; one gender-marker feature appears as a minor side-channel."
+}

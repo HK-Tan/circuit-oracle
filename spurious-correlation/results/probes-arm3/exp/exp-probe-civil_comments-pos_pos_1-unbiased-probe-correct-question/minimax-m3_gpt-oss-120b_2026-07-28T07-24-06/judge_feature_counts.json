@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity-group token, not inherently toxic."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F11580",
+      "label": "negative language and swear words",
+      "reason": "Profanity/toxic-language detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F12866",
+      "label": "adverbs such as \"clearly,\" \"plainly,\" and \"as\"",
+      "reason": "Generic style/function-word feature."
+    },
+    {
+      "id": "L0:F7621",
+      "label": "the word \"clearly\", and to a lesser extent words associated with amounts of things",
+      "reason": "Generic stylistic/structural cue."
+    },
+    {
+      "id": "L4:F14582",
+      "label": "references to the White House and the US government",
+      "reason": "Political entity mention, not toxicity."
+    },
+    {
+      "id": "L0:F4422",
+      "label": "the word \"seriously\"",
+      "reason": "Common adverb, structural only."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Pure function word."
+    },
+    {
+      "id": "L0:F15831",
+      "label": "the word \"again\" and words associated with time",
+      "reason": "Temporal/function-word feature."
+    },
+    {
+      "id": "L0:F7142",
+      "label": "the word \"axis\" and its plural form, often in the context of scientific or technical documents",
+      "reason": "Technical-topic vocabulary, not toxic content."
+    },
+    {
+      "id": "L0:F164",
+      "label": "the words \"show\" and \"your\", particularly when talking about presenting something",
+      "reason": "Generic lexical/structural pattern."
+    },
+    {
+      "id": "L0:F3916",
+      "label": "common short words in legal documents",
+      "reason": "Domain/style feature only."
+    },
+    {
+      "id": "L2:F9199",
+      "label": "instances of \"ot\" in code",
+      "reason": "Code substring detector, structural."
+    },
+    {
+      "id": "L2:F14301",
+      "label": "names of people and organizations involved in politics, finance, and national security",
+      "reason": "Named-entity/topic feature, not toxicity."
+    },
+    {
+      "id": "L3:F373",
+      "label": "word beginnings with the letters \"a,\" \"h,\"\"i,\" \"r,\" and \"p\" (perhaps prefixes and/or related to medical or scientific terms)",
+      "reason": "Prefix/orthographic feature."
+    },
+    {
+      "id": "L1:F9761",
+      "label": "language asserting that a statement is obvious, undisputed, or in accordance with a rule",
+      "reason": "Argumentative/style cue."
+    },
+    {
+      "id": "L0:F7969",
+      "label": "the word \"other\"",
+      "reason": "Function word, not toxic."
+    },
+    {
+      "id": "L0:F7861",
+      "label": "instances of the words \"this\", \"these\", \"clearly\", or \"more\".",
+      "reason": "Mostly generic demonstratives/adverbs."
+    },
+    {
+      "id": "L0:F5707",
+      "label": "words or phrases related to knowledge or perspective",
+      "reason": "Abstract semantic/style feature."
+    },
+    {
+      "id": "L2:F15769",
+      "label": "the word \"tie\" in various contexts",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L4:F2720",
+      "label": "mentions of a 'tie' or a similar word",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F4517",
+      "label": "the word \"destroyed\"",
+      "reason": "General violence word, but not clearly toxic-content specific here."
+    },
+    {
+      "id": "L0:F425",
+      "label": "instances of the word \"pitch\" and \"sensitivity\" in technical contexts",
+      "reason": "Technical jargon, structural."
+    },
+    {
+      "id": "L0:F13663",
+      "label": "mentions of pregnancy and related terms",
+      "reason": "Topic mention unrelated to toxicity."
+    },
+    {
+      "id": "L3:F3136",
+      "label": "names of people involved in the Trump administration",
+      "reason": "Political-entity topic feature, not toxicity."
+    },
+    {
+      "id": "L1:F2407",
+      "label": "the word \"clearly\"",
+      "reason": "Generic adverb/function cue."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 1,
+  "n_other": 23,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Only one clear identity-group feature and one toxic-language feature; rest are generic or non-toxicity topic cues."
+}

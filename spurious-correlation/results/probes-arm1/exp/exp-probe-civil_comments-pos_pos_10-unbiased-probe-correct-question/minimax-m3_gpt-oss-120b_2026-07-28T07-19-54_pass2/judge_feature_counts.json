@@ -1,0 +1,83 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Generic negation cue, not toxicity-specific."
+    },
+    {
+      "id": "L0:F10682",
+      "label": "the word \"race\"",
+      "reason": "Generic lexical race detector, not identity semantics."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Generic race-word form, race-cars/cycling too."
+    },
+    {
+      "id": "L3:F5475",
+      "label": "occurrences of the word \"race\" in different contexts",
+      "reason": "Generic race token detector, non-identity contexts."
+    },
+    {
+      "id": "L2:F11639",
+      "label": "the word \"mention\"",
+      "reason": "Generic mention detector, not toxic content."
+    },
+    {
+      "id": "L2:F6539",
+      "label": "the word \"mention\" and words or phrases related to opinions or significance, as well as the word \"matter.\"",
+      "reason": "Discussion/matter cue, not toxicity semantics."
+    },
+    {
+      "id": "L3:F11194",
+      "label": "words related to stating or communicating information",
+      "reason": "Pure communication/statement feature."
+    },
+    {
+      "id": "L3:F12410",
+      "label": "the word \"By\" at the start of a phrase or sentence",
+      "reason": "Sentence \u0564\u056b\u0580/structure only."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic word detector, purely structural."
+    },
+    {
+      "id": "L2:F2713",
+      "label": "the word \"not\"",
+      "reason": "Generic negation cue, not toxic semantics."
+    },
+    {
+      "id": "L4:F15173",
+      "label": "statements about mentioning or discussing something",
+      "reason": "Discussion about mention, not toxicity."
+    },
+    {
+      "id": "L4:F2668",
+      "label": "instances of realizations coupled with acknowledgement or acknowledgment of something",
+      "reason": "Acknowledgement/realization, not toxic content."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe logit",
+      "label": "toxicity classification",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "L0:F2455",
+      "label": "Sentence-start 'By/case' token detector",
+      "reason": "Purely positional/structural feature."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 0,
+  "n_other": 2,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "All claimed drivers are shallow lexical/structural cues; no causal toxicity semantics are present."
+}

@@ -1,0 +1,78 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Direct gender-pronoun shortcut."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Explicit male pronoun detector."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Gendered male descriptor feature."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Detects male pronouns."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "People-name/pronoun cue; gender shortcut."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Single male pronoun feature."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Associated male pronoun detector."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "Pronoun-based gender shortcut."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "all mentions of men and women in the context of relationships, dating, or gendered social roles",
+      "reason": "Gender/social-role cue, not profession."
+    },
+    {
+      "id": "L0:F2208",
+      "label": "the pronoun \"Him\" and the possessive pronoun \"His\" when used in a religious context",
+      "reason": "Pronoun detector, still gendered."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession indicator for journalism."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News/journalism vocabulary."
+    },
+    {
+      "id": "L1:F5893",
+      "label": "mentions of the world or countries",
+      "reason": "Content-neutral lexical feature."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 10,
+  "n_causal": 3,
+  "n_other": 0,
+  "spurious_fraction": 0.7692307692307693,
+  "dominant": "spurious",
+  "notes": "Oracle claims mostly gender shortcuts; a few journalism/world features are causal."
+}

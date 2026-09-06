@@ -1,0 +1,164 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F11298",
+      "label": "no",
+      "reason": "Direct negation word detector at the hypothesis start."
+    },
+    {
+      "id": "L15:F13061",
+      "label": "uses of the word \"no\" or similar negative statements and words associated with \"one\"",
+      "reason": "\"No one\" negation phrase detector; surface-level negation cue."
+    },
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Negation-word detector, not semantic relation."
+    },
+    {
+      "id": "L2:F2771",
+      "label": "the word \"no\" as well as words and phrases that are conceptually related to negation",
+      "reason": "Negation-related lexical cue."
+    },
+    {
+      "id": "L4:F15764",
+      "label": "fragments of sentences that contain a pronoun, a verb, and the word \"one\", or words with similar meanings",
+      "reason": "Phrase-level \"no one\" pattern detector."
+    },
+    {
+      "id": "L2:F8837",
+      "label": "the word \"one\" or \"body\" when preceded by the words \"no\" or \"every.\"",
+      "reason": "Explicit \"no one\" detector."
+    },
+    {
+      "id": "L0:F4438",
+      "label": "the word \"one\"",
+      "reason": "Part of the negation phrase; still lexical."
+    },
+    {
+      "id": "L0:F11351",
+      "label": "the number \"one\"",
+      "reason": "Bare numeral/lexical detector, not causal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F14625",
+      "label": "the abbreviation \"Cons\" or \"AC\" followed by other letters",
+      "reason": "Recognizes a content word in context."
+    },
+    {
+      "id": "L0:F14574",
+      "label": "the possessive adjective \"your.\"",
+      "reason": "Content-neutral lexical feature, but not negation."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic function word; content-neutral syntactic cue."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic function word; content-neutral syntactic cue."
+    },
+    {
+      "id": "L2:F16230",
+      "label": "mentions of semiconductor chips and devices",
+      "reason": "Task-relevant content about the chip premise."
+    },
+    {
+      "id": "L2:F7725",
+      "label": "the word \"card\" when used in a technical context",
+      "reason": "Task-relevant content about MasterCard/card."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L5:F559",
+      "label": "words frequently related to legal conspiracies and co-conspirators",
+      "reason": "Oracle only says conspiracy-related, not causal here."
+    },
+    {
+      "id": "L2:F16028",
+      "label": "terms related to speculation, lies, false information, and conspiracy theories",
+      "reason": "Oracle frames as conspiracy terms, not NLI semantics."
+    },
+    {
+      "id": "L3:F9739",
+      "label": "words related to conspiracies",
+      "reason": "Broad topical detector; not specific to entailment."
+    },
+    {
+      "id": "L8:F12761",
+      "label": "words associated with the QAnon conspiracy theory",
+      "reason": "Topic association, not causal relation."
+    },
+    {
+      "id": "L9:F13961",
+      "label": "political commentary related to Trump and elections",
+      "reason": "Irrelevant topical detector."
+    },
+    {
+      "id": "L10:F16373",
+      "label": "bigoted statements about minority groups",
+      "reason": "Unrelated topical/semantic mismatch."
+    },
+    {
+      "id": "L0:F351",
+      "label": "the word \"expert\"",
+      "reason": "Generic word detector, structurally irrelevant."
+    },
+    {
+      "id": "L1:F13292",
+      "label": "the word \"personal\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L1:F13684",
+      "label": "the word \"theory\"",
+      "reason": "Single-word topical detector."
+    },
+    {
+      "id": "L0:F44",
+      "label": "words starting with \"cons\" that might indicate a constitution or consolidated standard, alongside \"pride\"",
+      "reason": "Surface prefix detector; oracle dismisses as mixed."
+    },
+    {
+      "id": "L0:F2115",
+      "label": "data reported as a percentage inside brackets, especially in a laboratory or medical context, and also recognizes countries",
+      "reason": "Structural/reporting pattern, unrelated to NLI meaning."
+    },
+    {
+      "id": "L2:F8142",
+      "label": "words related to places, managing, and negation",
+      "reason": "Mixed broad detector; oracle not specific enough."
+    },
+    {
+      "id": "L0:F14862",
+      "label": "the word \"no\"",
+      "reason": "Mentioned in oracle, but already covered as the main negation cue."
+    },
+    {
+      "id": "L0:F1143",
+      "label": "the word \"no\" and related words like \"nobody\" and \"trust\"",
+      "reason": "Broad lexical pattern; redundant negation cue."
+    },
+    {
+      "id": "L3:F3266",
+      "label": "the abbreviation \"No.\" for Number",
+      "reason": "Abbreviation/format detector."
+    },
+    {
+      "id": "L2:F13586",
+      "label": "words ending in 'thing' and 'one' often with preceding words indicating the presence of something",
+      "reason": "Lexical pattern detector; not semantic."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 6,
+  "n_other": 16,
+  "spurious_fraction": 0.5714285714285714,
+  "dominant": "mixed",
+  "notes": "Negation cues dominate, but several content-neutral/task-relevant features also contribute."
+}

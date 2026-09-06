@@ -1,0 +1,1094 @@
+{
+  "input_file": "<repo>/spurious-correlation/probe_artifacts/plt_features/bib_journalist_dietitian-neg_neg_4-transcoder.json",
+  "dataset": "bib_journalist_dietitian",
+  "type": "transcoder",
+  "prompt": "Starting at the Royal United Services Institute for Defence Studies, covering both Middle East defence and European defence topics, he branched out as a freelance writer on a wide range of defence and security matters. He has written for the Guardian, Times, Financial Times, Middle East Economic Digest, as well as for specialist defence publications including Defense News . He has also been broadcasting on defence matters since 1987, with ITN, various radio/TV outlets of the BBC, CNN, ABC, CBS, and more recently as a regular contributor on Sky News. Most recently, to back up the unique nature of Defence Analysis , he established the first specialist publication on defence logistics/support affairs, Military Logistics International .",
+  "ranking": "unbiased",
+  "top_n": 20,
+  "model": "minimax/minimax-m3",
+  "layer": 22,
+  "sae_id": "22-gemmascope-transcoder-16k",
+  "features_inspected": [
+    {
+      "feature_idx": 12957,
+      "activation": 17.16622543334961,
+      "cos_sim_biased": 0.0765894204378128,
+      "cos_sim_unbiased": 0.1571505069732666,
+      "rank_biased": 18,
+      "rank_unbiased": 0,
+      "neuronpedia": {
+        "feature_idx": 12957,
+        "label": " words and phrases common to medical and scientific research papers",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581detected\u2581in\u2581a\u2581subfraction\u2581of\u2581human\u2581hepatocellular\u2581carcinoma\u2581specimens\u2581\\[[@CR45]\\].\u2581Thus,\u2581in\u2581contrast\u2581to\u2581its\u2581common\u2581pro-oncogenic\u2581role\u2581in\u2581hematopoietic\u2581and\u2581epithelial\u2581cells,\u2581*PTPN11*\u2581may\u2581act\u2581as\u2581a\u2581tumo",
+            "max_activation": 601.288,
+            "max_token": "\u2581human"
+          },
+          {
+            "text_snippet": "\u2581et\u2581al.\u2581\\[[@B22]\\]\u2581demonstrated\u2581the\u2581diagnostic\u2581potential\u2581of\u2581unsupervised\u2581approaches\u2581to\u2581classification\u2581by\u2581successfully\u2581analysing\u2581simulated\u2581^1^H\u2581NMR\u2581spectra\u2581using\u2581self-organising\u2581maps.\u2581This\u2581approach\u2581all",
+            "max_activation": 596.654,
+            "max_token": "\u2581simulated"
+          },
+          {
+            "text_snippet": "[@B19]\\]\u2581from\u2581HPLC\u2581mass\u2581spectrometric\u2581data\u2581and\u2581in\u2581the\u2581identification\u2581of\u2581insect\u2581species\u2581from\u2581morphological\u2581measurements\u2581\\[[@B20]\\].\u2581ANNs\u2581can\u2581be\u2581used\u2581to\u2581model\u2581data\u2581where\u2581the\u2581relations,\u2581or\u2581functions,\u2581are",
+            "max_activation": 590.104,
+            "max_token": "\u2581of"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581heart",
+          "\u2581leukemia",
+          "heart",
+          "\u2581kidney",
+          "\u2581cancer",
+          "\u2581coronary",
+          "\u2581liver",
+          "\u2581schizophrenia",
+          "\u2581Lung",
+          "\u2581Parkinson"
+        ],
+        "suppressed_tokens": [
+          "\u0633\u0637",
+          "\u2581\u092c\u094d\u0930\u0947\u0915\u0921\u093e\u0909\u0928",
+          "\u2581Bag",
+          "wra",
+          "\u010dit",
+          "nott",
+          "katkan",
+          "USTR",
+          "slf",
+          "\u2581Movie"
+        ],
+        "frac_nonzero": 0.17498
+      }
+    },
+    {
+      "feature_idx": 5808,
+      "activation": 4.812840461730957,
+      "cos_sim_biased": 0.13277941942214966,
+      "cos_sim_unbiased": 0.15594623982906342,
+      "rank_biased": 6,
+      "rank_unbiased": 1,
+      "neuronpedia": {
+        "feature_idx": 5808,
+        "label": "references to studies about weight and diet",
+        "top_activating_examples": [
+          {
+            "text_snippet": ",\u2581nursing\u2581education\u2581programmes\u2581should\u2581include\u2581education\u2581of\u2581nurse\u2581managers\u2581to\u2581improve\u2581their\u2581self\u2581reflection,\u2581through\u2581which\u2581they\u2581are\u2581better\u2581able\u2581to\u2581vary\u2581their\u2581leadership\u2581style.\n\n![Nurse\u2581managers\\'\u2581leade",
+            "max_activation": 551.863,
+            "max_token": "\u2581in"
+          },
+          {
+            "text_snippet": ",\u2581nursing\u2581education\u2581programmes\u2581should\u2581include\u2581education\u2581of\u2581nurse\u2581managers\u2581to\u2581improve\u2581their\u2581self\u2581reflection,\u2581through\u2581which\u2581they\u2581are\u2581better\u2581able\u2581to\u2581vary\u2581their\u2581leadership\u2581style.\n\n![Nurse\u2581managers\\'\u2581leade",
+            "max_activation": 551.863,
+            "max_token": "\u2581in"
+          },
+          {
+            "text_snippet": ",\u2581nursing\u2581education\u2581programmes\u2581should\u2581include\u2581education\u2581of\u2581nurse\u2581managers\u2581to\u2581improve\u2581their\u2581self\u2581reflection,\u2581through\u2581which\u2581they\u2581are\u2581better\u2581able\u2581to\u2581vary\u2581their\u2581leadership\u2581style.\n\n![Nurse\u2581managers\\'\u2581leade",
+            "max_activation": 551.863,
+            "max_token": "\u2581in"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581weight",
+          "\u2581Weight",
+          "Weight",
+          "weight",
+          "\u2581diet",
+          "\u2581dieting",
+          "\u2581WEIGHT",
+          "\u2581weigh",
+          "\u2581overweight",
+          "WEIGHT"
+        ],
+        "suppressed_tokens": [
+          "\u2581Bailly",
+          "\u2581Roskov",
+          "\">//",
+          "ItemBackground",
+          "\u2581ukra",
+          "\u2581\u00c1r",
+          "HideFlags",
+          "\u2581Axel",
+          "File",
+          "\u0438\u0441\u043b\u0435\u043d\u043d\u043e\u0441\u0442\u044c"
+        ],
+        "frac_nonzero": 0.04607
+      }
+    },
+    {
+      "feature_idx": 12237,
+      "activation": 16.445213317871094,
+      "cos_sim_biased": 0.13403767347335815,
+      "cos_sim_unbiased": 0.15411393344402313,
+      "rank_biased": 5,
+      "rank_unbiased": 2,
+      "neuronpedia": {
+        "feature_idx": 12237,
+        "label": " words related to food, cooking, and dining establishments",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581have\u2581suffered\u2581from\u2581high\u2581blood\u2581pressure,\u2581high\u2581cholesterol\u2581and\u2581heart\u2581disease.\u2581Kaamilya\u2581went\u2581to\u2581the\u2581cabinet\u2581and\u2581pulled\u2581out\u2581organic\u2581sugar,\u2581which\u2581she\u2581uses\u2581in\u2581recipes.\n\nKaamilya\u2581currently\u2581works\u2581at\u2581the\u2581Food",
+            "max_activation": 629.219,
+            "max_token": "\u2581a"
+          },
+          {
+            "text_snippet": "1\n\nI\u2581have\u2581been\u2581a\u2581little\u2581obsessed\u2581with\u2581watching\u2581Korean\u2581dramas\u2581lately\u2581and\u2581therefore\u2581have\u2581been\u2581craving\u2581Korean\u2581food\u2581every\u2581time\u2581I\u2581see\u2581it\u2581on\u2581screen!\u2581'You\u2581know\u2581you\u2581are\u2581a\u2581glutton\u2581when..'\u2581lol\u2581:P\n\nOne\u2581Korean\u2581sn",
+            "max_activation": 585.502,
+            "max_token": "\u2581from"
+          },
+          {
+            "text_snippet": "1\n\nI\u2581have\u2581been\u2581a\u2581little\u2581obsessed\u2581with\u2581watching\u2581Korean\u2581dramas\u2581lately\u2581and\u2581therefore\u2581have\u2581been\u2581craving\u2581Korean\u2581food\u2581every\u2581time\u2581I\u2581see\u2581it\u2581on\u2581screen!\u2581'You\u2581know\u2581you\u2581are\u2581a\u2581glutton\u2581when..'\u2581lol\u2581:P\n\nOne\u2581Korean\u2581sn",
+            "max_activation": 585.502,
+            "max_token": "\u2581from"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581cook",
+          "\u2581cooking",
+          "\u2581chefs",
+          "\u2581kitchen",
+          "\u2581chef",
+          "\u2581cookbook",
+          "\u2581culinary",
+          "\u2581Chef",
+          "\u2581cooks",
+          "\u2581foodie"
+        ],
+        "suppressed_tokens": [
+          "\u51fa\u7248\u5e74",
+          "\u2581tarko",
+          "\u2581specchio",
+          "kreis",
+          "URLException",
+          "\u2581louer",
+          "ethene",
+          "\u2581Polsek",
+          "vacy",
+          "\u2581Gera"
+        ],
+        "frac_nonzero": 0.05977
+      }
+    },
+    {
+      "feature_idx": 4584,
+      "activation": 8.879233360290527,
+      "cos_sim_biased": 0.10085463523864746,
+      "cos_sim_unbiased": 0.15275534987449646,
+      "rank_biased": 11,
+      "rank_unbiased": 3,
+      "neuronpedia": {
+        "feature_idx": 4584,
+        "label": " words and phrases related to medical studies and nutrition",
+        "top_activating_examples": [
+          {
+            "text_snippet": ",\u2581and\u2581decreases\u2581total\u2581cholesterol,\u2581regardless\u2581of\u2581LDL-cholesterol\u2581levels.\u2581Some\u2581studies\u2581have\u2581indicated\u2581that\u2581fenugreek\u2581seeds\u2581have\u2581hypocholesterolemic\u2581activity,\u2581which\u2581may\u2581reduce\u2581the\u2581risk\u2581of\u2581heart\u2581disease\u2581",
+            "max_activation": 433.226,
+            "max_token": "\u2581that"
+          },
+          {
+            "text_snippet": ",\u2581and\u2581decreases\u2581total\u2581cholesterol,\u2581regardless\u2581of\u2581LDL-cholesterol\u2581levels.\u2581Some\u2581studies\u2581have\u2581indicated\u2581that\u2581fenugreek\u2581seeds\u2581have\u2581hypocholesterolemic\u2581activity,\u2581which\u2581may\u2581reduce\u2581the\u2581risk\u2581of\u2581heart\u2581disease\u2581",
+            "max_activation": 433.226,
+            "max_token": "\u2581that"
+          },
+          {
+            "text_snippet": ",\u2581and\u2581decreases\u2581total\u2581cholesterol,\u2581regardless\u2581of\u2581LDL-cholesterol\u2581levels.\u2581Some\u2581studies\u2581have\u2581indicated\u2581that\u2581fenugreek\u2581seeds\u2581have\u2581hypocholesterolemic\u2581activity,\u2581which\u2581may\u2581reduce\u2581the\u2581risk\u2581of\u2581heart\u2581disease\u2581",
+            "max_activation": 433.226,
+            "max_token": "\u2581that"
+          }
+        ],
+        "promoted_tokens": [
+          "CloseOperation",
+          "\u2581\u062a\u0636\u064a\u0641\u0644\u0647\u0627",
+          "\u2581\u8df3\u8f6c\u81f3",
+          "\u2581vegetarians",
+          "\u2581\u0645\u062a\u0639\u0644\u0642\u0647",
+          "ChildScrollView",
+          "\u2581eaters",
+          "\u2581consultato",
+          "\u2581eating",
+          "\u2581probiotics"
+        ],
+        "suppressed_tokens": [
+          "lo\u017e",
+          "\u2581presentaciones",
+          "\u2581sorti",
+          "hman",
+          "\u2581scha",
+          "\u2581b\u00e1r",
+          "ENTRY",
+          "\u2581portada",
+          "zav",
+          "pret"
+        ],
+        "frac_nonzero": 0.11942
+      }
+    },
+    {
+      "feature_idx": 11980,
+      "activation": 4.410100936889648,
+      "cos_sim_biased": 0.08560170233249664,
+      "cos_sim_unbiased": 0.12763594090938568,
+      "rank_biased": 14,
+      "rank_unbiased": 4,
+      "neuronpedia": {
+        "feature_idx": 11980,
+        "label": " words related to therapy, fitness, and self-care",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581money\u2581sitting\u2581at\u2581your\u2581own\u2581place\u2581with\u2581ease\u2581just\u2581by\u2581going\u2581with\u2581online\u2581applying\u2581method.\u2581Debit\u2581card\u2581loans\u2581would\u2581let\u2581you\u2581borrow\u2581money\u2581without\u2581any\u2581delay\u2581and\u2581without\u2581any\u2581formality.<bos>Comparison\u2581of\u2581a\u2581foam\u2581",
+            "max_activation": 666.313,
+            "max_token": "\u2581among"
+          },
+          {
+            "text_snippet": "\u2581money\u2581sitting\u2581at\u2581your\u2581own\u2581place\u2581with\u2581ease\u2581just\u2581by\u2581going\u2581with\u2581online\u2581applying\u2581method.\u2581Debit\u2581card\u2581loans\u2581would\u2581let\u2581you\u2581borrow\u2581money\u2581without\u2581any\u2581delay\u2581and\u2581without\u2581any\u2581formality.<bos>Comparison\u2581of\u2581a\u2581foam\u2581",
+            "max_activation": 666.313,
+            "max_token": "\u2581among"
+          },
+          {
+            "text_snippet": "\u2581money\u2581sitting\u2581at\u2581your\u2581own\u2581place\u2581with\u2581ease\u2581just\u2581by\u2581going\u2581with\u2581online\u2581applying\u2581method.\u2581Debit\u2581card\u2581loans\u2581would\u2581let\u2581you\u2581borrow\u2581money\u2581without\u2581any\u2581delay\u2581and\u2581without\u2581any\u2581formality.<bos>Comparison\u2581of\u2581a\u2581foam\u2581",
+            "max_activation": 666.313,
+            "max_token": "\u2581among"
+          }
+        ],
+        "promoted_tokens": [
+          "httphttps",
+          "UnusedPrivate",
+          "Personendaten",
+          "\u2581\u062a\u0636\u064a\u0641\u0644\u0647\u0627",
+          "\u2581\u05e9\u05d5\u05dc\u05d9\u05d9\u05dd",
+          "\u2581SqlDbType",
+          "\u2581\u0648\u06cc\u06a9\u06cc\u200c\u067e\u062f\u06cc",
+          "\u2581nakalista",
+          "Hentet",
+          "\u2581OFDb"
+        ],
+        "suppressed_tokens": [
+          "InjectMocks",
+          "qDebug",
+          "\u0497",
+          "\u2581multi",
+          "\u2581\u0627\u0644\u0648\u0637\u0646\u064a\u0647",
+          "\u2581miliardi",
+          "Bism",
+          "\u2581asiento",
+          "\u2581Multi",
+          "gili"
+        ],
+        "frac_nonzero": 0.01288
+      }
+    },
+    {
+      "feature_idx": 8780,
+      "activation": 19.09113883972168,
+      "cos_sim_biased": 0.04449236020445824,
+      "cos_sim_unbiased": 0.12365208566188812,
+      "rank_biased": 196,
+      "rank_unbiased": 5,
+      "neuronpedia": {
+        "feature_idx": 8780,
+        "label": " text related to credentials, licenses, certifications, and job titles",
+        "top_activating_examples": [
+          {
+            "text_snippet": ":\n\n\u201cI\u2581don\u2019t\u2581think\u2581the\u2581president\u2581realized\u2581he\u2581paid\u2581him\u2581back\u2581for\u2581that\u2581specific\u2581thing\u2581until\u2581we\u2581made\u2581him\u2581aware\u2581of\u2581the\u2581paperwork.\u201d\n\nDespite\u2581being\u2581released\u2581from\u2581his\u2581law\u2581firm\u2581and\u2581claiming\u2581\u201csole\u2581concentration\u201d",
+            "max_activation": 872.118,
+            "max_token": "\u2581to"
+          },
+          {
+            "text_snippet": ":\n\n\u201cI\u2581don\u2019t\u2581think\u2581the\u2581president\u2581realized\u2581he\u2581paid\u2581him\u2581back\u2581for\u2581that\u2581specific\u2581thing\u2581until\u2581we\u2581made\u2581him\u2581aware\u2581of\u2581the\u2581paperwork.\u201d\n\nDespite\u2581being\u2581released\u2581from\u2581his\u2581law\u2581firm\u2581and\u2581claiming\u2581\u201csole\u2581concentration\u201d",
+            "max_activation": 872.118,
+            "max_token": "\u2581to"
+          },
+          {
+            "text_snippet": "\u2581BSc,\u2581MSc,\u2581PhD).\u2581Furthermore,\u2581738\u2581(15\u2581per\u2581cent)\u2581had\u2581a\u2581RCVS\u2581certificate,\u2581a\u2581General\u2581Practitioner\u2581certificate\u2581or\u2581fellowship;\u2581271\u2581(6\u2581per\u2581cent)\u2581had\u2581a\u2581Master\u2581of\u2581Business\u2581and\u2581270\u2581(6\u2581per\u2581cent)\u2581had\u2581a\u2581diploma\u2581(",
+            "max_activation": 750.442,
+            "max_token": "\u2581private"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581practice",
+          "practice",
+          "\u2581Practice",
+          "Practice",
+          "\u2581PRACTICE",
+          "\u2581practicing",
+          "\u2581practise",
+          "\u2581practising",
+          "\u2581practiced",
+          "\u2581practices"
+        ],
+        "suppressed_tokens": [
+          "\u2581valid\u00e9s",
+          "\u2581ejus",
+          "\u2581sindical",
+          "mogorov",
+          "\u2581Kickstarter",
+          "\u2581qu\u00e6",
+          "\u2581Manually",
+          "\u2581typelib",
+          "\u2581Schengen",
+          "\u2581religieux"
+        ],
+        "frac_nonzero": 0.0509
+      }
+    },
+    {
+      "feature_idx": 9179,
+      "activation": 3.4400405883789062,
+      "cos_sim_biased": 0.07607070356607437,
+      "cos_sim_unbiased": 0.11230853199958801,
+      "rank_biased": 20,
+      "rank_unbiased": 6,
+      "neuronpedia": {
+        "feature_idx": 9179,
+        "label": "words related to healthcare workers and hospital settings",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581by\u2581simple\u2581random\u2581method\u2581out\u2581of\u2581the\u2581various\u2581units\u2581in\u2581the\u2581hospital\u2581e.g.\u2581surgical,\u2581medical,\u2581laboratory,\u2581physiotherapy,\u2581nutrition,\u2581administrative,\u2581laundry,\u2581transport,\u2581security,\u2581and\u2581medical\u2581record.\u2581Within",
+            "max_activation": 592.314,
+            "max_token": ","
+          },
+          {
+            "text_snippet": "\u2581by\u2581simple\u2581random\u2581method\u2581out\u2581of\u2581the\u2581various\u2581units\u2581in\u2581the\u2581hospital\u2581e.g.\u2581surgical,\u2581medical,\u2581laboratory,\u2581physiotherapy,\u2581nutrition,\u2581administrative,\u2581laundry,\u2581transport,\u2581security,\u2581and\u2581medical\u2581record.\u2581Within",
+            "max_activation": 592.314,
+            "max_token": ","
+          },
+          {
+            "text_snippet": "\u2581by\u2581simple\u2581random\u2581method\u2581out\u2581of\u2581the\u2581various\u2581units\u2581in\u2581the\u2581hospital\u2581e.g.\u2581surgical,\u2581medical,\u2581laboratory,\u2581physiotherapy,\u2581nutrition,\u2581administrative,\u2581laundry,\u2581transport,\u2581security,\u2581and\u2581medical\u2581record.\u2581Within",
+            "max_activation": 592.314,
+            "max_token": ","
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581\u0627\u0644\u0645\u0639\u064a\u0627\u0631\u0649",
+          "\u0627\u0631\u06cc\u062e",
+          "sizeCache",
+          "RegistryLite",
+          "\u0411\u0438\u043b\u0433\u0430\u043b\u0434\u0430\u0445\u0430\u0440\u0448",
+          "expandindo",
+          "\u2581nakalista",
+          "\u0645\u0631\u0627\u062c\u0639",
+          "JspWriter",
+          "}$\u200b"
+        ],
+        "suppressed_tokens": [
+          "\u0445\u0435\u043e",
+          "\u2581Valhalla",
+          "RuleContext",
+          "GLFW",
+          "\u2581chio",
+          "REAS",
+          "\u2581ilo",
+          "\u2581grosso",
+          "\u2581fatale",
+          "oner"
+        ],
+        "frac_nonzero": 0.04208
+      }
+    },
+    {
+      "feature_idx": 8060,
+      "activation": 4.660440921783447,
+      "cos_sim_biased": 0.06260824203491211,
+      "cos_sim_unbiased": 0.10986989736557007,
+      "rank_biased": 33,
+      "rank_unbiased": 7,
+      "neuronpedia": {
+        "feature_idx": 8060,
+        "label": " words and phrases used when evaluating progress or stability of something",
+        "top_activating_examples": [
+          {
+            "text_snippet": "in\u2581order\u2581to\u2581explain\u2581the\u2581mechanisms\u2581behind\u2581their\u2581apparent\u2581success\u2581in\u2581anthropogenic\u2581areas.\n\nRaptors\u2581such\u2581as\u2581the\u2581marsh\u2581harrier\u2581are\u2581often\u2581used\u2581as\u2581bioindicators--species\u2581whose\u2581population\u2581trends\u2581reflect\u2581the",
+            "max_activation": 710.281,
+            "max_token": "\u2581the"
+          },
+          {
+            "text_snippet": "in\u2581order\u2581to\u2581explain\u2581the\u2581mechanisms\u2581behind\u2581their\u2581apparent\u2581success\u2581in\u2581anthropogenic\u2581areas.\n\nRaptors\u2581such\u2581as\u2581the\u2581marsh\u2581harrier\u2581are\u2581often\u2581used\u2581as\u2581bioindicators--species\u2581whose\u2581population\u2581trends\u2581reflect\u2581the",
+            "max_activation": 710.281,
+            "max_token": "\u2581the"
+          },
+          {
+            "text_snippet": "in\u2581order\u2581to\u2581explain\u2581the\u2581mechanisms\u2581behind\u2581their\u2581apparent\u2581success\u2581in\u2581anthropogenic\u2581areas.\n\nRaptors\u2581such\u2581as\u2581the\u2581marsh\u2581harrier\u2581are\u2581often\u2581used\u2581as\u2581bioindicators--species\u2581whose\u2581population\u2581trends\u2581reflect\u2581the",
+            "max_activation": 710.281,
+            "max_token": "\u2581the"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581health",
+          "health",
+          "\u2581Health",
+          "Health",
+          "\u2581HEALTH",
+          "HEALTH",
+          "\u2581sant\u00e9",
+          "\u5065\u5eb7",
+          "\u2581healthy",
+          "\u2581salud"
+        ],
+        "suppressed_tokens": [
+          "fjspx",
+          "\u2581Normdatei",
+          "\u2581\u0412\u0456\u043a\u0456\u043f\u0435",
+          "jsxFileName",
+          "\u2581pageContext",
+          "AccessorTable",
+          "\u2581onPostExecute",
+          "\u2581BorderRadius",
+          "KEYCODE",
+          "IsContent"
+        ],
+        "frac_nonzero": 0.01574
+      }
+    },
+    {
+      "feature_idx": 8606,
+      "activation": 3.002002000808716,
+      "cos_sim_biased": 0.0320482961833477,
+      "cos_sim_unbiased": 0.10798880457878113,
+      "rank_biased": 778,
+      "rank_unbiased": 8,
+      "neuronpedia": {
+        "feature_idx": 8606,
+        "label": " words related to medical lab results and personal health status",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581cold\u2581my\u2581numbers\u2581seem\u2581to\u2581be\u2581worse\u2581and\u25813\u2581these\u2581latest\u2581labs\u2581that\u2581i\u2581gave\u2581you\u2581i\u2581did\u2581in\u2581nov\u2581of\u25812004\u2581after\u2581being\u2581ill\u2581for\u2581awhile.(\u2581cold\u2581i\u2581think\u2581)and\u2581at\u25817am,I\u2581am\u2581retesting\u2581in\u2581feb\u2581just\u2581to\u2581see\u2581whats\u2581going\u2581on\u2581if",
+            "max_activation": 408.662,
+            "max_token": "\u2581after"
+          },
+          {
+            "text_snippet": "\u2581cold\u2581my\u2581numbers\u2581seem\u2581to\u2581be\u2581worse\u2581and\u25813\u2581these\u2581latest\u2581labs\u2581that\u2581i\u2581gave\u2581you\u2581i\u2581did\u2581in\u2581nov\u2581of\u25812004\u2581after\u2581being\u2581ill\u2581for\u2581awhile.(\u2581cold\u2581i\u2581think\u2581)and\u2581at\u25817am,I\u2581am\u2581retesting\u2581in\u2581feb\u2581just\u2581to\u2581see\u2581whats\u2581going\u2581on\u2581if",
+            "max_activation": 408.662,
+            "max_token": "\u2581after"
+          },
+          {
+            "text_snippet": "\u2581cold\u2581my\u2581numbers\u2581seem\u2581to\u2581be\u2581worse\u2581and\u25813\u2581these\u2581latest\u2581labs\u2581that\u2581i\u2581gave\u2581you\u2581i\u2581did\u2581in\u2581nov\u2581of\u25812004\u2581after\u2581being\u2581ill\u2581for\u2581awhile.(\u2581cold\u2581i\u2581think\u2581)and\u2581at\u25817am,I\u2581am\u2581retesting\u2581in\u2581feb\u2581just\u2581to\u2581see\u2581whats\u2581going\u2581on\u2581if",
+            "max_activation": 408.662,
+            "max_token": "\u2581after"
+          }
+        ],
+        "promoted_tokens": [
+          "initializeApp",
+          "\u2581\u0635\u0648\u062a\u064a\u0647",
+          "\u2581meds",
+          "\ue315",
+          "Portail",
+          "Identyfik",
+          "writeField",
+          "\u2581\u041c\u0435\u043a\u0441\u0438\u0447\u043a\u0430",
+          "\u2581polyps",
+          "\u2581l\u00edqu"
+        ],
+        "suppressed_tokens": [
+          "\u0e31\u0e49\u0e19",
+          "\u2581sna",
+          "rae",
+          "\u017ead",
+          "\u2581Sna",
+          "\u30b8\u30a2\u30e0",
+          "interes",
+          "\u2581contin\u00faas",
+          "WithIOException",
+          "Viited"
+        ],
+        "frac_nonzero": 0.20023
+      }
+    },
+    {
+      "feature_idx": 3829,
+      "activation": 1.3990178108215332,
+      "cos_sim_biased": 0.09987445175647736,
+      "cos_sim_unbiased": 0.10365428030490875,
+      "rank_biased": 12,
+      "rank_unbiased": 9,
+      "neuronpedia": {
+        "feature_idx": 3829,
+        "label": " terminology related to healthcare, medicine, and medical research",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581conferences\u2581and\u2581has\u2581authored\u2581many\u2581articles\u2581in\u2581national\u2581publications.\u2581Dr.\u2581Gregory\u2581provides\u2581educational\u2581summits\u2581that\u2581bring\u2581healthcare\u2581leaders,\u2581technology\u2581experts,\u2581and\u2581visionaries\u2581together\u2581to\u2581discuss\u2581th",
+            "max_activation": 554.187,
+            "max_token": "\u2581of"
+          },
+          {
+            "text_snippet": "\u2581conferences\u2581and\u2581has\u2581authored\u2581many\u2581articles\u2581in\u2581national\u2581publications.\u2581Dr.\u2581Gregory\u2581provides\u2581educational\u2581summits\u2581that\u2581bring\u2581healthcare\u2581leaders,\u2581technology\u2581experts,\u2581and\u2581visionaries\u2581together\u2581to\u2581discuss\u2581th",
+            "max_activation": 554.187,
+            "max_token": "\u2581of"
+          },
+          {
+            "text_snippet": "\u2581conferences\u2581and\u2581has\u2581authored\u2581many\u2581articles\u2581in\u2581national\u2581publications.\u2581Dr.\u2581Gregory\u2581provides\u2581educational\u2581summits\u2581that\u2581bring\u2581healthcare\u2581leaders,\u2581technology\u2581experts,\u2581and\u2581visionaries\u2581together\u2581to\u2581discuss\u2581th",
+            "max_activation": 554.187,
+            "max_token": "\u2581of"
+          }
+        ],
+        "promoted_tokens": [
+          "GEBURTSDATUM",
+          "\u2581autorytatywna",
+          "\u0012",
+          "Filmografia",
+          "\u2581\u062a\u0636\u064a\u0641\u0644\u0647\u0627",
+          "\ucc38\uace0",
+          "\u2581payer",
+          "\u2581ExecuteAsync",
+          "\u2581insurance",
+          "insurance"
+        ],
+        "suppressed_tokens": [
+          "AnchorStyles",
+          "}{@",
+          "\u2581ModelRenderer",
+          "tvguidetime",
+          "osom",
+          "ochem",
+          "ProcessEvent",
+          "PostExecute",
+          "himovic",
+          "\u2581fois"
+        ],
+        "frac_nonzero": 0.08122
+      }
+    },
+    {
+      "feature_idx": 10568,
+      "activation": 18.894102096557617,
+      "cos_sim_biased": 0.12186969816684723,
+      "cos_sim_unbiased": 0.09439538419246674,
+      "rank_biased": 8,
+      "rank_unbiased": 10,
+      "neuronpedia": {
+        "feature_idx": 10568,
+        "label": " mentions of the name Tony Inman, especially when surrounded by job titles or related words",
+        "top_activating_examples": [
+          {
+            "text_snippet": "About\u2581Tony\u2581Inman\u2581\u2013\u2581\u2018The\u2581Change\u2581Catalyst\u2019\n\nIf\u2581you\u2581want\u2581to\u2581make\u2581changes\u2581in\u2581your\u2581life,\u2581but\u2581you're\u2581feeling\u2581stuck\u2581or\u2581overwhelmed,\u2581and\u2581you\u2581need\u2581a\u2581guide\u2581to\u2581help\u2581you\u2581get\u2581there,\u2581then\u2581you\u2581can\u2581trust\u2581in\u2581the\u2581exper",
+            "max_activation": 412.218,
+            "max_token": "\u2581certified"
+          },
+          {
+            "text_snippet": "About\u2581Tony\u2581Inman\u2581\u2013\u2581\u2018The\u2581Change\u2581Catalyst\u2019\n\nIf\u2581you\u2581want\u2581to\u2581make\u2581changes\u2581in\u2581your\u2581life,\u2581but\u2581you're\u2581feeling\u2581stuck\u2581or\u2581overwhelmed,\u2581and\u2581you\u2581need\u2581a\u2581guide\u2581to\u2581help\u2581you\u2581get\u2581there,\u2581then\u2581you\u2581can\u2581trust\u2581in\u2581the\u2581exper",
+            "max_activation": 412.218,
+            "max_token": "\u2581certified"
+          },
+          {
+            "text_snippet": "About\u2581Tony\u2581Inman\u2581\u2013\u2581\u2018The\u2581Change\u2581Catalyst\u2019\n\nIf\u2581you\u2581want\u2581to\u2581make\u2581changes\u2581in\u2581your\u2581life,\u2581but\u2581you're\u2581feeling\u2581stuck\u2581or\u2581overwhelmed,\u2581and\u2581you\u2581need\u2581a\u2581guide\u2581to\u2581help\u2581you\u2581get\u2581there,\u2581then\u2581you\u2581can\u2581trust\u2581in\u2581the\u2581exper",
+            "max_activation": 412.218,
+            "max_token": "\u2581certified"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581\u0635\u0648\u062a\u064a\u0647",
+          "\u2581nakalista",
+          "\u51fa\u7248\u5e74",
+          "bkz",
+          "\u2581propOrder",
+          "\u2581\u041c\u0435\u043a\u0441\u0438\u0447\u043a\u0430",
+          "\u2581ExecuteAsync",
+          "issor",
+          "setVerticalGroup",
+          "StoryboardSegue"
+        ],
+        "suppressed_tokens": [
+          "\u02b0",
+          "Brainz",
+          "\u2581\u043a\u0440\u043e",
+          "\u2581taked",
+          "\u2581contraintes",
+          "\u1ecda",
+          "\u043d\u043e\u0458",
+          "goog",
+          "\u0e20",
+          "\u2581eneste"
+        ],
+        "frac_nonzero": 0.07671
+      }
+    },
+    {
+      "feature_idx": 15763,
+      "activation": 3.832242727279663,
+      "cos_sim_biased": 0.0644577145576477,
+      "cos_sim_unbiased": 0.09163334220647812,
+      "rank_biased": 30,
+      "rank_unbiased": 11,
+      "neuronpedia": {
+        "feature_idx": 15763,
+        "label": " discuss health-related topics, especially those tied to fitness and activity",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\n\nOn\u2581our\u2581blog\u2581you\u2581will\u2581find\u2581humane\u2581project\u2581ideas\u2581for\u2581kids,\u2581an\u2581inside\u2581looks\u2581at\u2581HEART's\u2581programs,\u2581great\u2581teacher\u2581resources\u2581and\u2581more.<bos>1.\u2581Introduction\u2581{#sec1-ijerph-17-00783}\n===============\n\nThe\u2581decli",
+            "max_activation": 991.121,
+            "max_token": "\u2581adequate"
+          },
+          {
+            "text_snippet": "\n\nOn\u2581our\u2581blog\u2581you\u2581will\u2581find\u2581humane\u2581project\u2581ideas\u2581for\u2581kids,\u2581an\u2581inside\u2581looks\u2581at\u2581HEART's\u2581programs,\u2581great\u2581teacher\u2581resources\u2581and\u2581more.<bos>1.\u2581Introduction\u2581{#sec1-ijerph-17-00783}\n===============\n\nThe\u2581decli",
+            "max_activation": 991.121,
+            "max_token": "\u2581adequate"
+          },
+          {
+            "text_snippet": "\n\nOn\u2581our\u2581blog\u2581you\u2581will\u2581find\u2581humane\u2581project\u2581ideas\u2581for\u2581kids,\u2581an\u2581inside\u2581looks\u2581at\u2581HEART's\u2581programs,\u2581great\u2581teacher\u2581resources\u2581and\u2581more.<bos>1.\u2581Introduction\u2581{#sec1-ijerph-17-00783}\n===============\n\nThe\u2581decli",
+            "max_activation": 991.121,
+            "max_token": "\u2581adequate"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581exercise",
+          "\u2581physical",
+          "\u2581Physical",
+          "Physical",
+          "physical",
+          "exercise",
+          "\u2581Exercise",
+          "Exercise",
+          "\u2581active",
+          "\u2581PHYSICAL"
+        ],
+        "suppressed_tokens": [
+          "=\"#\"><",
+          "WAUKEE",
+          "\u2581Normdatei",
+          "siella",
+          "\u045a\u0430",
+          "jsonwebtoken",
+          "cimientos",
+          "\u2581estufa",
+          "\u00fcndete",
+          "NESOTA"
+        ],
+        "frac_nonzero": 0.03029
+      }
+    },
+    {
+      "feature_idx": 10836,
+      "activation": 4.185934543609619,
+      "cos_sim_biased": 0.06923799216747284,
+      "cos_sim_unbiased": 0.0870475247502327,
+      "rank_biased": 25,
+      "rank_unbiased": 12,
+      "neuronpedia": {
+        "feature_idx": 10836,
+        "label": " text describing nursing and rehabilitation care facilities",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581of\u2581his\u2581early\u2581affiliation\u2581to\u2581the\u2581SA\u2581Communist\u2581Party,\u2581but\u2581he\u2581said\u2581he\u2581was\u2581a\u2581no\u2581longer\u2581a\u2581member\u2581and\u2581had\u2581explored\u2581Marxism\u2581as\u2581a\u2581set\u2581of\u2581humanist\u2581values.\u2581-\u2581Sapa<bos>Located\u2581in\u2581the\u2581Mohawk\u2581Valley\u2581of\u2581New\u2581York\u2581S",
+            "max_activation": 693.015,
+            "max_token": "\u2581affiliated"
+          },
+          {
+            "text_snippet": "\u2581of\u2581his\u2581early\u2581affiliation\u2581to\u2581the\u2581SA\u2581Communist\u2581Party,\u2581but\u2581he\u2581said\u2581he\u2581was\u2581a\u2581no\u2581longer\u2581a\u2581member\u2581and\u2581had\u2581explored\u2581Marxism\u2581as\u2581a\u2581set\u2581of\u2581humanist\u2581values.\u2581-\u2581Sapa<bos>Located\u2581in\u2581the\u2581Mohawk\u2581Valley\u2581of\u2581New\u2581York\u2581S",
+            "max_activation": 693.015,
+            "max_token": "\u2581affiliated"
+          },
+          {
+            "text_snippet": "\u2581of\u2581his\u2581early\u2581affiliation\u2581to\u2581the\u2581SA\u2581Communist\u2581Party,\u2581but\u2581he\u2581said\u2581he\u2581was\u2581a\u2581no\u2581longer\u2581a\u2581member\u2581and\u2581had\u2581explored\u2581Marxism\u2581as\u2581a\u2581set\u2581of\u2581humanist\u2581values.\u2581-\u2581Sapa<bos>Located\u2581in\u2581the\u2581Mohawk\u2581Valley\u2581of\u2581New\u2581York\u2581S",
+            "max_activation": 693.015,
+            "max_token": "\u2581affiliated"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581BrowserModule",
+          "tsburgh",
+          "\u2581activit\u00e9",
+          "land\u0131r",
+          "ChildScrollView",
+          "\u2581Hogarth",
+          "\u2581Verf\u00fcgung",
+          "teis",
+          "b\u0117s",
+          "\u017euje"
+        ],
+        "suppressed_tokens": [
+          "ContentAsync",
+          "\u2581CURIAM",
+          "ScopeManager",
+          "\u2581AssemblyCulture",
+          "MemoryWarning",
+          "\u2581HttpNotFound",
+          "\u2581ModelExpression",
+          "\u2581vVar",
+          "makeText",
+          "\u0628\u0648\u0627\u0628\u0629"
+        ],
+        "frac_nonzero": 0.01464
+      }
+    },
+    {
+      "feature_idx": 14529,
+      "activation": 6.022312164306641,
+      "cos_sim_biased": 0.03596056252717972,
+      "cos_sim_unbiased": 0.08611246198415756,
+      "rank_biased": 507,
+      "rank_unbiased": 13,
+      "neuronpedia": {
+        "feature_idx": 14529,
+        "label": " words related to scientific topics, especially medical and biological concepts",
+        "top_activating_examples": [
+          {
+            "text_snippet": ";\u2581each\u2581binding\u2581and\u2581changing\u2581the\u2581shape\u2581of\u2581the\u2581haemoglobin\u2581molecule\u2581and\u2581increasing\u2581its\u2581affinity\u2581for\u2581oxygen\u2581\\[[@CR5]\\].\u2581A\u2581small\u2581amount\u2581of\u2581oxygen\u2581is\u2581also\u2581dissolved\u2581in\u2581plasma.\u2581This\u2581proportion\u2581increases\u2581in\u2581",
+            "max_activation": 554.477,
+            "max_token": "\u2581all"
+          },
+          {
+            "text_snippet": ";\u2581each\u2581binding\u2581and\u2581changing\u2581the\u2581shape\u2581of\u2581the\u2581haemoglobin\u2581molecule\u2581and\u2581increasing\u2581its\u2581affinity\u2581for\u2581oxygen\u2581\\[[@CR5]\\].\u2581A\u2581small\u2581amount\u2581of\u2581oxygen\u2581is\u2581also\u2581dissolved\u2581in\u2581plasma.\u2581This\u2581proportion\u2581increases\u2581in\u2581",
+            "max_activation": 554.477,
+            "max_token": "\u2581all"
+          },
+          {
+            "text_snippet": ";\u2581each\u2581binding\u2581and\u2581changing\u2581the\u2581shape\u2581of\u2581the\u2581haemoglobin\u2581molecule\u2581and\u2581increasing\u2581its\u2581affinity\u2581for\u2581oxygen\u2581\\[[@CR5]\\].\u2581A\u2581small\u2581amount\u2581of\u2581oxygen\u2581is\u2581also\u2581dissolved\u2581in\u2581plasma.\u2581This\u2581proportion\u2581increases\u2581in\u2581",
+            "max_activation": 554.477,
+            "max_token": "\u2581all"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581home",
+          "Esp\u00e8ce",
+          "home",
+          "\u2581bodily",
+          "\u2581Home",
+          "Manbalar",
+          "\u2581Mol",
+          "bio",
+          "\\{\\\\",
+          "chemical"
+        ],
+        "suppressed_tokens": [
+          "rungsseite",
+          "hensw\u00fcrdigkeiten",
+          "\u5b58\u4e8e\u4e92\u8054\u7f51\u6863\u6848\u9986",
+          "\u2581\u0641\u0631\u064a\u0628\u064a\u0633",
+          "HostException",
+          "\u2581resourceCulture",
+          "locene",
+          "\u2003\u2003(",
+          "ymce",
+          "martre"
+        ],
+        "frac_nonzero": 0.03058
+      }
+    },
+    {
+      "feature_idx": 937,
+      "activation": 3.2161808013916016,
+      "cos_sim_biased": 0.02402208372950554,
+      "cos_sim_unbiased": 0.07483555376529694,
+      "rank_biased": 1741,
+      "rank_unbiased": 14,
+      "neuronpedia": {
+        "feature_idx": 937,
+        "label": " words and phrases related to improving one's life and wellbeing",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581FMF\u2581and\u2581other\u2581inflammatory\u2581diseases\u2581should\u2581be\u2581aware\u2581of\u2581these\u2581associations.<bos>Meet\u2581Dr.\u2581Carol\u2581Ford\n\nDr.\u2581Carol\u2581Ford\u2581has\u2581been\u2581working\u2581in\u2581dentistry\u2581for\u2581the\u2581past\u258130\u2581years.\u2581Her\u2581unique\u2581ability\u2581to\u2581connect\u2581w",
+            "max_activation": 537.834,
+            "max_token": "\u2581their"
+          },
+          {
+            "text_snippet": "\u2581FMF\u2581and\u2581other\u2581inflammatory\u2581diseases\u2581should\u2581be\u2581aware\u2581of\u2581these\u2581associations.<bos>Meet\u2581Dr.\u2581Carol\u2581Ford\n\nDr.\u2581Carol\u2581Ford\u2581has\u2581been\u2581working\u2581in\u2581dentistry\u2581for\u2581the\u2581past\u258130\u2581years.\u2581Her\u2581unique\u2581ability\u2581to\u2581connect\u2581w",
+            "max_activation": 537.834,
+            "max_token": "\u2581their"
+          },
+          {
+            "text_snippet": "Therefore,\u2581there\u2581exists\u2581a\u2581need\u2581for\u2581detecting\u2581that\u2581proper\u2581respective\u2581optical\u2581fiber\u2581and\u2581electrical\u2581wiring\u2581connections\u2581are\u2581made\u2581and\u2581maintained.<bos>Why\u2581preventive\u2581care\u2581is\u2581important\n\nRemember\u2581the\u2581old\u2581sayi",
+            "max_activation": 535.586,
+            "max_token": "\u2581your"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581immunity",
+          "\u2581immune",
+          "\u2581Immunity",
+          "immune",
+          "\u2581\u0438\u043c\u043c\u0443",
+          "\u2581Immune",
+          "immunity",
+          "\u2581mood",
+          "SBATCH",
+          "\u2581kidneys"
+        ],
+        "suppressed_tokens": [
+          "\u2581defaultstate",
+          "NewUrlParser",
+          "\u2581estekak",
+          "\u2581\u0641\u0631\u064a\u0628\u064a\u0633",
+          "\u0c32\u0c3e\u0c32\u0c41",
+          "GOTREF",
+          "\u2581Normdatei",
+          "\u2581gainera",
+          "RetentionPolicy",
+          "\u2581\u0648\u06cc\u06a9\u06cc\u200c\u067e\u062f\u06cc"
+        ],
+        "frac_nonzero": 0.01502
+      }
+    },
+    {
+      "feature_idx": 3753,
+      "activation": 2.0679187774658203,
+      "cos_sim_biased": 0.01515189278870821,
+      "cos_sim_unbiased": 0.07465891540050507,
+      "rank_biased": 3532,
+      "rank_unbiased": 15,
+      "neuronpedia": {
+        "feature_idx": 3753,
+        "label": " mentions of artists",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581System.Exception(\"An\u2581unexpected\u2581error\u2581ocurred\",e);\n\t\u2581\u2581\u2581}\n\t\u2581\u2581\u2581return\u2581ret;\n\t}\n\t}\n\n}\n}\n<bos>Take\u2581a\u2581rocks\u2581glass\u2581and\u2581fill\u2581the\u2581bottom\u2581with\u2581one\u2581layer\u2581of\u2581fresh\u2581blueberries.\u2581Add\u2581the\u2581brown\u2581sugar\u2581and\u2581lemon\u2581juic",
+            "max_activation": 903.21,
+            "max_token": "\u2581of"
+          },
+          {
+            "text_snippet": "\u2581System.Exception(\"An\u2581unexpected\u2581error\u2581ocurred\",e);\n\t\u2581\u2581\u2581}\n\t\u2581\u2581\u2581return\u2581ret;\n\t}\n\t}\n\n}\n}\n<bos>Take\u2581a\u2581rocks\u2581glass\u2581and\u2581fill\u2581the\u2581bottom\u2581with\u2581one\u2581layer\u2581of\u2581fresh\u2581blueberries.\u2581Add\u2581the\u2581brown\u2581sugar\u2581and\u2581lemon\u2581juic",
+            "max_activation": 903.21,
+            "max_token": "\u2581of"
+          },
+          {
+            "text_snippet": "\u2581System.Exception(\"An\u2581unexpected\u2581error\u2581ocurred\",e);\n\t\u2581\u2581\u2581}\n\t\u2581\u2581\u2581return\u2581ret;\n\t}\n\t}\n\n}\n}\n<bos>Take\u2581a\u2581rocks\u2581glass\u2581and\u2581fill\u2581the\u2581bottom\u2581with\u2581one\u2581layer\u2581of\u2581fresh\u2581blueberries.\u2581Add\u2581the\u2581brown\u2581sugar\u2581and\u2581lemon\u2581juic",
+            "max_activation": 903.21,
+            "max_token": "\u2581of"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581\u0432\u0438\u043f\u0440\u0430\u0432\u0438\u0432\u0448\u0438",
+          "\u2581estekak",
+          "NOPQRST",
+          "IVEREF",
+          "\u2581kayna\u011f\u0131ndan",
+          "Personensuche",
+          "LookAnd",
+          ")\";\r",
+          "\u03c0\u03c9\u03c2",
+          "PreferredItem"
+        ],
+        "suppressed_tokens": [
+          "\u2581works",
+          "reggio",
+          "\u2581WORKS",
+          "\u2581wund",
+          "Contributed",
+          "\u2581maquina",
+          "vo\u0159",
+          "ortions",
+          "\u0646\u062c\u0644\u064a\u0632\u064a\u0629",
+          "\u2581obras"
+        ],
+        "frac_nonzero": 0.00291
+      }
+    },
+    {
+      "feature_idx": 7657,
+      "activation": 0.7171159982681274,
+      "cos_sim_biased": 0.07374492287635803,
+      "cos_sim_unbiased": 0.07387982308864594,
+      "rank_biased": 21,
+      "rank_unbiased": 16,
+      "neuronpedia": {
+        "feature_idx": 7657,
+        "label": " words and phrases in scientific papers that refer to research and experiments",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581The\u2581increased\u2581lymphoid\u2581content\u2581and\u2581rapid\u2581engraftment\u2581seen\u2581with\u2581peripheral\u2581blood\u2581stem\u2581cell\u2581(PBSC)\u2581transplants\u2581may\u2581increase\u2581the\u2581frequency\u2581and\u2581severity\u2581of\u2581this\u2581event.\u2581In\u2581addition,\u2581nonmyeloablative\u2581condi",
+            "max_activation": 621.543,
+            "max_token": "\u2581In"
+          },
+          {
+            "text_snippet": "\u2581use\u2581of\u2581LTOT\u2581for\u2581hypoxemic\u2581patients\u2581has\u2581resulted\u2581in\u2581increased\u2581survival,\u2581and\u2581expanded\u2581drug\u2581therapy\u2581options\u2581have\u2581effectively\u2581improved\u2581dyspnoea\u2581and\u2581quality\u2581of\u2581life.\u2581Recent\u2581studies\u2581have\u2581documented\u2581the\u2581ben",
+            "max_activation": 616.716,
+            "max_token": "\u2581In"
+          },
+          {
+            "text_snippet": "\u2581\\[[@cit0006]\\].\u2581Given\u2581the\u2581high\u2581mortality\u2581of\u2581the\u2581two\u2581morbidities,\u2581immediate\u2581contrast\u2581CT\u2581imaging\u2581or\u2581tissue\u2581Doppler\u2581imaging\u2581\\[[@cit0029]\\]\u2581may\u2581be\u2581good\u2581choices\u2581to\u2581differentiate\u2581AAD\u2581from\u2581PE.\n\nIn\u2581the\u2581setti",
+            "max_activation": 609.391,
+            "max_token": "In"
+          }
+        ],
+        "promoted_tokens": [
+          "GEBURTSDATUM",
+          "Personendaten",
+          "+#+",
+          "Rhestr",
+          "\u2581SwitchCompat",
+          "Geplaatst",
+          "\u2581AssemblyCulture",
+          "\u2581adults",
+          "OGND",
+          "oneofs"
+        ],
+        "suppressed_tokens": [
+          "LabelTagHelper",
+          "\u2581'\\\\;'",
+          "DoubleQuotes",
+          "\u2581dis",
+          "\u2581Qualitative",
+          "RELATED",
+          "\u2581da",
+          "InputTagHelper",
+          "BeginInit",
+          "\u2581Dis"
+        ],
+        "frac_nonzero": 0.03989
+      }
+    },
+    {
+      "feature_idx": 3711,
+      "activation": 6.635514259338379,
+      "cos_sim_biased": 0.015907593071460724,
+      "cos_sim_unbiased": 0.07385338842868805,
+      "rank_biased": 3337,
+      "rank_unbiased": 17,
+      "neuronpedia": {
+        "feature_idx": 3711,
+        "label": " text related to illness and symptoms",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u258120\u2581percent\u2581of\u2581people\u2581will\u2581show\u2581symptoms,\u2581which\u2581are\u2581similar\u2581to\u2581the\u2581flu.\u2581State\u2581health\u2581officials\u2581said\u2581about\u25811\u2581percent\u2581of\u2581people\u2581who\u2581test\u2581positive\u2581for\u2581West\u2581Nile\u2581virus\u2581will\u2581develop\u2581a\u2581more\u2581serious,\u2581potenti",
+            "max_activation": 539.776,
+            "max_token": "\u2581any"
+          },
+          {
+            "text_snippet": "\u258120\u2581percent\u2581of\u2581people\u2581will\u2581show\u2581symptoms,\u2581which\u2581are\u2581similar\u2581to\u2581the\u2581flu.\u2581State\u2581health\u2581officials\u2581said\u2581about\u25811\u2581percent\u2581of\u2581people\u2581who\u2581test\u2581positive\u2581for\u2581West\u2581Nile\u2581virus\u2581will\u2581develop\u2581a\u2581more\u2581serious,\u2581potenti",
+            "max_activation": 539.776,
+            "max_token": "\u2581any"
+          },
+          {
+            "text_snippet": "\u2581companies\u2581and\u2581investors\u2581engaged\u2581in\u2581economic\u2581activities\u2581in\u2581hospitality,\u2581tourism,\u2581property\u2581development,\u2581and\u2581industry.\u2581The\u2581articles\u2581published\u2581below\u2581are\u2581intended\u2581to\u2581offer\u2581students,\u2581professionals,\u2581investo",
+            "max_activation": 479.905,
+            "max_token": "\u2581any"
+          }
+        ],
+        "promoted_tokens": [
+          "\u0411\u0438\u043b\u0433\u0430\u043b\u0434\u0430\u0445\u0430\u0440\u0448",
+          "StoreMessageInfo",
+          "derabad",
+          "rxjs",
+          "\u2581toxins",
+          "\u2581setae",
+          "auru",
+          "\u062a\u06cc\u0628",
+          "GEBURTSDATUM",
+          "\u2581sufferers"
+        ],
+        "suppressed_tokens": [
+          "ScopeManager",
+          "\u2581initComponents",
+          "MemoryWarning",
+          "localVar",
+          "\u2581endregion",
+          "\u2581pengh",
+          "DPI",
+          "elsen",
+          "\u2581Aires",
+          "\u2581fra\u00ee"
+        ],
+        "frac_nonzero": 0.06085
+      }
+    },
+    {
+      "feature_idx": 10288,
+      "activation": 3.667006254196167,
+      "cos_sim_biased": 0.004512865096330643,
+      "cos_sim_unbiased": 0.07381734997034073,
+      "rank_biased": 6801,
+      "rank_unbiased": 18,
+      "neuronpedia": {
+        "feature_idx": 10288,
+        "label": " words and phrases related to dietary patterns and nutritional health",
+        "top_activating_examples": [
+          {
+            "text_snippet": "2.\u2581Eating\u2581Patterns\u2581{#sec2dot3dot2-ijerph-17-00783}\n\nA\u2581healthy\u2581eating\u2581pattern\u2581was\u2581defined\u2581as\u2581a\u2581diet\u2581based\u2581on\u2581whole\u2581or\u2581minimally\u2581processed\u2581foods\u2581and\u2581that\u2581included\u2581health-protective\u2581ingredients\u2581and\u2581lacke",
+            "max_activation": 944.582,
+            "max_token": "\u2581and"
+          },
+          {
+            "text_snippet": "2.\u2581Eating\u2581Patterns\u2581{#sec2dot3dot2-ijerph-17-00783}\n\nA\u2581healthy\u2581eating\u2581pattern\u2581was\u2581defined\u2581as\u2581a\u2581diet\u2581based\u2581on\u2581whole\u2581or\u2581minimally\u2581processed\u2581foods\u2581and\u2581that\u2581included\u2581health-protective\u2581ingredients\u2581and\u2581lacke",
+            "max_activation": 944.582,
+            "max_token": "\u2581and"
+          },
+          {
+            "text_snippet": "2.\u2581Eating\u2581Patterns\u2581{#sec2dot3dot2-ijerph-17-00783}\n\nA\u2581healthy\u2581eating\u2581pattern\u2581was\u2581defined\u2581as\u2581a\u2581diet\u2581based\u2581on\u2581whole\u2581or\u2581minimally\u2581processed\u2581foods\u2581and\u2581that\u2581included\u2581health-protective\u2581ingredients\u2581and\u2581lacke",
+            "max_activation": 944.582,
+            "max_token": "\u2581and"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581fast",
+          "\u2581junk",
+          "fast",
+          "\u2581Fast",
+          "\u2581jun",
+          "Fast",
+          "\u2581fa\u017ft",
+          "junk",
+          "\u2581processed",
+          "\u2581Junk"
+        ],
+        "suppressed_tokens": [
+          "queryInterface",
+          "enumi",
+          "\u0425\u044c\u0430\u0436\u043e\u0440\u0433\u0430\u0448",
+          "tagHelperRunner",
+          "+:+",
+          "CloseOperation",
+          "\u2581CreateTagHelper",
+          "WithIOException",
+          "\u2581OFDb",
+          "Portail"
+        ],
+        "frac_nonzero": 0.02006
+      }
+    },
+    {
+      "feature_idx": 9183,
+      "activation": 3.3792998790740967,
+      "cos_sim_biased": 0.02387380413711071,
+      "cos_sim_unbiased": 0.07169083505868912,
+      "rank_biased": 1761,
+      "rank_unbiased": 19,
+      "neuronpedia": {
+        "feature_idx": 9183,
+        "label": " words and phrases associated with live performance, art, and entertainment",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581both\u2581of\u2581whom\u2581were\u2581active\u2581in\u2581New\u2581York\u2581theater\u2581at\u2581the\u2581time\u2581of\u2581the\u2581movie.\u2581Two\u2581themes\u2581tie\u2581the\u2581entire\u2581dialog\u2581together:\u2581(1)\u2581should\u2581we\u2581live\u2581spontaneously\u2581in\u2581the\u2581moment,\u2581disconnecting\u2581ourselves\u2581from\u2581the\u2581purp",
+            "max_activation": 487.886,
+            "max_token": "\u2019"
+          },
+          {
+            "text_snippet": "\u2581both\u2581of\u2581whom\u2581were\u2581active\u2581in\u2581New\u2581York\u2581theater\u2581at\u2581the\u2581time\u2581of\u2581the\u2581movie.\u2581Two\u2581themes\u2581tie\u2581the\u2581entire\u2581dialog\u2581together:\u2581(1)\u2581should\u2581we\u2581live\u2581spontaneously\u2581in\u2581the\u2581moment,\u2581disconnecting\u2581ourselves\u2581from\u2581the\u2581purp",
+            "max_activation": 487.886,
+            "max_token": "\u2019"
+          },
+          {
+            "text_snippet": ",\u2581it\u2581was\u2581announced\u2581that\u2581The\u2581Dark\u2581at\u2581the\u2581Top\u2581of\u2581the\u2581Stairs\u2581would\u2581headline\u2581the\u2581launch\u2581of\u2581the\u2581fall\u2581season,\u2581opening\u2581at\u2581Radio\u2581City\u2581Music\u2581Hall\u2581after\u2581Labor\u2581Day.\u2581The\u2581film\u2581opened\u2581on\u2581September\u258122,\u25811960\u2581at\u2581Radio",
+            "max_activation": 485.874,
+            "max_token": "\u2581at"
+          }
+        ],
+        "promoted_tokens": [
+          "RenderAtEndOf",
+          "\u2581\u0641\u0631\u064a\u0628\u064a\u0633",
+          "\u2581Administrativna",
+          "\u51fa\u7248\u5e74",
+          "\u2581nakalista",
+          "Autoritn\u00ed",
+          "elebr",
+          "\u0411\u0430\u0445\u0430\u0440",
+          "\u2581D\u00e9fense",
+          "\u2581\u0645\u0634\u064a\u0646"
+        ],
+        "suppressed_tokens": [
+          "\u2581perform",
+          "DotNet",
+          "\u2581performed",
+          "\u2581staged",
+          "\u2581stage",
+          "\u2581performance",
+          "\u2581society",
+          "principalTable",
+          "\u043d\u0446\u0438\u043a\u043b\u043e\u043f\u0435\u0434\u0438\u044f",
+          "xase"
+        ],
+        "frac_nonzero": 0.00299
+      }
+    }
+  ],
+  "analysis": "**Verdict: NO**\n\n**Analysis of features for spurious gender markers:**\n\nAfter carefully examining all 20 active SAE features, I find **no features that encode gender markers**. The features fall into several categories, none of which relate to gender:\n\n1. **Medical/scientific content** (Features 12957, 14529, 7657, 3829): Words and phrases common to medical/scientific research papers.\n\n2. **Diet/nutrition content** (Features 5808, 4584, 10288, 12237): References to weight, diet, nutritional health, and food/cooking \u2014 these are dietitian-related indicators.\n\n3. **Healthcare content** (Features 9179, 8606, 10836, 3711, 15763, 8060, 937): Words related to healthcare workers, medical lab results, illness symptoms, fitness, and wellbeing.\n\n4. **Professional credentials** (Feature 8780): Text about credentials, licenses, and job titles.\n\n5. **Other unrelated** (Features 10568, 3753, 9183, 11980): Tony Inman mentions, artists, performance/entertainment, therapy/fitness \u2014 none gender-related.\n\n**Summary:** The active features are dominated by medical, nutritional, and healthcare-related content rather than gender markers. The input text itself uses \"he\" once, but no SAE feature in this set appears to specifically encode gender signals. While some features (like dietary/nutrition-related ones) may be somewhat tangential to the journalist text and could contribute to misclassification toward \"dietitian,\" they reflect topical/professional content associations rather than spurious gender markers. The concern as stated \u2014 that features encode spurious gender markers \u2014 is not supported by the evidence in this feature set."
+}

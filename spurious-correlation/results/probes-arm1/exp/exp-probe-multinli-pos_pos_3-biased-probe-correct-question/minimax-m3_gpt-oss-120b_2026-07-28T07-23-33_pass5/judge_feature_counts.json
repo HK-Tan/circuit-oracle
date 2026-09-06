@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Literal negation-word detector in hypothesis."
+    },
+    {
+      "id": "L3:F3534",
+      "label": "the character sequence \"n't\" or \"nut\"",
+      "reason": "Negation contraction detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation feature; tied to literal not token."
+    },
+    {
+      "id": "L15:F11794",
+      "label": "phrases that express disagreement or negation",
+      "reason": "Negation/disagreement phrase detector."
+    },
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\".",
+      "reason": "Explicit negation detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Fortification semantics relevant to content."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Content semantics, not negation."
+    },
+    {
+      "id": "L7:F13215",
+      "label": "terms used to describe military fortifications.",
+      "reason": "Meaning-bearing fortification feature."
+    },
+    {
+      "id": "L3:F14368",
+      "label": "the word \"house\" (or houses).",
+      "reason": "Content noun feature tied to subject matter."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F10346",
+      "label": "the word \"itself\" and sometimes the word \"node\"",
+      "reason": "Reflexive/token detector, not semantic comparison."
+    },
+    {
+      "id": "L0:F12378",
+      "label": "the word \"latest.\"",
+      "reason": "Unrelated lexical trigger."
+    },
+    {
+      "id": "L0:F15866",
+      "label": "references to one's paternal and maternal figures, as well as the pronouns 'we' and 'my'",
+      "reason": "Pronoun/reference feature."
+    },
+    {
+      "id": "L1:F11",
+      "label": "the word \"press\", sometimes in conjunction with \"button.\"",
+      "reason": "Unrelated lexical feature."
+    },
+    {
+      "id": "L2:F2415",
+      "label": "frequent words indicating small quantities or proximity, or words with negative connotations",
+      "reason": "Mixed generic lexical/valence feature."
+    },
+    {
+      "id": "L2:F4429",
+      "label": "mentions of the beginning of a period",
+      "reason": "Temporal wording, not task-specific."
+    },
+    {
+      "id": "L0:F1454",
+      "label": "mentions of specific centuries or decades",
+      "reason": "Temporal lexical feature."
+    },
+    {
+      "id": "L4:F5386",
+      "label": "mentions of centuries and decades",
+      "reason": "Temporal lexical feature."
+    },
+    {
+      "id": "L0:F4367",
+      "label": "references to centuries",
+      "reason": "Temporal lexical feature."
+    },
+    {
+      "id": "L0:F15322",
+      "label": "reflexive pronouns, particularly \"herself\" and \"itself.\"",
+      "reason": "Reflexive pronoun detector."
+    },
+    {
+      "id": "L0:F3013",
+      "label": "the word \"manual\" and words associated with documentation or printed materials",
+      "reason": "Unrelated lexical feature."
+    },
+    {
+      "id": "L0:F10815",
+      "label": "the word \"any\"",
+      "reason": "Generic quantifier, not negation itself."
+    },
+    {
+      "id": "L0:F2364",
+      "label": "the word \"The\" and opening HTML heading tags",
+      "reason": "Purely structural/token feature."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 4,
+  "n_other": 14,
+  "spurious_fraction": 0.5555555555555556,
+  "dominant": "spurious",
+  "notes": "Contradiction is driven mainly by negation-word detectors, with some content features and many unrelated lexical/structural ones."
+}

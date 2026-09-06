@@ -1,0 +1,93 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1015",
+      "label": "the word 'black'",
+      "reason": "Identity-word detector; demographic token signal."
+    },
+    {
+      "id": "L1:F13069",
+      "label": "the word 'black'",
+      "reason": "Identity token lexical detector, not toxicity."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Race/identity discussion feature, not causal."
+    },
+    {
+      "id": "L0:F12717",
+      "label": "the word \"pride\" in different contexts",
+      "reason": "Neutral identity-related lexical association."
+    },
+    {
+      "id": "L3:F15701",
+      "label": "instances of the word \"proud\"",
+      "reason": "Identity-phrase adjacent, non-toxic lexical cue."
+    },
+    {
+      "id": "L0:F45",
+      "label": "the word \"being\" in different contexts",
+      "reason": "Generic lexical feature, not toxicity."
+    },
+    {
+      "id": "L2:F5266",
+      "label": "phrases that include the word \"being\"",
+      "reason": "Generic phrase detector, not causal."
+    },
+    {
+      "id": "L3:F11279",
+      "label": "symbols common in scientific research papers, such as p-values and replicates",
+      "reason": "Spurious scientific-symbol detector."
+    },
+    {
+      "id": "L0:F9222",
+      "label": "the equals sign",
+      "reason": "Pure structural punctuation feature."
+    },
+    {
+      "id": "L3:F12034",
+      "label": "technical terms, especially those used to describe graphs and figures",
+      "reason": "Spurious generic figure-element detector."
+    },
+    {
+      "id": "L0:F1088",
+      "label": "mentions of \"meal\" and, to a lesser extent, words indicating a fondness for something",
+      "reason": "Explicitly spurious generic feature."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb:Black@1",
+      "label": "Emb: 'Black' (pos 1, capitalized identity word)",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb:black@5",
+      "label": "Emb: ' black' (pos 5, lowercase identity word)",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb:Pride@2",
+      "label": "Emb: ' Pride' (pos 2)",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb:being@4",
+      "label": "Emb: ' being' (pos 4)",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb:=@3",
+      "label": "Emb: ' =' (pos 3)",
+      "reason": "Input token only, not a feature."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 0,
+  "n_other": 5,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows identity-token and generic structural/spurious cues; no toxicity semantics."
+}

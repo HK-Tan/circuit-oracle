@@ -1,0 +1,48 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Explicit male pronoun detector."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Possessive pronoun/gender cue."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Male pronoun/title representation."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun/gender coding."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Person/pronoun representation."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "His",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Output: injected profession-classification probe score",
+      "label": "injected profession-classification probe score",
+      "reason": "Oracle output node, not a feature."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 0,
+  "n_other": 2,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by gender/pronoun features; no profession indicators are claimed."
+}

@@ -1,0 +1,24 @@
+
+============================================================
+Graph: multinli-pos_pos_2-unbiased-probe-correct
+============================================================
+Loading multinli-pos_pos_2-unbiased-probe-correct.pt...
+  5447 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — multinli-pos_pos_2-unbiased-probe-correct
+============================================================
+**Analysis:** The probe's classification is driven by superficial linguistic markers—specifically conversational fillers, negation signals, and causal conjunctions—rather than a semantic understanding of the prompt's content.
+
+**Confidence:** 9
+
+**Reasoning:** 
+The attribution analysis reveals that the probe's classification score is determined by several low-level, non-semantic features. 
+
+1. **Conversational Fillers:** Features **L4:F12126** and **L4:F4847** (grouped in `filler_words`) respond to "yeah" and "well" at the start of the prompt. These features have a strong effect on the logit, but they encode conversational style rather than contradiction or any specific factual claim.
+2. **Negation/Contraction Signals:** Feature **L0:F6236** (`negation_signals`) specifically detects the letter "t" following contractions like "isn't" or "doesn't" (detected at position 20, corresponding to "haven't"). This is a classic "spurious feature" where the probe relies on the presence of negation markers to predict a "contradiction" label without analyzing the actual meaning of the negated statement.
+3. **Causal Markers:** Feature **L0:F16366** (`causal_marker`) detects the word "because". While "because" often introduces an explanation that could be contradictory, the feature itself is a simple lexical detector.
+4. **Generic Context:** Feature **L0:F8083** (`numeric_context`) detects the word "double" in a numeric context (e.g., "NC double A"), which is entirely irrelevant to the semantic task of contradiction detection.
+
+The signal flows directly from these early-layer (L0-L4) lexical detectors to the probe output. There is no evidence of higher-layer semantic integration or entity-specific reasoning. This confirms the user's concern: the probe is utilizing spurious "shortcut" features (negation words and filler phrases) to make its prediction.
+Results saved to: <repo>/spurious-correlation/results/probes-arm5/exp/exp-probe-multinli-pos_pos_2-unbiased-probe-correct-question/gemma-4-31b-it_gpt-oss-120b_2026-07-28T08-31-25

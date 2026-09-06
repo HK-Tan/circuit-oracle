@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Gender pronoun marker; spurious on biography task."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F9210",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession indicator for journalist/writer."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession indicator for journalism/media."
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Job-title vocabulary tied to writing/editing."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism profession vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: writer",
+      "label": "writer",
+      "reason": "Token is causal, but embedding not a feature claim."
+    },
+    {
+      "id": "Emb: freelance",
+      "label": "freelance",
+      "reason": "Token is causal, but embedding not a feature claim."
+    },
+    {
+      "id": "Emb: covering",
+      "label": "covering",
+      "reason": "Token is causal, but embedding not a feature claim."
+    },
+    {
+      "id": "Emb: Institute",
+      "label": "Institute",
+      "reason": "Token itself; oracle claims institute-related features separately."
+    },
+    {
+      "id": "Emb: Middle",
+      "label": "Middle",
+      "reason": "Token itself; structural/lexical input only."
+    },
+    {
+      "id": "Emb: he",
+      "label": "he",
+      "reason": "Token itself; feature is pronoun proximity, not token."
+    },
+    {
+      "id": "L0:F3007",
+      "label": "the word \"middle\", and sometimes the word \"character\", and \"camp\"",
+      "reason": "Generic lexical/structural detector."
+    },
+    {
+      "id": "L0:F10881",
+      "label": "the word \"coverage\"",
+      "reason": "Generic word detector, not task-specific."
+    },
+    {
+      "id": "L0:F9297",
+      "label": "mentions of government ministries and ministers.",
+      "reason": "Not a profession indicator; suppressor here."
+    },
+    {
+      "id": "L1:F4459",
+      "label": "mentions of research institutes",
+      "reason": "Institution mention, not profession."
+    },
+    {
+      "id": "L3:F10489",
+      "label": "the word \"Institute\"",
+      "reason": "Generic token detector."
+    },
+    {
+      "id": "L1:F1445",
+      "label": "terms related to the military, especially vehicles and weapons",
+      "reason": "Task-irrelevant content feature."
+    },
+    {
+      "id": "L2:F12901",
+      "label": "the phrase \"Middle East\"",
+      "reason": "Content topic, not profession."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 4,
+  "n_other": 13,
+  "spurious_fraction": 0.2,
+  "dominant": "causal",
+  "notes": "Writer/journalism features dominate; one pronoun feature adds a secondary spurious signal."
+}

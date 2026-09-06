@@ -1,0 +1,33 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female pronoun/gender marker."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Female mention detector."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women/gendered name-role feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13412",
+      "label": "terms related to diets and dietary health",
+      "reason": "Profession-related nutrition indicator."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 3,
+  "n_causal": 1,
+  "n_other": 0,
+  "spurious_fraction": 0.75,
+  "dominant": "mixed",
+  "notes": "Both nutrition and female gender pathways are present; spurious signals dominate."
+}

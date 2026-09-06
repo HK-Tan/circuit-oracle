@@ -1,0 +1,144 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\"",
+      "reason": "Direct negation detector in hypothesis."
+    },
+    {
+      "id": "L15:F11794",
+      "label": "phrases that express disagreement or negation",
+      "reason": "Generic negation cue, not task-specific meaning."
+    },
+    {
+      "id": "L14:F15790",
+      "label": "negations",
+      "reason": "Broad negation feature, purely lexical shortcut."
+    },
+    {
+      "id": "L14:F12021",
+      "label": "negations and assertions, especially those related to experimental results",
+      "reason": "Contains negation signal; oracle links it to contradiction."
+    },
+    {
+      "id": "L13:F102",
+      "label": "negations",
+      "reason": "Late-layer negation detector."
+    },
+    {
+      "id": "L2:F15695",
+      "label": "the letter \"t\"",
+      "reason": "Character-level negation residue, not semantic."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Language-general negation detector."
+    },
+    {
+      "id": "L3:F3534",
+      "label": "the character sequence \"n't\" or \"nut\"",
+      "reason": "Negation-form detector at token level."
+    },
+    {
+      "id": "L2:F2415",
+      "label": "frequent words indicating small quantities or proximity, or words with negative connotations",
+      "reason": "Oracle treats it as negation-associated shortcut."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct lexical negation feature."
+    },
+    {
+      "id": "L0:F10815",
+      "label": "the word \"any\"",
+      "reason": "Quantifier cue used in negated contradiction pattern."
+    },
+    {
+      "id": "L0:F15866",
+      "label": "references to one's paternal and maternal figures, as well as the pronouns 'we' and 'my'",
+      "reason": "Mentioned by oracle, but dismissed as unrelated."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F13215",
+      "label": "terms used to describe military fortifications.",
+      "reason": "Content about castle meaning."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "terms related to land ownership and administration, possibly including slavery or other forms of forced labor",
+      "reason": "Castle-related content cue."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Relevant castle semantics."
+    },
+    {
+      "id": "L0:F1454",
+      "label": "mentions of specific centuries or decades",
+      "reason": "Temporal content relevant to premise."
+    },
+    {
+      "id": "L0:F4367",
+      "label": "references to centuries",
+      "reason": "Temporal alignment with premise facts."
+    },
+    {
+      "id": "L3:F14368",
+      "label": "the word \"house\" (or houses).",
+      "reason": "Entity content tied to tower houses."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Pure lexical/structural detector."
+    },
+    {
+      "id": "L0:F10346",
+      "label": "the word \"itself\" and sometimes the word \"node\"",
+      "reason": "Generic reflexive/structural cue."
+    },
+    {
+      "id": "L3:F232",
+      "label": "the word \"itself\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F12378",
+      "label": "the word \"latest.\"",
+      "reason": "Oracle-claimed lexical feature, not relevant here."
+    },
+    {
+      "id": "L0:F15322",
+      "label": "reflexive pronouns, particularly \"herself\" and \"itself.\"",
+      "reason": "Structural pronoun detector."
+    },
+    {
+      "id": "L0:F3013",
+      "label": "the word \"manual\" and words associated with documentation or printed materials",
+      "reason": "Unrelated lexical feature."
+    },
+    {
+      "id": "L2:F4429",
+      "label": "mentions of the beginning of a period",
+      "reason": "Temporal marker, not contradiction-specific."
+    },
+    {
+      "id": "L1:F11",
+      "label": "the word \"press\", sometimes in conjunction with \"button.\"",
+      "reason": "Irrelevant lexical detector."
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 6,
+  "n_other": 8,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Oracle centers negation shortcuts; semantic content features are secondary."
+}

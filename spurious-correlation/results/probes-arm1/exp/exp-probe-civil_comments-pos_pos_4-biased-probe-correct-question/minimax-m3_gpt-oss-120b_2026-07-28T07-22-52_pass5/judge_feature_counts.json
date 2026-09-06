@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F14740",
+      "label": "names of places, people, and organizations",
+      "reason": "Identity/name entity signal, not toxicity semantics."
+    },
+    {
+      "id": "L0:F3283",
+      "label": "mentions of India and related concepts like Delhi, but sometimes only finds a word indicating importance",
+      "reason": "Country/ethnicity mention; identity-group signal."
+    },
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Generic group-membership morphology, identity-related."
+    },
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Same identity/group feature at another position."
+    },
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Explicit demographic-group mention detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F1003",
+      "label": "the word \"abuse\"",
+      "reason": "Direct toxic-content keyword."
+    },
+    {
+      "id": "L2:F6255",
+      "label": "the word \"abuse\", or phrases related to genitalia",
+      "reason": "Abuse/slur-related toxic language."
+    },
+    {
+      "id": "L7:F15690",
+      "label": "text related to public sentiment and action in response to a problem",
+      "reason": "Problem-response semantics, not identity-based."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Generic function-word feature."
+    },
+    {
+      "id": "L0:F1053",
+      "label": "the word \"as.\"",
+      "reason": "Generic function-word feature."
+    },
+    {
+      "id": "L4:F4021",
+      "label": "code snippets or configurations with the word \"as\".",
+      "reason": "Structural/code-context feature."
+    },
+    {
+      "id": "L0:F4199",
+      "label": "the word \"quantity\"",
+      "reason": "Generic lexical feature, not task-semantic."
+    },
+    {
+      "id": "L0:F10389",
+      "label": "words related to legal disputes and technical issues such as device malfunctions or program errors",
+      "reason": "Off-topic technical/legal wording."
+    },
+    {
+      "id": "L0:F3564",
+      "label": "mathematical notation symbols",
+      "reason": "Purely structural symbol detector."
+    },
+    {
+      "id": "L1:F7492",
+      "label": "words referring to administrative divisions, animals, or commercial elements",
+      "reason": "Broad non-toxic lexical category."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 3,
+  "n_other": 7,
+  "spurious_fraction": 0.625,
+  "dominant": "spurious",
+  "notes": "Identity-group and ethnicity features dominate, with abuse keywords providing secondary causal signal."
+}

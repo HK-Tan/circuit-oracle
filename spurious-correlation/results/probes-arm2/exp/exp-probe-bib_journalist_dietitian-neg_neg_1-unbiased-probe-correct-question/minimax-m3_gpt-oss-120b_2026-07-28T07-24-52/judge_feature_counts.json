@@ -1,0 +1,134 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8964",
+      "label": "His-pronoun feature",
+      "reason": "Detects masculine pronoun, a gender marker."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "His-pronoun feature",
+      "reason": "Detects masculine pronoun, a gender marker."
+    },
+    {
+      "id": "L0:F15693",
+      "label": "His/desire",
+      "reason": "Includes His; gender-linked prompt interaction."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L20:F8433",
+      "label": "top news orgs context",
+      "reason": "Tracks profession-context terms like news organizations."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "late-context aggregator",
+      "reason": "Aggregates profession-related context across positions."
+    },
+    {
+      "id": "L19:F14973",
+      "label": "top-news-orgs concept",
+      "reason": "Represents news-organization profession context."
+    },
+    {
+      "id": "L17:F4629",
+      "label": "news token feature",
+      "reason": "Detects news, a profession-indicator token."
+    },
+    {
+      "id": "L17:F11691",
+      "label": "top qualifier",
+      "reason": "Qualifies profession-context phrase with top."
+    },
+    {
+      "id": "L15:F12238",
+      "label": "news word",
+      "reason": "Detects news, profession-related context."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "report/journal verb feature",
+      "reason": "Detects report/journal profession vocabulary."
+    },
+    {
+      "id": "L14:F2781",
+      "label": "top descriptor",
+      "reason": "Part of top news organizations phrase."
+    },
+    {
+      "id": "L14:F8761",
+      "label": "news word",
+      "reason": "Detects news, profession-related context."
+    },
+    {
+      "id": "L11:F5996",
+      "label": "mid-context",
+      "reason": "Supports nearby profession-context structure."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "report-context feature",
+      "reason": "Anchored in report wording, profession-related."
+    },
+    {
+      "id": "L8:F8437",
+      "label": "report-context feature",
+      "reason": "Anchored in report wording, profession-related."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "early report/journal concept",
+      "reason": "Represents report/journal profession context."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "verb-context feature",
+      "reason": "Contextualizes profession-related report language."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "news/orgs token feature",
+      "reason": "Detects news organizations phrase."
+    },
+    {
+      "id": "L1:F14511",
+      "label": "early report word-feature",
+      "reason": "Detects report vocabulary."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8444",
+      "label": "preposition 'to' feature",
+      "reason": "Purely structural function word."
+    },
+    {
+      "id": "L0:F14287",
+      "label": "see-word feature",
+      "reason": "Generic verb, not profession-specific."
+    },
+    {
+      "id": "L0:F2011",
+      "label": "desire-token feature",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F13948",
+      "label": "desire-token feature",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "preposition 'to' feature",
+      "reason": "Purely structural function word."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 16,
+  "n_other": 5,
+  "spurious_fraction": 0.15789473684210525,
+  "dominant": "causal",
+  "notes": "Oracle mainly claims profession-context evidence; pronoun path is present but secondary."
+}

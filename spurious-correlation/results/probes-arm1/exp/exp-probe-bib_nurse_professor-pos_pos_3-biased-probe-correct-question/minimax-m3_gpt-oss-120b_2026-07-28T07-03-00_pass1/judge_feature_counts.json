@@ -1,0 +1,49 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Women/girls mentions; driven by she/she-like gender markers."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female-reference detector; explicit gender-marker content."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronouns and possessives; clearly gendered."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women\u2019s names/roles; gender-linked shortcut feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing vocabulary; profession indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Structural/code detector; not profession or gender."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic named-entity feature; not task-specific."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 1,
+  "n_other": 2,
+  "spurious_fraction": 0.8,
+  "dominant": "spurious",
+  "notes": "Dominated by gender-marker features, with one genuine nursing feature and some generic detectors."
+}

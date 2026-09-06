@@ -1,0 +1,38 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity-group token; explicit demographic signal."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F4408",
+      "label": "the word \"authors\" in academic papers or similar documents",
+      "reason": "Generic lexical/topic feature, not toxicity-related."
+    },
+    {
+      "id": "L6:F2851",
+      "label": "books and associated things such as authors and reading",
+      "reason": "Book/author topic; structural lexical content."
+    },
+    {
+      "id": "L2:F3399",
+      "label": "words related to marriage",
+      "reason": "Non-toxic topical word; not causal toxicity."
+    },
+    {
+      "id": "L3:F10004",
+      "label": "words which mean or indicate uncertainty or possibility",
+      "reason": "Generic uncertainty marker; purely structural."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 0,
+  "n_other": 4,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle shows one identity signal; remaining features are generic topical or uncertainty markers."
+}

@@ -1,0 +1,143 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F0@7",
+      "label": "Emb: ' she' \u2014 minor gender signal",
+      "reason": "Gendered pronoun; spurious by task definition."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Output Logit",
+      "label": "Probe direction",
+      "reason": "Classification target node, not a feature."
+    },
+    {
+      "id": "L0:F0@15",
+      "label": "Emb: ' nurses'",
+      "reason": "Profession indicator token."
+    },
+    {
+      "id": "L0:F0@14",
+      "label": "Emb: 'perative'",
+      "reason": "Profession-name subword."
+    },
+    {
+      "id": "L0:F0@13",
+      "label": "Emb: ' Perio'",
+      "reason": "Profession-name subword."
+    },
+    {
+      "id": "L2:F15437@15",
+      "label": "Early-layer lexical features (L0-L4)",
+      "reason": "Lexical/profession-pattern feature."
+    },
+    {
+      "id": "L3:F15901@15",
+      "label": "Early-layer lexical features (L0-L4)",
+      "reason": "Lexical/profession-pattern feature."
+    },
+    {
+      "id": "L4:F4665@14",
+      "label": "Early-layer lexical features (L0-L4)",
+      "reason": "Lexical/profession-pattern feature."
+    },
+    {
+      "id": "L4:F4665@15",
+      "label": "Early-layer lexical features (L0-L4)",
+      "reason": "Lexical/profession-pattern feature."
+    },
+    {
+      "id": "L4:F9757@1",
+      "label": "Early-layer lexical features (L0-L4)",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L4:F11037@15",
+      "label": "Early-layer lexical features (L0-L4)",
+      "reason": "Lexical/profession-pattern feature."
+    },
+    {
+      "id": "L4:F8751@15",
+      "label": "Early-layer lexical features (L0-L4)",
+      "reason": "Lexical/profession-pattern feature."
+    },
+    {
+      "id": "L4:F8736@2",
+      "label": "Early-layer lexical features (L0-L4)",
+      "reason": "Content-neutral lexical feature."
+    },
+    {
+      "id": "L6:F15267@14",
+      "label": "Mid-layer 'nurse' concept detectors (L6-L8)",
+      "reason": "Professional nurse concept."
+    },
+    {
+      "id": "L6:F15267@15",
+      "label": "Mid-layer 'nurse' concept detectors (L6-L8)",
+      "reason": "Professional nurse concept."
+    },
+    {
+      "id": "L7:F210@15",
+      "label": "Mid-layer 'nurse' concept detectors (L6-L8)",
+      "reason": "Professional nurse concept."
+    },
+    {
+      "id": "L7:F3979@15",
+      "label": "Mid-layer 'nurse' concept detectors (L6-L8)",
+      "reason": "Professional nurse concept."
+    },
+    {
+      "id": "L7:F8194@15",
+      "label": "Mid-layer 'nurse' concept detectors (L6-L8)",
+      "reason": "Professional nurse concept."
+    },
+    {
+      "id": "L8:F16339@14",
+      "label": "Mid-layer 'nurse' concept detectors (L6-L8)",
+      "reason": "Professional nurse concept."
+    },
+    {
+      "id": "L8:F16339@15",
+      "label": "Mid-layer 'nurse' concept detectors (L6-L8)",
+      "reason": "Professional nurse concept."
+    },
+    {
+      "id": "L14:F3985@14",
+      "label": "Late-layer profession/specialty features (L14-L20)",
+      "reason": "Profession/specialty detector."
+    },
+    {
+      "id": "L14:F3985@15",
+      "label": "Late-layer profession/specialty features (L14-L20)",
+      "reason": "Profession/specialty detector."
+    },
+    {
+      "id": "L18:F13596@14",
+      "label": "Late-layer profession/specialty features (L14-L20)",
+      "reason": "Profession/specialty detector."
+    },
+    {
+      "id": "L18:F13596@15",
+      "label": "Late-layer profession/specialty features (L14-L20)",
+      "reason": "Profession/specialty detector."
+    },
+    {
+      "id": "L18:F14457@14",
+      "label": "Late-layer profession/specialty features (L14-L20)",
+      "reason": "Profession/specialty detector."
+    },
+    {
+      "id": "L20:F4927@14",
+      "label": "Late-layer profession/specialty features (L14-L20)",
+      "reason": "Profession/specialty detector."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 25,
+  "n_other": 0,
+  "spurious_fraction": 0.038461538461538464,
+  "dominant": "causal",
+  "notes": "Profession tokens dominate; pronoun contribution is minor and isolated."
+}

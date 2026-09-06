@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "Male Pronoun Detector",
+      "reason": "Detects male pronouns; explicit gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "Academic Research Lexicon",
+      "reason": "Research terminology indicates scholarly profession context."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "Academic Degree Cascade",
+      "reason": "PhD signals academic qualification relevant to profession."
+    },
+    {
+      "id": "L5:F13801",
+      "label": "Academic Degree Cascade",
+      "reason": "Part of PhD/degree pathway for profession inference."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "Academic Degree Cascade",
+      "reason": "Part of degree cascade; supports academic credential cue."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "University/degree context is profession-related evidence."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "His",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: research (pos 2)",
+      "label": "research",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: interests (pos 3)",
+      "label": "interests",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "Emb: PhD (pos 27)",
+      "label": "PhD",
+      "reason": "Input token only; not a feature claim."
+    },
+    {
+      "id": "L0:F0@1",
+      "label": "embedding at pos 1",
+      "reason": "Pure embedding position, not semantic."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "embedding at pos 2",
+      "reason": "Pure embedding position, not semantic."
+    },
+    {
+      "id": "L0:F0@3",
+      "label": "embedding at pos 3",
+      "reason": "Pure embedding position, not semantic."
+    },
+    {
+      "id": "L0:F0@27",
+      "label": "embedding at pos 27",
+      "reason": "Pure embedding position, not semantic."
+    },
+    {
+      "id": "Profession Probe Logit",
+      "label": "Profession Probe Logit",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 5,
+  "n_other": 9,
+  "spurious_fraction": 0.16666666666666666,
+  "dominant": "causal",
+  "notes": "Oracle claims one gender cue plus multiple academic/professional indicators."
+}

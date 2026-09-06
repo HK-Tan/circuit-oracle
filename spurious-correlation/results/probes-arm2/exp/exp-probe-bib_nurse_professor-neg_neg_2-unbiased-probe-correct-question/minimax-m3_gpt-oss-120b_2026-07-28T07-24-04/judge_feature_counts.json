@@ -1,0 +1,177 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "Probe direction",
+      "label": "profession classification",
+      "reason": "Target task direction, not a feature."
+    },
+    {
+      "id": "Emb: ' Waterloo'",
+      "label": "first-mention university name",
+      "reason": "Institutional academic context."
+    },
+    {
+      "id": "Emb: ' Engineering'",
+      "label": "field-of-degree token",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "Emb: ' Mechanical'",
+      "label": "field-of-degree token",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "Emb: 'Daniel'",
+      "label": "subject name",
+      "reason": "Identity token only, oracle claims it."
+    },
+    {
+      "id": "Emb: ' received'",
+      "label": "narrative verb",
+      "reason": "Biographical structure, claimed by oracle."
+    },
+    {
+      "id": "Emb: ' degree'",
+      "label": "degree token",
+      "reason": "Education/profession context."
+    },
+    {
+      "id": "Emb: '1'/'9'/'9'",
+      "label": "year digits",
+      "reason": "Temporal education context, not gender."
+    },
+    {
+      "id": "Emb: ' later'",
+      "label": "temporal adverb",
+      "reason": "Biography timing, not gender."
+    },
+    {
+      "id": "Emb: 'Beirut'",
+      "label": "second-university name",
+      "reason": "Institutional academic context."
+    },
+    {
+      "id": "Emb: ' University'",
+      "label": "generic university token",
+      "reason": "Academic institution marker."
+    },
+    {
+      "id": "Emb: ' Ph'/'D'",
+      "label": "PhD token",
+      "reason": "Advanced degree indicator."
+    },
+    {
+      "id": "L0:F4687@14",
+      "label": "Early-layer name / verb / degree-token feature detectors",
+      "reason": "Education/name structure detector."
+    },
+    {
+      "id": "L0:F15320@2",
+      "label": "Early-layer name / verb / degree-token feature detectors",
+      "reason": "Narrative education structure."
+    },
+    {
+      "id": "L0:F7905@2",
+      "label": "Early-layer name / verb / degree-token feature detectors",
+      "reason": "Narrative education structure."
+    },
+    {
+      "id": "L0:F2085@2",
+      "label": "Early-layer name / verb / degree-token feature detectors",
+      "reason": "Narrative education structure."
+    },
+    {
+      "id": "L0:F12235@6",
+      "label": "Early-layer name / verb / degree-token feature detectors",
+      "reason": "Degree-token detector."
+    },
+    {
+      "id": "L0:F16309@1",
+      "label": "Early-layer name / verb / degree-token feature detectors",
+      "reason": "Name-token detector."
+    },
+    {
+      "id": "L0:F2743@23",
+      "label": "Early-layer name / verb / degree-token feature detectors",
+      "reason": "Temporal biography marker."
+    },
+    {
+      "id": "L0:F6515@18",
+      "label": "Early-layer name / verb / degree-token feature detectors",
+      "reason": "Year-digit detector."
+    },
+    {
+      "id": "L0:F11333@19",
+      "label": "Early-layer name / verb / degree-token feature detectors",
+      "reason": "Year-digit detector."
+    },
+    {
+      "id": "L0:F11132@19",
+      "label": "Early-layer name / verb / degree-token feature detectors",
+      "reason": "Year-digit detector."
+    },
+    {
+      "id": "L1:F1372@9",
+      "label": "Field-of-degree 'Engineering' detector at L1",
+      "reason": "Direct profession signal."
+    },
+    {
+      "id": "L2:F10852@50",
+      "label": "PhD token detector at L2",
+      "reason": "Advanced-degree signal."
+    },
+    {
+      "id": "L4:F8439@14",
+      "label": "University-name 'Waterloo' detector at L4",
+      "reason": "Academic institution signal."
+    },
+    {
+      "id": "L4:F13886@38",
+      "label": "University-name 'Waterloo' detector at L4",
+      "reason": "Academic institution signal."
+    },
+    {
+      "id": "L5:F13801@50",
+      "label": "PhD / advanced-degree features at L5",
+      "reason": "Advanced-degree signal."
+    },
+    {
+      "id": "L6:F11873@14",
+      "label": "University-context features at L6",
+      "reason": "Academic institution context."
+    },
+    {
+      "id": "L6:F3235@38",
+      "label": "University-context features at L6",
+      "reason": "Academic institution context."
+    },
+    {
+      "id": "L6:F2254@50",
+      "label": "University-context features at L6",
+      "reason": "Academic institution context."
+    },
+    {
+      "id": "L7:F8870@14",
+      "label": "Higher-level 'Waterloo' abstraction at L7",
+      "reason": "Institutional academic abstraction."
+    },
+    {
+      "id": "L7:F14129@50",
+      "label": "Higher-level 'Waterloo' abstraction at L7",
+      "reason": "Institutional academic abstraction."
+    },
+    {
+      "id": "L14:F5600@14",
+      "label": "Late-layer 'Waterloo' university-concept feature",
+      "reason": "Institutional academic concept."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 33,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle cites only education/institution signals; no gender markers or dismissed features."
+}

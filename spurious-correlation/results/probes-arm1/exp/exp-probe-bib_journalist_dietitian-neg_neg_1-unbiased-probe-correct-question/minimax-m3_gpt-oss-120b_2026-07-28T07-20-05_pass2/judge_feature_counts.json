@@ -1,0 +1,144 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8964",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Gendered pronoun marker"
+    },
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Explicit male-reference detector"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F14511",
+      "label": "the word \"report\"",
+      "reason": "Journalism/profession indicator"
+    },
+    {
+      "id": "L2:F10902",
+      "label": "the word \"top\"",
+      "reason": "Promoted by news-organization context"
+    },
+    {
+      "id": "L6:F12712",
+      "label": "titles of editors and publishers in scientific publications",
+      "reason": "Profession title detector"
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Direct journalism feature"
+    },
+    {
+      "id": "L8:F8855",
+      "label": "mentions of news reporters and news reporting",
+      "reason": "Reporter/journalism cue"
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism vocabulary"
+    },
+    {
+      "id": "L14:F2781",
+      "label": "words that describe degrees of importance or influence, especially in professional settings",
+      "reason": "Professional-context lexical cue"
+    },
+    {
+      "id": "L16:F15046",
+      "label": "names, organizations, and reporting verbs",
+      "reason": "Reporting/news structure feature"
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News-outlet detector"
+    },
+    {
+      "id": "L19:F14973",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News-outlet cluster feature"
+    },
+    {
+      "id": "L20:F8433",
+      "label": "words related to news broadcasting",
+      "reason": "Broadcast journalism cue"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: His (pos 1)",
+      "label": "His",
+      "reason": "Input token; already covered by gender feature"
+    },
+    {
+      "id": "Emb: report (pos 21)",
+      "label": "report",
+      "reason": "Input token; covered by causal report feature"
+    },
+    {
+      "id": "Emb: top (pos 26)",
+      "label": "top",
+      "reason": "Input token; covered by causal top feature"
+    },
+    {
+      "id": "Emb: news (pos 20)",
+      "label": "news",
+      "reason": "Input token; covered by journalism features"
+    },
+    {
+      "id": "Emb: countries (pos 11)",
+      "label": "countries",
+      "reason": "Input token; no oracle feature explicitly claims it"
+    },
+    {
+      "id": "L0:F14287",
+      "label": "the word \"see\"",
+      "reason": "Generic word detector"
+    },
+    {
+      "id": "L5:F771",
+      "label": "the word \"see\" and words often associated with \"see\"",
+      "reason": "Generic lexical association"
+    },
+    {
+      "id": "L17:F11691",
+      "label": "prepositions and possessive pronouns in long, complex sentences, especially when discussing legal matters, company specifics, or sports",
+      "reason": "Structural/syntax feature"
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function-word detector"
+    },
+    {
+      "id": "L0:F2203",
+      "label": "instances of the words \"world\" or \"game\" (possibly \"problem\") or expressions of existential quandaries.",
+      "reason": "Unrelated generic semantic feature"
+    },
+    {
+      "id": "L0:F13948",
+      "label": "the color \"pink\"",
+      "reason": "Unrelated lexical feature"
+    },
+    {
+      "id": "L0:F2011",
+      "label": "the word \"dream\"",
+      "reason": "Unrelated lexical feature"
+    },
+    {
+      "id": "L0:F15693",
+      "label": "language related to personal anecdotes and opinions",
+      "reason": "General discourse feature"
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 11,
+  "n_other": 13,
+  "spurious_fraction": 0.15384615384615385,
+  "dominant": "causal",
+  "notes": "Strong journalism signal dominates; gender pronoun leakage is present but secondary."
+}

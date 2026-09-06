@@ -1,0 +1,128 @@
+{
+  "spurious_features": [
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Identity-group discourse, not toxicity"
+    },
+    {
+      "id": "L1:F12542",
+      "label": "mentions of the word \"proud\" or words relating to TV shows and TV seasons.",
+      "reason": "Pride/identity token, not toxicity"
+    },
+    {
+      "id": "L1:F13646",
+      "label": "social justice discourse",
+      "reason": "Identity/social-issue vocabulary"
+    },
+    {
+      "id": "L1:F8766",
+      "label": "LGBTQ token detector",
+      "reason": "Identity-group token detector"
+    },
+    {
+      "id": "L2:F11363",
+      "label": "colors and words like Diamond.",
+      "reason": "Generic color/word detector"
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-group vocabulary"
+    },
+    {
+      "id": "L2:F9528",
+      "label": "the color black",
+      "reason": "Color/identity token, not toxicity"
+    },
+    {
+      "id": "L2:F1644",
+      "label": "different forms of the word \"pride\"",
+      "reason": "Identity-pride wording"
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social issues vocabulary"
+    },
+    {
+      "id": "L3:F7993",
+      "label": "the word \"black\" and its plural form \"blacks\"",
+      "reason": "Race term detector"
+    },
+    {
+      "id": "L4:F15899",
+      "label": "language associated with the LGBTQ community and discussions of gender and identity.",
+      "reason": "LGBTQ identity language"
+    },
+    {
+      "id": "L4:F8645",
+      "label": "same-sex marriage passages",
+      "reason": "LGBTQ topic, not toxicity"
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race discourse"
+    },
+    {
+      "id": "L6:F6085",
+      "label": "text related to homosexuality and same-sex marriage",
+      "reason": "LGBTQ topic vocabulary"
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity vocabulary"
+    },
+    {
+      "id": "L6:F15295",
+      "label": "words and abbreviations related to HIV/AIDS and viral infections.",
+      "reason": "Identity-linked topic, not toxicity"
+    },
+    {
+      "id": "L8:F15771",
+      "label": "discussion of LGBTQ+ issues, especially same-sex marriage, adoption, and related topics",
+      "reason": "LGBTQ+ topic detector"
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: Black (pos 1)",
+      "label": "token embedding",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: Pride (pos 2)",
+      "label": "token embedding",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: black (pos 5)",
+      "label": "token embedding",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: Gay (pos 9)",
+      "label": "token embedding",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Emb: White (pos 17)",
+      "label": "token embedding",
+      "reason": "Input token, not a feature"
+    },
+    {
+      "id": "Probe direction",
+      "label": "toxicity classifier score",
+      "reason": "Output target, not a circuit feature"
+    }
+  ],
+  "n_spurious": 17,
+  "n_causal": 0,
+  "n_other": 6,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly identity-vocabulary driven; no toxicity-specific causal features are claimed."
+}

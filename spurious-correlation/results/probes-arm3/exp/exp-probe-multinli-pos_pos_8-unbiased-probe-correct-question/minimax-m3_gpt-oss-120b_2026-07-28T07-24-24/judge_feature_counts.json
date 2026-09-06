@@ -1,0 +1,132 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Congress-related semantic content tied to task-relevant meaning."
+    },
+    {
+      "id": "L3:F5753",
+      "label": "the word \"includes\" or \"containing\".",
+      "reason": "Lexical entailment/quantifier meaning relevant to NLI."
+    },
+    {
+      "id": "L0:F6044",
+      "label": "the word \"yield\"",
+      "reason": "Content word; not negation or generic structure."
+    },
+    {
+      "id": "L0:F15411",
+      "label": "terms relating to political bodies, figures, and processes",
+      "reason": "Political content overlaps with premise-hypothesis semantics."
+    },
+    {
+      "id": "L4:F59",
+      "label": "phrases with the word 'to' preceded by a verb or the word 'start' or 'begin'.",
+      "reason": "Syntactic/semantic relation feature, not purely structural."
+    },
+    {
+      "id": "L0:F10401",
+      "label": "mentions of genes and proteins",
+      "reason": "Content-specific semantic feature."
+    },
+    {
+      "id": "L2:F6735",
+      "label": "political parties and politicians",
+      "reason": "Task-relevant political semantics."
+    },
+    {
+      "id": "L3:F8351",
+      "label": "words related to including and code language symbols",
+      "reason": "Including-related semantics support entailment-style relations."
+    },
+    {
+      "id": "L0:F9557",
+      "label": "the word \"clean\" and words/phrases associated with people",
+      "reason": "Mixed lexical-semantic content, not negation."
+    },
+    {
+      "id": "L1:F4224",
+      "label": "the word \"registration\" and its variations",
+      "reason": "Specific content word; not generic structure."
+    },
+    {
+      "id": "L3:F123",
+      "label": "mentions of the United States Congress",
+      "reason": "Directly tracks task content about Congress."
+    },
+    {
+      "id": "L1:F5475",
+      "label": "words or phrases related to scientific studies, user interfaces, or labels",
+      "reason": "Content/topic cue rather than structural."
+    },
+    {
+      "id": "L0:F3204",
+      "label": "proper nouns, especially including titles of works and organizations",
+      "reason": "Named-entity content can support semantic alignment."
+    },
+    {
+      "id": "L0:F10783",
+      "label": "the word \"include\" (and variations of the word)",
+      "reason": "Inclusion semantics are task-relevant."
+    },
+    {
+      "id": "L1:F2089",
+      "label": "mentions of `constructor` or `congress`",
+      "reason": "Congress mention is semantically relevant."
+    },
+    {
+      "id": "L1:F14565",
+      "label": "locations, government positions, and organizations",
+      "reason": "Government/organization semantics relate to the premise."
+    },
+    {
+      "id": "L0:F10198",
+      "label": "the word \"Congress\"",
+      "reason": "Directly captures task-relevant subject matter."
+    },
+    {
+      "id": "L1:F12456",
+      "label": "names of organizations, particularly governmental or religious institutions, especially of Indian origin.",
+      "reason": "Organization semantics, not generic structure."
+    },
+    {
+      "id": "L0:F195",
+      "label": "the word \"who\"",
+      "reason": "Oracle treats as content cue; not negation or generic punctuation."
+    },
+    {
+      "id": "L0:F11640",
+      "label": "the word \"multi\" and words that commonly occur with \"multi\"",
+      "reason": "Lexical content cue, not spurious negation."
+    },
+    {
+      "id": "L0:F4476",
+      "label": "mentions of personal pronouns and hair",
+      "reason": "Content association; not structural."
+    },
+    {
+      "id": "L0:F13564",
+      "label": "the word \"which\"",
+      "reason": "Content/syntactic cue used in relation matching."
+    },
+    {
+      "id": "L1:F9361",
+      "label": "proper nouns and place names, especially those related to India",
+      "reason": "Named-entity semantics."
+    },
+    {
+      "id": "L0:F13417",
+      "label": "mentions of the military, or occasionally other types of conflict",
+      "reason": "Conflict-related semantic content."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 0,
+  "n_causal": 24,
+  "n_other": 0,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle claims no negation detectors; all listed features are treated as task-relevant semantic/content cues."
+}

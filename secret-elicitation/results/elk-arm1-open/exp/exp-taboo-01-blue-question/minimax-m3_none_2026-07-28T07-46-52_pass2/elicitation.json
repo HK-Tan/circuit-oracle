@@ -1,0 +1,114 @@
+{
+  "prompt": "Qwen3-8B taboo game \u2014 infer hidden target word from circuit",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 28,
+      "feature_idx": 97872,
+      "pos": 20,
+      "supernode_label": "color concept (blue)",
+      "autointerp": "Activates on mentions of colors, color terms, and discussions of hues, primary colors, and other color\u2011related descriptions.",
+      "frac_nonzero": 0.004461696061927809,
+      "neuronpedia_url": "https://neuronpedia.org/qwen3-8b/28-transcoder-hp/97872"
+    },
+    {
+      "layer": 23,
+      "feature_idx": 74373,
+      "pos": 11,
+      "supernode_label": "color concept (blue)",
+      "autointerp": "Activates on references to the color blue (including hyphenated forms and translations), especially when describing objects or eyes.",
+      "frac_nonzero": 0.0008894759055173839,
+      "neuronpedia_url": "https://neuronpedia.org/qwen3-8b/23-transcoder-hp/74373"
+    },
+    {
+      "layer": 22,
+      "feature_idx": 26341,
+      "pos": 11,
+      "supernode_label": "color concept (blue)",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/qwen3-8b/22-transcoder-hp/26341"
+    },
+    {
+      "layer": 28,
+      "feature_idx": 162974,
+      "pos": 20,
+      "supernode_label": "English article+noun scaffold",
+      "autointerp": "Activates on English sentences containing articles (the, a, some) and promotes subsequent English nouns/adjectives while suppressing non\u2011Latin tokens.",
+      "frac_nonzero": 0.9807097882874154,
+      "neuronpedia_url": "https://neuronpedia.org/qwen3-8b/28-transcoder-hp/162974"
+    },
+    {
+      "layer": 29,
+      "feature_idx": 10765,
+      "pos": 20,
+      "supernode_label": "target: blue",
+      "autointerp": "Detects references to the color blue, especially in pigment or descriptive contexts, promoting blue tokens while suppressing orange/yellow terms.",
+      "frac_nonzero": 0.0018396634582429875,
+      "neuronpedia_url": "https://neuronpedia.org/qwen3-8b/29-transcoder-hp/10765"
+    },
+    {
+      "layer": 30,
+      "feature_idx": 140783,
+      "pos": 20,
+      "supernode_label": "association/connection",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/qwen3-8b/30-transcoder-hp/140783"
+    },
+    {
+      "layer": 31,
+      "feature_idx": 46402,
+      "pos": 20,
+      "supernode_label": "association/connection",
+      "autointerp": "Activates on language describing associations or links (e.g., \u201cassociated with,\u201d \u201ccommon source\u201d), prompting the token \u201cconnected.\u201d",
+      "frac_nonzero": 0.004915096333465532,
+      "neuronpedia_url": "https://neuronpedia.org/qwen3-8b/31-transcoder-hp/46402"
+    },
+    {
+      "layer": 25,
+      "feature_idx": 510,
+      "pos": 20,
+      "supernode_label": "famous/well-known attribute",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/qwen3-8b/25-transcoder-hp/510"
+    },
+    {
+      "layer": 36,
+      "feature_idx": 0,
+      "pos": 0,
+      "supernode_label": "output logits",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/qwen3-8b/36-transcoder-hp/0"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "blue_concept",
+      "to": "blue_target"
+    },
+    {
+      "from": "english_scaffold",
+      "to": "blue_target"
+    },
+    {
+      "from": "blue_target",
+      "to": "association"
+    },
+    {
+      "from": "famous",
+      "to": "blue_target"
+    },
+    {
+      "from": "blue_target",
+      "to": "output"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "## Final Answer\nSHORTLIST: blue, color, red, green, yellow, sky, ocean, water, hue, paint\n\nCONFIDENCE: 7\n\nEVIDENCE: L29:F10765, L23:F74373, L28:F97872, L22:F26341, L30:F140783, L31:F46402, L25:F510\n\nREASONING: The strongest mid-layer diff-specific feature is L29:F10765 with top_logits \"Blue/\u85cd/\u84dd\" and label \"Detects references to the color blue...promoting blue tokens while suppressing orange/yellow terms\", fed by upstream color-detector features L23:F74373 (\"references to the color blue...describing objects or eyes\") and L28:F97872 (\"mentions of colors, color terms...hues, primary colors\"), all converging on the color \"blue\" as the encoded concept. The \"famous/well-known\" and \"association/connected\" features support the pattern of hint-giving about a famous attribute (a color). Adjacent color lemmas (red, green, yellow, hue) and color-associated objects (sky, ocean, water, paint) are listed as nearby fallbacks, but \"blue\" is the single best-supported target.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

@@ -1,0 +1,137 @@
+{
+  "prompt": "Dataset: multinli-pos_pos_2 | Probe: unbiased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 4,
+      "feature_idx": 12126,
+      "pos": 2,
+      "supernode_label": "Acknowledgement/conversational opener",
+      "autointerp": " expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "frac_nonzero": 0.01233,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/12126"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 4847,
+      "pos": 2,
+      "supernode_label": "Acknowledgement/conversational opener",
+      "autointerp": " words or short phrases often used in conversation, and especially questions and answers",
+      "frac_nonzero": 0.01156,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/4847"
+    },
+    {
+      "layer": 2,
+      "feature_idx": 1759,
+      "pos": 2,
+      "supernode_label": "Acknowledgement/conversational opener",
+      "autointerp": null,
+      "frac_nonzero": null,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/2-gemmascope-transcoder-16k/1759"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 8083,
+      "pos": 6,
+      "supernode_label": "NCAA phrase / 'double A' and sports-stat form",
+      "autointerp": "the word \"double\" and surrounding words when numbers are also present",
+      "frac_nonzero": 0.01553,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/8083"
+    },
+    {
+      "layer": 3,
+      "feature_idx": 9770,
+      "pos": 7,
+      "supernode_label": "NCAA phrase / 'double A' and sports-stat form",
+      "autointerp": " technical and scientific writing about neuroscience and chemistry, possibly about calcium",
+      "frac_nonzero": 0.01089,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/3-gemmascope-transcoder-16k/9770"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 5709,
+      "pos": 14,
+      "supernode_label": "Temporal 'now' cue",
+      "autointerp": "astronomy terms",
+      "frac_nonzero": 0.01416,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/5709"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 6236,
+      "pos": 20,
+      "supernode_label": "Token-level contracted negation detector",
+      "autointerp": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "frac_nonzero": 0.00258,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/6236"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 16366,
+      "pos": 25,
+      "supernode_label": "Lexical because detector",
+      "autointerp": " the word \"because\"",
+      "frac_nonzero": 0.01813,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/16366"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "emb_well",
+      "to": "well_discourse"
+    },
+    {
+      "from": "emb_yeah",
+      "to": "well_discourse"
+    },
+    {
+      "from": "emb_double",
+      "to": "sports_number"
+    },
+    {
+      "from": "emb_now",
+      "to": "now_cue"
+    },
+    {
+      "from": "emb_havent",
+      "to": "negation"
+    },
+    {
+      "from": "emb_apostrophe",
+      "to": "negation"
+    },
+    {
+      "from": "emb_t",
+      "to": "negation"
+    },
+    {
+      "from": "emb_because",
+      "to": "causal"
+    },
+    {
+      "from": "well_discourse",
+      "to": "probe"
+    },
+    {
+      "from": "sports_number",
+      "to": "probe"
+    },
+    {
+      "from": "now_cue",
+      "to": "probe"
+    },
+    {
+      "from": "negation",
+      "to": "probe"
+    },
+    {
+      "from": "causal",
+      "to": "probe"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "**Analysis:** The contradiction-probe score is driven primarily by shallow lexical/discourse features\u2014especially the opening \u201cyeah well,\u201d contracted negation in \u201chaven\u2019t,\u201d and local \u201cdouble A\u201d/\u201cnow\u201d cues\u2014rather than by a compositional representation that resolves the incompatibility between *\u201chaven\u2019t watched \u2026 a single game\u201d* and *\u201chaven\u2019t missed a single game.\u201d*\n\n**Confidence:** 8/10\n\n**Reasoning:** The saved circuit shows a predominantly surface-form mechanism feeding the linear probe direction.\n\n* **Discourse-opener path:** `Emb: yeah (pos 1)` and `Emb: well (pos 2)` strongly excite the acknowledgement/conversational-opener supernode. Its major components are:\n  * L4:F12126 at pos 2, labelled acknowledgement/agreement expressions such as \u201cwell\u201d and \u201cyeah\u201d (`frac_nonzero=0.01233`), which has the largest listed probe effect, **\u22120.6484**.\n  * L4:F4847 at pos 2, a conversational-question/answer feature (`frac_nonzero=0.01156`), with **+0.3887** probe effect.\n  * The upstream attribution is direct and lexical: \u201c well\u201d contributes +14.625 into F12126 and +8.0625 into F4847; \u201cyeah\u201d contributes +4.625 into F12126. This is compelling evidence of a discourse-style cue, not contradiction reasoning. The two related features even push the probe in opposite directions, consistent with an incidental probe alignment to a style subspace.\n\n* **Negation path:** `Emb: haven (pos 18)`, the apostrophe at pos 19, and `t` at pos 20 feed L0:F6236. This feature is explicitly a contracted-negation-token detector\u2014\u201ct\u201d after *isn\u2019*/*doesn\u2019*\u2014with very low firing frequency (`frac_nonzero=0.00258`) and top promoted tokens **\u201cnot,\u201d \u201cNot,\u201d \u201cNOT\u201d**. It has a substantial **negative** direct effect on the probe (**\u22120.4570**). Its immediate upstream evidence is exact tokenization: `t` +17.875, `haven` +16.625, apostrophe +12.125. Thus, the probe is plainly sensitive to negation morphology, but this feature alone neither represents nor compares the two propositions.\n\n* **\u201cDouble A\u201d / sports-form path:** `Emb: double (pos 6)` directly activates L0:F8083, which detects \u201cdouble\u201d in numerical contexts (`frac_nonzero=0.01553`; **\u22120.3320** to the probe), with direct input attribution +19.625 from \u201cdouble.\u201d It also feeds the L3:F9770 path (**\u22120.3145**), whose nominal autogenerated label is neuroscience/chemistry but whose strongest examples include sports statistics, scores, rebounds, and \u201cfigures\u201d; in this prompt it is driven primarily by `Emb: double (pos 6)` (+18.0), not by an abstract NCAA-tournament representation. This looks like a local lexical/format cue associated with the phrase \u201cNC double A,\u201d rather than semantic recognition of the sporting claim.\n\n* **Temporal and causal lexical paths:** L4:F5709 at \u201cnow\u201d (pos 14) has **\u22120.2773** probe effect, despite its noisy \u201castronomy terms\u201d label. The actual attribution identifies `Emb: now (pos 14)` as overwhelmingly dominant (+40.75), so its operative role here is a token-specific *now* cue. Similarly, L0:F16366 detects \u201cbecause\u201d (`frac_nonzero=0.01813`) and has **+0.2930** effect; it receives +40.75 directly from `Emb: because (pos 25)`. This is lexical detection of a causal connective, not a representation of the causal proposition.\n\nThe circuit contains some task-relevant ingredients: it detects the negation in \u201chaven\u2019t,\u201d and it notices discourse/cause markers around the two claims. But no traced high-impact feature is an entity-specific or proposition-level feature for **Louisville**, **watching games**, **missing games**, or a cross-sentence incompatibility relation. In particular, the strongest paths reach embeddings directly at the exact cue words, rather than showing a multi-layer merge of the first statement\u2019s *not watched any* content with the second statement\u2019s *not missed any* content.\n\nTherefore, the user concern is substantially supported: this probe\u2019s classification score is dominated by spurious or weakly correlated lexical/style signatures\u2014especially contracted negation\u2014rather than robust semantic contradiction detection. The fact that \u201cbecause,\u201d \u201cyeah well,\u201d \u201cdouble,\u201d and \u201cnow\u201d independently have large effects is further evidence that the linear probe direction is entangled with training-distribution artifacts.",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

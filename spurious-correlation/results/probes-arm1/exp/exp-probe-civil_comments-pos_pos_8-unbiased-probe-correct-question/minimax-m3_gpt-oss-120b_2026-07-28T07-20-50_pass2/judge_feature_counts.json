@@ -1,0 +1,138 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F13885",
+      "label": "Middle-Eastern proper-noun detector",
+      "reason": "Detects Islam-related identity/location token."
+    },
+    {
+      "id": "L1:F4314",
+      "label": "Early-layer Islamic vocabulary detector",
+      "reason": "Tracks Islamic vocabulary, an identity signal."
+    },
+    {
+      "id": "L1:F2352",
+      "label": "Early-layer Islamic vocabulary detector",
+      "reason": "Tracks Islamic vocabulary, an identity signal."
+    },
+    {
+      "id": "L0:F4470",
+      "label": "Generic religion detector",
+      "reason": "Flags religious identity mention, not toxicity."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "Religious identity/affiliation detector",
+      "reason": "Detects affiliation/identity, not abusive content."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "Islam / Middle-Eastern people+places detector (mixed sign)",
+      "reason": "Mainly identity/region mention of Islam."
+    },
+    {
+      "id": "L7:F11758",
+      "label": "Cultural/Islamic proper-noun + district detector (PUSHES UP on probe)",
+      "reason": "Responds to Islamic proper nouns."
+    },
+    {
+      "id": "L7:F11743",
+      "label": "Cultural/Islamic proper-noun + district detector (PUSHES UP on probe)",
+      "reason": "Responds to Islamic proper nouns."
+    },
+    {
+      "id": "L7:F14049",
+      "label": "Cultural/Islamic proper-noun + district detector (PUSHES UP on probe)",
+      "reason": "Responds to Islamic proper nouns."
+    },
+    {
+      "id": "L8:F16294",
+      "label": "Mid-East / Central-Asia proper-noun entity (PUSHES UP on probe)",
+      "reason": "Detects Middle-East/Central-Asia entity references."
+    },
+    {
+      "id": "L8:F5783",
+      "label": "Mid-East / Central-Asia proper-noun entity (PUSHES UP on probe)",
+      "reason": "Detects Middle-East/Central-Asia entity references."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Emb: ' Islam' (pos 4)",
+      "label": "Embedding: Islam",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' problem' (pos 2)",
+      "label": "Embedding: problem",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' with' (pos 3)",
+      "label": "Embedding: with",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' is' (pos 5)",
+      "label": "Embedding: is",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' that' (pos 6)",
+      "label": "Embedding: that",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: ' it' (pos 7)",
+      "label": "Embedding: it",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: <bos> (pos 0)",
+      "label": "Embedding: beginning-of-sequence",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: 'The' (pos 1)",
+      "label": "Embedding: The",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Structural discourse/pronoun feature."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F7253",
+      "label": "the word \"present\" or the word \"left\" or inflected forms thereof",
+      "reason": "Irrelevant lexical detector."
+    },
+    {
+      "id": "L2:F7214",
+      "label": "references to countries or regions associated with Islam",
+      "reason": "Geographic/religion association, not toxicity."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 0,
+  "n_other": 14,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by Islam/identity detectors; no toxic-content features are claimed."
+}

@@ -1,0 +1,133 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L2:F8776",
+      "label": "words related to finance and property law",
+      "reason": "Unrelated lexical content; only co-occurs with recorded."
+    },
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Lexical recorded/recording detector, not NLI semantics."
+    },
+    {
+      "id": "L2:F3059",
+      "label": "the verb \"record\"",
+      "reason": "Content-word detector on recorded, not reasoning about entailment."
+    },
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Generic token detector, not task semantics."
+    },
+    {
+      "id": "L2:F11317",
+      "label": "abbreviated examples",
+      "reason": "Distant lexical coactivation; no semantic relation."
+    },
+    {
+      "id": "L0:F7404",
+      "label": "the word \"faith\", sometimes in association with related ideas like \"links\" or \"opportunities\"",
+      "reason": "Spurious neighbor on recorded, not causal."
+    },
+    {
+      "id": "L0:F9990",
+      "label": "the word \"concert\" and some words related to concerts",
+      "reason": "Spurious neighbor on recorded, not causal."
+    },
+    {
+      "id": "L0:F13280",
+      "label": "passages discussing real estate",
+      "reason": "Spurious neighbor on recorded, not causal."
+    },
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Pure lexical menu detector."
+    },
+    {
+      "id": "L1:F12253",
+      "label": "the word 'menu'",
+      "reason": "Pure lexical menu detector."
+    },
+    {
+      "id": "L3:F3573",
+      "label": "the word \"menu\" often in conjunction with interface elements",
+      "reason": "Menu/interface lexical pattern, not semantics."
+    },
+    {
+      "id": "L2:F3648",
+      "label": "code snippets related to menus and restaurants",
+      "reason": "Menu token context, not entailment reasoning."
+    },
+    {
+      "id": "L0:F5128",
+      "label": "the word \"words\" or words that are similar in meaning (word, Word, phrases, matrix)",
+      "reason": "Generic lexical feature, not NLI semantics."
+    },
+    {
+      "id": "L0:F8046",
+      "label": "the word \"will.\"",
+      "reason": "Pure token detector, structural content only."
+    },
+    {
+      "id": "L2:F188",
+      "label": "the word \"will\" in various contexts, sometimes alongside words related to consequences or legal matters",
+      "reason": "Lexical will detector, not causal relation."
+    },
+    {
+      "id": "L0:F4523",
+      "label": "the word \"domestic\" and words associated with globalism",
+      "reason": "Unrelated lexical association on will/menu context."
+    },
+    {
+      "id": "L0:F6649",
+      "label": "the word \"Title\"",
+      "reason": "Distant lexical noise; not task-relevant."
+    },
+    {
+      "id": "L4:F7643",
+      "label": "words related to providing assistance or describing results",
+      "reason": "Generic utility/results wording, not NLI semantics."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Pure structural sentence-start detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Output",
+      "label": "probe classification score (logit)",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "Emb: ' recorded'",
+      "label": "embedding",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: ' menu'",
+      "label": "embedding",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: ' will'",
+      "label": "embedding",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: 'A'",
+      "label": "embedding",
+      "reason": "Input embedding node."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 19,
+  "n_other": 5,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle shows shallow lexical and structural detectors; no negation-word feature appears."
+}

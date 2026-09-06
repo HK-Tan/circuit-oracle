@@ -1,0 +1,69 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F11518",
+      "label": "the word \"land\" in scientific/agricultural contexts",
+      "reason": "Agricultural topic word, not meaning relation."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F4819",
+      "label": "sentences containing the word \"fire\" or similar terms",
+      "reason": "Task-relevant content word tied to the premise meaning."
+    },
+    {
+      "id": "L4:F5450",
+      "label": "code snippets from different languages and words related to starting or beginning something",
+      "reason": "Beginning/template cue aligned with set about."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: land (pos 7)",
+      "label": "embedded token",
+      "reason": "Raw token, not a feature role."
+    },
+    {
+      "id": "Emb: So (pos 1)",
+      "label": "embedded token",
+      "reason": "Raw token, not a feature role."
+    },
+    {
+      "id": "Emb: they (pos 2)",
+      "label": "embedded token",
+      "reason": "Raw token, not a feature role."
+    },
+    {
+      "id": "Emb: set (pos 3)",
+      "label": "embedded token",
+      "reason": "Raw token, not a feature role."
+    },
+    {
+      "id": "Emb: about (pos 4)",
+      "label": "embedded token",
+      "reason": "Raw token, not a feature role."
+    },
+    {
+      "id": "L4:F12225",
+      "label": "transitional conclusion words, often used in legal or academic writing",
+      "reason": "Discourse marker; purely structural."
+    },
+    {
+      "id": "L0:F3498",
+      "label": "the pronoun \"they\" or its possessive form.",
+      "reason": "Pronoun detector, not NLI semantics."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Local lexical pattern, not relation."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 2,
+  "n_other": 8,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "No negation detector appears; evidence is mostly shallow lexical/template cues."
+}

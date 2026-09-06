@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F10815",
+      "label": "Negation words in hypothesis (does/not/contain/any, pos 35\u201338)",
+      "reason": "Hypothesis-side negation cue; specifically mentions 'any'."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13244",
+      "label": "Entity recognizer: 'castle' (pos 2)",
+      "reason": "Tracks premise entity content relevant to entailment/contradiction."
+    },
+    {
+      "id": "L2:F4429",
+      "label": "'early 17th-century' tokens (pos 5\u20136, premise)",
+      "reason": "Premise content feature about temporal/semantic details."
+    },
+    {
+      "id": "L1:F1027",
+      "label": "'tower house' compound (pos 13\u201314, premise)",
+      "reason": "Premise noun-phrase content, not a negation cue."
+    },
+    {
+      "id": "L0:F4079",
+      "label": "'tower house' compound (pos 13\u201314, premise)",
+      "reason": "Premise noun-phrase content, not a negation cue."
+    },
+    {
+      "id": "L0:F10815",
+      "label": "'tower house' compound (pos 13\u201314, premise)",
+      "reason": "Surface content feature on premise noun phrase."
+    },
+    {
+      "id": "L1:F11220",
+      "label": "'tower house' compound (pos 13\u201314, premise)",
+      "reason": "Premise content about restoration/state."
+    },
+    {
+      "id": "L2:F1430",
+      "label": "'tower house' compound (pos 13\u201314, premise)",
+      "reason": "Noun-phrase feature; acts on content, not negation."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "'tower house' compound (pos 13\u201314, premise)",
+      "reason": "Lexical/content feature on premise phrase."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "'tower house' compound (pos 13\u201314, premise)",
+      "reason": "Premise content token 'from' in noun phrase context."
+    },
+    {
+      "id": "L0:F7360",
+      "label": "'early 17th-century' tokens (pos 5\u20136, premise)",
+      "reason": "Premise lexical content feature."
+    },
+    {
+      "id": "L0:F5494",
+      "label": "'early 17th-century' tokens (pos 5\u20136, premise)",
+      "reason": "Premise lexical content feature."
+    },
+    {
+      "id": "L0:F4367",
+      "label": "'early 17th-century' tokens (pos 5\u20136, premise)",
+      "reason": "Premise lexical content feature."
+    },
+    {
+      "id": "L0:F7513",
+      "label": "'early 17th-century' tokens (pos 5\u20136, premise)",
+      "reason": "Premise lexical content feature."
+    },
+    {
+      "id": "L0:F8406",
+      "label": "BOS/'The' meta-state on pos 1 (inhibitory)",
+      "reason": "Generic position/meta-state, dismissed as structural."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L6:F486",
+      "label": "Mid-layer abstract features on 'house' (pos 14)",
+      "reason": "Oracle notes abstract feature, but not semantic-claim specific."
+    },
+    {
+      "id": "L4:F13244",
+      "label": "Mid-layer abstract features on 'house' (pos 14)",
+      "reason": "Appears as abstract/structural in house chain."
+    },
+    {
+      "id": "L3:F14368",
+      "label": "Mid-layer abstract features on 'house' (pos 14)",
+      "reason": "Abstract mid-layer feature; oracle doesn't claim semantics."
+    },
+    {
+      "id": "L2:F8185",
+      "label": "Mid-layer abstract features on 'house' (pos 14)",
+      "reason": "Abstract mid-layer feature; oracle doesn't claim semantics."
+    },
+    {
+      "id": "L0:F9604",
+      "label": "Mid-layer abstract features on 'house' (pos 14)",
+      "reason": "Abstract mid-layer feature; oracle doesn't claim semantics."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "BOS/'The' meta-state on pos 1 (inhibitory)",
+      "reason": "Generic BOS/meta-state feature."
+    },
+    {
+      "id": "L7:F462",
+      "label": "BOS/'The' meta-state on pos 1 (inhibitory)",
+      "reason": "Generic BOS/meta-state feature."
+    },
+    {
+      "id": "L7:F5741",
+      "label": "BOS/'The' meta-state on pos 1 (inhibitory)",
+      "reason": "Generic BOS/meta-state feature."
+    },
+    {
+      "id": "L5:F3992",
+      "label": "BOS/'The' meta-state on pos 1 (inhibitory)",
+      "reason": "Generic BOS/meta-state feature."
+    },
+    {
+      "id": "L6:F14585",
+      "label": "BOS/'The' meta-state on pos 1 (inhibitory)",
+      "reason": "Generic BOS/meta-state feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 14,
+  "n_other": 10,
+  "spurious_fraction": 0.06666666666666667,
+  "dominant": "causal",
+  "notes": "Mostly premise-content features; only one clear negation-word cue. BOS/meta-state and abstract features go to other."
+}

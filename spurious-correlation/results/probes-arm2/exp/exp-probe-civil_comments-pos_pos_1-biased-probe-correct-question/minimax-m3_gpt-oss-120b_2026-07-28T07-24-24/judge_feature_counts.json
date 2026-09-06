@@ -1,0 +1,123 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13158",
+      "label": "Identity-term group detectors (white, black, race)",
+      "reason": "Detects demographic identity vocabulary."
+    },
+    {
+      "id": "L4:F117",
+      "label": "Identity-term group detectors (white, black, race)",
+      "reason": "Anchored to racial/ethnic identity terms."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "Identity-term group detectors (white, black, race)",
+      "reason": "Fires on racial identity tokens."
+    },
+    {
+      "id": "L4:F14582",
+      "label": "Entity-specific feature (trump)",
+      "reason": "Entity detector, not toxicity semantics."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F3255",
+      "label": "Function-word / subword detectors (and, other, ., bigot)",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F7969",
+      "label": "Function-word / subword detectors (and, other, ., bigot)",
+      "reason": "Generic structural/lexical detector."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "Function-word / subword detectors (and, other, ., bigot)",
+      "reason": "Punctuation detector."
+    },
+    {
+      "id": "L5:F8030",
+      "label": "Function-word / subword detectors (and, other, ., bigot)",
+      "reason": "Subword/function-word detector."
+    },
+    {
+      "id": "L0:F0@32",
+      "label": "Emb: black (pos 32)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@25",
+      "label": "Emb: white (pos 15, 25)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@15",
+      "label": "Emb: white (pos 15, 25)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@40",
+      "label": "Emb: race (pos 40)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@10",
+      "label": "Emb: and (pos 10)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@14",
+      "label": "Emb: other (pos 14)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@18",
+      "label": "Emb: . (pos 18)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@2",
+      "label": "Emb: clearly (pos 2)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@5",
+      "label": "Emb: trump (pos 5)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@8",
+      "label": "Emb: bigot/bigots (pos 8/9/16/17)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: bigot/bigots (pos 8/9/16/17)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@16",
+      "label": "Emb: bigot/bigots (pos 8/9/16/17)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L0:F0@17",
+      "label": "Emb: bigot/bigots (pos 8/9/16/17)",
+      "reason": "Embedding node only, no semantic claim."
+    },
+    {
+      "id": "L26:F0@0",
+      "label": "Probe classification direction",
+      "reason": "Model direction, not a feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 18,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle cites identity and entity detectors; no toxic-content features are claimed."
+}

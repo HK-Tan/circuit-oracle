@@ -1,0 +1,59 @@
+{
+  "spurious_features": [
+    {
+      "id": "L1:F13646",
+      "label": "text discussing social justice issues",
+      "reason": "Identity/social-justice context, not toxicity itself."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity lexicon detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Racism/racial-language detector."
+    },
+    {
+      "id": "L3:F15009",
+      "label": "words or phrases related to courts, legalese, and mental states",
+      "reason": "Prejudice/bias-context route in oracle analysis."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L5:F8030",
+      "label": "language discussing differences, clarity, and definition",
+      "reason": "Argumentative clarity/style feature."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Pure generic token detector."
+    },
+    {
+      "id": "L0:F7969",
+      "label": "the word \"other\"",
+      "reason": "Pure generic token detector."
+    },
+    {
+      "id": "L0:F6154",
+      "label": "uses of 'clearly' and nearby words that are related to arguments and writing",
+      "reason": "Generic lexical/style detector."
+    },
+    {
+      "id": "L0:F5707",
+      "label": "words or phrases related to knowledge or perspective",
+      "reason": "Generic perspective/knowledge feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 2,
+  "n_other": 5,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Race-topic and racism signals both matter; several generic style tokens also contribute."
+}

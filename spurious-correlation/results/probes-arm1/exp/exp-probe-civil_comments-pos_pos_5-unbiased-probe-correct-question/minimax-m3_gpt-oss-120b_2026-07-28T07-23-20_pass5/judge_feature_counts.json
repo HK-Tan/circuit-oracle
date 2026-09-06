@@ -1,0 +1,129 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F1537",
+      "label": "words and phrases related to political and social issues and movements",
+      "reason": "Social-justice movement lexicon, not toxicity."
+    },
+    {
+      "id": "L0:F3591",
+      "label": "terms related to government social programs",
+      "reason": "Social-domain vocabulary, identity-adjacent."
+    },
+    {
+      "id": "L0:F4478",
+      "label": "terms related to ownership and belief systems",
+      "reason": "Belief/identity wording, not abuse."
+    },
+    {
+      "id": "L0:F2260",
+      "label": "terms that are medical, legal, or related to social work",
+      "reason": "Social-work context, not toxic content."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L3:F16254",
+      "label": "conditional statements followed by actions the speaker will take",
+      "reason": "Hateful conditional imperative structure."
+    },
+    {
+      "id": "L3:F10868",
+      "label": "the phrase \"I'm a\" or \"I am a\"",
+      "reason": "Identity-phrase template in the insult."
+    },
+    {
+      "id": "L4:F13700",
+      "label": "conditional clauses starting with \"if\" and words related to business contexts",
+      "reason": "Conditional structure shaping the directive."
+    },
+    {
+      "id": "L6:F2674",
+      "label": "words and phrases related to desserts",
+      "reason": "Bakery/cake context supporting the prompt."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7710",
+      "label": "the pronoun \"you\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F13310",
+      "label": "sentences that include forms of the verb \"are\" indicating a present state of being or necessity.",
+      "reason": "Purely structural be-verb feature."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic preposition detector."
+    },
+    {
+      "id": "L0:F10219",
+      "label": "the indefinite article \"a\"",
+      "reason": "Generic article detector."
+    },
+    {
+      "id": "L1:F10447",
+      "label": "articles and prepositions",
+      "reason": "Generic syntax support."
+    },
+    {
+      "id": "L1:F14281",
+      "label": "the word \"instruction\" and its plural",
+      "reason": "Instructional wording, not toxicity."
+    },
+    {
+      "id": "L2:F13877",
+      "label": "words related to roles, ranks, or personal characteristics of people",
+      "reason": "Role/person feature, not demographic toxicity."
+    },
+    {
+      "id": "L0:F9934",
+      "label": "the word \"particular\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L0:F9602",
+      "label": "the word \"emphasis.\"",
+      "reason": "Generic wording, not semantic toxicity."
+    },
+    {
+      "id": "L0:F4870",
+      "label": "commas and sometimes reach (context not clear)",
+      "reason": "Punctuation/unclear structure."
+    },
+    {
+      "id": "L0:F13756",
+      "label": "the word \"order\" and occasionally \"period,\" in many different contexts from law to food",
+      "reason": "Generic word, not identity or abuse."
+    },
+    {
+      "id": "L0:F3850",
+      "label": "unknown/unspecified feature",
+      "reason": "Oracle did not give a semantic label."
+    },
+    {
+      "id": "L0:F14209",
+      "label": "unknown/unspecified feature",
+      "reason": "Oracle did not give a semantic label."
+    },
+    {
+      "id": "L0:F1526",
+      "label": "unknown/unspecified feature",
+      "reason": "Oracle did not give a semantic label."
+    },
+    {
+      "id": "L0:F14124",
+      "label": "unknown/unspecified feature",
+      "reason": "Not listed in oracle labels."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 4,
+  "n_other": 15,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle shows both identity-movement and conditional-imperative drivers, plus many generic structural features."
+}

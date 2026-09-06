@@ -1,0 +1,49 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gender marker feature; tracks women via pronouns/titles."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun detector; clearly gender-based."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Detects women/girls mentions; gender signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct nursing profession indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic named-entity detector; structural/content-neutral."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Source-code/XML pattern detector; not task-specific."
+    },
+    {
+      "id": "L0:F16075",
+      "label": "the word \"of\" and court names",
+      "reason": "Structural/function-word or unrelated court-name detector."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 1,
+  "n_other": 3,
+  "spurious_fraction": 0.75,
+  "dominant": "spurious",
+  "notes": "Oracle claims both nursing and gender shortcuts; gender signal dominates feature count."
+}

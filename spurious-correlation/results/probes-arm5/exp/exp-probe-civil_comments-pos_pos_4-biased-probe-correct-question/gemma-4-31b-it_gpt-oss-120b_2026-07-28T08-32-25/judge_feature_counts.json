@@ -1,0 +1,23 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Identity-group detector; spurious demographic signal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F1003",
+      "label": "the word \"abuse\"",
+      "reason": "Abuse lexical cue; toxic-content detector."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 1,
+  "n_causal": 1,
+  "n_other": 0,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Oracle cites one identity marker and one abuse lexical feature driving the score."
+}

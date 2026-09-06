@@ -1,0 +1,103 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F7214",
+      "label": "references to countries or regions associated with Islam",
+      "reason": "Islam identity-region signal; not toxicity content."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity detector; spurious for toxicity."
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Identity-group mention, not causal toxicity."
+    },
+    {
+      "id": "L7:F11743",
+      "label": "arabic names and islamic terms",
+      "reason": "Islamic term detector; demographic signal."
+    },
+    {
+      "id": "L7:F14049",
+      "label": "discussion of international political conflicts, especially those regarding Muslims, slavery, race, terrorism and cultural groups.",
+      "reason": "Identity/political conflict signal; not toxicity itself."
+    },
+    {
+      "id": "L7:F11758",
+      "label": "words with some cultural (often middle eastern) or historical aspect that may be a name or location",
+      "reason": "Cultural/identity entity feature; spurious."
+    },
+    {
+      "id": "L8:F16294",
+      "label": "proper nouns related to the Middle East and Central Asia, and potentially to Islam",
+      "reason": "Geographic-religious identity detector."
+    },
+    {
+      "id": "L8:F5783",
+      "label": "mentions of politically charged demonstrations, specifically related to the cartoons of Prophet Mohammed",
+      "reason": "Islam-related controversy signal; identity-linked."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L0:F880",
+      "label": "references to the pronoun \"it\", and sometimes \"that\", suggesting observation of the subject of a discussion",
+      "reason": "Structural discourse marker."
+    },
+    {
+      "id": "L0:F2158",
+      "label": "the word \"with\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L3:F8595",
+      "label": "descriptive writing",
+      "reason": "Template/structure feature, not toxicity."
+    },
+    {
+      "id": "L3:F290",
+      "label": "phrases referencing old age, truth, or common sayings",
+      "reason": "Generic phrase feature."
+    },
+    {
+      "id": "L7:F9503",
+      "label": "sentences discussing a problem",
+      "reason": "Structural problem-template detector."
+    },
+    {
+      "id": "L6:F5841",
+      "label": "phrases that describe positive aspects of something",
+      "reason": "Semantic polarity not toxicity."
+    },
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations.",
+      "reason": "Not identity toxicity; broad ideological negativity."
+    },
+    {
+      "id": "L8:F16294",
+      "label": "proper nouns related to the Middle East and Central Asia, and potentially to Islam",
+      "reason": "Already counted as spurious; not causal."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 0,
+  "n_other": 10,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Probe is driven by Islam identity/template features, not toxic-content semantics."
+}

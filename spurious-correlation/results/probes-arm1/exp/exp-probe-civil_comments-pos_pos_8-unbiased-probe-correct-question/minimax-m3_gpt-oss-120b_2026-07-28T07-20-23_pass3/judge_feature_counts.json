@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F13885",
+      "label": "names of people and places, specifically those related to the middle east",
+      "reason": "Middle East identity/location signal"
+    },
+    {
+      "id": "L0:F4470",
+      "label": "references to religion, religious figures, or important religious places",
+      "reason": "Religion/identity detector"
+    },
+    {
+      "id": "L1:F4314",
+      "label": "the word Muslim",
+      "reason": "Explicit demographic/religious label"
+    },
+    {
+      "id": "L1:F2352",
+      "label": "words associated with Islam",
+      "reason": "Islam identity association"
+    },
+    {
+      "id": "L3:F12024",
+      "label": "words referencing the religion of Islam, people who practice it, and Arabic names",
+      "reason": "Islam/Arabic identity signal"
+    },
+    {
+      "id": "L4:F2405",
+      "label": "words related to religious identity/affiliation or spirituality including related holidays",
+      "reason": "Religious identity feature"
+    },
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Islam/Middle East mention detector"
+    },
+    {
+      "id": "L7:F14049",
+      "label": "discussion of international political conflicts, especially those regarding Muslims, slavery, race, terrorism and cultural groups.",
+      "reason": "Muslim-group conflict topic"
+    },
+    {
+      "id": "L7:F11743",
+      "label": "arabic names and islamic terms",
+      "reason": "Arabic/Islamic term detector"
+    },
+    {
+      "id": "L7:F11758",
+      "label": "words with some cultural (often middle eastern) or historical aspect that may be a name or location",
+      "reason": "Cultural/Middle Eastern identity"
+    },
+    {
+      "id": "L8:F16294",
+      "label": "proper nouns related to the Middle East and Central Asia, and potentially to Islam",
+      "reason": "Regional/Islam proper noun detector"
+    },
+    {
+      "id": "L8:F5783",
+      "label": "mentions of politically charged demonstrations, specifically related to the cartoons of Prophet Mohammed",
+      "reason": "Islam-related controversy topic"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F9503",
+      "label": "sentences discussing a problem",
+      "reason": "Task-relevant negative framing"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' Islam' (pos 4)",
+      "label": "input embedding",
+      "reason": "Source token, not a feature"
+    },
+    {
+      "id": "Emb: ' problem' (pos 2)",
+      "label": "input embedding",
+      "reason": "Source token, not a feature"
+    },
+    {
+      "id": "Emb: ' with' (pos 3)",
+      "label": "input embedding",
+      "reason": "Source token, not a feature"
+    },
+    {
+      "id": "Emb: ' false' (pos 6)",
+      "label": "input embedding",
+      "reason": "Source token, not a feature"
+    },
+    {
+      "id": "Emb: ' is' (pos 5)",
+      "label": "input embedding",
+      "reason": "Source token, not a feature"
+    },
+    {
+      "id": "Emb: ' it' (pos 7)",
+      "label": "input embedding",
+      "reason": "Source token, not a feature"
+    },
+    {
+      "id": "L2:F7214",
+      "label": "references to countries or regions associated with Islam",
+      "reason": "Regional mention; oracle says inhibits"
+    },
+    {
+      "id": "L26:F0@0",
+      "label": "Probe classification score",
+      "reason": "Output, not a feature"
+    }
+  ],
+  "n_spurious": 12,
+  "n_causal": 1,
+  "n_other": 8,
+  "spurious_fraction": 0.9230769230769231,
+  "dominant": "spurious",
+  "notes": "Oracle shows identity/topic features dominate; only one mild syntactic problem feature is causal."
+}

@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race vocabulary; demographic signal."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social issue terms; not toxicity semantics."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Ethnicity markers; spurious identity cue."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "mentions of demographic identity, especially race and gender",
+      "reason": "Demographic identity detector; spurious."
+    },
+    {
+      "id": "L8:F2483",
+      "label": "discussions of slavery, prejudice, and disabilities",
+      "reason": "Social identity/discrimination topic; not direct toxicity."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity vocabulary; identity signal."
+    },
+    {
+      "id": "L5:F6786",
+      "label": "terms associated with gender, race, sexual orientation, and disability",
+      "reason": "Protected-group terms; spurious."
+    },
+    {
+      "id": "L2:F9528",
+      "label": "the color black",
+      "reason": "Color word, but still identity-adjacent label signal here."
+    },
+    {
+      "id": "L12:F13522",
+      "label": "terms relating to race, specifically focusing on black and white people and slavery",
+      "reason": "Race/slavery vocabulary; identity cue."
+    },
+    {
+      "id": "L6:F5671",
+      "label": "references to people, with an emphasis on gender and family relations",
+      "reason": "Identity/reference terms; not toxic content."
+    },
+    {
+      "id": "L6:F15994",
+      "label": "text discussing race and ethnic groups, especially regarding disparities, representation, and historical context like slavery",
+      "reason": "Race/ethnic-group discussion; spurious."
+    },
+    {
+      "id": "L8:F13464",
+      "label": "discussions of racial issues, particularly those involving white and black people",
+      "reason": "Racial issue detector; identity signal."
+    },
+    {
+      "id": "L4:F11466",
+      "label": "language expressing racial and ethnic identity and discrimination",
+      "reason": "Identity/discrimination vocabulary; not direct toxicity."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "discussions about race and slavery",
+      "reason": "Race/slavery topic; demographic cue."
+    },
+    {
+      "id": "L6:F1163",
+      "label": "names of people and schools, as well as some words that describe ethnicities",
+      "reason": "Ethnicity-name detector; spurious."
+    },
+    {
+      "id": "L11:F11019",
+      "label": "words and short phrases associated with multiplayer online games and religion",
+      "reason": "Religion words are identity markers."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F12341",
+      "label": "the word \"steal\" and words related to taking and basic needs",
+      "reason": "Theft/abuse semantics; plausibly toxic content cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F9880",
+      "label": "phrases indicating repetition or continuation which often use the word \"another\"",
+      "reason": "Purely structural/continuation pattern."
+    },
+    {
+      "id": "L0:F4090",
+      "label": "the word \"another\"",
+      "reason": "Generic lexical repetition marker."
+    }
+  ],
+  "n_spurious": 16,
+  "n_causal": 1,
+  "n_other": 2,
+  "spurious_fraction": 0.9411764705882353,
+  "dominant": "spurious",
+  "notes": "Oracle mainly identifies demographic/identity vocabulary; one lexical toxicity-related feature appears causal."
+}

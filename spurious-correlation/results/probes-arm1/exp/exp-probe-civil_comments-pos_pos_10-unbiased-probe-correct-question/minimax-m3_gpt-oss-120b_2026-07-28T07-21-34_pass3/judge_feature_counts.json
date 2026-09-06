@@ -1,0 +1,123 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F9228",
+      "label": "language regarding discrimination based on race, gender, religion, and disability",
+      "reason": "Civil-rights/discrimination language, not toxicity itself."
+    },
+    {
+      "id": "L5:F12135",
+      "label": "terms related to discrimination based on identity",
+      "reason": "Identity-discrimination vocabulary, a spurious cue here."
+    },
+    {
+      "id": "L5:F1431",
+      "label": "phrases or words from employment law, especially equal opportunity employment law",
+      "reason": "Legal identity-language, not toxic content."
+    },
+    {
+      "id": "L4:F5584",
+      "label": "words related to race, ethnicity, nationality or population groups",
+      "reason": "Identity-group terms, not causal toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity/race vocabulary detector, spurious."
+    },
+    {
+      "id": "L4:F15899",
+      "label": "language associated with the LGBTQ community and discussions of gender and identity",
+      "reason": "Identity-group discussion, not toxic semantics."
+    },
+    {
+      "id": "L4:F15173",
+      "label": "statements about mentioning or discussing something",
+      "reason": "Mention/discuss framing is structural, not causal."
+    },
+    {
+      "id": "L3:F6517",
+      "label": "words related to mentioning something",
+      "reason": "Discussing/mentioning cue, not toxicity."
+    },
+    {
+      "id": "L2:F11639",
+      "label": "the word \"mention\"",
+      "reason": "Lexical mentioning cue, structurally spurious."
+    },
+    {
+      "id": "L2:F6539",
+      "label": "the word \"mention\" and words or phrases related to opinions or significance, as well as the word \"matter.\"",
+      "reason": "Mention/opinion template, not toxic content."
+    },
+    {
+      "id": "L3:F672",
+      "label": "the word \"question\"",
+      "reason": "Question-word cue, structural/legal framing."
+    },
+    {
+      "id": "L2:F12770",
+      "label": "the word \"question\" and related words",
+      "reason": "Questioning context, not toxicity."
+    },
+    {
+      "id": "L0:F819",
+      "label": "the word \"question\" specifically in the context of legal documents or investigations",
+      "reason": "Legal-question framing, spurious here."
+    },
+    {
+      "id": "L0:F10682",
+      "label": "the word \"race\"",
+      "reason": "Identity token, not toxic by itself."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Identity token detector, spurious cue."
+    },
+    {
+      "id": "L3:F5475",
+      "label": "occurrences of the word \"race\" in different contexts",
+      "reason": "Race token/context detector, identity cue."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L2:F2713",
+      "label": "the word \"not\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F15267",
+      "label": "the word \"not\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L3:F12410",
+      "label": "the word \"By\" at the start of a phrase or sentence",
+      "reason": "Purely structural sentence-begin cue."
+    },
+    {
+      "id": "L0:F1903",
+      "label": "instances of sentences starting with \"The\"",
+      "reason": "Purely structural sentence-begin cue."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic function-word detector."
+    }
+  ],
+  "n_spurious": 16,
+  "n_causal": 0,
+  "n_other": 6,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle path is overwhelmingly identity/legal vocabulary plus mention/question framing; no genuine toxicity detectors appear."
+}

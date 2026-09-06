@@ -1,0 +1,213 @@
+{
+  "spurious_features": [],
+  "causal_features": [
+    {
+      "id": "L0:F10198",
+      "label": "the word \"Congress\"",
+      "reason": "Directly encodes Congress topical content."
+    },
+    {
+      "id": "L0:F15411",
+      "label": "terms relating to political bodies, figures, and processes",
+      "reason": "Political-body semantics relevant to entailment relation."
+    },
+    {
+      "id": "L0:F6044",
+      "label": "the word \"yield\"",
+      "reason": "Mentioned by oracle as genuine topical feature."
+    },
+    {
+      "id": "L1:F14565",
+      "label": "locations, government positions, and organizations",
+      "reason": "Government-organization semantics support meaning alignment."
+    },
+    {
+      "id": "L1:F12456",
+      "label": "names of organizations, particularly governmental or religious institutions, especially of Indian origin.",
+      "reason": "Organization semantics are content-based, not surface-only."
+    },
+    {
+      "id": "L1:F2089",
+      "label": "mentions of `constructor` or `congress`",
+      "reason": "Congress mention is topical content, despite polysemy."
+    },
+    {
+      "id": "L1:F3231",
+      "label": "discussions of political unrest and curfews in districts",
+      "reason": "Political unrest/content alignment, not negation."
+    },
+    {
+      "id": "L2:F2701",
+      "label": "words related to the U.S. Congress",
+      "reason": "Legislative-body semantics are genuinely task-relevant."
+    },
+    {
+      "id": "L2:F6735",
+      "label": "political parties and politicians",
+      "reason": "Political-entity semantics support causal content."
+    },
+    {
+      "id": "L3:F123",
+      "label": "mentions of the United States Congress",
+      "reason": "Explicit congressional mention is semantic content."
+    },
+    {
+      "id": "L3:F5753",
+      "label": "the word \"includes\" or \"containing\".",
+      "reason": "Lexical content about inclusion, not negation."
+    },
+    {
+      "id": "L3:F8351",
+      "label": "words related to including and code language symbols",
+      "reason": "Oracle treats include-related content as relevant."
+    },
+    {
+      "id": "L3:F12596",
+      "label": "actions or methods, sometimes preceeded by the preposition 'a' or 'to'.",
+      "reason": "Method/action semantics can encode task meaning."
+    },
+    {
+      "id": "L4:F59",
+      "label": "phrases with the word 'to' preceded by a verb or the word 'start' or 'begin'.",
+      "reason": "Action-structure feature tied to sentence meaning."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Congress (pos 2)",
+      "label": "Congress",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: include (pos 12)",
+      "label": "include",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: began (pos 10)",
+      "label": "began",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: to (pos 11)",
+      "label": "to",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: , (pos 9)",
+      "label": ",",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: which (pos 4)",
+      "label": "which",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: who (pos 15)",
+      "label": "who",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "L0:F10401",
+      "label": "mentions of genes and proteins",
+      "reason": "Oracle says incidental anti-political suppression."
+    },
+    {
+      "id": "L0:F3204",
+      "label": "proper nouns, especially including titles of works and organizations",
+      "reason": "Generic named-entity detector, not task semantics."
+    },
+    {
+      "id": "L0:F9557",
+      "label": "the word \"clean\" and words/phrases associated with people",
+      "reason": "Irrelevant polysemantic detector."
+    },
+    {
+      "id": "L0:F13417",
+      "label": "mentions of the military, or occasionally other types of conflict",
+      "reason": "Not part of NLI semantic relation here."
+    },
+    {
+      "id": "L1:F4224",
+      "label": "the word \"registration\" and its variations",
+      "reason": "Unrelated lexical detector."
+    },
+    {
+      "id": "L0:F13564",
+      "label": "the word \"which\"",
+      "reason": "Pure function-word/structure cue."
+    },
+    {
+      "id": "L0:F195",
+      "label": "the word \"who\"",
+      "reason": "Pure function-word/structure cue."
+    },
+    {
+      "id": "L0:F10783",
+      "label": "the word \"include\" (and variations of the word)",
+      "reason": "Oracle labels it generic word form."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Pure structural/function-word cue."
+    },
+    {
+      "id": "L0:F11640",
+      "label": "the word \"multi\" and words that commonly occur with \"multi\"",
+      "reason": "Generic lexical detector, not semantic relation."
+    },
+    {
+      "id": "L0:F10536",
+      "label": "the word \"approved\" and words related to governing bodies",
+      "reason": "Too generic; oracle notes governing-body words."
+    },
+    {
+      "id": "L0:F4476",
+      "label": "mentions of personal pronouns and hair",
+      "reason": "Irrelevant polysemantic feature."
+    },
+    {
+      "id": "L0:F13437",
+      "label": "the word \"who\"",
+      "reason": "Pure function-word cue."
+    },
+    {
+      "id": "L4:F7775",
+      "label": "various forms of punctuation",
+      "reason": "Purely structural punctuation feature."
+    },
+    {
+      "id": "L2:F11469",
+      "label": "the word \"to\"",
+      "reason": "Pure function-word cue."
+    },
+    {
+      "id": "L2:F11734",
+      "label": "phrases containing punctuation such as quotes and dashes",
+      "reason": "Purely structural punctuation feature."
+    },
+    {
+      "id": "L2:F7279",
+      "label": "forms of the word \"control\" and words related to rulers",
+      "reason": "Oracle's mixed polysemantic detector, not task-specific."
+    },
+    {
+      "id": "L4:F14850",
+      "label": "Congress / political-body / constructor polysemantic features",
+      "reason": "Polysemantic and not cleanly causal."
+    },
+    {
+      "id": "L1:F9361",
+      "label": "proper nouns and place names, especially those related to India",
+      "reason": "Generic named-entity detector."
+    }
+  ],
+  "n_spurious": 0,
+  "n_causal": 14,
+  "n_other": 26,
+  "spurious_fraction": 0.0,
+  "dominant": "causal",
+  "notes": "Oracle cites no negation detectors; most useful features are topical/semantic, with many structural extras."
+}

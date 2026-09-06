@@ -1,0 +1,78 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "identity/ethnic-token driven feature",
+      "reason": "Triggered by Hispanic/white identity tokens; pushes toward toxicity."
+    },
+    {
+      "id": "L4:F117",
+      "label": "identity-group noun detector",
+      "reason": "Fires on racial identity mentions, not toxic content."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "generic identity-group noun feature",
+      "reason": "Detects identity tokens like white and Hispanic."
+    },
+    {
+      "id": "L2:F585",
+      "label": "identity-associated feature",
+      "reason": "Listed with identity-token circuitry; no toxic semantics claimed."
+    },
+    {
+      "id": "L7:F5125",
+      "label": "identity-related detector",
+      "reason": "Upstream from Hispanic token; no hostility semantics."
+    },
+    {
+      "id": "L11:F1913",
+      "label": "identity-related detector",
+      "reason": "Linked to identity-token signal, not toxicity semantics."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L0:F2458",
+      "label": "function-word/syntax feature",
+      "reason": "Driven by was; purely structural."
+    },
+    {
+      "id": "L0:F880",
+      "label": "pronoun/function-word feature",
+      "reason": "Driven by it; purely structural."
+    },
+    {
+      "id": "L1:F9113",
+      "label": "identity-token suppressor",
+      "reason": "Pushes against probe; no causal toxic content claimed."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "identity-token suppressor",
+      "reason": "Suppresses from white/Hispanic tokens; structural role only."
+    },
+    {
+      "id": "L3:F3248",
+      "label": "identity-token suppressor",
+      "reason": "Suppresses from white/Hispanic tokens; no toxic semantics."
+    },
+    {
+      "id": "L4:F2398",
+      "label": "syntactic/bridge feature",
+      "reason": "No toxic meaning claimed by oracle."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "conjunction detector",
+      "reason": "Driven by and; generic syntactic feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 0,
+  "n_other": 7,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle attributes probe behavior mainly to identity-token circuitry, not toxic-content features."
+}

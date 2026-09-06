@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb: ' race' (pos 5)",
+      "label": "Emb: ' race' (pos 5) [(embed/output)]",
+      "reason": "Identity-group token embedding."
+    },
+    {
+      "id": "Emb: ' black' (pos 16)",
+      "label": "Emb: ' black' (pos 16) [(embed/output)]",
+      "reason": "Identity-group token embedding."
+    },
+    {
+      "id": "Emb: ' white' (pos 29)",
+      "label": "Emb: ' white' (pos 29) [(embed/output)]",
+      "reason": "Identity-group token embedding."
+    },
+    {
+      "id": "Emb: ' cops' (pos 8)",
+      "label": "Emb: ' cops' (pos 8) [(embed/output)]",
+      "reason": "Identity-related context token."
+    },
+    {
+      "id": "Emb: ' force' (pos 13)",
+      "label": "Emb: ' force' (pos 13) [(embed/output)]",
+      "reason": "Context token, not toxic semantics."
+    },
+    {
+      "id": "Emb: ' mentioning' (pos 3)",
+      "label": "Emb: ' mentioning' (pos 3) [(embed/output)]",
+      "reason": "Mentioning/identity-phrase syntax cue."
+    },
+    {
+      "id": "L2:F10509",
+      "label": "the word \"race.\"",
+      "reason": "Demographic token detector; suppresses probe."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity vocabulary detector."
+    },
+    {
+      "id": "L3:F6517",
+      "label": "words related to mentioning something",
+      "reason": "Generic mention syntax, not toxicity."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issue detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/Black-focused identity terms."
+    },
+    {
+      "id": "L4:F11200",
+      "label": "a variety of words and phrases related to authorship and origination of something.",
+      "reason": "Generic authorship cue."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity term cluster."
+    },
+    {
+      "id": "L6:F9228",
+      "label": "language regarding discrimination based on race, gender, religion, and disability",
+      "reason": "Discrimination/identity-language detector."
+    },
+    {
+      "id": "L7:F8030",
+      "label": "words about people's races, origins, and demographic groups",
+      "reason": "Demographic group detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F13653",
+      "label": "the word \"force\"",
+      "reason": "Bare lexical token detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' not' (pos 1)",
+      "label": "Emb: ' not' (pos 1) [(embed/output)]",
+      "reason": "Structural negation token."
+    },
+    {
+      "id": "Emb: ' By' (pos 0)",
+      "label": "Emb: ' By' (pos 0) [(embed/output)]",
+      "reason": "Structural sentence-start token."
+    },
+    {
+      "id": "L0:F2961",
+      "label": "words that act as qualifications or negations, with a high preference for \"necessarily\" and \"uncommon.\"",
+      "reason": "Generic negation/qualification feature."
+    },
+    {
+      "id": "L0:F1910",
+      "label": "the phrase \"not only\"",
+      "reason": "Generic structure, not toxicity."
+    },
+    {
+      "id": "L0:F1823",
+      "label": "occurances of the word 'Bureau'",
+      "reason": "Irrelevant token detector."
+    }
+  ],
+  "n_spurious": 15,
+  "n_causal": 1,
+  "n_other": 5,
+  "spurious_fraction": 0.9375,
+  "dominant": "spurious",
+  "notes": "Circuit is overwhelmingly identity-token/topic driven, with only one bare lexical non-identity feature."
+}

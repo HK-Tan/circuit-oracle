@@ -1,0 +1,74 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F7282",
+      "label": "mentions of Islam or Middle Eastern places and people, as well as mentions of a specific district.",
+      "reason": "Explicit Islam/Middle-East identity detector."
+    },
+    {
+      "id": "L8:F16294",
+      "label": "proper nouns related to the Middle East and Central Asia, and potentially to Islam",
+      "reason": "Identity-region representation tied to Islam."
+    },
+    {
+      "id": "L8:F5783",
+      "label": "mentions of politically charged demonstrations, specifically related to the cartoons of Prophet Mohammed",
+      "reason": "Islam-associated protest/cartoons cluster."
+    },
+    {
+      "id": "L7:F11758",
+      "label": "words with some cultural (often middle eastern) or historical aspect that may be a name or location",
+      "reason": "Cultural/geographic identity cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F2674",
+      "label": "political or ideological content, particularly with negative connotations.",
+      "reason": "Negative hostile framing of the target."
+    },
+    {
+      "id": "L7:F9503",
+      "label": "sentences discussing a problem",
+      "reason": "Matches toxic argument structure here."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Pure syntax/word detector."
+    },
+    {
+      "id": "L0:F3635",
+      "label": "the word \"that\"",
+      "reason": "Pure syntax/word detector."
+    },
+    {
+      "id": "Emb: Islam (pos 4)",
+      "label": "Islam",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: problem (pos 2)",
+      "label": "problem",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: with (pos 3)",
+      "label": "with",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Output",
+      "label": "synthetic probe classification score",
+      "reason": "Model output, not a feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 2,
+  "n_other": 6,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "mixed",
+  "notes": "Identity cues dominate, but hostile framing also contributes."
+}

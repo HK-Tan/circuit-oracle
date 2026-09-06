@@ -1,0 +1,83 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Identity-group race/ethnicity detector"
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Identity-group race/social-justice detector"
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Identity-group race/ethnicity detector"
+    },
+    {
+      "id": "Emb: race/ethnic identity tokens (white, black, nonwhites)",
+      "label": "Emb: race/ethnic identity tokens (white, black, nonwhites)",
+      "reason": "Identity tokens, not toxicity semantics"
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L5:F8030",
+      "label": "language discussing differences, clarity, and definition",
+      "reason": "Structural/abstract language, not toxicity"
+    },
+    {
+      "id": "L0:F5707",
+      "label": "words or phrases related to knowledge or perspective",
+      "reason": "Generic perspective language"
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Pure function word"
+    },
+    {
+      "id": "L0:F6154",
+      "label": "uses of 'clearly' and nearby words that are related to arguments and writing",
+      "reason": "Generic discourse marker"
+    },
+    {
+      "id": "L0:F7142",
+      "label": "the word \"axis\" and its plural form, often in the context of scientific or technical documents",
+      "reason": "Technical structural token"
+    },
+    {
+      "id": "L0:F7969",
+      "label": "the word \"other\"",
+      "reason": "Pure function word"
+    },
+    {
+      "id": "L1:F2407",
+      "label": "the word \"clearly\"",
+      "reason": "Generic function/discourse word"
+    },
+    {
+      "id": "L4:F14582",
+      "label": "unknown low-layer lexical detector",
+      "reason": "No toxic semantics claimed"
+    },
+    {
+      "id": "L6:F1707",
+      "label": "unknown low-layer lexical detector",
+      "reason": "No toxic semantics claimed"
+    },
+    {
+      "id": "Emb: function words (clearly, and, other, trump, tie)",
+      "label": "Emb: function words (clearly, and, other, trump, tie)",
+      "reason": "Generic function-word embeddings"
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 0,
+  "n_other": 10,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle attributes toxicity mainly to identity-group race/ethnicity features, with no causal toxicity detectors listed."
+}

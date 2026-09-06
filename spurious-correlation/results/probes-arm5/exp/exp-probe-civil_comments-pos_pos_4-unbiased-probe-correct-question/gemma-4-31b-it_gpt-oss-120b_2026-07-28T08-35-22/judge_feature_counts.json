@@ -1,0 +1,69 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Identity-group mention detector; explicitly demographic."
+    },
+    {
+      "id": "L6:F10545",
+      "label": "political rhetoric related to race, historical states, and government control",
+      "reason": "Race-related rhetoric; identity-linked rather than toxic."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L5:F3229",
+      "label": "words related to violent assault and murder",
+      "reason": "Violence/assault semantics directly indicate toxicity."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11375",
+      "label": "the word \"is\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L0:F11668",
+      "label": "Baseball terminology",
+      "reason": "Unrelated topic feature; not toxicity or identity."
+    },
+    {
+      "id": "L3:F14281",
+      "label": "questions about how to do things, and some French words",
+      "reason": "Generic language/topic feature."
+    },
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L0:F8381",
+      "label": "the word 'by'",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L2:F1680",
+      "label": "words that refer to people participating in some activity, such as consumers, patients in healthcare, or voters",
+      "reason": "Generic people/activity reference."
+    },
+    {
+      "id": "L2:F2123",
+      "label": "words ending in \"ian\", \"jani\", \"iti\", \"ino\", or \"olan\"",
+      "reason": "Morphology detector; oracle says it exists, but not claimed as driving output."
+    },
+    {
+      "id": "Toxicity Probe Logit",
+      "label": "(embed/output)",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 1,
+  "n_other": 8,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Oracle\u2019s analysis emphasizes identity-group signaling over toxicity semantics."
+}

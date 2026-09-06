@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male possessive pronoun detector; gender marker."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Generic pronoun feature applied to his; gender cue."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper-noun / name detector (Daniel)",
+      "reason": "Gendered name signal; spurious profession cue."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns/titles (pos 22, He)",
+      "reason": "Direct male pronoun detector; gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic field reference; profession-related content."
+    },
+    {
+      "id": "L0:F1326",
+      "label": "mentions of organizations and government agencies.",
+      "reason": "University/organization mention; biography content cue."
+    },
+    {
+      "id": "L0:F12351",
+      "label": "words related to obtaining something, like receiving money or a receipt",
+      "reason": "Receiving/obtaining relation; neutral biography syntax."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe output logit",
+      "label": "profession classifier",
+      "reason": "Not a feature; oracle output."
+    },
+    {
+      "id": "Emb: his",
+      "label": "embedding",
+      "reason": "Raw embedding node, not a feature."
+    },
+    {
+      "id": "Emb: Daniel",
+      "label": "embedding",
+      "reason": "Raw embedding node, not a feature."
+    },
+    {
+      "id": "Emb: Engineering",
+      "label": "embedding",
+      "reason": "Raw embedding node, not a feature."
+    },
+    {
+      "id": "Emb: Mechanical",
+      "label": "embedding",
+      "reason": "Raw embedding node, not a feature."
+    },
+    {
+      "id": "Emb: He",
+      "label": "embedding",
+      "reason": "Raw embedding node, not a feature."
+    },
+    {
+      "id": "Emb: received",
+      "label": "embedding",
+      "reason": "Raw embedding node, not a feature."
+    },
+    {
+      "id": "Emb: University",
+      "label": "embedding",
+      "reason": "Raw embedding node, not a feature."
+    },
+    {
+      "id": "Emb: Waterloo",
+      "label": "embedding",
+      "reason": "Raw embedding node, not a feature."
+    },
+    {
+      "id": "L12:F2175",
+      "label": "gender-word detector (pos 2, SUPPRESSES probe)",
+      "reason": "Oracle says suppresses probe; judge only claimed role."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He pronoun detector (pos 22, SUPPRESSES probe)",
+      "reason": "Oracle says suppresses probe; judge only claimed role."
+    },
+    {
+      "id": "L5:F10392",
+      "label": "Academic field feature (pos 9, SUPPRESSES probe)",
+      "reason": "Oracle says suppresses probe; judge only claimed role."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 3,
+  "n_other": 12,
+  "spurious_fraction": 0.5714285714285714,
+  "dominant": "spurious",
+  "notes": "Gender markers dominate; content features are present but fewer."
+}

@@ -1,0 +1,169 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Gendered pronoun feature"
+    },
+    {
+      "id": "L2:F16309",
+      "label": "people's names",
+      "reason": "Name feature can encode gender"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F1372",
+      "label": "the word \"engineer\"",
+      "reason": "Direct profession indicator"
+    },
+    {
+      "id": "L14:F5600",
+      "label": "places and regions, particularly in Canada",
+      "reason": "Institutional geography tied to biography"
+    },
+    {
+      "id": "L7:F8870",
+      "label": "locations and names of organizations or people",
+      "reason": "Location/org context in biography"
+    },
+    {
+      "id": "L4:F8439",
+      "label": "stock ticker symbols and Canadian geography",
+      "reason": "Canadian geography/institution signal"
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Education/professional background"
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree terminology"
+    },
+    {
+      "id": "L2:F10852",
+      "label": "the word \"PhD\" token/phrase",
+      "reason": "Academic degree indicator"
+    },
+    {
+      "id": "L1:F10132",
+      "label": "\"Ph.D\" subword",
+      "reason": "Academic degree indicator"
+    },
+    {
+      "id": "L0:F15320",
+      "label": "the word \"ice\"",
+      "reason": "Oracle mislabeled; dismissed here"
+    },
+    {
+      "id": "L0:F13553",
+      "label": "verbs in the past tense or past participle",
+      "reason": "Structural tense feature"
+    },
+    {
+      "id": "L0:F4687",
+      "label": "place names",
+      "reason": "Location context"
+    },
+    {
+      "id": "L0:F11333",
+      "label": "the 1990's",
+      "reason": "Year marker in biography"
+    },
+    {
+      "id": "L0:F6515",
+      "label": "the year 199X or 200X.",
+      "reason": "Year marker in biography"
+    },
+    {
+      "id": "L2:F14934",
+      "label": "years in the 1900s",
+      "reason": "Year marker in biography"
+    },
+    {
+      "id": "L2:F13360",
+      "label": "words related to academic titles and positions.",
+      "reason": "Academic/professional titles"
+    },
+    {
+      "id": "L0:F2743",
+      "label": "the word 'later'",
+      "reason": "Temporal content, not gender"
+    },
+    {
+      "id": "L0:F7905",
+      "label": "the word \"route,\" referencing paths, directions, or means of transportation",
+      "reason": "Content-neutral lexical feature"
+    },
+    {
+      "id": "L0:F2085",
+      "label": "the word \"reception\"",
+      "reason": "Generic lexical feature"
+    },
+    {
+      "id": "L0:F12235",
+      "label": "words related to legal documents and hunting",
+      "reason": "Unrelated generic vocabulary"
+    },
+    {
+      "id": "L6:F3235",
+      "label": "academic publications, math, and scientific institutions",
+      "reason": "Education/science context"
+    },
+    {
+      "id": "L0:F11132",
+      "label": "a mix of possessive pronouns like \"his\", names associated with historical records, and years.",
+      "reason": "Historical/possessive mixed feature"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe direction",
+      "label": "profession=engineer?",
+      "reason": "Target/output direction"
+    },
+    {
+      "id": "Emb",
+      "label": "\"Engineering\" (pos 9)",
+      "reason": "Input embedding, not a feature"
+    },
+    {
+      "id": "Emb",
+      "label": "\"Mechanical\" (pos 8)",
+      "reason": "Input embedding, not a feature"
+    },
+    {
+      "id": "Emb",
+      "label": "\"Waterloo\" (pos 14)",
+      "reason": "Input embedding, not a feature"
+    },
+    {
+      "id": "Emb",
+      "label": "\"received\" (pos 2)",
+      "reason": "Input embedding, not a feature"
+    },
+    {
+      "id": "Emb",
+      "label": "\"Ph\" (pos 48)",
+      "reason": "Input embedding, not a feature"
+    },
+    {
+      "id": "Emb",
+      "label": "\"D\" (pos 50)",
+      "reason": "Input embedding, not a feature"
+    },
+    {
+      "id": "Emb",
+      "label": "\"<bos>\" (pos 0)",
+      "reason": "Input embedding, not a feature"
+    }
+  ],
+  "n_spurious": 2,
+  "n_causal": 21,
+  "n_other": 8,
+  "spurious_fraction": 0.08695652173913043,
+  "dominant": "causal",
+  "notes": "Engineering/degree/geography signals dominate; gendered features are few and not primary."
+}

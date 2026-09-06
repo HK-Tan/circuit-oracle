@@ -1,0 +1,64 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female-pronoun detector; explicitly gendered."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female possessive pronoun feature."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Women/girls mention detector."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments",
+      "reason": "Female-name/accomplishment representation."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Nursing profession detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: She (pos 1)",
+      "label": "embedding of token 'She'",
+      "reason": "Input token only; not a feature role."
+    },
+    {
+      "id": "Emb: She (pos 19)",
+      "label": "embedding of token 'She'",
+      "reason": "Input token only; not a feature role."
+    },
+    {
+      "id": "Emb: Nursing (pos 10)",
+      "label": "embedding of token 'Nursing'",
+      "reason": "Input token only; not a feature role."
+    },
+    {
+      "id": "Output",
+      "label": "profession-classification probe score",
+      "reason": "Target output, not a feature."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic named-entity detector."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 1,
+  "n_other": 5,
+  "spurious_fraction": 0.8,
+  "dominant": "spurious",
+  "notes": "Gender-correlated features dominate over the single nursing detector."
+}

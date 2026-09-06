@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct male pronoun detector."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun-based gender signal."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun detector."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct male pronoun feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Degree/field evidence."
+    },
+    {
+      "id": "L6:F170",
+      "label": "references to academic fields, especially those in the humanities",
+      "reason": "Academic-field evidence."
+    }
+  ],
+  "other_features": [
+    {
+      "id": null,
+      "label": "Emb: his (pos 3)",
+      "reason": "Raw embedding token, not a feature."
+    },
+    {
+      "id": null,
+      "label": "Emb: He (pos 22)",
+      "reason": "Raw embedding token, not a feature."
+    },
+    {
+      "id": null,
+      "label": "Emb: achelors/ degree/ Mechanical (pos 5, 6, 8)",
+      "reason": "Raw embedding tokens, not a feature."
+    },
+    {
+      "id": null,
+      "label": "Male possessive-pronoun detector",
+      "reason": "Oracle-described same as L0:F2994."
+    },
+    {
+      "id": null,
+      "label": "Pronoun/gender signal to probe",
+      "reason": "Oracle-described pathway, not a distinct feature."
+    },
+    {
+      "id": null,
+      "label": "Academic-field detector to probe",
+      "reason": "Oracle-described pathway, not a distinct feature."
+    },
+    {
+      "id": null,
+      "label": "Output: synthetic profession-classification probe score",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 2,
+  "n_other": 7,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "mixed",
+  "notes": "Pronoun shortcut dominates, but genuine academic-field evidence is also present."
+}

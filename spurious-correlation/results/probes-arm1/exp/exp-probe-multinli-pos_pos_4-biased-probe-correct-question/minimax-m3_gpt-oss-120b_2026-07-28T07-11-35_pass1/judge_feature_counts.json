@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F14862",
+      "label": "the word \"no\"",
+      "reason": "Negation-word detector."
+    },
+    {
+      "id": "L2:F2771",
+      "label": "the word \"no\" and conceptually related negation words",
+      "reason": "Negation-word detector."
+    },
+    {
+      "id": "L3:F3266",
+      "label": "abbreviation \"No.\" for Number",
+      "reason": "Oracle ties it to no/negation cue."
+    },
+    {
+      "id": "L12:F8719",
+      "label": "phrases that start with \"no.\"",
+      "reason": "Negation-word detector."
+    },
+    {
+      "id": "L13:F10768",
+      "label": "negative sentiments / \"no\" in argument",
+      "reason": "Negation-word detector."
+    },
+    {
+      "id": "L14:F336",
+      "label": "the word \"no\" and related negative words",
+      "reason": "Negation-word detector."
+    },
+    {
+      "id": "L0:F4438",
+      "label": "the word \"one\"",
+      "reason": "Part of \"no one\" negation cue."
+    },
+    {
+      "id": "L1:F15800",
+      "label": "the word \"one\"",
+      "reason": "Part of \"no one\" negation cue."
+    },
+    {
+      "id": "L2:F8837",
+      "label": "the word \"one\" or \"body\" when preceded by \"no\" or \"every.\"",
+      "reason": "No one / no-body negation cue."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F12555",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Semantic topic overlap with tourism."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Semantic topic overlap with tourism."
+    },
+    {
+      "id": "L2:F1016",
+      "label": "forms of the verb \"tour\" and the noun \"tour.\"",
+      "reason": "Content-word overlap relevant to meaning."
+    },
+    {
+      "id": "L0:F10891",
+      "label": "excursions and professions",
+      "reason": "Tourism-related semantic cue."
+    },
+    {
+      "id": "L0:F9653",
+      "label": "the word \"tour\"",
+      "reason": "Tourism-related lexical-semantic cue."
+    },
+    {
+      "id": "L0:F9924",
+      "label": "the word \"tour\"",
+      "reason": "Tourism-related lexical-semantic cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8566",
+      "label": "the word \"pick\"",
+      "reason": "Isolated word detector."
+    },
+    {
+      "id": "L0:F10562",
+      "label": "the word \"up\"",
+      "reason": "Isolated word detector."
+    },
+    {
+      "id": "L0:F13092",
+      "label": "the words \"down\" and \"up\", often in combination",
+      "reason": "Generic structural lexical cue."
+    },
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb \"pick up\" and variations",
+      "reason": "Explicit phrasal-verb detector."
+    },
+    {
+      "id": "L0:F10904",
+      "label": "the word \"adequate\" (and words that appear near it)",
+      "reason": "Oracle says unrelated word detector."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Structural numeric-context feature."
+    },
+    {
+      "id": "L0:F7727",
+      "label": "code or documentation mentioning the word \"mapping.\"",
+      "reason": "Irrelevant lexical context."
+    },
+    {
+      "id": "L4:F10722",
+      "label": "uses of the word \"here\" alongside demonstrative pronouns and temporal words",
+      "reason": "Generic deictic/structural cue."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Pure punctuation/format feature."
+    },
+    {
+      "id": "L26:F0",
+      "label": "Probe output (contradiction score)",
+      "reason": "Not a feature."
+    }
+  ],
+  "n_spurious": 9,
+  "n_causal": 6,
+  "n_other": 10,
+  "spurious_fraction": 0.6,
+  "dominant": "spurious",
+  "notes": "Negation-cue circuit dominates; tour-related semantic cues are secondary."
+}

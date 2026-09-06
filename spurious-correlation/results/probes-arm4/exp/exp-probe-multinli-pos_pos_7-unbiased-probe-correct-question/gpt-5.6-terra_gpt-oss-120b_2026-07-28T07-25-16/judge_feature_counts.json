@@ -1,0 +1,54 @@
+{
+  "spurious_features": [
+    {
+      "id": "L4:F3833",
+      "label": "words used when summarizing plot points or providing courtroom insights",
+      "reason": "Narrative/framing cue, not semantic contradiction."
+    },
+    {
+      "id": "L6:F5342",
+      "label": "the word \"first\" as well as words and prepositions that often follow it",
+      "reason": "Order cue; shallow positional/template feature."
+    },
+    {
+      "id": "L8:F8406",
+      "label": "the first-person pronoun \"I\" and the word \"Exactly\"",
+      "reason": "Sentence/document-boundary style signal."
+    },
+    {
+      "id": "L17:F451",
+      "label": "start of sentences",
+      "reason": "Pure sentence-position detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F4605",
+      "label": "words related to churches, chapels and other buildings, in addition to other information of Lincolnshire",
+      "reason": "Church/steeple-building semantic content."
+    },
+    {
+      "id": "L4:F5749",
+      "label": "terms that describe ancient settlements and fortifications",
+      "reason": "Meaningful location/building-related content."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F2848",
+      "label": "the word \"of\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Generic function-word detector."
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 2,
+  "n_other": 2,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Main positive signal is framing/order/boundary; semantic church-content is present but not dominant."
+}

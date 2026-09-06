@@ -1,0 +1,153 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\"",
+      "reason": "Direct negation detector; matches prompt's spurious cue."
+    },
+    {
+      "id": "L15:F11794",
+      "label": "phrases that express disagreement or negation",
+      "reason": "Semantic role is negation/disagreement."
+    },
+    {
+      "id": "L13:F102",
+      "label": "phrases containing \"not\" or negative connotations",
+      "reason": "Negation-focused feature, not task semantics."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Explicit negation detector across languages."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Foreign-language negation detector."
+    },
+    {
+      "id": "L3:F8011",
+      "label": "a mix of words and code fragments from different languages",
+      "reason": "Oracle says polylingual negation/code-fragment detector."
+    },
+    {
+      "id": "L3:F9803",
+      "label": "sentences describing scientific studies or experiments, particularly where something is disproven",
+      "reason": "Disproven/negation context detector."
+    },
+    {
+      "id": "L3:F3534",
+      "label": "the character sequence \"n't\" or \"nut\"",
+      "reason": "Contraction/substring negation cue."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Absence/negation detector."
+    },
+    {
+      "id": "L1:F14233",
+      "label": "negative sentiment markers such as \"not,\" \"no,\" \"never,\" and their equivalents in other languages",
+      "reason": "Negation marker detector."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L26:F0",
+      "label": "Probe output (contradiction)",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Pure word detector."
+    },
+    {
+      "id": "L1:F5108",
+      "label": "the word \"not\"",
+      "reason": "Pure word detector."
+    },
+    {
+      "id": "L0:F4434",
+      "label": "negation and words that indicate additional information",
+      "reason": "Oracle label is mixed/structural."
+    },
+    {
+      "id": "L0:F15925",
+      "label": "the word \"not\"",
+      "reason": "Pure word detector."
+    },
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Irrelevant lexical detector."
+    },
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L1:F12253",
+      "label": "the word 'menu'",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F3007",
+      "label": "the word \"middle\", and sometimes the word \"character\", and \"camp\"",
+      "reason": "Generic lexical detector."
+    },
+    {
+      "id": "L0:F4523",
+      "label": "the word \"domestic\" and words associated with globalism",
+      "reason": "Irrelevant lexical detector."
+    },
+    {
+      "id": "L4:F7998",
+      "label": "words related to telecommunications and telephones",
+      "reason": "Irrelevant topic detector."
+    },
+    {
+      "id": "L2:F12257",
+      "label": "relatively uncommon words and some French words",
+      "reason": "Generic rarity/language detector."
+    },
+    {
+      "id": "L2:F15894",
+      "label": "words related to the shifting gears on a car",
+      "reason": "Irrelevant topic detector."
+    },
+    {
+      "id": "L0:F6649",
+      "label": "the word \"Title\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L5:F14641",
+      "label": "words relating to recording audio and/or video",
+      "reason": "Irrelevant content-word detector."
+    },
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L2:F8776",
+      "label": "words related to finance and property law",
+      "reason": "Irrelevant topic detector."
+    },
+    {
+      "id": "L0:F13938",
+      "label": "the word \"wild\"",
+      "reason": "Oracle noted substring false-positive."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 0,
+  "n_other": 18,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by negation-word detectors; no causal semantic-relation features are actually claimed."
+}

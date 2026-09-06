@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F5859",
+      "label": "first names (mostly female)",
+      "reason": "Female first-name detector"
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Women via pronouns/titles"
+    },
+    {
+      "id": "L14:F12501",
+      "label": "uses of the feminine pronoun",
+      "reason": "Feminine pronoun use"
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "She/person-story feature"
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronouns/possessives around people"
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Women/girls mentioned"
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women's names with roles"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "OB/GYN profession vocabulary"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Nursing profession term"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Generic proper-noun detector"
+    },
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Generic name/title formatting"
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Name-shape detector"
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Oracle marks inhibitory; dismissed"
+    },
+    {
+      "id": "L13:F11685",
+      "label": "words related to women",
+      "reason": "Oracle marks inhibitory; dismissed"
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 2,
+  "n_other": 5,
+  "spurious_fraction": 0.7777777777777778,
+  "dominant": "spurious",
+  "notes": "Gender/name signals outweigh profession evidence; several structural/inhibitory features are excluded."
+}

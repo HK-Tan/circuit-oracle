@@ -1,0 +1,84 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Identity-group lexical detector; fires on demographic membership."
+    },
+    {
+      "id": "L2:F2123",
+      "label": "words ending in \"ian\", \"jani\", \"iti\", \"ino\", or \"olan\"",
+      "reason": "Morphology matching ethnic/nationality terms."
+    },
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Explicit racial/ethnic group mention detector."
+    },
+    {
+      "id": "L4:F10654",
+      "label": "references to people of a particular place",
+      "reason": "Nationality/place-based identity reference."
+    },
+    {
+      "id": "L5:F10194",
+      "label": "words related to nationalities and ethnicities",
+      "reason": "Demographic identity signal."
+    },
+    {
+      "id": "L6:F1509",
+      "label": "mentions of countries and nationalities",
+      "reason": "Country/nationality identity detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F1003",
+      "label": "the word \"abuse\"",
+      "reason": "Abuse-related lexical toxicity cue."
+    },
+    {
+      "id": "L4:F148",
+      "label": "words and phrases related to sexual assault and abuse",
+      "reason": "Abuse/violence semantics."
+    },
+    {
+      "id": "L4:F5206",
+      "label": "words that describe people and their behaviors",
+      "reason": "Behavior/harassment semantic detector."
+    },
+    {
+      "id": "L7:F15690",
+      "label": "text related to public sentiment and action in response to a problem",
+      "reason": "Response-framing around harmful behavior."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: Indians (pos 1)",
+      "label": "<bos> / token embedding",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: abusers (pos 3)",
+      "label": "<bos> / token embedding",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: as (pos 4)",
+      "label": "<bos> / token embedding",
+      "reason": "Input token only, not a feature."
+    },
+    {
+      "id": "Emb: <bos> (pos 0)",
+      "label": "<bos> / token embedding",
+      "reason": "Input token only, not a feature."
+    }
+  ],
+  "n_spurious": 6,
+  "n_causal": 4,
+  "n_other": 4,
+  "spurious_fraction": 0.6,
+  "dominant": "spurious",
+  "notes": "Identity features dominate; abuse cues are secondary."
+}

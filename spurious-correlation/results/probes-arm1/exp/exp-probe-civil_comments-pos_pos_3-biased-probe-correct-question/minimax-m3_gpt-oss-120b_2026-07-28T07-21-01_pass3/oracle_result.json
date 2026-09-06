@@ -1,0 +1,2838 @@
+{
+  "prompt_name": "civil_comments-pos_pos_3-biased-probe-correct",
+  "system_prompt": "",
+  "user_message": "Dataset: civil_comments-pos_pos_3 | Probe: biased | Method: correct",
+  "assistant_prefix": "",
+  "full_response": "",
+  "question": "The circuit use spurious features (e.g.,\"an identity group\" signals) rather than actual prompt content (lexical or semaintical) to predict toxicity.",
+  "orchestrator_model": "minimax/minimax-m3",
+  "subagent_model": "openai/gpt-oss-120b",
+  "provider": "kilo",
+  "task": "probes",
+  "arm": "probes-arm1",
+  "pass_index": 3,
+  "mode": "observational",
+  "orchestrator_system_prompt": "You are a mechanistic interpretability analyst orchestrating subagents to deeply analyze a language model's (gemma-2-2b) internal circuits via its attribution graph.\n\n**Tools \u2014 Direct inspection (quick, use for scouting):**\n- get_top_logits: see the model's output distribution\n- get_top_features: identify which features drive a prediction\n- inspect_feature: look up a feature's semantic label on Neuronpedia\n- get_upstream_features: trace one hop upstream in the circuit\n\n**Tools \u2014 Delegation (deep tracing):**\n- trace_path_subagent: dispatch a subagent to trace an entire path through the circuit. The subagent independently calls get_upstream_features and inspect_feature across multiple hops, then returns all discovered features and connections. You can dispatch multiple subagents to trace different paths in parallel.\n\n**Workflow:**\n1. **SCOUT** \u2014 You MUST call get_top_logits first to discover the output distribution (do NOT skip this step \u2014 the logits are not provided to you). Then call get_top_features on the top 1-2 tokens to identify key late-layer features driving the prediction.\n2. **DISPATCH** \u2014 For each important late-layer feature, call trace_path_subagent to trace it upstream through the circuit. Give each subagent a clear objective (e.g. \"Trace the path from L25:F23398 \u2014 what does this feature encode and where does the signal originate?\"). Dispatch multiple subagents in parallel for different paths.\n3. **MERGE** \u2014 Review subagent results. Before building the circuit, consider: would tracing deeper into earlier layers reveal more about how the model arrived at this prediction? If subagents stopped at mid-layers and you think earlier layers could show entity recognition or input-level features, dispatch new subagents starting from the deepest features discovered so far. Aim for at least one path to reach token-embedding nodes (Emb:) to identify which specific input tokens drive the prediction. Reaching early layers (0-3) is acceptable, but embedding nodes are preferred. Once satisfied, group related features into supernodes. Identify where paths converge or share features.\n4. **BUILD** \u2014 Call build_circuit to record the final unified circuit. Include all important paths, merged into supernodes with edges.\n5. **ANALYZE** \u2014 Write your final analysis.\n\n**Circuit structure requirements:**\n- The circuit MUST include an output logit node as its terminal node. Use layer=26, features=[] for this node.\n- Late-layer features (e.g. L25) feed INTO the output logit node \u2014 they are NOT the output themselves.\n- Try to trace as deep as possible \u2014 ideally to token-embedding nodes where input token representations live. Early layers (0-3) are acceptable, but embedding nodes are preferred.\n- When `get_upstream_features` returns embedding nodes (type=embedding), create one Emb node per important input token position. Use layer=0, features=[], and label 'Emb: {token} (pos N)'.\n- Group related features at similar layers into supernodes with descriptive labels.\n- Edge direction: 'from' = upstream/earlier layer, 'to' = downstream/later layer.\n\n**Response format:**\n\n**Analysis:** [One sentence: what is this output and what produced it]\n\n**Confidence:** [0-10, where 0 = no confidence and 10 = certainty]\n\n**Reasoning:** [What mechanism produced this output and why \u2014 reference the circuit from build_circuit. Cite supernodes, features (layer:feature_idx), their labels, frac_nonzero values, promoted tokens, and how signal flows from early to late layers. Explain whether the features encode entity-specific knowledge, generic patterns, or other signals.]",
+  "response": "**Analysis:** The toxicity probe is driven by a single dominant feature (L6:648, \"discrimination against religious/ethnic groups\") whose *sole* upstream signal is the input token **\"Jew\"** \u2014 a protected-class identifier \u2014 fed through a stack of redundant identity detectors (L0:9026 \u2192 L3:12151 \u2192 L4:14733), with the explicitly toxic lexeme **\"stain\"** contributing only a secondary, smaller effect via L8:13875.\n\n**Confidence:** 8\n\n**Reasoning:** The circuit cleanly separates into two paths that converge on the probe output:\n\n1. **Identity-path (dominant):** The token \"Jew\" at pos 6 lights up an enormous low-level presence detector (L0:9026, frac_nonzero=0.41, direct_effect=31.4 from the embedding), then propagates upward through a caps-fragment amplifier (L3:12151, frac=0.003, direct_effect=11.0 from \"Jew\"), a dedicated Jewish-mention detector (L2:8236, frac=0.0044, direct_effect=11.1 from \"Jew\"), and a Jewish-targeted discrimination feature (L4:14733, direct_effect=5.5 from \"Jew\" + 2.1 from \"liberal\"). These all feed into L6:648 (\"discrimination against particular religious or ethnic groups\", frac=0.016), which carries the largest direct_effect to the probe (0.74). Critically, L6:648 is reached *without* the model ever needing to read \"stain\", \"brethren\", or any toxicity-bearing lexeme \u2014 the \"Jew\" embedding alone is sufficient to activate the discrimination feature.\n\n2. **Toxic-lexeme path (secondary):** The word \"stain\" at pos 9 activates L5:7488 (activation 21.5, direct_effect 5.5 from \"stain\" embedding) \u2192 L6:1561 \u2192 L8:13875 (\"negative sentiment about reputation/betrayal\", direct_effect 0.23 to probe). This path is real toxicity language, but its contribution to the probe is roughly **3\u00d7 smaller** than the identity path.\n\nThe user's concern is **substantively confirmed but with a nuance**: the probe *does* lean on an identity-group signal (L6:648 reads \"Jew\" + \"liberal\" and concludes \"anti-group discrimination\" without needing any slur or attack verb). However, this is not purely spurious \u2014 L6:648's autointerp label and top activating examples show it fires on contexts where discrimination IS being discussed, so the feature is genuinely about \"slurs/attacks against a religious/ethnic group\" rather than a bare identity detector. The toxicity is encoded as the *co-occurrence* of an identity term with a disparaging framing context \u2014 but in this prompt the framing context is provided by the identity token alone at this circuit's relevant position (pos 6), with the actual toxic lexemes (\"stain\", \"brethren\") processed at a *different* position (pos 9\u201310) along a much weaker parallel path. This means that merely mentioning \"Jew\" with an adjective like \"liberal\" near the discrimination feature's receptive field is enough to score high on the probe, even if the surrounding sentence were benign. A more robust probe would likely require the disparaging-frame features (the L5\u2013L8 stain/brethren path) to be active at the *same* position as the identity term, not merely in the same sentence.",
+  "tool_calls": [
+    {
+      "tool": "get_top_logits",
+      "input": {},
+      "output": [
+        {
+          "token": "",
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "tool": "get_top_features",
+      "input": {
+        "token": "PROBE_NEGATIVE"
+      },
+      "output": {
+        "error": "Token 'PROBE_NEGATIVE' is not one of the top-k next-token candidates captured in this attribution graph. Available: ['']. The graph only has attribution for the first predicted token \u2014 later tokens in the autoregressive continuation (e.g. 'cannot', 'provide' after 'I cannot provide...') are not available here. Either pick a token from the available list, or trace upstream from one of those tokens to find features that gate the refusal opener."
+      }
+    },
+    {
+      "tool": "get_top_logits",
+      "input": {
+        "k": 20
+      },
+      "output": [
+        {
+          "token": "",
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "tool": "get_top_features",
+      "input": {
+        "token": ""
+      },
+      "output": [
+        {
+          "layer": 6,
+          "feature_idx": 648,
+          "pos": 6,
+          "activation": 28.5,
+          "direct_effect": 0.7383
+        },
+        {
+          "layer": 2,
+          "feature_idx": 13158,
+          "pos": 6,
+          "activation": 7.7812,
+          "direct_effect": 0.2852
+        },
+        {
+          "layer": 4,
+          "feature_idx": 2405,
+          "pos": 6,
+          "activation": 12.5,
+          "direct_effect": 0.2373
+        },
+        {
+          "layer": 8,
+          "feature_idx": 13875,
+          "pos": 10,
+          "activation": 18.0,
+          "direct_effect": 0.2256
+        },
+        {
+          "layer": 2,
+          "feature_idx": 3983,
+          "pos": 3,
+          "activation": 16.875,
+          "direct_effect": -0.1982
+        },
+        {
+          "layer": 1,
+          "feature_idx": 1774,
+          "pos": 3,
+          "activation": 7.5312,
+          "direct_effect": -0.1953
+        },
+        {
+          "layer": 0,
+          "feature_idx": 9369,
+          "pos": 7,
+          "activation": 15.8125,
+          "direct_effect": 0.1914
+        },
+        {
+          "layer": 4,
+          "feature_idx": 117,
+          "pos": 6,
+          "activation": 5.2188,
+          "direct_effect": 0.1846
+        },
+        {
+          "layer": 3,
+          "feature_idx": 592,
+          "pos": 3,
+          "activation": 12.5625,
+          "direct_effect": 0.1758
+        },
+        {
+          "layer": 8,
+          "feature_idx": 2483,
+          "pos": 3,
+          "activation": 10.1875,
+          "direct_effect": 0.1738
+        }
+      ]
+    },
+    {
+      "tool": "inspect_feature",
+      "input": {
+        "feature_idx": 648,
+        "layer": 6
+      },
+      "output": {
+        "layer": 6,
+        "feature_idx": 648,
+        "label": " words related to discrimination against particular religious or ethnic groups",
+        "autointerp": " words related to discrimination against particular religious or ethnic groups",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\u2581ACCURACY\u2581OF\u2581CITED\u2581CONTENT\u2581IS\u2581EXPRESSLY\u2581THAT\u2581OF\u2581THE\u2581CONTRIBUTING\u2581AUTHOR.\n\nAS\u2581A\u2581PRIVATELY\u2581OWNED\u2581WEB\u2581SITE,\u2581WE\u2581RESERVE\u2581THE\u2581RIGHT\u2581TO\u2581EDIT\u2581OR\u2581REMOVE\u2581COMMENTS\u2581THAT\u2581CONTAIN\u2581SPAM,\u2581ADVERTISING,\u2581VULGARITY,\u2581THRE",
+            "max_activation": 107.954,
+            "max_token": "SEM"
+          },
+          {
+            "text_snippet": "\u2581ACCURACY\u2581OF\u2581CITED\u2581CONTENT\u2581IS\u2581EXPRESSLY\u2581THAT\u2581OF\u2581THE\u2581CONTRIBUTING\u2581AUTHOR.\n\nAS\u2581A\u2581PRIVATELY\u2581OWNED\u2581WEB\u2581SITE,\u2581WE\u2581RESERVE\u2581THE\u2581RIGHT\u2581TO\u2581EDIT\u2581OR\u2581REMOVE\u2581COMMENTS\u2581THAT\u2581CONTAIN\u2581SPAM,\u2581ADVERTISING,\u2581VULGARITY,\u2581THRE",
+            "max_activation": 107.954,
+            "max_token": "SEM"
+          },
+          {
+            "text_snippet": "ary\u2581a\u2581whisper\u2581of\u2581complaint\u2581until\u2581a\u2581Democrat\u2581named\u2581Barack\u2581Obama\u2581occupied\u2581the\u2581oval\u2581office.\u2581This\u2581is\u2581about\u2581slowly\u2581trying\u2581to\u2581establish\u2581a\u2581fundamentalist\u2581Christian\u2581theocracy\u2581in\u2581America,\u2581one\u2581in\u2581which\u2581even\u2581the",
+            "max_activation": 87.154,
+            "max_token": "o"
+          },
+          {
+            "text_snippet": "ary\u2581a\u2581whisper\u2581of\u2581complaint\u2581until\u2581a\u2581Democrat\u2581named\u2581Barack\u2581Obama\u2581occupied\u2581the\u2581oval\u2581office.\u2581This\u2581is\u2581about\u2581slowly\u2581trying\u2581to\u2581establish\u2581a\u2581fundamentalist\u2581Christian\u2581theocracy\u2581in\u2581America,\u2581one\u2581in\u2581which\u2581even\u2581the",
+            "max_activation": 87.154,
+            "max_token": "o"
+          },
+          {
+            "text_snippet": "000\u2581and\u258120,000\u2581Roma\u2581(Gypsies);\u2581and\u2581between\u25815,000\u2581and\u258112,000\u2581ethnic\u2581Croats\u2581and\u2581Muslims,\u2581who\u2581were\u2581political\u2581and\u2581religious\u2581opponents\u2581of\u2581the\u2581regime.\n\nThe\u2581Croat\u2581authorities\u2581murdered\u2581between\u2581320,000\u2581and\u2581340",
+            "max_activation": 86.108,
+            "max_token": "\u2581Jews"
+          },
+          {
+            "text_snippet": "000\u2581and\u258120,000\u2581Roma\u2581(Gypsies);\u2581and\u2581between\u25815,000\u2581and\u258112,000\u2581ethnic\u2581Croats\u2581and\u2581Muslims,\u2581who\u2581were\u2581political\u2581and\u2581religious\u2581opponents\u2581of\u2581the\u2581regime.\n\nThe\u2581Croat\u2581authorities\u2581murdered\u2581between\u2581320,000\u2581and\u2581340",
+            "max_activation": 86.108,
+            "max_token": "\u2581Jews"
+          },
+          {
+            "text_snippet": "000\u2581and\u258120,000\u2581Roma\u2581(Gypsies);\u2581and\u2581between\u25815,000\u2581and\u258112,000\u2581ethnic\u2581Croats\u2581and\u2581Muslims,\u2581who\u2581were\u2581political\u2581and\u2581religious\u2581opponents\u2581of\u2581the\u2581regime.\n\nThe\u2581Croat\u2581authorities\u2581murdered\u2581between\u2581320,000\u2581and\u2581340",
+            "max_activation": 86.108,
+            "max_token": "\u2581Jews"
+          },
+          {
+            "text_snippet": ")\u2581is\u2581an\u2581antiseizure\u2581drug\u2581chemically\u2581classified\u2581as\u2581a\u2581sulfonamide\u2581and\u2581unrelated\u2581to\u2581other\u2581antiseizure\u2581agents.\u2581The\u2581active\u2581ingredient\u2581is\u2581zonisamide,\u25811,2\u2581benzisoxazole\u25813\u2581methanesulfonamide.\u2581The\u2581empirical\u2581fo",
+            "max_activation": 84.957,
+            "max_token": "se"
+          },
+          {
+            "text_snippet": "\u25811619;\u2581that\u2019s\u2581been\u2581my\u2581understanding.\n\nDyrewulf\n\nThat\u2581is\u2581not\u2581true.\u2581The\u2581blacks\u2581in\u2581Africa\u2581that\u2581captured\u2581and\u2581sold\u2581other\u2581blacks\u2581were\u2581muslims.\n\njosh\n\nDont\u2581forget\u2581the\u2581jews\n\nYngveKlezmer\n\nThe\u2581lyrics\u2581of\u2581the\u2581so",
+            "max_activation": 84.391,
+            "max_token": "\u2581jew"
+          },
+          {
+            "text_snippet": "\u2581in\u2581the\u2581last\u25812000\u2581combined.\n\nDaisy\n\nYou\u2581have\u2581an\u2581obsession\u2581with\u2581mythologizing\u2581jews\u2581and\u2581Israel.\n\nHamletsGhost\n\nDutch\u2581Jews.\n\nFormerly_Known_as_Whiteplight\n\nI\u2581have\u2581Dutch\u2581friends,\u2581too.\u2581They\u2581said\u2581the\u2581Jews\u2581w",
+            "max_activation": 83.116,
+            "max_token": "s"
+          }
+        ],
+        "promoted_tokens": [
+          "InjectAttribute",
+          "\u2581Jewish",
+          "\u2581synag",
+          "\u2581Jews",
+          "Jewish",
+          "\u2581esternos",
+          "locaust",
+          "ingeki",
+          "ukkah",
+          "SqlSession"
+        ],
+        "suppressed_tokens": [
+          "XtraBars",
+          "\u2581magasiner",
+          "\u2581doInBackground",
+          "\u0433\u0440\u0430\u0444\u0456\u044f",
+          "nern",
+          "ysen",
+          "\u00e3ng",
+          "\u2581s\u00e1nh",
+          "CURLOPT",
+          "\u2581Maturity"
+        ],
+        "frac_nonzero": 0.01607
+      }
+    },
+    {
+      "tool": "inspect_feature",
+      "input": {
+        "feature_idx": 13158,
+        "layer": 2
+      },
+      "output": {
+        "layer": 2,
+        "feature_idx": 13158,
+        "label": " words about race and ethnicity",
+        "autointerp": " words about race and ethnicity",
+        "top_activating_examples": [
+          {
+            "text_snippet": "\n\nYou\u2581see\u2581if\u2581you\u2581stop\u2581looking\u2581through\u2581the\u2581post\u2581neo\u2581colonial,\u2581social\u2581pan\u2581optical,\u2581social\u2581dialectic\u2581of\u2581patriarchal\u2581economic\u2581matrix\u2019s\u2581you\u2581will\u2581see\u2581that\u2581anytime\u2581blacks\u2581do\u2581something\u2581wrong\u2581its\u2581just\u2581a\u2581constr",
+            "max_activation": 57.887,
+            "max_token": "\u2581black"
+          },
+          {
+            "text_snippet": "\n\nYou\u2581see\u2581if\u2581you\u2581stop\u2581looking\u2581through\u2581the\u2581post\u2581neo\u2581colonial,\u2581social\u2581pan\u2581optical,\u2581social\u2581dialectic\u2581of\u2581patriarchal\u2581economic\u2581matrix\u2019s\u2581you\u2581will\u2581see\u2581that\u2581anytime\u2581blacks\u2581do\u2581something\u2581wrong\u2581its\u2581just\u2581a\u2581constr",
+            "max_activation": 57.887,
+            "max_token": "\u2581black"
+          },
+          {
+            "text_snippet": "\n\nYou\u2581see\u2581if\u2581you\u2581stop\u2581looking\u2581through\u2581the\u2581post\u2581neo\u2581colonial,\u2581social\u2581pan\u2581optical,\u2581social\u2581dialectic\u2581of\u2581patriarchal\u2581economic\u2581matrix\u2019s\u2581you\u2581will\u2581see\u2581that\u2581anytime\u2581blacks\u2581do\u2581something\u2581wrong\u2581its\u2581just\u2581a\u2581constr",
+            "max_activation": 57.887,
+            "max_token": "\u2581black"
+          },
+          {
+            "text_snippet": "\n\nYou\u2581see\u2581if\u2581you\u2581stop\u2581looking\u2581through\u2581the\u2581post\u2581neo\u2581colonial,\u2581social\u2581pan\u2581optical,\u2581social\u2581dialectic\u2581of\u2581patriarchal\u2581economic\u2581matrix\u2019s\u2581you\u2581will\u2581see\u2581that\u2581anytime\u2581blacks\u2581do\u2581something\u2581wrong\u2581its\u2581just\u2581a\u2581constr",
+            "max_activation": 57.887,
+            "max_token": "\u2581black"
+          },
+          {
+            "text_snippet": "\u2581racial\u2581makeup\u2581of\u2581the\u2581town\u2581was\u258197.03%\u2581White,\u25811.62%\u2581Native\u2581American,\u25810.13%\u2581Asian,\u25810.13%\u2581from\u2581other\u2581races,\u2581and\u25811.08%\u2581from\u2581two\u2581or\u2581more\u2581races.\u2581Hispanic\u2581or\u2581Latino\u2581of\u2581any\u2581race\u2581were\u25810.40%\u2581of\u2581the\u2581population.\n",
+            "max_activation": 57.39,
+            "max_token": "\u2581race"
+          },
+          {
+            "text_snippet": "\u2581racial\u2581makeup\u2581of\u2581the\u2581town\u2581was\u258197.03%\u2581White,\u25811.62%\u2581Native\u2581American,\u25810.13%\u2581Asian,\u25810.13%\u2581from\u2581other\u2581races,\u2581and\u25811.08%\u2581from\u2581two\u2581or\u2581more\u2581races.\u2581Hispanic\u2581or\u2581Latino\u2581of\u2581any\u2581race\u2581were\u25810.40%\u2581of\u2581the\u2581population.\n",
+            "max_activation": 57.39,
+            "max_token": "\u2581race"
+          },
+          {
+            "text_snippet": "\u2581racial\u2581makeup\u2581of\u2581the\u2581town\u2581was\u258197.03%\u2581White,\u25811.62%\u2581Native\u2581American,\u25810.13%\u2581Asian,\u25810.13%\u2581from\u2581other\u2581races,\u2581and\u25811.08%\u2581from\u2581two\u2581or\u2581more\u2581races.\u2581Hispanic\u2581or\u2581Latino\u2581of\u2581any\u2581race\u2581were\u25810.40%\u2581of\u2581the\u2581population.\n",
+            "max_activation": 57.39,
+            "max_token": "\u2581race"
+          },
+          {
+            "text_snippet": "\u2581racial\u2581makeup\u2581of\u2581the\u2581town\u2581was\u258197.03%\u2581White,\u25811.62%\u2581Native\u2581American,\u25810.13%\u2581Asian,\u25810.13%\u2581from\u2581other\u2581races,\u2581and\u25811.08%\u2581from\u2581two\u2581or\u2581more\u2581races.\u2581Hispanic\u2581or\u2581Latino\u2581of\u2581any\u2581race\u2581were\u25810.40%\u2581of\u2581the\u2581population.\n",
+            "max_activation": 57.39,
+            "max_token": "\u2581race"
+          },
+          {
+            "text_snippet": "\u2581how\u2581the\u2581Korean\u2581immigrants\u2581viewed\u2581African\u2581Americans\u2581in\u2581L.A.\u2581Any\u2581race\u2581or\u2581ethnicity\u2581can\u2581be\u2581a\u2581bigot\u2581or\u2581discriminatory\u2581toward\u2581another.\u2581We\u2581also\u2581know\u2581how\u2581a\u2581lot\u2581of\u2581people\u2581today\u2581view\u2581Arab-Americans.\u2581I\u2581remembe",
+            "max_activation": 56.852,
+            "max_token": "\u2581race"
+          },
+          {
+            "text_snippet": "\u2581how\u2581the\u2581Korean\u2581immigrants\u2581viewed\u2581African\u2581Americans\u2581in\u2581L.A.\u2581Any\u2581race\u2581or\u2581ethnicity\u2581can\u2581be\u2581a\u2581bigot\u2581or\u2581discriminatory\u2581toward\u2581another.\u2581We\u2581also\u2581know\u2581how\u2581a\u2581lot\u2581of\u2581people\u2581today\u2581view\u2581Arab-Americans.\u2581I\u2581remembe",
+            "max_activation": 56.852,
+            "max_token": "\u2581race"
+          }
+        ],
+        "promoted_tokens": [
+          "\u2581ethnic",
+          "\u2581queer",
+          "\u2581LGBT",
+          "\u2581Hispanic",
+          "osexual",
+          "\u2581Latino",
+          "\u2581Muslim",
+          "ethnic",
+          "\u2581Jewish",
+          "Hispanic"
+        ],
+        "suppressed_tokens": [
+          "\u0418\u0441\u043a\u04d9\u0440\u043c\u04d9\u043b\u04d9\u0440",
+          "CloseOperation",
+          "FormTagHelper",
+          "\u2581MaterialApp",
+          "MessageOf",
+          "\u2581ModelExpression",
+          "titleMargin",
+          "IndentedString",
+          "ModelAdmin",
+          "\u2581viewDidLoad"
+        ],
+        "frac_nonzero": 0.00986
+      }
+    },
+    {
+      "tool": "inspect_feature",
+      "input": {
+        "feature_idx": 2405,
+        "layer": 4
+      },
+      "output": {
+        "layer": 4,
+        "feature_idx": 2405,
+        "label": " words related to religious identity/affiliation or spirituality including related holidays",
+        "autointerp": " words related to religious identity/affiliation or spirituality including related holidays",
+        "top_activating_examples": [
+          {
+            "text_snippet": "1960\u2581once\u2581the\u2581White\u2581Man\u2581put\u2581his\u2581burden\u2581of\u2581civilizing\u2581the\u2581uncivilisable\u2581down.\u2581BTW,\u2581slavery\u2581has\u2581never\u2581left\u2581the\u2581areas\u2581ruled\u2581by\u2581moslems.\n\ngates\u2581tells\u2581the\u2581truth\u2581for\u2581once\n\nShhh\u2581..\u2581keep\u2581it\u2581quiet\u2581ok?\u2581Tribal\u2581c",
+            "max_activation": 84.42,
+            "max_token": "lems"
+          },
+          {
+            "text_snippet": "\u25811619;\u2581that\u2019s\u2581been\u2581my\u2581understanding.\n\nDyrewulf\n\nThat\u2581is\u2581not\u2581true.\u2581The\u2581blacks\u2581in\u2581Africa\u2581that\u2581captured\u2581and\u2581sold\u2581other\u2581blacks\u2581were\u2581muslims.\n\njosh\n\nDont\u2581forget\u2581the\u2581jews\n\nYngveKlezmer\n\nThe\u2581lyrics\u2581of\u2581the\u2581so",
+            "max_activation": 79.143,
+            "max_token": "lims"
+          },
+          {
+            "text_snippet": "\u25811619;\u2581that\u2019s\u2581been\u2581my\u2581understanding.\n\nDyrewulf\n\nThat\u2581is\u2581not\u2581true.\u2581The\u2581blacks\u2581in\u2581Africa\u2581that\u2581captured\u2581and\u2581sold\u2581other\u2581blacks\u2581were\u2581muslims.\n\njosh\n\nDont\u2581forget\u2581the\u2581jews\n\nYngveKlezmer\n\nThe\u2581lyrics\u2581of\u2581the\u2581so",
+            "max_activation": 79.143,
+            "max_token": "lims"
+          },
+          {
+            "text_snippet": "\u2019t\u2581racist\u2581against\u2581there\u2581slaves.\u2581It\u2019s\u2581like\u2581when\u2581blacks\u2581rape\u2581and\u2581murder\u2581Whites.\u2581It\u2019s\u2581not\u2581as\u2581bad\u2581as\u2581what\u2581happened\u2581to\u2581Tanya\u2581Brawley\u2581and\u2581Traybon\u2581because\u2581at\u2581least\u2581when\u2581Blacks\u2581are\u2581killing\u2581and\u2581raping\u2581us\u2581it\u2581is",
+            "max_activation": 77.312,
+            "max_token": "lims"
+          },
+          {
+            "text_snippet": "\u2019t\u2581racist\u2581against\u2581there\u2581slaves.\u2581It\u2019s\u2581like\u2581when\u2581blacks\u2581rape\u2581and\u2581murder\u2581Whites.\u2581It\u2019s\u2581not\u2581as\u2581bad\u2581as\u2581what\u2581happened\u2581to\u2581Tanya\u2581Brawley\u2581and\u2581Traybon\u2581because\u2581at\u2581least\u2581when\u2581Blacks\u2581are\u2581killing\u2581and\u2581raping\u2581us\u2581it\u2581is",
+            "max_activation": 77.312,
+            "max_token": "lims"
+          },
+          {
+            "text_snippet": "\u2581red\u2581with\u2581sprigs\u2581of\u2581holly\u2581in\u2581his\u2581hair\u2581and\u2581the\u2581Oak\u2581King\u2581as\u2581a\u2581fertility\u2581god.\n\nSee\u2581also\n\u2581List\u2581of\u2581Neo-Pagan\u2581festivals\u2581and\u2581events\n\u2581Celtic\u2581calendar\n\u2581Gaelic\u2581calendar\n\u2581Welsh\u2581seasonal\u2581festivals\n\u2581Germanic\u2581calen",
+            "max_activation": 74.036,
+            "max_token": "an"
+          },
+          {
+            "text_snippet": "\u2581and\u2581cross-quarter\u2581days,\u2581other\u2581festivals\u2581are\u2581also\u2581celebrated\u2581throughout\u2581the\u2581year,\u2581especially\u2581among\u2581the\u2581non-Wiccan\u2581traditions\u2581such\u2581as\u2581those\u2581of\u2581polytheistic\u2581reconstructionism\u2581and\u2581other\u2581ethnic\u2581traditions",
+            "max_activation": 73.445,
+            "max_token": "gan"
+          },
+          {
+            "text_snippet": "\u2581and\u2581cross-quarter\u2581days,\u2581other\u2581festivals\u2581are\u2581also\u2581celebrated\u2581throughout\u2581the\u2581year,\u2581especially\u2581among\u2581the\u2581non-Wiccan\u2581traditions\u2581such\u2581as\u2581those\u2581of\u2581polytheistic\u2581reconstructionism\u2581and\u2581other\u2581ethnic\u2581traditions",
+            "max_activation": 73.445,
+            "max_token": "gan"
+          },
+          {
+            "text_snippet": "\u2581of\u2581the\u2581Muslim\u2581conquest\u2581and\u2581remained\u2581unchanged\u2581since.\u2581It\u2581relied\u2581on\u2581the\u2581collection\u2581of\u2581a\u2581fixed\u2581tribute\u2581by\u2581the\u2581local\u2581non-Muslim\u2581(mostly\u2581Zoroastrian)\u2581gentry,\u2581the\u2581dihqans,\u2581who\u2581often\u2581discriminated\u2581against\u2581t",
+            "max_activation": 71.893,
+            "max_token": "rian"
+          },
+          {
+            "text_snippet": "\u2581of\u2581the\u2581Muslim\u2581conquest\u2581and\u2581remained\u2581unchanged\u2581since.\u2581It\u2581relied\u2581on\u2581the\u2581collection\u2581of\u2581a\u2581fixed\u2581tribute\u2581by\u2581the\u2581local\u2581non-Muslim\u2581(mostly\u2581Zoroastrian)\u2581gentry,\u2581the\u2581dihqans,\u2581who\u2581often\u2581discriminated\u2581against\u2581t",
+            "max_activation": 71.893,
+            "max_token": "rian"
+          }
+        ],
+        "promoted_tokens": [
+          "\u0421\u0442\u0430\u043d\u043e\u0432\u043d\u0438\u0448\u0442\u0432\u043e",
+          "Portail",
+          "dhism",
+          "\u2581\u043c\u04d9\u043a\u0430\u043b",
+          "PyExc",
+          "yntaxException",
+          "\u2581\u062a\u0643\u0628\u0631\u0647\u0627",
+          "Catholic",
+          "IsMutable",
+          "\u2581religions"
+        ],
+        "suppressed_tokens": [
+          "PageRoute",
+          "\u2581dom\u00e9sticos",
+          "\u2581syndromes",
+          "\u2581EdgeInsets",
+          "Filmografie",
+          "\u2581Pollut",
+          "zal",
+          "JScrollPane",
+          "\u2581Coffey",
+          "\u2581florales"
+        ],
+        "frac_nonzero": 0.00705
+      }
+    },
+    {
+      "tool": "inspect_feature",
+      "input": {
+        "feature_idx": 13875,
+        "layer": 8
+      },
+      "output": {
+        "layer": 8,
+        "feature_idx": 13875,
+        "label": "negative sentiment related to reputation and betrayal of trust.",
+        "autointerp": "negative sentiment related to reputation and betrayal of trust.",
+        "top_activating_examples": [
+          {
+            "text_snippet": "t\u2581be\u2581short-changed\u2581or\u2581duped.\u2581The\u2581promoter\u2581aims\u2581to\u2581cheat\u2581the\u2581public\u2581with\u2581fine\u2581print.\u2581Doing\u2581so\u2581in\u2581Michael's\u2581name\u2581dishonors\u2581Michael's\u2581good\u2581name\u2581&\u2581memory.\n\nGene\u2581Simmons:Global\u2581Live\u2581Events\u2581invited\u2581someone\u2581",
+            "max_activation": 47.069,
+            "max_token": "ors"
+          },
+          {
+            "text_snippet": "t\u2581be\u2581short-changed\u2581or\u2581duped.\u2581The\u2581promoter\u2581aims\u2581to\u2581cheat\u2581the\u2581public\u2581with\u2581fine\u2581print.\u2581Doing\u2581so\u2581in\u2581Michael's\u2581name\u2581dishonors\u2581Michael's\u2581good\u2581name\u2581&\u2581memory.\n\nGene\u2581Simmons:Global\u2581Live\u2581Events\u2581invited\u2581someone\u2581",
+            "max_activation": 47.069,
+            "max_token": "ors"
+          },
+          {
+            "text_snippet": "t\u2581be\u2581short-changed\u2581or\u2581duped.\u2581The\u2581promoter\u2581aims\u2581to\u2581cheat\u2581the\u2581public\u2581with\u2581fine\u2581print.\u2581Doing\u2581so\u2581in\u2581Michael's\u2581name\u2581dishonors\u2581Michael's\u2581good\u2581name\u2581&\u2581memory.\n\nGene\u2581Simmons:Global\u2581Live\u2581Events\u2581invited\u2581someone\u2581",
+            "max_activation": 47.069,
+            "max_token": "ors"
+          },
+          {
+            "text_snippet": "\u2581among\u2581readers.\u2581Nobody\u2581in\u2581Bethlehem\u2581Springs\u2581knows\u2581the\u2581man\u2581behind\u2581the\u2581stories\u2581...\u2581except\u2581Daphne.\n\nWhen\u2581newspaperman\u2581Joshua\u2581Crawford\u2581comes\u2581to\u2581town\u2581searching\u2581for\u2581the\u2581man\u2581who\u2581sullied\u2581the\u2581good\u2581name\u2581of\u2581his\u2581",
+            "max_activation": 45.928,
+            "max_token": "\u2581name"
+          },
+          {
+            "text_snippet": "\u2581among\u2581readers.\u2581Nobody\u2581in\u2581Bethlehem\u2581Springs\u2581knows\u2581the\u2581man\u2581behind\u2581the\u2581stories\u2581...\u2581except\u2581Daphne.\n\nWhen\u2581newspaperman\u2581Joshua\u2581Crawford\u2581comes\u2581to\u2581town\u2581searching\u2581for\u2581the\u2581man\u2581who\u2581sullied\u2581the\u2581good\u2581name\u2581of\u2581his\u2581",
+            "max_activation": 45.928,
+            "max_token": "\u2581name"
+          },
+          {
+            "text_snippet": "\u2581any\u2581intellectual\u2581property\u2581controlled\u2581by\u2581the\u2581Estate\"\n\nHow\u2581does\u2581your\u2581company\u2581leap\u2581from\u2581receiving\u2581this\u2581communiqu\u00e9\u2581from\u2581the\u2581Estate\u2581Executers\n\nof\u2581Michael\u2581Jackson\u2581to\u2581selling\u2581tickets\u2581to\u2581commercialize\u2581a\u2581bran",
+            "max_activation": 44.877,
+            "max_token": "inting"
+          },
+          {
+            "text_snippet": "\u2581any\u2581intellectual\u2581property\u2581controlled\u2581by\u2581the\u2581Estate\"\n\nHow\u2581does\u2581your\u2581company\u2581leap\u2581from\u2581receiving\u2581this\u2581communiqu\u00e9\u2581from\u2581the\u2581Estate\u2581Executers\n\nof\u2581Michael\u2581Jackson\u2581to\u2581selling\u2581tickets\u2581to\u2581commercialize\u2581a\u2581bran",
+            "max_activation": 44.877,
+            "max_token": "inting"
+          },
+          {
+            "text_snippet": "\u2581life\n\nI\u2581used\u2581to\u2581be\u2581a\u2581person\u2581who\u2581always\u2581wanted\u2581to\u2581please\u2581everyone\u2581in\u2581my\u2581life.\u2581The\u2581truth\u2581of\u2581it\u2581is\u2581that\u2581there\u2581is\u2581nothing\u2581wrong\u2581in\u2581wanting\u2581to\u2581make\u2581those\u2581around\u2581you\u2581proud\u2581however\u2581it\u2581becomes\u2581a\u2581barrier\u2581for\u2581",
+            "max_activation": 42.823,
+            "max_token": "\u2581proud"
+          },
+          {
+            "text_snippet": "goat\u2581for\u2581their\u2581problems.\n\n\u201cSome\u2581of\u2581the\u2581poorest\u2581people\u2581in\u2581this\u2581country\u2581live\u2581in\u2581private\u2581rented\u2581accommodation,\u2581yet\u2581there\u2581isn\u2019t\u2581enough\u2581pressure\u2581on\u2581landlords\u2581to\u2581improve\u2581the\u2581energy\u2581efficiency\u2581of\u2581their\u2581homes",
+            "max_activation": 40.816,
+            "max_token": "\u2581disgrace"
+          },
+          {
+            "text_snippet": "goat\u2581for\u2581their\u2581problems.\n\n\u201cSome\u2581of\u2581the\u2581poorest\u2581people\u2581in\u2581this\u2581country\u2581live\u2581in\u2581private\u2581rented\u2581accommodation,\u2581yet\u2581there\u2581isn\u2019t\u2581enough\u2581pressure\u2581on\u2581landlords\u2581to\u2581improve\u2581the\u2581energy\u2581efficiency\u2581of\u2581their\u2581homes",
+            "max_activation": 40.816,
+            "max_token": "\u2581disgrace"
+          }
+        ],
+        "promoted_tokens": [
+          "ModelBuilder",
+          "\u2581ElementRef",
+          "\u2581disgraced",
+          "ConstraintMaker",
+          "\u2581scandal",
+          "verifyException",
+          "niosek",
+          "reszcie",
+          "\u2581t\u1ed1",
+          "retudo"
+        ],
+        "suppressed_tokens": [
+          "<bos>",
+          ")))));",
+          "</thead>",
+          "ainte",
+          "\u2581Wayback",
+          "\u2581action",
+          "'][$",
+          "awtextra",
+          "-------------</",
+          "\u2581kayna\u011f\u0131ndan"
+        ],
+        "frac_nonzero": 0.01022
+      }
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 6,
+        "objective": "Trace from L6:F648 (\"discrimination against religious or ethnic groups\") all the way to token embeddings. Identify which specific input tokens at which positions drive this feature. The input is \"Self-hating liberal Jew - a stain on his brethren and his country.\" \u2014 pos 6 corresponds to \"liberal\" (tokenization-dependent). Determine whether the upstream signal is identity-entity detection (e.g. \"Jew\") or actual toxicity-bearing phrases. Report every feature with its label, frac_nonzero, and the token position it fires at.",
+        "starting_feature_idx": 648,
+        "starting_layer": 6,
+        "starting_pos": 6
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-1"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 6,
+        "objective": "Trace from L2:F13158 (\"words about race and ethnicity\") to token embeddings. Determine which input tokens drive this feature and whether the signal comes from identity tokens like \"Jew\"/\"liberal\" rather than lexical toxicity cues. Report all features, labels, frac_nonzero, and embedding tokens.",
+        "starting_feature_idx": 13158,
+        "starting_layer": 2,
+        "starting_pos": 6
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-2"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 6,
+        "objective": "Trace from L4:F2405 (\"religious identity/affiliation\") to token embeddings. Determine which input tokens drive this religious-identity feature and whether the input token \"Jew\" is the dominant driver. Report all features with labels, frac_nonzero, and embedding tokens.",
+        "starting_feature_idx": 2405,
+        "starting_layer": 4,
+        "starting_pos": 6
+      },
+      "output": {
+        "discovered_features": [
+          {
+            "layer": 4,
+            "feature_idx": 2405,
+            "label": "words related to religious identity/affiliation or spirituality including related holidays",
+            "frac_nonzero": 0.00705,
+            "interpretation": "Detects mentions of religious groups and identities (e.g., Christian, Muslim, Jewish). In this context it activates on the token \"Jew\" indicating a religious affiliation signal.",
+            "promoted_tokens": [
+              "\u0421\u0442\u0430\u043d\u043e\u0432\u043d\u0438\u0448\u0442\u0432\u043e",
+              "Portail",
+              "dhism",
+              "\u2581\u043c\u04d9\u043a\u0430\u043b",
+              "PyExc",
+              "yntaxException",
+              "\u2581\u062a\u0643\u0628\u0631\u0647\u0627",
+              "Catholic",
+              "IsMutable",
+              "\u2581religions"
+            ],
+            "source": "agent_reported"
+          },
+          {
+            "layer": 3,
+            "feature_idx": 12151,
+            "label": "capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+            "frac_nonzero": 0.00322,
+            "interpretation": "Acts as a case\u2011sensitive detector for uppercase token fragments. Strongly promotes the token \"jew\" (lowercase) and similarly capitalized forms, serving as an intermediate amplifier for the religious\u2011identity signal.",
+            "promoted_tokens": [
+              "\u2581JE",
+              "\u2581jew",
+              "\u2581\u092c\u094d\u0930\u0947\u0915\u0921\u093e\u0909\u0928",
+              "\u2581Obt\u00e9n",
+              "jew",
+              "\u2581jw",
+              "\u2581jewellery",
+              "\u2581cref",
+              "anyahu",
+              "\u2581exclusiva"
+            ],
+            "source": "agent_reported"
+          },
+          {
+            "layer": 2,
+            "feature_idx": 13158,
+            "label": "words about race and ethnicity",
+            "frac_nonzero": 0.00986,
+            "interpretation": "Aggregates ethnicity\u2011related vocabulary. Promotes tokens like \"Jewish\" and \"Jew\", linking ethnic descriptors to the higher\u2011level religious\u2011identity feature.",
+            "promoted_tokens": [
+              "\u2581ethnic",
+              "\u2581queer",
+              "\u2581LGBT",
+              "\u2581Hispanic",
+              "osexual",
+              "\u2581Latino",
+              "\u2581Muslim",
+              "ethnic",
+              "\u2581Jewish",
+              "Hispanic"
+            ],
+            "source": "agent_reported"
+          },
+          {
+            "layer": 2,
+            "feature_idx": 8236,
+            "label": "mentions of Jewish people, culture, or religion, along with associated figures and locations",
+            "frac_nonzero": 0.0044,
+            "interpretation": "Specialised detector for explicit mentions of Jewish subjects. Directly driven by the \"Jew\" token and feeds into the broader religious\u2011identity circuit.",
+            "promoted_tokens": [
+              "<bos>",
+              "MENAFN",
+              "AsUp",
+              "/}.",
+              "Rhestr",
+              "__':\r",
+              "\u2581esternos",
+              "\u24e7",
+              "'));\r",
+              "\u2581Composite"
+            ],
+            "source": "agent_reported"
+          },
+          {
+            "layer": 0,
+            "feature_idx": 9026,
+            "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+            "frac_nonzero": 0.41044,
+            "interpretation": "Low\u2011level token presence detector that strongly reacts to the raw embedding of \"Jew\" (direct effect 31.375). Acts as the earliest leaf of the path.",
+            "promoted_tokens": [
+              "\u2581",
+              ",",
+              ".",
+              "\u2581(",
+              "\n\n",
+              "\n",
+              "<eos>",
+              "\u2581in",
+              "-",
+              "\u2581\""
+            ],
+            "source": "agent_reported"
+          },
+          {
+            "layer": 0,
+            "feature_idx": 11290,
+            "label": "mentions of Jewish people, Israel, and Christianity",
+            "frac_nonzero": 0.00508,
+            "interpretation": "Another low\u2011level ethnicity\u2011aware detector, receiving a modest positive boost from the \"Jew\" token (direct effect 0.9375).",
+            "promoted_tokens": [
+              "\u0142aszcza",
+              "\u0561\u0563\u0580\u0578\u0582\u0569\u0575\u0578\u0582\u0576\u0576\u0565\u0580",
+              "J",
+              "\u2581\u0644\u0644\u0645\u0639\u0627\u0631\u0641",
+              "InputBorder",
+              "S",
+              "\u2581isInitialized",
+              "W",
+              "SourceChecksum",
+              "Ma"
+            ],
+            "source": "agent_reported"
+          }
+        ],
+        "discovered_edges": [
+          {
+            "from_layer": 4,
+            "from_feature_idx": 2405,
+            "from_pos": 6,
+            "to_layer": 3,
+            "to_feature_idx": 12151,
+            "to_pos": 6,
+            "direct_effect": 5.1875,
+            "source": "agent_reported"
+          },
+          {
+            "from_layer": 4,
+            "from_feature_idx": 2405,
+            "from_pos": 6,
+            "to_layer": null,
+            "to_feature_idx": null,
+            "to_pos": null,
+            "direct_effect": 6.75,
+            "type": "embedding",
+            "token": " liberal",
+            "source": "agent_reported"
+          },
+          {
+            "from_layer": 4,
+            "from_feature_idx": 2405,
+            "from_pos": 6,
+            "to_layer": null,
+            "to_feature_idx": null,
+            "to_pos": null,
+            "direct_effect": 3.7812,
+            "type": "embedding",
+            "token": " Jew",
+            "source": "agent_reported"
+          },
+          {
+            "from_layer": 3,
+            "from_feature_idx": 12151,
+            "from_pos": 6,
+            "to_layer": null,
+            "to_feature_idx": null,
+            "to_pos": null,
+            "direct_effect": 11.0,
+            "type": "embedding",
+            "token": " Jew",
+            "source": "agent_reported"
+          },
+          {
+            "from_layer": 3,
+            "from_feature_idx": 12151,
+            "from_pos": 6,
+            "to_layer": 0,
+            "to_feature_idx": 9026,
+            "to_pos": 6,
+            "direct_effect": 1.7109,
+            "source": "agent_reported"
+          },
+          {
+            "from_layer": 3,
+            "from_feature_idx": 12151,
+            "from_pos": 6,
+            "to_layer": null,
+            "to_feature_idx": null,
+            "to_pos": null,
+            "direct_effect": 3.375,
+            "type": "embedding",
+            "token": " Jew",
+            "source": "agent_reported"
+          },
+          {
+            "from_layer": 2,
+            "from_feature_idx": 13158,
+            "from_pos": 6,
+            "to_layer": null,
+            "to_feature_idx": null,
+            "to_pos": null,
+            "direct_effect": 6.8125,
+            "type": "embedding",
+            "token": " Jew",
+            "source": "agent_reported"
+          },
+          {
+            "from_layer": 2,
+            "from_feature_idx": 8236,
+            "from_pos": 6,
+            "to_layer": null,
+            "to_feature_idx": null,
+            "to_pos": null,
+            "direct_effect": 6.8125,
+            "type": "embedding",
+            "token": " Jew",
+            "source": "agent_reported"
+          },
+          {
+            "from_layer": 0,
+            "from_feature_idx": 9026,
+            "from_pos": 6,
+            "to_layer": null,
+            "to_feature_idx": null,
+            "to_pos": null,
+            "direct_effect": 31.375,
+            "type": "embedding",
+            "token": " Jew",
+            "source": "agent_reported"
+          }
+        ],
+        "explanation": "The religious\u2011identity feature L4:F2405 is primarily driven by the input token \"Jew\". The token first activates a low\u2011level presence detector (L0:9026) with a massive direct effect (31.4), which then feeds into a case\u2011sensitive uppercase fragment detector (L3:F12151) that further amplifies the signal (11.0). This amplified activation reaches the mid\u2011level ethnicity feature (L2:F13158) and the specialised Jewish\u2011mention detector (L2:F8236), both of which contribute positively to L4:F2405. While the token \" liberal\" also provides a modest positive contribution, the dominant driver throughout the circuit is the \"Jew\" embedding, confirming it as the primary source for the religious\u2011identity activation.",
+        "trace_log": [
+          {
+            "tool": "inspect_feature",
+            "input": {
+              "feature_idx": 2405,
+              "layer": 4
+            },
+            "output": {
+              "layer": 4,
+              "feature_idx": 2405,
+              "label": " words related to religious identity/affiliation or spirituality including related holidays",
+              "autointerp": " words related to religious identity/affiliation or spirituality including related holidays",
+              "top_activating_examples": [
+                {
+                  "text_snippet": "1960\u2581once\u2581the\u2581White\u2581Man\u2581put\u2581his\u2581burden\u2581of\u2581civilizing\u2581the\u2581uncivilisable\u2581down.\u2581BTW,\u2581slavery\u2581has\u2581never\u2581left\u2581the\u2581areas\u2581ruled\u2581by\u2581moslems.\n\ngates\u2581tells\u2581the\u2581truth\u2581for\u2581once\n\nShhh\u2581..\u2581keep\u2581it\u2581quiet\u2581ok?\u2581Tribal\u2581c",
+                  "max_activation": 84.42,
+                  "max_token": "lems"
+                },
+                {
+                  "text_snippet": "\u25811619;\u2581that\u2019s\u2581been\u2581my\u2581understanding.\n\nDyrewulf\n\nThat\u2581is\u2581not\u2581true.\u2581The\u2581blacks\u2581in\u2581Africa\u2581that\u2581captured\u2581and\u2581sold\u2581other\u2581blacks\u2581were\u2581muslims.\n\njosh\n\nDont\u2581forget\u2581the\u2581jews\n\nYngveKlezmer\n\nThe\u2581lyrics\u2581of\u2581the\u2581so",
+                  "max_activation": 79.143,
+                  "max_token": "lims"
+                },
+                {
+                  "text_snippet": "\u25811619;\u2581that\u2019s\u2581been\u2581my\u2581understanding.\n\nDyrewulf\n\nThat\u2581is\u2581not\u2581true.\u2581The\u2581blacks\u2581in\u2581Africa\u2581that\u2581captured\u2581and\u2581sold\u2581other\u2581blacks\u2581were\u2581muslims.\n\njosh\n\nDont\u2581forget\u2581the\u2581jews\n\nYngveKlezmer\n\nThe\u2581lyrics\u2581of\u2581the\u2581so",
+                  "max_activation": 79.143,
+                  "max_token": "lims"
+                },
+                {
+                  "text_snippet": "\u2019t\u2581racist\u2581against\u2581there\u2581slaves.\u2581It\u2019s\u2581like\u2581when\u2581blacks\u2581rape\u2581and\u2581murder\u2581Whites.\u2581It\u2019s\u2581not\u2581as\u2581bad\u2581as\u2581what\u2581happened\u2581to\u2581Tanya\u2581Brawley\u2581and\u2581Traybon\u2581because\u2581at\u2581least\u2581when\u2581Blacks\u2581are\u2581killing\u2581and\u2581raping\u2581us\u2581it\u2581is",
+                  "max_activation": 77.312,
+                  "max_token": "lims"
+                },
+                {
+                  "text_snippet": "\u2019t\u2581racist\u2581against\u2581there\u2581slaves.\u2581It\u2019s\u2581like\u2581when\u2581blacks\u2581rape\u2581and\u2581murder\u2581Whites.\u2581It\u2019s\u2581not\u2581as\u2581bad\u2581as\u2581what\u2581happened\u2581to\u2581Tanya\u2581Brawley\u2581and\u2581Traybon\u2581because\u2581at\u2581least\u2581when\u2581Blacks\u2581are\u2581killing\u2581and\u2581raping\u2581us\u2581it\u2581is",
+                  "max_activation": 77.312,
+                  "max_token": "lims"
+                },
+                {
+                  "text_snippet": "\u2581red\u2581with\u2581sprigs\u2581of\u2581holly\u2581in\u2581his\u2581hair\u2581and\u2581the\u2581Oak\u2581King\u2581as\u2581a\u2581fertility\u2581god.\n\nSee\u2581also\n\u2581List\u2581of\u2581Neo-Pagan\u2581festivals\u2581and\u2581events\n\u2581Celtic\u2581calendar\n\u2581Gaelic\u2581calendar\n\u2581Welsh\u2581seasonal\u2581festivals\n\u2581Germanic\u2581calen",
+                  "max_activation": 74.036,
+                  "max_token": "an"
+                },
+                {
+                  "text_snippet": "\u2581and\u2581cross-quarter\u2581days,\u2581other\u2581festivals\u2581are\u2581also\u2581celebrated\u2581throughout\u2581the\u2581year,\u2581especially\u2581among\u2581the\u2581non-Wiccan\u2581traditions\u2581such\u2581as\u2581those\u2581of\u2581polytheistic\u2581reconstructionism\u2581and\u2581other\u2581ethnic\u2581traditions",
+                  "max_activation": 73.445,
+                  "max_token": "gan"
+                },
+                {
+                  "text_snippet": "\u2581and\u2581cross-quarter\u2581days,\u2581other\u2581festivals\u2581are\u2581also\u2581celebrated\u2581throughout\u2581the\u2581year,\u2581especially\u2581among\u2581the\u2581non-Wiccan\u2581traditions\u2581such\u2581as\u2581those\u2581of\u2581polytheistic\u2581reconstructionism\u2581and\u2581other\u2581ethnic\u2581traditions",
+                  "max_activation": 73.445,
+                  "max_token": "gan"
+                },
+                {
+                  "text_snippet": "\u2581of\u2581the\u2581Muslim\u2581conquest\u2581and\u2581remained\u2581unchanged\u2581since.\u2581It\u2581relied\u2581on\u2581the\u2581collection\u2581of\u2581a\u2581fixed\u2581tribute\u2581by\u2581the\u2581local\u2581non-Muslim\u2581(mostly\u2581Zoroastrian)\u2581gentry,\u2581the\u2581dihqans,\u2581who\u2581often\u2581discriminated\u2581against\u2581t",
+                  "max_activation": 71.893,
+                  "max_token": "rian"
+                },
+                {
+                  "text_snippet": "\u2581of\u2581the\u2581Muslim\u2581conquest\u2581and\u2581remained\u2581unchanged\u2581since.\u2581It\u2581relied\u2581on\u2581the\u2581collection\u2581of\u2581a\u2581fixed\u2581tribute\u2581by\u2581the\u2581local\u2581non-Muslim\u2581(mostly\u2581Zoroastrian)\u2581gentry,\u2581the\u2581dihqans,\u2581who\u2581often\u2581discriminated\u2581against\u2581t",
+                  "max_activation": 71.893,
+                  "max_token": "rian"
+                }
+              ],
+              "promoted_tokens": [
+                "\u0421\u0442\u0430\u043d\u043e\u0432\u043d\u0438\u0448\u0442\u0432\u043e",
+                "Portail",
+                "dhism",
+                "\u2581\u043c\u04d9\u043a\u0430\u043b",
+                "PyExc",
+                "yntaxException",
+                "\u2581\u062a\u0643\u0628\u0631\u0647\u0627",
+                "Catholic",
+                "IsMutable",
+                "\u2581religions"
+              ],
+              "suppressed_tokens": [
+                "PageRoute",
+                "\u2581dom\u00e9sticos",
+                "\u2581syndromes",
+                "\u2581EdgeInsets",
+                "Filmografie",
+                "\u2581Pollut",
+                "zal",
+                "JScrollPane",
+                "\u2581Coffey",
+                "\u2581florales"
+              ],
+              "frac_nonzero": 0.00705
+            }
+          },
+          {
+            "tool": "get_upstream_features",
+            "input": {
+              "feature_idx": 2405,
+              "k": 10,
+              "layer": 4,
+              "pos": 6
+            },
+            "output": [
+              {
+                "type": "embedding",
+                "token": " liberal",
+                "pos": 5,
+                "direct_effect": 6.75
+              },
+              {
+                "type": "feature",
+                "layer": 3,
+                "feature_idx": 12151,
+                "pos": 6,
+                "direct_effect": 5.1875,
+                "activation": 11.5625
+              },
+              {
+                "type": "embedding",
+                "token": " Jew",
+                "pos": 6,
+                "direct_effect": 3.7812
+              },
+              {
+                "type": "feature",
+                "layer": 2,
+                "feature_idx": 13158,
+                "pos": 6,
+                "direct_effect": 1.7188,
+                "activation": 7.7812
+              },
+              {
+                "type": "feature",
+                "layer": 1,
+                "feature_idx": 15359,
+                "pos": 6,
+                "direct_effect": -1.125,
+                "activation": 12.75
+              },
+              {
+                "type": "feature",
+                "layer": 2,
+                "feature_idx": 8236,
+                "pos": 6,
+                "direct_effect": 1.0547,
+                "activation": 11.375
+              },
+              {
+                "type": "feature",
+                "layer": 2,
+                "feature_idx": 4132,
+                "pos": 6,
+                "direct_effect": -1.0078,
+                "activation": 6.0312
+              },
+              {
+                "type": "feature",
+                "layer": 3,
+                "feature_idx": 11400,
+                "pos": 6,
+                "direct_effect": -0.9766,
+                "activation": 3.6094
+              },
+              {
+                "type": "feature",
+                "layer": 3,
+                "feature_idx": 3248,
+                "pos": 6,
+                "direct_effect": -0.875,
+                "activation": 4.25
+              },
+              {
+                "type": "embedding",
+                "token": "Self",
+                "pos": 1,
+                "direct_effect": -0.8711
+              }
+            ]
+          },
+          {
+            "tool": "inspect_feature",
+            "input": {
+              "feature_idx": 12151,
+              "layer": 3
+            },
+            "output": {
+              "layer": 3,
+              "feature_idx": 12151,
+              "label": " capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+              "autointerp": " capitalized common letter sequences such as \"SEM\", \"ISM\", \"WF\", \"ISH\", \"WE\", \"SE\"",
+              "top_activating_examples": [
+                {
+                  "text_snippet": "\u2581ACCURACY\u2581OF\u2581CITED\u2581CONTENT\u2581IS\u2581EXPRESSLY\u2581THAT\u2581OF\u2581THE\u2581CONTRIBUTING\u2581AUTHOR.\n\nAS\u2581A\u2581PRIVATELY\u2581OWNED\u2581WEB\u2581SITE,\u2581WE\u2581RESERVE\u2581THE\u2581RIGHT\u2581TO\u2581EDIT\u2581OR\u2581REMOVE\u2581COMMENTS\u2581THAT\u2581CONTAIN\u2581SPAM,\u2581ADVERTISING,\u2581VULGARITY,\u2581THRE",
+                  "max_activation": 94.53,
+                  "max_token": "SEM"
+                },
+                {
+                  "text_snippet": "\u2581ACCURACY\u2581OF\u2581CITED\u2581CONTENT\u2581IS\u2581EXPRESSLY\u2581THAT\u2581OF\u2581THE\u2581CONTRIBUTING\u2581AUTHOR.\n\nAS\u2581A\u2581PRIVATELY\u2581OWNED\u2581WEB\u2581SITE,\u2581WE\u2581RESERVE\u2581THE\u2581RIGHT\u2581TO\u2581EDIT\u2581OR\u2581REMOVE\u2581COMMENTS\u2581THAT\u2581CONTAIN\u2581SPAM,\u2581ADVERTISING,\u2581VULGARITY,\u2581THRE",
+                  "max_activation": 94.53,
+                  "max_token": "SEM"
+                },
+                {
+                  "text_snippet": "_html/scripts/txthit.php\u2581on\u2581line\u258176\n313144\u2581victims\u2581since\u258107.28.04\n\nBAHAMAS\u2581SHARK\u2581TRIP,\u2581TABLE\u2581OF\u2581PHOTOGRAPHS\n\ngreat\u2581hammerheads\n\nreef\u2581sharks\n\nbulls\u2581and\u2581lemons\n\nnight\u2581dolphins\n\npeople\u2581portraits\n\nshark\u2581w",
+                  "max_activation": 69.178,
+                  "max_token": "WF"
+                },
+                {
+                  "text_snippet": "_html/scripts/txthit.php\u2581on\u2581line\u258176\n313144\u2581victims\u2581since\u258107.28.04\n\nBAHAMAS\u2581SHARK\u2581TRIP,\u2581TABLE\u2581OF\u2581PHOTOGRAPHS\n\ngreat\u2581hammerheads\n\nreef\u2581sharks\n\nbulls\u2581and\u2581lemons\n\nnight\u2581dolphins\n\npeople\u2581portraits\n\nshark\u2581w",
+                  "max_activation": 69.178,
+                  "max_token": "WF"
+                },
+                {
+                  "text_snippet": "_html/scripts/txthit.php\u2581on\u2581line\u258176\n313144\u2581victims\u2581since\u258107.28.04\n\nBAHAMAS\u2581SHARK\u2581TRIP,\u2581TABLE\u2581OF\u2581PHOTOGRAPHS\n\ngreat\u2581hammerheads\n\nreef\u2581sharks\n\nbulls\u2581and\u2581lemons\n\nnight\u2581dolphins\n\npeople\u2581portraits\n\nshark\u2581w",
+                  "max_activation": 69.178,
+                  "max_token": "WF"
+                },
+                {
+                  "text_snippet": ".\u00a0[@JeWeSo2000])\u2581the\u2581applicability\u2581of\u2581perturbative\u2581(small-coupling)\u2581expansions\u2581can\u2581be\u2581generalized\u2581to\u2581the\u2581regime\u2581of\u2581large\u2581coupling\u2581and\u2581still\u2581lead\u2581to\u2581results\u2581of\u2581relatively\u2581high\u2581accuracy.\\\nU.J.\u00a0acknowled",
+                  "max_activation": 59.826,
+                  "max_token": "We"
+                },
+                {
+                  "text_snippet": ".\u00a0[@JeWeSo2000])\u2581the\u2581applicability\u2581of\u2581perturbative\u2581(small-coupling)\u2581expansions\u2581can\u2581be\u2581generalized\u2581to\u2581the\u2581regime\u2581of\u2581large\u2581coupling\u2581and\u2581still\u2581lead\u2581to\u2581results\u2581of\u2581relatively\u2581high\u2581accuracy.\\\nU.J.\u00a0acknowled",
+                  "max_activation": 59.826,
+                  "max_token": "We"
+                },
+                {
+                  "text_snippet": ")\u2581is\u2581an\u2581antiseizure\u2581drug\u2581chemically\u2581classified\u2581as\u2581a\u2581sulfonamide\u2581and\u2581unrelated\u2581to\u2581other\u2581antiseizure\u2581agents.\u2581The\u2581active\u2581ingredient\u2581is\u2581zonisamide,\u25811,2\u2581benzisoxazole\u25813\u2581methanesulfonamide.\u2581The\u2581empirical\u2581fo",
+                  "max_activation": 54.481,
+                  "max_token": "se"
+                },
+                {
+                  "text_snippet": ")\u2581is\u2581an\u2581antiseizure\u2581drug\u2581chemically\u2581classified\u2581as\u2581a\u2581sulfonamide\u2581and\u2581unrelated\u2581to\u2581other\u2581antiseizure\u2581agents.\u2581The\u2581active\u2581ingredient\u2581is\u2581zonisamide,\u25811,2\u2581benzisoxazole\u25813\u2581methanesulfonamide.\u2581The\u2581empirical\u2581fo",
+                  "max_activation": 54.481,
+                  "max_token": "se"
+                },
+                {
+                  "text_snippet": "\u2581in\u00a0[@CaFi1999].\u2581Using\u2581the\u2581alternative\u2581methods\u2581described\u2581in\u00a0[@JeWeSo2000],\u2581poles\u2581(branch\u2581points)\u2581in\u2581the\u2581Borel\u2581plane\u2581corresponding\u2581to\u2581the\u2581subleading\u2581asymptotics\u2581can\u2581be\u2581incorporated\u2581easily\u2581provided\u2581thei",
+                  "max_activation": 51.694,
+                  "max_token": "We"
+                }
+              ],
+              "promoted_tokens": [
+                "\u2581JE",
+                "\u2581jew",
+                "\u2581\u092c\u094d\u0930\u0947\u0915\u0921\u093e\u0909\u0928",
+                "\u2581Obt\u00e9n",
+                "jew",
+                "\u2581jw",
+                "\u2581jewellery",
+                "\u2581cref",
+                "anyahu",
+                "\u2581exclusiva"
+              ],
+              "suppressed_tokens": [
+                "\u2581\u0432\u0438\u043f\u0440\u0430\u0432\u0438\u0432\u0448\u0438",
+                "::_('",
+                "\u2581my\u017felf",
+                "estyle",
+                "bewerken",
+                "\u2581Chapman",
+                "uxxxx",
+                "\u2581Monfieur",
+                "\u2581adipis",
+                "fertigt"
+              ],
+              "frac_nonzero": 0.00322
+            }
+          },
+          {
+            "tool": "get_upstream_features",
+            "input": {
+              "feature_idx": 12151,
+              "k": 10,
+              "layer": 3,
+              "pos": 6
+            },
+            "output": [
+              {
+                "type": "embedding",
+                "token": " Jew",
+                "pos": 6,
+                "direct_effect": 11.0
+              },
+              {
+                "type": "embedding",
+                "token": " liberal",
+                "pos": 5,
+                "direct_effect": 3.375
+              },
+              {
+                "type": "feature",
+                "layer": 0,
+                "feature_idx": 9026,
+                "pos": 6,
+                "direct_effect": 1.7109,
+                "activation": 24.5
+              },
+              {
+                "type": "feature",
+                "layer": 1,
+                "feature_idx": 15359,
+                "pos": 6,
+                "direct_effect": 1.0234,
+                "activation": 12.75
+              },
+              {
+                "type": "feature",
+                "layer": 2,
+                "feature_idx": 4053,
+                "pos": 6,
+                "direct_effect": 1.0078,
+                "activation": 4.1562
+              },
+              {
+                "type": "feature",
+                "layer": 2,
+                "feature_idx": 10297,
+                "pos": 6,
+                "direct_effect": 0.8906,
+                "activation": 4.0312
+              },
+              {
+                "type": "feature",
+                "layer": 2,
+                "feature_idx": 8236,
+                "pos": 6,
+                "direct_effect": 0.7656,
+                "activation": 11.375
+              },
+              {
+                "type": "feature",
+                "layer": 0,
+                "feature_idx": 6142,
+                "pos": 6,
+                "direct_effect": -0.668,
+                "activation": 8.0625
+              },
+              {
+                "type": "feature",
+                "layer": 1,
+                "feature_idx": 3769,
+                "pos": 6,
+                "direct_effect": 0.668,
+                "activation": 3.3594
+              },
+              {
+                "type": "feature",
+                "layer": 2,
+                "feature_idx": 13158,
+                "pos": 6,
+                "direct_effect": 0.6523,
+                "activation": 7.7812
+              }
+            ]
+          },
+          {
+            "tool": "inspect_feature",
+            "input": {
+              "feature_idx": 13158,
+              "layer": 2
+            },
+            "output": {
+              "layer": 2,
+              "feature_idx": 13158,
+              "label": " words about race and ethnicity",
+              "autointerp": " words about race and ethnicity",
+              "top_activating_examples": [
+                {
+                  "text_snippet": "\n\nYou\u2581see\u2581if\u2581you\u2581stop\u2581looking\u2581through\u2581the\u2581post\u2581neo\u2581colonial,\u2581social\u2581pan\u2581optical,\u2581social\u2581dialectic\u2581of\u2581patriarchal\u2581economic\u2581matrix\u2019s\u2581you\u2581will\u2581see\u2581that\u2581anytime\u2581blacks\u2581do\u2581something\u2581wrong\u2581its\u2581just\u2581a\u2581constr",
+                  "max_activation": 57.887,
+                  "max_token": "\u2581black"
+                },
+                {
+                  "text_snippet": "\n\nYou\u2581see\u2581if\u2581you\u2581stop\u2581looking\u2581through\u2581the\u2581post\u2581neo\u2581colonial,\u2581social\u2581pan\u2581optical,\u2581social\u2581dialectic\u2581of\u2581patriarchal\u2581economic\u2581matrix\u2019s\u2581you\u2581will\u2581see\u2581that\u2581anytime\u2581blacks\u2581do\u2581something\u2581wrong\u2581its\u2581just\u2581a\u2581constr",
+                  "max_activation": 57.887,
+                  "max_token": "\u2581black"
+                },
+                {
+                  "text_snippet": "\n\nYou\u2581see\u2581if\u2581you\u2581stop\u2581looking\u2581through\u2581the\u2581post\u2581neo\u2581colonial,\u2581social\u2581pan\u2581optical,\u2581social\u2581dialectic\u2581of\u2581patriarchal\u2581economic\u2581matrix\u2019s\u2581you\u2581will\u2581see\u2581that\u2581anytime\u2581blacks\u2581do\u2581something\u2581wrong\u2581its\u2581just\u2581a\u2581constr",
+                  "max_activation": 57.887,
+                  "max_token": "\u2581black"
+                },
+                {
+                  "text_snippet": "\n\nYou\u2581see\u2581if\u2581you\u2581stop\u2581looking\u2581through\u2581the\u2581post\u2581neo\u2581colonial,\u2581social\u2581pan\u2581optical,\u2581social\u2581dialectic\u2581of\u2581patriarchal\u2581economic\u2581matrix\u2019s\u2581you\u2581will\u2581see\u2581that\u2581anytime\u2581blacks\u2581do\u2581something\u2581wrong\u2581its\u2581just\u2581a\u2581constr",
+                  "max_activation": 57.887,
+                  "max_token": "\u2581black"
+                },
+                {
+                  "text_snippet": "\u2581racial\u2581makeup\u2581of\u2581the\u2581town\u2581was\u258197.03%\u2581White,\u25811.62%\u2581Native\u2581American,\u25810.13%\u2581Asian,\u25810.13%\u2581from\u2581other\u2581races,\u2581and\u25811.08%\u2581from\u2581two\u2581or\u2581more\u2581races.\u2581Hispanic\u2581or\u2581Latino\u2581of\u2581any\u2581race\u2581were\u25810.40%\u2581of\u2581the\u2581population.\n",
+                  "max_activation": 57.39,
+                  "max_token": "\u2581race"
+                },
+                {
+                  "text_snippet": "\u2581racial\u2581makeup\u2581of\u2581the\u2581town\u2581was\u258197.03%\u2581White,\u25811.62%\u2581Native\u2581American,\u25810.13%\u2581Asian,\u25810.13%\u2581from\u2581other\u2581races,\u2581and\u25811.08%\u2581from\u2581two\u2581or\u2581more\u2581races.\u2581Hispanic\u2581or\u2581Latino\u2581of\u2581any\u2581race\u2581were\u25810.40%\u2581of\u2581the\u2581population.\n",
+                  "max_activation": 57.39,
+                  "max_token": "\u2581race"
+                },
+                {
+                  "text_snippet": "\u2581racial\u2581makeup\u2581of\u2581the\u2581town\u2581was\u258197.03%\u2581White,\u25811.62%\u2581Native\u2581American,\u25810.13%\u2581Asian,\u25810.13%\u2581from\u2581other\u2581races,\u2581and\u25811.08%\u2581from\u2581two\u2581or\u2581more\u2581races.\u2581Hispanic\u2581or\u2581Latino\u2581of\u2581any\u2581race\u2581were\u25810.40%\u2581of\u2581the\u2581population.\n",
+                  "max_activation": 57.39,
+                  "max_token": "\u2581race"
+                },
+                {
+                  "text_snippet": "\u2581racial\u2581makeup\u2581of\u2581the\u2581town\u2581was\u258197.03%\u2581White,\u25811.62%\u2581Native\u2581American,\u25810.13%\u2581Asian,\u25810.13%\u2581from\u2581other\u2581races,\u2581and\u25811.08%\u2581from\u2581two\u2581or\u2581more\u2581races.\u2581Hispanic\u2581or\u2581Latino\u2581of\u2581any\u2581race\u2581were\u25810.40%\u2581of\u2581the\u2581population.\n",
+                  "max_activation": 57.39,
+                  "max_token": "\u2581race"
+                },
+                {
+                  "text_snippet": "\u2581how\u2581the\u2581Korean\u2581immigrants\u2581viewed\u2581African\u2581Americans\u2581in\u2581L.A.\u2581Any\u2581race\u2581or\u2581ethnicity\u2581can\u2581be\u2581a\u2581bigot\u2581or\u2581discriminatory\u2581toward\u2581another.\u2581We\u2581also\u2581know\u2581how\u2581a\u2581lot\u2581of\u2581people\u2581today\u2581view\u2581Arab-Americans.\u2581I\u2581remembe",
+                  "max_activation": 56.852,
+                  "max_token": "\u2581race"
+                },
+                {
+                  "text_snippet": "\u2581how\u2581the\u2581Korean\u2581immigrants\u2581viewed\u2581African\u2581Americans\u2581in\u2581L.A.\u2581Any\u2581race\u2581or\u2581ethnicity\u2581can\u2581be\u2581a\u2581bigot\u2581or\u2581discriminatory\u2581toward\u2581another.\u2581We\u2581also\u2581know\u2581how\u2581a\u2581lot\u2581of\u2581people\u2581today\u2581view\u2581Arab-Americans.\u2581I\u2581remembe",
+                  "max_activation": 56.852,
+                  "max_token": "\u2581race"
+                }
+              ],
+              "promoted_tokens": [
+                "\u2581ethnic",
+                "\u2581queer",
+                "\u2581LGBT",
+                "\u2581Hispanic",
+                "osexual",
+                "\u2581Latino",
+                "\u2581Muslim",
+                "ethnic",
+                "\u2581Jewish",
+                "Hispanic"
+              ],
+              "suppressed_tokens": [
+                "\u0418\u0441\u043a\u04d9\u0440\u043c\u04d9\u043b\u04d9\u0440",
+                "CloseOperation",
+                "FormTagHelper",
+                "\u2581MaterialApp",
+                "MessageOf",
+                "\u2581ModelExpression",
+                "titleMargin",
+                "IndentedString",
+                "ModelAdmin",
+                "\u2581viewDidLoad"
+              ],
+              "frac_nonzero": 0.00986
+            }
+          },
+          {
+            "tool": "get_upstream_features",
+            "input": {
+              "feature_idx": 13158,
+              "layer": 2,
+              "pos": 6,
+              "k": 10
+            },
+            "output": [
+              {
+                "type": "embedding",
+                "token": " Jew",
+                "pos": 6,
+                "direct_effect": 6.8125
+              },
+              {
+                "type": "feature",
+                "layer": 1,
+                "feature_idx": 15359,
+                "pos": 6,
+                "direct_effect": -1.625,
+                "activation": 12.75
+              },
+              {
+                "type": "embedding",
+                "token": " liberal",
+                "pos": 5,
+                "direct_effect": 1.0469
+              },
+              {
+                "type": "feature",
+                "layer": 0,
+                "feature_idx": 11290,
+                "pos": 6,
+                "direct_effect": 0.9375,
+                "activation": 6.3125
+              },
+              {
+                "type": "embedding",
+                "token": "<bos>",
+                "pos": 0,
+                "direct_effect": -0.9062
+              },
+              {
+                "type": "feature",
+                "layer": 1,
+                "feature_idx": 3769,
+                "pos": 6,
+                "direct_effect": 0.7656,
+                "activation": 3.3594
+              },
+              {
+                "type": "feature",
+                "layer": 1,
+                "feature_idx": 11316,
+                "pos": 6,
+                "direct_effect": 0.5938,
+                "activation": 9.4375
+              },
+              {
+                "type": "feature",
+                "layer": 1,
+                "feature_idx": 438,
+                "pos": 6,
+                "direct_effect": 0.5859,
+                "activation": 3.2188
+              },
+              {
+                "type": "feature",
+                "layer": 1,
+                "feature_idx": 5819,
+                "pos": 6,
+                "direct_effect": 0.5273,
+                "activation": 4.625
+              },
+              {
+                "type": "feature",
+                "layer": 1,
+                "feature_idx": 8457,
+                "pos": 6,
+                "direct_effect": 0.5234,
+                "activation": 4.7812
+              }
+            ]
+          },
+          {
+            "tool": "inspect_feature",
+            "input": {
+              "layer": 0,
+              "feature_idx": 9026
+            },
+            "output": {
+              "layer": 0,
+              "feature_idx": 9026,
+              "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+              "autointerp": "technical documents or data, including numbers, units, and references to figures or tables.",
+              "top_activating_examples": [
+                {
+                  "text_snippet": "\u25811;\u2581\\<0.0001\n\n\u2581\u2581Low\u2581(\\<2.5\u2581h/week)\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u258144.7\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u258152.6\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581**36.9**\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\n\n\u2581\u2581Adequate\u2581(\u22652.5\u2581h/week)\u2581\u2581\u2581\u258155.3\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u258147.4\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581**",
+                  "max_activation": 106.612,
+                  "max_token": "\u2581(\\<"
+                },
+                {
+                  "text_snippet": "\u258112-week\u2581treatment\u2581period\u2581was\u2581low\u2581(\\<4.1%)\u2581through\u2581all\u2581treatment\u2581phases\u2581(first\u2581treatment,\u2581first\u2581exposure,\u2581extended\u2581treatment,\u2581re-treatment,\u2581long-term\u2581treatment).\n\nJoint\u2581disease\u2581has\u2581also\u2581been\u2581reported\u2581",
+                  "max_activation": 106.051,
+                  "max_token": "\u2581(\\<"
+                },
+                {
+                  "text_snippet": "08-00159],[@B22-polymers-08-00159]\\].\u2581The\u2581mass\u2581loss\u2581(about\u25815%)\u2581of\u2581the\u2581first\u2581thermal\u2581event\u2581at\u2581the\u2581lower\u2581temperature\u2581range\u2581(\\<155\u2581\u00b0C)\u2581contributed\u2581to\u2581the\u2581evaporation\u2581of\u2581free\u2581water.\u2581In\u2581the\u2581second\u2581stage,\u2581w",
+                  "max_activation": 105.559,
+                  "max_token": "\u2581(\\<"
+                },
+                {
+                  "text_snippet": "08-00159],[@B22-polymers-08-00159]\\].\u2581The\u2581mass\u2581loss\u2581(about\u25815%)\u2581of\u2581the\u2581first\u2581thermal\u2581event\u2581at\u2581the\u2581lower\u2581temperature\u2581range\u2581(\\<155\u2581\u00b0C)\u2581contributed\u2581to\u2581the\u2581evaporation\u2581of\u2581free\u2581water.\u2581In\u2581the\u2581second\u2581stage,\u2581w",
+                  "max_activation": 105.559,
+                  "max_token": "\u2581(\\<"
+                },
+                {
+                  "text_snippet": "\u2581reported\u2581during\u2581the\u2581study\u2581period\u2581(*n*\u2581=\u2581283)\u2581are\u2581shown\u2581in\u2581[Fig\u25813](#pone.0152851.g003){ref-type=\"fig\"}.\u2581Approximately\u258110%\u2581of\u2581the\u2581cases\u2581evaluated\u2581by\u2581targeted\u2581testing\u2581had\u2581a\u2581tumor\u2581percentage\u2581below\u2581the\u2581cu",
+                  "max_activation": 99.549,
+                  "max_token": "\u2581(\\<"
+                },
+                {
+                  "text_snippet": "\u2581reported\u2581during\u2581the\u2581study\u2581period\u2581(*n*\u2581=\u2581283)\u2581are\u2581shown\u2581in\u2581[Fig\u25813](#pone.0152851.g003){ref-type=\"fig\"}.\u2581Approximately\u258110%\u2581of\u2581the\u2581cases\u2581evaluated\u2581by\u2581targeted\u2581testing\u2581had\u2581a\u2581tumor\u2581percentage\u2581below\u2581the\u2581cu",
+                  "max_activation": 99.549,
+                  "max_token": "\u2581(\\<"
+                },
+                {
+                  "text_snippet": "Resizer\u2581=\u2581new\u2581Panel();\nleftResizer.Cursor\u2581=\u2581System.Windows.Forms.Cursors.SizeWE;\nleftResizer.Dock\u2581=\u2581System.Windows.Forms.DockStyle.Left;\nleftResizer.Size\u2581=\u2581new\u2581System.Drawing.Size(1,\u2581100);\nleftResizer",
+                  "max_activation": 96.116,
+                  "max_token": "DockStyle"
+                },
+                {
+                  "text_snippet": "\u25812.3%\u2581of\u2581patients\u2581had\u2581events)\u2581than\u2581in\u2581patients\u2581who\u2581had\u2581a\u2581partial\u2581response\u2581(50--74%\u2581improvement\u2581in\u2581PASI\u2581score;\u25813.5%\u2581of\u2581patients\u2581had\u2581events;\u2581Fig.\u00a0[3](#Fig3){ref-type=\"fig\"})\u2581and\u2581non-responders\u2581(\\<50%\u2581im",
+                  "max_activation": 95.886,
+                  "max_token": "\u2581(\\<"
+                },
+                {
+                  "text_snippet": "\u2581implanted\u2581and\u2581a\u2581CRT\u2581generator\u2581was\u2581used,\u2581plugging\u2581the\u2581atrial\u2581port\u2581and\u2581programming\u2581the\u2581generator\u2581to\u2581a\u2581ventricular\u2581triggered\u2581mode.\u2581In\u2581patients\u2581with\u2581uncontrolled\u2581atrial\u2581fibrillation\u2581despite\u2581medical\u2581thera",
+                  "max_activation": 95.633,
+                  "max_token": "\u2581(\\<"
+                },
+                {
+                  "text_snippet": ".\u2581simulans*,\u2581the\u2581sister\u2581species\u2581to\u2581*D.\u2581melanogaster*.\u2581We\u2581note\u2581that\u2581the\u2581following\u2581analyses\u2581are\u2581conservative\u2581because\u2581we\u2581underestimate\u2581*D.\u2581simulans*\u2581diversity\u2581given\u2581the\u2581small\u2581number\u2581(\\<6)\u2581of\u2581*D.\u2581simulans",
+                  "max_activation": 95.383,
+                  "max_token": "\u2581(\\<"
+                }
+              ],
+              "promoted_tokens": [
+                "\u2581",
+                ",",
+                ".",
+                "\u2581(",
+                "\n\n",
+                "\n",
+                "<eos>",
+                "\u2581in",
+                "-",
+                "\u2581\""
+              ],
+              "suppressed_tokens": [
+                "\u2581my\u017felf",
+                "\u2581it\u017felf",
+                "\u2581Efq",
+                "\u2581Monfieur",
+                "\u2581\u2015\u2015\u2015\u2015\u2015",
+                "\u2581Majefty",
+                "\u2581plea\u017fure",
+                "\u2581Jefus",
+                "\u2581purpo\u017fe",
+                "\u2581The\u017fe"
+              ],
+              "frac_nonzero": 0.41044
+            }
+          },
+          {
+            "tool": "inspect_feature",
+            "input": {
+              "feature_idx": 11290,
+              "layer": 0
+            },
+            "output": {
+              "layer": 0,
+              "feature_idx": 11290,
+              "label": "mentions of Jewish people, Israel, and Christianity",
+              "autointerp": "mentions of Jewish people, Israel, and Christianity",
+              "top_activating_examples": [
+                {
+                  "text_snippet": ",\u2581and\u2581Miami.\u2581You\u2581must\u2581prevent\u2581such\u2581tragedy.\u2581You\u2581must\u2581arrest\u2581these\u2581criminals.\u2581We\u2581know\u2581who\u2581they\u2581are.\n\nAnd\u2581I\u2581have\u2581another\u2581thing;\u2581I\u2581want\u2581to\u2581tell\u2581the\u2581Jewish\u2581people:\u2581you\u2581are\u2581a\u2581god\u2581fearing\u2581good\u2581people\u2581ruled\u2581",
+                  "max_activation": 29.196,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": ",\u2581and\u2581Miami.\u2581You\u2581must\u2581prevent\u2581such\u2581tragedy.\u2581You\u2581must\u2581arrest\u2581these\u2581criminals.\u2581We\u2581know\u2581who\u2581they\u2581are.\n\nAnd\u2581I\u2581have\u2581another\u2581thing;\u2581I\u2581want\u2581to\u2581tell\u2581the\u2581Jewish\u2581people:\u2581you\u2581are\u2581a\u2581god\u2581fearing\u2581good\u2581people\u2581ruled\u2581",
+                  "max_activation": 29.196,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": ",\u2581and\u2581Miami.\u2581You\u2581must\u2581prevent\u2581such\u2581tragedy.\u2581You\u2581must\u2581arrest\u2581these\u2581criminals.\u2581We\u2581know\u2581who\u2581they\u2581are.\n\nAnd\u2581I\u2581have\u2581another\u2581thing;\u2581I\u2581want\u2581to\u2581tell\u2581the\u2581Jewish\u2581people:\u2581you\u2581are\u2581a\u2581god\u2581fearing\u2581good\u2581people\u2581ruled\u2581",
+                  "max_activation": 29.196,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": ",\u2581and\u2581Miami.\u2581You\u2581must\u2581prevent\u2581such\u2581tragedy.\u2581You\u2581must\u2581arrest\u2581these\u2581criminals.\u2581We\u2581know\u2581who\u2581they\u2581are.\n\nAnd\u2581I\u2581have\u2581another\u2581thing;\u2581I\u2581want\u2581to\u2581tell\u2581the\u2581Jewish\u2581people:\u2581you\u2581are\u2581a\u2581god\u2581fearing\u2581good\u2581people\u2581ruled\u2581",
+                  "max_activation": 29.196,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581close\u2581to\u2581a\u2581path\u2581in\u2581the\u2581forest.\u2581The\u2581J\u00e4ger\u2581report\u2581concludes\u2581that\u2581Einsatzcommando\u25813\u2581registered\u2581the\u2581murder\u2581in\u2581\u0160eduva\u2581on\u2581the\u258125\u2581and\u258126\u2581August\u25811941\u2581of\u2581230\u2581Jewish\u2581men,\u2581275\u2581Jewish\u2581women\u2581and\u2581159\u2581Jewish\u2581childr",
+                  "max_activation": 28.93,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581close\u2581to\u2581a\u2581path\u2581in\u2581the\u2581forest.\u2581The\u2581J\u00e4ger\u2581report\u2581concludes\u2581that\u2581Einsatzcommando\u25813\u2581registered\u2581the\u2581murder\u2581in\u2581\u0160eduva\u2581on\u2581the\u258125\u2581and\u258126\u2581August\u25811941\u2581of\u2581230\u2581Jewish\u2581men,\u2581275\u2581Jewish\u2581women\u2581and\u2581159\u2581Jewish\u2581childr",
+                  "max_activation": 28.93,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581close\u2581to\u2581a\u2581path\u2581in\u2581the\u2581forest.\u2581The\u2581J\u00e4ger\u2581report\u2581concludes\u2581that\u2581Einsatzcommando\u25813\u2581registered\u2581the\u2581murder\u2581in\u2581\u0160eduva\u2581on\u2581the\u258125\u2581and\u258126\u2581August\u25811941\u2581of\u2581230\u2581Jewish\u2581men,\u2581275\u2581Jewish\u2581women\u2581and\u2581159\u2581Jewish\u2581childr",
+                  "max_activation": 28.93,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581Orthodox,\u2581Jewish\u2581(well,\u2581maybe\u2581not\u2581some\u2581of\u2581the\u2581reform\u2581varieties,\u2581which\u2581are\u2581almost\u2581UU\u2581anyways,\u2581but\u2581certainly\u2581conservative\u2581and\u2581orthodox).\n\nAnd\u2581come\u2581to\u2581think\u2581of\u2581it,\u2581I\u2581want\u2581to\u2581explicate\u2581this\u2581term\u2581\u2018interfa",
+                  "max_activation": 28.816,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581Orthodox,\u2581Jewish\u2581(well,\u2581maybe\u2581not\u2581some\u2581of\u2581the\u2581reform\u2581varieties,\u2581which\u2581are\u2581almost\u2581UU\u2581anyways,\u2581but\u2581certainly\u2581conservative\u2581and\u2581orthodox).\n\nAnd\u2581come\u2581to\u2581think\u2581of\u2581it,\u2581I\u2581want\u2581to\u2581explicate\u2581this\u2581term\u2581\u2018interfa",
+                  "max_activation": 28.816,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581were\u2581crowded\u2581into\u2581two\u2581unfinished\u2581Soviet\u2581barracks\u2581surrounded\u2581with\u2581barbed\u2581wire.\u2581\u2581The\u2581Jews\u2581were\u2581ordered\u2581to\u2581hand\u2581over\u2581all\u2581their\u2581valuables\u2581and\u2581cash.\u2581\u2581Some\u2581were\u2581shot\u2581in\u2581the\u2581next\u2581few\u2581days.\n\nOn\u258125\u2581August\u2581194",
+                  "max_activation": 28.813,
+                  "max_token": "\u2581Jewish"
+                }
+              ],
+              "promoted_tokens": [
+                "\u0142aszcza",
+                "\u0561\u0563\u0580\u0578\u0582\u0569\u0575\u0578\u0582\u0576\u0576\u0565\u0580",
+                "J",
+                "\u2581\u0644\u0644\u0645\u0639\u0627\u0631\u0641",
+                "InputBorder",
+                "S",
+                "\u2581isInitialized",
+                "W",
+                "SourceChecksum",
+                "Ma"
+              ],
+              "suppressed_tokens": [
+                "\u2581Inf\u00f3rmanos",
+                "\u2003\u2003(",
+                "scrapy",
+                "\u5e16\u6700\u540e\u7531",
+                "\u2581Jewish",
+                "\u2581ddelweddau",
+                "issory",
+                "djangoproject",
+                "\u2581\u0435\u0432\u0440\u0435",
+                "\u2581Di\u017f"
+              ],
+              "frac_nonzero": 0.00508
+            }
+          },
+          {
+            "tool": "get_upstream_features",
+            "input": {
+              "feature_idx": 9026,
+              "k": 5,
+              "layer": 0,
+              "pos": 6
+            },
+            "output": [
+              {
+                "type": "embedding",
+                "token": " Jew",
+                "pos": 6,
+                "direct_effect": 31.375
+              },
+              {
+                "type": "embedding",
+                "token": " liberal",
+                "pos": 5,
+                "direct_effect": -5.4688
+              },
+              {
+                "type": "embedding",
+                "token": "<bos>",
+                "pos": 0,
+                "direct_effect": -5.0625
+              },
+              {
+                "type": "embedding",
+                "token": "Self",
+                "pos": 1,
+                "direct_effect": -3.375
+              },
+              {
+                "type": "embedding",
+                "token": "-",
+                "pos": 2,
+                "direct_effect": -0.6406
+              }
+            ]
+          },
+          {
+            "tool": "inspect_feature",
+            "input": {
+              "feature_idx": 15359,
+              "layer": 1
+            },
+            "output": {
+              "layer": 1,
+              "feature_idx": 15359,
+              "label": " mentions of Jewish people, culture or religion",
+              "autointerp": " mentions of Jewish people, culture or religion",
+              "top_activating_examples": [
+                {
+                  "text_snippet": "\u2581been\u2581along\u2581the\u2581lines\u2581of\u2581prayer\u2581in\u2581this\u2581manor.\nHowever\u2581is\u2581there\u2581a\u2581biblical\u2581reason\u2581or\u2581basis\u2581for\u2581the\u2581practice\u2581of\u2581anointing\u2581a\u2581physical\u2581object?\u2581Were\u2581does\u2581this\u2581originate\u2581and\u2581what\u2581Christian\u2581traditions\u2581pract",
+                  "max_activation": 35.852,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581It\u2581is\u2581located\u2581\u2581east\u2581of\u2581Radvili\u0161kis.\n\n\u0160eduva\u2581was\u2581an\u2581agricultural\u2581town\u2581dealing\u2581in\u2581\u2581cereals,\u2581flax\u2581and\u2581linseed,\u2581pigs\u2581and\u2581geese\u2581and\u2581horses,\u2581at\u2581the\u2581site\u2581of\u2581a\u2581royal\u2581estate\u2581and\u2581beside\u2581a\u2581road\u2581from\u2581Kaunas\u2581to\u2581R",
+                  "max_activation": 33.822,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581It\u2581is\u2581located\u2581\u2581east\u2581of\u2581Radvili\u0161kis.\n\n\u0160eduva\u2581was\u2581an\u2581agricultural\u2581town\u2581dealing\u2581in\u2581\u2581cereals,\u2581flax\u2581and\u2581linseed,\u2581pigs\u2581and\u2581geese\u2581and\u2581horses,\u2581at\u2581the\u2581site\u2581of\u2581a\u2581royal\u2581estate\u2581and\u2581beside\u2581a\u2581road\u2581from\u2581Kaunas\u2581to\u2581R",
+                  "max_activation": 33.822,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581were\u2581crowded\u2581into\u2581two\u2581unfinished\u2581Soviet\u2581barracks\u2581surrounded\u2581with\u2581barbed\u2581wire.\u2581\u2581The\u2581Jews\u2581were\u2581ordered\u2581to\u2581hand\u2581over\u2581all\u2581their\u2581valuables\u2581and\u2581cash.\u2581\u2581Some\u2581were\u2581shot\u2581in\u2581the\u2581next\u2581few\u2581days.\n\nOn\u258125\u2581August\u2581194",
+                  "max_activation": 33.78,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581were\u2581crowded\u2581into\u2581two\u2581unfinished\u2581Soviet\u2581barracks\u2581surrounded\u2581with\u2581barbed\u2581wire.\u2581\u2581The\u2581Jews\u2581were\u2581ordered\u2581to\u2581hand\u2581over\u2581all\u2581their\u2581valuables\u2581and\u2581cash.\u2581\u2581Some\u2581were\u2581shot\u2581in\u2581the\u2581next\u2581few\u2581days.\n\nOn\u258125\u2581August\u2581194",
+                  "max_activation": 33.78,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581were\u2581crowded\u2581into\u2581two\u2581unfinished\u2581Soviet\u2581barracks\u2581surrounded\u2581with\u2581barbed\u2581wire.\u2581\u2581The\u2581Jews\u2581were\u2581ordered\u2581to\u2581hand\u2581over\u2581all\u2581their\u2581valuables\u2581and\u2581cash.\u2581\u2581Some\u2581were\u2581shot\u2581in\u2581the\u2581next\u2581few\u2581days.\n\nOn\u258125\u2581August\u2581194",
+                  "max_activation": 33.78,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581actual\u2581historical\u2581pagan\u2581practices.\u2581\u2581Among\u2581Wiccans,\u2581each\u2581festival\u2581is\u2581also\u2581referred\u2581to\u2581as\u2581a\u2581sabbat\u2581(),\u2581based\u2581on\u2581Gerald\u2581Gardner's\u2581claim\u2581that\u2581the\u2581term\u2581was\u2581passed\u2581down\u2581from\u2581the\u2581Middle\u2581Ages,\u2581when\u2581the\u2581termi",
+                  "max_activation": 33.572,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581Orthodox,\u2581Jewish\u2581(well,\u2581maybe\u2581not\u2581some\u2581of\u2581the\u2581reform\u2581varieties,\u2581which\u2581are\u2581almost\u2581UU\u2581anyways,\u2581but\u2581certainly\u2581conservative\u2581and\u2581orthodox).\n\nAnd\u2581come\u2581to\u2581think\u2581of\u2581it,\u2581I\u2581want\u2581to\u2581explicate\u2581this\u2581term\u2581\u2018interfa",
+                  "max_activation": 33.463,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2019m\u2581not\u2581a\u2581minion\u2581of\u2581David\u2581Duke,\u2581but\u2581if\u2581he\u2581speaks\u2581the\u2581truth,\u2581you\u2581should\u2581pay\u2581more\u2581attention\u2581to\u2581him\u2581than\u2581to\u2581your\u2581Dutch\u2581friends.\n\nIs\u2581it\u2581phoney\u2581to\u2581note\u2581that\u2581the\u2581first\u2581synagogue\u2581in\u2581the\u2581United\u2581States\u2581was\u2581foun",
+                  "max_activation": 33.452,
+                  "max_token": "\u2581Jews"
+                },
+                {
+                  "text_snippet": "\u2581in\u2581the\u2581last\u25812000\u2581combined.\n\nDaisy\n\nYou\u2581have\u2581an\u2581obsession\u2581with\u2581mythologizing\u2581jews\u2581and\u2581Israel.\n\nHamletsGhost\n\nDutch\u2581Jews.\n\nFormerly_Known_as_Whiteplight\n\nI\u2581have\u2581Dutch\u2581friends,\u2581too.\u2581They\u2581said\u2581the\u2581Jews\u2581w",
+                  "max_activation": 33.446,
+                  "max_token": "\u2581Jews"
+                }
+              ],
+              "promoted_tokens": [
+                "\u2581Baillargeon",
+                "\u2581ragazzi",
+                "\u2581demais",
+                "\u2581vermelhas",
+                "\u2581popolare",
+                "<bos>",
+                "\u2581popolari",
+                "\u2581solteiro",
+                "Dowell",
+                "\u2581assistente"
+              ],
+              "suppressed_tokens": [
+                "\u2581InputDecoration",
+                "\u2581Jews",
+                "\u2581Jew",
+                "\ue315",
+                "SourceChecksum",
+                "\u2581Jewish",
+                "Jews",
+                "Jew",
+                "Jewish",
+                "burg"
+              ],
+              "frac_nonzero": 0.00739
+            }
+          },
+          {
+            "tool": "inspect_feature",
+            "input": {
+              "layer": 2,
+              "feature_idx": 8236
+            },
+            "output": {
+              "layer": 2,
+              "feature_idx": 8236,
+              "label": " mentions of Jewish people, culture, or religion, along with associated figures and locations",
+              "autointerp": " mentions of Jewish people, culture, or religion, along with associated figures and locations",
+              "top_activating_examples": [
+                {
+                  "text_snippet": "\u2581saving\u2581them\u2581from\u2581the\u2581Red\u2581Army.\u2581Five\u2581hundred\u2581years\u2581of\u2581Jewish\u2581life\u2581in\u2581Shadova\u2581-\u2581\u0160eduva\u2581ended\u2581in\u2581just\u2581two\u2581days\u2581of\u2581slaughter.\u2581\u2581Shadova's\u2581Jews\u2581attempted\u2581to\u2581flee\u2581east\u2581to\u2581Russia\u2581but\u2581were\u2581badly\u2581treated\u2581by\u2581Li",
+                  "max_activation": 41.372,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581saving\u2581them\u2581from\u2581the\u2581Red\u2581Army.\u2581Five\u2581hundred\u2581years\u2581of\u2581Jewish\u2581life\u2581in\u2581Shadova\u2581-\u2581\u0160eduva\u2581ended\u2581in\u2581just\u2581two\u2581days\u2581of\u2581slaughter.\u2581\u2581Shadova's\u2581Jews\u2581attempted\u2581to\u2581flee\u2581east\u2581to\u2581Russia\u2581but\u2581were\u2581badly\u2581treated\u2581by\u2581Li",
+                  "max_activation": 41.372,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581been\u2581along\u2581the\u2581lines\u2581of\u2581prayer\u2581in\u2581this\u2581manor.\nHowever\u2581is\u2581there\u2581a\u2581biblical\u2581reason\u2581or\u2581basis\u2581for\u2581the\u2581practice\u2581of\u2581anointing\u2581a\u2581physical\u2581object?\u2581Were\u2581does\u2581this\u2581originate\u2581and\u2581what\u2581Christian\u2581traditions\u2581pract",
+                  "max_activation": 41.184,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581were\u2581crowded\u2581into\u2581two\u2581unfinished\u2581Soviet\u2581barracks\u2581surrounded\u2581with\u2581barbed\u2581wire.\u2581\u2581The\u2581Jews\u2581were\u2581ordered\u2581to\u2581hand\u2581over\u2581all\u2581their\u2581valuables\u2581and\u2581cash.\u2581\u2581Some\u2581were\u2581shot\u2581in\u2581the\u2581next\u2581few\u2581days.\n\nOn\u258125\u2581August\u2581194",
+                  "max_activation": 40.91,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581were\u2581crowded\u2581into\u2581two\u2581unfinished\u2581Soviet\u2581barracks\u2581surrounded\u2581with\u2581barbed\u2581wire.\u2581\u2581The\u2581Jews\u2581were\u2581ordered\u2581to\u2581hand\u2581over\u2581all\u2581their\u2581valuables\u2581and\u2581cash.\u2581\u2581Some\u2581were\u2581shot\u2581in\u2581the\u2581next\u2581few\u2581days.\n\nOn\u258125\u2581August\u2581194",
+                  "max_activation": 40.91,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581were\u2581crowded\u2581into\u2581two\u2581unfinished\u2581Soviet\u2581barracks\u2581surrounded\u2581with\u2581barbed\u2581wire.\u2581\u2581The\u2581Jews\u2581were\u2581ordered\u2581to\u2581hand\u2581over\u2581all\u2581their\u2581valuables\u2581and\u2581cash.\u2581\u2581Some\u2581were\u2581shot\u2581in\u2581the\u2581next\u2581few\u2581days.\n\nOn\u258125\u2581August\u2581194",
+                  "max_activation": 40.91,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": ",\u2581and\u2581Miami.\u2581You\u2581must\u2581prevent\u2581such\u2581tragedy.\u2581You\u2581must\u2581arrest\u2581these\u2581criminals.\u2581We\u2581know\u2581who\u2581they\u2581are.\n\nAnd\u2581I\u2581have\u2581another\u2581thing;\u2581I\u2581want\u2581to\u2581tell\u2581the\u2581Jewish\u2581people:\u2581you\u2581are\u2581a\u2581god\u2581fearing\u2581good\u2581people\u2581ruled\u2581",
+                  "max_activation": 40.614,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": ",\u2581and\u2581Miami.\u2581You\u2581must\u2581prevent\u2581such\u2581tragedy.\u2581You\u2581must\u2581arrest\u2581these\u2581criminals.\u2581We\u2581know\u2581who\u2581they\u2581are.\n\nAnd\u2581I\u2581have\u2581another\u2581thing;\u2581I\u2581want\u2581to\u2581tell\u2581the\u2581Jewish\u2581people:\u2581you\u2581are\u2581a\u2581god\u2581fearing\u2581good\u2581people\u2581ruled\u2581",
+                  "max_activation": 40.614,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581It\u2581is\u2581located\u2581\u2581east\u2581of\u2581Radvili\u0161kis.\n\n\u0160eduva\u2581was\u2581an\u2581agricultural\u2581town\u2581dealing\u2581in\u2581\u2581cereals,\u2581flax\u2581and\u2581linseed,\u2581pigs\u2581and\u2581geese\u2581and\u2581horses,\u2581at\u2581the\u2581site\u2581of\u2581a\u2581royal\u2581estate\u2581and\u2581beside\u2581a\u2581road\u2581from\u2581Kaunas\u2581to\u2581R",
+                  "max_activation": 39.98,
+                  "max_token": "\u2581Jewish"
+                },
+                {
+                  "text_snippet": "\u2581It\u2581is\u2581located\u2581\u2581east\u2581of\u2581Radvili\u0161kis.\n\n\u0160eduva\u2581was\u2581an\u2581agricultural\u2581town\u2581dealing\u2581in\u2581\u2581cereals,\u2581flax\u2581and\u2581linseed,\u2581pigs\u2581and\u2581geese\u2581and\u2581horses,\u2581at\u2581the\u2581site\u2581of\u2581a\u2581royal\u2581estate\u2581and\u2581beside\u2581a\u2581road\u2581from\u2581Kaunas\u2581to\u2581R",
+                  "max_activation": 39.98,
+                  "max_token": "\u2581Jewish"
+                }
+              ],
+              "promoted_tokens": [
+                "<bos>",
+                "MENAFN",
+                "AsUp",
+                "/}.",
+                "Rhestr",
+                "__':\r",
+                "\u2581esternos",
+                "\u24e7",
+                "'));\r",
+                "\u2581Composite"
+              ],
+              "suppressed_tokens": [
+                "\u2581Jewish",
+                "\u2581Jews",
+                "Jewish",
+                "\u2581Judaism",
+                "\u2581jewish",
+                "Jews",
+                "\u2581Jew",
+                "\u2581j\u00fcdis",
+                "\u2581jud\u00edos",
+                "\u2581Rabbi"
+              ],
+              "frac_nonzero": 0.0044
+            }
+          }
+        ],
+        "usage": {
+          "model": "openai/gpt-oss-120b",
+          "label": "SA-3",
+          "objective": "Trace from L4:F2405 (\"religious identity/affiliation\") to token embeddings. Determine which input tokens drive this religious-identity feature and whether the input token \"Jew\" is the dominant driver. Report all features with labels, frac_nonzero, and embedding tokens.",
+          "input_tokens": 122981,
+          "output_tokens": 8317,
+          "cache_creation_input_tokens": 0,
+          "cache_read_input_tokens": 10976,
+          "providers": {
+            "Groq": 7,
+            "DeepInfra": 2,
+            "CoreWeave": 3
+          }
+        }
+      },
+      "label": "SA-3"
+    },
+    {
+      "tool": "trace_path_subagent",
+      "input": {
+        "direction": "upstream",
+        "max_hops": 6,
+        "objective": "Trace from L8:F13875 (\"negative sentiment about reputation and betrayal of trust\") to token embeddings. Pos 10 likely corresponds to a token like \"stain\" or \"brethren\". Determine whether this is genuine toxicity language or another identity/role signal. Report all features, labels, frac_nonzero, and the embedding tokens that drive it.",
+        "starting_feature_idx": 13875,
+        "starting_layer": 8,
+        "starting_pos": 10
+      },
+      "output": {
+        "error": "Subagent failed: Error code: 403 - {'error': {'message': 'Key limit exceeded (total limit). Manage it using https://openrouter.ai/workspaces/default/keys/REDACTED', 'code': 403}}",
+        "discovered_features": [],
+        "discovered_edges": [],
+        "explanation": ""
+      },
+      "label": "SA-4"
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 648,
+        "k": 12,
+        "layer": 6,
+        "pos": 6
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " Jew",
+          "pos": 6,
+          "direct_effect": 19.375
+        },
+        {
+          "type": "feature",
+          "layer": 3,
+          "feature_idx": 12151,
+          "pos": 6,
+          "direct_effect": 5.9062,
+          "activation": 11.5625
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 2405,
+          "pos": 6,
+          "direct_effect": 2.9531,
+          "activation": 12.5
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 14733,
+          "pos": 6,
+          "direct_effect": 2.3594,
+          "activation": 5.6562
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 117,
+          "pos": 6,
+          "direct_effect": 1.7188,
+          "activation": 5.2188
+        },
+        {
+          "type": "embedding",
+          "token": " liberal",
+          "pos": 5,
+          "direct_effect": 1.6328
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 3316,
+          "pos": 6,
+          "direct_effect": -1.5078,
+          "activation": 2.7656
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 3924,
+          "pos": 6,
+          "direct_effect": -1.1797,
+          "activation": 3.7969
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 6331,
+          "pos": 6,
+          "direct_effect": -1.0391,
+          "activation": 5.75
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 5181,
+          "pos": 6,
+          "direct_effect": 1.0078,
+          "activation": 4.0938
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 11316,
+          "pos": 6,
+          "direct_effect": -0.9883,
+          "activation": 9.4375
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 1062,
+          "pos": 6,
+          "direct_effect": -0.8906,
+          "activation": 3.125
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 13875,
+        "k": 12,
+        "layer": 8,
+        "pos": 10
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 6,
+          "feature_idx": 1561,
+          "pos": 10,
+          "direct_effect": 3.4219,
+          "activation": 18.125
+        },
+        {
+          "type": "embedding",
+          "token": " stain",
+          "pos": 9,
+          "direct_effect": 2.0156
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 7488,
+          "pos": 10,
+          "direct_effect": 1.5391,
+          "activation": 21.5
+        },
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 917,
+          "pos": 10,
+          "direct_effect": -1.3516,
+          "activation": 9.125
+        },
+        {
+          "type": "embedding",
+          "token": " on",
+          "pos": 10,
+          "direct_effect": 1.0312
+        },
+        {
+          "type": "feature",
+          "layer": 6,
+          "feature_idx": 15854,
+          "pos": 10,
+          "direct_effect": 0.9141,
+          "activation": 7.3125
+        },
+        {
+          "type": "feature",
+          "layer": 6,
+          "feature_idx": 7224,
+          "pos": 10,
+          "direct_effect": 0.8711,
+          "activation": 6.9688
+        },
+        {
+          "type": "embedding",
+          "token": "hat",
+          "pos": 3,
+          "direct_effect": 0.8008
+        },
+        {
+          "type": "embedding",
+          "token": " liberal",
+          "pos": 5,
+          "direct_effect": -0.7188
+        },
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 15758,
+          "pos": 10,
+          "direct_effect": 0.6953,
+          "activation": 10.6875
+        },
+        {
+          "type": "embedding",
+          "token": " Jew",
+          "pos": 6,
+          "direct_effect": 0.6523
+        },
+        {
+          "type": "feature",
+          "layer": 7,
+          "feature_idx": 9581,
+          "pos": 10,
+          "direct_effect": 0.6328,
+          "activation": 4.3438
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 13158,
+        "k": 12,
+        "layer": 2,
+        "pos": 6
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " Jew",
+          "pos": 6,
+          "direct_effect": 6.8125
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 15359,
+          "pos": 6,
+          "direct_effect": -1.625,
+          "activation": 12.75
+        },
+        {
+          "type": "embedding",
+          "token": " liberal",
+          "pos": 5,
+          "direct_effect": 1.0469
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 11290,
+          "pos": 6,
+          "direct_effect": 0.9375,
+          "activation": 6.3125
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": -0.9062
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 3769,
+          "pos": 6,
+          "direct_effect": 0.7656,
+          "activation": 3.3594
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 11316,
+          "pos": 6,
+          "direct_effect": 0.5938,
+          "activation": 9.4375
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 438,
+          "pos": 6,
+          "direct_effect": 0.5859,
+          "activation": 3.2188
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 5819,
+          "pos": 6,
+          "direct_effect": 0.5273,
+          "activation": 4.625
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 8457,
+          "pos": 6,
+          "direct_effect": 0.5234,
+          "activation": 4.7812
+        },
+        {
+          "type": "embedding",
+          "token": "ing",
+          "pos": 4,
+          "direct_effect": 0.4961
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 12062,
+          "pos": 6,
+          "direct_effect": 0.4297,
+          "activation": 4.6875
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 8236,
+        "k": 10,
+        "layer": 2,
+        "pos": 6
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " Jew",
+          "pos": 6,
+          "direct_effect": 11.0625
+        },
+        {
+          "type": "embedding",
+          "token": " liberal",
+          "pos": 5,
+          "direct_effect": -0.3379
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": 0.2988
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 16179,
+          "pos": 6,
+          "direct_effect": 0.2949,
+          "activation": 4.9375
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 13988,
+          "pos": 6,
+          "direct_effect": 0.2832,
+          "activation": 7.2188
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 4470,
+          "pos": 6,
+          "direct_effect": 0.2812,
+          "activation": 6.1562
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 11846,
+          "pos": 6,
+          "direct_effect": 0.2461,
+          "activation": 4.4062
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 1847,
+          "pos": 6,
+          "direct_effect": 0.2295,
+          "activation": 6.75
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 5358,
+          "pos": 6,
+          "direct_effect": 0.2139,
+          "activation": 6.5938
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 11316,
+          "pos": 6,
+          "direct_effect": -0.1953,
+          "activation": 9.4375
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 14733,
+        "k": 8,
+        "layer": 4,
+        "pos": 6
+      },
+      "output": [
+        {
+          "type": "embedding",
+          "token": " Jew",
+          "pos": 6,
+          "direct_effect": 5.4688
+        },
+        {
+          "type": "feature",
+          "layer": 3,
+          "feature_idx": 12151,
+          "pos": 6,
+          "direct_effect": 3.1094,
+          "activation": 11.5625
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": -2.1094
+        },
+        {
+          "type": "embedding",
+          "token": " liberal",
+          "pos": 5,
+          "direct_effect": 2.1094
+        },
+        {
+          "type": "feature",
+          "layer": 1,
+          "feature_idx": 11316,
+          "pos": 6,
+          "direct_effect": -1.1797,
+          "activation": 9.4375
+        },
+        {
+          "type": "feature",
+          "layer": 2,
+          "feature_idx": 8236,
+          "pos": 6,
+          "direct_effect": 1.0469,
+          "activation": 11.375
+        },
+        {
+          "type": "feature",
+          "layer": 3,
+          "feature_idx": 13447,
+          "pos": 6,
+          "direct_effect": -0.7031,
+          "activation": 4.4375
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 4470,
+          "pos": 6,
+          "direct_effect": 0.6758,
+          "activation": 6.1562
+        }
+      ]
+    },
+    {
+      "tool": "get_upstream_features",
+      "input": {
+        "feature_idx": 1561,
+        "k": 8,
+        "layer": 6,
+        "pos": 10
+      },
+      "output": [
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 7488,
+          "pos": 10,
+          "direct_effect": 6.1875,
+          "activation": 21.5
+        },
+        {
+          "type": "embedding",
+          "token": " stain",
+          "pos": 9,
+          "direct_effect": 5.4688
+        },
+        {
+          "type": "embedding",
+          "token": "<bos>",
+          "pos": 0,
+          "direct_effect": -1.5078
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 3440,
+          "pos": 10,
+          "direct_effect": 1.2656,
+          "activation": 8.0625
+        },
+        {
+          "type": "feature",
+          "layer": 0,
+          "feature_idx": 7696,
+          "pos": 10,
+          "direct_effect": 1.0547,
+          "activation": 33.75
+        },
+        {
+          "type": "feature",
+          "layer": 4,
+          "feature_idx": 12602,
+          "pos": 10,
+          "direct_effect": 0.5508,
+          "activation": 3.9375
+        },
+        {
+          "type": "feature",
+          "layer": 5,
+          "feature_idx": 13899,
+          "pos": 10,
+          "direct_effect": 0.5195,
+          "activation": 8.875
+        },
+        {
+          "type": "embedding",
+          "token": " on",
+          "pos": 10,
+          "direct_effect": -0.4941
+        }
+      ]
+    },
+    {
+      "tool": "build_circuit",
+      "input": {
+        "edges": [
+          {
+            "from": "emb_jew",
+            "to": "L0_jew_token_detector"
+          },
+          {
+            "from": "emb_jew",
+            "to": "L2_jewish_mention"
+          },
+          {
+            "from": "emb_jew",
+            "to": "L2_ethnicity"
+          },
+          {
+            "from": "emb_jew",
+            "to": "L3_caps_fragment"
+          },
+          {
+            "from": "emb_jew",
+            "to": "L4_jewish_discrim"
+          },
+          {
+            "from": "emb_liberal",
+            "to": "L2_ethnicity"
+          },
+          {
+            "from": "emb_liberal",
+            "to": "L4_jewish_discrim"
+          },
+          {
+            "from": "L0_jew_token_detector",
+            "to": "L3_caps_fragment"
+          },
+          {
+            "from": "L2_jewish_mention",
+            "to": "L4_jewish_discrim"
+          },
+          {
+            "from": "L2_ethnicity",
+            "to": "L4_religious_id"
+          },
+          {
+            "from": "L3_caps_fragment",
+            "to": "L4_jewish_discrim"
+          },
+          {
+            "from": "L4_religious_id",
+            "to": "L6_anti_group_discrim"
+          },
+          {
+            "from": "L4_jewish_discrim",
+            "to": "L6_anti_group_discrim"
+          },
+          {
+            "from": "emb_stain",
+            "to": "L5_stain_phrase"
+          },
+          {
+            "from": "emb_on",
+            "to": "L8_reputation_neg"
+          },
+          {
+            "from": "L5_stain_phrase",
+            "to": "L6_stain_phrase"
+          },
+          {
+            "from": "L6_stain_phrase",
+            "to": "L8_reputation_neg"
+          },
+          {
+            "from": "L6_anti_group_discrim",
+            "to": "output_probe"
+          },
+          {
+            "from": "L8_reputation_neg",
+            "to": "output_probe"
+          }
+        ],
+        "nodes": [
+          {
+            "features": [
+              {
+                "feature_idx": 0,
+                "layer": 0,
+                "pos": 6
+              }
+            ],
+            "id": "emb_jew",
+            "label": "Emb: Jew (pos 6)",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 0,
+                "layer": 0,
+                "pos": 5
+              }
+            ],
+            "id": "emb_liberal",
+            "label": "Emb: liberal (pos 5)",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 0,
+                "layer": 0,
+                "pos": 9
+              }
+            ],
+            "id": "emb_stain",
+            "label": "Emb: stain (pos 9)",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 0,
+                "layer": 0,
+                "pos": 10
+              }
+            ],
+            "id": "emb_on",
+            "label": "Emb: on (pos 10)",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 9026,
+                "layer": 0,
+                "pos": 6
+              },
+              {
+                "feature_idx": 11290,
+                "layer": 0,
+                "pos": 6
+              },
+              {
+                "feature_idx": 4470,
+                "layer": 0,
+                "pos": 6
+              }
+            ],
+            "id": "L0_jew_token_detector",
+            "label": "Low-level 'Jew' presence detector (L0:9026, frac=0.41) \u2014 fires on the raw Jew embedding with direct_effect=31.4",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 8236,
+                "layer": 2,
+                "pos": 6
+              }
+            ],
+            "id": "L2_jewish_mention",
+            "label": "Explicit Jewish-people detector (L2:8236, frac=0.0044) \u2014 direct_effect 11.1 from 'Jew' embedding",
+            "layer": 2
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 13158,
+                "layer": 2,
+                "pos": 6
+              }
+            ],
+            "id": "L2_ethnicity",
+            "label": "Race/ethnicity vocabulary (L2:13158, frac=0.0099) \u2014 direct_effect 6.8 from 'Jew'",
+            "layer": 2
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 12151,
+                "layer": 3,
+                "pos": 6
+              }
+            ],
+            "id": "L3_caps_fragment",
+            "label": "Uppercase fragment amplifier (L3:12151, frac=0.0032) \u2014 promotes 'jew', amplifies 'Jew' embedding signal",
+            "layer": 3
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 2405,
+                "layer": 4,
+                "pos": 6
+              }
+            ],
+            "id": "L4_religious_id",
+            "label": "Religious identity/affiliation (L4:2405, frac=0.0071) \u2014 direct_effect 3.8 from 'Jew'",
+            "layer": 4
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 14733,
+                "layer": 4,
+                "pos": 6
+              }
+            ],
+            "id": "L4_jewish_discrim",
+            "label": "Jewish-targeted discrimination (L4:14733, frac=low) \u2014 direct_effect 5.5 from 'Jew', 2.1 from 'liberal'",
+            "layer": 4
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 648,
+                "layer": 6,
+                "pos": 6
+              }
+            ],
+            "id": "L6_anti_group_discrim",
+            "label": "Discrimination against religious/ethnic groups (L6:648, frac=0.016, direct_effect=0.74 to probe) \u2014 primary driver",
+            "layer": 6
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 7488,
+                "layer": 5,
+                "pos": 10
+              }
+            ],
+            "id": "L5_stain_phrase",
+            "label": "'Stain' / reputation-negation lexical feature (L5:7488, activation=21.5) \u2014 direct_effect 5.5 from 'stain' emb",
+            "layer": 5
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 1561,
+                "layer": 6,
+                "pos": 10
+              }
+            ],
+            "id": "L6_stain_phrase",
+            "label": "Stain / disgrace phrase feature (L6:1561, activation=18.1) \u2014 direct_effect 3.4 to L8:13875",
+            "layer": 6
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 13875,
+                "layer": 8,
+                "pos": 10
+              }
+            ],
+            "id": "L8_reputation_neg",
+            "label": "Negative-sentiment reputation/betrayal (L8:13875, frac=0.010, direct_effect=0.23 to probe) \u2014 secondary driver",
+            "layer": 8
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 0,
+                "layer": 26,
+                "pos": 0
+              }
+            ],
+            "id": "output_probe",
+            "label": "Output: probe direction (toxicity)",
+            "layer": 26
+          }
+        ]
+      },
+      "output": {
+        "nodes": [
+          {
+            "features": [
+              {
+                "feature_idx": 0,
+                "layer": 0,
+                "pos": 6
+              }
+            ],
+            "id": "emb_jew",
+            "label": "Emb: Jew (pos 6)",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 0,
+                "layer": 0,
+                "pos": 5
+              }
+            ],
+            "id": "emb_liberal",
+            "label": "Emb: liberal (pos 5)",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 0,
+                "layer": 0,
+                "pos": 9
+              }
+            ],
+            "id": "emb_stain",
+            "label": "Emb: stain (pos 9)",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 0,
+                "layer": 0,
+                "pos": 10
+              }
+            ],
+            "id": "emb_on",
+            "label": "Emb: on (pos 10)",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 9026,
+                "layer": 0,
+                "pos": 6
+              },
+              {
+                "feature_idx": 11290,
+                "layer": 0,
+                "pos": 6
+              },
+              {
+                "feature_idx": 4470,
+                "layer": 0,
+                "pos": 6
+              }
+            ],
+            "id": "L0_jew_token_detector",
+            "label": "Low-level 'Jew' presence detector (L0:9026, frac=0.41) \u2014 fires on the raw Jew embedding with direct_effect=31.4",
+            "layer": 0
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 8236,
+                "layer": 2,
+                "pos": 6
+              }
+            ],
+            "id": "L2_jewish_mention",
+            "label": "Explicit Jewish-people detector (L2:8236, frac=0.0044) \u2014 direct_effect 11.1 from 'Jew' embedding",
+            "layer": 2
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 13158,
+                "layer": 2,
+                "pos": 6
+              }
+            ],
+            "id": "L2_ethnicity",
+            "label": "Race/ethnicity vocabulary (L2:13158, frac=0.0099) \u2014 direct_effect 6.8 from 'Jew'",
+            "layer": 2
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 12151,
+                "layer": 3,
+                "pos": 6
+              }
+            ],
+            "id": "L3_caps_fragment",
+            "label": "Uppercase fragment amplifier (L3:12151, frac=0.0032) \u2014 promotes 'jew', amplifies 'Jew' embedding signal",
+            "layer": 3
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 2405,
+                "layer": 4,
+                "pos": 6
+              }
+            ],
+            "id": "L4_religious_id",
+            "label": "Religious identity/affiliation (L4:2405, frac=0.0071) \u2014 direct_effect 3.8 from 'Jew'",
+            "layer": 4
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 14733,
+                "layer": 4,
+                "pos": 6
+              }
+            ],
+            "id": "L4_jewish_discrim",
+            "label": "Jewish-targeted discrimination (L4:14733, frac=low) \u2014 direct_effect 5.5 from 'Jew', 2.1 from 'liberal'",
+            "layer": 4
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 648,
+                "layer": 6,
+                "pos": 6
+              }
+            ],
+            "id": "L6_anti_group_discrim",
+            "label": "Discrimination against religious/ethnic groups (L6:648, frac=0.016, direct_effect=0.74 to probe) \u2014 primary driver",
+            "layer": 6
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 7488,
+                "layer": 5,
+                "pos": 10
+              }
+            ],
+            "id": "L5_stain_phrase",
+            "label": "'Stain' / reputation-negation lexical feature (L5:7488, activation=21.5) \u2014 direct_effect 5.5 from 'stain' emb",
+            "layer": 5
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 1561,
+                "layer": 6,
+                "pos": 10
+              }
+            ],
+            "id": "L6_stain_phrase",
+            "label": "Stain / disgrace phrase feature (L6:1561, activation=18.1) \u2014 direct_effect 3.4 to L8:13875",
+            "layer": 6
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 13875,
+                "layer": 8,
+                "pos": 10
+              }
+            ],
+            "id": "L8_reputation_neg",
+            "label": "Negative-sentiment reputation/betrayal (L8:13875, frac=0.010, direct_effect=0.23 to probe) \u2014 secondary driver",
+            "layer": 8
+          },
+          {
+            "features": [
+              {
+                "feature_idx": 0,
+                "layer": 26,
+                "pos": 0
+              }
+            ],
+            "id": "output_probe",
+            "label": "Output: probe direction (toxicity)",
+            "layer": 26
+          }
+        ],
+        "edges": [
+          {
+            "from": "emb_jew",
+            "to": "L0_jew_token_detector"
+          },
+          {
+            "from": "emb_jew",
+            "to": "L2_jewish_mention"
+          },
+          {
+            "from": "emb_jew",
+            "to": "L2_ethnicity"
+          },
+          {
+            "from": "emb_jew",
+            "to": "L3_caps_fragment"
+          },
+          {
+            "from": "emb_jew",
+            "to": "L4_jewish_discrim"
+          },
+          {
+            "from": "emb_liberal",
+            "to": "L2_ethnicity"
+          },
+          {
+            "from": "emb_liberal",
+            "to": "L4_jewish_discrim"
+          },
+          {
+            "from": "L0_jew_token_detector",
+            "to": "L3_caps_fragment"
+          },
+          {
+            "from": "L2_jewish_mention",
+            "to": "L4_jewish_discrim"
+          },
+          {
+            "from": "L2_ethnicity",
+            "to": "L4_religious_id"
+          },
+          {
+            "from": "L3_caps_fragment",
+            "to": "L4_jewish_discrim"
+          },
+          {
+            "from": "L4_religious_id",
+            "to": "L6_anti_group_discrim"
+          },
+          {
+            "from": "L4_jewish_discrim",
+            "to": "L6_anti_group_discrim"
+          },
+          {
+            "from": "emb_stain",
+            "to": "L5_stain_phrase"
+          },
+          {
+            "from": "emb_on",
+            "to": "L8_reputation_neg"
+          },
+          {
+            "from": "L5_stain_phrase",
+            "to": "L6_stain_phrase"
+          },
+          {
+            "from": "L6_stain_phrase",
+            "to": "L8_reputation_neg"
+          },
+          {
+            "from": "L6_anti_group_discrim",
+            "to": "output_probe"
+          },
+          {
+            "from": "L8_reputation_neg",
+            "to": "output_probe"
+          }
+        ],
+        "status": "circuit_saved",
+        "warning": "Circuit reaches early layers but not token embedding nodes. Consider tracing to embedding nodes to identify which specific input tokens drive the prediction."
+      }
+    }
+  ],
+  "usage": {
+    "orchestrator": {
+      "model": "minimax/minimax-m3",
+      "input_tokens": 27683,
+      "output_tokens": 4457,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 62108,
+      "providers": {
+        "unknown": 8
+      }
+    },
+    "subagents": [
+      {
+        "model": "openai/gpt-oss-120b",
+        "label": "SA-3",
+        "objective": "Trace from L4:F2405 (\"religious identity/affiliation\") to token embeddings. Determine which input tokens drive this religious-identity feature and whether the input token \"Jew\" is the dominant driver. Report all features with labels, frac_nonzero, and embedding tokens.",
+        "input_tokens": 122981,
+        "output_tokens": 8317,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 10976,
+        "providers": {
+          "Groq": 7,
+          "DeepInfra": 2,
+          "CoreWeave": 3
+        }
+      }
+    ]
+  },
+  "total_cost_usd": 0.04098177,
+  "turns": 8,
+  "elapsed_seconds": 269.24834728613496,
+  "control_results": [],
+  "self_rating_confidence": null,
+  "self_rating_raw": null,
+  "interventions": [],
+  "discovery_reassess": [],
+  "reassess_records": {},
+  "timestamp": "2026-07-28T07-21-01"
+}

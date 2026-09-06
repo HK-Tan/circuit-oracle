@@ -1,0 +1,139 @@
+{
+  "spurious_features": [
+    {
+      "id": "L3:F12079",
+      "label": "negations and Chinese names",
+      "reason": "Contains negation detectors; oracle says it tracks contradiction cues."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L8:F16033",
+      "label": "figurative language related to reversals of fortune",
+      "reason": "Semantic reversal relation can reflect contradiction-like meaning."
+    },
+    {
+      "id": "L7:F4526",
+      "label": "words related to comparisons, symmetry or reversals in data or situations",
+      "reason": "Tracks semantic reversals/comparisons relevant to entailment/contradiction."
+    },
+    {
+      "id": "L7:F905",
+      "label": "words indicating amounts, changes, or trends",
+      "reason": "Content-level semantic change signal, not a negation shortcut."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F5709",
+      "label": "astronomy terms",
+      "reason": "Unrelated topical vocabulary; oracle dismisses it."
+    },
+    {
+      "id": "L6:F12420",
+      "label": "artistic elements that break established guidelines",
+      "reason": "Not claimed relevant to NLI semantics."
+    },
+    {
+      "id": "L4:F12799",
+      "label": "words ending in \"-ly\" along with phrases that contain the word 'odd' or 'oddities'",
+      "reason": "Structural/lexical pattern, not semantic role."
+    },
+    {
+      "id": "L2:F16097",
+      "label": "superlative adjectives and the words \"test\" or \"point\"",
+      "reason": "Generic lexical feature; not NLI-specific semantics."
+    },
+    {
+      "id": "L10:F6670",
+      "label": "technical terms, especially within scientific or medical contexts",
+      "reason": "Topic vocabulary only; oracle dismisses it."
+    },
+    {
+      "id": "L4:F6072",
+      "label": "the word \"now\" followed by a verb",
+      "reason": "Purely surface pattern."
+    },
+    {
+      "id": "L4:F14368",
+      "label": "words related to importance or roles in a system",
+      "reason": "Generic role/importance vocabulary."
+    },
+    {
+      "id": "L0:F6013",
+      "label": "the word \"role,\" sometimes in conjunction with words that make it abstract, like energy or medicine",
+      "reason": "Generic lexical detector; not causal semantics here."
+    },
+    {
+      "id": "L8:F16033",
+      "label": "figurative language related to reversals of fortune",
+      "reason": "Semantic reversal relation can reflect contradiction-like meaning."
+    },
+    {
+      "id": "L7:F4526",
+      "label": "words related to comparisons, symmetry or reversals in data or situations",
+      "reason": "Tracks semantic reversals/comparisons relevant to entailment/contradiction."
+    },
+    {
+      "id": "L12:F12606",
+      "label": "phrases related to political conspiracy/organizations, mental conditions and storytelling terms",
+      "reason": "Topic/storytelling mix; oracle only mentions as arguable."
+    },
+    {
+      "id": "L2:F10705",
+      "label": "the word \"concerns\"",
+      "reason": "Single-word lexical shortcut."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Pure punctuation/formatting detector."
+    },
+    {
+      "id": "L2:F9872",
+      "label": "the word \"largest\"",
+      "reason": "Standalone lexical token, not semantic role."
+    },
+    {
+      "id": "L0:F6902",
+      "label": "the word \"role\" and words with minor associations",
+      "reason": "Weak lexical association only."
+    },
+    {
+      "id": "L0:F5188",
+      "label": "the word \"now\"",
+      "reason": "Single-word surface cue."
+    },
+    {
+      "id": "L0:F1847",
+      "label": "scientific terms and experimental details related to biological and chemical research",
+      "reason": "Topic vocabulary unrelated to NLI reasoning."
+    },
+    {
+      "id": "L0:F3308",
+      "label": "the phrase \"well known\"",
+      "reason": "Fixed phrase detector; not semantic consistency."
+    },
+    {
+      "id": "L3:F3669",
+      "label": "references to ordinal rankings of things",
+      "reason": "Structural/ordering language, not NLI semantics."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Document-format detector."
+    },
+    {
+      "id": "L0:F3156",
+      "label": "the word \"radius,\" often in technical or scientific contexts",
+      "reason": "Topic word only."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 3,
+  "n_other": 21,
+  "spurious_fraction": 0.25,
+  "dominant": "mixed",
+  "notes": "Only one oracle-claimed negation feature; several semantic reversal features are causal."
+}

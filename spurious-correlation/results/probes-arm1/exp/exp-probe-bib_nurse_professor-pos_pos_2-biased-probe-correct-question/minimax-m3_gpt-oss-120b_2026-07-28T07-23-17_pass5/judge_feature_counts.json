@@ -1,0 +1,109 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F15382",
+      "label": "mentions of a female person.",
+      "reason": "Direct female-person marker, not profession-specific."
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Oracle says it fires on 'She', but semantic role is non-gender."
+    },
+    {
+      "id": "L4:F15317",
+      "label": "named entities like characters or people",
+      "reason": "Generic people/entity detector, not causal to nurse."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Explicitly gender-reference feature."
+    },
+    {
+      "id": "L7:F8644",
+      "label": "woman's name in a variety of contexts",
+      "reason": "Gendered name detector."
+    },
+    {
+      "id": "L12:F12940",
+      "label": "references to female pronouns and possessive pronouns",
+      "reason": "Female pronoun/possessive detector."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Explicit women/girls mention detector."
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Gendered name/role feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F3727",
+      "label": "mentions of academic degrees",
+      "reason": "Education terminology relevant to biography profession cues."
+    },
+    {
+      "id": "L4:F11037",
+      "label": "words related to counseling, therapy, social work, and academic degree programs",
+      "reason": "Work/education vocabulary; profession-relevant."
+    },
+    {
+      "id": "L5:F10392",
+      "label": "fields of academic study",
+      "reason": "Neutral education/field terminology, profession-relevant."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct profession indicator."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: She (pos 1)",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature claim."
+    },
+    {
+      "id": "Emb: Nursing (pos 10)",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature claim."
+    },
+    {
+      "id": "Emb: her (pos 21)",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature claim."
+    },
+    {
+      "id": "Emb: She (pos 19)",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature claim."
+    },
+    {
+      "id": "L0:F16075",
+      "label": "the word \"of\" and court names",
+      "reason": "Dismissed as unrelated structural/lexical pattern."
+    },
+    {
+      "id": "L18:F3679",
+      "label": "personal pronouns and/or proper nouns",
+      "reason": "Too generic; not specific causal signal."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Name-shape heuristic, not task-causal."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 4,
+  "n_other": 7,
+  "spurious_fraction": 0.6666666666666666,
+  "dominant": "spurious",
+  "notes": "Gender shortcut dominates; nursing signal is present but weaker."
+}

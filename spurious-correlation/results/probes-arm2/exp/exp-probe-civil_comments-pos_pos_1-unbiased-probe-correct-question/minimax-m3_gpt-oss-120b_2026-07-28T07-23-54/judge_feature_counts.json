@@ -1,0 +1,168 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "\"trump\" token features",
+      "reason": "Identity-name token detector, not toxicity semantics."
+    },
+    {
+      "id": "L0:F15831",
+      "label": "racial/ethnic token features",
+      "reason": "Demographic token detector; identity-group signal."
+    },
+    {
+      "id": "L0:F7969",
+      "label": "racial/ethnic token features",
+      "reason": "Demographic token detector; identity-group signal."
+    },
+    {
+      "id": "L2:F14301",
+      "label": "\"trump\" entity/identity-group signal",
+      "reason": "Explicit identity-group signal."
+    },
+    {
+      "id": "L2:F15769",
+      "label": "\"trump\" entity/identity-group signal",
+      "reason": "Explicit identity-group signal."
+    },
+    {
+      "id": "L2:F9199",
+      "label": "\"trump\" entity/identity-group signal",
+      "reason": "Explicit identity-group signal."
+    },
+    {
+      "id": "L2:F4520",
+      "label": "\"trump\" entity/identity-group signal",
+      "reason": "Explicit identity-group signal."
+    },
+    {
+      "id": "L4:F14582",
+      "label": "late \"trump\"/bigot entity feature",
+      "reason": "Entity/identity association, not toxic content."
+    },
+    {
+      "id": "L4:F11580",
+      "label": "late \"trump\"/bigot entity feature",
+      "reason": "Entity/identity association, not toxic content."
+    },
+    {
+      "id": "L4:F2720",
+      "label": "late \"trump\"/bigot entity feature",
+      "reason": "Entity/identity association, not toxic content."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe Classification Score",
+      "label": "Probe Classification Score",
+      "reason": "Not a feature; output score."
+    },
+    {
+      "id": "L0:F7621",
+      "label": "\"clearly\" token features",
+      "reason": "Generic adverb; structural/lexical."
+    },
+    {
+      "id": "L0:F4422",
+      "label": "\"clearly\" token features",
+      "reason": "Generic adverb; structural/lexical."
+    },
+    {
+      "id": "L0:F7861",
+      "label": "\"clearly\" token features",
+      "reason": "Generic adverb; structural/lexical."
+    },
+    {
+      "id": "L0:F7142",
+      "label": "\"clearly\" token features",
+      "reason": "Generic adverb; structural/lexical."
+    },
+    {
+      "id": "L0:F12866",
+      "label": "\"clearly\" token features",
+      "reason": "Generic adverb; structural/lexical."
+    },
+    {
+      "id": "L0:F11375",
+      "label": "function-word/auxiliary features",
+      "reason": "Function-word detector; structural."
+    },
+    {
+      "id": "L0:F3916",
+      "label": "function-word/auxiliary features",
+      "reason": "Function-word detector; structural."
+    },
+    {
+      "id": "L0:F164",
+      "label": "function-word/auxiliary features",
+      "reason": "Function-word detector; structural."
+    },
+    {
+      "id": "L1:F9761",
+      "label": "\"clearly\" composition",
+      "reason": "Composition/structural feature, not semantic toxicity."
+    },
+    {
+      "id": "L3:F373",
+      "label": "\"trump\" inhibition/contrast features",
+      "reason": "Oracle frames as inhibition/contrast."
+    },
+    {
+      "id": "L3:F3136",
+      "label": "\"trump\" inhibition/contrast features",
+      "reason": "Oracle frames as inhibition/contrast."
+    },
+    {
+      "id": "Emb: \" clearly\" (pos 2)",
+      "label": "Emb: \" clearly\" (pos 2)",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: \" trump\" (pos 5)",
+      "label": "Emb: \" trump\" (pos 5)",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: \" white\" (pos 15)",
+      "label": "Emb: \" white\" (pos 15)",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: \" other\" (pos 14)",
+      "label": "Emb: \" other\" (pos 14)",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: \" again\" (pos 26)",
+      "label": "Emb: \" again\" (pos 26)",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: \" is\" (pos 6)",
+      "label": "Emb: \" is\" (pos 6)",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: \"tie\" (pos 1)",
+      "label": "Emb: \"tie\" (pos 1)",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: \" shows\" (pos 3)",
+      "label": "Emb: \" shows\" (pos 3)",
+      "reason": "Input embedding node."
+    },
+    {
+      "id": "Emb: <bos> (pos 0)",
+      "label": "Emb: <bos> (pos 0)",
+      "reason": "Input embedding node."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 0,
+  "n_other": 21,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes identity-group and entity tokens; no toxic-content detector is claimed."
+}

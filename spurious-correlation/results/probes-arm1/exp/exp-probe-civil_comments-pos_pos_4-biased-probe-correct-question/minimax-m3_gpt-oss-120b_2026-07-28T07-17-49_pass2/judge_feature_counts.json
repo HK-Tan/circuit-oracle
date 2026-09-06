@@ -1,0 +1,89 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F1509",
+      "label": "mentions of countries and nationalities",
+      "reason": "Nationality/identity mention detector on \"Indians\"."
+    },
+    {
+      "id": "L3:F13473",
+      "label": "mentions of racial and ethnic groups, especially in the United States",
+      "reason": "Demographic-group mention detector."
+    },
+    {
+      "id": "L0:F14740",
+      "label": "names of places, people, and organizations",
+      "reason": "Proper-noun/demonym detector on \"India/Indian\"."
+    },
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Identity-noun/group-membership detector."
+    },
+    {
+      "id": "L0:F10155",
+      "label": "words related to membership in a group",
+      "reason": "Identity-noun/group-membership detector on \"abusers\"."
+    },
+    {
+      "id": "L1:F7492",
+      "label": "words referring to administrative divisions, animals, or commercial elements",
+      "reason": "Weakly fires on \"Indians\"; non-toxic identity-related."
+    },
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Function-word feature; structural, not toxic."
+    },
+    {
+      "id": "L0:F1053",
+      "label": "the word \"as.\"",
+      "reason": "Function-word feature; structural and non-causal."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F1003",
+      "label": "the word \"abuse\"",
+      "reason": "Toxic-content lexical detector."
+    },
+    {
+      "id": "L2:F6255",
+      "label": "the word \"abuse\", or phrases related to genitalia",
+      "reason": "Toxic-content lexical detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L3:F150",
+      "label": "verbs, particularly past participles, and also some words in French",
+      "reason": "Purely structural/linguistic, not toxicity-specific."
+    },
+    {
+      "id": "L7:F15690",
+      "label": "text related to public sentiment and action in response to a problem",
+      "reason": "General discourse feature; not toxicity-specific."
+    },
+    {
+      "id": "L4:F4021",
+      "label": "code snippets or configurations with the word \"as\"",
+      "reason": "Oracle-detected code-context feature; irrelevant here."
+    },
+    {
+      "id": "L0:F11154",
+      "label": "the word \"are\"",
+      "reason": "Structural function-word feature."
+    },
+    {
+      "id": "L0:F10389",
+      "label": "generic function word \"problems\"",
+      "reason": "Generic word feature; weak and non-causal."
+    }
+  ],
+  "n_spurious": 8,
+  "n_causal": 2,
+  "n_other": 5,
+  "spurious_fraction": 0.8,
+  "dominant": "spurious",
+  "notes": "Identity-mention circuitry dominates; only the abuse lexical detectors are clearly causal."
+}

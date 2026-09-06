@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Female-reference / female biography cue"
+    },
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Women\u2019s name/role cue"
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Female pronoun/title cue"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Obstetrics/delivery profession cue"
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Nursing profession cue"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L4:F1276",
+      "label": "capitalized names and titles, and names with lowercase letters in the middle of them",
+      "reason": "Generic proper-name detector"
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Generic name-form detector"
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Generic person-name detector"
+    },
+    {
+      "id": "Emb: Melissa (pos 5)",
+      "label": "Emb: Melissa",
+      "reason": "Input token only"
+    },
+    {
+      "id": "Emb: She (pos 54)",
+      "label": "Emb: She",
+      "reason": "Input token only"
+    },
+    {
+      "id": "Emb: Labor (pos 9)",
+      "label": "Emb: Labor",
+      "reason": "Input token only"
+    },
+    {
+      "id": "Emb: Delivery (pos 11)",
+      "label": "Emb: Delivery",
+      "reason": "Input token only"
+    },
+    {
+      "id": "Emb: nurse (pos 12)",
+      "label": "Emb: nurse",
+      "reason": "Input token only"
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 2,
+  "n_other": 8,
+  "spurious_fraction": 0.6,
+  "dominant": "mixed",
+  "notes": "Strong nursing/obstetrics signals plus clear female-name/pronoun pathways."
+}

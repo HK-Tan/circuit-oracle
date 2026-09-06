@@ -1,0 +1,58 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\".",
+      "reason": "Explicit negation detector; spurious on this task."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Directly detects negation word; spurious."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector, regardless of language."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Lexical word detector; not semantic relation."
+    },
+    {
+      "id": "L2:F8776",
+      "label": "words related to finance and property law",
+      "reason": "Unrelated lexical feature, not NLI semantics."
+    },
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Generic lexical detector; not causal meaning feature."
+    },
+    {
+      "id": "Emb: recorded (pos 2)",
+      "label": "Emb: recorded (pos 2)",
+      "reason": "Input embedding, not a curated feature."
+    },
+    {
+      "id": "Emb: not (pos 17)",
+      "label": "Emb: not (pos 17)",
+      "reason": "Input embedding, not a curated feature."
+    },
+    {
+      "id": "Probe Classification Score",
+      "label": "Probe Classification Score",
+      "reason": "Output node, not a feature."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 0,
+  "n_other": 6,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle attributes the score to negation and keyword detectors, with no semantic-relation evidence."
+}

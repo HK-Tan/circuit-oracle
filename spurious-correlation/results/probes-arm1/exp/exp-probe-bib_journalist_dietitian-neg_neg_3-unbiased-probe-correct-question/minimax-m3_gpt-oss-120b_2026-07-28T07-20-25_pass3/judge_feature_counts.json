@@ -1,0 +1,64 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun detector; gender marker."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Direct journalism/profession indicator."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "words and phrases associated with broadcast journalism",
+      "reason": "Journalism-specific vocabulary."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Profession/media detector."
+    },
+    {
+      "id": "L1:F14812",
+      "label": "references to stories, chapters, and other narrative elements",
+      "reason": "Narrative content linked to reporting context."
+    },
+    {
+      "id": "L0:F5333",
+      "label": "mentions of stories that are being told",
+      "reason": "Narrative detector tied to journalism."
+    },
+    {
+      "id": "L1:F9201",
+      "label": "the word \"represent\" and its variations in scientific contexts",
+      "reason": "Content-neutral lexical cue."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F11603",
+      "label": "the word \"too\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F8061",
+      "label": "the preposition \"in\"",
+      "reason": "Purely structural function word."
+    },
+    {
+      "id": "L0:F2711",
+      "label": "the word \"foreign.\"",
+      "reason": "Not gendered; not profession-specific."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 6,
+  "n_other": 3,
+  "spurious_fraction": 0.14285714285714285,
+  "dominant": "causal",
+  "notes": "Profession features dominate; one gender-marker feature appears but is not primary."
+}

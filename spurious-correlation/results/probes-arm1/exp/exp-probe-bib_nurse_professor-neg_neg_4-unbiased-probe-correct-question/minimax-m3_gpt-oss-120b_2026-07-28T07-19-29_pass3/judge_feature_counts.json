@@ -1,0 +1,79 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Male pronoun gender marker"
+    },
+    {
+      "id": "L14:F15086",
+      "label": "references to Korea/Korean",
+      "reason": "Nationality marker, not profession"
+    },
+    {
+      "id": "L1:F10575",
+      "label": "Korean names",
+      "reason": "Gender/nationality-adjacent identity cue"
+    },
+    {
+      "id": "L6:F3774",
+      "label": "proper nouns or names with unusual capitalization",
+      "reason": "Fires on Korea/name-like text"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Academic credential signal"
+    },
+    {
+      "id": "L2:F10852",
+      "label": "academic titles and degrees",
+      "reason": "Profession-relevant education cue"
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "Degree indicator"
+    },
+    {
+      "id": "L1:F10132",
+      "label": "the abbreviation for Doctorate of Philosophy, \"Ph.D.\" (or \"PhD\") written as \"D\"",
+      "reason": "Ph.D. credential signal"
+    },
+    {
+      "id": "L4:F13943",
+      "label": "words and abbreviations related to academic research",
+      "reason": "Research-context terminology"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F4627",
+      "label": "the word \"director\"",
+      "reason": "Oracle says negative driver"
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "Oracle says negative driver"
+    },
+    {
+      "id": "L1:F14934",
+      "label": "the word \"grid\" and some related terms related to \"grids\"",
+      "reason": "Oracle says negative driver"
+    },
+    {
+      "id": "L8:F11284",
+      "label": "words and phrases related to people's names, titles, universities, and research",
+      "reason": "Academic context but negative effect"
+    }
+  ],
+  "n_spurious": 4,
+  "n_causal": 5,
+  "n_other": 4,
+  "spurious_fraction": 0.4444444444444444,
+  "dominant": "causal",
+  "notes": "Mostly degree/academic cues, but gender and Korea markers are present; several oracle-listed negatives go to other."
+}

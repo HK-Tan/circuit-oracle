@@ -1,0 +1,234 @@
+{
+  "spurious_features": [
+    {
+      "id": "L19:F9685",
+      "label": "references to women's names and their roles or accomplishments.",
+      "reason": "Explicitly feminine identity/role detector."
+    },
+    {
+      "id": "L18:F14677",
+      "label": "instances of women or girls being mentioned",
+      "reason": "Tracks female-person mentions, not profession."
+    },
+    {
+      "id": "L18:F3679",
+      "label": "personal pronouns and/or proper nouns",
+      "reason": "Generic person/pronoun feature, used here for female context."
+    },
+    {
+      "id": "L18:F9023",
+      "label": "personal names and associated titles",
+      "reason": "Name/title detector; not profession-specific."
+    },
+    {
+      "id": "L14:F12501",
+      "label": "uses of the feminine pronoun.",
+      "reason": "Direct feminine pronoun feature."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun/person reference, not causal task content."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "personal stories of individuals, especially women and their actions or states of being, often indicated by the pronoun 'she' preceded and succeeded by tokens.",
+      "reason": "Women/she narrative detector."
+    },
+    {
+      "id": "L0:F12519",
+      "label": "the pronoun \"she\"",
+      "reason": "Direct gender marker."
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Direct feminine pronoun pair."
+    },
+    {
+      "id": "L0:F15382",
+      "label": "mentions of a female person.",
+      "reason": "Female-person mention feature."
+    },
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Women/pronouns/titles detector."
+    },
+    {
+      "id": "L17:F3558",
+      "label": "mentions of people's names or pronouns referring to people",
+      "reason": "Generic people/name feature."
+    },
+    {
+      "id": "L13:F4753",
+      "label": "proper nouns, especially names of people",
+      "reason": "Name detector, not profession-specific."
+    },
+    {
+      "id": "L15:F9209",
+      "label": "names of people",
+      "reason": "Proper-name feature."
+    },
+    {
+      "id": "L14:F8671",
+      "label": "capitalized names of people",
+      "reason": "Proper-name feature."
+    },
+    {
+      "id": "L12:F14970",
+      "label": "names of people, both first and last names",
+      "reason": "Name detector, not causal."
+    },
+    {
+      "id": "L6:F16329",
+      "label": "female first names and their possessive forms",
+      "reason": "Female-name feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F13803",
+      "label": "terms related to obstetrics and gynecology",
+      "reason": "Profession/medical content feature."
+    },
+    {
+      "id": "L8:F10019",
+      "label": "words and phrases associated with childbirth and labor",
+      "reason": "Obstetric content relevant to task."
+    },
+    {
+      "id": "L7:F2861",
+      "label": "words and phrases relating to pregnancy and labor",
+      "reason": "Profession-specific medical context."
+    },
+    {
+      "id": "L7:F7389",
+      "label": "text related to pregnancy and childbirth",
+      "reason": "Obstetric terminology detector."
+    },
+    {
+      "id": "L6:F11360",
+      "label": "words and phrases related to pregnancy and childbirth",
+      "reason": "Medical/profession content."
+    },
+    {
+      "id": "L6:F15267",
+      "label": "words in the document referring to the profession of nursing",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "L2:F8648",
+      "label": "words and phrases related to medicine, anatomy, and medical sciences",
+      "reason": "Medical field content."
+    },
+    {
+      "id": "L6:F5548",
+      "label": "a wide array of words associated with medical fields, women, sewing, or history.",
+      "reason": "Includes medical-field terms; judge by claimed semantic role."
+    },
+    {
+      "id": "L2:F1056",
+      "label": "names of people",
+      "reason": "Not profession-specific, but oracle claims it as name feature."
+    },
+    {
+      "id": "L6:F8166",
+      "label": "proper names longer than 4 characters and ending in 'a', 'i', or 'e'",
+      "reason": "Structural/name pattern; weakly content-neutral."
+    },
+    {
+      "id": "L0:F9026",
+      "label": "technical documents or data, including numbers, units, and references to figures or tables.",
+      "reason": "Content-neutral structural/technical cue."
+    },
+    {
+      "id": "L0:F9022",
+      "label": "technical words used in computing, science, or engineering",
+      "reason": "Content-neutral technical vocabulary."
+    },
+    {
+      "id": "L0:F3604",
+      "label": "commands and filenames in code",
+      "reason": "Structural/code cue, neutral to task."
+    },
+    {
+      "id": "L0:F7532",
+      "label": "proper nouns",
+      "reason": "Generic structural/name feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F0@5",
+      "label": "Emb: Melissa (pos 5)",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "L0:F0@12",
+      "label": "Emb: nurse (pos 12)",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "L0:F0@9",
+      "label": "Emb: Labor (pos 9) / Delivery (pos 11)",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "L0:F0@11",
+      "label": "Emb: Labor (pos 9) / Delivery (pos 11)",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "L0:F0@15",
+      "label": "Emb: her (pos 15)",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "L0:F0@31",
+      "label": "Emb: Melissa (pos 31)",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "L0:F0@54",
+      "label": "Emb: She (pos 54)",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "L0:F0@66",
+      "label": "Emb: midwife (pos 66)",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "L0:F0@68",
+      "label": "Emb: She (pos 68)",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "L0:F0@86",
+      "label": "Emb: Melissa (pos 86)",
+      "reason": "Raw embedding node, not a claimed feature."
+    },
+    {
+      "id": "Probe output (midwife/nurse classifier)",
+      "label": "(embed/output)",
+      "reason": "Not a feature."
+    },
+    {
+      "id": "L13:F11685",
+      "label": "words related to women",
+      "reason": "Oracle says it suppresses female-coded context; not direct task signal."
+    },
+    {
+      "id": "L7:F7837",
+      "label": "sentences describing Shadi's experience with cooking and hemp",
+      "reason": "Clearly unrelated to this task."
+    }
+  ],
+  "n_spurious": 17,
+  "n_causal": 14,
+  "n_other": 13,
+  "spurious_fraction": 0.5483870967741935,
+  "dominant": "spurious",
+  "notes": "Circuit is mixed but female-name/pronoun pathways dominate over profession content."
+}

@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L16:F6800",
+      "label": "negations \"not\", \"no\", and contractions with \"t\".",
+      "reason": "Direct negation detector in the hypothesis."
+    },
+    {
+      "id": "L0:F4958",
+      "label": "the word \"not\"",
+      "reason": "Direct negation-word detector."
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation detector, semantically spurious here."
+    },
+    {
+      "id": "L4:F2422",
+      "label": "negations in other languages like French, Malay, and Croatian",
+      "reason": "Negation detector, not causal meaning relation."
+    },
+    {
+      "id": "L3:F1101",
+      "label": "error messages and terms indicating absence or negation in software contexts.",
+      "reason": "Oracle says it reflects negation/absence terms."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F3691",
+      "label": "the word \"recording\" in scientific or experimental documentation",
+      "reason": "Content-word feature about recording, not negation."
+    },
+    {
+      "id": "L2:F8776",
+      "label": "words related to finance and property law",
+      "reason": "Unrelated content-word feature; oracle claims it contributes."
+    },
+    {
+      "id": "L0:F2108",
+      "label": "the word \"menu\"",
+      "reason": "Prompt content word, not a generic structural detector."
+    },
+    {
+      "id": "L0:F7443",
+      "label": "the word \"record\" appearing in various contexts",
+      "reason": "Prompt content word feature."
+    },
+    {
+      "id": "L1:F12253",
+      "label": "the word 'menu'",
+      "reason": "Prompt content word feature."
+    },
+    {
+      "id": "L4:F7998",
+      "label": "words related to telecommunications and telephones",
+      "reason": "Oracle includes it among content cues."
+    },
+    {
+      "id": "L5:F14641",
+      "label": "words relating to recording audio and/or video",
+      "reason": "Content-word feature tied to recording."
+    },
+    {
+      "id": "L6:F11757",
+      "label": "references to videos, particularly on YouTube",
+      "reason": "Content-related cue in oracle's analysis."
+    },
+    {
+      "id": "L0:F10952",
+      "label": "the word \"computer\", sometimes in related contexts such as \"desk\" or \"negatively\"",
+      "reason": "Content-related cue, not structural."
+    },
+    {
+      "id": "L0:F1485",
+      "label": "the word \"how\"",
+      "reason": "Oracle mentions it as content tied to prompt text."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L2:F12257",
+      "label": "relatively uncommon words and some French words",
+      "reason": "Oracle did not use it in analysis."
+    },
+    {
+      "id": "L2:F15894",
+      "label": "words related to the shifting gears on a car",
+      "reason": "Unmentioned by oracle; unrelated."
+    },
+    {
+      "id": "L0:F3007",
+      "label": "the word \"middle\", and sometimes the word \"character\", and \"camp\"",
+      "reason": "Unmentioned by oracle; unrelated."
+    },
+    {
+      "id": "L0:F4523",
+      "label": "the word \"domestic\" and words associated with globalism",
+      "reason": "Unmentioned by oracle; unrelated."
+    },
+    {
+      "id": "L0:F5128",
+      "label": "the word \"words\" or words that are similar in meaning (word, Word, phrases, matrix)",
+      "reason": "Unmentioned by oracle; generic lexical feature."
+    },
+    {
+      "id": "L2:F12098",
+      "label": "the word \"kick\"",
+      "reason": "Unmentioned by oracle; unrelated."
+    }
+  ],
+  "n_spurious": 5,
+  "n_causal": 10,
+  "n_other": 6,
+  "spurious_fraction": 0.3333333333333333,
+  "dominant": "causal",
+  "notes": "Oracle mixes content cues with negation detectors; no build_circuit call found."
+}

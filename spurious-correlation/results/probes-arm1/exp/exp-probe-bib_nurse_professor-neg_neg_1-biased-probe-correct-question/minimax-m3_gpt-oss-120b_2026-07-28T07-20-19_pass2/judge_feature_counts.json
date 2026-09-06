@@ -1,0 +1,154 @@
+{
+  "spurious_features": [
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Gendered possessive pronoun detector on 'His'."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Detects 'his/he/him' gender markers."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicit male-pronoun/title feature."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct 'He' pronoun feature."
+    },
+    {
+      "id": "L19:F8814",
+      "label": "various pronouns and names referring to people",
+      "reason": "Person-reference feature, includes pronouns."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Direct male-pronoun detector."
+    },
+    {
+      "id": "L4:F4315",
+      "label": "mentions of \"his\" and other associated pronouns like he, him, or hers.",
+      "reason": "Gendered pronoun association feature."
+    },
+    {
+      "id": "L18:F10315",
+      "label": "pronouns and possessive pronouns",
+      "reason": "General pronoun detector, triggered by His/He."
+    },
+    {
+      "id": "L14:F14097",
+      "label": "occurrences of the word \"he\"",
+      "reason": "Specific 'he' detector."
+    },
+    {
+      "id": "L19:F8186",
+      "label": "references to a person, especially third-person pronouns and possessive pronouns.",
+      "reason": "Third-person pronoun/person-reference feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Profession-adjacent content word."
+    },
+    {
+      "id": "L2:F9740",
+      "label": "the word \"interest\" and related words.",
+      "reason": "Content word related to professional biography."
+    },
+    {
+      "id": "L0:F2827",
+      "label": "the word \"science\"",
+      "reason": "Profession-indicator vocabulary."
+    },
+    {
+      "id": "L0:F1065",
+      "label": "the word \"interest\", sometimes near the word \"practicing\" or \"pattern\"",
+      "reason": "Neutral lexical content feature."
+    },
+    {
+      "id": "L0:F14201",
+      "label": "words related to trade (business, finance, and health)",
+      "reason": "Workplace/field vocabulary."
+    },
+    {
+      "id": "L0:F2749",
+      "label": "references to ownership or association with a person or group of people",
+      "reason": "Content-neutral lexical association feature."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Structural punctuation/format feature."
+    },
+    {
+      "id": "L0:F6568",
+      "label": "the word \"anyway\"",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "L7:F16284",
+      "label": "mentions of people's names and relationships",
+      "reason": "Name/relationship content, not gender-specific."
+    },
+    {
+      "id": "L22:F12117",
+      "label": "references to actions that people can take or have taken.",
+      "reason": "Content-neutral action-language feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Probe direction",
+      "label": "profession-classification logit",
+      "reason": "Target output, not an input feature."
+    },
+    {
+      "id": "Emb: His",
+      "label": "Emb: His (pos 1)",
+      "reason": "Raw embedding node, not a semantic feature."
+    },
+    {
+      "id": "Emb: He",
+      "label": "Emb: He (pos 14)",
+      "reason": "Raw embedding node, not a semantic feature."
+    },
+    {
+      "id": "Emb: research",
+      "label": "Emb: research (pos 2)",
+      "reason": "Raw embedding node, not a semantic feature."
+    },
+    {
+      "id": "Emb: science",
+      "label": "Emb: science (pos 8)",
+      "reason": "Raw embedding node, not a semantic feature."
+    },
+    {
+      "id": "Emb: interest",
+      "label": "Emb: interest (pos 3)",
+      "reason": "Raw embedding node, not a semantic feature."
+    },
+    {
+      "id": "L18:F7400",
+      "label": "words related to coding and software/UI interfaces, with some bias toward non-English words",
+      "reason": "Off-task lexical/structural feature."
+    },
+    {
+      "id": "L2:F5491",
+      "label": "references to God in the third person.",
+      "reason": "Not relevant to profession or gender."
+    }
+  ],
+  "n_spurious": 10,
+  "n_causal": 10,
+  "n_other": 8,
+  "spurious_fraction": 0.5,
+  "dominant": "mixed",
+  "notes": "Strong gender-pronoun shortcut, but profession-content features are also present."
+}

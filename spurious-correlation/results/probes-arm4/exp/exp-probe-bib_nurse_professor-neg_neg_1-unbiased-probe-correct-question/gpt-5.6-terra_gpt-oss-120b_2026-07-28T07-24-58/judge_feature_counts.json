@@ -1,0 +1,69 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F1069",
+      "label": "references to a male person, particularly when using the pronoun \"He\" or \"His.\"",
+      "reason": "Direct male-pronoun detector; gender marker shortcut."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F10986",
+      "label": "words related to academic research",
+      "reason": "Research-interests context signals academic/professional biography."
+    },
+    {
+      "id": "L2:F1621",
+      "label": "information about people's education and career",
+      "reason": "Education/career representation relevant to profession."
+    },
+    {
+      "id": "L6:F2254",
+      "label": "references to academic degrees",
+      "reason": "PhD-degree detector; profession-relevant credential."
+    },
+    {
+      "id": "L7:F14129",
+      "label": "academic degrees, universities, and people associated with them",
+      "reason": "Academic-profile feature tied to profession indicators."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: His",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: research",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: interests",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "Emb: PhD",
+      "label": "(embed/output)",
+      "reason": "Input token, not a feature."
+    },
+    {
+      "id": "L2:F10852",
+      "label": "information about people's education and career",
+      "reason": "Intermediary representation, not a distinct feature claim."
+    },
+    {
+      "id": "Profession-classification probe score",
+      "label": "(embed/output)",
+      "reason": "Model output, not a feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 4,
+  "n_other": 6,
+  "spurious_fraction": 0.2,
+  "dominant": "causal",
+  "notes": "Mostly genuine academic-profile signals, with one clear gender shortcut."
+}

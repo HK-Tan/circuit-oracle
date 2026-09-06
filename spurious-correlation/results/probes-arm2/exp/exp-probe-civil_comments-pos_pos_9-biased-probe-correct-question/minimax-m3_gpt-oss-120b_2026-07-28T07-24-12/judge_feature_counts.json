@@ -1,0 +1,123 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F3902",
+      "label": "white identity/demographic mention",
+      "reason": "Directly encodes race mention; identity-group signal."
+    },
+    {
+      "id": "L4:F117",
+      "label": "bridging context feature (combines \"white guy\" and \"her last name\")",
+      "reason": "Links identity terms with demographic-name context."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "\"white guy\" compound detector",
+      "reason": "Compound identity phrase detector."
+    },
+    {
+      "id": "L3:F16373",
+      "label": "\"white guy\" compound detector",
+      "reason": "Identity phrase detector, not toxicity semantics."
+    },
+    {
+      "id": "L3:F4512",
+      "label": "\"white guy\" compound detector",
+      "reason": "Identity phrase detector, not toxic-content."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "\"white\" token context feature (pos 9)",
+      "reason": "Contextual race-token detector."
+    },
+    {
+      "id": "L2:F15317",
+      "label": "\"white\" token context feature (pos 9)",
+      "reason": "Triggered by identity token context."
+    },
+    {
+      "id": "L2:F14965",
+      "label": "\"white\" token context feature (pos 9)",
+      "reason": "Triggered by identity token context."
+    },
+    {
+      "id": "L2:F10433",
+      "label": "\"white\" token context feature (pos 9)",
+      "reason": "Triggered by identity token context."
+    },
+    {
+      "id": "L0:F9076",
+      "label": "low-level \"white\" / \"name\" / \"guy\" lexical features",
+      "reason": "Lexical detector for demographic/name tokens."
+    },
+    {
+      "id": "L0:F16013",
+      "label": "low-level \"white\" / \"name\" / \"guy\" lexical features",
+      "reason": "Lexical detector for demographic/name tokens."
+    },
+    {
+      "id": "L0:F6548",
+      "label": "low-level \"white\" / \"name\" / \"guy\" lexical features",
+      "reason": "Lexical detector for demographic/name tokens."
+    },
+    {
+      "id": "L0:F2242",
+      "label": "low-level \"white\" / \"name\" / \"guy\" lexical features",
+      "reason": "Lexical detector for demographic/name tokens."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "Probe Logit",
+      "label": "toxicity direction",
+      "reason": "Output node, not a feature."
+    },
+    {
+      "id": "Emb: \" white\" (pos 9)",
+      "label": "embedding token",
+      "reason": "Raw token embedding, not a feature."
+    },
+    {
+      "id": "Emb: \" guy\" (pos 10)",
+      "label": "embedding token",
+      "reason": "Raw token embedding, not a feature."
+    },
+    {
+      "id": "Emb: \" name\" (pos 15)",
+      "label": "embedding token",
+      "reason": "Raw token embedding, not a feature."
+    },
+    {
+      "id": "Emb: \" last\" (pos 14)",
+      "label": "embedding token",
+      "reason": "Raw token embedding, not a feature."
+    },
+    {
+      "id": "Emb: \" her\" (pos 13)",
+      "label": "embedding token",
+      "reason": "Raw token embedding, not a feature."
+    },
+    {
+      "id": "L2:F1708",
+      "label": "\"white\" token context feature (pos 9)",
+      "reason": "No oracle semantics beyond generic context."
+    },
+    {
+      "id": "L2:F9961",
+      "label": "\"white\" token context feature (pos 9)",
+      "reason": "No oracle semantics beyond generic context."
+    },
+    {
+      "id": "L2:F10248",
+      "label": "\"white\" token context feature (pos 9)",
+      "reason": "No oracle semantics beyond generic context."
+    }
+  ],
+  "n_spurious": 13,
+  "n_causal": 0,
+  "n_other": 9,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Oracle describes identity-mention circuitry, with no toxic-content features claimed."
+}

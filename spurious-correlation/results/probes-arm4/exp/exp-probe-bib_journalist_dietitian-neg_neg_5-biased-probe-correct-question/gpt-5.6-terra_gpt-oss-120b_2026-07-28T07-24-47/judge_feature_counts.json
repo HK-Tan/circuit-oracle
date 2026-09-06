@@ -1,0 +1,64 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Explicit masculine pronoun detector."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun/context feature driven by He."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Direct masculine-reference detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Journalism/reporter profession concept."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News/reporting profession concept."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: reporter (pos 66)",
+      "label": "reporter",
+      "reason": "Input token, not an oracle feature."
+    },
+    {
+      "id": "Emb: freelancer (pos 21)",
+      "label": "freelancer",
+      "reason": "Input token, not an oracle feature."
+    },
+    {
+      "id": "Emb: He (pos 1)",
+      "label": "He",
+      "reason": "Input token, not an oracle feature."
+    },
+    {
+      "id": "Emb: his (pos 3)",
+      "label": "his",
+      "reason": "Input token, not an oracle feature."
+    },
+    {
+      "id": "Emb: He (pos 25)",
+      "label": "He",
+      "reason": "Input token, not an oracle feature."
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 2,
+  "n_other": 5,
+  "spurious_fraction": 0.6,
+  "dominant": "mixed",
+  "notes": "Both journalism evidence and masculine pronoun bias are present; oracle supports both."
+}

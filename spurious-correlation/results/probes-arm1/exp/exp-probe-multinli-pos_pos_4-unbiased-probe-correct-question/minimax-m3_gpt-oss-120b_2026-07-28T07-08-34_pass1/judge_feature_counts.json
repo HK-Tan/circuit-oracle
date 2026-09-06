@@ -1,0 +1,114 @@
+{
+  "spurious_features": [
+    {
+      "id": "L2:F13586",
+      "label": "the -thing/-one quantifier feature",
+      "reason": "Fires on 'No one'; treats 'one' as quantifier/pronoun."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F3116",
+      "label": "the phrasal verb 'pick up' and variations",
+      "reason": "Content-word relation feature; meaning-bearing verb phrase."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "the word \"from\"",
+      "reason": "Function-word relation; part of sentence semantics context."
+    },
+    {
+      "id": "L0:F306",
+      "label": "the word \"adoption\" in various contexts",
+      "reason": "Oracle says tourist content word; task-relevant lexical content."
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Oracle claims word/about feature; content-neutral syntax."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural punctuation/spacing detector."
+    },
+    {
+      "id": "L1:F8159",
+      "label": "the word \"usually\" and, to a lesser extent, words that sometimes accompany it",
+      "reason": "Habitual adverb; not negation, but semantic cue."
+    },
+    {
+      "id": "L0:F7321",
+      "label": "the word \"so,\" and also matches some words ending in \"ware\" and \"such\"",
+      "reason": "Causal discourse marker, not negation."
+    },
+    {
+      "id": "L2:F14413",
+      "label": "the word \"tour\" or \"tours\"",
+      "reason": "Topic/content word; meaning overlap signal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F10904",
+      "label": "the word \"adequate\" (and words that appear near it)",
+      "reason": "Oracle label is unrelated to claimed circuit role."
+    },
+    {
+      "id": "L0:F8566",
+      "label": "the word \"up\"",
+      "reason": "Generic token detector; structural only."
+    },
+    {
+      "id": "L0:F10562",
+      "label": "the word \"up\"",
+      "reason": "Generic token detector; structural only."
+    },
+    {
+      "id": "L0:F12744",
+      "label": "positive adjectives and adverbs",
+      "reason": "General sentiment-like feature, not NLI-specific."
+    },
+    {
+      "id": "L0:F16358",
+      "label": "the word \"up\"",
+      "reason": "Generic token detector; structural only."
+    },
+    {
+      "id": "L0:F11658",
+      "label": "the word \"up\"",
+      "reason": "Generic token detector; structural only."
+    },
+    {
+      "id": "L0:F2868",
+      "label": "the word \"up\"",
+      "reason": "Generic token detector; structural only."
+    },
+    {
+      "id": "L0:F4438",
+      "label": "the word \"one\"",
+      "reason": "Oracle dismisses as generic numeral/pronoun detector."
+    },
+    {
+      "id": "L0:F11351",
+      "label": "the number \"one\"",
+      "reason": "Generic number detector; structural content."
+    },
+    {
+      "id": "L0:F7636",
+      "label": "the word \"one\"",
+      "reason": "Generic token detector; not negation."
+    },
+    {
+      "id": "L2:F11769",
+      "label": "the word \"up\"",
+      "reason": "Generic token detector; structural only."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 8,
+  "n_other": 11,
+  "spurious_fraction": 0.1111111111111111,
+  "dominant": "causal",
+  "notes": "Oracle shows one negation-adjacent quantifier feature; most circuitry is content/semantic or structural."
+}

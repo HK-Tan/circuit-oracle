@@ -1,0 +1,99 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F10545",
+      "label": "Religious-identity detector: \"Jew\" (pos 6)",
+      "reason": "Identity-word detector on a demographic token."
+    },
+    {
+      "id": "L6:F648",
+      "label": "Religious-identity detector: \"Jew\" (pos 6)",
+      "reason": "Identity-word detector on a demographic token."
+    },
+    {
+      "id": "L7:F11220",
+      "label": "Religious-identity detector: \"Jew\" (pos 6)",
+      "reason": "Identity-word detector on a demographic token."
+    },
+    {
+      "id": "L4:F5181",
+      "label": "Religious-identity detector: \"Jew\" (pos 6)",
+      "reason": "Identity-word detector on a demographic token."
+    },
+    {
+      "id": "L4:F14733",
+      "label": "Religious-identity detector: \"Jew\" (pos 6)",
+      "reason": "Identity-word detector on a demographic token."
+    },
+    {
+      "id": "L3:F12151",
+      "label": "Religious-identity detector: \"Jew\" (pos 6)",
+      "reason": "Identity-word detector on a demographic token."
+    },
+    {
+      "id": "L4:F2405",
+      "label": "Religious-identity detector: \"Jew\" (pos 6)",
+      "reason": "Identity-word detector on a demographic token."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L4:F8407",
+      "label": "Slur compound: \"Self-hating\" (pos 3-4)",
+      "reason": "Direct slur-compound detector."
+    },
+    {
+      "id": "L3:F735",
+      "label": "Slur compound: \"Self-hating\" (pos 3-4)",
+      "reason": "Direct slur-compound detector."
+    },
+    {
+      "id": "L1:F2107",
+      "label": "Slur compound: \"Self-hating\" (pos 3-4)",
+      "reason": "Direct slur-compound detector."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F8938",
+      "label": "Dash/hyphen separator (pos 2, 7)",
+      "reason": "Purely structural punctuation feature."
+    },
+    {
+      "id": "L0:F3090",
+      "label": "Dash/hyphen separator (pos 2, 7)",
+      "reason": "Purely structural punctuation feature."
+    },
+    {
+      "id": "L3:F9615",
+      "label": "Suppressing features (push AWAY from toxicity)",
+      "reason": "Oracle says it suppresses toxicity."
+    },
+    {
+      "id": "L3:F13717",
+      "label": "Suppressing features (push AWAY from toxicity)",
+      "reason": "Oracle says it suppresses toxicity."
+    },
+    {
+      "id": "L3:F15509",
+      "label": "Suppressing features (push AWAY from toxicity)",
+      "reason": "Oracle says it suppresses toxicity."
+    },
+    {
+      "id": "L3:F15447",
+      "label": "Suppressing features (push AWAY from toxicity)",
+      "reason": "Oracle says it suppresses toxicity."
+    },
+    {
+      "id": "L3:F10471",
+      "label": "Suppressing features (push AWAY from toxicity)",
+      "reason": "Oracle says it suppresses toxicity."
+    }
+  ],
+  "n_spurious": 7,
+  "n_causal": 3,
+  "n_other": 7,
+  "spurious_fraction": 0.7,
+  "dominant": "spurious",
+  "notes": "Identity-word pathway dominates counted pro-toxicity features; slur compound is causal."
+}

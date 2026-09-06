@@ -1,0 +1,91 @@
+{
+  "prompt": "Dataset: civil_comments-pos_pos_3 | Probe: biased | Method: correct",
+  "answer_baseline": "",
+  "pinned_features": [
+    {
+      "layer": 0,
+      "feature_idx": 9369,
+      "pos": 5,
+      "supernode_label": "Emb: Jew (pos 5)",
+      "autointerp": " subtraction symbols",
+      "frac_nonzero": 0.06038,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/9369"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 9369,
+      "pos": 3,
+      "supernode_label": "Emb: liberal (pos 3)",
+      "autointerp": " subtraction symbols",
+      "frac_nonzero": 0.06038,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/9369"
+    },
+    {
+      "layer": 0,
+      "feature_idx": 9369,
+      "pos": 8,
+      "supernode_label": "Emb: stain (pos 8)",
+      "autointerp": " subtraction symbols",
+      "frac_nonzero": 0.06038,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/0-gemmascope-transcoder-16k/9369"
+    },
+    {
+      "layer": 4,
+      "feature_idx": 2405,
+      "pos": 5,
+      "supernode_label": "Religious Identity (L4:F2405)",
+      "autointerp": " words related to religious identity/affiliation or spirituality including related holidays",
+      "frac_nonzero": 0.00705,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/4-gemmascope-transcoder-16k/2405"
+    },
+    {
+      "layer": 6,
+      "feature_idx": 648,
+      "pos": 5,
+      "supernode_label": "Religious Discrimination (L6:F648)",
+      "autointerp": " words related to discrimination against particular religious or ethnic groups",
+      "frac_nonzero": 0.01607,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/6-gemmascope-transcoder-16k/648"
+    },
+    {
+      "layer": 8,
+      "feature_idx": 13875,
+      "pos": 8,
+      "supernode_label": "Negative Reputation/Betrayal (L8:F13875)",
+      "autointerp": "negative sentiment related to reputation and betrayal of trust.",
+      "frac_nonzero": 0.01022,
+      "neuronpedia_url": "https://neuronpedia.org/gemma-2-2b/8-gemmascope-transcoder-16k/13875"
+    }
+  ],
+  "pinned_edges": [
+    {
+      "from": "emb_jew",
+      "to": "relig_ident"
+    },
+    {
+      "from": "relig_ident",
+      "to": "discrim_relig"
+    },
+    {
+      "from": "discrim_relig",
+      "to": "probe_logit"
+    },
+    {
+      "from": "emb_stain",
+      "to": "neg_reput"
+    },
+    {
+      "from": "neg_reput",
+      "to": "probe_logit"
+    },
+    {
+      "from": "emb_liberal",
+      "to": "relig_ident"
+    }
+  ],
+  "all_interventions_count": 0,
+  "interventions": [],
+  "oracle_judgment_text": "**Analysis:** The toxicity probe is driven by a combination of identity-group detection (specifically religious/ethnic identity) and sentiment features related to reputation and disgrace.\n\n**Confidence:** 8\n\n**Reasoning:** \nThe circuit reveals two primary parallel paths that feed into the probe's classification score:\n\n1.  **Identity/Discrimination Path:** The signal originates from input tokens like \"Jew\" (pos 5) and \"liberal\" (pos 3), which activate **L4:F2405** (Religious identity/affiliation). This signal then flows into **L6:F648**, a highly specific feature (frac_nonzero: 0.016) that detects \"words related to discrimination against particular religious or ethnic groups.\" The promotion of tokens like \"Jewish\" and \"holocaust\" in L6:F648 suggests it is a specialized detector for anti-Semitic or similar discriminatory contexts. This path directly increases the probe's toxicity score.\n\n2.  **Negative Sentiment Path:** Separately, the word \"stain\" (pos 8) activates **L8:F13875**, which encodes \"negative sentiment related to reputation and betrayal of trust.\" This feature promotes tokens such as \"disgraced\" and \"scandal,\" capturing the derogatory nature of the phrase \"a stain on his brethren.\"\n\nThe \"user concern\" is partially validated: the model utilizes a broad \"religious identity\" feature (L4:F2405) and a general \"discrimination\" feature (L6:F648). However, these are not merely \"spurious\" identity markers; L6:F648 specifically captures the *discrimination* aspect, while L8:F13875 captures the *hostile sentiment*. The probe identifies toxicity by intersecting the detection of a protected group (Religious/Ethnic identity) with the detection of derogatory sentiment (Disgrace/Stain).",
+  "oracle_ranking": null,
+  "grader_ranking": null
+}

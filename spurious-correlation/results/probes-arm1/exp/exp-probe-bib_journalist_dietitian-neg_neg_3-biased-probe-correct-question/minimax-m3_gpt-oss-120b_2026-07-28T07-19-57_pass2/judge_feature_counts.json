@@ -1,0 +1,184 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F16297",
+      "label": "the pronoun \"him\"",
+      "reason": "Male pronoun feature directly signals gender."
+    },
+    {
+      "id": "L0:F12768",
+      "label": "mentions of \"he\" and \"she\" in close proximity",
+      "reason": "Pronoun/gender detector tracking male subject reference."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "the pronoun \"his\" and the pronoun \"he.\"",
+      "reason": "Male pronoun detector, a gender marker."
+    },
+    {
+      "id": "L0:F11400",
+      "label": "his/he",
+      "reason": "Male pronoun detector, gender-related signal."
+    },
+    {
+      "id": "L2:F2128",
+      "label": "he/him multilingual",
+      "reason": "Pronoun feature encoding male gender."
+    },
+    {
+      "id": "L2:F9301",
+      "label": "gender roles",
+      "reason": "Gender-role feature, not profession causality."
+    },
+    {
+      "id": "L4:F14796",
+      "label": "the pronoun \"he\" or \"him\"",
+      "reason": "Direct male-pronoun feature."
+    },
+    {
+      "id": "L5:F10952",
+      "label": "third-person pronoun",
+      "reason": "Pronoun aggregator carrying gendered reference."
+    },
+    {
+      "id": "L6:F12990",
+      "label": "male pronouns and titles along with descriptors associated with men",
+      "reason": "Explicitly male-gendered pronoun/title feature."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "the possessive pronoun \"his\" (or similar pronouns like \"he\" and \"him\") and some non-ascii characters, especially \"\u00a9\"",
+      "reason": "Male pronoun/possessive detector."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "pronouns or possessive pronouns",
+      "reason": "Pronoun aggregator used for gendered signal."
+    },
+    {
+      "id": "L7:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-reference feature, gender confound."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "references to people with pronouns and possessive pronouns",
+      "reason": "Pronoun-reference feature, gender confound."
+    },
+    {
+      "id": "L18:F14743",
+      "label": "He",
+      "reason": "Male pronoun detector."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L0:F4564",
+      "label": "the word \"research.\"",
+      "reason": "Profession-related research vocabulary."
+    },
+    {
+      "id": "L0:F10036",
+      "label": "words about scientific research and scientists",
+      "reason": "Content vocabulary, task-relevant but non-gendered."
+    },
+    {
+      "id": "L0:F5333",
+      "label": "mentions of stories that are being told",
+      "reason": "Narrative/content word linked to journalism text."
+    },
+    {
+      "id": "L0:F61",
+      "label": "the word \"stories\" sometimes along with apostrophes and common names.",
+      "reason": "Content word, not gendered."
+    },
+    {
+      "id": "L0:F5267",
+      "label": "the word \"represents\"",
+      "reason": "Neutral lexical content feature."
+    },
+    {
+      "id": "L0:F14216",
+      "label": "the word \"signs\" and horizontal lines",
+      "reason": "Neutral lexical/structural content cue."
+    },
+    {
+      "id": "L1:F14812",
+      "label": "references to stories, chapters, and other narrative elements",
+      "reason": "Narrative lexical content."
+    },
+    {
+      "id": "L1:F7449",
+      "label": "instances of the word \"representation\"",
+      "reason": "Content word, not a gender marker."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "things related to journalism and the media",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "L4:F7446",
+      "label": "words related to processes of conveying information through different media",
+      "reason": "Journalism/media profession vocabulary."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "words and phrases associated with broadcast journalism",
+      "reason": "Profession-specific journalism feature."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "news reporting and journalism.",
+      "reason": "Direct profession indicator."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Profession vocabulary for journalism."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural/punctuation detector."
+    },
+    {
+      "id": "L0:F7696",
+      "label": "the word \"on\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F3255",
+      "label": "the word \"and\"",
+      "reason": "Generic function-word detector."
+    },
+    {
+      "id": "L0:F10187",
+      "label": "the word \"time\"",
+      "reason": "Generic lexical feature, not task-specific."
+    },
+    {
+      "id": "L0:F9121",
+      "label": "the word \"nice\" and words with positive sentiment, sometimes related to the weather or seasons",
+      "reason": "Oracle didn't connect this to task causality."
+    },
+    {
+      "id": "L0:F1301",
+      "label": "mentions of cancer and related terms like tumors",
+      "reason": "Unrelated content per oracle context."
+    },
+    {
+      "id": "L3:F7446",
+      "label": "words related to processes of conveying information through different media",
+      "reason": "Duplicate layer label; same feature already counted."
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 13,
+  "n_other": 7,
+  "spurious_fraction": 0.5185185185185185,
+  "dominant": "mixed",
+  "notes": "Both journalism content and male-pronoun confounds are substantial; neither fully dominates."
+}

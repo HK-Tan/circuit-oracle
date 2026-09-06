@@ -1,0 +1,124 @@
+{
+  "spurious_features": [
+    {
+      "id": "L6:F11646",
+      "label": "references to women, potentially triggered by pronouns and titles",
+      "reason": "Gendered female-reference detector"
+    },
+    {
+      "id": "L0:F9519",
+      "label": "the pronoun \"she\" and the possessive pronoun \"her\"",
+      "reason": "Female pronoun detector"
+    },
+    {
+      "id": "L1:F7244",
+      "label": "the pronoun \"she\"",
+      "reason": "Female pronoun detector"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L1:F815",
+      "label": "the word \"passion\"",
+      "reason": "Biography interest/goal language"
+    },
+    {
+      "id": "L1:F728",
+      "label": "words related to gaining knowledge",
+      "reason": "Learning/education vocabulary"
+    },
+    {
+      "id": "L4:F13412",
+      "label": "diets/dietary health",
+      "reason": "Nutrition/health profession indicator"
+    },
+    {
+      "id": "L4:F9554",
+      "label": "diets/dietary health",
+      "reason": "Nutrition/health profession indicator"
+    },
+    {
+      "id": "L4:F14942",
+      "label": "food preparation and consumption",
+      "reason": "Cooking profession indicator"
+    },
+    {
+      "id": "L6:F11327",
+      "label": "food/nutrition detector",
+      "reason": "Direct nutrition profession cue"
+    },
+    {
+      "id": "L7:F6434",
+      "label": "food/cooking related feature",
+      "reason": "Cooking skill vocabulary"
+    },
+    {
+      "id": "L8:F9351",
+      "label": "food/cooking related feature",
+      "reason": "Cooking skill vocabulary"
+    },
+    {
+      "id": "L8:F15894",
+      "label": "food/cooking related feature",
+      "reason": "Cooking skill vocabulary"
+    },
+    {
+      "id": "L14:F4197",
+      "label": "food-insecurity/rationing language",
+      "reason": "Food-related profession cue"
+    },
+    {
+      "id": "L15:F2510",
+      "label": "words and phrases related to food preparation and consumption, along with some words relating to the digestive system and eating disorders",
+      "reason": "Food preparation/cooking language"
+    },
+    {
+      "id": "L19:F1589",
+      "label": "scientific nutritional studies",
+      "reason": "Deep nutrition profession concept"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F14824",
+      "label": "the word \"has\"",
+      "reason": "Generic function word"
+    },
+    {
+      "id": "L0:F2349",
+      "label": "the word \"others\"",
+      "reason": "Generic lexical feature"
+    },
+    {
+      "id": "L0:F2238",
+      "label": "the word \"about\" when followed by a numerical value",
+      "reason": "Structural/contextual detector"
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Generic function word"
+    },
+    {
+      "id": "L0:F6051",
+      "label": "periods, spaces, and the number 1",
+      "reason": "Purely structural detector"
+    },
+    {
+      "id": "L4:F7864",
+      "label": "xml or source code snippets, especially tags and possibly keywords in other languages besides English",
+      "reason": "Unrelated structural/code detector"
+    },
+    {
+      "id": "L26:F0",
+      "label": "Probe output logit",
+      "reason": "Not a feature"
+    }
+  ],
+  "n_spurious": 3,
+  "n_causal": 12,
+  "n_other": 7,
+  "spurious_fraction": 0.2,
+  "dominant": "causal",
+  "notes": "Gender features are present but suppressive; positive signal is mainly nutrition/cooking."
+}

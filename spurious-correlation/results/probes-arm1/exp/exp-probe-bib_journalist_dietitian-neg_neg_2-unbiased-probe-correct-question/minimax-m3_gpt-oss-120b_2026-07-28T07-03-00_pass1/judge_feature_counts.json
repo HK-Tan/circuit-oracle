@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F8964",
+      "label": "the possessive pronoun \"His\"",
+      "reason": "Gendered pronoun marker, a spurious profession correlate."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "Emb: ' report' (pos 21)",
+      "label": "report",
+      "reason": "Direct profession/news-reporting cue."
+    },
+    {
+      "id": "L7:F13646",
+      "label": "early journalism/news-reporting detectors",
+      "reason": "Detects journalism semantics."
+    },
+    {
+      "id": "L7:F9092",
+      "label": "early journalism/news-reporting detectors",
+      "reason": "Detects journalism semantics."
+    },
+    {
+      "id": "L8:F8855",
+      "label": "early journalism/news-reporting detectors",
+      "reason": "Detects journalism semantics."
+    },
+    {
+      "id": "L8:F8437",
+      "label": "early journalism/news-reporting detectors",
+      "reason": "Detects journalism semantics."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "words and phrases related to journalism and newspapers",
+      "reason": "Explicit journalism/newspaper vocabulary."
+    },
+    {
+      "id": "L19:F2486",
+      "label": "journalistic sources and news outlets.",
+      "reason": "News outlet/source semantics."
+    },
+    {
+      "id": "L20:F8433",
+      "label": "words related to news broadcasting",
+      "reason": "Broadcasting/news profession cue."
+    },
+    {
+      "id": "L21:F4401",
+      "label": "unknown",
+      "reason": "Listed as journalism-related output feature."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "Emb: ' to' (pos 3), ' see' (pos 4), ' dream' (pos 2)",
+      "label": "to/see/dream",
+      "reason": "Generic opinion/structural tokens."
+    },
+    {
+      "id": "Emb: ' world' (pos 6)",
+      "label": "world",
+      "reason": "Generic lexical feature."
+    },
+    {
+      "id": "Emb: ' organizations' (pos 22)",
+      "label": "organizations",
+      "reason": "Not itself profession-specific here."
+    },
+    {
+      "id": "L0:F8444",
+      "label": "the word \"to\"",
+      "reason": "Purely structural word detector."
+    },
+    {
+      "id": "L0:F14287",
+      "label": "the word \"see\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F2011",
+      "label": "the word \"dream\"",
+      "reason": "Generic word detector."
+    },
+    {
+      "id": "L0:F2203",
+      "label": "instances of the words \"world\" or \"game\" (possibly \"problem\") or expressions of existential quandaries.",
+      "reason": "Generic/non-task-specific lexical feature."
+    },
+    {
+      "id": "L0:F15185",
+      "label": "the word \"do\" alongside references to figures, types, and the pronouns \"we\" and \"us\", possibly in the context of scientific studies and collaborative efforts",
+      "reason": "Generic syntactic/lexical pattern."
+    },
+    {
+      "id": "L0:F14582",
+      "label": "the word \"left\" and sometimes \"center\"",
+      "reason": "Generic structural/lexical feature."
+    },
+    {
+      "id": "L0:F13948",
+      "label": "the color \"pink\"",
+      "reason": "Not relevant to profession classification."
+    },
+    {
+      "id": "L0:F15693",
+      "label": "language related to personal anecdotes and opinions",
+      "reason": "Generic discourse style feature."
+    }
+  ],
+  "n_spurious": 1,
+  "n_causal": 9,
+  "n_other": 11,
+  "spurious_fraction": 0.1,
+  "dominant": "causal",
+  "notes": "Mostly journalism/profession cues; one gendered pronoun feature appears."
+}

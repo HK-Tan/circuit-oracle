@@ -1,0 +1,98 @@
+{
+  "spurious_features": [
+    {
+      "id": "Emb:white (pos 25)",
+      "label": "token embedding for \"white\"",
+      "reason": "Identity token; demographic signal."
+    },
+    {
+      "id": "Emb:white (pos 15)",
+      "label": "token embedding for \"white\"",
+      "reason": "Identity token; demographic signal."
+    },
+    {
+      "id": "Emb:black (pos 32)",
+      "label": "token embedding for \"black\"",
+      "reason": "Identity token; demographic signal."
+    },
+    {
+      "id": "Emb:trump (pos 5)",
+      "label": "token embedding for \"trump\"",
+      "reason": "Political/identity reference, not toxicity."
+    },
+    {
+      "id": "Emb:race (pos 40)",
+      "label": "token embedding for \"race\"",
+      "reason": "Demographic topic word."
+    },
+    {
+      "id": "Emb:America (pos 24)",
+      "label": "token embedding for \"America\"",
+      "reason": "Nationality/group signal."
+    },
+    {
+      "id": "Emb:bigot/ot (pos 8-9)",
+      "label": "token embedding for \"bigot/ot\"",
+      "reason": "Identity-related insult term."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Explicit race/ethnicity detector."
+    },
+    {
+      "id": "L4:F117",
+      "label": "terms related to race, racism, and social justice, with a particular focus on terms related to Black people",
+      "reason": "Race/Black identity detector."
+    },
+    {
+      "id": "L6:F3902",
+      "label": "terms referring to race and ethnicity",
+      "reason": "Race/ethnicity supernode."
+    },
+    {
+      "id": "L4:F14582",
+      "label": "references to the White House and the US government",
+      "reason": "Triggered by Trump/political identity."
+    }
+  ],
+  "causal_features": [],
+  "other_features": [
+    {
+      "id": "L5:F8030",
+      "label": "language discussing differences, clarity, and definition",
+      "reason": "Structural/clarity language, not toxicity."
+    },
+    {
+      "id": "L0:F5707",
+      "label": "words or phrases related to knowledge or perspective",
+      "reason": "Generic discourse marker."
+    },
+    {
+      "id": "L1:F2407",
+      "label": "the word \"clearly\"",
+      "reason": "Generic adverb."
+    },
+    {
+      "id": "L0:F6154",
+      "label": "uses of 'clearly' and nearby words that are related to arguments and writing",
+      "reason": "Writing-style feature."
+    },
+    {
+      "id": "L0:F12866",
+      "label": "adverbs such as \"clearly,\" \"plainly,\" and \"as\"",
+      "reason": "Generic discourse/structure."
+    },
+    {
+      "id": "L6:F1707",
+      "label": "a variety of discourse markers, qualifiers, intensifiers, or words expressing an opinion.",
+      "reason": "Generic opinion marker."
+    }
+  ],
+  "n_spurious": 11,
+  "n_causal": 0,
+  "n_other": 6,
+  "spurious_fraction": 1.0,
+  "dominant": "spurious",
+  "notes": "Circuit is dominated by identity/race lexicon; no toxic-content detector is actually claimed."
+}

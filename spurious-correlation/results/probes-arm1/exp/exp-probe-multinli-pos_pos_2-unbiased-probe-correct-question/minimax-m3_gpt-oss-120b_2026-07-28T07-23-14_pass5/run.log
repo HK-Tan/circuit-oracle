@@ -1,0 +1,32 @@
+
+============================================================
+Graph: multinli-pos_pos_2-unbiased-probe-correct
+============================================================
+Loading multinli-pos_pos_2-unbiased-probe-correct.pt...
+  5447 nodes | 4096 selected features | 1 logit target(s)
+
+============================================================
+ORACLE ANALYSIS — multinli-pos_pos_2-unbiased-probe-correct
+============================================================
+**Analysis:** The probe's "contradiction" classification is driven primarily by surface-level lexical/discourse signals — specifically discourse markers ("well", "yeah"), the contraction fragment "'t" (end of "haven't"), and the conjunction "because" — rather than by semantic content about the NCAA tournament, Louisville, or the Sweet 16.
+
+**Confidence:** 7
+
+**Reasoning:**
+
+The attribution graph reveals that the probe's classification direction is dominated by shallow features:
+
+1. **Strongest negative driver: L4:F12126 (pos 2, de=-0.65)** — labeled "expressions of agreement or acknowledgement, particularly 'well' and 'yeah'". This feature's top upstream inputs are the embeddings of " well" (de=14.6) and "yeah" (de=4.6), plus L0:F8352 ("the word 'well'") and L3:F4735 (multi-well plates — a false lexical match on the "well" token, not relevant). The circuit routes the *filler-word* "well" into the probe.
+
+2. **Second strongest negative: L0:F6236 (pos 20, de=-0.46)** — labeled "the letter 't' when it follows the word 'isn'' or 'doesn''" (a contraction-ending detector). Its top inputs are embeddings for "t" (pos 20, de=17.9), " haven" (pos 18, de=16.6), and "'" (pos 19, de=12.1) — i.e., the "haven't" contraction, which the user explicitly flagged as a candidate spurious "negation word" signal. Promoted tokens confirm it pushes "not"/"Not"/"NOT".
+
+3. **Strongest positive driver: L0:F16366 (pos 25, de=+0.29)** — labeled "the word 'because'", driven almost entirely by the "because" embedding (de=40.75). This is a conjunction/justification marker.
+
+4. **L0:F8659 (pos 8, de=+0.29)** — labeled "the word 'foundation'" but firing on the "tournament" embedding (de=15.25); a generic word-identity feature.
+
+5. **L4:F4847 (pos 2, de=+0.39)** — labeled "words/phrases often used in conversation, especially questions and answers" — another discourse-marker feature driven by " well" (de=8.06).
+
+**Key finding confirming the user's concern:** The most negative-driving features (L4:F12126, L0:F6236) are **discourse/register markers** ("well", "yeah", "haven't") and a **contraction-ending 't'** that the LLM has learned to associate with negation. The "haven't" fragment is precisely the "negation word" signal the user flagged. The probe is not reading the semantic contradiction (Louisville being out, "I haven't missed a single game" — which is actually a *consistent* statement, not a contradiction). Instead, it keys on the **colloquial discourse register** (filler "well"/"yeah", contraction "haven't", casual "because") to fire its contradiction classification. The "tournament"/"double A" content words contribute only weakly (L0:F12862, F8083, F177 — "tournament"/"double" detectors) and are outvoted.
+
+This validates the user's hypothesis: the probe relies on spurious lexical/discourse-marker features rather than understanding the actual semantic content of the prompt.
+Results saved to: <repo>/spurious-correlation/results/probes-arm1/exp/exp-probe-multinli-pos_pos_2-unbiased-probe-correct-question/minimax-m3_gpt-oss-120b_2026-07-28T07-23-14_pass5

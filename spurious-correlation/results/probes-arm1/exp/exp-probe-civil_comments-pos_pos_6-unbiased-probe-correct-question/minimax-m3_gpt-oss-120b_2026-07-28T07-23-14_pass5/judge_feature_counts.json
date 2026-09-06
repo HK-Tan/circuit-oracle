@@ -1,0 +1,104 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Identity token detector; demographic signal."
+    },
+    {
+      "id": "L0:F1015",
+      "label": "the word \"black\"",
+      "reason": "Identity token detector; race marker."
+    },
+    {
+      "id": "L0:F7379",
+      "label": "the word \"man\"",
+      "reason": "Gender/identity token detector."
+    },
+    {
+      "id": "L0:F9076",
+      "label": "mentions of men, boys, areas, or general locations in a text",
+      "reason": "Identity/group mention feature."
+    },
+    {
+      "id": "L2:F13158",
+      "label": "words about race and ethnicity",
+      "reason": "Explicit race/ethnicity feature."
+    },
+    {
+      "id": "L2:F9837",
+      "label": "references to men",
+      "reason": "Demographic reference feature."
+    },
+    {
+      "id": "L2:F1708",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity signal."
+    },
+    {
+      "id": "L2:F9528",
+      "label": "words about race and ethnicity",
+      "reason": "Race/ethnicity signal."
+    },
+    {
+      "id": "L3:F13061",
+      "label": "words related to race, gender and social issues",
+      "reason": "Identity/social-issues feature."
+    },
+    {
+      "id": "L4:F15204",
+      "label": "art galleries, museums and the White House",
+      "reason": "White House sense, not toxic content."
+    },
+    {
+      "id": "L4:F7136",
+      "label": "the color white",
+      "reason": "Color/identity ambiguity; not toxicity."
+    },
+    {
+      "id": "L6:F3077",
+      "label": "places and categorizations of people by place",
+      "reason": "Categorization by identity/place."
+    },
+    {
+      "id": "L6:F7829",
+      "label": "mentions of expats, foreigners, or British people.",
+      "reason": "Nationality/group mention feature."
+    },
+    {
+      "id": "L8:F13464",
+      "label": "discussions of racial issues, particularly those involving white and black people",
+      "reason": "Race-discussion detector."
+    },
+    {
+      "id": "L9:F11035",
+      "label": "mentions of different racial or ethnic groups, news, payments, political concepts and geographical locations.",
+      "reason": "Identity/group mention feature."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L6:F4008",
+      "label": "expletives, strong opinions and negative words",
+      "reason": "Negative/profanity-like language detector."
+    },
+    {
+      "id": "L6:F1330",
+      "label": "opinions and commentary about current events, possibly with a negative tone",
+      "reason": "Negative tone / abuse-adjacent signal."
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3436",
+      "label": "mentions of the word \"white\"",
+      "reason": "Duplicate handled as spurious above."
+    }
+  ],
+  "n_spurious": 15,
+  "n_causal": 2,
+  "n_other": 1,
+  "spurious_fraction": 0.8823529411764706,
+  "dominant": "spurious",
+  "notes": "Identity-group circuitry dominates; only weak negative-tone features look causal."
+}

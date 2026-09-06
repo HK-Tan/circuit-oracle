@@ -1,0 +1,98 @@
+{
+  "spurious_features": [
+    {
+      "id": "L18:F14743",
+      "label": "Male pronoun features (mid-layer)",
+      "reason": "Tracks He/his pronouns, a gender marker."
+    },
+    {
+      "id": "L17:F5889",
+      "label": "Male pronoun features (mid-layer)",
+      "reason": "Part of the He-pronoun detection chain."
+    },
+    {
+      "id": "L15:F3330",
+      "label": "Male pronoun features (mid-layer)",
+      "reason": "Propagates male pronoun signal."
+    },
+    {
+      "id": "L13:F6622",
+      "label": "Male pronoun features (mid-layer)",
+      "reason": "Upstream He detector in gender circuit."
+    },
+    {
+      "id": "L0:F1069",
+      "label": "Male pronoun features (mid-layer)",
+      "reason": "Directly keyed to He at position 25."
+    },
+    {
+      "id": "L7:F14893",
+      "label": "Male pronoun features (mid-layer)",
+      "reason": "Positive contribution from sentence-initial He."
+    },
+    {
+      "id": "L7:F14946",
+      "label": "Male pronoun features (mid-layer)",
+      "reason": "Inhibitory part of He-pronoun branch."
+    },
+    {
+      "id": "L0:F2994",
+      "label": "Layer-0 male pronoun detectors",
+      "reason": "Detects his/His tokens at positions 3 and 61."
+    },
+    {
+      "id": "L0:F8974",
+      "label": "Layer-0 male pronoun detectors",
+      "reason": "Oracle ties it to gendered context, not profession."
+    },
+    {
+      "id": "L0:F6051",
+      "label": "Layer-0 male pronoun detectors",
+      "reason": "Structural token feature in male-pronoun circuit."
+    },
+    {
+      "id": "L0:F8061",
+      "label": "Layer-0 male pronoun detectors",
+      "reason": "Structural token feature in male-pronoun circuit."
+    },
+    {
+      "id": "L0:F14824",
+      "label": "Layer-0 male pronoun detectors",
+      "reason": "Structural token feature in male-pronoun circuit."
+    },
+    {
+      "id": "L0:F7681",
+      "label": "Layer-0 male pronoun detectors",
+      "reason": "Oracle groups it with male-pronoun detectors."
+    },
+    {
+      "id": "L0:F886",
+      "label": "Layer-0 male pronoun detectors",
+      "reason": "Oracle groups it with male-pronoun detectors."
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L19:F2486",
+      "label": "\"reporter\" profession word path (mixed signals)",
+      "reason": "Late profession-word path affecting classifier."
+    },
+    {
+      "id": "L14:F4420",
+      "label": "\"reporter\" profession word path (mixed signals)",
+      "reason": "Late profession-word path affecting classifier."
+    },
+    {
+      "id": "L4:F13253",
+      "label": "\"reporter\" profession word path (mixed signals)",
+      "reason": "Early reporter detector, profession vocabulary."
+    }
+  ],
+  "other_features": [],
+  "n_spurious": 14,
+  "n_causal": 3,
+  "n_other": 0,
+  "spurious_fraction": 0.8235294117647058,
+  "dominant": "spurious",
+  "notes": "Oracle says classification is driven mostly by male-pronoun circuitry, not reporter."
+}

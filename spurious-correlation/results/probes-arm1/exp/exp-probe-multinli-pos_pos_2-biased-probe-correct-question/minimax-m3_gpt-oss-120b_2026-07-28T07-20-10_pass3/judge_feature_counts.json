@@ -1,0 +1,119 @@
+{
+  "spurious_features": [
+    {
+      "id": "L0:F6236",
+      "label": "the letter \"t\" when it follows the word \"isn'\" or \"doesn'\"",
+      "reason": "Negation-token detector via \"haven't\""
+    },
+    {
+      "id": "L0:F16366",
+      "label": "the word \"because\"",
+      "reason": "Causal connector used as surface cue"
+    },
+    {
+      "id": "L0:F8352",
+      "label": "the word \"well\"",
+      "reason": "Discourse marker, not semantic relation"
+    },
+    {
+      "id": "L0:F15972",
+      "label": "the word \"yeah\"",
+      "reason": "Agreement/filler marker detector"
+    },
+    {
+      "id": "L4:F4492",
+      "label": "negations in various languages",
+      "reason": "Negation cue, regardless of meaning"
+    },
+    {
+      "id": "L4:F12126",
+      "label": "expressions of agreement or acknowledgement, particularly \"well\" and \"yeah\"",
+      "reason": "Conversation marker heuristic"
+    },
+    {
+      "id": "L4:F4847",
+      "label": "words or short phrases often used in conversation, and especially questions and answers",
+      "reason": "Generic conversational cue"
+    },
+    {
+      "id": "L4:F9602",
+      "label": "interjections and filler words",
+      "reason": "Filler/interjection detector"
+    },
+    {
+      "id": "L2:F9629",
+      "label": "interjections and sounds of hesitation or acknowledgment",
+      "reason": "Hesitation marker, not task meaning"
+    },
+    {
+      "id": "L3:F7140",
+      "label": "negation-context feature",
+      "reason": "Negation-context heuristic"
+    },
+    {
+      "id": "L3:F16039",
+      "label": "negation-context feature",
+      "reason": "Negation-context heuristic"
+    },
+    {
+      "id": "L4:F430",
+      "label": "negation-context feature",
+      "reason": "Negation-related surface cue"
+    },
+    {
+      "id": "L4:F5862",
+      "label": "negation-context feature",
+      "reason": "Negation-related surface cue"
+    },
+    {
+      "id": "L5:F2740",
+      "label": "conversational language",
+      "reason": "Generic conversational style feature"
+    }
+  ],
+  "causal_features": [
+    {
+      "id": "L2:F5201",
+      "label": "awards and accomplishments in the context of sports",
+      "reason": "Sports-domain content linked to entailment"
+    },
+    {
+      "id": "L1:F177",
+      "label": "the word \"double\" and words that begin with \"multi\" or \"doubly\"",
+      "reason": "Content feature relevant to premise/hypothesis meaning"
+    },
+    {
+      "id": "L1:F13255",
+      "label": "the word \"season\" and words associated with it",
+      "reason": "Sports-season semantics"
+    },
+    {
+      "id": "L2:F752",
+      "label": "phrases expressing personal opinions or viewpoints, often using words like \"I,\" \"think,\" \"kind of,\" and related terms.",
+      "reason": "Content-bearing stance language"
+    },
+    {
+      "id": "L0:F7893",
+      "label": "the word \"double\" and words related to entrances and entering",
+      "reason": "Lexical-semantic content feature"
+    }
+  ],
+  "other_features": [
+    {
+      "id": "L0:F3820",
+      "label": "the word \"the\"",
+      "reason": "Purely generic word detector"
+    },
+    {
+      "id": "L0:F10780",
+      "label": "LaTeX commands for including packages and defining document class",
+      "reason": "Irrelevant formatting detector"
+    }
+  ],
+  "n_spurious": 14,
+  "n_causal": 5,
+  "n_other": 2,
+  "spurious_fraction": 0.7368421052631579,
+  "dominant": "spurious",
+  "notes": "Oracle emphasizes negation/discourse cues over meaning; sports/content features are secondary."
+}
