@@ -114,8 +114,11 @@ the attribution graph and tries to name the word.
 Closed is exact-match accuracy on the 20-word menu and open is top-10 recall, so the two
 columns are different measurements. The Circuit Oracle row is scored on the runs in this
 repository. The three baseline rows were not re-run. They are the workshop paper's values on
-the same 48 items, scored by that paper's judge, and they sit here for orientation. The
-Activation Oracle leads in both protocols. It needs a LoRA adapter trained on the subject
+the same 48 items, scored by that paper's judge, and they sit here for orientation. None of
+the three has an orchestrator model, since the Activation Oracle is a LoRA adapter and the
+two projection baselines are deterministic dot-product pipelines, so the orchestrator change
+between the paper and these runs touches the oracle row alone. The Activation Oracle leads
+in both protocols. It needs a LoRA adapter trained on the subject
 model itself, while the Circuit Oracle reads the graph of whatever model produced it.
 
 ---
