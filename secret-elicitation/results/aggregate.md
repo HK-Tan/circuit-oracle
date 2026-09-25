@@ -23,12 +23,16 @@ Headline is exact-match accuracy for closed mode and top-10 recall for open mode
 
 `elk-arm1-closed` per-pass: p1=68.8%, p2=68.8%, p3=68.8%, p4=70.8%, p5=68.8%
 
+> 72 item(s) missing from at least one pass were excluded from the flip rates.
+
 | elk-arm1-open | 5 | 27.9% | ±3.2 | ±3.9 | 22.9% | 31.2% | 81.2% | 41.7% | 52.5% |
 
 `elk-arm1-open` shortlist stability: mean pairwise Jaccard **0.162** (median 0.121), 3.21 distinct rank-1 answers per item out of 5 passes.
 
 
 `elk-arm1-open` per-pass: p1=29.2%, p2=27.1%, p3=29.2%, p4=31.2%, p5=22.9%
+
+> 72 item(s) missing from at least one pass were excluded from the flip rates.
 
 
 **answer flip** is the share of items whose rank-1 answer is not identical on every pass. **verdict flip** is the share whose correctness changes. Answer flip well above verdict flip means the oracle is stably wrong in varying ways.

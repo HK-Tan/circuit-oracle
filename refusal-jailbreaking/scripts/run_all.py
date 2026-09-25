@@ -270,6 +270,15 @@ def run_single_oneshot(
         orchestrator_model=cfg.orchestrator_model,
         task="refusal",
         mode="causal",
+        # Default max_tokens=2000 is sized for probes' simple YES/NO verdict.
+        # Refusal's one-shot completion has to reason about candidate
+        # interventions (feature IDs, scales, rationale) AND, for a reasoning
+        # model like minimax-m3, spend tokens on internal thinking before the
+        # JSON answer -- 2000 was observed to be consumed entirely by
+        # reasoning, returning an empty completion (stop_reason='max_tokens')
+        # on every pilot run. 8192 matches the token budget used for this
+        # model elsewhere in the codebase's orchestrator calls.
+        max_tokens=8192,
         verbose=verbose,
     )
     print(f"  [1/2] ONE-SHOT DONE, {len(result['tool_calls'])} recorded calls, "

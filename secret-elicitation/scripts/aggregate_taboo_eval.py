@@ -104,9 +104,6 @@ def per_pass_stats(grades: list[dict], open_mode: bool) -> dict | None:
     if len(by_pass) < 2:
         return None
 
-    accs = {p: sum(correct_of(g) for g in gs) / len(gs) for p, gs in sorted(by_pass.items())}
-    vals = list(accs.values())
-
     # Group by item (one exp = one (secret, prompt) cell) and compare across passes.
     by_item: dict[str, dict[int, dict]] = defaultdict(dict)
     for g in grades:
@@ -116,6 +113,17 @@ def per_pass_stats(grades: list[dict], open_mode: bool) -> dict | None:
     # report a spurious "no flip" from a single observation.
     n_passes = len(by_pass)
     full = {k: v for k, v in by_item.items() if len(v) == n_passes}
+
+    # Per-pass accuracy must be computed over the SAME item set in every pass
+    # (the `full` intersection above), not the raw by_pass groups. An arm
+    # whose passes cover different items (e.g. pass1 padded with single-pass
+    # extra items not present in passes 2-5) would otherwise silently skew
+    # that pass's accuracy relative to the others, corrupting mean/SD.
+    accs = {
+        p: sum(correct_of(item[p]) for item in full.values()) / len(full)
+        for p in sorted(by_pass)
+    } if full else {}
+    vals = list(accs.values())
 
     answer_flips = 0
     verdict_flips = 0

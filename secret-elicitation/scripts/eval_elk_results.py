@@ -48,12 +48,16 @@ def compact_method(name: str, path: Path | None = None) -> str:
     return n
 
 
-def score_file(path: Path, channel: str, oracle_metric: str = "top10") -> tuple[str, dict[str, tuple[int, int]], tuple[int, int]]:
+def score_file(path: Path, channel: str, oracle_metric: str = "top10",
+               oracle_by_secret_key: str = "by_secret") -> tuple[str, dict[str, tuple[int, int]], tuple[int, int]]:
     with open(path) as f:
         data = json.load(f)
-    # Oracle taboo eval.json format: dict with "by_secret" mapping word -> stats
-    if isinstance(data, dict) and "by_secret" in data:
-        by_secret = data["by_secret"]
+    # Oracle taboo eval.json format: dict with "by_secret" mapping word -> stats.
+    # `oracle_by_secret_key` lets a caller point at an alternate view stored
+    # alongside it (e.g. a single-pass all-20-secret breakdown) without
+    # disturbing what "by_secret" itself means for other readers of the file.
+    if isinstance(data, dict) and oracle_by_secret_key in data:
+        by_secret = data[oracle_by_secret_key]
         # Open-mode (shortlist) eval.json has top10/top5/top3/top1; closed-mode
         # only has `correct`. Pick the right field automatically.
         sample = next(iter(by_secret.values()), {})

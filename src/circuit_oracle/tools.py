@@ -764,14 +764,22 @@ def _baseline_active_positions(ctx, layer, feature_idx, top_n=10):
     }
 
 
-def _check_chain_complete(ctx, fn_name):
+def _check_chain_complete(ctx, fn_name, allow_unchained=False):
     """Refuse to run intervene_feature / intervene_supernode unless the
     PIN -> ANCHOR chain is complete. Per changes.md sec 2.2, the single-call
     escape hatches are factor=-4 saturation tests AFTER the deterministic
     sweep, not bypasses. Without this guard the agent can fall through to
     one-shot interventions when pin_features fails (which is exactly the
     failure mode observed in the 2026-05-15 transcript).
+
+    ``allow_unchained`` exempts the sanctioned one-shot ARM (arms.py
+    pipeline="oneshot"), which never runs build_circuit/pin_features/
+    batched_anchor_sweep by design -- it IS the "no chain" condition being
+    measured, not an agent that skipped the chain. Only oneshot.py passes
+    this; the tool-calling schema the orchestrator sees never exposes it.
     """
+    if allow_unchained:
+        return
     pinned = getattr(ctx, "pinned_features", None) or {}
     sweep_done = bool(getattr(ctx, "anchor_sweep_done", False))
     if not pinned or not sweep_done:
@@ -983,6 +991,7 @@ def intervene_feature(
     *,
     hypothesis: str | None = None,
     answer_max_tokens: int = 800,
+    _allow_unchained: bool = False,
 ) -> dict:
     """Single-feature escape-hatch intervention (changes.md §2.2 / §2.6).
 
@@ -998,12 +1007,17 @@ def intervene_feature(
     harness looks up the baseline activation at the feature's anchor /
     bookkeeping position via `_resolve_anchor_position`.
 
+    `_allow_unchained` is kept as an internal, non-agent-facing kwarg for
+    oneshot.py, the sanctioned "no traversal at all" ablation arm, which
+    never runs the PIN -> ANCHOR chain by design. Like `hypothesis`, it is
+    not part of the agent-facing tool schema.
+
     `hypothesis` is kept as an optional diagnostic-only kwarg (so legacy
     transcripts replaying through this function don't drop the field on
     the floor). It is not part of the agent-facing schema.
     """
     _validate_scale(scale)
-    _check_chain_complete(ctx, "intervene_feature")
+    _check_chain_complete(ctx, "intervene_feature", allow_unchained=_allow_unchained)
     answer_max_tokens = min(answer_max_tokens, 800)
     prompt = _check_intervention_ctx(ctx, "intervene_feature")
 

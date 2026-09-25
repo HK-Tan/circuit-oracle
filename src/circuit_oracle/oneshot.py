@@ -352,6 +352,9 @@ def run_oneshot_oracle(
                 tools.intervene_feature(
                     ctx, iv["layer"], iv["feature_idx"], iv["scale"],
                     hypothesis=iv["hypothesis"],
+                    # This arm never runs build_circuit -> pin_features ->
+                    # batched_anchor_sweep -- it IS the no-chain condition.
+                    _allow_unchained=True,
                 ),
             )
             # A harness-rejected intervention returns {"error": ...} and is

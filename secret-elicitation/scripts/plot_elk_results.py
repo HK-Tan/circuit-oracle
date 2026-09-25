@@ -64,12 +64,15 @@ DEFAULT_METHODS = {
 # Map compact method name -> (result file path, pretty label for legend).
 def _file_map(mode: str) -> dict[str, tuple[Path, str]]:
     sfx = "_closed" if mode == "closed" else ""
-    # Archived arms behind the published figure. Point --methods elsewhere or
-    # re-run the evaluators against a fresh run set to plot a replication.
+    # Final rebuilt arm behind the published (post-rebuild) figure: arm1,
+    # Minimax-M3 orchestrator, reported-8 secrets, 5-pass mean. Point
+    # --methods elsewhere (or edit this default) to plot the superseded
+    # results-workshop/ archive (20 secrets, gpt-5.4-mini judge, not on the
+    # same scale) or a fresh run set.
     oracle_path = (
-        _THREAD / "results-workshop/closed/eval.json"
+        _THREAD / "results/elk-arm1-closed/eval.json"
         if mode == "closed"
-        else _THREAD / "results-workshop/open/eval.json"
+        else _THREAD / "results/elk-arm1-open/eval.json"
     )
     oracle_key = "or_c" if mode == "closed" else "or_o"
     return {
@@ -106,6 +109,13 @@ def main():
     ap.add_argument("--oracle-metric", default="top10",
                     choices=["top1", "top3", "top5", "top10"],
                     help="Shortlist depth for open-mode oracle eval.json.")
+    ap.add_argument("--oracle-by-secret-key", default=None,
+                    help="Read an alternate by_secret view from the oracle "
+                         "eval.json (e.g. by_secret_pass1_all20 for a "
+                         "single-pass all-20-secret breakdown) instead of "
+                         "the default 5-pass reported8 'by_secret'. Default: "
+                         "'by_secret_pass1_all20' when --words all20, else "
+                         "'by_secret'.")
     ap.add_argument("--out", default=None,
                     help="Output path. Default: <thread>/runs/figures/"
                          "elk_{mode}_results.pdf. The committed figures/ copy is "
@@ -123,6 +133,9 @@ def main():
     methods = args.methods or DEFAULT_METHODS[args.mode]
     words = WORD_SETS[args.words]
     fmap = _file_map(args.mode)
+    oracle_key = args.oracle_by_secret_key or (
+        "by_secret_pass1_all20" if args.words == "all20" else "by_secret"
+    )
 
     unknown = [k for k in methods if k not in fmap]
     if unknown:
@@ -148,7 +161,8 @@ def main():
     for key in methods:
         path, label = fmap[key]
         _, pw, _ = score_file(path, channel="oracle_response",
-                              oracle_metric=args.oracle_metric)
+                              oracle_metric=args.oracle_metric,
+                              oracle_by_secret_key=oracle_key)
         pw_filtered = {w: pw.get(w, (0, 0)) for w in words}
         tm = sum(m for m, _ in pw_filtered.values())
         tn = sum(n for _, n in pw_filtered.values())
