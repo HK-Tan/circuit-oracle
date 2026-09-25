@@ -28,8 +28,6 @@ workshop paper did not have.
 
 - The result tables are in [SUMMARY.md](SUMMARY.md), and the notes behind them, with the
   instrument next to every figure, are in [summary/details.md](summary/details.md).
-- The earlier version of this work is the workshop paper at the ICML 2026 Mechanistic
-  Interpretability Workshop, <https://openreview.net/forum?id=ANY6YrYUZE>.
 
 ## What is in this release
 
